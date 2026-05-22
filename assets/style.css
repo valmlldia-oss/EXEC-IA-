@@ -81,9 +81,14 @@ a { text-decoration: none; color: inherit; }
   color: var(--plum); transition: color .2s;
 }
 .nav-links a:hover { color: var(--rose); }
+.nav-langs { display: flex; gap: 6px; align-items: center; }
 .nav-lang {
   border: 1px solid var(--plum);
   padding: 4px 11px; border-radius: 4px; font-size: .7rem !important;
+}
+.nav-lang-active {
+  background: var(--plum); color: var(--ivory) !important;
+  pointer-events: none; cursor: default;
 }
 .nav-burger {
   display: none; flex-direction: column; gap: 5px;
