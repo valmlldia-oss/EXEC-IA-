@@ -289,10 +289,14 @@ a { text-decoration: none; color: inherit; }
   transform: translateY(-2px);
 }
 .btn-ghost {
-  border: 2px solid var(--plum); color: var(--plum); font-weight: 600;
+  border: 2.5px solid var(--plum); color: var(--plum); font-weight: 700;
+  background: rgba(79,0,53,.06);
+  box-shadow: 0 2px 14px rgba(79,0,53,.14);
+  letter-spacing: .04em;
 }
 .btn-ghost:hover {
   border-color: var(--plum); background: var(--plum); color: var(--ivory);
+  box-shadow: 0 6px 24px rgba(79,0,53,.28);
 }
 .btn-plum-outline {
   border: 1.5px solid var(--plum); color: var(--plum);
@@ -790,8 +794,33 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
   font-style: italic; letter-spacing: .02em;
 }
 
+/* ─── FEATURE CARDS ──────────────────────────────────────── */
+.fcards-section { background: var(--deep); padding: clamp(64px, 8vw, 96px) 0; }
+.fcards-section .eyebrow { color: var(--rose); }
+.fcards-section .section-title { color: var(--white); }
+.fcards-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 52px; }
+.fcard {
+  background: rgba(79,0,53,.45);
+  border: 1px solid rgba(217,61,142,.25);
+  border-radius: 20px; padding: 40px 32px;
+  transition: transform .25s var(--ease), box-shadow .25s var(--ease);
+}
+.fcard:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(217,61,142,.22); }
+.fcard-icon {
+  width: 56px; height: 56px; border-radius: 16px;
+  background: rgba(217,61,142,.18); border: 1px solid rgba(217,61,142,.35);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 24px; font-size: 1.45rem; color: var(--rose);
+}
+.fcard h3 {
+  font-family: var(--serif); font-size: 1.18rem; font-weight: 700;
+  color: var(--white); margin-bottom: 14px; line-height: 1.35;
+}
+.fcard p { font-size: .9rem; line-height: 1.78; color: rgba(246,241,235,.62); }
+
 /* ─── RESPONSIVE ─────────────────────────────────────────── */
 @media (max-width: 1024px) {
+  .fcards-grid { grid-template-columns: 1fr; }
   .cards-grid  { grid-template-columns: 1fr; }
   .testi-grid  { grid-template-columns: 1fr; }
   .about-grid  { grid-template-columns: 1fr; gap: 44px; }
