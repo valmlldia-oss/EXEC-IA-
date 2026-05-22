@@ -389,11 +389,9 @@ section { padding: clamp(72px, 9vw, 112px) 0; }
 .xcard:hover::after { opacity: 1; }
 .xcard-num {
   font-family: var(--serif); font-size: 4rem; font-weight: 700;
-  color: rgba(79,0,53,.28); line-height: 1; margin-bottom: 10px;
+  color: var(--plum); line-height: 1; margin-bottom: 10px;
 }
-.xcard-num-ia {
-  color: var(--plum); font-size: 4.4rem; opacity: 1;
-}
+.xcard-num-ia { font-size: 4.4rem; }
 .xcard h3 { font-family: var(--serif); font-size: 1.3rem; color: var(--plum); margin-bottom: 12px; }
 .xcard p { font-size: .9rem; line-height: 1.75; color: var(--text); margin-bottom: 20px; }
 .xcard-tag {
@@ -401,6 +399,17 @@ section { padding: clamp(72px, 9vw, 112px) 0; }
   color: var(--plum); border-radius: 20px; padding: 5px 14px;
   font-size: .74rem; font-weight: 500; letter-spacing: .04em;
 }
+/* ── Inverted AI card (04) ── */
+.xcard--ia {
+  background: var(--plum);
+  border-top: 3px solid var(--rose);
+}
+.xcard--ia:hover { box-shadow: 0 20px 56px rgba(217,61,142,.28); }
+.xcard--ia::after { background: linear-gradient(90deg, var(--rose), rgba(246,241,235,.4)); }
+.xcard--ia .xcard-num { color: rgba(246,241,235,.22); }
+.xcard--ia h3 { color: var(--ivory); }
+.xcard--ia p { color: rgba(246,241,235,.72); }
+.xcard--ia .xcard-tag { background: rgba(246,241,235,.14); color: var(--ivory); }
 
 /* ─── TIMELINE ───────────────────────────────────────────── */
 .tl-intro {
