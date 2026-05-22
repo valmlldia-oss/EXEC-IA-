@@ -329,6 +329,17 @@ section { padding: clamp(72px, 9vw, 112px) 0; }
   font-size: 1.17rem !important; font-weight: 500 !important;
   color: var(--plum) !important;
 }
+.formation-list {
+  list-style: none; padding: 0;
+  margin: 14px 0 20px;
+}
+.formation-list li {
+  display: flex; align-items: baseline; gap: 10px;
+  font-size: .9rem; color: var(--text);
+  padding: 5px 0; line-height: 1.5;
+}
+.fl-icon { color: var(--rose); font-size: .72rem; flex-shrink: 0; }
+.formation-list em { color: var(--grey); font-style: normal; font-size: .85rem; }
 .about-quote {
   border-left: 2px solid var(--rose); padding-left: 22px;
   font-style: italic; color: var(--grey) !important;
