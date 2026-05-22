@@ -794,6 +794,22 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
   font-style: italic; letter-spacing: .02em;
 }
 
+/* ─── TOOLS STRIP ────────────────────────────────────────── */
+.tools-strip { background: var(--white); padding: 52px 0 44px; border-bottom: 1px solid rgba(79,0,53,.07); }
+.tools-strip-label {
+  text-align: center; font-size: .66rem; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--grey); margin-bottom: 32px; font-weight: 500;
+}
+.tools-strip-logos {
+  display: flex; justify-content: center; align-items: center;
+  gap: 40px; flex-wrap: wrap; margin-bottom: 28px;
+}
+.tools-strip-logos .tool-logo-item img { width: 48px; height: 48px; }
+.tools-strip-caption {
+  text-align: center; font-size: .84rem; color: var(--grey);
+  max-width: 580px; margin: 0 auto; line-height: 1.75; font-style: italic;
+}
+
 /* ─── FEATURE CARDS ──────────────────────────────────────── */
 .fcards-section { background: var(--deep); padding: clamp(64px, 8vw, 96px) 0; }
 .fcards-section .eyebrow { color: var(--rose); }
