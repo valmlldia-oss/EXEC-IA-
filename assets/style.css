@@ -921,4 +921,68 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
   .timeline::before { left: 0; }
   .wrap        { padding: 0 22px; }
   .contact-btns .btn { width: 100%; justify-content: center; }
+  .tmodal-grid { grid-template-columns: 1fr; }
+  .tmodal-card { padding: 28px 22px; }
 }
+
+/* ─── TOOL INFO MODAL ─────────────────────────────────────── */
+.tmodal-overlay {
+  position: fixed; inset: 0; z-index: 990;
+  background: rgba(37,0,27,.52); backdrop-filter: blur(5px);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none;
+  transition: opacity .24s ease;
+}
+.tmodal-overlay.open { opacity: 1; pointer-events: all; }
+.tmodal-card {
+  background: var(--ivory); border-radius: 22px;
+  padding: 36px; max-width: 460px; width: calc(100% - 40px);
+  position: relative;
+  box-shadow: 0 24px 72px rgba(37,0,27,.28);
+  transform: translateY(14px); transition: transform .24s ease;
+}
+.tmodal-overlay.open .tmodal-card { transform: translateY(0); }
+.tmodal-close {
+  position: absolute; top: 18px; right: 18px;
+  width: 30px; height: 30px; border-radius: 50%;
+  background: rgba(79,0,53,.1); border: none; cursor: pointer;
+  font-size: 1.1rem; color: var(--plum); line-height: 1;
+  display: flex; align-items: center; justify-content: center;
+  transition: background .15s;
+}
+.tmodal-close:hover { background: rgba(79,0,53,.2); }
+.tmodal-head {
+  display: flex; align-items: center; gap: 14px; margin-bottom: 16px;
+}
+.tmodal-head img {
+  width: 44px; height: 44px; border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(37,0,27,.14); flex-shrink: 0;
+}
+.tmodal-head strong {
+  font-family: var(--serif); font-size: 1.15rem; color: var(--plum);
+  display: block; line-height: 1.2;
+}
+.tmodal-head span {
+  font-size: .65rem; color: var(--grey); letter-spacing: .06em;
+  text-transform: uppercase; margin-top: 3px; display: block;
+}
+#tmi-desc {
+  font-size: .88rem; line-height: 1.72; color: var(--text);
+  margin-bottom: 20px; border-bottom: 1px solid rgba(79,0,53,.1);
+  padding-bottom: 18px;
+}
+.tmodal-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px;
+}
+.tmodal-block { background: rgba(79,0,53,.05); border-radius: 12px; padding: 14px; }
+.tmodal-lbl {
+  display: block; font-size: .6rem; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--rose); font-weight: 700; margin-bottom: 6px;
+}
+.tmodal-block p { font-size: .8rem; line-height: 1.65; color: var(--text); margin: 0; }
+.tmodal-execia {
+  background: rgba(79,0,53,.06); border-radius: 12px; padding: 14px;
+  border-left: 3px solid var(--plum);
+}
+.tmodal-execia .tmodal-lbl { color: var(--plum); }
+.tmodal-execia p { font-size: .84rem; line-height: 1.65; color: var(--plum); margin: 0; font-style: italic; }

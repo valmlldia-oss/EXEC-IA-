@@ -140,40 +140,33 @@
   <div class="wrap">
     <p class="tools-strip-label">Outils maîtrisés</p>
     <div class="tools-strip-logos">
-      <div class="tool-logo-item">
+      <div class="tool-logo-item" data-tool="claude">
         <div class="tool-logo-wrap"><img src="assets/logos/claude.png" alt="Claude · Anthropic"></div>
         <span>Claude</span>
-        <small class="tool-desc">Rédaction · analyse · code</small>
       </div>
-      <div class="tool-logo-item">
+      <div class="tool-logo-item" data-tool="chatgpt">
         <div class="tool-logo-wrap"><img src="assets/logos/chatgpt.png" alt="ChatGPT · OpenAI"></div>
         <span>ChatGPT</span>
-        <small class="tool-desc">Assistant IA multimodal</small>
       </div>
-      <div class="tool-logo-item">
+      <div class="tool-logo-item" data-tool="make">
         <div class="tool-logo-wrap"><img src="assets/logos/make.png" alt="Make"></div>
         <span>Make</span>
-        <small class="tool-desc">Automatisation sans code</small>
       </div>
-      <div class="tool-logo-item">
+      <div class="tool-logo-item" data-tool="airtable">
         <div class="tool-logo-wrap"><img src="assets/logos/airtable.png" alt="Airtable"></div>
         <span>Airtable</span>
-        <small class="tool-desc">Base de données visuelle</small>
       </div>
-      <div class="tool-logo-item">
+      <div class="tool-logo-item" data-tool="gamma">
         <div class="tool-logo-wrap"><img src="assets/logos/gamma.png" alt="Gamma"></div>
         <span>Gamma</span>
-        <small class="tool-desc">Présentations par IA</small>
       </div>
-      <div class="tool-logo-item">
+      <div class="tool-logo-item" data-tool="notion">
         <div class="tool-logo-wrap"><img src="assets/logos/notion.png" alt="Notion"></div>
         <span>Notion</span>
-        <small class="tool-desc">Workspace tout-en-un</small>
       </div>
-      <div class="tool-logo-item">
+      <div class="tool-logo-item" data-tool="perplexity">
         <div class="tool-logo-wrap"><img src="assets/logos/perplexity.png" alt="Perplexity"></div>
         <span>Perplexity</span>
-        <small class="tool-desc">Recherche IA sourcée</small>
       </div>
     </div>
   </div>
@@ -619,6 +612,26 @@
   </nav>
   <p class="footer-copy">© 2026 Valérie Mailland · EXEC'IA · exec-ia.fr — Tous droits réservés</p>
 </footer>
+
+<!-- Tool info modal -->
+<div id="tool-modal" class="tmodal-overlay">
+  <div class="tmodal-card" role="dialog" aria-modal="true">
+    <button class="tmodal-close" id="tmodal-close">&times;</button>
+    <div class="tmodal-head">
+      <img id="tmi-logo" src="" alt="">
+      <div><strong id="tmi-name"></strong><span id="tmi-cat"></span></div>
+    </div>
+    <p id="tmi-desc"></p>
+    <div class="tmodal-grid">
+      <div class="tmodal-block"><span class="tmodal-lbl" id="tmi-lbl-usage"></span><p id="tmi-usage"></p></div>
+      <div class="tmodal-block"><span class="tmodal-lbl" id="tmi-lbl-pricing"></span><p id="tmi-pricing"></p></div>
+    </div>
+    <div class="tmodal-execia">
+      <span class="tmodal-lbl" id="tmi-lbl-execia"></span>
+      <p id="tmi-execia"></p>
+    </div>
+  </div>
+</div>
 
 <script src="assets/script.js"></script>
 </body>
