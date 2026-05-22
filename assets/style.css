@@ -728,8 +728,25 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
 .tool-logo-item {
   display: flex; flex-direction: column; align-items: center; gap: 8px;
   transition: transform .2s;
+  cursor: pointer;
 }
 .tool-logo-item:hover { transform: translateY(-3px); }
+.tool-logo-wrap {
+  position: relative; display: inline-flex;
+}
+.tool-logo-wrap::after {
+  content: '+';
+  position: absolute; top: -5px; right: -5px;
+  width: 16px; height: 16px;
+  background: var(--plum); color: var(--ivory);
+  border-radius: 50%; font-size: .6rem; font-weight: 700;
+  line-height: 16px; text-align: center;
+  transition: background .15s, transform .15s;
+  pointer-events: none;
+}
+.tool-logo-item.active .tool-logo-wrap::after {
+  content: '×'; background: var(--rose); transform: rotate(90deg);
+}
 .tool-logo-item img {
   width: 52px; height: 52px; object-fit: contain;
   border-radius: 14px;
@@ -739,9 +756,16 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
   font-size: .66rem; color: var(--grey); font-weight: 500; letter-spacing: .04em;
 }
 .tool-desc {
-  display: block; font-size: .58rem; color: rgba(79,0,53,.45);
-  text-align: center; line-height: 1.35; letter-spacing: .02em;
-  margin-top: -4px; max-width: 80px;
+  display: block; font-size: .62rem; color: var(--plum);
+  background: rgba(79,0,53,.07); border: 1px solid rgba(79,0,53,.15);
+  border-radius: 10px; text-align: center; line-height: 1.4;
+  letter-spacing: .02em; max-width: 100px;
+  opacity: 0; max-height: 0; overflow: hidden;
+  padding: 0 10px; margin-top: 0;
+  transition: opacity .22s ease, max-height .22s ease, margin-top .22s ease, padding .22s ease;
+}
+.tool-logo-item.active .tool-desc {
+  opacity: 1; max-height: 50px; margin-top: 0; padding: 5px 10px;
 }
 
 /* ─── BADGE LINK / FL LINK ────────────────────────────────── */

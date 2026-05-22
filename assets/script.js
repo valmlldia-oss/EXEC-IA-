@@ -27,6 +27,19 @@ const barObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.3 });
 document.querySelectorAll('.lt-wrap').forEach(el => barObserver.observe(el));
 
+/* ── Tool logo click tooltips ── */
+document.querySelectorAll('.tool-logo-item').forEach(item => {
+  item.addEventListener('click', () => {
+    const isActive = item.classList.contains('active');
+    document.querySelectorAll('.tool-logo-item.active').forEach(i => i.classList.remove('active'));
+    if (!isActive) item.classList.add('active');
+  });
+});
+document.addEventListener('click', e => {
+  if (!e.target.closest('.tool-logo-item'))
+    document.querySelectorAll('.tool-logo-item.active').forEach(i => i.classList.remove('active'));
+});
+
 /* ── Calendly popup ── */
 const CALENDLY_URL = 'https://calendly.com/VOTRE-NOM/decouverte-30min'; // ← Remplacer par votre URL Calendly
 document.querySelectorAll('[data-calendly]').forEach(btn => {
