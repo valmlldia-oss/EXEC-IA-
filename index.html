@@ -465,10 +465,45 @@
   </div>
 </section>
 
-<!-- ═══ LANGUES & OUTILS ══════════════════════════════════════ -->
+<!-- ═══ SIMULATEUR ROI IA ════════════════════════════════════ -->
+<section id="roi" class="roi-section">
+  <div class="wrap">
+    <span class="eyebrow eyebrow-light reveal">EXEC&#x2019;IA · Simulateur ROI</span>
+    <h2 class="section-title section-title-light reveal delay-1">Quel est votre<br>potentiel ROI IA&nbsp;?</h2>
+    <p class="roi-intro reveal delay-2">Estimez en 30 secondes le temps et l&#x2019;argent que l&#x2019;IA peut vous faire économiser.</p>
+    <div class="roi-card reveal delay-3">
+      <div class="roi-sliders">
+        <div class="roi-sg">
+          <div class="roi-sh"><label for="rs-collab">Collaborateurs concernés</label><span class="roi-sv" id="rsv-collab">10</span></div>
+          <input type="range" id="rs-collab" class="roi-range" min="1" max="100" value="10">
+          <div class="roi-sm"><span>1</span><span>100</span></div>
+        </div>
+        <div class="roi-sg">
+          <div class="roi-sh"><label for="rs-h">Heures économisées / personne / semaine</label><span class="roi-sv" id="rsv-h">5 h</span></div>
+          <input type="range" id="rs-h" class="roi-range" min="1" max="20" value="5">
+          <div class="roi-sm"><span>1 h</span><span>20 h</span></div>
+        </div>
+        <div class="roi-sg">
+          <div class="roi-sh"><label for="rs-t">Taux horaire moyen chargé</label><span class="roi-sv" id="rsv-t">80 €/h</span></div>
+          <input type="range" id="rs-t" class="roi-range" min="30" max="300" value="80" step="5">
+          <div class="roi-sm"><span>30 €</span><span>300 €</span></div>
+        </div>
+      </div>
+      <div class="roi-outputs">
+        <div class="roi-chip"><span class="roi-chip-lbl">Heures récupérées/mois</span><strong class="roi-chip-val" id="roi-out-h">—</strong></div>
+        <div class="roi-chip roi-chip--hero"><span class="roi-chip-lbl">Gains annuels estimés</span><strong class="roi-chip-val" id="roi-out-an">—</strong></div>
+        <div class="roi-chip"><span class="roi-chip-lbl">Gains mensuels</span><strong class="roi-chip-val" id="roi-out-m">—</strong></div>
+      </div>
+      <p class="roi-disclaimer">Estimation indicative — basée sur une automatisation partielle des tâches à faible valeur ajoutée.</p>
+      <div class="roi-cta"><button class="btn btn-rose" data-calendly>Obtenir mon plan IA personnalisé →</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LANGUES ═══════════════════════════════════════════════ -->
 <section id="langues" class="bg-white">
   <div class="wrap">
-    <span class="eyebrow reveal">Langues &amp; Outils</span>
+    <span class="eyebrow reveal">Langues</span>
     <h2 class="section-title reveal delay-1">Communication sans<br>frontières.</h2>
     <div class="lt-wrap">
       <div class="reveal delay-1">
@@ -492,20 +527,6 @@
           <span class="lang-name">Deutsch</span>
           <div class="lang-track"><div class="lang-bar" data-w="58%" style="width:0"></div></div>
           <span class="lang-level">Intermédiaire</span>
-        </div>
-      </div>
-      <div class="reveal delay-2">
-        <h3>Outils IA &amp; Digital</h3>
-        <div class="tools">
-          <span class="tool">Claude</span>
-          <span class="tool">ChatGPT</span>
-          <span class="tool">Make</span>
-          <span class="tool">Notion AI</span>
-          <span class="tool">Airtable</span>
-          <span class="tool">Gamma</span>
-          <span class="tool">Perplexity</span>
-          <span class="tool">Leexi</span>
-          <span class="tool">Microsoft 365</span>
         </div>
       </div>
     </div>

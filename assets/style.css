@@ -986,3 +986,40 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
 }
 .tmodal-execia .tmodal-lbl { color: var(--plum); }
 .tmodal-execia p { font-size: .84rem; line-height: 1.65; color: var(--plum); margin: 0; font-style: italic; }
+
+/* ─── ROI SIMULATOR ──────────────────────────────────────── */
+.roi-section { background: var(--deep); padding: clamp(64px, 8vw, 96px) 0; }
+.roi-intro { font-size: .97rem; color: rgba(246,241,235,.62); max-width: 520px; margin: 16px auto 48px; line-height: 1.75; text-align: center; }
+.roi-card {
+  background: rgba(79,0,53,.35); border: 1px solid rgba(217,61,142,.2);
+  border-radius: 24px; padding: clamp(28px, 5vw, 52px);
+  max-width: 760px; margin: 0 auto;
+}
+.roi-sliders { display: flex; flex-direction: column; gap: 28px; margin-bottom: 36px; }
+.roi-sh { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px; }
+.roi-sh label { font-size: .84rem; color: rgba(246,241,235,.72); font-weight: 500; }
+.roi-sv { font-family: var(--serif); font-size: 1.1rem; color: var(--rose); font-weight: 700; }
+.roi-range {
+  width: 100%; -webkit-appearance: none; appearance: none;
+  height: 4px; background: rgba(246,241,235,.15); border-radius: 2px; outline: none; cursor: pointer;
+}
+.roi-range::-webkit-slider-thumb {
+  -webkit-appearance: none; width: 22px; height: 22px;
+  background: var(--rose); border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(217,61,142,.45); cursor: pointer; transition: transform .15s;
+}
+.roi-range::-webkit-slider-thumb:hover { transform: scale(1.18); }
+.roi-range::-moz-range-thumb { width: 22px; height: 22px; background: var(--rose); border-radius: 50%; border: none; cursor: pointer; }
+.roi-sm { display: flex; justify-content: space-between; font-size: .6rem; color: rgba(246,241,235,.3); margin-top: 5px; }
+.roi-outputs { display: grid; grid-template-columns: 1fr 1.4fr 1fr; gap: 14px; margin-bottom: 22px; }
+.roi-chip { background: rgba(246,241,235,.07); border-radius: 14px; padding: 18px 12px; text-align: center; }
+.roi-chip--hero { background: rgba(217,61,142,.18); border: 1px solid rgba(217,61,142,.38); }
+.roi-chip-lbl { display: block; font-size: .58rem; letter-spacing: .1em; text-transform: uppercase; color: rgba(246,241,235,.45); margin-bottom: 8px; }
+.roi-chip-val { font-family: var(--serif); font-size: 1.3rem; color: var(--ivory); display: block; }
+.roi-chip--hero .roi-chip-val { font-size: 1.65rem; color: var(--rose); }
+.roi-disclaimer { font-size: .7rem; color: rgba(246,241,235,.28); text-align: center; margin-bottom: 28px; font-style: italic; }
+.roi-cta { text-align: center; }
+@media (max-width: 620px) {
+  .roi-outputs { grid-template-columns: 1fr; }
+  .roi-chip--hero { order: -1; }
+}

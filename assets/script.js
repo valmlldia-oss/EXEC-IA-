@@ -189,6 +189,33 @@ modalClose?.addEventListener('click', closeToolModal);
 modal?.addEventListener('click', e => { if (e.target === modal) closeToolModal(); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeToolModal(); });
 
+/* ── ROI Simulator ── */
+(function () {
+  const collab = document.getElementById('rs-collab');
+  const heures = document.getElementById('rs-h');
+  const taux   = document.getElementById('rs-t');
+  if (!collab) return;
+  const lang = document.documentElement.lang || 'fr';
+  function fmtMoney(n) {
+    const r = Math.round(n);
+    if (lang === 'en') return '€ ' + r.toLocaleString('en-GB');
+    if (lang === 'es') return r.toLocaleString('es-ES') + ' €';
+    return r.toLocaleString('fr-FR') + ' €';
+  }
+  function update() {
+    const c = +collab.value, h = +heures.value, t = +taux.value;
+    const hM = c * h * 4.33;
+    document.getElementById('rsv-collab').textContent = c;
+    document.getElementById('rsv-h').textContent      = h + ' h';
+    document.getElementById('rsv-t').textContent      = t + ' €/h';
+    document.getElementById('roi-out-h').textContent  = Math.round(hM) + ' h';
+    document.getElementById('roi-out-m').textContent  = fmtMoney(hM * t);
+    document.getElementById('roi-out-an').textContent = fmtMoney(hM * t * 12);
+  }
+  [collab, heures, taux].forEach(s => s.addEventListener('input', update));
+  update();
+})();
+
 /* ── Calendly popup ── */
 const CALENDLY_URL = 'https://calendly.com/VOTRE-NOM/decouverte-30min'; // ← Remplacer par votre URL Calendly
 document.querySelectorAll('[data-calendly]').forEach(btn => {
