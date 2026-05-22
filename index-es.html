@@ -18,8 +18,11 @@
 <nav id="nav">
   <div class="nav-in">
     <a href="#" class="nav-brand">
-      <img src="assets/logo-execia-sm.png" alt="EXEC'IA" onerror="this.style.display='none'">
-      <span class="nav-brand-text">EXEC'IA</span>
+      <img src="assets/logo-execia-sm.png" alt="EXEC&#x2019;IA" onerror="this.style.display='none'">
+      <div class="nav-brand-info">
+        <span class="nav-brand-name">EXEC&#x2019;IA</span>
+        <span class="nav-brand-tagline">Executive Leadership<br>potenciado por IA</span>
+      </div>
     </a>
     <div class="nav-links">
       <a href="#about">Sobre mí</a>
@@ -28,13 +31,12 @@
       <a href="#trayectoria">Trayectoria</a>
       <a href="#testimonios">Testimonios</a>
       <a href="#contact">Contacto</a>
-      <div class="nav-langs">
-        <a href="index.html" class="nav-lang">FR</a>
-        <a href="index-en.html" class="nav-lang">EN</a>
-        <span class="nav-lang nav-lang-active">ES</span>
-      </div>
     </div>
-    <a href="#" data-calendly class="btn btn-rose btn-nav-cta">Reservar reunión</a>
+    <div class="nav-langs">
+      <a href="index.html" class="nav-lang">FR</a>
+      <a href="index-en.html" class="nav-lang">EN</a>
+      <span class="nav-lang nav-lang-active">ES</span>
+    </div>
     <button class="nav-burger" aria-label="Menú">
       <span></span><span></span><span></span>
     </button>
@@ -51,7 +53,7 @@
     <div class="hero-left">
       <div class="hero-badge">
         <div class="hero-badge-dot"></div>
-        <span>CERTIFICADA IA · RS6776 · STUDERIA 2025–2026</span>
+        <span><strong>Certificada IA</strong> · <a href="https://www.francecompetences.fr/recherche/rs/6776" target="_blank" rel="noopener" class="badge-link">RS6776</a></span>
       </div>
 
       <h1>Valérie<em>Mailland</em></h1>
@@ -64,12 +66,11 @@
         <span class="stat-chip"><strong>20+</strong> años C-Suite</span>
         <span class="stat-chip">CEOs <strong>globales</strong></span>
         <span class="stat-chip"><strong>3</strong> idiomas bilingüe</span>
-        <span class="stat-chip">Certificada <strong>RS6776</strong></span>
       </div>
 
       <div class="hero-cta">
         <a href="#" data-calendly class="btn btn-rose">Reservar reunión</a>
-        <a href="https://www.linkedin.com/in/val%C3%A9rie-mailland" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn →</a>
+        <a href="https://www.linkedin.com/in/val%C3%A9rie-mailland" target="_blank" rel="noopener" class="btn btn-ghost">Valérie Mailland →</a>
       </div>
     </div>
 
@@ -87,6 +88,25 @@
     <div class="scroll-arrow"></div>
   </div>
 </section>
+
+<!-- ═══ TICKER ══════════════════════════════════════════════ -->
+<div class="ticker-bar" aria-hidden="true">
+  <div class="ticker-track">
+    <span class="ticker-item"><span class="ticker-rose">Gane</span> productividad <span class="ticker-sep">✦</span></span>
+    <span class="ticker-item"><span class="ticker-rose">Gane</span> libertad <span class="ticker-sep">✦</span></span>
+    <span class="ticker-item"><span class="ticker-rose">Ahorre</span> tiempo <span class="ticker-sep">✦</span></span>
+    <span class="ticker-item"><span class="ticker-rose">Gane</span> empleabilidad <span class="ticker-sep">✦</span></span>
+    <span class="ticker-item"><span class="ticker-rose">Gane</span> impacto <span class="ticker-sep">✦</span></span>
+    <span class="ticker-item"><span class="ticker-rose">Gane</span> competitividad <span class="ticker-sep">✦</span></span>
+    <!-- Duplicate for seamless loop -->
+    <span class="ticker-item"><span class="ticker-rose">Gane</span> productividad <span class="ticker-sep">✦</span></span>
+    <span class="ticker-item"><span class="ticker-rose">Gane</span> libertad <span class="ticker-sep">✦</span></span>
+    <span class="ticker-item"><span class="ticker-rose">Ahorre</span> tiempo <span class="ticker-sep">✦</span></span>
+    <span class="ticker-item"><span class="ticker-rose">Gane</span> empleabilidad <span class="ticker-sep">✦</span></span>
+    <span class="ticker-item"><span class="ticker-rose">Gane</span> impacto <span class="ticker-sep">✦</span></span>
+    <span class="ticker-item"><span class="ticker-rose">Gane</span> competitividad <span class="ticker-sep">✦</span></span>
+  </div>
+</div>
 
 <!-- ═══ STATS STRIP ═════════════════════════════════════════ -->
 <div class="stats-strip">
@@ -127,7 +147,7 @@
         <ul class="formation-list">
           <li><span class="fl-icon">◈</span> Los mejores Comunicadores — <em>McKinsey &amp; Company</em></li>
           <li><span class="fl-icon">◈</span> Los mejores Líderes — <em>CEOs mundiales</em></li>
-          <li><span class="fl-icon">◈</span> Los mejores Consultores IA — <em>STUDERIA</em></li>
+          <li><span class="fl-icon">◈</span> Los mejores Consultores IA — <a href="https://www.studeria.fr" target="_blank" rel="noopener" class="fl-link">Studeria</a>.</li>
         </ul>
         <p>La certificación RS6776 confirmó una convicción profunda. Las herramientas más poderosas deben ser accesibles para todos.</p>
         <p>Hoy trabajo con profesionales y PYMEs. Casos de uso concretos de IA, inmediatamente aplicables. Claude, Make, Gamma, Notion, ChatGPT, Airtable. Flujos de trabajo inteligentes y ahorro de tiempo real.</p>
@@ -234,32 +254,84 @@
   </div>
 </section>
 
-<!-- ═══ MÉTODO ════════════════════════════════════════════════ -->
-<section id="methode" class="bg-ivory">
+<!-- ═══ EL ENFOQUE EXEC'IA ════════════════════════════════════ -->
+<section id="approche" class="bg-ivory">
   <div class="wrap">
-    <span class="eyebrow reveal">Mi Método</span>
-    <h2 class="section-title reveal delay-1">Cuatro pasos.<br>Resultados reales.</h2>
-    <div class="methode-grid">
-      <div class="mstep reveal delay-1">
-        <div class="mstep-num">01</div>
-        <h4>Llamada de Descubrimiento</h4>
-        <p>30 minutos, gratuita. Entiendo su actividad, sus retos, sus herramientas. Sin compromiso.</p>
+    <span class="eyebrow reveal">El Enfoque</span>
+    <h2 class="section-title reveal delay-1">El enfoque<br>EXEC&#x2019;IA</h2>
+    <div class="approach-block">
+
+      <!-- 01 Inmersión estratégica -->
+      <div class="approach-step approach-with-photo reveal">
+        <div class="approach-num">01</div>
+        <div class="approach-body">
+          <h3>Inmersión estratégica</h3>
+          <p>Su mundo es único. Empiezo por escucharlo de verdad.</p>
+          <ul class="approach-list">
+            <li>Comprensión de su actividad y sus limitaciones reales</li>
+            <li>Identificación de sus prioridades estratégicas y operacionales</li>
+            <li>Análisis de su entorno humano y organizacional</li>
+          </ul>
+        </div>
+        <div class="approach-photo">
+          <div class="approach-photo-ph">Foto próximamente</div>
+        </div>
       </div>
-      <div class="mstep reveal delay-2">
-        <div class="mstep-num">02</div>
-        <h4>Auditoría &amp; Diagnóstico IA</h4>
-        <p>Identifico sus procesos con alto potencial IA. Quick wins y transformaciones duraderas.</p>
+
+      <!-- 02 Diagnóstico & visión operacional -->
+      <div class="approach-step approach-with-photo reveal delay-1">
+        <div class="approach-num">02</div>
+        <div class="approach-body">
+          <h3>Diagnóstico &amp; visión operacional</h3>
+          <p>La IA sin diagnóstico no tiene dirección. Mapeo sus procesos clave.</p>
+          <ul class="approach-list">
+            <li>Auditoría de sus procesos con alto potencial IA</li>
+            <li>Identificación de quick wins y transformaciones duraderas</li>
+            <li>Hoja de ruta priorizada e inmediatamente accionable</li>
+          </ul>
+        </div>
+        <div class="approach-photo">
+          <div class="approach-photo-ph">Foto próximamente</div>
+        </div>
       </div>
-      <div class="mstep reveal delay-3">
-        <div class="mstep-num">03</div>
-        <h4>Plan de Acción Personalizado</h4>
-        <p>Un plan concreto, priorizado y adaptado a su contexto. Acciones inmediatas — sin teoría.</p>
+
+      <!-- 03 Despliegue & acompañamiento -->
+      <div class="approach-step approach-with-photo reveal delay-2">
+        <div class="approach-num">03</div>
+        <div class="approach-body">
+          <h3>Despliegue &amp; acompañamiento</h3>
+          <p>Sin teoría. Con herramientas en mano, resultados medibles desde la primera semana.</p>
+          <ul class="approach-list">
+            <li>Implementación concreta de soluciones IA adaptadas a su contexto</li>
+            <li>Formación en situaciones reales, sobre sus propios casos de uso</li>
+            <li>Seguimiento, iteraciones e integración duradera en sus prácticas diarias</li>
+          </ul>
+        </div>
+        <div class="approach-photo">
+          <div class="approach-photo-ph">Foto próximamente</div>
+        </div>
       </div>
-      <div class="mstep reveal delay-4">
-        <div class="mstep-num">04</div>
-        <h4>Formación &amp; Seguimiento</h4>
-        <p>Implementación, iteraciones, resultados medibles. La IA se integra en su flujo de trabajo diario.</p>
+
+      <!-- Agentes IA & automatización inteligente -->
+      <div class="approach-step approach-agents reveal delay-3">
+        <div class="approach-num">⚡</div>
+        <div class="approach-body">
+          <h3>Agentes IA &amp; automatización inteligente</h3>
+          <p>Agentes IA diseñados para trabajar por usted — mientras usted dirige.</p>
+          <ul class="approach-list">
+            <li>Diseño de flujos de trabajo automatizados — Make · Airtable · Claude</li>
+            <li>Agentes IA para tareas repetitivas de alta carga cognitiva</li>
+            <li>Ahorro de tiempo medible. ROI inmediato y cuantificado.</li>
+          </ul>
+        </div>
       </div>
+
+    </div>
+
+    <!-- Firma EXEC'IA -->
+    <div class="approach-signature reveal">
+      <p>Cada misión EXEC&#x2019;IA es única. Cada resultado es concreto.</p>
+      <em>Executive Leadership, potenciado por la IA.</em>
     </div>
   </div>
 </section>
@@ -357,17 +429,35 @@
       </div>
       <div class="reveal delay-2">
         <h3>Herramientas IA &amp; Digitales</h3>
-        <div class="tools">
-          <span class="tool">Claude</span>
-          <span class="tool">ChatGPT</span>
-          <span class="tool">Make</span>
-          <span class="tool">Notion AI</span>
-          <span class="tool">Airtable + IA</span>
-          <span class="tool">Leexi</span>
-          <span class="tool">Gamma</span>
-          <span class="tool">Microsoft 365</span>
-          <span class="tool">SharePoint</span>
-          <span class="tool">Teams</span>
+        <div class="tools-logos-row">
+          <div class="tool-logo-item">
+            <img src="assets/logos/claude.png" alt="Claude · Anthropic">
+            <span>Claude</span>
+          </div>
+          <div class="tool-logo-item">
+            <img src="assets/logos/chatgpt.png" alt="ChatGPT · OpenAI">
+            <span>ChatGPT</span>
+          </div>
+          <div class="tool-logo-item">
+            <img src="assets/logos/perplexity.png" alt="Perplexity">
+            <span>Perplexity</span>
+          </div>
+          <div class="tool-logo-item">
+            <img src="assets/logos/make.png" alt="Make">
+            <span>Make</span>
+          </div>
+          <div class="tool-logo-item">
+            <img src="assets/logos/airtable.png" alt="Airtable">
+            <span>Airtable</span>
+          </div>
+          <div class="tool-logo-item">
+            <img src="assets/logos/gamma.png" alt="Gamma">
+            <span>Gamma</span>
+          </div>
+          <div class="tool-logo-item">
+            <img src="assets/logos/notion.png" alt="Notion">
+            <span>Notion</span>
+          </div>
         </div>
       </div>
     </div>
