@@ -26,3 +26,13 @@ const barObserver = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.3 });
 document.querySelectorAll('.lt-wrap').forEach(el => barObserver.observe(el));
+
+/* ── Calendly popup ── */
+const CALENDLY_URL = 'https://calendly.com/VOTRE-NOM/decouverte-30min'; // ← Remplacer par votre URL Calendly
+document.querySelectorAll('[data-calendly]').forEach(btn => {
+  btn.addEventListener('click', e => {
+    e.preventDefault();
+    if (window.Calendly) Calendly.initPopupWidget({ url: CALENDLY_URL });
+    else window.open(CALENDLY_URL, '_blank');
+  });
+});
