@@ -738,6 +738,11 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
 .tool-logo-item span {
   font-size: .66rem; color: var(--grey); font-weight: 500; letter-spacing: .04em;
 }
+.tool-desc {
+  display: block; font-size: .58rem; color: rgba(79,0,53,.45);
+  text-align: center; line-height: 1.35; letter-spacing: .02em;
+  margin-top: -4px; max-width: 80px;
+}
 
 /* ─── BADGE LINK / FL LINK ────────────────────────────────── */
 .badge-link {
