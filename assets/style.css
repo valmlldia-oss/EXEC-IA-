@@ -388,8 +388,11 @@ section { padding: clamp(72px, 9vw, 112px) 0; }
 .xcard:hover { transform: translateY(-5px); box-shadow: 0 20px 56px rgba(79,0,53,.1); }
 .xcard:hover::after { opacity: 1; }
 .xcard-num {
-  font-family: var(--serif); font-size: 3.4rem; font-weight: 700;
-  color: rgba(79,0,53,.22); line-height: 1; margin-bottom: 10px;
+  font-family: var(--serif); font-size: 4rem; font-weight: 700;
+  color: rgba(79,0,53,.28); line-height: 1; margin-bottom: 10px;
+}
+.xcard-num-ia {
+  color: var(--plum); font-size: 4.4rem; opacity: 1;
 }
 .xcard h3 { font-family: var(--serif); font-size: 1.3rem; color: var(--plum); margin-bottom: 12px; }
 .xcard p { font-size: .9rem; line-height: 1.75; color: var(--text); margin-bottom: 20px; }
