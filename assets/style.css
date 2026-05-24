@@ -456,9 +456,10 @@ section { padding: clamp(72px, 9vw, 112px) 0; }
 
 /* ─── TIMELINE ───────────────────────────────────────────── */
 .tl-intro {
-  font-size: .95rem; color: var(--grey);
-  max-width: 640px; margin-bottom: 56px;
-  line-height: 1.75; font-style: italic;
+  font-size: 1.15rem; color: var(--grey);
+  max-width: 720px; margin-bottom: 56px;
+  line-height: 1.8; font-style: italic;
+  font-family: var(--serif);
 }
 .timeline { position: relative; padding-left: 200px; }
 .timeline::before {
