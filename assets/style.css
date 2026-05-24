@@ -1264,7 +1264,6 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
   width: 92%;
   border-radius: 0;
   object-fit: contain;
-  mix-blend-mode: multiply;
   display: block;
 }
 
