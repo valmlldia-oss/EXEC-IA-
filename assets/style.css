@@ -1198,7 +1198,7 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
    AGENTS IA — Carousel
 ════════════════════════════════════════════════════ */
 .agents-section {
-  background: var(--ivory);
+  background: var(--white);
   padding: 5.5rem 0 3.5rem;
   overflow: hidden;
 }
@@ -1264,7 +1264,7 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
   width: 92%;
   border-radius: 0;
   object-fit: contain;
-  filter: drop-shadow(0 12px 28px rgba(79,0,53,.12));
+  mix-blend-mode: multiply;
   display: block;
 }
 
