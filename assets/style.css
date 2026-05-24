@@ -298,6 +298,17 @@ a { text-decoration: none; color: inherit; }
   border-color: var(--plum); background: var(--plum); color: var(--ivory);
   box-shadow: 0 6px 24px rgba(79,0,53,.28);
 }
+.btn-ivory {
+  background: #fff; color: var(--plum); font-weight: 700;
+  border: 2px solid rgba(79,0,53,.15);
+  box-shadow: 0 4px 18px rgba(79,0,53,.13), 0 1px 4px rgba(0,0,0,.07);
+  letter-spacing: .02em;
+}
+.btn-ivory:hover {
+  border-color: var(--plum);
+  box-shadow: 0 8px 28px rgba(79,0,53,.22);
+  transform: translateY(-2px);
+}
 .btn-plum-outline {
   border: 1.5px solid var(--plum); color: var(--plum);
 }
