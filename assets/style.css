@@ -212,7 +212,7 @@ a { text-decoration: none; color: inherit; }
 .stat-chip strong { color: var(--plum); font-weight: 600; }
 
 .hero-cta {
-  display: flex; gap: 14px; flex-wrap: wrap; align-items: center;
+  display: flex; gap: 14px; flex-wrap: nowrap; align-items: center;
   animation: slideup .9s var(--ease) .4s both;
 }
 
@@ -349,6 +349,11 @@ section { padding: clamp(72px, 9vw, 112px) 0; }
 .about-body p {
   font-size: 1.0rem; line-height: 1.9; color: var(--text); margin-bottom: 18px;
 }
+.about-section-title {
+  font-size: clamp(2.8rem, 5.5vw, 4.4rem) !important;
+  line-height: 1.08 !important;
+  margin-bottom: 48px !important;
+}
 .about-lede {
   font-size: 1.17rem !important; font-weight: 500 !important;
   color: var(--plum) !important;
@@ -364,6 +369,7 @@ section { padding: clamp(72px, 9vw, 112px) 0; }
 }
 .fl-icon { color: var(--rose); font-size: .72rem; flex-shrink: 0; }
 .formation-list em { color: var(--grey); font-style: normal; font-size: .85rem; }
+.fl-rose { color: var(--rose) !important; font-style: normal; font-weight: 600; font-size: .88rem; }
 .about-quote {
   border-left: 2px solid var(--rose); padding-left: 22px;
   font-style: italic; color: var(--grey) !important;
@@ -1136,7 +1142,7 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
   scroll-snap-align: center;
   flex-shrink: 0;
   width: 420px;
-  height: 290px;
+  min-height: 290px;
   background: linear-gradient(135deg, rgba(79,0,53,.75) 0%, rgba(37,0,27,.9) 100%);
   border: 1px solid rgba(217,61,142,.18);
   border-radius: 1.25rem;
