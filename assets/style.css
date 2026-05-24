@@ -1153,6 +1153,13 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
   font-style: italic; margin: 4px 0 12px 22px;
 }
 .qualiopi-text { font-size: .82rem; line-height: 1.65; color: var(--text); margin-bottom: 16px; }
+.qualiopi-link {
+  display: inline-block; margin-top: 10px; margin-left: 22px;
+  font-size: .80rem; font-weight: 600; color: var(--rose);
+  text-decoration: none; letter-spacing: .03em;
+  transition: opacity .2s;
+}
+.qualiopi-link:hover { opacity: .7; }
 .qualiopi-seal {
   display: inline-flex; align-items: center; gap: 10px;
   border: 2px solid #E37222; border-radius: 10px; padding: 8px 16px;
