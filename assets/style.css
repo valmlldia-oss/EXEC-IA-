@@ -927,8 +927,8 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
 }
 .approach-card-img img.formation-img {
   mix-blend-mode: multiply;
-  object-fit: contain;
-  padding: 8px;
+  object-fit: cover;
+  padding: 0;
 }
 .approach-signature {
   padding: 48px 0 0; text-align: center;
