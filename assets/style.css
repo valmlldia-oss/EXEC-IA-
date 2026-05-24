@@ -605,10 +605,20 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
 .ss-num {
   font-family: var(--serif); font-size: 3.2rem; font-weight: 600;
   color: var(--ivory); line-height: 1;
+  /* hauteur fixe identique pour tous → chiffres tous au même niveau */
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.ss-num--sm { font-size: 2.1rem; letter-spacing: .04em; margin-top: 12px; }
-.ss-num--globe { font-size: 2.5rem; margin-top: 7px; }
-.ss-sup { font-size: 1.3rem; color: var(--rose); vertical-align: super; }
+.ss-num--sm { font-size: 2.1rem; letter-spacing: .04em; }
+.ss-num--globe { font-size: 2.5rem; }
+/* "+" : repositionné en haut via flex au lieu de vertical-align */
+.ss-sup {
+  font-size: 1.3rem; color: var(--rose);
+  align-self: flex-start;
+  margin-top: 2px;
+}
 .ss-label {
   font-size: .78rem; color: rgba(246,241,235,.52);
   letter-spacing: .06em; text-transform: uppercase; line-height: 1.45;
