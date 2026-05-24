@@ -54,6 +54,7 @@ a { text-decoration: none; color: inherit; }
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(79,0,53,.07);
   transition: box-shadow .35s;
+  overflow: hidden;
 }
 #nav.scrolled {
   box-shadow: 0 4px 24px rgba(37,0,27,.08);
@@ -71,6 +72,7 @@ a { text-decoration: none; color: inherit; }
   object-fit: cover;
   object-position: 50% 20%;
   border-radius: 4px;
+  clip-path: inset(0 0 34% 0 round 4px);
 }
 .nav-brand-info { display: flex; flex-direction: column; justify-content: center; }
 .nav-brand-name {
@@ -678,32 +680,32 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
   display: grid; grid-template-columns: repeat(3,1fr); gap: 24px;
 }
 .offre-card {
-  background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
+  background: #fff; border: 1px solid rgba(79,0,53,.1);
   border-radius: 18px; padding: 40px 32px;
   display: flex; flex-direction: column; gap: 18px;
-  transition: background .25s, border-color .25s;
+  transition: background .25s, border-color .25s, box-shadow .25s;
 }
-.offre-card:hover { background: rgba(255,255,255,.09); }
-.offre-featured { background: rgba(217,61,142,.1); border-color: rgba(217,61,142,.45); }
-.offre-featured:hover { background: rgba(217,61,142,.14); }
+.offre-card:hover { box-shadow: 0 8px 32px rgba(79,0,53,.08); border-color: rgba(79,0,53,.22); }
+.offre-featured { background: rgba(217,61,142,.05); border-color: rgba(217,61,142,.35); }
+.offre-featured:hover { background: rgba(217,61,142,.09); }
 .offre-num {
   font-family: var(--serif); font-size: 3rem; font-weight: 700;
-  color: rgba(246,241,235,.28); line-height: 1;
+  color: rgba(79,0,53,.14); line-height: 1;
 }
-.offre-card h3 { font-family: var(--serif); font-size: 1.25rem; color: var(--ivory); margin: 0; }
+.offre-card h3 { font-family: var(--serif); font-size: 1.25rem; color: var(--plum); margin: 0; }
 .offre-format {
   font-size: .74rem; letter-spacing: .07em;
   color: var(--rose); font-weight: 500; text-transform: uppercase;
 }
 .offre-card > p {
-  font-size: .9rem; color: rgba(246,241,235,.68); line-height: 1.75; flex: 1;
+  font-size: .9rem; color: var(--text); line-height: 1.75; flex: 1;
 }
 .offre-points {
   list-style: none; padding: 0; margin: 0;
   display: flex; flex-direction: column; gap: 9px;
 }
 .offre-points li {
-  font-size: .82rem; color: rgba(246,241,235,.6);
+  font-size: .82rem; color: var(--grey);
   padding-left: 18px; position: relative; line-height: 1.5;
 }
 .offre-points li::before {
@@ -714,13 +716,13 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
   display: inline-flex; align-items: center;
   padding: 13px 30px; border-radius: 32px;
   font-size: .87rem; font-weight: 500; letter-spacing: .025em;
-  border: 1.5px solid rgba(246,241,235,.3);
-  color: rgba(246,241,235,.8); background: transparent;
+  border: 1.5px solid rgba(79,0,53,.3);
+  color: var(--plum); background: transparent;
   cursor: pointer; width: fit-content;
   transition: background .2s, border-color .2s;
 }
 .btn-outline-light:hover {
-  background: rgba(246,241,235,.07); border-color: rgba(246,241,235,.5);
+  background: rgba(79,0,53,.04); border-color: var(--plum);
 }
 
 /* ─── MÉTHODE ─────────────────────────────────────────────── */
@@ -907,6 +909,9 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
 .approach-card-img img.warm-filter {
   filter: hue-rotate(32deg) saturate(0.88) brightness(0.92);
 }
+.approach-card-img img.suivi-filter {
+  filter: hue-rotate(20deg) saturate(0.82) brightness(0.93);
+}
 .approach-signature {
   padding: 48px 0 0; text-align: center;
 }
@@ -916,6 +921,42 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
 .approach-signature em {
   font-family: var(--serif); font-size: 1.1rem; color: var(--plum);
   font-style: italic; letter-spacing: .02em;
+}
+
+/* ─── VIDEO SECTION ──────────────────────────────────────── */
+.video-section { padding: 80px 0 72px; background: var(--white); }
+.video-wrap {
+  max-width: 840px; margin: 0 auto;
+  border-radius: 20px; overflow: hidden;
+  box-shadow: 0 20px 64px rgba(79,0,53,.13);
+  aspect-ratio: 16 / 9;
+  position: relative;
+}
+.video-placeholder {
+  width: 100%; height: 100%;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 20px;
+  background: linear-gradient(135deg, var(--deep) 0%, var(--plum) 100%);
+  position: absolute; inset: 0;
+}
+.video-play-btn {
+  width: 76px; height: 76px; border-radius: 50%;
+  background: var(--rose);
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 1.8rem;
+  padding-left: 6px;
+  box-shadow: 0 8px 32px rgba(217,61,142,.5);
+  cursor: pointer;
+  transition: transform .25s, box-shadow .25s;
+}
+.video-play-btn:hover { transform: scale(1.08); box-shadow: 0 12px 40px rgba(217,61,142,.6); }
+.video-caption {
+  color: rgba(246,241,235,.55); font-size: .82rem; letter-spacing: .06em;
+  font-family: var(--sans);
+}
+.video-wrap iframe {
+  width: 100%; height: 100%; display: block; border: 0;
+  position: absolute; inset: 0;
 }
 
 /* ─── TOOLS STRIP ────────────────────────────────────────── */
