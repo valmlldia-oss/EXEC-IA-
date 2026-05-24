@@ -1024,6 +1024,10 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
   font-family: var(--serif); font-size: .95rem; font-weight: 700;
   color: var(--plum); margin-bottom: 8px;
 }
+.qualiopi-cert {
+  font-size: .83rem; line-height: 1.6; color: rgba(79,0,53,.6);
+  font-style: italic; margin: 4px 0 12px 22px;
+}
 .qualiopi-text { font-size: .82rem; line-height: 1.65; color: var(--text); margin-bottom: 16px; }
 .qualiopi-seal {
   display: inline-flex; align-items: center; gap: 10px;
@@ -1036,6 +1040,7 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
 .qualiopi-seal-lines { display: flex; flex-direction: column; }
 .qualiopi-seal-name { font-size: .68rem; font-weight: 800; letter-spacing: .12em; color: #005B99; }
 .qualiopi-seal-sub { font-size: .56rem; color: #888; letter-spacing: .06em; margin-top: 1px; }
+.qualiopi-seal--inline { margin: 0 0 20px 22px; }
 
 /* ─── ROI SIMULATOR ──────────────────────────────────────── */
 .roi-section { background: var(--deep); padding: clamp(64px, 8vw, 96px) 0; }
