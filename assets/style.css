@@ -66,10 +66,10 @@ a { text-decoration: none; color: inherit; }
 .nav-brand {
   display: flex; align-items: center; gap: 10px; flex-shrink: 0; margin-right: 32px;
 }
-.nav-brand img { height: 52px; object-fit: contain; }
+.nav-brand img { height: 64px; object-fit: contain; }
 .nav-brand-info { display: flex; flex-direction: column; justify-content: center; }
 .nav-brand-name {
-  font-family: var(--serif); font-size: 1.25rem; font-weight: 600;
+  font-family: var(--serif); font-size: 1.45rem; font-weight: 600;
   letter-spacing: .06em; color: var(--plum); line-height: 1;
 }
 .nav-brand-tagline {
@@ -213,6 +213,7 @@ a { text-decoration: none; color: inherit; }
 
 .hero-cta {
   display: flex; gap: 14px; flex-wrap: nowrap; align-items: center;
+  margin-top: 40px;
   animation: slideup .9s var(--ease) .4s both;
 }
 
@@ -356,6 +357,11 @@ section { padding: clamp(72px, 9vw, 112px) 0; }
 .expertise-section-title {
   font-size: clamp(2.5rem, 4.5vw, 3.8rem) !important;
   line-height: 1.1 !important;
+  margin-bottom: 52px !important;
+}
+.offres-section-title {
+  font-size: clamp(2.8rem, 5.5vw, 4.4rem) !important;
+  line-height: 1.08 !important;
   margin-bottom: 52px !important;
 }
 .about-lede {
@@ -1112,8 +1118,9 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
   border-radius: 2rem;
   padding: .42rem 1.3rem;
   color: var(--rose);
-  font-size: .9rem;
-  font-weight: 700;
+  font-size: .95rem;
+  font-weight: 800;
+  -webkit-text-stroke: .3px currentColor;
   letter-spacing: .09em;
   text-transform: uppercase;
   margin-bottom: 1.25rem;
@@ -1173,6 +1180,7 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
   -webkit-overflow-scrolling: touch;
   padding: .5rem 0 1.5rem;
   cursor: grab;
+  scroll-padding-left: 1.5rem;
 }
 .agents-track-outer:active { cursor: grabbing; }
 .agents-track-outer::-webkit-scrollbar { height: 3px; }
@@ -1183,13 +1191,13 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
   display: flex;
   gap: 1.25rem;
   width: max-content;
-  /* centre le premier et dernier card */
-  padding: 0 max(1.5rem, calc(50vw - 224px));
+  /* premier card aligné à gauche */
+  padding: 0 1.5rem;
 }
 
 /* Card */
 .agent-card {
-  scroll-snap-align: center;
+  scroll-snap-align: start;
   flex-shrink: 0;
   width: 420px;
   background: transparent;
