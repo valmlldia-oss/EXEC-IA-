@@ -849,11 +849,22 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
 }
 .approach-body { display: flex; flex-direction: column; gap: 0; }
 .approach-body h3 {
-  font-family: var(--serif); font-size: 1.35rem; font-weight: 600;
-  color: var(--plum); margin-bottom: 18px; line-height: 1.3;
+  font-family: var(--serif); font-size: 1.38rem; font-weight: 700;
+  color: var(--plum); margin-bottom: 6px; line-height: 1.3;
 }
-.approach-body p { font-size: .92rem; line-height: 1.75; color: var(--text); margin-bottom: 14px; }
+.approach-subtitle {
+  font-size: .8rem; font-weight: 600; color: var(--rose);
+  letter-spacing: .07em; text-transform: uppercase;
+  margin-bottom: 16px; display: block;
+}
+.approach-body p { font-size: .95rem; line-height: 1.78; color: var(--text); margin-bottom: 12px; }
 .approach-body p:last-child { margin-bottom: 0; }
+.approach-objectif {
+  font-size: .9rem; font-style: italic; color: var(--plum);
+  border-left: 2.5px solid var(--rose); padding-left: 14px;
+  margin-top: 14px !important; margin-bottom: 10px !important;
+  line-height: 1.65;
+}
 .approach-list {
   list-style: none; padding: 0; margin: 0 0 14px; display: flex; flex-direction: column; gap: 7px;
 }
