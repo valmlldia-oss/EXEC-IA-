@@ -872,7 +872,7 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
 }
 .approach-card-header h3 {
   font-family: var(--serif);
-  font-size: clamp(1.35rem, 2vw, 1.65rem);
+  font-size: clamp(1.6rem, 2.3vw, 1.95rem);
   font-weight: 700;
   color: var(--plum);
   line-height: 1.2;
@@ -882,9 +882,9 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
   display: inline-block;
   background: rgba(217,61,142,.12);
   color: var(--rose);
-  font-size: .74rem; font-weight: 700;
-  letter-spacing: .08em; text-transform: uppercase;
-  padding: 4px 11px; border-radius: 20px;
+  font-size: .88rem; font-weight: 700;
+  letter-spacing: .07em; text-transform: uppercase;
+  padding: 5px 14px; border-radius: 20px;
   margin-bottom: 16px;
 }
 .approach-card p {
@@ -911,6 +911,13 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
 }
 .approach-card-img img.suivi-filter {
   filter: hue-rotate(20deg) saturate(0.82) brightness(0.93);
+  mix-blend-mode: multiply;
+}
+/* Image équipe — conteneur plus bas, fond fusionné avec la carte */
+.approach-card-img.img-team {
+  aspect-ratio: 16 / 7;
+  margin-top: 16px;
+  background: #fff;
 }
 .approach-signature {
   padding: 48px 0 0; text-align: center;
