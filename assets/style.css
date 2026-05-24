@@ -853,6 +853,7 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
   display: flex;
   flex-direction: column;
   gap: 0;
+  isolation: isolate;
 }
 .approach-card-header {
   display: flex;
@@ -880,12 +881,14 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
 }
 .approach-subtitle {
   display: inline-block;
+  align-self: flex-start;
   background: rgba(217,61,142,.12);
   color: var(--rose);
-  font-size: .88rem; font-weight: 700;
+  font-size: .80rem; font-weight: 700;
   letter-spacing: .07em; text-transform: uppercase;
   padding: 5px 14px; border-radius: 20px;
   margin-bottom: 16px;
+  white-space: nowrap;
 }
 .approach-card p {
   font-size: .93rem; line-height: 1.78; color: var(--text);
@@ -912,13 +915,13 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
 .approach-card-img img.suivi-filter {
   filter: hue-rotate(20deg) saturate(0.82) brightness(0.93);
 }
-/* Image équipe — conteneur plus bas, fond fusionné avec la carte */
+/* Image équipe — petite, fond blanc, multiply efface le fond de l'image */
 .approach-card-img.img-team {
-  aspect-ratio: 16 / 7;
+  aspect-ratio: unset;
+  height: 150px;
   margin-top: 16px;
   background: #fff;
 }
-/* Fond transparent via multiply sur les images d'équipe 3D */
 .approach-card-img.img-team img {
   mix-blend-mode: multiply;
   object-fit: contain;
