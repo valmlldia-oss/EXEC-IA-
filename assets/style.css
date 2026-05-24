@@ -915,16 +915,10 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
 .approach-card-img img.suivi-filter {
   filter: hue-rotate(20deg) saturate(0.82) brightness(0.93);
 }
-/* Image équipe — petite, fond blanc, multiply efface le fond de l'image */
-.approach-card-img.img-team {
-  aspect-ratio: unset;
-  height: 150px;
-  margin-top: 16px;
-  background: #fff;
-}
-.approach-card-img.img-team img {
+/* Image équipe carte 3 — même ratio que 1&2, fond effacé via multiply */
+.approach-card-img img.formation-img {
   mix-blend-mode: multiply;
-  object-fit: contain;
+  object-fit: cover;
 }
 .approach-signature {
   padding: 48px 0 0; text-align: center;
