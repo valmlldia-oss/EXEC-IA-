@@ -918,11 +918,11 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
 /* Image équipe carte 3 — fond blanc + multiply pour effacer arrière-plan + plus petite */
 .approach-card-img--team {
   background: #fff;
-  aspect-ratio: 4/3;
-  max-height: 200px;
+  aspect-ratio: 16/10;
+  max-height: none;
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
+  width: 100%;
 }
 .approach-card-img img.formation-img {
   mix-blend-mode: multiply;
