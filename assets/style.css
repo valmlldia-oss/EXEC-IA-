@@ -911,13 +911,17 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
 }
 .approach-card-img img.suivi-filter {
   filter: hue-rotate(20deg) saturate(0.82) brightness(0.93);
-  mix-blend-mode: multiply;
 }
 /* Image équipe — conteneur plus bas, fond fusionné avec la carte */
 .approach-card-img.img-team {
   aspect-ratio: 16 / 7;
   margin-top: 16px;
   background: #fff;
+}
+/* Fond transparent via multiply sur les images d'équipe 3D */
+.approach-card-img.img-team img {
+  mix-blend-mode: multiply;
+  object-fit: contain;
 }
 .approach-signature {
   padding: 48px 0 0; text-align: center;
