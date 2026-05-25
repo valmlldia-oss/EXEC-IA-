@@ -390,6 +390,9 @@ section { padding: clamp(72px, 9vw, 112px) 0; }
   display: grid; grid-template-columns: 3fr 2fr;
   gap: 80px; align-items: stretch;
 }
+.about-body {
+  display: flex; flex-direction: column; justify-content: space-between;
+}
 .about-body p {
   font-size: 1.0rem; line-height: 1.9; color: var(--text); margin-bottom: 18px;
 }
