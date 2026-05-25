@@ -215,8 +215,8 @@ a { text-decoration: none; color: inherit; }
 }
 .hero-certif a:hover { opacity: .75; }
 .hero-certif .certif-rs {
-  font-size: .75rem; font-weight: 400;
-  color: var(--grey);
+  font-size: .88rem; font-weight: 600;
+  color: var(--plum);
 }
 .hero-sub {
   font-size: .87rem; color: var(--grey);
