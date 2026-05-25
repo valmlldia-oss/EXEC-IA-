@@ -68,12 +68,9 @@ a { text-decoration: none; color: inherit; }
   display: flex; align-items: center; gap: 10px; flex-shrink: 0; margin-right: 32px;
 }
 .nav-brand img {
-  height: 60px;
+  height: 64px;
   width: auto;
   object-fit: contain;
-  border-radius: 10px;
-  background: var(--deep);
-  padding: 5px 10px;
 }
 .nav-brand-info { display: flex; flex-direction: column; justify-content: center; }
 .nav-brand-name {
@@ -372,7 +369,7 @@ section { padding: clamp(72px, 9vw, 112px) 0; }
 .wrap { max-width: var(--max); margin: 0 auto; padding: 0 36px; }
 .eyebrow {
   display: block; margin-bottom: 12px;
-  font-size: .72rem; font-weight: 600;
+  font-size: .88rem; font-weight: 700;
   letter-spacing: .18em; text-transform: uppercase;
   color: var(--rose);
 }
