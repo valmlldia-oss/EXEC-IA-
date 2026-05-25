@@ -675,7 +675,7 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
 /* ─── STATS STRIP ────────────────────────────────────────── */
 .stats-strip { background: var(--deep); padding: 20px 0 44px; }
 .ss-grid {
-  display: grid; grid-template-columns: repeat(5,1fr);
+  display: flex; justify-content: space-evenly;
   text-align: center;
 }
 .ss-item {
@@ -782,13 +782,13 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
 .offre-featured { background: rgba(217,61,142,.05); border-color: rgba(217,61,142,.35); }
 .offre-featured:hover { background: rgba(217,61,142,.09); }
 .offre-num {
-  font-family: var(--serif); font-size: 3rem; font-weight: 700;
-  color: rgba(79,0,53,.14); line-height: 1;
+  font-family: var(--serif); font-size: 4rem; font-weight: 700;
+  color: var(--plum); line-height: 1; margin-bottom: 10px;
 }
-.offre-card h3 { font-family: var(--serif); font-size: 1.65rem; color: var(--plum); margin: 0; font-weight: 700; }
+.offre-card h3 { font-family: var(--serif); font-size: 1.25rem; color: var(--plum); margin: 0; font-weight: 700; }
 .offre-format {
-  font-size: .74rem; letter-spacing: .07em;
-  color: var(--rose); font-weight: 500; text-transform: uppercase;
+  font-size: .95rem; letter-spacing: .07em;
+  color: var(--rose); font-weight: 600; text-transform: uppercase;
 }
 .offre-card > p {
   font-size: .9rem; color: var(--text); line-height: 1.75; flex: 1;
