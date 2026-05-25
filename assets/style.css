@@ -220,8 +220,8 @@ a { text-decoration: none; color: inherit; }
   animation: slideup .9s var(--ease) .4s both;
 }
 .hero-linkedin-link {
-  display: inline-flex; align-items: center; gap: 7px;
-  margin-top: 16px;
+  display: inline-flex; align-items: center; gap: 8px;
+  margin-top: 32px;
   font-size: .82rem; font-weight: 500; color: var(--grey);
   text-decoration: none;
   transition: color .2s;
