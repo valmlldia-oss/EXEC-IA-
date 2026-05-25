@@ -391,7 +391,7 @@ section { padding: clamp(72px, 9vw, 112px) 0; }
   gap: 80px; align-items: stretch;
 }
 .about-body {
-  display: flex; flex-direction: column; justify-content: space-between;
+  display: flex; flex-direction: column;
 }
 .about-body p {
   font-size: 1.0rem; line-height: 1.9; color: var(--text); margin-bottom: 18px;
@@ -1211,7 +1211,7 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
 }
 .qualiopi-text { font-size: .82rem; line-height: 1.65; color: var(--text); margin-bottom: 16px; }
 .qualiopi-link {
-  display: inline-block; margin-top: 4px; margin-left: 22px;
+  display: inline-block; margin-top: 4px; margin-left: 22px; margin-bottom: 32px;
   font-size: .80rem; font-weight: 600; color: var(--rose);
   text-decoration: none; letter-spacing: .03em;
   transition: opacity .2s;
