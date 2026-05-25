@@ -1258,7 +1258,7 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
 .roi-outputs { display: grid; grid-template-columns: 1fr 1.4fr 1fr; gap: 14px; margin-bottom: 22px; }
 .roi-chip { background: var(--ivory); border: 1px solid rgba(79,0,53,.1); border-radius: 14px; padding: 18px 12px; text-align: center; }
 .roi-chip--hero { background: var(--plum); border: none; }
-.roi-chip-lbl { display: block; font-size: .58rem; letter-spacing: .1em; text-transform: uppercase; color: var(--grey); margin-bottom: 8px; }
+.roi-chip-lbl { display: block; font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--plum); font-weight: 600; margin-bottom: 8px; }
 .roi-chip-val { font-family: var(--serif); font-size: 1.3rem; color: var(--plum); display: block; }
 .roi-chip--hero .roi-chip-lbl { color: rgba(246,241,235,.6); }
 .roi-chip--hero .roi-chip-val { font-size: 1.65rem; color: var(--white); }
