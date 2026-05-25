@@ -68,14 +68,24 @@ a { text-decoration: none; color: inherit; }
   display: flex; align-items: center; gap: 10px; flex-shrink: 0; margin-right: 32px;
 }
 .nav-brand img {
-  height: 64px;
-  width: auto;
-  object-fit: contain;
+  height: 56px;
+  width: 56px;
+  object-fit: cover;
+  border-radius: 50%;
+  background: var(--plum);
+  box-shadow: 0 2px 12px rgba(79,0,53,.25);
 }
 .nav-brand-info { display: flex; flex-direction: column; justify-content: center; }
 .nav-brand-name {
   font-family: var(--serif); font-size: 1.45rem; font-weight: 600;
   letter-spacing: .06em; color: var(--plum); line-height: 1;
+}
+.nav-apostrophe {
+  color: var(--rose);
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 0;
+  vertical-align: 0.1em;
 }
 .nav-brand-tagline { display: none; }
 .nav-links {
