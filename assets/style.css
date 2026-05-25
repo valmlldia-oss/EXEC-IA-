@@ -246,7 +246,7 @@ a { text-decoration: none; color: inherit; }
 }
 .hero-linkedin-link {
   display: inline-flex; align-items: center; gap: 8px;
-  margin-top: 32px;
+  margin-top: 72px;
   font-size: .82rem; font-weight: 500; color: var(--grey);
   text-decoration: none;
   transition: color .2s;
