@@ -186,7 +186,7 @@ a { text-decoration: none; color: inherit; }
 
 /* Decorative rule under name */
 .hero-rule {
-  width: 56px; height: 2px;
+  width: 90px; height: 2px;
   background: var(--rose);
   margin-bottom: 24px;
   animation: slideup .9s var(--ease) .18s both;
