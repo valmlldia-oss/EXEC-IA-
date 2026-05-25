@@ -68,11 +68,10 @@ a { text-decoration: none; color: inherit; }
   display: flex; align-items: center; gap: 10px; flex-shrink: 0; margin-right: 32px;
 }
 .nav-brand img {
-  width: 96px; height: 96px;
-  object-fit: cover;
-  object-position: 50% 20%;
-  border-radius: 4px;
-  clip-path: inset(0 0 34% 0 round 4px);
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 0;
 }
 .nav-brand-info { display: flex; flex-direction: column; justify-content: center; }
 .nav-brand-name {
