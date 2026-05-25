@@ -193,6 +193,18 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 10px;
   animation: slideup .9s var(--ease) .22s both;
 }
+.hero-certif {
+  font-size: .78rem; font-weight: 400;
+  color: var(--grey); line-height: 1.5;
+  margin-top: 8px;
+  animation: slideup .9s var(--ease) .26s both;
+}
+.hero-certif a {
+  color: var(--grey); text-decoration: none;
+  border-bottom: 1px solid rgba(132,118,128,.35);
+  transition: color .2s, border-color .2s;
+}
+.hero-certif a:hover { color: var(--plum); border-color: var(--plum); }
 .hero-sub {
   font-size: .87rem; color: var(--grey);
   margin-bottom: 40px;
