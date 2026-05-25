@@ -785,7 +785,7 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
   font-family: var(--serif); font-size: 3rem; font-weight: 700;
   color: rgba(79,0,53,.14); line-height: 1;
 }
-.offre-card h3 { font-family: var(--serif); font-size: 1.25rem; color: var(--plum); margin: 0; }
+.offre-card h3 { font-family: var(--serif); font-size: 1.65rem; color: var(--plum); margin: 0; font-weight: 700; }
 .offre-format {
   font-size: .74rem; letter-spacing: .07em;
   color: var(--rose); font-weight: 500; text-transform: uppercase;
