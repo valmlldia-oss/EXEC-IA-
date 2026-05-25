@@ -194,7 +194,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 .hero-tagline {
-  font-size: clamp(1.35rem, 2.2vw, 1.7rem); font-weight: 400;
+  font-size: clamp(1.1rem, 1.6vw, 1.35rem); font-weight: 400;
   color: var(--text); line-height: 1.4;
   margin-bottom: 10px;
   animation: slideup .9s var(--ease) .22s both;
@@ -220,8 +220,13 @@ a { text-decoration: none; color: inherit; }
   color: var(--plum);
 }
 .hero-sub {
-  font-size: .87rem; color: var(--grey);
-  margin-bottom: 40px;
+  font-family: var(--sans);
+  font-size: clamp(1.25rem, 2vw, 1.55rem);
+  font-weight: 400;
+  color: var(--text);
+  line-height: 2;
+  margin-top: 24px;
+  margin-bottom: 8px;
   animation: slideup .9s var(--ease) .28s both;
 }
 
