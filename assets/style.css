@@ -136,7 +136,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 .hero-wrap {
-  max-width: var(--max); margin: 0 auto; padding: 96px 36px;
+  max-width: var(--max); margin: 0 auto; padding: 64px 36px 40px;
   display: flex; align-items: center;
   justify-content: space-between; gap: 0;
   position: relative; z-index: 2;
@@ -221,12 +221,12 @@ a { text-decoration: none; color: inherit; }
 }
 .hero-sub {
   font-family: var(--sans);
-  font-size: clamp(1.25rem, 2vw, 1.55rem);
+  font-size: clamp(1.45rem, 2.4vw, 1.85rem);
   font-weight: 400;
   color: var(--text);
-  line-height: 2;
-  margin-top: 24px;
-  margin-bottom: 8px;
+  line-height: 1.55;
+  margin-top: 16px;
+  margin-bottom: 0;
   animation: slideup .9s var(--ease) .28s both;
 }
 
@@ -252,7 +252,7 @@ a { text-decoration: none; color: inherit; }
 }
 .hero-linkedin-link {
   display: inline-flex; align-items: center; gap: 8px;
-  margin-top: 160px;
+  margin-top: 32px;
   font-size: .82rem; font-weight: 500; color: var(--grey);
   text-decoration: none;
   transition: color .2s;
