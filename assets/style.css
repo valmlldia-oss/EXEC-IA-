@@ -450,7 +450,7 @@ section { padding: clamp(72px, 9vw, 112px) 0; }
 }
 .pillar:hover { border-color: var(--rose); box-shadow: 0 6px 28px rgba(79,0,53,.1); }
 .pillar-icon { font-size: 1.15rem; color: var(--rose); margin-bottom: 10px; }
-.pillar h4 { font-family: var(--serif); font-size: 1.25rem; color: var(--plum); margin-bottom: 8px; font-weight: 700; }
+.pillar h4 { font-family: var(--serif); font-size: 1.5rem; color: var(--plum); margin-bottom: 8px; font-weight: 700; }
 .pillar p { font-size: .88rem; color: var(--grey); line-height: 1.62; }
 .pillar-roi-link {
   display: inline-block; margin-top: 10px;
