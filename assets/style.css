@@ -679,7 +679,7 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
   text-align: center;
 }
 .ss-item {
-  padding: 20px 32px;
+  padding: 20px 64px;
   border-right: 1px solid rgba(255,255,255,.08);
   display: flex; flex-direction: column; gap: 8px; align-items: center;
   justify-content: flex-start;
