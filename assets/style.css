@@ -643,7 +643,7 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
 }
 
 /* ─── STATS STRIP ────────────────────────────────────────── */
-.stats-strip { background: var(--deep); padding: 44px 0; }
+.stats-strip { background: var(--deep); padding: 20px 0 44px; }
 .ss-grid {
   display: grid; grid-template-columns: repeat(5,1fr);
   text-align: center;
@@ -816,7 +816,7 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
 
 /* ─── TICKER ─────────────────────────────────────────────── */
 .ticker-bar {
-  background: var(--deep); overflow: hidden; padding: 13px 0;
+  background: var(--deep); overflow: hidden; padding: 16px 0;
   border-bottom: 1px solid rgba(246,241,235,.05);
 }
 .ticker-track {
@@ -826,7 +826,7 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
 .ticker-track:hover { animation-play-state: paused; }
 .ticker-item {
   display: inline-flex; align-items: center; gap: 12px;
-  padding: 0 48px; font-size: 1rem; letter-spacing: .08em;
+  padding: 0 48px; font-size: 1.22rem; letter-spacing: .08em;
   text-transform: uppercase; color: rgba(246,241,235,.65);
   font-weight: 500;
 }
