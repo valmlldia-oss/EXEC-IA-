@@ -1241,7 +1241,7 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
 }
 .roi-sliders { display: flex; flex-direction: column; gap: 28px; margin-bottom: 36px; }
 .roi-sh { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px; }
-.roi-sh label { font-size: .84rem; color: var(--text); font-weight: 500; }
+.roi-sh label { font-size: 1rem; color: var(--text); font-weight: 600; }
 .roi-sv { font-family: var(--serif); font-size: 1.1rem; color: var(--rose); font-weight: 700; }
 .roi-range {
   width: 100%; -webkit-appearance: none; appearance: none;
