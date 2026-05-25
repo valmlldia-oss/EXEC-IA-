@@ -77,7 +77,7 @@ a { text-decoration: none; color: inherit; }
 }
 .nav-brand-info { display: flex; flex-direction: column; justify-content: center; }
 .nav-brand-name {
-  font-family: var(--serif); font-size: 1.45rem; font-weight: 600;
+  font-family: var(--serif); font-size: 1.7rem; font-weight: 600;
   letter-spacing: .06em; color: var(--plum); line-height: 1;
 }
 .nav-apostrophe { }
@@ -137,7 +137,7 @@ a { text-decoration: none; color: inherit; }
 
 .hero-wrap {
   max-width: var(--max); margin: 0 auto; padding: 64px 36px 40px;
-  display: flex; align-items: center;
+  display: flex; align-items: flex-start;
   justify-content: space-between; gap: 0;
   position: relative; z-index: 2;
   width: 100%;
@@ -264,6 +264,7 @@ a { text-decoration: none; color: inherit; }
 .hero-right {
   flex-shrink: 0; position: relative;
   width: 340px; display: flex; justify-content: center;
+  padding-top: 120px;
   animation: fadein 1.1s var(--ease) .25s both;
 }
 .photo-ring {
@@ -378,7 +379,7 @@ section { padding: clamp(72px, 9vw, 112px) 0; }
 .wrap { max-width: var(--max); margin: 0 auto; padding: 0 36px; }
 .eyebrow {
   display: block; margin-bottom: 12px;
-  font-size: .88rem; font-weight: 700;
+  font-size: 1.05rem; font-weight: 700;
   letter-spacing: .18em; text-transform: uppercase;
   color: var(--rose);
 }
@@ -459,7 +460,7 @@ section { padding: clamp(72px, 9vw, 112px) 0; }
 }
 .pillar:hover { border-color: var(--rose); box-shadow: 0 6px 28px rgba(79,0,53,.1); }
 .pillar-icon { font-size: 1.15rem; color: var(--rose); margin-bottom: 10px; }
-.pillar h4 { font-family: var(--serif); font-size: 1.5rem; color: var(--plum); margin-bottom: 8px; font-weight: 700; }
+.pillar h4 { font-family: var(--serif); font-size: 1.85rem; color: var(--plum); margin-bottom: 8px; font-weight: 700; }
 .pillar p { font-size: .88rem; color: var(--grey); line-height: 1.62; }
 .pillar-roi-link {
   display: inline-block; margin-top: 10px;
