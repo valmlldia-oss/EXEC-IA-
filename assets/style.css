@@ -188,7 +188,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 .hero-tagline {
-  font-size: clamp(1.35rem, 2.2vw, 1.7rem); font-weight: 700;
+  font-size: clamp(1.35rem, 2.2vw, 1.7rem); font-weight: 400;
   color: var(--text); line-height: 1.4;
   margin-bottom: 10px;
   animation: slideup .9s var(--ease) .22s both;
