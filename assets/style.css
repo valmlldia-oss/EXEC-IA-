@@ -627,9 +627,9 @@ section { padding: clamp(72px, 9vw, 112px) 0; }
 .contact-btns { display: flex; flex-direction: column; align-items: center; gap: 14px; margin-bottom: 32px; }
 .contact-btns .btn { min-height: 76px; }
 .contact-meta {
-  font-size: .82rem; color: var(--grey); line-height: 1.9;
+  font-size: 1.05rem; color: var(--grey); line-height: 1.9;
 }
-.contact-meta a { color: var(--plum); font-weight: 500; border-bottom: 1px solid transparent; transition: border-color .2s; }
+.contact-meta a { color: var(--plum); font-weight: 600; border-bottom: 1px solid transparent; transition: border-color .2s; }
 .contact-meta a:hover { border-color: var(--plum); }
 
 /* ─── FOOTER ─────────────────────────────────────────────── */
@@ -641,10 +641,22 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
   font-family: var(--serif); font-style: italic;
   font-size: 1.35rem; color: rgba(255,255,255,.92); margin: 10px 0 22px;
 }
-.footer-nav { display: flex; gap: 24px; justify-content: center; margin-bottom: 14px; }
-.footer-nav a { font-size: .76rem; color: rgba(255,255,255,.3); letter-spacing: .05em; transition: color .2s; }
-.footer-nav a:hover { color: var(--rose); }
-.footer-copy { font-size: .7rem; color: rgba(255,255,255,.15); }
+.footer-nav { display: flex; gap: 16px; justify-content: center; margin-bottom: 24px; }
+.footer-nav a {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 11px 28px; border-radius: 32px;
+  font-family: var(--sans); font-size: .9rem; font-weight: 600;
+  letter-spacing: .04em; text-decoration: none;
+  background: #fff; color: var(--plum);
+  box-shadow: 0 0 0 2px var(--plum), 0 4px 16px rgba(79,0,53,.12);
+  transition: transform .2s var(--ease), box-shadow .25s, background .2s, color .2s;
+}
+.footer-nav a:hover {
+  background: var(--plum); color: #fff;
+  box-shadow: 0 0 0 2px var(--plum), 0 8px 28px rgba(79,0,53,.3);
+  transform: translateY(-2px);
+}
+.footer-copy { font-size: .88rem; color: rgba(255,255,255,.95); }
 
 /* ─── NAV CTA ────────────────────────────────────────────── */
 .btn-nav-cta {
