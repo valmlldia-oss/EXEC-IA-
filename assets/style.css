@@ -632,7 +632,7 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
 .footer-brand { font-family: var(--serif); font-size: 1rem; color: rgba(255,255,255,.4); letter-spacing: .06em; }
 .footer-tag {
   font-family: var(--serif); font-style: italic;
-  font-size: .88rem; color: rgba(255,255,255,.35); margin: 10px 0 22px;
+  font-size: 1.35rem; color: rgba(255,255,255,.92); margin: 10px 0 22px;
 }
 .footer-nav { display: flex; gap: 24px; justify-content: center; margin-bottom: 14px; }
 .footer-nav a { font-size: .76rem; color: rgba(255,255,255,.3); letter-spacing: .05em; transition: color .2s; }
