@@ -199,20 +199,24 @@ a { text-decoration: none; color: inherit; }
   animation: slideup .9s var(--ease) .22s both;
 }
 .hero-certif {
-  font-size: .82rem; font-weight: 400;
-  color: var(--grey); line-height: 1.5;
+  font-size: .95rem; font-weight: 600;
+  color: var(--plum); line-height: 1.5;
   margin-top: 8px;
   animation: slideup .9s var(--ease) .26s both;
 }
-.hero-certif a {
-  color: var(--grey); text-decoration: none;
-  border-bottom: 1px solid rgba(132,118,128,.35);
-  transition: color .2s, border-color .2s;
+.hero-certif .certif-cap {
+  font-size: 1.3rem;
+  vertical-align: middle;
+  margin-right: 4px;
 }
-.hero-certif a:hover { color: var(--plum); border-color: var(--plum); }
-.hero-certif strong {
-  font-size: .95rem; font-weight: 700;
-  color: var(--plum);
+.hero-certif a {
+  color: var(--plum); text-decoration: none;
+  transition: color .2s, opacity .2s;
+}
+.hero-certif a:hover { opacity: .75; }
+.hero-certif .certif-rs {
+  font-size: .75rem; font-weight: 400;
+  color: var(--grey);
 }
 .hero-sub {
   font-size: .87rem; color: var(--grey);
