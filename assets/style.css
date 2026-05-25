@@ -327,13 +327,20 @@ a { text-decoration: none; color: inherit; }
 }
 .btn-ivory {
   background: #fff; color: var(--plum); font-weight: 700;
-  border: 2px solid rgba(79,0,53,.15);
-  box-shadow: 0 4px 18px rgba(79,0,53,.13), 0 1px 4px rgba(0,0,0,.07);
+  border: none;
+  outline: 2px solid transparent;
+  box-shadow:
+    0 0 0 2px var(--plum),
+    0 4px 18px rgba(79,0,53,.13);
   letter-spacing: .02em;
+  position: relative;
+  transition: transform .2s var(--ease), box-shadow .25s, background .25s, color .25s;
 }
 .btn-ivory:hover {
-  border-color: var(--plum);
-  box-shadow: 0 8px 28px rgba(79,0,53,.22);
+  background: var(--plum); color: #fff;
+  box-shadow:
+    0 0 0 2px var(--plum),
+    0 10px 32px rgba(79,0,53,.28);
   transform: translateY(-2px);
 }
 .btn-plum-outline {
