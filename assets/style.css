@@ -222,7 +222,7 @@ a { text-decoration: none; color: inherit; }
 }
 .hero-sub {
   font-family: var(--sans);
-  font-size: clamp(1.45rem, 2.4vw, 1.85rem);
+  font-size: clamp(1.7rem, 2.8vw, 2.2rem);
   font-weight: 400;
   color: var(--text);
   line-height: 1.55;
