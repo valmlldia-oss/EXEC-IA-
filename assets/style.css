@@ -199,7 +199,7 @@ a { text-decoration: none; color: inherit; }
   animation: slideup .9s var(--ease) .22s both;
 }
 .hero-certif {
-  font-size: .78rem; font-weight: 400;
+  font-size: .82rem; font-weight: 400;
   color: var(--grey); line-height: 1.5;
   margin-top: 8px;
   animation: slideup .9s var(--ease) .26s both;
@@ -210,6 +210,10 @@ a { text-decoration: none; color: inherit; }
   transition: color .2s, border-color .2s;
 }
 .hero-certif a:hover { color: var(--plum); border-color: var(--plum); }
+.hero-certif strong {
+  font-size: .95rem; font-weight: 700;
+  color: var(--plum);
+}
 .hero-sub {
   font-size: .87rem; color: var(--grey);
   margin-bottom: 40px;
