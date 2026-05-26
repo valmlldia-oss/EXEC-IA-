@@ -593,37 +593,68 @@ section { padding: clamp(72px, 9vw, 112px) 0; }
 }
 
 /* ─── TESTIMONIALS ───────────────────────────────────────── */
+/* ─── TÉMOIGNAGES ──────────────────────────────────────────── */
+.testi-section {
+  background: linear-gradient(150deg, #f9f4f7 0%, var(--ivory) 100%);
+}
+.testi-section .eyebrow { color: var(--rose); }
+.testi-section .section-title { color: var(--plum); }
+
 .testi-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  margin-top: 48px;
 }
 .testi {
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(255,255,255,.1);
-  border-radius: 18px; padding: 32px;
-  backdrop-filter: blur(8px);
-  transition: background .2s;
+  background: #fff;
+  border: 1.5px solid rgba(79,0,53,.08);
+  border-radius: 20px;
+  padding: 32px 36px 28px;
+  box-shadow: 0 4px 24px rgba(79,0,53,.07);
+  transition: box-shadow .25s, transform .25s;
+  display: flex; flex-direction: column;
 }
-.testi:hover { background: rgba(255,255,255,.07); }
+.testi:hover {
+  box-shadow: 0 10px 40px rgba(79,0,53,.13);
+  transform: translateY(-3px);
+}
+
+/* Titre catégorie */
+.testi-tag {
+  display: inline-block;
+  font-size: .72rem; font-weight: 700;
+  letter-spacing: .1em; text-transform: uppercase;
+  color: var(--rose);
+  background: rgba(217,61,142,.08);
+  border: 1px solid rgba(217,61,142,.18);
+  border-radius: 20px;
+  padding: 4px 14px;
+  margin-bottom: 18px;
+  align-self: flex-start;
+}
+
 .testi-q {
-  font-family: var(--serif); font-size: 3.6rem;
-  line-height: .4; color: var(--rose); opacity: .4; margin-bottom: 18px;
+  font-family: var(--serif); font-size: 3.2rem;
+  line-height: .4; color: var(--rose); opacity: .35; margin-bottom: 16px;
 }
 .testi p {
-  font-size: .9rem; line-height: 1.75;
-  color: rgba(255,255,255,.77); font-style: italic; margin-bottom: 26px;
+  font-size: .9rem; line-height: 1.78;
+  color: rgba(37,0,27,.68); font-style: italic;
+  margin-bottom: 24px; flex: 1;
 }
-.testi-author { display: flex; align-items: center; gap: 14px; }
+.testi-author { display: flex; align-items: center; gap: 14px; margin-top: auto; }
 .testi-avatar {
   width: 42px; height: 42px; border-radius: 50%; flex-shrink: 0;
-  background: rgba(217,61,142,.15); border: 1px solid rgba(217,61,142,.25);
+  background: rgba(217,61,142,.10); border: 1.5px solid rgba(217,61,142,.25);
   display: flex; align-items: center; justify-content: center;
-  font-size: .74rem; font-weight: 600; color: rgba(217,61,142,.9);
+  font-size: .74rem; font-weight: 700; color: var(--rose);
 }
-.testi-author strong { display: block; font-size: .9rem; color: var(--white); }
-.testi-author span  { font-size: .76rem; color: rgba(255,255,255,.45); }
+.testi-author strong { display: block; font-size: .9rem; color: var(--plum); font-weight: 700; }
+.testi-author span  { font-size: .76rem; color: rgba(79,0,53,.5); }
 .testi-note {
   margin-top: 40px; text-align: center;
-  font-size: .74rem; color: rgba(255,255,255,.22); font-style: italic;
+  font-size: .74rem; color: rgba(79,0,53,.35); font-style: italic;
 }
 
 /* ─── CONTACT ────────────────────────────────────────────── */
@@ -1133,7 +1164,7 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
 @media (max-width: 1024px) {
   .fcards-grid { grid-template-columns: 1fr; }
   .cards-grid  { grid-template-columns: 1fr; }
-  .testi-grid  { grid-template-columns: 1fr; }
+  .testi-grid  { grid-template-columns: repeat(2, 1fr); }
   .about-grid  { grid-template-columns: 1fr; gap: 44px; }
   .lt-wrap     { grid-template-columns: 1fr; gap: 48px; }
   .timeline    { padding-left: 140px; }
@@ -1146,6 +1177,10 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
   .ss-item     { border-right: 1px solid rgba(255,255,255,.08); }
   .ss-item:nth-child(3n), .ss-item:last-child { border-right: none; }
 }
+@media (max-width: 600px) {
+  .testi-grid { grid-template-columns: 1fr; }
+}
+
 @media (max-width: 768px) {
   .btn-nav-cta { display: none; }
   .methode-grid { grid-template-columns: 1fr; }
