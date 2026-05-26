@@ -605,7 +605,8 @@ section { padding: clamp(72px, 9vw, 112px) 0; }
   color: rgba(79,0,53,.52);
   font-family: var(--sans);
   font-weight: 400;
-  max-width: 640px;
+  max-width: 100%;
+  white-space: nowrap;
 }
 
 .testi-grid {
@@ -631,20 +632,29 @@ section { padding: clamp(72px, 9vw, 112px) 0; }
 /* Titre catégorie */
 .testi-tag {
   display: inline-block;
-  font-size: .72rem; font-weight: 700;
-  letter-spacing: .1em; text-transform: uppercase;
+  font-size: 1rem; font-weight: 700;
+  letter-spacing: .06em; text-transform: uppercase;
   color: var(--rose);
   background: rgba(217,61,142,.08);
   border: 1px solid rgba(217,61,142,.18);
   border-radius: 20px;
   padding: 4px 14px;
-  margin-bottom: 18px;
+  margin-bottom: 4px;
   align-self: flex-start;
 }
 
 .testi-q {
-  font-family: var(--serif); font-size: 3.2rem;
-  line-height: .4; color: var(--rose); opacity: .35; margin-bottom: 16px;
+  font-family: var(--serif);
+  font-size: 7rem;
+  font-weight: 700;
+  line-height: 1;
+  height: 4rem;
+  overflow: hidden;
+  color: var(--plum);
+  opacity: .65;
+  margin-bottom: 12px;
+  margin-top: 0;
+  letter-spacing: -.02em;
 }
 .testi p {
   font-size: .9rem; line-height: 1.78;
@@ -658,12 +668,49 @@ section { padding: clamp(72px, 9vw, 112px) 0; }
   display: flex; align-items: center; justify-content: center;
   font-size: .74rem; font-weight: 700; color: var(--rose);
 }
-.testi-author strong { display: block; font-size: .9rem; color: var(--plum); font-weight: 700; }
-.testi-author span  { font-size: .76rem; color: rgba(79,0,53,.5); display: block; }
-.testi-translated   { font-size: .7rem; color: rgba(79,0,53,.35); font-style: italic; display: block; margin-top: 2px; }
+.testi-author strong { display: block; font-size: 1.05rem; color: var(--plum); font-weight: 400; }
+.testi-author span  { font-size: .86rem; color: var(--plum); display: block; font-weight: 700; }
+.testi-translated   { font-size: .78rem; color: rgba(79,0,53,.35); font-style: italic; display: block; margin-top: 2px; }
+/* Variante fond prune */
+.testi--dark {
+  background: var(--plum);
+  border-color: rgba(255,255,255,.1);
+}
+.testi--dark .testi-tag {
+  color: #f9b8d8;
+  background: rgba(255,255,255,.08);
+  border-color: rgba(255,255,255,.18);
+}
+.testi--dark .testi-q {
+  color: #fff;
+  opacity: .25;
+}
+.testi--dark p {
+  color: rgba(255,255,255,.82);
+}
+.testi--dark .testi-avatar {
+  background: rgba(255,255,255,.1);
+  border-color: rgba(255,255,255,.25);
+  color: #fff;
+}
+.testi--dark .testi-author strong {
+  color: #fff;
+  font-size: 1.05rem;
+}
+.testi--dark .testi-author span {
+  color: rgba(255,255,255,.6);
+  font-size: .86rem;
+}
+.testi--dark .testi-translated {
+  color: rgba(255,255,255,.45);
+}
+.testi--dark:hover {
+  box-shadow: 0 10px 40px rgba(0,0,0,.25);
+}
+
 .testi-note {
   margin-top: 40px; text-align: center;
-  font-size: .74rem; color: rgba(79,0,53,.35); font-style: italic;
+  font-size: .9rem; color: rgba(79,0,53,.45); font-style: italic;
 }
 
 /* ─── CONTACT ────────────────────────────────────────────── */
