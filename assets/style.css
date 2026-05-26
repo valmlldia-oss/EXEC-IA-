@@ -992,15 +992,17 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
 .approach-card-img {
   margin-top: 24px;
   border-radius: 14px; overflow: hidden;
-  width: 100%; height: 260px;
+  width: 100%; height: 300px;
   flex-shrink: 0;
   background: #F6EDE5;
 }
 .approach-card-img img { width: 100%; height: 100%; object-fit: cover; object-position: center center; }
 .approach-card-img img.img-tilted { transform: none; object-fit: cover; object-position: center center; }
-.approach-card-img--dev img { object-fit: contain; object-position: center center; }
-.approach-card-img--diag img { object-fit: cover; object-position: center 20%; }
-.approach-card-img--dev { background: #F5E8DC; }
+.approach-card-img--dev img { object-fit: cover; object-position: center center; }
+.approach-card-img--diag img { object-fit: cover; object-position: center 55%; }
+.approach-card-img--dev { background: #F9ECE3; }
+.approach-card-img--suivi { background: #FAF7F4; }
+.approach-card-img--suivi img { object-fit: contain; object-position: center center; }
 .approach-card-img--diag { background: #F6EDE5; }
 .approach-card-img img.warm-filter {
   filter: hue-rotate(32deg) saturate(0.88) brightness(0.92);
@@ -1306,7 +1308,7 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
 }
 .agents-header {
   text-align: center;
-  padding: 0 1.5rem 2.5rem;
+  padding: 0 1.5rem 0.5rem;
 }
 .agents-badge {
   display: inline-flex;
