@@ -658,7 +658,8 @@ section { padding: clamp(72px, 9vw, 112px) 0; }
   font-size: .74rem; font-weight: 700; color: var(--rose);
 }
 .testi-author strong { display: block; font-size: .9rem; color: var(--plum); font-weight: 700; }
-.testi-author span  { font-size: .76rem; color: rgba(79,0,53,.5); }
+.testi-author span  { font-size: .76rem; color: rgba(79,0,53,.5); display: block; }
+.testi-translated   { font-size: .7rem; color: rgba(79,0,53,.35); font-style: italic; display: block; margin-top: 2px; }
 .testi-note {
   margin-top: 40px; text-align: center;
   font-size: .74rem; color: rgba(79,0,53,.35); font-style: italic;
