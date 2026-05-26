@@ -111,7 +111,6 @@ a { text-decoration: none; color: inherit; }
 
 /* ─── HERO — Editorial Ivory · Plum Panel ───────────────── */
 #hero {
-  min-height: 100vh;
   background: var(--ivory);
   padding-top: var(--nav-h);
   display: flex; flex-direction: column;
