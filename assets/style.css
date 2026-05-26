@@ -955,14 +955,8 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
   margin-bottom: 10px;
 }
 .approach-card-num {
-  width: 48px; height: 48px; flex-shrink: 0;
-  border-radius: 50%;
-  background: var(--plum);
-  color: #fff;
-  font-family: var(--sans);
-  font-size: 1rem; font-weight: 800;
-  letter-spacing: .01em;
-  display: flex; align-items: center; justify-content: center;
+  font-family: var(--serif); font-size: 4rem; font-weight: 700;
+  color: var(--plum); line-height: 1; margin-bottom: 10px;
 }
 .approach-card-header h3 {
   font-family: var(--serif);
@@ -1004,7 +998,7 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
 }
 .approach-card-img img { width: 100%; height: 100%; object-fit: cover; object-position: center center; }
 .approach-card-img img.img-tilted { transform: none; object-fit: cover; object-position: center center; }
-.approach-card-img--dev img { object-fit: cover; object-position: center center; }
+.approach-card-img--dev img { object-fit: contain; object-position: center center; }
 .approach-card-img--diag img { object-fit: cover; object-position: center 20%; }
 .approach-card-img--dev { background: #F5E8DC; }
 .approach-card-img--diag { background: #F6EDE5; }
