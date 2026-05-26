@@ -647,8 +647,15 @@ section { padding: clamp(72px, 9vw, 112px) 0; }
 
 /* ─── FOOTER ─────────────────────────────────────────────── */
 footer { background: var(--deep); padding: 52px 36px; text-align: center; }
-.footer-logo { display: flex; justify-content: center; margin-bottom: 12px; }
-.footer-logo img { height: 40px; opacity: .9; object-fit: contain; }
+.footer-logo { display: flex; justify-content: center; margin-bottom: 20px; }
+.footer-logo img {
+  width: 72px; height: 72px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: var(--plum);
+  box-shadow: 0 4px 20px rgba(79,0,53,.4);
+  opacity: 1;
+}
 .footer-brand { font-family: var(--serif); font-size: 1rem; color: rgba(255,255,255,.4); letter-spacing: .06em; }
 .footer-tag {
   font-family: var(--serif); font-style: italic;
@@ -656,9 +663,9 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
 }
 .footer-nav { display: flex; gap: 16px; justify-content: center; margin-bottom: 24px; }
 .footer-nav a {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 11px 28px; border-radius: 32px;
-  font-family: var(--sans); font-size: .9rem; font-weight: 600;
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 13px 34px; border-radius: 32px;
+  font-family: var(--sans); font-size: 1.1rem; font-weight: 600;
   letter-spacing: .04em; text-decoration: none;
   background: #fff; color: var(--plum);
   box-shadow: 0 0 0 2px var(--plum), 0 4px 16px rgba(79,0,53,.12);
