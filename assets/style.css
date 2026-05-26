@@ -624,7 +624,7 @@ section { padding: clamp(72px, 9vw, 112px) 0; }
 /* ─── CONTACT ────────────────────────────────────────────── */
 .contact-center { max-width: 640px; margin: 0 auto; text-align: center; }
 .contact-lead {
-  font-size: 1.0rem; line-height: 1.82; color: var(--grey); margin-bottom: 44px;
+  font-size: 1.2rem; line-height: 1.82; color: var(--grey); margin-bottom: 44px;
 }
 .contact-lead strong {
   display: block; font-family: var(--serif);
@@ -984,7 +984,7 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
 }
 .approach-card p:last-of-type { margin-bottom: 0; }
 .approach-objectif {
-  font-size: .88rem; font-style: italic; color: var(--plum);
+  font-size: 1.0rem; font-style: italic; color: var(--plum);
   border-left: 2.5px solid var(--rose); padding-left: 14px;
   margin-top: 12px !important; margin-bottom: 12px !important;
   line-height: 1.65;
