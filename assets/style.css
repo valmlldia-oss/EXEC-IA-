@@ -599,12 +599,13 @@ section { padding: clamp(72px, 9vw, 112px) 0; }
 }
 .testi-section .eyebrow { color: var(--rose); }
 .testi-section .section-title { color: var(--plum); }
-.testi-title-inline { display: inline; }
 .testi-intro {
+  margin-top: 14px;
   font-size: 1rem; line-height: 1.7;
   color: rgba(79,0,53,.52);
   font-family: var(--sans);
   font-weight: 400;
+  max-width: 640px;
 }
 
 .testi-grid {
