@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <!-- BG rose élégant -->
+  <circle cx="60" cy="60" r="60" fill="#F0E0E8"/>
+  <!-- Veste élégante sombre -->
+  <path d="M8,120 C15,88 35,80 60,78 C85,80 105,88 112,120Z" fill="#2A2030"/>
+  <!-- Col élégant -->
+  <path d="M52,78 Q60,82 68,78" fill="none" stroke="#C8A0B0" stroke-width="2"/>
+  <!-- Cou -->
+  <rect x="54" y="66" width="12" height="14" rx="5" fill="#C89878"/>
+  <!-- Tête ovale élégante -->
+  <ellipse cx="60" cy="50" rx="22" ry="25" fill="#C89878"/>
+  <!-- Cheveux mi-longs bruns bouclés -->
+  <!-- Volume principal -->
+  <path d="M38,46 C36,20 84,20 82,46 C88,60 85,82 78,88 Q60,96 42,88 C35,82 32,60 38,46Z" fill="#3A2010"/>
+  <!-- Boucles texturées -->
+  <path d="M38,50 C34,58 34,68 38,76" fill="none" stroke="#5A3820" stroke-width="3" stroke-linecap="round"/>
+  <path d="M82,50 C86,58 86,68 82,76" fill="none" stroke="#5A3820" stroke-width="3" stroke-linecap="round"/>
+  <path d="M40,70 C38,76 40,82 44,86" fill="none" stroke="#5A3820" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M80,70 C82,76 80,82 76,86" fill="none" stroke="#5A3820" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Reflets chauds -->
+  <path d="M42,30 Q52,26 60,26 Q68,26 78,30" fill="none" stroke="#7A5030" stroke-width="2" opacity="0.5" stroke-linecap="round"/>
+  <!-- Oreilles cachées par les cheveux - légèrement visibles -->
+  <ellipse cx="38" cy="52" rx="3" ry="5" fill="#B88060"/>
+  <!-- Yeux bruns foncés, expressifs -->
+  <ellipse cx="50" cy="49" rx="6" ry="5" fill="white"/>
+  <ellipse cx="70" cy="49" rx="6" ry="5" fill="white"/>
+  <circle cx="50" cy="49" r="4" fill="#5A2A10"/>
+  <circle cx="70" cy="49" r="4" fill="#5A2A10"/>
+  <circle cx="50" cy="49" r="2" fill="#2A1008"/>
+  <circle cx="70" cy="49" r="2" fill="#2A1008"/>
+  <circle cx="51.5" cy="47.5" r="1.2" fill="white"/>
+  <circle cx="71.5" cy="47.5" r="1.2" fill="white"/>
+  <!-- Sourcils bruns bien dessinés -->
+  <path d="M43,43 Q50,41 57,43" stroke="#3A2010" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M63,43 Q70,41 77,43" stroke="#3A2010" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Nez fin élégant -->
+  <path d="M60,54 Q58,59 56,61 Q60,63 64,61 Q62,59 60,54" fill="none" stroke="#A07050" stroke-width="1.1" stroke-linecap="round"/>
+  <!-- Sourire élégant -->
+  <path d="M52,68 Q60,72 68,68" stroke="#904040" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <!-- Collier discret -->
+  <path d="M50,79 Q60,83 70,79" fill="none" stroke="#C8A0A0" stroke-width="1" opacity="0.6"/>
+</svg>

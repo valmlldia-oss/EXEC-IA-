@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <!-- BG pêche chaud -->
+  <circle cx="60" cy="60" r="60" fill="#F5E8DC"/>
+  <!-- Veste élégante -->
+  <path d="M8,120 C15,88 35,80 60,78 C85,80 105,88 112,120Z" fill="#6B4E71"/>
+  <!-- Chemisier clair -->
+  <path d="M52,78 L60,120 L68,78 Q60,84 52,78Z" fill="#F8F0E8"/>
+  <!-- Cou -->
+  <rect x="54" y="66" width="12" height="14" rx="5" fill="#E8C090"/>
+  <!-- Tête ronde (visage rond comme demandé) -->
+  <ellipse cx="60" cy="50" rx="25" ry="26" fill="#E8C090"/>
+  <!-- Cheveux blonds, léger poivre et sel -->
+  <!-- Masse principale blonde -->
+  <path d="M35,48 C35,20 85,20 85,48 C85,55 80,70 75,78 Q60,82 45,78 C40,70 35,55 35,48Z" fill="#D4A830"/>
+  <!-- Mèches légèrement argentées -->
+  <path d="M36,42 C38,28 50,24 60,24 C70,24 82,28 84,42" fill="none" stroke="#E8D8A0" stroke-width="3" opacity="0.6" stroke-linecap="round"/>
+  <!-- Ondulations cheveux -->
+  <path d="M35,55 Q33,65 36,75 Q40,78 45,78" fill="none" stroke="#C09820" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M85,55 Q87,65 84,75 Q80,78 75,78" fill="none" stroke="#C09820" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Oreilles -->
+  <ellipse cx="35" cy="52" rx="4" ry="6" fill="#D8A870"/>
+  <ellipse cx="85" cy="52" rx="4" ry="6" fill="#D8A870"/>
+  <!-- Petites boucles d'oreilles -->
+  <circle cx="35" cy="58" r="2.5" fill="#C8A840" opacity="0.9"/>
+  <circle cx="85" cy="58" r="2.5" fill="#C8A840" opacity="0.9"/>
+  <!-- Yeux bleus, jolis -->
+  <ellipse cx="49" cy="50" rx="7" ry="5.5" fill="white"/>
+  <ellipse cx="71" cy="50" rx="7" ry="5.5" fill="white"/>
+  <circle cx="49" cy="50" r="4" fill="#3A8CC8"/>
+  <circle cx="71" cy="50" r="4" fill="#3A8CC8"/>
+  <circle cx="49" cy="50" r="1.8" fill="#185080"/>
+  <circle cx="71" cy="50" r="1.8" fill="#185080"/>
+  <circle cx="50.5" cy="48.5" r="1.2" fill="white"/>
+  <circle cx="72.5" cy="48.5" r="1.2" fill="white"/>
+  <!-- Sourcils fins blonds -->
+  <path d="M42,44 Q49,42 56,44" stroke="#C09030" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M64,44 Q71,42 78,44" stroke="#C09030" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- Nez fin -->
+  <path d="M60,55 Q58,61 56,63 Q60,65 64,63 Q62,61 60,55" fill="none" stroke="#C09060" stroke-width="1" stroke-linecap="round"/>
+  <!-- Sourire chaleureux -->
+  <path d="M51,69 Q60,74 69,69" stroke="#B07050" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <!-- Légère fossette -->
+  <circle cx="51" cy="70" r="1" fill="#C08060" opacity="0.4"/>
+  <circle cx="69" cy="70" r="1" fill="#C08060" opacity="0.4"/>
+</svg>
