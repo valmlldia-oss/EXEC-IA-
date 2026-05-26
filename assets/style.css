@@ -1364,8 +1364,8 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
   position: relative;
 }
 .agents-team-photo img {
-  max-width: 600px;
-  width: 92%;
+  max-width: 460px;
+  width: 72%;
   border-radius: 0;
   object-fit: contain;
   display: block;
