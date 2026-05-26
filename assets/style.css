@@ -1011,16 +1011,16 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
   border-radius: 14px; overflow: hidden;
   width: 100%; height: 300px;
   flex-shrink: 0;
-  background: #F6EDE5;
+  background: #fbefe6;
 }
 .approach-card-img img { width: 100%; height: 100%; object-fit: cover; object-position: center center; }
 .approach-card-img img.img-tilted { transform: none; object-fit: cover; object-position: center center; }
 .approach-card-img--dev img { object-fit: contain; object-position: center center; }
 .approach-card-img--diag img { object-fit: cover; object-position: center 55%; }
-.approach-card-img--dev { background: #FCECE0; }
-.approach-card-img--suivi { background: #FCECE0; }
+.approach-card-img--dev { background: #fbefe6; }
+.approach-card-img--suivi { background: #fbefe6; }
 .approach-card-img--suivi img { object-fit: cover; object-position: center center; }
-.approach-card-img--diag { background: #FCECE0; }
+.approach-card-img--diag { background: #fbefe6; }
 .approach-card-img img.warm-filter {
   filter: hue-rotate(32deg) saturate(0.88) brightness(0.92);
 }
