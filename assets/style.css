@@ -1004,6 +1004,12 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
 }
 .approach-card-img img { width: 100%; height: 100%; object-fit: cover; }
 .approach-card-img img.img-tilted { transform: none; object-fit: cover; object-position: center 30%; }
+.approach-card-img--dev {
+  aspect-ratio: 4/3;
+  max-height: 340px;
+  background: #F5E8DC;
+}
+.approach-card-img--dev img { object-fit: contain; }
 .approach-card-img--diag {
   aspect-ratio: 3/2;
   max-height: 320px;
