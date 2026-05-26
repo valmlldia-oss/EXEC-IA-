@@ -936,6 +936,11 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
   transition: opacity .2s;
 }
 .fl-link:hover { opacity: .75; }
+.fl-link-plain {
+  color: var(--plum); font-weight: 500; text-decoration: none;
+  transition: opacity .2s;
+}
+.fl-link-plain:hover { opacity: .75; }
 
 /* ─── L'APPROCHE EXEC'IA — cartes 2×2 ───────────────────── */
 .approach-cards {
