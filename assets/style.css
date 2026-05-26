@@ -998,7 +998,7 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
 }
 .approach-card-img img { width: 100%; height: 100%; object-fit: cover; object-position: center center; }
 .approach-card-img img.img-tilted { transform: none; object-fit: cover; object-position: center center; }
-.approach-card-img--dev img { object-fit: cover; object-position: center center; }
+.approach-card-img--dev img { object-fit: contain; object-position: center center; }
 .approach-card-img--diag img { object-fit: cover; object-position: center 55%; }
 .approach-card-img--dev { background: #F9ECE3; }
 .approach-card-img--suivi { background: #FAF7F4; }
