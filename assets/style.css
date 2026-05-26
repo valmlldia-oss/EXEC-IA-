@@ -1002,7 +1002,7 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
 .approach-card-img--diag img { object-fit: cover; object-position: center 55%; }
 .approach-card-img--dev { background: #F9ECE3; }
 .approach-card-img--suivi { background: #FAF7F4; }
-.approach-card-img--suivi img { object-fit: contain; object-position: center center; }
+.approach-card-img--suivi img { object-fit: cover; object-position: center center; }
 .approach-card-img--diag { background: #F6EDE5; }
 .approach-card-img img.warm-filter {
   filter: hue-rotate(32deg) saturate(0.88) brightness(0.92);
