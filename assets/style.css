@@ -436,10 +436,10 @@ section { padding: clamp(72px, 9vw, 112px) 0; }
 .formation-list em { color: var(--grey); font-style: normal; font-size: .95rem; }
 .fl-rose { color: var(--rose) !important; font-style: normal; font-weight: 600; font-size: 1.0rem; }
 .fl-star {
-  color: #C9A84C;
-  font-size: 1rem;
+  font-size: 1.5rem;
   flex-shrink: 0;
   display: inline-block;
+  line-height: 1;
   animation: star-shimmer 2.4s ease-in-out infinite;
 }
 @keyframes star-shimmer {
