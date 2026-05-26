@@ -1426,6 +1426,23 @@ footer { background: var(--deep); padding: 52px 36px; text-align: center; }
   box-shadow: 0 4px 24px rgba(79,0,53,.12);
   transition: transform .3s, box-shadow .3s;
 }
+/* RH card : image pleine carte, épaule gauche sort du cadre */
+.agent-card--rh {
+  overflow: visible;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+}
+.agent-card--rh .agent-img {
+  overflow: visible;
+}
+.agent-card--rh .agent-img img {
+  width: 115%;
+  margin-left: -8%;
+  border-radius: 1.25rem;
+  box-shadow: 0 8px 32px rgba(79,0,53,.18);
+}
+
 .agent-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 20px 50px rgba(79,0,53,.2);
