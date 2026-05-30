@@ -298,4 +298,35 @@ document.querySelectorAll('[data-calendly]').forEach(btn => {
     const rect = bar.getBoundingClientRect();
     audio.currentTime = ((e.clientX - rect.left) / rect.width) * audio.duration;
   });
+
+/* ── Suppression damier équipe de choc ── */
+function removeCheckerboard(img) {
+  const canvas = document.createElement('canvas');
+  canvas.width  = img.naturalWidth;
+  canvas.height = img.naturalHeight;
+  canvas.style.cssText = img.style.cssText;
+  canvas.className = img.className;
+  const ctx = canvas.getContext('2d');
+  ctx.drawImage(img, 0, 0);
+  const data = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  const d = data.data;
+  for (let i = 0; i < d.length; i += 4) {
+    const r = d[i], g = d[i+1], b = d[i+2];
+    const max = Math.max(r, g, b), min = Math.min(r, g, b);
+    const saturation = max - min;
+    if (saturation < 22 && r > 140) {
+      const proximity = (r - 140) / 115;
+      d[i+3] = Math.max(0, Math.round(d[i+3] * (1 - proximity)));
+    }
+  }
+  ctx.putImageData(data, 0, 0);
+  img.parentNode.replaceChild(canvas, img);
+}
+
+window.addEventListener('load', () => {
+  const teamImg = document.querySelector('.agents-team-photo img');
+  if (!teamImg) return;
+  if (teamImg.complete) { removeCheckerboard(teamImg); }
+  else { teamImg.addEventListener('load', () => removeCheckerboard(teamImg)); }
+});
 })();
