@@ -7,15 +7,15 @@
   <link rel="stylesheet" href="assets/style.css">
   <style>
     .ml-page { max-width: 760px; margin: 0 auto; padding: clamp(60px, 8vw, 100px) 24px; }
-    .ml-page h1 { font-family: var(--serif); font-size: clamp(3rem, 6vw, 4.5rem); color: var(--terracotta); margin-bottom: 48px; font-weight: 400; }
-    .ml-page h2 { font-family: var(--serif); font-size: 1.65rem; color: var(--taupe); margin: 40px 0 12px; font-weight: 500; border-left: 3px solid var(--terracotta); padding-left: 14px; }
+    .ml-page h1 { font-family: var(--serif); font-size: clamp(3rem, 6vw, 4.5rem); color: #633B4A; margin-bottom: 48px; font-weight: 400; }
+    .ml-page h2 { font-family: var(--serif); font-size: 1.65rem; color: #633B4A; margin: 40px 0 12px; font-weight: 500; border-left: 3px solid #C75F62; padding-left: 14px; }
     .ml-page p, .ml-page address { font-size: 1.1rem; line-height: 1.9; color: var(--text); font-style: normal; margin-bottom: 10px; }
     .ml-page ul { font-size: 1.1rem; line-height: 1.9; color: var(--text); padding-left: 20px; margin-bottom: 16px; }
     .ml-page ul li { margin-bottom: 6px; }
-    .ml-page a { color: var(--terracotta); text-decoration: none; }
+    .ml-page a { color: #C75F62; text-decoration: none; }
     .ml-page a:hover { text-decoration: underline; }
-    .ml-back { display: inline-flex; align-items: center; gap: 8px; font-size: .95rem; color: var(--terracotta); text-decoration: none; margin-bottom: 40px; font-weight: 500; border: 1.5px solid var(--terracotta); border-radius: 10px; padding: 12px 24px; transition: background .2s, color .2s; }
-    .ml-back:hover { background: var(--terracotta); color: var(--white); opacity: 1; }
+    .ml-back { display: inline-flex; align-items: center; gap: 8px; font-size: .95rem; color: #fff; text-decoration: none; margin-bottom: 40px; font-weight: 600; background: #C75F62; border: none; border-radius: 10px; padding: 12px 24px; transition: background .2s; }
+    .ml-back:hover { background: #b04f52; }
     .ml-divider { border: none; border-top: 1px solid rgba(184,177,170,.3); margin: 40px 0; }
     .ml-block { background: var(--white); border-radius: 10px; padding: 24px 28px; margin-bottom: 12px; font-size: 1.1rem; line-height: 1.9; color: var(--text); }
     .ml-block strong { color: var(--taupe); }
@@ -23,17 +23,12 @@
 </head>
 <body style="background: var(--ivory);">
 
-  <header class="nav-wrap">
-    <nav class="nav container">
-      <a href="index.html" class="nav-logo" style="display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--serif);font-size:1.2rem;color:var(--terracotta);font-weight:500;">
-        <img src="assets/favicon.svg" alt="EXEC'IA" width="32" height="32" onerror="this.style.display='none'">
-        EXEC'IA
-      </a>
-    </nav>
-  </header>
-
-  <main class="ml-page">
+  <div style="position:fixed;top:24px;left:32px;z-index:100;">
     <a href="index.html" class="ml-back">← Retour au site</a>
+  </div>
+
+  <main class="ml-page" style="padding-top: clamp(80px, 10vw, 120px);">
+
 
     <h1>Mentions légales</h1>
 
