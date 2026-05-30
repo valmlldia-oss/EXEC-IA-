@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 225">
+
+  <!-- ── Bras gauche du X : terracotta ── -->
+  <!-- Serif haut -->
+  <rect x="2" y="12" width="62" height="9" rx="2" fill="#C75F62"/>
+  <!-- Diagonale haut-gauche → centre -->
+  <polygon points="6,21 58,21 116,138 64,138" fill="#C75F62"/>
+
+  <!-- ── Bras droit du X : terracotta ── -->
+  <!-- Diagonale centre → bas-droite -->
+  <polygon points="64,138 116,138 170,218 118,218" fill="#C75F62"/>
+  <!-- Serif bas -->
+  <rect x="114" y="216" width="60" height="9" rx="2" fill="#C75F62"/>
+
+  <!-- ── Trait calligraphique : prune ── -->
+  <!-- Courbe épaisse au départ (près du pin), qui s'amincit vers le bas-gauche -->
+  <path d="
+    M 136,72
+    C 134,100 122,126 110,150
+    C 94,178 62,204 32,222
+    L 18,218
+    C 48,198 80,172 96,144
+    C 108,120 120,94 120,66
+    Z
+  " fill="#633B4A"/>
+
+  <!-- ── Pin IA : terracotta ── -->
+  <circle cx="148" cy="32" r="28" fill="#C75F62"/>
+  <!-- Queue du pin (pointe vers le trait calligraphique) -->
+  <polygon points="126,52 148,78 170,52" fill="#C75F62"/>
+  <!-- Texte IA -->
+  <text x="148" y="41"
+    text-anchor="middle" fill="white"
+    font-family="Georgia, serif"
+    font-size="21" font-weight="600" letter-spacing="1.5">IA</text>
+
+</svg>
