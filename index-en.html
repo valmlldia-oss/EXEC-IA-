@@ -18,8 +18,7 @@
 <nav id="nav">
   <div class="nav-in">
     <a href="#" class="nav-brand">
-      <img src="assets/LOGO X_Terracotta prune.png" alt="EXEC'IA" class="nav-logo-x">
-      <img src="assets/BANNIERE CONSULTING.png" alt="EXEC'IA Consulting IA" class="nav-logo-full">
+      <img src="assets/EXECIA_CONSULTING_zoomé.png" alt="EXEC'IA Consulting" class="nav-logo-full">
     </a>
     <div class="nav-links">
       <a href="#about">About</a>
@@ -30,8 +29,8 @@
       <a href="#contact">Contact</a>
     </div>
     <div class="nav-langs">
-      <span class="nav-lang">FR</span>
-      <a href="index.html" class="nav-lang">EN</a>
+      <a href="index.html" class="nav-lang">FR</a>
+      <span class="nav-lang nav-lang-active">EN</span>
       <a href="index-es.html" class="nav-lang">ES</a>
     </div>
     <button class="nav-burger" aria-label="Menu">
@@ -78,15 +77,17 @@
 <!-- ═══ TICKER ══════════════════════════════════════════════ -->
 <div class="ticker-bar" aria-hidden="true">
   <div class="ticker-track">
-    <span class="ticker-item"><span class="ticker-rose">DECIDE</span> <span class="ticker-sep">•</span></span>
     <span class="ticker-item"><span class="ticker-rose">PRIORITIZE</span> <span class="ticker-sep">•</span></span>
+    <span class="ticker-item"><span class="ticker-rose">DECIDE</span> <span class="ticker-sep">•</span></span>
     <span class="ticker-item"><span class="ticker-rose">EXECUTE</span> <span class="ticker-sep">•</span></span>
     <span class="ticker-item"><span class="ticker-rose">MEASURE</span> <span class="ticker-sep">•</span></span>
+    <span class="ticker-item"><span class="ticker-rose">ADJUST</span> <span class="ticker-sep">•</span></span>
     <!-- Duplicate for seamless loop -->
-    <span class="ticker-item"><span class="ticker-rose">DECIDE</span> <span class="ticker-sep">•</span></span>
     <span class="ticker-item"><span class="ticker-rose">PRIORITIZE</span> <span class="ticker-sep">•</span></span>
+    <span class="ticker-item"><span class="ticker-rose">DECIDE</span> <span class="ticker-sep">•</span></span>
     <span class="ticker-item"><span class="ticker-rose">EXECUTE</span> <span class="ticker-sep">•</span></span>
     <span class="ticker-item"><span class="ticker-rose">MEASURE</span> <span class="ticker-sep">•</span></span>
+    <span class="ticker-item"><span class="ticker-rose">ADJUST</span> <span class="ticker-sep">•</span></span>
   </div>
 </div>
 
@@ -113,6 +114,51 @@
     </div>
   </div>
 </div>
+
+<!-- ═══ IA AU SERVICE DE VOTRE PERFORMANCE ════════════════════ -->
+<section class="ia-performance-section">
+  <div class="wrap ia-performance-wrap">
+    <p class="ia-performance-title reveal" style="margin-bottom:16px;">AI offers many possibilities.</p>
+    <p class="ia-performance-title reveal delay-1" style="margin-bottom:16px;">The challenge is identifying those that will create the most value for your business.</p>
+    <p class="ia-performance-sub reveal delay-2">I help leaders make the right choices <span style="white-space:nowrap;">before committing</span><br>time, resources or budgets.</p>
+  </div>
+</section>
+
+<!-- ═══ SIMULATEUR ROI IA ════════════════════════════════════ -->
+<section id="roi" class="roi-section">
+  <div class="wrap">
+    <span class="eyebrow reveal">EXEC&#x2019;IA · Simulateur ROI</span>
+    <h2 class="section-title reveal delay-1">Quel est votre<br>potentiel ROI IA&nbsp;?</h2>
+    <p class="roi-intro reveal delay-2">Estimez en bougeant <span style="color:var(--rose);font-weight:700">3 curseurs</span> le temps et l&#x2019;argent<br><span style="color:var(--rose);font-size:1.4rem;line-height:1.2;display:block;margin:6px 0">↓</span>que l&#x2019;IA peut vous faire économiser</p>
+    <div class="roi-card reveal delay-3">
+      <div class="roi-sliders">
+        <div class="roi-sg">
+          <div class="roi-sh"><label for="rs-collab">Collaborateurs concernés</label><span class="roi-sv" id="rsv-collab">10</span></div>
+          <input type="range" id="rs-collab" class="roi-range" min="1" max="100" value="10">
+          <div class="roi-sm"><span>1</span><span>100</span></div>
+        </div>
+        <div class="roi-sg">
+          <div class="roi-sh"><label for="rs-h">Heures économisées / personne / semaine</label><span class="roi-sv" id="rsv-h">5 h</span></div>
+          <input type="range" id="rs-h" class="roi-range" min="1" max="20" value="5">
+          <div class="roi-sm"><span>1 h</span><span>20 h</span></div>
+        </div>
+        <div class="roi-sg">
+          <div class="roi-sh"><label for="rs-t">Taux horaire moyen chargé</label><span class="roi-sv" id="rsv-t">80 €/h</span></div>
+          <input type="range" id="rs-t" class="roi-range" min="30" max="300" value="80" step="5">
+          <div class="roi-sm"><span>30 €</span><span>300 €</span></div>
+        </div>
+      </div>
+      <div class="roi-outputs">
+        <div class="roi-chip"><span class="roi-chip-lbl">Heures récupérées/mois</span><strong class="roi-chip-val" id="roi-out-h">—</strong></div>
+        <div class="roi-chip roi-chip--hero"><span class="roi-chip-lbl">Gains annuels estimés</span><strong class="roi-chip-val" id="roi-out-an">—</strong></div>
+        <div class="roi-chip"><span class="roi-chip-lbl">Gains mensuels</span><strong class="roi-chip-val" id="roi-out-m">—</strong></div>
+      </div>
+      <p class="roi-disclaimer">Estimation indicative — basée sur une automatisation partielle des tâches à faible valeur ajoutée.</p>
+      <div class="roi-cta"><button class="btn btn-rose" data-calendly>Obtenir mon plan IA personnalisé →</button></div>
+    </div>
+  </div>
+</section>
+
 
 <!-- ═══ OUTILS STRIP ════════════════════════════════════════ -->
 <div class="tools-strip">
@@ -150,6 +196,151 @@
     </div>
   </div>
 </div>
+
+<!-- ═══ EXEMPLES D'INITIATIVES IA ════════════════════════════ -->
+<section id="agents" class="agents-section">
+  <div class="agents-header reveal">
+    <span class="agents-badge">Mise en œuvre</span>
+    <h2 class="agents-title"><span class="agents-plum">Exemples</span> <span class="agents-rose">d'initiatives IA</span></h2>
+  </div>
+
+  <div class="agents-team-photo reveal">
+    <div class="hero-team-caption" style="text-align:center;margin-bottom:16px;">
+      <span class="hero-team-badge">24H/24 · 7J/7</span>
+      <p>Une équipe de choc</p>
+      <em>vos Agents IA infatigables.</em>
+    </div>
+    <img src="assets/équipe choc transparence.png" alt="L'équipe EXEC'IA">
+  </div>
+
+  <div class="agents-track-outer" id="agentsTrack">
+    <div class="agents-track">
+
+      <!-- 01 · Général -->
+      <div class="agent-card">
+        <div class="agent-img">
+          <img src="assets/agents/general.png" alt="Agent IA Général EXEC'IA">
+        </div>
+        <div class="agent-body">
+          <p class="agent-eyebrow-txt">Initiative IA</p>
+          <h3 class="agent-name">IA <span>général</span></h3>
+          <div class="agent-divider"></div>
+          <p class="agent-desc">Connecté à tous vos outils — optimise votre quotidien.</p>
+          <ul class="agent-feats">
+            <li><span class="agent-arr">»</span> Gestion de la productivité</li>
+            <li><span class="agent-arr">»</span> Connecté à tous vos outils</li>
+            <li><span class="agent-arr">»</span> Communique avec vos agents IA</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 02 · Commercial -->
+      <div class="agent-card">
+        <div class="agent-img">
+          <img src="assets/agents/commercial.png" alt="Agent IA Commercial EXEC'IA">
+        </div>
+        <div class="agent-body">
+          <p class="agent-eyebrow-txt">Initiative IA</p>
+          <h3 class="agent-name">IA <span>commercial</span></h3>
+          <div class="agent-divider"></div>
+          <p class="agent-desc">Il prospecte pour vous, même pendant votre sommeil.</p>
+          <ul class="agent-feats">
+            <li><span class="agent-arr">»</span> Développe votre réseau</li>
+            <li><span class="agent-arr">»</span> Identifie vos prospects idéaux</li>
+            <li><span class="agent-arr">»</span> Envoie des messages personnalisés</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 03 · Marketing -->
+      <div class="agent-card">
+        <div class="agent-img">
+          <img src="assets/agents/marketing.png" alt="Agent IA Marketing EXEC'IA">
+        </div>
+        <div class="agent-body">
+          <p class="agent-eyebrow-txt">Initiative IA</p>
+          <h3 class="agent-name">IA <span>marketing</span></h3>
+          <div class="agent-divider"></div>
+          <p class="agent-desc">Publie à votre place. Présence en ligne pro, sans effort.</p>
+          <ul class="agent-feats">
+            <li><span class="agent-arr">»</span> Crée vos contenus</li>
+            <li><span class="agent-arr">»</span> Gère vos calendriers éditoriaux</li>
+            <li><span class="agent-arr">»</span> Publie sur vos réseaux</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 04 · Recrutement -->
+      <div class="agent-card">
+        <div class="agent-img">
+          <img src="assets/agents/rh.png?v=10" alt="Agent IA Recrutement EXEC'IA">
+        </div>
+        <div class="agent-body">
+          <p class="agent-eyebrow-txt">Initiative IA</p>
+          <h3 class="agent-name">IA <span>recrutement</span></h3>
+          <div class="agent-divider"></div>
+          <p class="agent-desc">Simplifie la gestion RH et accompagne vos collaborateurs au quotidien.</p>
+          <ul class="agent-feats">
+            <li><span class="agent-arr">»</span> Recrute les meilleurs talents</li>
+            <li><span class="agent-arr">»</span> Gère l'intégration des collaborateurs</li>
+            <li><span class="agent-arr">»</span> Suit les congés et absences</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 05 · Support -->
+      <div class="agent-card">
+        <div class="agent-img">
+          <img src="assets/agents/support.png" alt="Agent IA Support EXEC'IA">
+        </div>
+        <div class="agent-body">
+          <p class="agent-eyebrow-txt">Initiative IA</p>
+          <h3 class="agent-name">IA <span>support</span></h3>
+          <div class="agent-divider"></div>
+          <p class="agent-desc">Répond, qualifie et oriente vos clients vers la bonne personne.</p>
+          <ul class="agent-feats">
+            <li><span class="agent-arr">»</span> Qualifie vos clients</li>
+            <li><span class="agent-arr">»</span> Compte-rendus instantanés</li>
+            <li><span class="agent-arr">»</span> Prise de rendez-vous</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 06 · Facturation -->
+      <div class="agent-card">
+        <div class="agent-img">
+          <img src="assets/agents/facturation.png" alt="Agent IA Facturation EXEC'IA">
+        </div>
+        <div class="agent-body">
+          <p class="agent-eyebrow-txt">Initiative IA</p>
+          <h3 class="agent-name">IA <span>facturation</span></h3>
+          <div class="agent-divider"></div>
+          <p class="agent-desc">Simplifie votre gestion financière et votre comptabilité.</p>
+          <ul class="agent-feats">
+            <li><span class="agent-arr">»</span> Gestion des budgets</li>
+            <li><span class="agent-arr">»</span> Crée des rapports financiers</li>
+            <li><span class="agent-arr">»</span> Conseils en gestion de trésorerie</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="agents-nav">
+    <button class="agents-dot active" data-idx="0"></button>
+    <button class="agents-dot" data-idx="1"></button>
+    <button class="agents-dot" data-idx="2"></button>
+    <button class="agents-dot" data-idx="3"></button>
+    <button class="agents-dot" data-idx="4"></button>
+    <button class="agents-dot" data-idx="5"></button>
+  </div>
+  <div class="agents-arrows">
+    <button class="agents-arrow" id="agentsPrev">&#8592;</button>
+    <button class="agents-arrow" id="agentsNext">&#8594;</button>
+  </div>
+</section>
+
 
 <!-- ═══ VIDÉO DE PRÉSENTATION ═══════════════════════════════ -->
 <section id="video" class="video-section">
@@ -380,220 +571,6 @@
 </section>
 
 
-<!-- ═══ L'APPROCHE EXEC'IA ════════════════════════════════════ -->
-<section id="approche" class="bg-ivory">
-  <div class="wrap">
-    <span class="eyebrow reveal">Méthodologie</span>
-    <h2 class="section-title reveal delay-1">L&#x2019;approche EXEC&#x2019;IA<br>4 étapes</h2>
-    <div class="approach-cards">
-
-      <!-- 01 -->
-      <div class="approach-card reveal">
-        <div class="approach-card-header">
-          <span class="approach-card-num">01</span>
-          <h3>Diagnostic stratégique</h3>
-        </div>
-
-        <p>Audit de vos besoins, outils et processus pour identifier les leviers d'optimisation et construire une feuille de route adaptée.</p>
-        <p class="approach-objectif"><strong>Objectif :</strong> une feuille de route IA claire et exploitable.</p>
-        <div class="approach-card-img approach-card-img--diag">
-          <img src="assets/approach-diagnostic.png" alt="Dashboard diagnostic stratégique EXEC'IA" class="img-tilted" loading="lazy">
-        </div>
-      </div>
-
-      <!-- 02 -->
-      <div class="approach-card reveal delay-1">
-        <div class="approach-card-header">
-          <span class="approach-card-num">02</span>
-          <h3>Développement</h3>
-        </div>
-        <p>Conception et déploiement de solutions IA adaptées à vos métiers : support, RH, commercial ou organisation.</p>
-        <p class="approach-objectif"><strong>Objectif :</strong> une intégration IA concrète et efficace.</p>
-        <div class="approach-card-img approach-card-img--dev">
-          <img src="assets/approach-ecosystem.png?v=14" alt="Développement de votre écosystème IA EXEC'IA" loading="lazy">
-        </div>
-      </div>
-
-      <!-- 03 -->
-      <div class="approach-card reveal delay-2">
-        <div class="approach-card-header">
-          <span class="approach-card-num">03</span>
-          <h3>Accompagnement des équipes</h3>
-        </div>
-        <p>Formation de vos collaborateurs pour une adoption simple, autonome et efficace des outils IA.</p>
-        <p class="approach-objectif"><strong>Objectif :</strong> des équipes autonomes dans l'usage de l'IA.</p>
-        <div class="approach-card-img">
-          <img src="assets/approach-formation.png" alt="Accompagnement de vos équipes EXEC'IA" loading="lazy" style="object-position: center 20%;">
-        </div>
-      </div>
-
-      <!-- 04 -->
-      <div class="approach-card reveal delay-3">
-        <div class="approach-card-header">
-          <span class="approach-card-num">04</span>
-          <h3>Suivi de l'intégration</h3>
-        </div>
-        <p>Présence continue à vos côtés, ajustements réguliers, réponses à vos questions et optimisation durable des résultats.</p>
-        <p class="approach-objectif"><strong>Objectif :</strong> un suivi régulier pour des résultats durables.</p>
-        <div class="approach-card-img approach-card-img--suivi">
-          <img src="assets/SUIVI.png" alt="Suivi de l'intégration IA EXEC'IA" loading="lazy">
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Signature EXEC'IA -->
-    <div class="approach-signature reveal">
-      <p>Chaque mission EXEC&#x2019;IA est unique. Chaque résultat est concret.</p>
-      <em>Executive Leadership, augmenté par l&#x2019;IA.</em>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ EXEMPLES D'INITIATIVES IA ════════════════════════════ -->
-<section id="agents" class="agents-section">
-  <div class="agents-header reveal">
-    <span class="agents-badge">Mise en œuvre</span>
-    <h2 class="agents-title"><span class="agents-plum">Exemples</span> <span class="agents-rose">d'initiatives IA</span></h2>
-  </div>
-
-  <div class="agents-team-photo reveal">
-    <div class="hero-team-caption" style="text-align:center;margin-bottom:16px;">
-      <span class="hero-team-badge">24H/24 · 7J/7</span>
-      <p>Une équipe de choc</p>
-      <em>vos Agents IA infatigables.</em>
-    </div>
-    <img src="assets/équipe choc transparence.png" alt="L'équipe EXEC'IA">
-  </div>
-
-  <div class="agents-track-outer" id="agentsTrack">
-    <div class="agents-track">
-
-      <!-- 01 · Général -->
-      <div class="agent-card">
-        <div class="agent-img">
-          <img src="assets/agents/general.png" alt="Agent IA Général EXEC'IA">
-        </div>
-        <div class="agent-body">
-          <p class="agent-eyebrow-txt">Initiative IA</p>
-          <h3 class="agent-name">IA <span>général</span></h3>
-          <div class="agent-divider"></div>
-          <p class="agent-desc">Connecté à tous vos outils — optimise votre quotidien.</p>
-          <ul class="agent-feats">
-            <li><span class="agent-arr">»</span> Gestion de la productivité</li>
-            <li><span class="agent-arr">»</span> Connecté à tous vos outils</li>
-            <li><span class="agent-arr">»</span> Communique avec vos agents IA</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- 02 · Commercial -->
-      <div class="agent-card">
-        <div class="agent-img">
-          <img src="assets/agents/commercial.png" alt="Agent IA Commercial EXEC'IA">
-        </div>
-        <div class="agent-body">
-          <p class="agent-eyebrow-txt">Initiative IA</p>
-          <h3 class="agent-name">IA <span>commercial</span></h3>
-          <div class="agent-divider"></div>
-          <p class="agent-desc">Il prospecte pour vous, même pendant votre sommeil.</p>
-          <ul class="agent-feats">
-            <li><span class="agent-arr">»</span> Développe votre réseau</li>
-            <li><span class="agent-arr">»</span> Identifie vos prospects idéaux</li>
-            <li><span class="agent-arr">»</span> Envoie des messages personnalisés</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- 03 · Marketing -->
-      <div class="agent-card">
-        <div class="agent-img">
-          <img src="assets/agents/marketing.png" alt="Agent IA Marketing EXEC'IA">
-        </div>
-        <div class="agent-body">
-          <p class="agent-eyebrow-txt">Initiative IA</p>
-          <h3 class="agent-name">IA <span>marketing</span></h3>
-          <div class="agent-divider"></div>
-          <p class="agent-desc">Publie à votre place. Présence en ligne pro, sans effort.</p>
-          <ul class="agent-feats">
-            <li><span class="agent-arr">»</span> Crée vos contenus</li>
-            <li><span class="agent-arr">»</span> Gère vos calendriers éditoriaux</li>
-            <li><span class="agent-arr">»</span> Publie sur vos réseaux</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- 04 · Recrutement -->
-      <div class="agent-card">
-        <div class="agent-img">
-          <img src="assets/agents/rh.png?v=10" alt="Agent IA Recrutement EXEC'IA">
-        </div>
-        <div class="agent-body">
-          <p class="agent-eyebrow-txt">Initiative IA</p>
-          <h3 class="agent-name">IA <span>recrutement</span></h3>
-          <div class="agent-divider"></div>
-          <p class="agent-desc">Simplifie la gestion RH et accompagne vos collaborateurs au quotidien.</p>
-          <ul class="agent-feats">
-            <li><span class="agent-arr">»</span> Recrute les meilleurs talents</li>
-            <li><span class="agent-arr">»</span> Gère l'intégration des collaborateurs</li>
-            <li><span class="agent-arr">»</span> Suit les congés et absences</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- 05 · Support -->
-      <div class="agent-card">
-        <div class="agent-img">
-          <img src="assets/agents/support.png" alt="Agent IA Support EXEC'IA">
-        </div>
-        <div class="agent-body">
-          <p class="agent-eyebrow-txt">Initiative IA</p>
-          <h3 class="agent-name">IA <span>support</span></h3>
-          <div class="agent-divider"></div>
-          <p class="agent-desc">Répond, qualifie et oriente vos clients vers la bonne personne.</p>
-          <ul class="agent-feats">
-            <li><span class="agent-arr">»</span> Qualifie vos clients</li>
-            <li><span class="agent-arr">»</span> Compte-rendus instantanés</li>
-            <li><span class="agent-arr">»</span> Prise de rendez-vous</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- 06 · Facturation -->
-      <div class="agent-card">
-        <div class="agent-img">
-          <img src="assets/agents/facturation.png" alt="Agent IA Facturation EXEC'IA">
-        </div>
-        <div class="agent-body">
-          <p class="agent-eyebrow-txt">Initiative IA</p>
-          <h3 class="agent-name">IA <span>facturation</span></h3>
-          <div class="agent-divider"></div>
-          <p class="agent-desc">Simplifie votre gestion financière et votre comptabilité.</p>
-          <ul class="agent-feats">
-            <li><span class="agent-arr">»</span> Gestion des budgets</li>
-            <li><span class="agent-arr">»</span> Crée des rapports financiers</li>
-            <li><span class="agent-arr">»</span> Conseils en gestion de trésorerie</li>
-          </ul>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="agents-nav">
-    <button class="agents-dot active" data-idx="0"></button>
-    <button class="agents-dot" data-idx="1"></button>
-    <button class="agents-dot" data-idx="2"></button>
-    <button class="agents-dot" data-idx="3"></button>
-    <button class="agents-dot" data-idx="4"></button>
-    <button class="agents-dot" data-idx="5"></button>
-  </div>
-  <div class="agents-arrows">
-    <button class="agents-arrow" id="agentsPrev">&#8592;</button>
-    <button class="agents-arrow" id="agentsNext">&#8594;</button>
-  </div>
-</section>
-
 <!-- ═══ PARCOURS ══════════════════════════════════════════════ -->
 <section id="parcours" class="bg-ivory">
   <div class="wrap">
@@ -652,41 +629,6 @@
         <p>Première expérience internationale en immersion totale. Interface opérationnelle entre le siège parisien et la zone Amérique Latine. Préparation budgétaire, gestion d'agendas complexes.</p>
       </div>
 
-    </div>
-  </div>
-</section>
-
-<!-- ═══ SIMULATEUR ROI IA ════════════════════════════════════ -->
-<section id="roi" class="roi-section">
-  <div class="wrap">
-    <span class="eyebrow reveal">EXEC&#x2019;IA · Simulateur ROI</span>
-    <h2 class="section-title reveal delay-1">Quel est votre<br>potentiel ROI IA&nbsp;?</h2>
-    <p class="roi-intro reveal delay-2">Estimez en bougeant <span style="color:var(--rose);font-weight:700">3 curseurs</span> le temps et l&#x2019;argent<br><span style="color:var(--rose);font-size:1.4rem;line-height:1.2;display:block;margin:6px 0">↓</span>que l&#x2019;IA peut vous faire économiser</p>
-    <div class="roi-card reveal delay-3">
-      <div class="roi-sliders">
-        <div class="roi-sg">
-          <div class="roi-sh"><label for="rs-collab">Collaborateurs concernés</label><span class="roi-sv" id="rsv-collab">10</span></div>
-          <input type="range" id="rs-collab" class="roi-range" min="1" max="100" value="10">
-          <div class="roi-sm"><span>1</span><span>100</span></div>
-        </div>
-        <div class="roi-sg">
-          <div class="roi-sh"><label for="rs-h">Heures économisées / personne / semaine</label><span class="roi-sv" id="rsv-h">5 h</span></div>
-          <input type="range" id="rs-h" class="roi-range" min="1" max="20" value="5">
-          <div class="roi-sm"><span>1 h</span><span>20 h</span></div>
-        </div>
-        <div class="roi-sg">
-          <div class="roi-sh"><label for="rs-t">Taux horaire moyen chargé</label><span class="roi-sv" id="rsv-t">80 €/h</span></div>
-          <input type="range" id="rs-t" class="roi-range" min="30" max="300" value="80" step="5">
-          <div class="roi-sm"><span>30 €</span><span>300 €</span></div>
-        </div>
-      </div>
-      <div class="roi-outputs">
-        <div class="roi-chip"><span class="roi-chip-lbl">Heures récupérées/mois</span><strong class="roi-chip-val" id="roi-out-h">—</strong></div>
-        <div class="roi-chip roi-chip--hero"><span class="roi-chip-lbl">Gains annuels estimés</span><strong class="roi-chip-val" id="roi-out-an">—</strong></div>
-        <div class="roi-chip"><span class="roi-chip-lbl">Gains mensuels</span><strong class="roi-chip-val" id="roi-out-m">—</strong></div>
-      </div>
-      <p class="roi-disclaimer">Estimation indicative — basée sur une automatisation partielle des tâches à faible valeur ajoutée.</p>
-      <div class="roi-cta"><button class="btn btn-rose" data-calendly>Obtenir mon plan IA personnalisé →</button></div>
     </div>
   </div>
 </section>
@@ -751,11 +693,10 @@
         <div class="testi-q">&#x201C;</div>
         <p>Valérie se distingue par une forte implication dans l'apprentissage des outils IA et une réelle volonté de les relier à des usages concrets. Son approche structurée, sa curiosité et sa capacité à progresser rapidement rendent les échanges particulièrement stimulants.</p>
         <div class="testi-author">
-          <div class="testi-avatar"><img src="assets/avatars/wissam.svg" alt="Wissam B."></div>
+          <div class="testi-avatar"><img src="assets/avatars/wissam.svg" alt="Wissam Bouakline"></div>
           <div>
-            <strong>Wissam B.</strong>
-            <span>Consultante IA Générative &amp; No-Code</span>
-            <em class="testi-translated">Coach IA</em>
+            <span class="testi-name">Wissam Bouakline</span>
+            <strong class="testi-role">Consultante IA Générative &amp; No-Code — Coach IA</strong>
           </div>
         </div>
       </div>
@@ -864,18 +805,7 @@
 <footer>
   <div class="footer-brand-block">
     <div class="footer-logos-row">
-      <div class="footer-logo-x-card">
-        <img src="assets/LOGO X_Terracotta prune.png" alt="EXEC'IA" class="footer-logo-x-img">
-      </div>
-      <div class="footer-logo-wordmark-card">
-        <div class="footer-wm-name">EXEC<span class="footer-wm-apo">'</span><span class="footer-wm-ia">IA</span></div>
-        <div class="footer-wm-sep">
-          <span class="footer-wm-line"></span>
-          <span class="footer-wm-dot"></span>
-          <span class="footer-wm-line"></span>
-        </div>
-        <div class="footer-wm-consulting">CONSULTING IA</div>
-      </div>
+      <img src="assets/EXECIA_CONSULTING_zoomé.png" alt="EXEC'IA Consulting" class="footer-logo-main">
     </div>
   </div>
   <p class="footer-tag">My background, your advantage.</p>

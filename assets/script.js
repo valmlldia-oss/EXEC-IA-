@@ -239,6 +239,49 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeToolMod
   goTo(0);
 })();
 
+/* ── CTA images carousel ── */
+(function () {
+  const outer = document.getElementById('ctaTrack');
+  if (!outer) return;
+  const track = outer.querySelector('.agents-cta-track');
+  const cards = outer.querySelectorAll('.agents-cta-img-slot');
+  const dots  = document.querySelectorAll('[data-cta-idx]');
+  const btnPrev = document.getElementById('ctaPrev');
+  const btnNext = document.getElementById('ctaNext');
+  let current = 0;
+
+  function cardWidth() {
+    const c = cards[0];
+    if (!c) return 445;
+    return c.offsetWidth + parseInt(getComputedStyle(track).gap || '20');
+  }
+
+  function goTo(idx) {
+    current = Math.max(0, Math.min(idx, cards.length - 1));
+    outer.scrollTo({ left: current * cardWidth(), behavior: 'smooth' });
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    if (btnPrev) btnPrev.disabled = current === 0;
+    if (btnNext) btnNext.disabled = current === cards.length - 1;
+  }
+
+  btnPrev?.addEventListener('click', () => goTo(current - 1));
+  btnNext?.addEventListener('click', () => goTo(current + 1));
+  dots.forEach(d => d.addEventListener('click', () => goTo(+d.dataset.ctaIdx)));
+
+  outer.addEventListener('scroll', () => {
+    const idx = Math.round(outer.scrollLeft / cardWidth());
+    if (idx !== current) { current = idx; dots.forEach((d, i) => d.classList.toggle('active', i === current)); }
+  }, { passive: true });
+
+  let drag = false, startX = 0, startScroll = 0;
+  outer.addEventListener('mousedown', e => { drag = true; startX = e.pageX; startScroll = outer.scrollLeft; outer.style.scrollBehavior = 'auto'; });
+  outer.addEventListener('mouseleave', () => { drag = false; outer.style.scrollBehavior = ''; });
+  outer.addEventListener('mouseup',    () => { drag = false; outer.style.scrollBehavior = ''; });
+  outer.addEventListener('mousemove',  e => { if (!drag) return; e.preventDefault(); outer.scrollLeft = startScroll - (e.pageX - startX); });
+
+  goTo(0);
+})();
+
 /* ── Calendly popup ── */
 const CALENDLY_URL = 'https://calendly.com/VOTRE-NOM/decouverte-30min'; // ← Remplacer par votre URL Calendly
 document.querySelectorAll('[data-calendly]').forEach(btn => {
