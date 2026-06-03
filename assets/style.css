@@ -2275,3 +2275,178 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
   }
   .newsletter-section { padding: 80px 0; }
 }
+
+/* ================================================================
+   RESPONSIVE MOBILE & TABLETTE — EXEC'IA
+   Breakpoints: tablette ≤ 1024px · mobile ≤ 768px · petit mobile ≤ 480px
+   ================================================================ */
+
+/* ── TABLETTE (≤ 1024px) ── */
+@media (max-width: 1024px) {
+  /* Nav */
+  .nav-links { gap: 18px; }
+  .nav-links a { font-size: .72rem; }
+
+  /* Hero */
+  .hero-wrap { padding: 48px 24px 32px; gap: 32px; }
+  .hero-left { padding-right: 32px; }
+  .hero-tagline { white-space: normal; }
+  .hero-sub, .hero-sub2 { font-size: clamp(1.3rem, 2.2vw, 1.8rem); }
+
+  /* About */
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .pillars { flex-direction: row; flex-wrap: wrap; gap: 16px; }
+  .pillar { flex: 1 1 calc(50% - 8px); }
+
+  /* Expertise */
+  .cards-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  /* Timeline */
+  .timeline { padding-left: 120px; }
+  .tl-date { width: 100px; font-size: .7rem; }
+
+  /* Témoignages */
+  .testi-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+  .testi { padding: 32px 28px; }
+
+  /* Stats */
+  .ss-grid { gap: 16px; }
+
+  /* Agents */
+  .agents-track-outer { padding: 0 16px; }
+}
+
+/* ── MOBILE (≤ 768px) ── */
+@media (max-width: 768px) {
+
+  /* Navigation mobile */
+  .nav-links { display: none; }
+  .nav-burger { display: flex; }
+  .nav-in { padding: 0 20px; }
+  #nav { height: 64px; }
+  .nav-links.open {
+    display: flex; flex-direction: column; align-items: flex-start;
+    position: fixed; top: 64px; left: 0; right: 0;
+    background: rgba(252,252,250,.98); backdrop-filter: blur(20px);
+    padding: 24px 24px 32px; gap: 20px; z-index: 998;
+    border-bottom: 1px solid rgba(99,59,74,.1);
+    box-shadow: 0 8px 32px rgba(99,59,74,.1);
+  }
+  .nav-links.open a { font-size: .9rem; }
+  .nav-langs { gap: 4px; }
+  .nav-lang { padding: 3px 8px; font-size: .65rem !important; }
+
+  /* Hero mobile */
+  .hero-wrap {
+    flex-direction: column; padding: 32px 20px 24px;
+    padding-top: calc(64px + 24px);
+  }
+  .hero-left { padding-right: 0; }
+  .hero-tagline { font-size: 1.05rem; white-space: normal; }
+  .hero-sub { font-size: 1.4rem; }
+  .hero-sub2 { font-size: 1.2rem; }
+  .hero-cta { flex-direction: column; align-items: stretch; gap: 12px; }
+  .hero-cta .btn { text-align: center; justify-content: center; font-size: .9rem; padding: 14px 24px; }
+  .hero-location { font-size: 1rem; }
+  .hero-left h1 { font-size: 1.6rem; }
+
+  /* Sections */
+  section { padding: 56px 0; }
+  .wrap { padding: 0 20px; }
+  .section-title { font-size: clamp(1.8rem, 6vw, 2.6rem); margin-bottom: 36px; }
+  .about-section-title { font-size: clamp(2rem, 7vw, 3rem) !important; }
+  .expertise-section-title { font-size: clamp(1.8rem, 6vw, 2.6rem) !important; }
+  .offres-section-title { font-size: clamp(2rem, 7vw, 3rem) !important; }
+
+  /* Stats strip mobile */
+  .ss-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  .ss-item:nth-child(4), .ss-item:nth-child(5) {
+    grid-column: span 1;
+  }
+  .ss-num { font-size: 1.6rem; }
+  .ss-label { font-size: .65rem; }
+
+  /* About */
+  .about-grid { grid-template-columns: 1fr; gap: 32px; }
+  .pillars { flex-direction: column; gap: 12px; }
+  .pillar { flex: 1 1 100%; }
+  .pillar p { white-space: normal; }
+
+  /* Expertise */
+  .cards-grid { grid-template-columns: 1fr; }
+  .xcard { padding: 28px 24px; }
+
+  /* Timeline mobile */
+  .timeline { padding-left: 24px; }
+  .timeline::before { left: 0; }
+  .tl-item { padding-left: 24px; }
+  .tl-item::before { left: -8px; }
+  .tl-date { position: static; margin: 0 0 6px; text-align: left; width: auto; }
+  .tl-item h3 { font-size: 1.25rem; }
+  .tl-intro { font-size: 1.2rem; }
+
+  /* Parcours header */
+  .parcours-header { flex-direction: column-reverse; gap: 24px; align-items: center; text-align: center; }
+  .parcours-photo { width: 120px; height: 120px; }
+  .parcours-header-text .section-title { font-size: clamp(2rem, 7vw, 3rem); }
+
+  /* Témoignages */
+  .testi-grid { grid-template-columns: 1fr; gap: 16px; }
+  .testi { padding: 28px 22px; }
+  .testi-intro { font-size: 1rem; white-space: normal; }
+  .testi-tag { font-size: .75rem; padding: 6px 18px; }
+
+  /* Offres */
+  .offres-grid { grid-template-columns: 1fr; gap: 20px; }
+  .offre-card { padding: 28px 24px; }
+  .offre-decouverte { flex-direction: column; gap: 24px; }
+  .offre-decouverte-btn { text-align: center; }
+
+  /* ROI */
+  .roi-outputs { grid-template-columns: 1fr; }
+  .roi-card { padding: 24px 20px; }
+
+  /* Tools strip */
+  .tools-strip-logos { gap: 16px; }
+  .tool-logo-wrap { width: 48px; height: 48px; }
+
+  /* Agents */
+  .agent-card { min-width: 85vw; }
+  .agents-header { padding: 0 20px; }
+  .agents-team-caption-block { padding: 0 20px; }
+  .agents-cta-block { padding: 0 20px; }
+
+  /* Newsletter */
+  .newsletter-inner { padding: 0 4px; }
+
+  /* Contact */
+  .contact-btns { flex-direction: column; gap: 12px; }
+  .contact-btns .btn { text-align: center; justify-content: center; }
+
+  /* Footer */
+  footer { padding: 40px 20px; }
+  .footer-nav { flex-wrap: wrap; gap: 12px; justify-content: center; }
+
+  /* Ticker */
+  .ticker-bar { font-size: .75rem; }
+}
+
+/* ── PETIT MOBILE (≤ 480px) ── */
+@media (max-width: 480px) {
+  .hero-sub { font-size: 1.2rem; }
+  .hero-sub2 { font-size: 1.05rem; }
+  .ss-grid { grid-template-columns: repeat(2, 1fr); }
+  .ss-item:nth-child(5) { grid-column: span 2; }
+  .hero-cta .btn { font-size: .82rem; padding: 13px 18px; }
+  .btn-lg { font-size: .85rem; padding: 14px 28px; }
+  .xcard { padding: 22px 18px; }
+  .testi { padding: 22px 18px; }
+  .offre-card { padding: 22px 18px; }
+  .section-title { font-size: clamp(1.6rem, 5.5vw, 2.2rem); }
+  .nav-logo-full { height: 34px; }
+  .agents-cta-title { font-size: clamp(1.6rem, 5vw, 2.2rem); }
+}

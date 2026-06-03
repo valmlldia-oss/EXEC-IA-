@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>7 Opportunités IA à Fort Impact · EXEC'IA</title>
+  <meta name="description" content="Les 7 opportunités IA à fort impact pour les dirigeants — par Valérie Mailland · EXEC'IA">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Raleway:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --plum: #633B4A;
+      --rose: #C75F62;
+      --ivory: #FAF6F2;
+      --dark: #1a0e14;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Raleway', sans-serif;
+      background: var(--ivory);
+      color: #2a1a20;
+    }
+
+    /* ── HEADER ── */
+    .header {
+      background: var(--dark);
+      padding: 32px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header-brand {
+      font-family: 'Cormorant Garamond', serif;
+      color: #fff;
+      font-size: 1.6rem;
+      letter-spacing: 0.08em;
+    }
+    .header-brand span { color: var(--rose); }
+    .header-back {
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+      transition: color 0.2s;
+    }
+    .header-back:hover { color: var(--rose); }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, var(--dark) 0%, #3d1f2a 60%, #5a2a38 100%);
+      padding: 80px 40px 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(199,95,98,0.15) 0%, transparent 70%);
+      top: -200px; right: -100px;
+      pointer-events: none;
+    }
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--rose);
+      background: rgba(199,95,98,0.12);
+      border: 1px solid rgba(199,95,98,0.3);
+      border-radius: 100px;
+      padding: 6px 18px;
+      margin-bottom: 28px;
+    }
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 400;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+    .hero h1 em { color: var(--rose); font-style: italic; }
+    .hero-sub {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 40px;
+      font-weight: 300;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 12px;
+      padding: 14px 24px;
+      color: rgba(255,255,255,0.8);
+      font-size: 0.88rem;
+    }
+    .hero-badge strong { color: #fff; }
+
+    /* ── INTRO ── */
+    .intro {
+      max-width: 720px;
+      margin: 60px auto;
+      padding: 0 40px;
+      text-align: center;
+    }
+    .intro p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #4a2e38;
+      font-weight: 300;
+    }
+    .intro strong { color: var(--plum); font-weight: 600; }
+
+    /* ── OPPORTUNITES ── */
+    .opps {
+      max-width: 860px;
+      margin: 0 auto 80px;
+      padding: 0 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .opp-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 36px 40px;
+      border-left: 4px solid var(--rose);
+      box-shadow: 0 4px 24px rgba(99,59,74,0.08);
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 0 28px;
+      align-items: start;
+    }
+    .opp-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem;
+      font-weight: 300;
+      color: var(--rose);
+      opacity: 0.5;
+      line-height: 1;
+      padding-top: 4px;
+    }
+    .opp-body {}
+    .opp-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.45rem;
+      font-weight: 500;
+      color: var(--plum);
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+    .opp-desc {
+      font-size: 0.92rem;
+      line-height: 1.75;
+      color: #5a3a46;
+      font-weight: 300;
+    }
+    .opp-desc strong {
+      color: var(--plum);
+      font-weight: 600;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .opp-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+    .opp-tag {
+      font-size: 0.75rem;
+      padding: 4px 12px;
+      background: rgba(199,95,98,0.08);
+      color: var(--rose);
+      border-radius: 100px;
+      letter-spacing: 0.04em;
+      font-weight: 500;
+    }
+
+    /* ── DIVIDER ── */
+    .divider {
+      text-align: center;
+      margin: 20px 0;
+      color: var(--rose);
+      font-size: 1.2rem;
+      opacity: 0.4;
+      letter-spacing: 1em;
+    }
+
+    /* ── CTA FINAL ── */
+    .cta-section {
+      background: linear-gradient(135deg, var(--dark) 0%, #3d1f2a 100%);
+      padding: 80px 40px;
+      text-align: center;
+    }
+    .cta-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 400;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+    .cta-section h2 em { color: var(--rose); font-style: italic; }
+    .cta-section p {
+      color: rgba(255,255,255,0.65);
+      font-size: 1rem;
+      margin-bottom: 40px;
+      font-weight: 300;
+    }
+    .btn {
+      display: inline-block;
+      padding: 16px 40px;
+      border-radius: 100px;
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: all 0.25s;
+    }
+    .btn-rose {
+      background: var(--rose);
+      color: #fff;
+    }
+    .btn-rose:hover { background: #b54e51; transform: translateY(-2px); }
+
+    /* ── SIGNATURE ── */
+    .signature {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 60px 40px;
+      text-align: center;
+      border-top: 1px solid rgba(99,59,74,0.1);
+    }
+    .signature p {
+      font-size: 0.9rem;
+      color: #7a5060;
+      font-weight: 300;
+      line-height: 1.8;
+    }
+    .signature strong { color: var(--plum); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--dark);
+      padding: 32px 40px;
+      text-align: center;
+      color: rgba(255,255,255,0.4);
+      font-size: 0.8rem;
+    }
+    footer a { color: var(--rose); text-decoration: none; }
+
+    @media (max-width: 640px) {
+      .header { padding: 20px; }
+      .hero { padding: 60px 24px 40px; }
+      .intro { padding: 0 24px; margin: 40px auto; }
+      .opps { padding: 0 20px; }
+      .opp-card { grid-template-columns: 1fr; padding: 28px 24px; }
+      .opp-num { font-size: 2rem; margin-bottom: 8px; }
+      .cta-section { padding: 60px 24px; }
+      .signature { padding: 40px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-brand">EXEC<span>'</span>IA <span style="font-size:0.8rem;opacity:0.6;font-family:'Raleway',sans-serif;font-weight:300;letter-spacing:0.15em">CONSULTING</span></div>
+  <a href="index.html" class="header-back">← Retour au site</a>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-eyebrow">EXEC'IA · Guide Exclusif pour Dirigeants</div>
+  <h1>7 Opportunités IA<br>à <em>Fort Impact</em></h1>
+  <p class="hero-sub">Les usages qui créent de la valeur immédiate — sans compétences techniques.</p>
+  <div class="hero-badge">
+    <span>🎁</span>
+    <span>Offert par <strong>Valérie Mailland</strong> · EXEC'IA Consulting</span>
+  </div>
+</section>
+
+<!-- INTRO -->
+<div class="intro">
+  <p>70 % des projets IA échouent parce qu'ils partent des outils, pas des besoins.<br><br>
+  Les dirigeants qui réussissent leur transformation IA ne sont pas les plus technophiles.<br>
+  Ce sont ceux qui ont su <strong>identifier les bons usages</strong>, au bon moment, pour le bon impact.<br><br>
+  Voici les 7 opportunités qui produisent des résultats concrets — <strong>dès les premières semaines.</strong></p>
+</div>
+
+<!-- OPPORTUNITES -->
+<div class="opps">
+
+  <div class="opp-card">
+    <div class="opp-num">01</div>
+    <div class="opp-body">
+      <h2 class="opp-title">Transformer chaque réunion en décisions actionnables — automatiquement</h2>
+      <p class="opp-desc">Combien de réunions se terminent sans compte-rendu clair ? Sans suivi ?<br><br>
+      À partir d'un simple enregistrement audio ou d'un transcript, l'IA produit en 30 secondes : synthèse des échanges, décisions prises, actions à mener avec responsables et délais, email de suivi prêt à envoyer.<br><br>
+      <strong>Impact direct :</strong> vos réunions produisent enfin des résultats mesurables.</p>
+      <div class="opp-tags">
+        <span class="opp-tag">⏱ 30 sec de traitement</span>
+        <span class="opp-tag">Réunions</span>
+        <span class="opp-tag">Suivi d'actions</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="opp-card">
+    <div class="opp-num">02</div>
+    <div class="opp-body">
+      <h2 class="opp-title">Arriver en réunion stratégique avec un dossier complet — en 10 minutes</h2>
+      <p class="opp-desc">Fini les réunions où l'on manque d'informations clés au moment de décider.<br><br>
+      L'IA rassemble le contexte, les données disponibles et prépare : ordre du jour structuré, points de vigilance, questions stratégiques à poser, synthèse des derniers échanges avec les parties prenantes.<br><br>
+      <strong>Impact direct :</strong> vous entrez dans chaque réunion avec l'avantage de la préparation.</p>
+      <div class="opp-tags">
+        <span class="opp-tag">⏱ 10 min de préparation</span>
+        <span class="opp-tag">Décision</span>
+        <span class="opp-tag">Leadership</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="opp-card">
+    <div class="opp-num">03</div>
+    <div class="opp-body">
+      <h2 class="opp-title">Diviser par 3 le temps passé à rédiger sans perdre en qualité</h2>
+      <p class="opp-desc">Emails complexes, comptes-rendus, notes de synthèse, présentations dirigeants, propositions commerciales — la rédaction absorbe un temps précieux.<br><br>
+      L'IA produit un premier jet structuré, au bon ton, adapté à votre destinataire. Vous relisez, ajustez en quelques secondes. Vous gardez la plume, vous gagnez le temps.<br><br>
+      <strong>Impact direct :</strong> 2 à 3 heures récupérées par semaine, par collaborateur.</p>
+      <div class="opp-tags">
+        <span class="opp-tag">⏱ -70% de temps de rédaction</span>
+        <span class="opp-tag">Communication</span>
+        <span class="opp-tag">Productivité</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="opp-card">
+    <div class="opp-num">04</div>
+    <div class="opp-body">
+      <h2 class="opp-title">Trouver l'information juste en 10 secondes — dans n'importe quel document</h2>
+      <p class="opp-desc">Contrats, procédures, comptes-rendus, documentation interne, historiques de projets — vos données sont là, mais les retrouver prend du temps.<br><br>
+      Posez votre question en langage naturel comme à un collaborateur : l'IA lit, analyse, extrait et résume l'information exacte dont vous avez besoin.<br><br>
+      <strong>Impact direct :</strong> fin des recherches chronophages, des doubles tâches et des informations manquées.</p>
+      <div class="opp-tags">
+        <span class="opp-tag">⏱ Résultat en 10 sec</span>
+        <span class="opp-tag">Documents</span>
+        <span class="opp-tag">Knowledge management</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="opp-card">
+    <div class="opp-num">05</div>
+    <div class="opp-body">
+      <h2 class="opp-title">Décider avec une analyse complète — sans attendre le consultant</h2>
+      <p class="opp-desc">Avant chaque décision importante, vous avez besoin d'une vue claire : options disponibles, risques, opportunités, points de vigilance, précédents.<br><br>
+      L'IA synthétise les informations disponibles, compare les scénarios et produit une note d'analyse structurée. Vous conservez le jugement — elle vous donne la matière.<br><br>
+      <strong>Impact direct :</strong> des décisions mieux éclairées, prises plus vite, avec moins de zones d'ombre.</p>
+      <div class="opp-tags">
+        <span class="opp-tag">Analyse stratégique</span>
+        <span class="opp-tag">Décision</span>
+        <span class="opp-tag">Réduction du risque</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="opp-card">
+    <div class="opp-num">06</div>
+    <div class="opp-body">
+      <h2 class="opp-title">Libérer vos équipes des tâches répétitives à faible valeur ajoutée</h2>
+      <p class="opp-desc">Saisie de données, classement de documents, relances clients, mise à jour de tableaux de bord, génération de rapports hebdomadaires — ces tâches existent dans toutes les organisations et consomment un temps précieux.<br><br>
+      Elles peuvent être automatisées. Sans coder. Sans projet IT. Souvent en quelques jours.<br><br>
+      <strong>Impact direct :</strong> vos équipes se concentrent sur ce qui crée vraiment de la valeur.</p>
+      <div class="opp-tags">
+        <span class="opp-tag">⏱ ROI en semaines</span>
+        <span class="opp-tag">Automatisation</span>
+        <span class="opp-tag">No-code</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="opp-card">
+    <div class="opp-num">07</div>
+    <div class="opp-body">
+      <h2 class="opp-title">Donner à vos commerciaux l'avantage de la préparation à chaque rendez-vous</h2>
+      <p class="opp-desc">Un commercial bien préparé transforme davantage. L'IA recherche les informations clés sur le prospect, synthétise le contexte sectoriel, prépare les arguments différenciants et anticipe les objections.<br><br>
+      Elle rédige également les emails de suivi personnalisés et assure la mise à jour du CRM sans saisie manuelle.<br><br>
+      <strong>Impact direct :</strong> plus de rendez-vous qualifiés, mieux préparés, mieux suivis — sans alourdir la charge de vos équipes.</p>
+      <div class="opp-tags">
+        <span class="opp-tag">Performance commerciale</span>
+        <span class="opp-tag">CRM</span>
+        <span class="opp-tag">Prospection</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="divider">· · ·</div>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Laquelle de ces 7 opportunités<br>est <em>prioritaire pour vous</em>&nbsp;?</h2>
+  <p>En 30 minutes, je vous aide à identifier les 2 ou 3 usages IA<br>qui créeront le plus de valeur pour votre entreprise — dès maintenant.<br><br>Gratuit. Sans engagement. Confidentiel.</p>
+  <a href="index.html#contact" class="btn btn-rose">Réserver mon échange stratégique →</a>
+</section>
+
+<!-- SIGNATURE -->
+<div class="signature">
+  <p><strong>Valérie Mailland</strong><br>Consultante IA · EXEC'IA Consulting<br>18 ans McKinsey &amp; Company · Certification RS6776<br><br>
+  <a href="mailto:valerie@exec-ia.fr" style="color:var(--rose)">valerie@exec-ia.fr</a> · <a href="index.html" style="color:var(--rose)">exec-ia.ai</a></p>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Valérie Mailland · EXEC'IA · <a href="mentions-legales.html">Mentions légales</a> · Conformité RGPD</p>
+</footer>
+
+</body>
+</html>
