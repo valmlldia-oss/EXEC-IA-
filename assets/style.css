@@ -1561,7 +1561,8 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
 .tmodal-overlay {
   position: fixed; inset: 0; z-index: 990;
   background: rgba(61,30,42,.52); backdrop-filter: blur(5px);
-  display: flex; align-items: center; justify-content: center;
+  display: flex; align-items: flex-start; justify-content: center;
+  overflow-y: auto; padding: 24px 0;
   opacity: 0; pointer-events: none;
   transition: opacity .24s ease;
 }
@@ -1989,6 +1990,11 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
 /* Marketing : prune trop haut → décale vers le bas pour aligner les 3 tops */
 .agent-card:nth-child(3) .agent-img img {
   transform: translateY(3px);
+}
+/* Recrutement : image plus sombre — compensation brightness */
+.agent-card:nth-child(4) .agent-img img {
+  mix-blend-mode: normal;
+  filter: brightness(1.1);
 }
 
 /* Soon placeholder */

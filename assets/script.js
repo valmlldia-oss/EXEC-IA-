@@ -201,7 +201,7 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeToolMod
   if (!outer) return;
   const track = outer.querySelector('.agents-track');
   const cards = outer.querySelectorAll('.agent-card');
-  const dots  = document.querySelectorAll('.agents-dot');
+  const dots  = document.querySelectorAll('[data-idx]');
   const btnPrev = document.getElementById('agentsPrev');
   const btnNext = document.getElementById('agentsNext');
   let current = 0;
