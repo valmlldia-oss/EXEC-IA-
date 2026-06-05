@@ -1997,7 +1997,7 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
 }
 .agent-card:nth-child(4) .agent-img img {
   mix-blend-mode: normal;
-  filter: brightness(0.92) saturate(1.1);
+  filter: brightness(1.2) saturate(1.05);
 }
 
 /* Soon placeholder */
