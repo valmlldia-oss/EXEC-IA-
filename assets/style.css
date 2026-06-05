@@ -1999,6 +1999,14 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
   mix-blend-mode: normal;
   filter: brightness(1.2) saturate(1.05);
 }
+/* Facturation : idem */
+.agent-card:nth-child(6) .agent-img {
+  background: var(--plum);
+}
+.agent-card:nth-child(6) .agent-img img {
+  mix-blend-mode: normal;
+  filter: brightness(1.2) saturate(1.05);
+}
 
 /* Soon placeholder */
 .agent-img--soon {
