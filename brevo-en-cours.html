@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Votre guide arrive bientôt · EXEC'IA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Raleway:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --plum: #633B4A;
+      --rose: #C75F62;
+      --ivory: #FAF6F2;
+      --ivory-light: #FAF6F2;
+      --deep: #3D1E2A;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Raleway', sans-serif;
+      background: var(--ivory);
+      color: var(--plum);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: var(--deep);
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      color: #fff;
+      letter-spacing: .06em;
+    }
+    .brand span { color: var(--rose); }
+    .back-link {
+      font-size: .82rem;
+      color: rgba(255,255,255,.55);
+      text-decoration: none;
+      letter-spacing: .05em;
+      transition: color .2s;
+    }
+    .back-link:hover { color: var(--rose); }
+
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: clamp(48px, 8vw, 96px) 24px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      padding: clamp(40px, 6vw, 72px) clamp(32px, 5vw, 64px);
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 16px 64px rgba(99,59,74,.10);
+      border-top: 3px solid var(--rose);
+    }
+    .icon {
+      width: 64px; height: 64px;
+      background: rgba(199,95,98,.08);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 28px;
+      font-size: 1.8rem;
+    }
+    .eyebrow {
+      font-size: .72rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 16px;
+      font-weight: 600;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 400;
+      color: var(--plum);
+      line-height: 1.25;
+      margin-bottom: 20px;
+    }
+    h1 em { color: var(--rose); font-style: italic; }
+    .desc {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #7a5060;
+      font-weight: 300;
+      margin-bottom: 32px;
+    }
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(199,95,98,.06);
+      border: 1.5px solid rgba(199,95,98,.25);
+      border-radius: 100px;
+      padding: 10px 22px;
+      font-size: .82rem;
+      color: var(--rose);
+      font-weight: 600;
+      letter-spacing: .04em;
+      margin-bottom: 36px;
+    }
+    .status-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--rose);
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .3; }
+    }
+    .divider {
+      border: none;
+      border-top: 1px solid rgba(99,59,74,.1);
+      margin: 32px 0;
+    }
+    .alt-label {
+      font-size: .78rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: rgba(99,59,74,.45);
+      margin-bottom: 16px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 14px 36px;
+      border-radius: 100px;
+      font-family: 'Raleway', sans-serif;
+      font-size: .88rem;
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-decoration: none;
+      transition: all .22s;
+    }
+    .btn-rose {
+      background: var(--rose);
+      color: #fff;
+    }
+    .btn-rose:hover { background: #b04f52; transform: translateY(-1px); }
+    .btn-outline {
+      background: transparent;
+      color: var(--plum);
+      border: 1.5px solid rgba(99,59,74,.3);
+      margin-top: 12px;
+    }
+    .btn-outline:hover { border-color: var(--plum); background: rgba(99,59,74,.04); }
+
+    footer {
+      background: var(--deep);
+      padding: 20px 40px;
+      text-align: center;
+      color: rgba(255,255,255,.35);
+      font-size: .75rem;
+    }
+    footer a { color: rgba(255,255,255,.45); text-decoration: none; }
+    footer a:hover { color: var(--rose); }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="brand"><img src="assets/EXECIA_CONSULTING_zoomé.png" alt="EXEC'IA Consulting" style="height:40px;width:auto;filter:brightness(0) invert(1);"></div>
+  <a href="index.html" class="back-link">← Retour au site</a>
+</header>
+
+<main>
+  <div class="card">
+    <div class="icon">📬</div>
+    <p class="eyebrow">Lettre IA · EXEC'IA</p>
+    <h1>Votre guide est en route.</h1>
+    <p class="desc">
+      Merci pour votre inscription.<br>
+      Vous recevrez <strong>Les 7 prompts IA indispensables pour dirigeants</strong> dans votre boîte mail très prochainement.
+    </p>
+    <div class="status-badge">
+      <span class="status-dot"></span>
+      Connexion Brevo en cours de mise en place
+    </div>
+
+    <hr class="divider">
+
+    <p class="alt-label">En attendant</p>
+    <a href="https://calendly.com/valerie-mailland" target="_blank" rel="noopener" class="btn btn-rose">Réserver un échange stratégique gratuit</a><br>
+    <a href="index.html" class="btn btn-outline">Revenir sur le site</a>
+  </div>
+</main>
+
+<footer>
+  <p>© 2026 Valérie Mailland · EXEC'IA · <a href="mentions-legales.html">Mentions légales</a></p>
+</footer>
+
+</body>
+</html>

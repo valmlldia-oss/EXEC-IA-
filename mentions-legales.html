@@ -14,7 +14,7 @@
     .ml-page ul li { margin-bottom: 6px; }
     .ml-page a { color: #C75F62; text-decoration: none; }
     .ml-page a:hover { text-decoration: underline; }
-    .ml-back { display: inline-flex; align-items: center; gap: 8px; font-size: .95rem; color: #fff; text-decoration: none; margin-bottom: 40px; font-weight: 600; background: #C75F62; border: none; border-radius: 10px; padding: 12px 24px; transition: background .2s; }
+    .ml-back { position: fixed; top: 20px; left: 20px; z-index: 999; display: inline-flex; align-items: center; gap: 8px; font-size: .95rem; color: #FAF6F2 !important; text-decoration: none; font-weight: 600; background: #C75F62; border: none; border-radius: 10px; padding: 12px 24px; transition: background .2s; box-shadow: 0 2px 12px rgba(0,0,0,.15); }
     .ml-back:hover { background: #b04f52; }
     .ml-divider { border: none; border-top: 1px solid rgba(184,177,170,.3); margin: 40px 0; }
     .ml-block { background: var(--white); border-radius: 10px; padding: 24px 28px; margin-bottom: 12px; font-size: 1.1rem; line-height: 1.9; color: var(--text); }
@@ -23,12 +23,9 @@
 </head>
 <body style="background: var(--ivory);">
 
-  <div style="position:fixed;top:24px;left:32px;z-index:100;">
+  <main class="ml-page">
+
     <a href="index.html" class="ml-back">← Retour au site</a>
-  </div>
-
-  <main class="ml-page" style="padding-top: clamp(80px, 10vw, 120px);">
-
 
     <h1>Mentions légales</h1>
 
@@ -36,112 +33,73 @@
     <h2>Éditeur du site</h2>
     <p>Le présent site est édité par :</p>
     <div class="ml-block">
-      <strong>EXEC'IA</strong><br>
-      Société spécialisée en :
+      <strong>EXEC'IA</strong><br><br>
+      Activité du site :
       <ul>
-        <li>consulting en Intelligence Artificielle Générative,</li>
-        <li>automatisation de processus,</li>
-        <li>solutions No-Code,</li>
-        <li>création de sites web,</li>
-        <li>CRM sur-mesure,</li>
-        <li>accompagnement à la transformation digitale.</li>
+        <li>Conseil en Intelligence Artificielle générative</li>
+        <li>Formation et accompagnement des professionnels</li>
+        <li>Automatisation de processus et solutions No-Code</li>
+        <li>Création de contenus et d'outils assistés par l'IA</li>
+        <li>Accompagnement à la transformation numérique</li>
       </ul>
       <strong>Siège social :</strong><br>
-      7 rue Camille Claudel<br><br>
-      <strong>SIRET :</strong> 912 548 376 00018<br>
-      <strong>RCS :</strong> RCS PARIS 912 548 376<br><br>
+      Paris — adresse de domiciliation en cours de finalisation<br><br>
+      Entreprise en cours d'immatriculation<br><br>
       <strong>Directrice de la publication :</strong> Valérie Mailland<br><br>
       <strong>Contact :</strong><br>
-      <a href="mailto:valerie@execia.ai">valerie@execia.ai</a><br>
-      +33 7 77 77 77 77
+      <a href="mailto:valerie@exec-ia.ai">valerie@exec-ia.ai</a>
     </div>
 
     <hr class="ml-divider">
 
     <!-- Hébergement -->
     <h2>Hébergement</h2>
-    <p>Le site est hébergé par :</p>
-    <div class="ml-block">
-      <strong>OVH SAS</strong><br>
-      2 rue Kellermann<br>
-      59100 Roubaix — France<br>
-      <a href="https://www.ovhcloud.com/fr/" target="_blank" rel="noopener">https://www.ovhcloud.com/fr/</a>
-    </div>
+    <p>Le site est hébergé par l'infrastructure technique utilisée par EXEC'IA.</p>
+    <p>Les informations définitives relatives à l'hébergement seront précisées lors de la mise en production du site.</p>
 
     <hr class="ml-divider">
 
     <!-- Propriété intellectuelle -->
     <h2>Propriété intellectuelle</h2>
-    <p>L'ensemble des contenus présents sur ce site (textes, visuels, images, logos, éléments graphiques, vidéos, workflows, automatisations, concepts, structure et design) est protégé par le droit de la propriété intellectuelle.</p>
-    <p>Toute reproduction ou exploitation sans autorisation écrite préalable est interdite.</p>
+    <p>L'ensemble des contenus présents sur ce site (textes, visuels, éléments graphiques, documents, méthodes, supports de formation et ressources téléchargeables) est protégé par les dispositions du Code de la propriété intellectuelle.</p>
+    <p>Toute reproduction, diffusion, modification ou utilisation, totale ou partielle, sans autorisation écrite préalable est interdite.</p>
 
     <hr class="ml-divider">
 
     <!-- Responsabilité -->
     <h2>Responsabilité</h2>
-    <p>Les informations et contenus publiés sur ce site sont fournis à titre informatif.</p>
-    <p>Les prestations proposées reposent notamment sur l'utilisation :</p>
-    <ul>
-      <li>d'outils d'Intelligence Artificielle,</li>
-      <li>d'automatisations,</li>
-      <li>de plateformes No-Code,</li>
-      <li>d'outils tiers.</li>
-    </ul>
-    <p>Les technologies d'Intelligence Artificielle peuvent générer des erreurs, imprécisions, omissions ou résultats inattendus.</p>
+    <p>Les informations publiées sur ce site sont fournies à titre informatif.</p>
+    <p>Les prestations proposées par EXEC'IA reposent notamment sur l'utilisation de technologies d'Intelligence Artificielle, d'automatisations, de plateformes No-Code et d'outils tiers sélectionnés en fonction des besoins des clients.</p>
+    <p>Les contenus, recommandations, analyses, formations et livrables fournis dans le cadre des missions ont pour objectif d'accompagner la réflexion, la montée en compétences et la mise en œuvre opérationnelle.</p>
     <p>Le client demeure seul responsable :</p>
     <ul>
-      <li>de la validation des contenus,</li>
-      <li>des décisions prises,</li>
-      <li>des automatisations mises en production,</li>
-      <li>de l'utilisation finale des livrables.</li>
+      <li>des décisions prises sur la base des informations fournies ;</li>
+      <li>de la validation des contenus et livrables ;</li>
+      <li>de l'utilisation des outils recommandés ;</li>
+      <li>des automatisations mises en production ;</li>
+      <li>de l'exploitation finale des résultats obtenus.</li>
     </ul>
-    <p>La société ne saurait être tenue responsable :</p>
-    <ul>
-      <li>des pertes d'exploitation,</li>
-      <li>pertes financières,</li>
-      <li>pertes de données,</li>
-      <li>erreurs générées par des outils tiers,</li>
-      <li>interruptions de services externes,</li>
-      <li>dommages indirects liés à l'utilisation des solutions proposées.</li>
-    </ul>
+    <p>EXEC'IA ne saurait être tenue responsable des erreurs, interruptions ou dysfonctionnements imputables à des services, plateformes ou outils tiers.</p>
 
     <hr class="ml-divider">
 
     <!-- Protection des données -->
     <h2>Protection des données</h2>
-    <p>Les données collectées via les formulaires de contact sont utilisées uniquement dans le cadre des échanges commerciaux et professionnels.</p>
-    <p>Aucune donnée personnelle n'est vendue ou cédée à des tiers.</p>
-    <p>Conformément au RGPD, vous pouvez exercer vos droits d'accès, de rectification ou de suppression en contactant :</p>
-    <p><a href="mailto:valerie@execia.ai">valerie@execia.ai</a></p>
+    <p>Les données collectées via les formulaires présents sur ce site sont utilisées exclusivement dans le cadre des échanges professionnels, des demandes de contact, des prises de rendez-vous et de l'envoi des ressources sollicitées par l'utilisateur.</p>
+    <p>Aucune donnée personnelle n'est vendue, louée ou cédée à des tiers.</p>
+    <p>Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez d'un droit d'accès, de rectification, d'opposition ou de suppression des données vous concernant.</p>
+    <p>Pour exercer ces droits, vous pouvez contacter :</p>
+    <p><a href="mailto:valerie@exec-ia.ai">valerie@exec-ia.ai</a></p>
 
     <hr class="ml-divider">
 
-    <!-- Cookies -->
-    <h2>Cookies</h2>
-    <p>Le site peut utiliser des cookies ou outils de mesure d'audience afin d'améliorer l'expérience utilisateur et analyser la fréquentation du site.</p>
-
-    <hr class="ml-divider">
-
-    <!-- Liens externes -->
-    <h2>Liens externes</h2>
-    <p>Le site peut contenir des liens vers des sites tiers. La société ne peut être tenue responsable du contenu ou du fonctionnement de ces sites externes.</p>
-
-    <hr class="ml-divider">
-
-    <!-- Droit applicable -->
-    <h2>Droit applicable</h2>
-    <p>Les présentes mentions légales sont soumises au droit français.</p>
-    <p>Tout litige relatif à l'utilisation du site relève de la compétence des juridictions françaises.</p>
-
-    <hr class="ml-divider">
-
-    <p style="font-size:.88rem; color: var(--grey-warm); margin-top: 20px;">Dernière mise à jour : mai 2026</p>
+    <p style="font-size:.88rem; color: var(--grey-warm); margin-top: 20px;">Dernière mise à jour : juin 2026</p>
   </main>
 
   <footer>
     <p class="footer-brand">EXEC'IA</p>
     <p class="footer-tag" style="color:var(--terracotta);font-size:1.65rem;">Plus d'impact. Moins d'effort. Grâce à l'IA.</p>
-    <p class="footer-copy" style="font-size:1.1rem;">© 2026 Valérie Mailland · EXEC'IA — Tous droits réservés · <a href="mentions-legales.html" style="color:inherit;text-decoration:none;opacity:.7;">Mentions légales</a></p>
+    <p class="footer-copy" style="font-size:1.1rem;">© 2026 Valérie Mailland · EXEC'IA — Tous droits réservés</p>
   </footer>
 
 </body>

@@ -4,6 +4,20 @@ const onScroll = () => nav.classList.toggle('scrolled', scrollY > 56);
 window.addEventListener('scroll', onScroll, { passive: true });
 onScroll();
 
+/* ── Smooth anchor scrolling (JS only — no CSS scroll-behavior) ── */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', function(e) {
+    const id = this.getAttribute('href').slice(1);
+    if (!id) return;
+    const target = document.getElementById(id);
+    if (!target) return;
+    e.preventDefault();
+    const navH = document.getElementById('nav')?.offsetHeight || 72;
+    const top = target.getBoundingClientRect().top + window.scrollY - navH;
+    window.scrollTo({ top, behavior: 'smooth' });
+  });
+});
+
 /* ── Mobile menu ── */
 const burger = document.querySelector('.nav-burger');
 const links  = document.querySelector('.nav-links');
@@ -347,8 +361,11 @@ function removeCheckerboard(img) {
   const canvas = document.createElement('canvas');
   canvas.width  = img.naturalWidth;
   canvas.height = img.naturalHeight;
-  canvas.style.cssText = img.style.cssText;
   canvas.className = img.className;
+  canvas.style.cssText = img.style.cssText;
+  canvas.style.width  = img.offsetWidth  + 'px';
+  canvas.style.height = img.offsetHeight + 'px';
+  canvas.style.display = 'block';
   const ctx = canvas.getContext('2d');
   ctx.drawImage(img, 0, 0);
   const data = ctx.getImageData(0, 0, canvas.width, canvas.height);
