@@ -27,7 +27,7 @@ links?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => link
 /* ── Scroll reveal ── */
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }});
-}, { threshold: 0.12 });
+}, { threshold: 0.05 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
 /* ── Language bar animation ── */
