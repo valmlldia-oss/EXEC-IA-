@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""EXEC'IA — Les 5 Priorités IA des Dirigeants · 4 pages"""
+"""EXEC'IA — Les 5 Décisions IA des Dirigeants · 7 pages"""
 
 from reportlab.pdfgen import canvas as pdfcanvas
 from reportlab.lib.pagesizes import A4
@@ -21,7 +21,6 @@ WHITE      = HexColor('#FCFCFA')
 GREY       = HexColor('#9A8E8A')
 TEXT       = HexColor('#3D2030')
 ROSE_MIN   = HexColor('#D9C9C3')
-BORDER_BTN = HexColor('#7A5060')
 
 M  = 18*mm
 CW = W - 2*M
@@ -57,7 +56,8 @@ IM  = 'IM'   if 'IM'   in _r else 'Helvetica'
 ISB = 'ISB'  if 'ISB'  in _r else 'Helvetica-Bold'
 
 def wrap(c, txt, font, size, mw):
-    words = txt.split(); lines = []; cur = []
+    words = txt.split()
+    lines = []; cur = []
     for w in words:
         if c.stringWidth(' '.join(cur + [w]), font, size) <= mw:
             cur.append(w)
@@ -76,289 +76,392 @@ def draw_text(c, x, y, txt, font, size, col, mw, lead):
 def text_h(c, txt, font, size, mw, lead):
     return len(wrap(c, txt, font, size, mw)) * lead
 
-# ── BANDEAU BAS — identique sur toutes les pages ─────────────────────
-BAND_B = 32*mm
+BAND_B = 28*mm
 
 def draw_band(c):
-    c.setFillColor(PLUM); c.rect(0, 0, W, BAND_B, fill=1, stroke=0)
-    # EXEC'IA — taille augmentée, bien centré verticalement dans le bandeau
-    ew2   = c.stringWidth("EXEC'", TF, 26)
-    lbl_x = W/2 - (ew2 + c.stringWidth("IA", TF, 26)) / 2
-    c.setFont(TF, 26); c.setFillColor(HexColor('#FAF6F2'))
-    c.drawString(lbl_x, 20*mm, "EXEC'")
-    c.setFillColor(TERRACOTTA); c.drawString(lbl_x + ew2, 20*mm, "IA")
-    # CONSULTING avec letter-spacing
-    c.setFont(IR, 7); c.setFillColor(HexColor('#D9C9C3'))
-    c._charSpace = 3
-    c.drawCentredString(W/2, 13*mm, "CONSULTING")
-    c._charSpace = 0
-    # Copyright
-    c.setFont(IR, 6.5); c.setFillColor(HexColor('#B8B1AA'))
-    c.drawCentredString(W/2, 5.5*mm,
-        "valerie@exec-ia.ai  ·  © 2026 Valérie Mailland  ·  EXEC'IA  ·  Tous droits réservés")
+    c.setFillColor(PLUM)
+    c.rect(0, 0, W, BAND_B, fill=1, stroke=0)
+    ew = c.stringWidth("EXEC'", TF, 20)
+    lx = W/2 - (ew + c.stringWidth("IA", TF, 20)) / 2
+    c.setFont(TF, 20); c.setFillColor(HexColor('#FAF6F2'))
+    c.drawString(lx, 18.5*mm, "EXEC'")
+    c.setFillColor(TERRACOTTA)
+    c.drawString(lx + ew, 18.5*mm, "IA")
+    c.setFont(IR, 8); c.setFillColor(HexColor('#C8B8B2'))
+    c.drawCentredString(W/2, 10*mm, "contact@exec-ia.ai  ·  exec-ia.ai")
+    c.linkURL('https://exec-ia.ai', (0, 7*mm, W, 13*mm))
+    c.setFont(IR, 7); c.setFillColor(HexColor('#9A8E8A'))
+    c.drawCentredString(W/2, 4*mm, "© 2026 EXEC'IA Consulting  ·  Tous droits réservés")
 
-def header_logo(c):
-    hx = M; hy = H - 11*mm
-    ew = c.stringWidth("EXEC'", TF, 10)
-    c.setFont(TF, 10); c.setFillColor(PLUM)
-    c.drawString(hx, hy, "EXEC'")
-    c.setFillColor(TERRACOTTA); c.drawString(hx + ew, hy, "IA")
-
-BORDER_CARD = HexColor('#7A5060')   # prune bordeaux rosé
-
-def card(c, x, y_top, w, h, bg):
-    """Carte style pillar site : fond clair, border-left verticale prune bordeaux rosé."""
-    R = 4*mm
-    c.setFillColor(bg)
-    c.roundRect(x, y_top - h, w, h, R, fill=1, stroke=0)
-    c.setStrokeColor(BORDER_CARD); c.setLineWidth(2)
-    c.line(x, y_top - R, x, y_top - h + R)
-    c.setLineWidth(1)
-
-EYE_COL = HexColor('#C8616480')  # terracotta opacity .85 simulé → légèrement atténué
-
-def eyebrow_label(c, x, y, txt):
-    """Strictement identique à .eyebrow du site : IR Regular 10pt, charSpace .2em, #C75F62 op.85"""
-    c.setFont(IR, 10); c.setFillColor(TERRACOTTA)
-    c._charSpace = 2.0   # 0.2em × 10pt
+def eyebrow(c, x, y, txt, size=12):
+    c.setFont(IR, size); c.setFillColor(TERRACOTTA)
+    c._charSpace = 1.8
     c.drawString(x, y, txt.upper())
     c._charSpace = 0
+    return size + 3
 
-def draw_p(c, x, y_top, p, mw=None):
-    if mw is None: mw = CW
+def thin_line(c, x, y, w):
+    c.setStrokeColor(ROSE_MIN); c.setLineWidth(0.5)
+    c.line(x, y, x + w, y)
+    c.setLineWidth(1)
 
-    # ── Tailles généreuses pour remplir la page ───────────────────────
-    NBODY = 12.5   # corps constat
-    NL    = 18.5   # interligne constat
-    QBODY = 12.5   # corps questions
-    QL    = 18.5   # interligne questions
-    VL    = 18.0   # interligne vigilance
-    IPAD  = 11*mm  # padding box (site : 36px)
-    NW    = 8*mm   # col numéro
+def left_bar(c, x, y_top, h, col=None):
+    col = col or TERRACOTTA
+    c.setStrokeColor(col); c.setLineWidth(0.6)
+    c.line(x, y_top, x, y_top - h)
+    c.setLineWidth(1)
 
-    y = y_top
-
-    # Numéro grand
-    c.setFont(TF, 44); c.setFillColor(TERRACOTTA)
-    c.drawString(x, y, f"0{p['num']}")
-    y -= 15*mm
-
-    # Titre
-    c.setFont(CSB, 20); c.setFillColor(PLUM_DARK)
-    for ln in wrap(c, p['title'], CSB, 20, mw):
-        c.drawString(x, y, ln); y -= 27
-    y -= 12*mm
-
-    # CONSTAT
-    eyebrow_label(c, x, y, "Constat"); y -= 7*mm
-    y = draw_text(c, x, y, p['constat'], CR, NBODY, TEXT, mw, NL); y -= 9*mm
-
-    # ── BOX QUESTIONS ─────────────────────────────────────────────────
-    QW     = mw - 2*IPAD - NW
-    lbl_h  = 8*mm
-    rows_h = sum(len(wrap(c, q, CI, QBODY, QW)) * QL + 4*mm
-                 for q in p['questions']) - 4*mm
-    q_h    = IPAD + lbl_h + 5*mm + rows_h + IPAD
-
-    card(c, x, y, mw, q_h, WHITE)
-
-    iy = y - IPAD
-    eyebrow_label(c, x + IPAD, iy, "3 questions pour le dirigeant"); iy -= lbl_h + 5*mm
-
-    for i, q in enumerate(p['questions'], 1):
-        c.setFont(CR, 13); c.setFillColor(GREY)
-        c.drawString(x + IPAD, iy, str(i))
-        iy = draw_text(c, x + IPAD + NW, iy, q, CI, QBODY, TEXT, QW, QL)
-        if i < len(p['questions']): iy -= 4*mm
-
-    y -= (q_h + 5*mm)
-
-    # ── BOX VIGILANCE ─────────────────────────────────────────────────
-    VW    = mw - 2*IPAD
-    v_lbl = 8*mm
-    v_h   = IPAD + v_lbl + text_h(c, p['vigilance'], CI, QBODY, VW, VL) + IPAD
-
-    card(c, x, y, mw, v_h, IVORY_TINT)
-
-    vy = y - IPAD
-    eyebrow_label(c, x + IPAD, vy, "Point de vigilance"); vy -= v_lbl
-    draw_text(c, x + IPAD, vy, p['vigilance'], CI, QBODY, PLUM, VW, VL)
-
-# ── DATA ─────────────────────────────────────────────────────────────
+# ── DATA ──────────────────────────────────────────────────────────────
 P = [
-  dict(num=1,
-    title="Savoir où l'IA vous rapporte de l'argent — avant d'en dépenser davantage",
-    constat="La plupart des budgets IA 2024-2025 ont été alloués sans critère de retour sur investissement : des pilotes qui ne passent jamais en production, des équipes mobilisées sur des projets que personne ne sait évaluer. La question que peu de dirigeants peuvent encore éviter : où l'IA vous rapporte-t-elle concrètement de l'argent ?",
-    questions=[
-      "Sur vos trois derniers projets IA, quel gain réel pouvez-vous chiffrer — et qui peut le prouver ?",
-      "Quels processus génèrent le plus de valeur dans votre modèle — et lesquels sont encore entièrement manuels ?",
-      "Quel projet IA arrêteriez-vous demain si vous deviez justifier chaque euro investi devant votre conseil ?",
+  dict(
+    num=1,
+    pre="La décision d'investir",
+    title_lines=["Vous savez que certains projets ne valent rien.", "Vous les financez encore."],
+    constat=[
+      "Vos budgets IA n'ont pas été arbitrés. Ils ont été absorbés. Sans critère d'arrêt, sans droit de veto, sans responsable du résultat. Les projets continuent parce qu'arrêter obligerait à reconnaître qu'on s'est trompé — et dans une organisation, personne n'a officiellement ce mandat.",
+      "Ce n'est pas un problème de gestion. C'est un problème de décision non prise. Et sans arbitrage clair, les mauvais projets survivent toujours aux bons.",
     ],
-    vigilance="Un portefeuille de pilotes sans critère de rentabilité n'est pas une stratégie. C'est un budget R&D déguisé — sans les résultats. Et sans arbitrage, les mauvais projets survivent aux bons."),
-
-  dict(num=2,
-    title="Récupérer 20 % du temps de vos cadres — et décider quoi en faire",
-    constat="Vos cadres passent 30 à 40 % de leur temps sur des tâches que l'IA peut traiter en secondes : synthèses, reporting, réponses standard, recherche documentaire. Ce temps existe dans vos charges. Il n'est pas récupéré. Chaque semaine sans décision sur ce sujet est une semaine de surcoût que vos concurrents n'ont peut-être plus.",
     questions=[
-      "Quelles tâches à haute valeur de temps occupent vos meilleurs éléments chaque semaine — sans créer de valeur directe ?",
-      "Si vos équipes gagnaient 20 % de capacité, sur quelles priorités stratégiques les redéployiez-vous en premier ?",
-      "Avez-vous mesuré l'écart entre ce que vos cadres font et ce qu'ils devraient faire ?",
+      "Qui, dans votre organisation, a formellement le mandat d'arrêter un projet IA — et ce mandat a-t-il déjà été exercé ?",
+      "Quels processus créent le plus de valeur dans votre modèle — et lesquels n'ont encore été touchés par rien ?",
+      "Quel projet seriez-vous incapable de défendre devant votre conseil dans 30 jours — et que faites-vous de cette réponse ?",
     ],
-    vigilance="Libérer du temps sans décider comment l'utiliser génère de l'anxiété, pas de la performance. Le gain de productivité ne crée de valeur que s'il est fléché — c'est une décision managériale, pas une conséquence automatique."),
-
-  dict(num=3,
-    title="La connaissance qui quitte votre entreprise chaque vendredi soir",
-    constat="Votre avantage concurrentiel repose sur des experts. Quand ils partent, ils emportent ce que votre organisation a mis des années à apprendre. Ce savoir n'est pas documenté. Il n'est pas transmissible. Il ne vaut rien sur un bilan — et pourtant c'est souvent lui qui justifie vos marges.",
+    conviction="Un portefeuille sans critère d'arrêt n'est pas une ambition. C'est une accumulation. Et dans votre organisation, personne ne paie le prix de la mauvaise décision aussi longtemps que le dirigeant qui ne l'a pas prise.",
+  ),
+  dict(
+    num=2,
+    pre="La décision de prioriser",
+    title_lines=["Vos meilleurs cadres font ce que l'IA pourrait faire.", "Et vous le savez."],
+    constat=[
+      "Vos cadres passent entre 30 et 40 % de leur temps sur des tâches sans valeur de décision : reporting, consolidation de données, réunions sans suite, emails sans enjeu. Ce temps existe dans vos charges. Il n'existe pas dans votre stratégie.",
+      "Libérer ce temps ne crée pas de valeur. Décider formellement où le redéployer — avant de toucher aux outils — c'est ce qui crée de la valeur. Dans cet ordre seulement. La productivité sans direction ne transforme pas une organisation. Elle l'accélère dans la mauvaise direction.",
+    ],
     questions=[
-      "Qu'est-ce que votre entreprise perdrait concrètement si votre meilleur expert partait dans 30 jours ?",
-      "Quelle décision critique repose aujourd'hui sur la mémoire d'une seule personne ?",
-      "En combien de temps un collaborateur récent peut-il accéder aux bonnes pratiques de votre organisation ?",
+      "Sur quelles décisions stratégiques vos meilleurs cadres devraient-ils passer 20 % de temps supplémentaire — et pourquoi ce n'est pas encore le cas ?",
+      "Avez-vous formellement décidé où sera investi le temps libéré par l'IA — ou laissez-vous chaque manager répondre seul à cette question ?",
+      "Si vous supprimiez demain les trois tâches les plus chronophages de vos équipes, qui en bénéficierait — et qui résisterait ?",
     ],
-    vigilance="Un assistant IA interne n'est utile que si la connaissance qu'il exploite est structurée et à jour. Investir dans la technologie avant la gouvernance documentaire, c'est automatiser le désordre."),
-
-  dict(num=4,
-    title="Un client qui attend une réponse, c'est un concurrent qui avance",
-    constat="En 2026, vos concurrents répondent en temps réel, personnalisent à l'échelle et détectent les signaux de désengagement avant vous. Ces capacités ne coûtent plus des millions. La question n'est plus 'si' — c'est 'combien de clients avez-vous perdus pendant que vous réfléchissiez'.",
+    conviction="Libérer du temps sans décider comment l'utiliser produit de l'anxiété, pas de la performance. Le gain de productivité n'est une décision managériale que si quelqu'un a décidé où va le gain.",
+  ),
+  dict(
+    num=3,
+    pre="La décision de transmettre",
+    title_lines=["Un expert va partir.", "Vous n'avez pas décidé quoi faire avant."],
+    constat=[
+      "Votre avantage concurrentiel repose sur deux ou trois personnes. Quand elles partent, elles n'emportent pas seulement leur savoir. Elles emportent le raisonnement qui a produit vos décisions les plus importantes — les arbitrages, les compromis, les angles morts que personne d'autre ne connaît.",
+      "Ce raisonnement ne figure dans aucun processus. Il ne se reconstruit pas avec un outil. Et aucune IA ne peut exploiter ce qui n'a jamais été capturé.",
+    ],
     questions=[
-      "Quel est votre taux de résolution client au premier contact — et quel est le coût financier de chaque échec ?",
-      "Combien de temps faut-il à un conseiller pour avoir une vue complète d'un client avant chaque interaction ?",
-      "Avez-vous identifié les trois moments où un client décide silencieusement de partir ?",
+      "Quelle décision critique de votre organisation repose aujourd'hui sur la mémoire d'une seule personne — et quel est votre plan concret si elle part dans 90 jours ?",
+      "Si cette personne partait dans 30 jours, quelle décision ne pourrait plus être prise — et combien de temps durerait ce vide ?",
+      "Avez-vous formellement désigné un responsable de la transmission du savoir stratégique — avec un budget, un périmètre, et une date ?",
     ],
-    vigilance="L'IA n'améliore pas une relation client défaillante — elle l'accélère. Sur un parcours moyen, elle produit de l'insatisfaction plus vite et à plus grande échelle. L'audit précède toujours le déploiement."),
-
-  dict(num=5,
-    title="Vous avez probablement déjà perdu le contrôle de vos coûts IA",
-    constat="En 18 mois, la plupart des organisations ont construit une dépendance à deux ou trois fournisseurs IA sans contrat cadre, sans plan de continuité et sans cartographie des risques. Les tarifs augmentent. Les conditions changent. Le Règlement IA européen est en vigueur. Ce n'est plus un sujet technique — c'est votre responsabilité personnelle de dirigeant.",
+    conviction="Investir dans un outil de gestion des connaissances sans avoir d'abord défini ce qui mérite d'être conservé, c'est automatiser le désordre. La gouvernance du savoir précède toujours la technologie qui est censée le transmettre.",
+  ),
+  dict(
+    num=4,
+    pre="La décision de fidéliser",
+    title_lines=["Votre client a décidé de partir", "avant votre prochain CODIR."],
+    constat=[
+      "Un client ne part pas soudainement. Il décide de partir — plusieurs semaines avant que la rupture soit visible. Cette décision se prend dans trois moments précis de votre parcours. Ces moments ne sont presque jamais identifiés. Ils ne sont jamais assignés à un responsable.",
+      "Vos concurrents qui déploient l'IA sur la relation client ne gagnent pas en vitesse. Ils gagnent en mémoire : chaque interaction leur apprend quelque chose sur vos clients que vous n'avez pas encore formalisé. L'écart n'est pas technologique. Il est décisionnel.",
+    ],
     questions=[
-      "Si votre principal fournisseur IA augmentait ses tarifs de 40 % demain, quels processus métier seraient bloqués ?",
-      "Avez-vous une cartographie des décisions où l'IA intervient — avec leur niveau de risque réglementaire ?",
-      "Qui, dans votre organisation, est responsable de la conformité au Règlement IA européen — et depuis quand ?",
+      "Avez-vous identifié les trois moments où un client décide silencieusement de rester ou de partir — et qui dans votre organisation en est formellement responsable ?",
+      "Combien de vos processus client ont été conçus pour protéger votre organisation — et combien pour créer une raison de rester ?",
+      "Si votre principal concurrent déployait une IA sur votre meilleur segment client demain, combien de temps vous faudrait-il pour le détecter — et quelle décision auriez-vous déjà perdu ?",
     ],
-    vigilance="La gouvernance IA n'est pas une contrainte réglementaire à gérer après coup. C'est la condition pour que votre stratégie reste souveraine. Et c'est votre signature, pas celle de votre DSI."),
+    conviction="L'IA n'améliore pas une relation client défaillante — elle l'accélère. Sur un parcours moyen, elle produit de l'insatisfaction plus vite et à plus grande échelle. L'audit du parcours précède toujours le déploiement de l'outil.",
+  ),
+  dict(
+    num=5,
+    pre="La décision de gouverner",
+    title_lines=["Vos outils IA ont plus de pouvoir", "sur vos processus que vous."],
+    constat=[
+      "En dix-huit mois, la plupart des organisations ont construit une dépendance à deux ou trois fournisseurs IA — sans jamais avoir formellement décidé jusqu'où elles leur faisaient confiance. Les tarifs augmentent. Les conditions changent. Le Règlement IA européen est en vigueur.",
+      "Ce n'est pas un sujet de votre DSI. C'est votre responsabilité personnelle de dirigeant — sur les systèmes qui prennent ou préparent des décisions dans votre organisation.",
+    ],
+    questions=[
+      "Avez-vous formellement décidé quelles décisions de votre organisation ne peuvent pas être déléguées à un système automatisé — et cette liste est-elle connue de votre CODIR ?",
+      "Si votre principal fournisseur IA augmentait ses tarifs de 40 % demain, quels processus métier seraient bloqués — et qui a le mandat de décider de la suite ?",
+      "Qui, dans votre organisation, est responsable de la conformité au Règlement IA européen — depuis quand — et avec quels moyens ?",
+    ],
+    conviction="La gouvernance IA n'est pas une contrainte réglementaire à gérer après coup. C'est la condition pour que votre stratégie reste la vôtre. Et c'est votre signature — pas celle de votre DSI.",
+  ),
 ]
 
 # ════════════════════════════════════════════════════════════════════
 c = pdfcanvas.Canvas(OUT, pagesize=A4)
 
-# ── COVER ────────────────────────────────────────────────────────────
-c.setFillColor(IVORY); c.rect(0, 0, W, H, fill=1, stroke=0)
+# ── PAGE 1 : COVER ───────────────────────────────────────────────────
+c.setFillColor(IVORY)
+c.rect(0, 0, W, H, fill=1, stroke=0)
 
-c.setFont(TF, 118); c.setFillColor(PLUM)
-c.drawCentredString(W/2, H - 58*mm, "5")
+TITLE_SIZE = 34
+title_lines = ["L'IA N'A PAS PRIS LE POUVOIR.", "ELLE A OCCUPÉ LE VIDE."]
+title_lead  = TITLE_SIZE * 1.25
 
-c.setFont(TF, 42); c.setFillColor(TERRACOTTA)
-c.drawCentredString(W/2, H - 91*mm, "PRIORITÉS IA")
+ty = H - 72*mm
+for ln in title_lines:
+    c.setFont(TF, TITLE_SIZE); c.setFillColor(PLUM_DARK)
+    c.drawCentredString(W/2, ty, ln)
+    ty -= title_lead
 
-c.setFont(CI, 21); c.setFillColor(PLUM)
-c.drawCentredString(W/2, H - 104*mm, "des Dirigeants")
+ty -= 10*mm
 
-c.setFont(ISB, 9.5); c.setFillColor(TERRACOTTA)
-c.drawCentredString(W/2, H - 114*mm, "1 MINUTE PAR PRIORITÉ")
+# Sous-titre simplifié
+c.setFont(CI, 16); c.setFillColor(PLUM)
+c.drawCentredString(W/2, ty, "5 priorités  ·  1 minute par priorité")
+ty -= 22*mm
 
-# ── BOUTONS pill maigres, bloc centré ────────────────────────────────
-BTN_H  = 10*mm
-BTN_R  = BTN_H / 2
-H_PAD  = 6*mm
-SEP_W  = 4*mm
-N_BTN  = 5
-BTN_GAP = 5*mm
+# ── NAVIGATION : 5 boutons ───────────────────────────────────────────
+BTN_H   = 13*mm
+BTN_R   = BTN_H / 2
+BTN_GAP = 4.5*mm
+NUM_SZ  = 14
+TXT_SZ  = 11
+SEP_OFF = 7*mm
 
-BLOC_H   = N_BTN * BTN_H + (N_BTN - 1) * BTN_GAP
-ZONE_MID = (BAND_B + (H - 114*mm)) / 2
-ZONE_TOP = ZONE_MID + BLOC_H / 2
-
-btn_titles = [
-    ("01", "Savoir où l'IA vous rapporte de l'argent",              "p1"),
-    ("02", "Récupérer 20 % du temps de vos cadres",                 "p2"),
-    ("03", "La connaissance qui quitte votre entreprise",           "p3"),
-    ("04", "Un client qui attend, c'est un concurrent qui avance",  "p4"),
-    ("05", "Contrôler vos coûts IA avant qu'ils vous contrôlent",   "p5"),
+nav_items = [
+    ("01", "Savoir où l'IA vous rapporte de l'argent",       "p1"),
+    ("02", "Récupérer 20 % du temps de vos cadres",          "p2"),
+    ("03", "La connaissance qui quitte votre entreprise",     "p3"),
+    ("04", "Un client qui attend, c'est un concurrent qui avance", "p4"),
+    ("05", "Vous avez probablement déjà perdu le contrôle",  "p5"),
 ]
 
-for i, (num, title, bm) in enumerate(btn_titles):
-    by_top = ZONE_TOP - i * (BTN_H + BTN_GAP)
-    by_bot = by_top - BTN_H
-    nw     = c.stringWidth(num,   TF,  18)
-    tw     = c.stringWidth(title, IR,  9.5)
-    BTN_W  = min(H_PAD + nw + SEP_W + tw + H_PAD, CW)
+for i, (num, label, bm) in enumerate(nav_items):
+    nw     = c.stringWidth(num, TF, NUM_SZ)
+    tw     = c.stringWidth(label, IM, TXT_SZ)
+    BTN_W  = SEP_OFF + nw + SEP_OFF + tw + SEP_OFF
+    BTN_W  = max(BTN_W, 70*mm)
     bx     = (W - BTN_W) / 2
-    pcy    = by_bot + BTN_H / 2
+    by_top = ty - i * (BTN_H + BTN_GAP)
+    by_bot = by_top - BTN_H
+    mid_y  = by_bot + BTN_H / 2 - 4
 
-    c.setFillColor(IVORY_CARD)
+    c.setFillColor(WHITE)
     c.roundRect(bx, by_bot, BTN_W, BTN_H, BTN_R, fill=1, stroke=0)
-    c.setStrokeColor(BORDER_BTN); c.setLineWidth(0.5)
+    c.setStrokeColor(PLUM); c.setLineWidth(0.7)
     c.roundRect(bx, by_bot, BTN_W, BTN_H, BTN_R, fill=0, stroke=1)
     c.setLineWidth(1)
 
-    c.setFont(TF, 18); c.setFillColor(TERRACOTTA)
-    c.drawString(bx + H_PAD, pcy - 6, num)
+    # Numéro en terracotta
+    c.setFont(TF, NUM_SZ); c.setFillColor(TERRACOTTA)
+    c.drawString(bx + SEP_OFF, mid_y, num)
 
-    sep_x = bx + H_PAD + nw + SEP_W / 2
+    sep_x = bx + SEP_OFF + nw + SEP_OFF / 2
     c.setStrokeColor(ROSE_MIN); c.setLineWidth(0.4)
-    c.line(sep_x, by_bot + 2*mm, sep_x, by_top - 2*mm)
+    c.line(sep_x, by_bot + 3*mm, sep_x, by_top - 3*mm)
     c.setLineWidth(1)
 
-    c.setFont(IR, 9.5); c.setFillColor(PLUM_DARK)
-    c.drawString(bx + H_PAD + nw + SEP_W, pcy - 3.5, title)
+    c.setFont(IM, TXT_SZ); c.setFillColor(PLUM_DARK)
+    c.drawString(sep_x + SEP_OFF / 2, mid_y, label)
 
     c.linkAbsolute('', bm, Rect=(bx, by_bot, bx + BTN_W, by_top))
 
 draw_band(c)
 c.showPage()
 
-# ── PAGES PRIORITÉS — 1 par page (cover + 5 + 1 CTA = 7 pages) ──────
-P_TOP = H - 20*mm
+# ── PAGES 01–05 ──────────────────────────────────────────────────────
+BODY_SZ = 11
+BODY_LD = 16
+Q_SZ    = 11
+Q_LD    = 16
+IPAD    = 8*mm
+NW      = 6*mm
+
+def draw_priority(c, p):
+    y = H - 14*mm
+
+    # Pré-titre
+    eyebrow(c, M, y, p['pre'], size=12)
+    y -= 9*mm
+
+    # Numéro section
+    c.setFont(TF, 34); c.setFillColor(PLUM)
+    c.drawString(M, y, f"0{p['num']}")
+    y -= 13*mm
+
+    # Ligne fine sous numéro
+    thin_line(c, M, y + 2*mm, CW)
+    y -= 5*mm
+
+    # Titre
+    for ln in p['title_lines']:
+        c.setFont(CSB, 19); c.setFillColor(PLUM_DARK)
+        c.drawString(M, y, ln)
+        y -= 22
+
+    y -= 6*mm
+
+    # CONSTAT
+    eyebrow(c, M, y, "Constat", size=9)
+    y -= 5*mm
+    for para in p['constat']:
+        y = draw_text(c, M, y, para, CR, BODY_SZ, TEXT, CW, BODY_LD)
+        y -= 4*mm
+    y -= 2*mm
+
+    # BOX QUESTIONS
+    QW   = CW - IPAD - NW - IPAD
+    rows = []
+    for q in p['questions']:
+        qlines = wrap(c, q, CI, Q_SZ, QW)
+        rows.append(qlines)
+    rows_h = sum(len(r) * Q_LD for r in rows) + (len(rows) - 1) * 4*mm
+    q_h = IPAD + 6*mm + 3*mm + rows_h + IPAD
+
+    c.setFillColor(WHITE)
+    c.rect(M, y - q_h, CW, q_h, fill=1, stroke=0)
+    left_bar(c, M, y, q_h, TERRACOTTA)
+
+    iy = y - IPAD
+    eyebrow(c, M + IPAD, iy, "3 questions pour le dirigeant", size=9)
+    iy -= 9*mm
+
+    for i, (q, qlines) in enumerate(zip(p['questions'], rows)):
+        c.setFont(IR, 9); c.setFillColor(PLUM)
+        c.drawString(M + IPAD, iy, str(i + 1))
+        qy = iy
+        for ln in qlines:
+            c.setFont(CI, Q_SZ); c.setFillColor(TEXT)
+            c.drawString(M + IPAD + NW, qy, ln)
+            qy -= Q_LD
+        iy = qy
+        if i < len(p['questions']) - 1:
+            iy -= 4*mm
+
+    y -= (q_h + 4*mm)
+
+    # BOX CONVICTION
+    VW  = CW - IPAD - IPAD
+    v_h = IPAD + 6*mm + 3*mm + text_h(c, p['conviction'], CI, Q_SZ, VW, Q_LD) + IPAD
+
+    c.setFillColor(IVORY_TINT)
+    c.rect(M, y - v_h, CW, v_h, fill=1, stroke=0)
+    left_bar(c, M, y, v_h, PLUM)
+
+    vy = y - IPAD
+    eyebrow(c, M + IPAD, vy, "La conviction Exec'ia", size=9)
+    vy -= 9*mm
+    draw_text(c, M + IPAD, vy, p['conviction'], CI, Q_SZ, PLUM_DARK, VW, Q_LD)
+
+    # Numéro de page
+    c.setFont(IR, 7); c.setFillColor(GREY)
+    c.drawRightString(W - M, BAND_B + 6*mm, str(p['num'] + 1))
 
 for p in P:
     c.bookmarkPage(f'p{p["num"]}', fit='FitH', top=H)
-    c.setFillColor(IVORY); c.rect(0, 0, W, H, fill=1, stroke=0)
-    c.setFont(IR, 7.5); c.setFillColor(GREY)
-    c.drawRightString(W - M, H - 11*mm, str(p['num']))
-    draw_p(c, M, P_TOP, p)
+    c.setFillColor(IVORY)
+    c.rect(0, 0, W, H, fill=1, stroke=0)
+    draw_priority(c, p)
     draw_band(c)
     c.showPage()
 
-# ── PAGE CTA ─────────────────────────────────────────────────────────
-c.setFillColor(IVORY); c.rect(0, 0, W, H, fill=1, stroke=0)
-cy = H - 65*mm
+# ── PAGE 7 : APPROCHE + CTA ──────────────────────────────────────────
+c.setFillColor(IVORY)
+c.rect(0, 0, W, H, fill=1, stroke=0)
 
-c.setFont(CR, 18); c.setFillColor(PLUM_DARK)
-c.drawCentredString(W/2, cy, "*     *     *"); cy -= 18*mm
+cy = H - 40*mm
 
-# Pré-titre identique aux autres pages
-eyebrow_label(c, M, cy, "L'APPROCHE EXEC'IA"); cy -= 13*mm
+# L'APPROCHE EXEC'IA
+c.setFont(IR, 13); c.setFillColor(TERRACOTTA)
+c._charSpace = 1.8
+c.drawString(M, cy, "L'APPROCHE EXEC'IA")
+c._charSpace = 0
+cy -= 8*mm
 
-# Titre : une seule ligne, "décisions éclairées" en terracotta
-c.setFont(CSB, 26); c.setFillColor(PLUM_DARK)
-c.drawString(M, cy, "Des ")
-xd = M + c.stringWidth("Des ", CSB, 26)
-c.setFillColor(TERRACOTTA); c.drawString(xd, cy, "décisions éclairées.")
-cy -= 20*mm
+thin_line(c, M, cy + 2*mm, CW)
+cy -= 9*mm
 
-# Sous-titre offre
-c.setFont(CSB, 15); c.setFillColor(PLUM_DARK)
-c.drawString(M, cy, "Entretien préliminaire — offert"); cy -= 10*mm
+approach_paras = [
+    "Ce document ne parle pas d'intelligence artificielle.",
+    "Il parle de gouvernance.",
+    "Il parle de la capacité d'un dirigeant à rester l'auteur des décisions qui engagent son organisation.",
+    "Il parle de ce qui se passe quand personne, dans une direction générale, n'a formellement décidé où s'arrête la machine et où recommence le jugement humain.",
+]
+for para in approach_paras:
+    cy = draw_text(c, M, cy, para, CR, 11.5, TEXT, CW, 17)
+    cy -= 4*mm
 
-# Description exacte du site
-c.setFont(CR, 11); c.setFillColor(TEXT)
-c.drawString(M, cy, "30 minutes pour comprendre votre situation et évaluer ensemble —"); cy -= 15
-c.drawString(M, cy, "la façon dont je peux vous être utile."); cy -= 10*mm
+cy -= 2*mm
 
-# Réassurance exacte du site
-c.setFont(IR, 9); c.setFillColor(GREY)
-c.drawString(M, cy, "Sans engagement  ·  Confidentiel"); cy -= 13*mm
+approach_paras2 = [
+    "L'IA ne prend pas le pouvoir.",
+    "Elle occupe les espaces que la direction n'a pas encore revendiqués.",
+]
+for para in approach_paras2:
+    cy = draw_text(c, M, cy, para, CI, 13, PLUM_DARK, CW, 19)
+    cy -= 3*mm
+
+cy -= 2*mm
+
+approach_paras3 = [
+    "Ce que nous faisons chez EXEC'IA n'est pas de déployer des outils.",
+    "C'est d'aider les dirigeants à reprendre la main sur les cinq décisions de ce document — dans le bon ordre, avec la bonne méthode, avant que le coût de l'attente dépasse le coût de l'action.",
+    "Parce qu'une organisation dont la trajectoire est pilotée par ses fournisseurs, ses outils et ses experts isolés n'est plus tout à fait dirigée.",
+]
+for para in approach_paras3:
+    cy = draw_text(c, M, cy, para, CR, 11.5, TEXT, CW, 17)
+    cy -= 4*mm
+
+# Phrase finale
+c.setFont(CSB, 14); c.setFillColor(PLUM_DARK)
+c.drawString(M, cy, "Elle est administrée.")
+cy -= 18*mm
+
+# ── BLOC CTA dans un encadré ─────────────────────────────────────────
+btn_txt  = "Réserver mon entretien →"
+btn_w    = c.stringWidth(btn_txt, ISB, 11) + 18*mm
+btn_h    = 12*mm
+
+box_pad  = 10*mm
+box_h    = box_pad + 8*mm + 5*mm + 7*mm + 4*mm + btn_h + box_pad
+
+# Encadré
+c.setFillColor(WHITE)
+c.rect(M, cy - box_h, CW, box_h, fill=1, stroke=0)
+c.setStrokeColor(TERRACOTTA); c.setLineWidth(0.8)
+c.rect(M, cy - box_h, CW, box_h, fill=0, stroke=1)
+c.setLineWidth(1)
+left_bar(c, M, cy, box_h, TERRACOTTA)
+
+iy = cy - box_pad
+
+# "30 MINUTES · CONFIDENTIEL · SANS ENGAGEMENT"
+c.setFont(IR, 9); c.setFillColor(TERRACOTTA)
+c._charSpace = 1.5
+c.drawString(M + box_pad, iy, "30 MINUTES  ·  CONFIDENTIEL  ·  SANS ENGAGEMENT")
+c._charSpace = 0
+iy -= 8*mm
+
+# Titre de l'entretien
+c.setFont(TF, 20); c.setFillColor(PLUM_DARK)
+c.drawString(M + box_pad, iy, "Entretien préliminaire — offert")
+iy -= 9*mm
+
+# Description courte
+c.setFont(CR, 10.5); c.setFillColor(PLUM)
+c.drawString(M + box_pad, iy, "Identifier vos décisions prioritaires. Repartir avec une première orientation.")
+iy -= (4*mm + btn_h)
 
 # Bouton terracotta
-btn_txt = "Prendre rendez-vous"
-btn_w   = c.stringWidth(btn_txt, IM, 11) + 18*mm
-btn_h   = 11*mm
 c.setFillColor(TERRACOTTA)
-c.roundRect(M, cy - btn_h, btn_w, btn_h, btn_h/2, fill=1, stroke=0)
-c.setFont(IM, 11); c.setFillColor(HexColor('#FAF6F2'))
-c.drawString(M + 9*mm, cy - btn_h + 3.8*mm, btn_txt)
+c.roundRect(M + box_pad, iy, btn_w, btn_h, btn_h / 2, fill=1, stroke=0)
+c.setFont(ISB, 11); c.setFillColor(HexColor('#FAF6F2'))
+c.drawString(M + box_pad + 9*mm, iy + 3.8*mm, btn_txt)
+c.linkURL('mailto:contact@exec-ia.ai', (M + box_pad, iy, M + box_pad + btn_w, iy + btn_h))
+
+# Étoiles — juste avant la bande
+c.setFont(CR, 12); c.setFillColor(GREY)
+c.drawCentredString(W/2, BAND_B + 12*mm, "*     *     *")
+
+# Numéro de page
+c.setFont(IR, 7); c.setFillColor(GREY)
+c.drawRightString(W - M, BAND_B + 6*mm, "7")
 
 draw_band(c)
 c.showPage()
-
 c.save()
 print(f"✅ {OUT}")
