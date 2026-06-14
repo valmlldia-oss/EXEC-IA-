@@ -3,743 +3,909 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EXEC'IA · 5 Priorités pour les Dirigeants</title>
-  <meta name="description" content="5 décisions que chaque dirigeant doit reprendre en main avant que ses fournisseurs, ses outils ou ses experts isolés ne les prennent à sa place.">
+  <title>EXEC'IA · Valérie Mailland — Conseil stratégique en IA pour dirigeants</title>
+  <meta name="description" content="EXEC'IA accompagne les dirigeants dans leur transformation IA : priorisation des initiatives, automatisation intelligente et conseil stratégique. Cabinet premium. Paris.">
+  <meta name="keywords" content="consultant IA dirigeants, transformation IA entreprise, conseil intelligence artificielle, automatisation IA PME, formation IA executives, EXEC'IA, Valérie Mailland">
+  <meta name="author" content="Valérie Mailland — EXEC'IA">
+  <meta property="og:title" content="EXEC'IA · Conseil stratégique en IA pour dirigeants">
+  <meta property="og:description" content="Priorisez les bonnes initiatives IA. Évitez les investissements inutiles. Créez de la valeur rapidement avec l'IA.">
+  <meta property="og:url" content="https://valmlldia-oss.github.io/EXEC-IA-/">
+  <meta property="og:type" content="website">
   <meta name="robots" content="index, follow">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { font-size: 16px; scroll-behavior: smooth; }
-
-    :root {
-      --terracotta: #C75F62;
-      --taupe:      #6B625D;
-      --ivoire:     #F4EDE7;
-      --rose-pale:  #D9C9C3;
-      --gris-chaud: #B8B1AA;
-      --ivoire-clair: #FAF6F2;
-      --ivoire-tint:  #EDE3DD;
-    }
-
-    body {
-      background: var(--ivoire);
-      color: var(--taupe);
-      font-family: 'Raleway', sans-serif;
-      font-weight: 300;
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* ── HEADER ── */
-    header {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      background: var(--ivoire);
-      border-bottom: 1px solid var(--rose-pale);
-      height: 52px;
-      display: flex;
-      align-items: center;
-      padding: 0 56px;
-    }
-    .logo {
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 600;
-      font-size: 1.15rem;
-      letter-spacing: .06em;
-      color: var(--taupe);
-      text-decoration: none;
-    }
-    .logo span { color: var(--terracotta); }
-
-    .header-lang {
-      margin-left: auto;
-      display: flex;
-      gap: 20px;
-      font-size: .68rem;
-      letter-spacing: .14em;
-      font-weight: 400;
-    }
-    .header-lang a { color: var(--gris-chaud); text-decoration: none; }
-    .header-lang a:hover { color: var(--taupe); }
-    .header-lang .active { color: var(--taupe); font-weight: 500; }
-
-    /* ── HERO ── */
-    #hero {
-      padding-top: 52px;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding-left: 56px;
-      padding-right: 56px;
-      padding-bottom: 64px;
-    }
-
-    .hero-grand {
-      margin-top: 40px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      line-height: 1;
-    }
-
-    .hero-chiffre {
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 600;
-      font-size: clamp(5rem, 14vw, 9rem);
-      color: var(--terracotta);
-      line-height: .9;
-      letter-spacing: -.02em;
-    }
-
-    .hero-mot {
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 600;
-      font-size: clamp(1.8rem, 5vw, 3.2rem);
-      color: var(--taupe);
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      margin-top: 4px;
-    }
-
-    .hero-sous-mot {
-      font-family: 'Raleway', sans-serif;
-      font-size: clamp(.65rem, 1.5vw, .8rem);
-      font-weight: 400;
-      letter-spacing: .22em;
-      color: var(--gris-chaud);
-      text-transform: uppercase;
-      margin-top: 10px;
-    }
-
-    .hero-badge {
-      margin-top: 20px;
-      font-family: 'Raleway', sans-serif;
-      font-size: .8rem;
-      font-weight: 500;
-      letter-spacing: .16em;
-      color: var(--terracotta);
-      text-transform: uppercase;
-    }
-
-    /* Intro */
-    .hero-intro {
-      margin-top: 40px;
-      max-width: 540px;
-      text-align: left;
-    }
-
-    .hero-intro p {
-      font-family: 'Raleway', sans-serif;
-      font-size: .88rem;
-      font-weight: 300;
-      color: var(--taupe);
-      line-height: 1.8;
-      margin-bottom: 6px;
-    }
-
-    .hero-intro p.bold {
-      font-weight: 500;
-      margin-bottom: 4px;
-    }
-
-    .hero-intro p.question {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-size: 1rem;
-      color: var(--taupe);
-      margin-bottom: 2px;
-    }
-
-    .hero-invite {
-      margin-top: 20px;
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-size: 1.05rem;
-      color: var(--taupe);
-      text-align: center;
-    }
-
-    /* ── 5 BOUTONS ── */
-    .nav-priorites {
-      margin-top: 32px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      width: 100%;
-      max-width: 640px;
-    }
-
-    .btn-priorite {
-      display: flex;
-      align-items: stretch;
-      border: 1px solid var(--rose-pale);
-      background: var(--ivoire-clair);
-      text-decoration: none;
-      border-radius: 100px;
-      overflow: hidden;
-      transition: border-color .2s, background .15s;
-    }
-    .btn-priorite:hover {
-      border-color: var(--taupe);
-      background: var(--ivoire-tint);
-    }
-
-    .btn-num {
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 600;
-      font-size: .95rem;
-      color: var(--terracotta);
-      min-width: 54px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-right: 1px solid var(--rose-pale);
-      flex-shrink: 0;
-    }
-
-    .btn-label {
-      font-family: 'Raleway', sans-serif;
-      font-size: .78rem;
-      font-weight: 400;
-      color: var(--taupe);
-      letter-spacing: .04em;
-      padding: 13px 22px;
-      text-align: left;
-      display: flex;
-      align-items: center;
-    }
-
-    /* ── SÉPARATEUR ── */
-    .sep {
-      border: none;
-      border-top: 1px solid var(--rose-pale);
-      margin: 0;
-    }
-
-    /* ── SECTIONS PRIORITÉS ── */
-    .priorite {
-      max-width: 700px;
-      margin: 0 auto;
-      padding: 72px 56px;
-      border-top: 1px solid var(--rose-pale);
-    }
-
-    .p-num {
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 600;
-      font-size: 2.4rem;
-      color: var(--terracotta);
-      line-height: 1;
-      margin-bottom: 16px;
-    }
-
-    .p-titre {
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 600;
-      font-size: clamp(1.35rem, 2.8vw, 1.7rem);
-      color: var(--taupe);
-      line-height: 1.2;
-      letter-spacing: .01em;
-      margin-bottom: 32px;
-      text-transform: uppercase;
-    }
-
-    .p-sep {
-      width: 32px;
-      height: 1px;
-      background: var(--terracotta);
-      margin-bottom: 28px;
-    }
-
-    .p-corps p {
-      font-family: 'Raleway', sans-serif;
-      font-size: .88rem;
-      font-weight: 300;
-      color: var(--taupe);
-      line-height: 1.85;
-      margin-bottom: 6px;
-    }
-
-    /* 3 questions */
-    .p-questions {
-      margin-top: 36px;
-      border-left: 2px solid var(--terracotta);
-      padding-left: 24px;
-    }
-
-    .p-questions-titre {
-      font-family: 'Raleway', sans-serif;
-      font-size: .65rem;
-      font-weight: 500;
-      letter-spacing: .2em;
-      text-transform: uppercase;
-      color: var(--terracotta);
-      margin-bottom: 16px;
-    }
-
-    .p-questions ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .p-questions li {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-size: 1.05rem;
-      color: var(--taupe);
-      line-height: 1.5;
-    }
-    .p-questions li::before {
-      content: '·';
-      color: var(--terracotta);
-      margin-right: 10px;
-    }
-
-    /* Conviction */
-    .p-conviction {
-      margin-top: 24px;
-      background: var(--ivoire-tint);
-      border-left: 2px solid var(--taupe);
-      padding: 20px 24px;
-    }
-
-    .p-conviction-titre {
-      font-family: 'Raleway', sans-serif;
-      font-size: .65rem;
-      font-weight: 500;
-      letter-spacing: .2em;
-      text-transform: uppercase;
-      color: var(--taupe);
-      margin-bottom: 10px;
-    }
-
-    .p-conviction p {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-size: 1.05rem;
-      color: var(--taupe);
-      line-height: 1.6;
-    }
-
-    /* ── SECTION CTA ── */
-    #cta {
-      border-top: 1px solid var(--rose-pale);
-      max-width: 700px;
-      margin: 0 auto;
-      padding: 72px 56px;
-    }
-
-    .cta-eyebrow {
-      font-family: 'Raleway', sans-serif;
-      font-size: .65rem;
-      font-weight: 500;
-      letter-spacing: .22em;
-      text-transform: uppercase;
-      color: var(--terracotta);
-      margin-bottom: 8px;
-    }
-
-    .cta-titre {
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 600;
-      font-size: clamp(1.4rem, 3vw, 1.9rem);
-      color: var(--taupe);
-      margin-bottom: 6px;
-    }
-
-    .cta-badge {
-      font-family: 'Raleway', sans-serif;
-      font-size: .72rem;
-      font-weight: 400;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      color: var(--gris-chaud);
-      margin-bottom: 32px;
-    }
-
-    .cta-corps p {
-      font-family: 'Raleway', sans-serif;
-      font-size: .88rem;
-      font-weight: 300;
-      color: var(--taupe);
-      line-height: 1.85;
-      margin-bottom: 6px;
-    }
-
-    .cta-btn {
-      display: inline-block;
-      margin-top: 32px;
-      background: var(--terracotta);
-      color: var(--ivoire-clair);
-      font-family: 'Raleway', sans-serif;
-      font-size: .8rem;
-      font-weight: 500;
-      letter-spacing: .08em;
-      padding: 14px 32px;
-      text-decoration: none;
-      border-radius: 100px;
-      transition: opacity .2s;
-    }
-    .cta-btn:hover { opacity: .85; }
-
-    /* ── FOOTER ── */
-    footer {
-      border-top: 1px solid var(--rose-pale);
-      max-width: 700px;
-      margin: 0 auto;
-      padding: 32px 56px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .f-logo {
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 600;
-      font-size: 1rem;
-      letter-spacing: .04em;
-      color: var(--taupe);
-    }
-    .f-logo span { color: var(--terracotta); }
-
-    .f-links {
-      font-family: 'Raleway', sans-serif;
-      font-size: .72rem;
-      font-weight: 300;
-      color: var(--gris-chaud);
-      display: flex;
-      gap: 16px;
-    }
-    .f-links a { color: var(--gris-chaud); text-decoration: none; }
-    .f-links a:hover { color: var(--taupe); }
-
-    .f-copy {
-      width: 100%;
-      font-family: 'Raleway', sans-serif;
-      font-size: .65rem;
-      font-weight: 300;
-      color: var(--gris-chaud);
-    }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 640px) {
-      header, #hero, .priorite, #cta, footer { padding-left: 24px; padding-right: 24px; }
-      #hero { padding-top: 72px; }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Raleway:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </head>
 <body>
 
-<header>
-  <a href="#" class="logo">EXEC'<span>IA</span></a>
-  <nav class="header-lang">
-    <span class="active">FR</span>
-    <a href="index-en.html">EN</a>
-    <a href="index-es.html">ES</a>
-  </nav>
-</header>
+<!-- ═══ NAVIGATION ═══════════════════════════════════════════ -->
+<nav id="nav">
+  <div class="nav-in">
+    <a href="#" class="nav-brand">
+      <img src="assets/logo prune bordeaux rosé final.png" alt="EXEC'IA logo" class="nav-logo-rond">
+      <img src="assets/EXECIA_CONSULTING_zoomé.png" alt="EXEC'IA Consulting" class="nav-logo-full">
+    </a>
+    <div class="nav-links">
+      <a href="#about">À propos</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#offres">Offres</a>
+      <a href="#parcours">Qui je suis</a>
+      <a href="#temoignages">Témoignages</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-langs">
+      <span class="nav-lang nav-lang-active">FR</span>
+      <a href="index-en.html" class="nav-lang">EN</a>
+      <a href="index-es.html" class="nav-lang">ES</a>
+    </div>
+    <button class="nav-burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
 
-<!-- ── HERO ───────────────────────────────────────────────────── -->
+<!-- ═══ HERO ══════════════════════════════════════════════════ -->
 <section id="hero">
+  <!-- Animated background orbs -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
 
-  <div class="hero-grand">
-    <span class="hero-chiffre">5</span>
-    <span class="hero-mot">Priorités</span>
-    <span class="hero-sous-mot">pour les dirigeants</span>
-    <span class="hero-badge">1 minute par priorité</span>
+  <div class="hero-wrap">
+    <!-- Left column -->
+    <div class="hero-left">
+
+      <p class="eyebrow hero-eyebrow">Conseil stratégique pour dirigeants</p>
+
+      <p class="hero-sub">L'Intelligence Artificielle est d'abord un sujet de <span style="color:var(--rose);">Direction Générale.</span></p>
+      <p class="hero-sub2">J'aide les dirigeants à transformer le potentiel de l'IA en création de valeur,<br>grâce à une approche stratégique, pragmatique et orientée résultats.</p>
+      <p class="hero-clarif">L'enjeu n'est pas d'adopter plus d'outils.<br>L'enjeu est d'identifier où l'IA créera réellement de la valeur pour votre organisation.</p>
+
+      <div class="hero-cta" style="margin-top:48px;">
+        <a href="https://calendly.com/valerie-mailland" target="_blank" rel="noopener" class="btn btn-rose">Un premier entretien</a>
+        <a href="#agents" class="btn btn-ivory">Votre diagnostic IA</a>
+      </div>
+      <p class="hero-location" style="margin-top:16px;">📍 France • International</p>
+
+      <h1 style="margin-top:20px;">Valérie<em>Mailland</em></h1>
+    </div>
+
   </div>
 
-  <div class="hero-intro">
-    <p class="bold">L'intelligence artificielle n'est pas un sujet technologique.</p>
-    <p>C'est un sujet de direction générale.</p>
-    <p>&nbsp;</p>
-    <p>Depuis deux ans, les organisations parlent d'outils, de prompts, d'automatisation et de productivité.</p>
-    <p>Pendant ce temps, les véritables questions restent souvent sans réponse.</p>
-    <p>&nbsp;</p>
-    <p class="question">Quels investissements doivent être arrêtés ?</p>
-    <p class="question">Où réinvestir le temps gagné ?</p>
-    <p class="question">Quels savoirs critiques risquent de disparaître ?</p>
-    <p class="question">Quels signaux annoncent la perte d'un client ?</p>
-    <p class="question">Quelles décisions doivent rester humaines ?</p>
-    <p>&nbsp;</p>
-    <p>Ces cinq priorités ne parlent pas de technologie.</p>
-    <p>Elles parlent de contrôle.</p>
-  </div>
-
-  <p class="hero-invite">Choisissez celle qui vous concerne.</p>
-
-  <nav class="nav-priorites">
-    <a href="#p1" class="btn-priorite">
-      <span class="btn-num">01</span>
-      <span class="btn-label">Vous financez peut-être les mauvais projets</span>
-    </a>
-    <a href="#p2" class="btn-priorite">
-      <span class="btn-num">02</span>
-      <span class="btn-label">Vos meilleurs cadres font encore le travail de la machine</span>
-    </a>
-    <a href="#p3" class="btn-priorite">
-      <span class="btn-num">03</span>
-      <span class="btn-label">La connaissance quitte votre entreprise plus vite que vos salariés</span>
-    </a>
-    <a href="#p4" class="btn-priorite">
-      <span class="btn-num">04</span>
-      <span class="btn-label">Vos clients décident de partir bien avant que vous le voyiez</span>
-    </a>
-    <a href="#p5" class="btn-priorite">
-      <span class="btn-num">05</span>
-      <span class="btn-label">Certaines décisions de votre entreprise ne vous appartiennent déjà plus</span>
-    </a>
-  </nav>
-
-</section>
-
-<!-- ── 01 ───────────────────────────────────────────────────────── -->
-<section id="p1" class="priorite">
-  <p class="p-num">01</p>
-  <h2 class="p-titre">Vous financez peut-être les mauvais projets</h2>
-  <div class="p-sep"></div>
-
-  <div class="p-corps">
-    <p>La plupart des entreprises ne manquent pas d'idées.</p>
-    <p>Elles manquent d'arbitrage.</p>
-    <p>&nbsp;</p>
-    <p>Les projets s'accumulent.</p>
-    <p>Les budgets s'accumulent.</p>
-    <p>Les outils s'accumulent.</p>
-    <p>&nbsp;</p>
-    <p>Mais lorsqu'un dirigeant demande quels projets créent réellement de la valeur, les réponses deviennent beaucoup moins précises.</p>
-    <p>&nbsp;</p>
-    <p>Le problème n'est pas l'investissement.</p>
-    <p>Le problème est l'absence de critère d'arrêt.</p>
-    <p>&nbsp;</p>
-    <p>Dans beaucoup d'organisations, un projet démarre avec enthousiasme mais personne n'est responsable de décider quand il doit s'arrêter.</p>
-    <p>&nbsp;</p>
-    <p>Résultat : les initiatives moyennes survivent plus longtemps que les initiatives utiles.</p>
-    <p>Les ressources se dispersent.</p>
-    <p>Les équipes se fatiguent.</p>
-    <p>La priorité devient floue.</p>
-    <p>&nbsp;</p>
-    <p>Les entreprises qui obtiennent les meilleurs résultats avec l'IA ne déploient pas davantage d'outils.</p>
-    <p>Elles prennent davantage de décisions.</p>
-  </div>
-
-  <div class="p-questions">
-    <p class="p-questions-titre">3 questions pour le dirigeant</p>
-    <ul>
-      <li>Quel projet seriez-vous incapable de défendre devant votre conseil dans 30 jours ?</li>
-      <li>Qui possède officiellement le mandat d'arrêter un projet ?</li>
-      <li>Où l'IA crée-t-elle aujourd'hui une valeur mesurable ?</li>
-    </ul>
-  </div>
-
-  <div class="p-conviction">
-    <p class="p-conviction-titre">Conviction EXEC'IA</p>
-    <p>Une organisation ne progresse pas lorsqu'elle lance plus de projets.<br>Elle progresse lorsqu'elle sait lesquels arrêter.</p>
+  <div class="scroll-hint">
+    <div class="scroll-arrow"></div>
   </div>
 </section>
 
-<!-- ── 02 ───────────────────────────────────────────────────────── -->
-<section id="p2" class="priorite">
-  <p class="p-num">02</p>
-  <h2 class="p-titre">Vos meilleurs cadres font encore le travail de la machine</h2>
-  <div class="p-sep"></div>
 
-  <div class="p-corps">
-    <p>Vos cadres sont payés pour décider.</p>
-    <p>Pour arbitrer.</p>
-    <p>Pour coordonner.</p>
-    <p>Pour faire avancer l'organisation.</p>
-    <p>&nbsp;</p>
-    <p>Pourtant une partie importante de leur semaine est encore consacrée à rechercher des informations, produire des reportings, consolider des données ou participer à des réunions qui ne débouchent sur aucune décision.</p>
-    <p>&nbsp;</p>
-    <p>Le problème n'est pas le manque de temps.</p>
-    <p>Le problème est la qualité de l'utilisation de ce temps.</p>
-    <p>&nbsp;</p>
-    <p>Libérer quelques heures ne change rien.</p>
-    <p>Libérer l'attention des bonnes personnes change tout.</p>
-    <p>&nbsp;</p>
-    <p>Le gain de productivité n'est pas une victoire.</p>
-    <p>Le redéploiement du temps gagné en est une.</p>
+<!-- ═══ STATS STRIP ═════════════════════════════════════════ -->
+<div class="stats-strip">
+  <div class="wrap">
+    <div class="ss-grid">
+      <div class="ss-item">
+        <span class="ss-num">20<span class="ss-sup">+</span></span>
+        <span class="ss-label">ans auprès<br>de dirigeants</span>
+      </div>
+      <div class="ss-item">
+        <span class="ss-num">18<span class="ss-sup"></span></span>
+        <span class="ss-label">ans chez McKinsey<br>&amp; Company</span>
+      </div>
+      <div class="ss-item">
+        <span class="ss-num ss-num--globe">🌍</span>
+        <span class="ss-label">Environnements<br>internationaux</span>
+      </div>
+      <div class="ss-item">
+        <span class="ss-num" style="font-size:2.2rem;letter-spacing:0.02em">IA</span>
+        <span class="ss-label">Stratégie &amp;<br>transformation</span>
+      </div>
+    </div>
   </div>
+</div>
 
-  <div class="p-questions">
-    <p class="p-questions-titre">3 questions pour le dirigeant</p>
-    <ul>
-      <li>Si vos managers récupéraient une journée par semaine, où irait ce temps ?</li>
-      <li>Quelles tâches occupent aujourd'hui vos meilleurs profils sans améliorer la performance de l'entreprise ?</li>
-      <li>Quels sujets stratégiques manquent d'attention ?</li>
-    </ul>
-  </div>
-
-  <div class="p-conviction">
-    <p class="p-conviction-titre">Conviction EXEC'IA</p>
-    <p>La productivité ne crée pas de valeur.<br>Les décisions rendues possibles par cette productivité en créent.</p>
-  </div>
-</section>
-
-<!-- ── 03 ───────────────────────────────────────────────────────── -->
-<section id="p3" class="priorite">
-  <p class="p-num">03</p>
-  <h2 class="p-titre">La connaissance quitte votre entreprise plus vite que vos salariés</h2>
-  <div class="p-sep"></div>
-
-  <div class="p-corps">
-    <p>Chaque organisation possède un savoir qui n'apparaît dans aucun manuel.</p>
-    <p>Le savoir des décisions.</p>
-    <p>&nbsp;</p>
-    <p>Pourquoi certains clients sont traités différemment.</p>
-    <p>Pourquoi certaines exceptions existent.</p>
-    <p>Pourquoi certaines erreurs ne doivent plus être reproduites.</p>
-    <p>&nbsp;</p>
-    <p>Ce savoir repose souvent sur quelques personnes.</p>
-    <p>Parfois une seule.</p>
-    <p>&nbsp;</p>
-    <p>Lorsqu'elles partent, elles n'emportent pas seulement leurs compétences.</p>
-    <p>Elles emportent une partie de la mémoire de l'entreprise.</p>
-    <p>&nbsp;</p>
-    <p>Le risque n'est pas humain.</p>
-    <p>Le risque est stratégique.</p>
-    <p>&nbsp;</p>
-    <p>Aucune IA ne peut exploiter une connaissance qui n'a jamais été capturée.</p>
-  </div>
-
-  <div class="p-questions">
-    <p class="p-questions-titre">3 questions pour le dirigeant</p>
-    <ul>
-      <li>Quelle personne créerait le plus grand vide si elle quittait l'entreprise demain ?</li>
-      <li>Quelle décision repose aujourd'hui sur la mémoire d'une seule personne ?</li>
-      <li>Quel savoir critique n'existe nulle part ailleurs que dans la tête de vos experts ?</li>
-    </ul>
-  </div>
-
-  <div class="p-conviction">
-    <p class="p-conviction-titre">Conviction EXEC'IA</p>
-    <p>La transmission précède toujours la technologie.</p>
+<!-- ═══ LE VRAI ENJEU ═════════════════════════════════════════ -->
+<section class="vrai-enjeu-section">
+  <div class="wrap">
+    <div class="vrai-enjeu-inner reveal">
+      <span class="eyebrow eyebrow-light">Une question de priorités</span>
+      <h2 class="vrai-enjeu-title">Le vrai enjeu n'est pas l'IA.<br>C'est la <span style="color:var(--rose)">création de valeur.</span></h2>
+      <p class="vrai-enjeu-body" style="margin-bottom:16px;">Les dirigeants ne manquent pas d'informations sur l'Intelligence Artificielle.</p>
+      <p class="vrai-enjeu-body">Ils manquent souvent d'un cadre clair pour décider où agir, quoi prioriser<br>et comment transformer le potentiel technologique en résultats concrets.</p>
+      <div class="ia-perf-box" style="margin-top:32px;max-width:780px;">
+        <p class="vrai-enjeu-accent">EXEC'IA aide les Directions Générales à distinguer les effets de mode<br>des opportunités réellement créatrices de valeur.</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ── 04 ───────────────────────────────────────────────────────── -->
-<section id="p4" class="priorite">
-  <p class="p-num">04</p>
-  <h2 class="p-titre">Vos clients décident de partir bien avant que vous le voyiez</h2>
-  <div class="p-sep"></div>
-
-  <div class="p-corps">
-    <p>Un client ne part presque jamais soudainement.</p>
-    <p>Il décide progressivement.</p>
-    <p>&nbsp;</p>
-    <p>Une réponse qui tarde.</p>
-    <p>Une demande répétée.</p>
-    <p>Une promesse oubliée.</p>
-    <p>Une expérience moyenne.</p>
-    <p>Puis une autre.</p>
-    <p>Puis une autre.</p>
-    <p>&nbsp;</p>
-    <p>La plupart des entreprises observent le départ.</p>
-    <p>Très peu observent les signaux qui l'annoncent.</p>
-    <p>&nbsp;</p>
-    <p>Pourtant ces signaux existent.</p>
-    <p>Ils sont visibles.</p>
-    <p>Ils sont mesurables.</p>
-    <p>Encore faut-il avoir décidé de les regarder.</p>
-  </div>
-
-  <div class="p-questions">
-    <p class="p-questions-titre">3 questions pour le dirigeant</p>
-    <ul>
-      <li>Quels sont les trois moments où un client décide réellement de rester ?</li>
-      <li>Quels sont les trois moments où il commence à envisager de partir ?</li>
-      <li>Qui porte la responsabilité de ces moments ?</li>
-    </ul>
-  </div>
-
-  <div class="p-conviction">
-    <p class="p-conviction-titre">Conviction EXEC'IA</p>
-    <p>La fidélisation n'est pas un sujet commercial.<br>C'est un sujet de gouvernance.</p>
+<!-- ═══ IA AU SERVICE DE VOTRE PERFORMANCE ════════════════════ -->
+<section class="ia-performance-section">
+  <div class="wrap ia-performance-wrap">
+    <div class="ia-perf-body reveal">
+      <span class="eyebrow reveal">Le véritable enjeu</span>
+      <h2 class="section-title ia-perf-heading">Avant l'IA,<br>la décision.</h2>
+      <p class="ia-perf-stat"><span class="ia-perf-stat-label">Trop de projets IA échouent, non par manque de technologie mais<br>faute d'<strong class="ia-perf-accent">alignement avec les priorités de l'entreprise.</strong></span></p>
+      <div class="ia-perf-box">
+        <p class="ia-perf-sub">L'IA n'est pas un outil à déployer.</p>
+        <p class="ia-perf-sub ia-perf-sub--accent">C'est un levier de performance au service de la stratégie.</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ── 05 ───────────────────────────────────────────────────────── -->
-<section id="p5" class="priorite">
-  <p class="p-num">05</p>
-  <h2 class="p-titre">Certaines décisions de votre entreprise ne vous appartiennent déjà plus</h2>
-  <div class="p-sep"></div>
-
-  <div class="p-corps">
-    <p>Des systèmes préparent désormais des décisions.</p>
-    <p>Produisent des contenus.</p>
-    <p>Analysent des données.</p>
-    <p>Déclenchent des actions.</p>
-    <p>Influencent des choix.</p>
-    <p>&nbsp;</p>
-    <p>La plupart des organisations utilisent ces capacités.</p>
-    <p>Très peu ont défini leurs limites.</p>
-    <p>&nbsp;</p>
-    <p>Quelles décisions peuvent être automatisées ?</p>
-    <p>Lesquelles doivent être supervisées ?</p>
-    <p>Lesquelles doivent rester exclusivement humaines ?</p>
-    <p>&nbsp;</p>
-    <p>La question n'est plus technologique.</p>
-    <p>Elle est stratégique.</p>
-    <p>&nbsp;</p>
-    <p>Car lorsqu'une décision est automatisée, la responsabilité ne disparaît pas.</p>
-    <p>Elle change simplement de forme.</p>
-  </div>
-
-  <div class="p-questions">
-    <p class="p-questions-titre">3 questions pour le dirigeant</p>
-    <ul>
-      <li>Quelles décisions ne doivent jamais être déléguées à un système automatisé ?</li>
-      <li>Quels processus seraient bloqués si un fournisseur disparaissait demain ?</li>
-      <li>Qui porte aujourd'hui la responsabilité de ces choix ?</li>
-    </ul>
-  </div>
-
-  <div class="p-conviction">
-    <p class="p-conviction-titre">Conviction EXEC'IA</p>
-    <p>La gouvernance n'est pas une contrainte.<br>C'est la condition pour rester maître de sa trajectoire.</p>
+<!-- ═══ POURQUOI LES PROJETS IA DÉCÈVENT ═════════════════════ -->
+<section class="pourquoi-section bg-white">
+  <div class="wrap">
+    <div class="pourquoi-inner reveal">
+      <span class="eyebrow">Diagnostic</span>
+      <h2 class="section-title">Pourquoi tant de projets IA<br>créent peu de valeur</h2>
+      <p class="pourquoi-intro">Parce qu'ils partent trop souvent de l'outil avant de partir du problème business.</p>
+      <ul class="pourquoi-list">
+        <li><span class="pq-arr">→</span> Des cas d'usage mal priorisés</li>
+        <li><span class="pq-arr">→</span> Des expérimentations sans impact mesurable</li>
+        <li><span class="pq-arr">→</span> Des équipes peu alignées</li>
+        <li><span class="pq-arr">→</span> Une gouvernance floue</li>
+        <li><span class="pq-arr">→</span> Des décisions prises sous pression technologique plutôt qu'à partir des enjeux de l'entreprise</li>
+      </ul>
+      <p class="pourquoi-conclusion">L'IA ne crée de valeur que lorsqu'elle est reliée à une priorité claire,<br>un usage concret et une décision de direction.</p>
+    </div>
   </div>
 </section>
 
-<!-- ── CTA ─────────────────────────────────────────────────────── -->
-<section id="cta">
-  <p class="cta-eyebrow">Entretien préliminaire</p>
-  <h2 class="cta-titre">Entretien préliminaire — offert</h2>
-  <p class="cta-badge">30 minutes &nbsp;·&nbsp; Confidentiel &nbsp;·&nbsp; Sans engagement</p>
-
-  <div class="cta-corps">
-    <p>Cet entretien s'adresse aux dirigeants qui souhaitent identifier les décisions prioritaires à reprendre en main.</p>
-    <p>&nbsp;</p>
-    <p>Nous ne commencerons pas par les outils.</p>
-    <p>Nous commencerons par les décisions.</p>
-    <p>&nbsp;</p>
-    <p>L'objectif est simple : identifier où concentrer votre attention avant d'engager davantage de temps, de budget ou de ressources.</p>
-    <p>&nbsp;</p>
-    <p>Vous repartirez avec une première orientation et une vision plus claire de vos priorités.</p>
+<!-- ═══ CE QUE VOUS OBTENEZ ══════════════════════════════════ -->
+<section class="ce-que-section bg-white">
+  <div class="wrap">
+    <span class="eyebrow reveal">Résultats</span>
+    <h2 class="section-title reveal" style="margin-bottom:16px;">Ce que vous obtenez</h2>
+    <p class="ce-que-intro reveal">EXEC'IA ne part pas des outils. EXEC'IA part de vos enjeux de <span style="color:var(--rose)">Direction Générale.</span></p>
+    <div class="ce-que-inner ia-perf-box reveal">
+      <ul class="ce-que-list">
+        <li><span class="cq-arr">→</span> Une vision claire des <strong>usages IA pertinents</strong> pour votre organisation</li>
+        <li><span class="cq-arr">→</span> Des priorités d'action hiérarchisées selon leur <strong>impact business</strong></li>
+        <li><span class="cq-arr">→</span> Des <strong>décisions plus rapides</strong> face à la complexité technologique</li>
+        <li><span class="cq-arr">→</span> Une <strong>feuille de route</strong> réaliste, compréhensible et actionnable</li>
+        <li><span class="cq-arr">→</span> Une meilleure <strong>mobilisation des équipes</strong> autour des bons cas d'usage</li>
+        <li><span class="cq-arr">→</span> Une <strong>création de valeur mesurable</strong>, au-delà de l'effet de mode.</li>
+      </ul>
+    </div>
   </div>
-
-  <a href="https://calendly.com/valerie-mailland" target="_blank" rel="noopener" class="cta-btn">Prendre rendez-vous</a>
 </section>
 
-<!-- ── FOOTER ──────────────────────────────────────────────────── -->
+<!-- ═══ EXEMPLES D'INITIATIVES IA ════════════════════════════ -->
+<section id="agents" class="agents-section">
+  <div class="agents-header reveal">
+    <h2 class="agents-title"><span class="agents-plum">Exemples</span> <span class="agents-rose"><span style="color:#633B4A">d'</span>initiatives IA</span></h2>
+  </div>
+
+  <div class="agents-team-caption-block reveal">
+    <p class="agents-team-title"><span class="agents-plum">Une équipe</span> <span style="color:#C75F62">de choc</span></p>
+    <em class="agents-team-sub"><span class="agents-plum">Vos agents IA</span> <span class="agents-plum">infatigables.</span></em>
+    <span class="agents-team-badge-pill">24h/24 · 7j/7</span>
+  </div>
+
+  <div class="agents-track-outer" id="agentsTrack">
+    <div class="agents-track">
+
+      <!-- 01 · Général -->
+      <div class="agent-card">
+        <div class="agent-img">
+          <img src="assets/agents/Agent IA général_joli prune_resized.png" alt="Agent IA Général EXEC'IA">
+        </div>
+        <div class="agent-body">
+          <p class="agent-eyebrow-txt">Initiative IA</p>
+          <h3 class="agent-name">IA <span>général</span></h3>
+          <div class="agent-divider"></div>
+          <p class="agent-desc">Connecté à tous vos outils — optimise votre quotidien.</p>
+          <ul class="agent-feats">
+            <li><span class="agent-arr">»</span> Gestion de la productivité</li>
+            <li><span class="agent-arr">»</span> Connecté à tous vos outils</li>
+            <li><span class="agent-arr">»</span> Communique avec vos agents IA</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 02 · Commercial -->
+      <div class="agent-card">
+        <div class="agent-img">
+          <img src="assets/agents/IA agent commercial_joli prune_blond.png" alt="Agent IA Commercial EXEC'IA">
+        </div>
+        <div class="agent-body">
+          <p class="agent-eyebrow-txt">Initiative IA</p>
+          <h3 class="agent-name">IA <span>commercial</span></h3>
+          <div class="agent-divider"></div>
+          <p class="agent-desc">Il prospecte pour vous, même pendant votre sommeil.</p>
+          <ul class="agent-feats">
+            <li><span class="agent-arr">»</span> Développe votre réseau</li>
+            <li><span class="agent-arr">»</span> Identifie vos prospects idéaux</li>
+            <li><span class="agent-arr">»</span> Envoie des messages personnalisés</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 03 · Marketing -->
+      <div class="agent-card">
+        <div class="agent-img">
+          <img src="assets/agents/agent IA marketing_prune rosé.png" alt="Agent IA Marketing EXEC'IA">
+        </div>
+        <div class="agent-body">
+          <p class="agent-eyebrow-txt">Initiative IA</p>
+          <h3 class="agent-name">IA <span>marketing</span></h3>
+          <div class="agent-divider"></div>
+          <p class="agent-desc">Publie à votre place. Présence en ligne pro, sans effort.</p>
+          <ul class="agent-feats">
+            <li><span class="agent-arr">»</span> Crée vos contenus</li>
+            <li><span class="agent-arr">»</span> Gère vos calendriers éditoriaux</li>
+            <li><span class="agent-arr">»</span> Publie sur vos réseaux</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 04 · Recrutement -->
+      <div class="agent-card">
+        <div class="agent-img">
+          <img src="assets/agents/Agent IA recrutement_police mieux.png" alt="Agent IA Recrutement EXEC'IA">
+        </div>
+        <div class="agent-body">
+          <p class="agent-eyebrow-txt">Initiative IA</p>
+          <h3 class="agent-name">IA <span>recrutement</span></h3>
+          <div class="agent-divider"></div>
+          <p class="agent-desc">Simplifie la gestion RH et accompagne vos collaborateurs au quotidien.</p>
+          <ul class="agent-feats">
+            <li><span class="agent-arr">»</span> Recrute les meilleurs talents</li>
+            <li><span class="agent-arr">»</span> Gère l'intégration des collaborateurs</li>
+            <li><span class="agent-arr">»</span> Suit les congés et absences</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 05 · Support -->
+      <div class="agent-card">
+        <div class="agent-img">
+          <img src="assets/agents/L'agent IA support_joli prune.png" alt="Agent IA Support EXEC'IA">
+        </div>
+        <div class="agent-body">
+          <p class="agent-eyebrow-txt">Initiative IA</p>
+          <h3 class="agent-name">IA <span>support</span></h3>
+          <div class="agent-divider"></div>
+          <p class="agent-desc">Répond, qualifie et oriente vos clients vers la bonne personne.</p>
+          <ul class="agent-feats">
+            <li><span class="agent-arr">»</span> Qualifie vos clients</li>
+            <li><span class="agent-arr">»</span> Compte-rendus instantanés</li>
+            <li><span class="agent-arr">»</span> Prise de rendez-vous</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 06 · Facturation -->
+      <div class="agent-card">
+        <div class="agent-img">
+          <img src="assets/agents/Agent IA facturation_joli prune.png" alt="Agent IA Facturation EXEC'IA">
+        </div>
+        <div class="agent-body">
+          <p class="agent-eyebrow-txt">Initiative IA</p>
+          <h3 class="agent-name">IA <span>facturation</span></h3>
+          <div class="agent-divider"></div>
+          <p class="agent-desc">Simplifie votre gestion financière et votre comptabilité.</p>
+          <ul class="agent-feats">
+            <li><span class="agent-arr">»</span> Gestion des budgets</li>
+            <li><span class="agent-arr">»</span> Crée des rapports financiers</li>
+            <li><span class="agent-arr">»</span> Conseils en gestion de trésorerie</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="agents-nav">
+    <button class="agents-dot active" data-idx="0"></button>
+    <button class="agents-dot" data-idx="1"></button>
+    <button class="agents-dot" data-idx="2"></button>
+    <button class="agents-dot" data-idx="3"></button>
+    <button class="agents-dot" data-idx="4"></button>
+    <button class="agents-dot" data-idx="5"></button>
+  </div>
+  <div class="agents-arrows">
+    <button class="agents-arrow" id="agentsPrev">&#8592;</button>
+    <button class="agents-arrow" id="agentsNext">&#8594;</button>
+  </div>
+
+  <div class="agents-divider reveal">
+    <span class="agents-divider-line"></span>
+    <span class="agents-divider-dot">•</span>
+    <span class="agents-divider-line"></span>
+  </div>
+
+  <div class="agents-cta-block reveal">
+    <h2 class="agents-cta-title">De l'exécution à la <span style="color:#C75F62">décision</span></h2>
+    <p class="agents-cta-lead">vos Agents IA <span style="color:#C75F62">agissent au quotidien.</span></p>
+    <p class="agents-cta-sub">Vous gardez la maîtrise des décisions qui comptent.</p>
+    <div class="agents-track-outer agents-cta-track-outer" id="ctaTrack">
+      <div class="agents-track agents-cta-track">
+        <div class="agent-card agents-cta-img-slot"><img src="assets/Site web 2.png" alt="Site web"></div>
+        <div class="agent-card agents-cta-img-slot"><img src="assets/agents/Votre entreprise dans 90J.png" alt="Votre entreprise dans 90 jours"></div>
+        <div class="agent-card agents-cta-img-slot"><img src="assets/agents/Assistant IA exécutif.png" alt="Assistant IA Exécutif"></div>
+        <div class="agent-card agents-cta-img-slot"><img src="assets/agents/Direction Générale.png" alt="Direction Générale"></div>
+      </div>
+    </div>
+    <div class="agents-nav agents-cta-nav">
+      <button class="agents-dot active" data-cta-idx="0"></button>
+      <button class="agents-dot" data-cta-idx="1"></button>
+      <button class="agents-dot" data-cta-idx="2"></button>
+      <button class="agents-dot" data-cta-idx="3"></button>
+    </div>
+    <div class="agents-arrows agents-cta-arrows">
+      <button class="agents-arrow" id="ctaPrev">&#8592;</button>
+      <button class="agents-arrow" id="ctaNext">&#8594;</button>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ SIMULATEUR ROI IA ════════════════════════════════════ -->
+<section id="roi" class="roi-section">
+  <div class="wrap">
+    <span class="eyebrow reveal">Calculateur d'impact</span>
+    <h2 class="section-title reveal delay-1">Combien l'IA peut-elle<br>vous faire gagner&nbsp;?</h2>
+    <p class="roi-intro reveal delay-2">Estimez les <span style="color:var(--rose)">gains potentiels</span> avant d'investir.</p>
+    <div class="roi-card reveal delay-3">
+      <div class="roi-sliders">
+        <div class="roi-sg">
+          <div class="roi-sh"><label for="rs-collab">Collaborateurs concernés</label><span class="roi-sv" id="rsv-collab">10</span></div>
+          <input type="range" id="rs-collab" class="roi-range" min="1" max="100" value="10">
+          <div class="roi-sm"><span>1</span><span>100</span></div>
+        </div>
+        <div class="roi-sg">
+          <div class="roi-sh"><label for="rs-h">Heures économisées / personne / semaine</label><span class="roi-sv" id="rsv-h">5 h</span></div>
+          <input type="range" id="rs-h" class="roi-range" min="1" max="20" value="5">
+          <div class="roi-sm"><span>1 h</span><span>20 h</span></div>
+        </div>
+        <div class="roi-sg">
+          <div class="roi-sh"><label for="rs-t">Taux horaire moyen chargé</label><span class="roi-sv" id="rsv-t">80 €/h</span></div>
+          <input type="range" id="rs-t" class="roi-range" min="30" max="300" value="80" step="5">
+          <div class="roi-sm"><span>30 €</span><span>300 €</span></div>
+        </div>
+      </div>
+      <div class="roi-outputs">
+        <div class="roi-chip"><span class="roi-chip-lbl">Heures récupérées/mois</span><strong class="roi-chip-val" id="roi-out-h">—</strong></div>
+        <div class="roi-chip roi-chip--hero"><span class="roi-chip-lbl">Gains annuels estimés</span><strong class="roi-chip-val" id="roi-out-an">—</strong></div>
+        <div class="roi-chip"><span class="roi-chip-lbl">Gains mensuels</span><strong class="roi-chip-val" id="roi-out-m">—</strong></div>
+      </div>
+      <p class="roi-disclaimer">Estimation indicative — basée sur une automatisation partielle des tâches à faible valeur ajoutée.</p>
+      <div class="roi-cta"><a href="https://calendly.com/valerie-mailland" target="_blank" rel="noopener" class="btn btn-rose">Discutons de vos enjeux</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ OFFRES ════════════════════════════════════════════════ -->
+<section id="offres" class="bg-white">
+  <div class="wrap">
+
+    <span class="eyebrow reveal">Niveaux d'accompagnement</span>
+    <h2 class="section-title offres-section-title reveal delay-1">Des premières réflexions<br>aux transformations les plus <span style="color:#C75F62">ambitieuses</span></h2>
+    <p class="offres-subtitle reveal delay-2">Que vous exploriez encore le sujet ou que vous prépariez une transformation d'envergure,<br>trouvez l'accompagnement adapté à votre situation.</p>
+
+    <div class="offre-decouverte reveal delay-2">
+      <div class="offre-decouverte-left">
+        <p class="offre-decouverte-title">Entretien préliminaire — offert</p>
+        <p class="offre-decouverte-desc"><strong>30 minutes</strong> pour comprendre votre situation et évaluer ensemble —<br>la façon dont je peux vous être utile.</p>
+        <ul class="offre-decouverte-points">
+          <li>Sans engagement</li>
+          <li>Confidentiel</li>
+        </ul>
+      </div>
+      <a href="https://calendly.com/valerie-mailland" target="_blank" rel="noopener" class="btn btn-plum offre-decouverte-btn">Prendre rendez-vous</a>
+    </div>
+
+    <div class="offres-grid offres-grid-4">
+
+      <!-- 01 -->
+      <div class="offre-card offre-card--ivory reveal delay-1">
+        <div class="offre-niveau">Niveau I &nbsp;·&nbsp; Clarifiez</div>
+        <div class="offre-titre-capsule"><h3>Séance de cadrage</h3></div>
+        <p class="offre-accroche">Évitez d'engager des ressources avant de savoir où l'IA crée vraiment de la valeur.</p>
+        <div class="offre-format">Séance individuelle · 90 min · 490 €</div>
+        <ul class="offre-points">
+          <li>Identifiez les opportunités IA qui méritent réellement l'attention de votre Direction Générale.</li>
+          <li>Hiérarchisez vos initiatives à fort impact avant d'allouer budget ou équipes</li>
+        </ul>
+        <p class="offre-pour-qui">Pour les dirigeants qui souhaitent clarifier leurs priorités avant d'engager des ressources.</p>
+        <a href="https://calendly.com/valerie-mailland" target="_blank" rel="noopener" class="btn btn-rose">Votre séance stratégique</a>
+      </div>
+
+      <!-- 02 -->
+      <div class="offre-card offre-card--ivory reveal delay-2">
+        <div class="offre-niveau">Niveau II &nbsp;·&nbsp; Comprenez &amp; embarquez</div>
+        <div class="offre-titre-capsule"><h3>Leadership &amp; Décision IA</h3></div>
+        <p class="offre-accroche">Dotez votre CODIR d'un cadre de décision IA, indépendant des experts techniques.</p>
+        <div class="offre-format">Demi-journée · 590 € &nbsp;/&nbsp; Journée · 990 €<br><span class="offre-format-sub">Format intra-entreprise</span></div>
+        <ul class="offre-points">
+          <li>Comprenez les mouvements qui redessinent votre secteur avant qu'ils ne s'imposent à vous.</li>
+          <li>Tranchez vos arbitrages réels : où investir, où résister, où accélérer</li>
+        </ul>
+        <p class="offre-pour-qui">Pour les CODIR qui doivent construire une vision commune et prendre des décisions cohérentes.</p>
+        <a href="https://calendly.com/valerie-mailland" target="_blank" rel="noopener" class="btn btn-rose">Un échange</a>
+      </div>
+
+      <!-- 03 -->
+      <div class="offre-card offre-card--ivory reveal delay-3">
+        <div class="offre-niveau">Niveau III &nbsp;·&nbsp; Décidez dans la durée</div>
+        <div class="offre-titre-capsule"><h3>Advisory de Direction</h3></div>
+        <p class="offre-accroche">Sécurisez chaque engagement stratégique IA avec un regard indépendant.</p>
+        <div class="offre-format">À partir de 2 500 € / mois<br><span class="offre-format-sub">Engagement minimum 3 mois · Sur mesure</span></div>
+        <ul class="offre-points">
+          <li>Challengez vos décisions stratégiques avant qu'elles n'engagent durablement l'organisation.</li>
+          <li>Détectez les angles morts et les risques non anticipés</li>
+        </ul>
+        <p class="offre-pour-qui">Pour les dirigeants confrontés à des arbitrages stratégiques récurrents.</p>
+        <a href="https://calendly.com/valerie-mailland" target="_blank" rel="noopener" class="btn btn-rose">Parlons de vos enjeux</a>
+      </div>
+
+      <!-- 04 -->
+      <div class="offre-card offre-card--ivory reveal delay-4">
+        <div class="offre-niveau">Niveau IV &nbsp;·&nbsp; Transformez</div>
+        <div class="offre-titre-capsule"><h3>Mission de Transformation</h3></div>
+        <p class="offre-accroche">Passez de la stratégie à l'exécution — sans disperser vos équipes ni perdre le cap.</p>
+        <div class="offre-format">À partir de 8 000 €<br><span class="offre-format-sub">Mission sur mesure · 3 à 12 mois</span></div>
+        <ul class="offre-points">
+          <li>Levez les freins qui bloquent la création de valeur dans votre organisation</li>
+          <li>Bâtissez une gouvernance adaptée à vos enjeux de direction</li>
+          <li>Pilotez la création de valeur et ajustez les priorités à mesure que l'organisation progresse.</li>
+        </ul>
+        <p class="offre-pour-qui">Pour les organisations prêtes à transformer durablement leurs modes de fonctionnement.</p>
+        <a href="https://calendly.com/valerie-mailland" target="_blank" rel="noopener" class="btn btn-rose">Parlons de votre projet</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ═══ TÉMOIGNAGES ═══════════════════════════════════════════ -->
+<section id="temoignages" class="testi-section">
+  <div class="wrap">
+    <span class="eyebrow reveal">Témoignages</span>
+    <h2 class="section-title reveal delay-1">Regards croisés</h2>
+    <p class="testi-intro reveal delay-2">Ceux qui m'ont accompagnée ou côtoyée prennent la parole.</p>
+    <div class="testi-grid">
+
+      <!-- 01 -->
+      <div class="testi reveal delay-1">
+        <div class="testi-tag">Leadership exécutif &amp; confiance</div>
+        <div class="testi-q">&#x201C;</div>
+        <p>Valérie a toujours fait preuve d'un professionnalisme exemplaire. Son sens de l'organisation, sa fiabilité et sa capacité à gérer des priorités complexes en font une collaboratrice précieuse pour tout dirigeant. Elle sait avancer avec méthode, discrétion et efficacité, même dans les environnements les plus exigeants.</p>
+        <div class="testi-q-close"><span>&#x201C;</span></div>
+        <div class="testi-author">
+          <div class="testi-avatar testi-avatar--initials">Xx</div>
+          <div>
+            <span class="testi-name">Xxxx</span>
+            <strong class="testi-role">Groupauto International — Ex-Président &amp; Chief Executive Officer</strong>
+            <em class="testi-translated">Traduit de l'anglais</em>
+          </div>
+        </div>
+      </div>
+
+      <!-- 02 -->
+      <div class="testi reveal delay-2">
+        <div class="testi-tag">Leadership &amp; excellence internationale</div>
+        <div class="testi-q">&#x201C;</div>
+        <p>J'ai eu le plaisir de collaborer étroitement avec Valérie, alors Coordinatrice Communication de McKinsey France, sur plusieurs initiatives internationales dédiées au leadership féminin. J'ai particulièrement apprécié son professionnalisme, son engagement et sa force de travail.<br>Sa capacité à fédérer de nombreux interlocuteurs, à contribuer aux réflexions menées et à conduire des projets avec rigueur et enthousiasme a été un atout précieux pour la réussite de ces initiatives.</p>
+        <div class="testi-q-close"><span>&#x201C;</span></div>
+        <div class="testi-author">
+          <div class="testi-avatar testi-avatar--initials">SD</div>
+          <div>
+            <span class="testi-name">Sandrine Devillard</span>
+            <strong class="testi-role">McKinsey &amp; Company — Senior Partner — Global Leader, Women Matter Research Program — Member, McKinsey Global Institute Council</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- 03 -->
+      <div class="testi testi--dark reveal delay-3">
+        <div class="testi-tag">Mentorat &amp; transmission autour de l'IA</div>
+        <div class="testi-q">&#x201C;</div>
+        <p>Accompagner Valérie dans la construction de son projet est particulièrement intéressant. Son intérêt sincère pour l'Intelligence Artificielle est communicatif. J'apprécie tout particulièrement sa capacité à vulgariser, à transformer en solutions compréhensibles et utiles. Je suis convaincu que son expérience et sa passion lui permettront de créer beaucoup de valeur pour les dirigeants qu'elle accompagne.</p>
+        <div class="testi-q-close"><span>&#x201C;</span></div>
+        <div class="testi-author">
+          <div class="testi-avatar testi-avatar--initials testi-avatar--light">Xx</div>
+          <div>
+            <span class="testi-name">Xxxx</span>
+            <strong class="testi-role">Auteur — Enseignant universitaire — Coach de Consultants</strong>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 04 -->
+      <div class="testi testi--dark reveal delay-4">
+        <div class="testi-tag">Coaching IA &amp; résultats concrets</div>
+        <div class="testi-q">&#x201C;</div>
+        <p>J'ai eu le plaisir de coacher Valérie dans sa montée en compétences sur les usages professionnels de l'Intelligence Artificielle. J'ai particulièrement apprécié son implication, sa curiosité intellectuelle et sa capacité à transformer rapidement les apprentissages en réalisations concrètes. Valérie se distingue par sa détermination, sa capacité à relier les outils aux enjeux métier et son exigence dans la qualité de l'exécution. Sa force de travail, son esprit critique et la richesse de nos échanges ont rendu ce parcours particulièrement stimulant. Je suis convaincu que ces qualités constituent un véritable atout pour accompagner les entreprises dans l'adoption de l'Intelligence Artificielle.</p>
+        <div class="testi-q-close"><span>&#x201C;</span></div>
+        <div class="testi-author">
+          <div class="testi-avatar testi-avatar--initials testi-avatar--light">WB</div>
+          <div>
+            <span class="testi-name">Wissam Bouakline</span>
+            <strong class="testi-role">Consultante IA Générative &amp; No-Code — Coach IA</strong>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <p class="testi-note">* Témoignages recueillis avec l'accord des personnes concernées.</p>
+  </div>
+</section>
+
+
+<!-- ═══ À PROPOS ══════════════════════════════════════════════ -->
+<section id="about" class="bg-ivory">
+  <div class="wrap">
+    <span class="eyebrow reveal">À propos</span>
+    <h2 class="section-title about-section-title reveal delay-1">L'IA n'est pas<br>réservée aux Techs</h2>
+    <div class="about-grid">
+      <div class="about-body reveal delay-1">
+        <p style="margin-bottom:4px;font-size:.9rem;font-weight:600;letter-spacing:.04em;color:var(--plum)">Une expérience&nbsp;:</p>
+        <p class="about-lede" style="margin-top:0">rendre les sujets complexes clairs, utiles et actionnables.</p>
+        <ul class="formation-list">
+          <li><span class="fl-star">⭐</span> <span class="fl-rose">18 ans</span> chez McKinsey &amp; Company</li>
+          <li><span class="fl-star">⭐</span> <span class="fl-rose">Directions Générales internationales</span> — J.P. Morgan, Warner Bros. Discovery</li>
+        </ul>
+        <p style="margin-top:20px;margin-bottom:4px;font-size:.9rem;font-weight:600;letter-spacing:.04em;color:var(--plum)">Une conviction&nbsp;:</p>
+        <p class="about-lede" style="margin-top:0">les technologies les plus puissantes doivent créer de la valeur pour les entreprises.</p>
+        <ul class="formation-list">
+          <li><span class="fl-star">⭐</span> <span class="fl-rose">IA appliquée aux entreprises</span> — <a href="https://www.studeria.fr" target="_blank" rel="noopener" class="fl-link-plain">Studeria</a></li>
+        </ul>
+        <div class="certif-row">
+          <div class="iso-seal">
+            <div class="iso-badge">
+              <span class="iso-certified">CERTIFIED</span>
+              <span class="iso-num">ISO<br>27001</span>
+              <span class="iso-year">2013</span>
+            </div>
+            <span class="iso-label">Sécurité de l'information</span>
+          </div>
+        </div>
+        <p style="margin-top:28px;font-size:.9rem;font-weight:600;letter-spacing:.04em;color:var(--plum)">Ma mission&nbsp;:</p>
+        <p class="about-lede" style="margin-top:0">transformer le potentiel de l&#x2019;IA en résultats concrets.</p>
+      </div>
+      <div class="pillars reveal delay-2">
+        <div class="pillar">
+          <div class="pillar-icon pillar-icon--arrow">
+            <svg width="36" height="24" viewBox="0 0 36 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 4 C2 4 2 18 14 18 L28 18" stroke="url(#pg1)" stroke-width="3" stroke-linecap="round" fill="none"/>
+              <path d="M22 12 L29 18 L22 24" stroke="url(#pg1)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <path d="M29 12 L36 18 L29 24" stroke="url(#pg2)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <defs>
+                <linearGradient id="pg1" x1="0" y1="0" x2="36" y2="0" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#633B4A"/>
+                  <stop offset="100%" stop-color="#C75F62"/>
+                </linearGradient>
+                <linearGradient id="pg2" x1="0" y1="0" x2="36" y2="0" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#C75F62"/>
+                  <stop offset="100%" stop-color="#C75F62"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <h4>Au plus près des dirigeants</h4>
+        </div>
+        <div class="pillar">
+          <div class="pillar-icon pillar-icon--arrow">
+            <svg width="36" height="24" viewBox="0 0 36 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 4 C2 4 2 18 14 18 L28 18" stroke="url(#pg3)" stroke-width="3" stroke-linecap="round" fill="none"/>
+              <path d="M22 12 L29 18 L22 24" stroke="url(#pg3)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <path d="M29 12 L36 18 L29 24" stroke="url(#pg4)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <defs>
+                <linearGradient id="pg3" x1="0" y1="0" x2="36" y2="0" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#633B4A"/>
+                  <stop offset="100%" stop-color="#C75F62"/>
+                </linearGradient>
+                <linearGradient id="pg4" x1="0" y1="0" x2="36" y2="0" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#C75F62"/>
+                  <stop offset="100%" stop-color="#C75F62"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <h4>Vision internationale</h4>
+        </div>
+        <div class="pillar">
+          <div class="pillar-icon pillar-icon--arrow">
+            <svg width="36" height="24" viewBox="0 0 36 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 4 C2 4 2 18 14 18 L28 18" stroke="url(#pg5)" stroke-width="3" stroke-linecap="round" fill="none"/>
+              <path d="M22 12 L29 18 L22 24" stroke="url(#pg5)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <path d="M29 12 L36 18 L29 24" stroke="url(#pg6)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <defs>
+                <linearGradient id="pg5" x1="0" y1="0" x2="36" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#633B4A"/><stop offset="100%" stop-color="#C75F62"/></linearGradient>
+                <linearGradient id="pg6" x1="0" y1="0" x2="36" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#C75F62"/><stop offset="100%" stop-color="#C75F62"/></linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <h4>IA appliquée</h4>
+        </div>
+        <div class="pillar">
+          <div class="pillar-icon pillar-icon--arrow">
+            <svg width="36" height="24" viewBox="0 0 36 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 4 C2 4 2 18 14 18 L28 18" stroke="url(#pg7)" stroke-width="3" stroke-linecap="round" fill="none"/>
+              <path d="M22 12 L29 18 L22 24" stroke="url(#pg7)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <path d="M29 12 L36 18 L29 24" stroke="url(#pg8)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <defs>
+                <linearGradient id="pg7" x1="0" y1="0" x2="36" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#633B4A"/><stop offset="100%" stop-color="#C75F62"/></linearGradient>
+                <linearGradient id="pg8" x1="0" y1="0" x2="36" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#C75F62"/><stop offset="100%" stop-color="#C75F62"/></linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <h4>Approche pragmatique</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PARCOURS ══════════════════════════════════════════════ -->
+<section id="parcours" class="bg-ivory">
+  <div class="wrap">
+    <div class="parcours-header reveal">
+      <div class="parcours-header-text">
+        <span class="eyebrow">Qui je suis</span>
+        <h2 class="section-title" style="margin-bottom:20px">Une trajectoire singulière</h2>
+        <p class="tl-intro" style="margin-bottom:16px"><strong><span style="color:#633B4A">De Buenos Aires</span> à <span style="color:#C75F62">l'Intelligence Artificielle.</span></strong></p>
+        <p class="tl-intro" style="margin-bottom:16px;max-width:960px;font-size:clamp(1.44rem,2.25vw,1.89rem)">Après plus de 20 ans auprès de Directions Générales, dont 18 ans chez McKinsey, j'aborde l'IA non comme une tendance technologique, mais comme un levier de décision, de transformation et de création de valeur.<br>Des environnements internationaux aux comités de direction, <em>un même fil conducteur : comprendre, coordonner et faire avancer.</em></p>
+      </div>
+      <div class="parcours-photo">
+        <img src="assets/photo-valerie.jpg" alt="Valérie Mailland">
+      </div>
+    </div>
+    <p class="tl-intro tl-intro--diff" style="margin-bottom:40px"><em>Ma différence : comprendre les enjeux des dirigeants avant de parler d'outils.</em></p>
+    <div class="timeline">
+
+      <div class="tl-item reveal">
+        <h3>Studeria</h3>
+        <p class="tl-role">Certification IA générative</p>
+      </div>
+
+      <div class="tl-item reveal delay-1">
+        <h3>Directions Générales &amp; Comités Exécutifs</h3>
+        <p>Coordination internationale et accompagnement de dirigeants dans des environnements complexes.</p>
+      </div>
+
+      <div class="tl-item reveal delay-1">
+        <h3>McKinsey &amp; Company — 18 ans</h3>
+        <p>Communication Alumni, coordination exécutive et accompagnement de dirigeants.</p>
+      </div>
+
+      <div class="tl-item reveal delay-1">
+        <h3>Bureau Veritas — Buenos Aires</h3>
+        <p>Le début d&#x2019;une trajectoire internationale, faite d&#x2019;adaptation, de coordination et d&#x2019;ouverture.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ EXPERTISE ═════════════════════════════════════════════ -->
+<section id="expertise" class="bg-white">
+  <div class="wrap">
+    <span class="eyebrow reveal">Expertise</span>
+    <h2 class="section-title expertise-section-title reveal delay-1">4 expertises<br>au service de vos priorités</h2>
+    <div class="cards-grid">
+      <div class="xcard reveal delay-1">
+        <div class="xcard-num">01</div>
+        <h3><span style="color:var(--rose)">Multilinguisme</span></h3>
+        <p>8+ ans d&#x2019;immersion à l&#x2019;international (Argentine, Royaume-Uni, Espagne, Russie). Communication fluide dans des environnements multiculturels exigeants et adaptation aux réalités locales. Compréhension fine des codes, des usages et des modes de collaboration dans des contextes internationaux.</p>
+        <span class="xcard-tag"><span class="tag-icon">🌍</span> Français · English fluent · Español fluido · Deutsch B1</span>
+      </div>
+      <div class="xcard reveal delay-2">
+        <div class="xcard-num">02</div>
+        <h3>Accompagnement de <span style="color:var(--rose)">Directions Générales</span></h3>
+        <p>20+ ans au contact direct de PDG, Conseils d&#x2019;Administration et équipes dirigeantes dans des groupes internationaux. Coordination d&#x2019;enjeux complexes, anticipation des besoins et gestion d&#x2019;interactions à haut niveau. Intelligence relationnelle et sens du service au soutien de la performance collective.</p>
+        <span class="xcard-tag"><span class="tag-icon">🇺🇸</span> 20+ ans · McKinsey &amp; Company · J.P. Morgan · Warner Bros. Discovery</span>
+      </div>
+      <div class="xcard reveal delay-3">
+        <div class="xcard-num">03</div>
+        <h3>Événementiel Corporate <span style="color:var(--rose)">International</span></h3>
+        <p>Conception et coordination d&#x2019;événements stratégiques dans des environnements internationaux exigeants. Gestion de multiples parties prenantes, pilotage opérationnel et attention constante à l&#x2019;expérience participant. Capacité à orchestrer des projets complexes avec rigueur et réactivité.</p>
+        <span class="xcard-tag"><span class="tag-icon">🎤</span> Conférences · Séminaires · Événements exécutifs · Programmes internationaux</span>
+      </div>
+      <div class="xcard xcard--ia reveal delay-4">
+        <div class="xcard-num xcard-num-ia">04</div>
+        <h3><span style="color:var(--rose)">IA</span> Générative <span style="font-style:italic">&amp;</span> <span style="color:var(--rose)">No-Code</span></h3>
+        <p style="margin-bottom:14px;font-style:italic;color:rgba(246,241,235,.55)">Créez, automatisez et déployez rapidement.</p>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;font-size:.93rem;line-height:1.5;color:rgba(246,241,235,.88)">
+          <li style="display:flex;gap:10px;align-items:baseline"><span style="color:var(--rose);flex-shrink:0">→</span>Création de contenus et supports assistés par l&#x2019;IA.</li>
+          <li style="display:flex;gap:10px;align-items:baseline"><span style="color:var(--rose);flex-shrink:0">→</span>Automatisation des tâches et optimisation des processus.</li>
+          <li style="display:flex;gap:10px;align-items:baseline"><span style="color:var(--rose);flex-shrink:0">→</span>Déploiement de solutions et agents IA pour les besoins métier.</li>
+        </ul>
+        <a class="xcard-tag" href="https://www.francecompetences.fr/recherche/rs/6776/" target="_blank" rel="noopener" style="text-decoration:none"><span class="tag-icon">🎓</span> <span style="color:var(--rose)">RS6776</span> · France Compétences <span style="color:var(--rose);margin-left:2px">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ VIDÉO DE PRÉSENTATION ═══════════════════════════════ -->
+<section id="video" class="video-section">
+  <div class="wrap">
+    <span class="eyebrow reveal">Présentation</span>
+    <h2 class="section-title reveal delay-1">Une expérience dirigeante<br>au service de votre transformation IA</h2>
+    <div class="audio-wrap reveal delay-2">
+      <audio id="exec-audio" src="assets/audio-presentation.m4a" preload="metadata"></audio>
+      <div class="audio-player">
+        <button class="audio-play-btn" id="audioPlay" aria-label="Lire">
+          <span id="audioIcon">&#x25B6;</span>
+        </button>
+        <div class="audio-progress-wrap">
+          <div class="audio-progress-bar">
+            <div class="audio-progress-fill" id="audioFill"></div>
+          </div>
+          <div class="audio-times">
+            <span id="audioCurrent">0:00</span>
+            <span id="audioDuration">—</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ NEWSLETTER ════════════════════════════════════════════ -->
+<section id="newsletter" class="newsletter-section">
+  <div class="wrap">
+    <div class="newsletter-inner">
+
+      <!-- Gauche : proposition de valeur -->
+      <div class="newsletter-content reveal">
+        <span class="eyebrow nl-eyebrow">LETTRE IA · EXCLUSIVE</span>
+        <h2>L&#x2019;essentiel de l&#x2019;IA,<br>sans le bruit</h2>
+        <ul class="newsletter-perks">
+          <li><span class="nl-bullet">»</span> Décryptages stratégiques</li>
+          <li><span class="nl-bullet">»</span> Cas d&#x2019;usage concrets</li>
+          <li><span class="nl-bullet">»</span> Retours d&#x2019;expérience terrain</li>
+          <li><span class="nl-bullet">»</span> Signaux faibles à surveiller</li>
+        </ul>
+      </div>
+
+      <!-- Droite : formulaire -->
+      <div class="newsletter-form-wrap reveal delay-2">
+        <div class="newsletter-magnet">
+          <span class="magnet-label">GRILLE EXEC'IA</span>
+          <strong>Les 5 priorités IA<br>des dirigeants</strong>
+          <span class="magnet-sub">Identifiez rapidement les initiatives qui méritent réellement votre attention.</span>
+        </div>
+        <ul class="magnet-bullets">
+          <li>✓ Prioriser les bons sujets</li>
+          <li>✓ Éviter les investissements inutiles</li>
+          <li>✓ Identifier les gains rapides</li>
+          <li>✓ Décider avec plus de clarté</li>
+        </ul>
+        <form class="newsletter-form" id="nl-form" action="brevo-en-cours.html" method="get" novalidate>
+          <input type="text" name="prenom" placeholder="Prénom" autocomplete="given-name" required>
+          <input type="text" name="nom" placeholder="Nom" autocomplete="family-name" required>
+          <input type="email" name="email" id="nl-email" placeholder="Adresse e-mail professionnelle" autocomplete="email" required>
+          <p id="nl-email-error" style="display:none;color:#C75F62;font-size:.82rem;margin:-4px 0 0;padding-left:4px">Veuillez utiliser une adresse e-mail professionnelle.</p>
+          <button type="submit" class="btn btn-rose nl-submit">
+            Recevoir la ressource
+          </button>
+        </form>
+        <p class="newsletter-trust">🔒 Pas de spam &nbsp;•&nbsp; Désinscription en un clic &nbsp;•&nbsp; Conforme RGPD</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ VIDÉO ═════════════════════════════════════════════════ -->
+<!-- ═══ CONTACT ═══════════════════════════════════════════════ -->
+<section id="contact" class="bg-white">
+  <div class="wrap">
+    <div class="contact-center">
+      <span class="eyebrow reveal">Contact</span>
+      <h2 class="section-title reveal delay-1">Travaillons<br><span style="color:var(--rose)">ensemble</span></h2>
+      <p class="contact-lead reveal delay-2"><strong>Commencez à créer de la valeur avec l'IA sans plus attendre</strong>Conseil IA, formation dirigeants et déploiement d'usages à forte valeur.</p>
+      <div class="contact-btns reveal delay-3">
+        <a href="https://calendly.com/valerie-mailland" target="_blank" rel="noopener" class="btn btn-rose btn-lg">
+          Un premier entretien
+        </a>
+        <p class="contact-reassurance">30 minutes. Gratuit. Sans engagement.</p>
+      </div>
+      <div class="contact-linkedin reveal delay-4">
+        <a href="https://www.linkedin.com/in/val%C3%A9rie-mailland" target="_blank" rel="noopener" class="btn btn-plum-outline btn-lg">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="#0077B5"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          Me suivre sur LinkedIn
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ════════════════════════════════════════════════ -->
 <footer>
-  <span class="f-logo">EXEC'<span>IA</span></span>
-  <div class="f-links">
-    <a href="mailto:contact@exec-ia.ai">contact@exec-ia.ai</a>
-    <a href="https://exec-ia.ai">exec-ia.ai</a>
+  <div class="footer-brand-block">
+    <div class="footer-logos-row">
+      <img src="assets/EXECIA_CONSULTING_zoomé.png" alt="EXEC'IA Consulting" class="footer-logo-main">
+    </div>
   </div>
-  <p class="f-copy">© 2026 EXEC'IA Consulting &nbsp;·&nbsp; Tous droits réservés</p>
+  <p class="footer-tag">Une expérience dirigeante au service de votre transformation IA</p>
+  <p class="footer-mention-ia">Conception, contenus et automatisations assistés par Intelligence Artificielle&nbsp;• Validation humaine systématique</p>
+  <nav class="footer-nav">
+    <a href="index-en.html">🇬🇧 English</a>
+    <a href="index-es.html">🇪🇸 Español</a>
+  </nav>
+  <p class="footer-copy">© 2026 Valérie Mailland · EXEC'IA · <a href="mailto:valerie@exec-ia.ai" style="color:inherit;text-decoration:none;display:inline-flex;align-items:center;gap:5px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;vertical-align:middle;"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg><strong>valerie@exec-ia.ai</strong></a><br class="footer-copy-br"> Tous droits réservés · <a href="mentions-legales.html" style="color:rgba(246,241,235,.9);text-decoration:none;border:1px solid rgba(246,241,235,.35);border-radius:50px;padding:3px 12px;font-size:.82rem;white-space:nowrap;">Mentions légales</a></p>
 </footer>
 
+<!-- Tool info modal -->
+<div id="tool-modal" class="tmodal-overlay">
+  <div class="tmodal-card" role="dialog" aria-modal="true">
+    <button class="tmodal-close" id="tmodal-close">&times;</button>
+
+    <div class="tmodal-head">
+      <img id="tmi-logo" src="" alt="">
+      <div class="tmodal-head-info">
+        <strong id="tmi-name"></strong>
+        <em id="tmi-subtitle"></em>
+      </div>
+      <span class="tmodal-maturity-badge" id="tmi-maturity"></span>
+    </div>
+
+    <p class="tmodal-intro" id="tmi-desc"></p>
+
+    <div class="tmodal-section">
+      <span class="tmodal-lbl">Quand je le recommande</span>
+      <p id="tmi-when"></p>
+    </div>
+
+    <div class="tmodal-section">
+      <span class="tmodal-lbl">Cas d'usage</span>
+      <ul class="tmodal-list" id="tmi-cases"></ul>
+    </div>
+
+    <div class="tmodal-section tmodal-section--value">
+      <span class="tmodal-lbl">Valeur business créée</span>
+      <p id="tmi-value"></p>
+    </div>
+
+    <div class="tmodal-section tmodal-section--watch">
+      <span class="tmodal-lbl">Points de vigilance</span>
+      <p id="tmi-watch"></p>
+    </div>
+
+    <div class="tmodal-section tmodal-section--execia">
+      <span class="tmodal-lbl">Pourquoi il fait partie de mon écosystème IA</span>
+      <p id="tmi-execia"></p>
+    </div>
+
+    <div class="tmodal-section tmodal-section--avis">
+      <span class="tmodal-lbl">Mon avis de conseillère stratégique IA</span>
+      <p id="tmi-avis"></p>
+    </div>
+  </div>
+</div>
+
+<script src="assets/script.js"></script>
+<script>
+(function(){
+  var blocked = ['gmail.com','hotmail.com','outlook.com','yahoo.com','icloud.com','hotmail.fr','yahoo.fr','orange.fr','wanadoo.fr','free.fr','laposte.net','sfr.fr'];
+  var form = document.getElementById('nl-form');
+  var emailInput = document.getElementById('nl-email');
+  var error = document.getElementById('nl-email-error');
+  if(!form) return;
+  form.addEventListener('submit', function(e){
+    var val = emailInput.value.trim().toLowerCase();
+    var domain = val.split('@')[1] || '';
+    if(blocked.indexOf(domain) !== -1){
+      e.preventDefault();
+      error.style.display = 'block';
+      emailInput.focus();
+    } else {
+      error.style.display = 'none';
+    }
+  });
+  emailInput.addEventListener('input', function(){ error.style.display = 'none'; });
+})();
+</script>
 </body>
 </html>
