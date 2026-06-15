@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>5 Essentiels — EXEC'IA · Q4 2026</title>
+  <title>The 5 Essentials — EXEC'IA · Q4 2026</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Raleway:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
@@ -29,7 +29,6 @@
       flex-direction: column;
     }
 
-    /* ── PAGE A4 ── */
     .page {
       background: var(--ivory);
       width: 100%;
@@ -42,9 +41,6 @@
     .page-int { background: var(--white); }
     .top-rule { height: 3px; background: #C75F62; flex-shrink: 0; }
 
-    /* ══════════════════════════
-       COVER
-    ══════════════════════════ */
     .cover-body {
       flex: 1;
       display: flex;
@@ -146,9 +142,6 @@
       color: #F6F1EB; letter-spacing: .03em;
     }
 
-    /* ══════════════════════════
-       PAGES INTÉRIEURES
-    ══════════════════════════ */
     .int-header {
       display: flex; justify-content: space-between; align-items: center;
       padding: 20px 64px 0; flex-shrink: 0;
@@ -193,7 +186,6 @@
       color: var(--plum); line-height: 1.78;
       margin-bottom: 12px; max-width: 630px;
     }
-    /* Pull quote / ENCART */
     .int-pull {
       font-family: var(--serif); font-style: italic;
       font-size: 1.08rem; color: var(--plum);
@@ -204,7 +196,6 @@
       background: rgba(199,95,98,.06);
       border-radius: 0 3px 3px 0;
     }
-    /* Bullet list box */
     .int-box {
       background: var(--mist);
       border-left: 3px solid #C75F62;
@@ -228,7 +219,6 @@
       content: '→'; position: absolute; left: 0; top: 6px;
       color: #C75F62; font-size: .74rem;
     }
-    /* Question de dirigeant */
     .int-dir {
       margin-top: auto;
       padding: 14px 20px;
@@ -244,7 +234,6 @@
       font-family: var(--serif); font-style: italic;
       font-size: 1.05rem; color: var(--ivory); line-height: 1.55;
     }
-    /* Interior footer */
     .int-footer { padding: 0 64px 14px; flex-shrink: 0; }
     .int-footer-rule {
       width: 100%; height: 1px;
@@ -261,11 +250,9 @@
       color: #C75F62; opacity: .62; letter-spacing: .04em;
     }
 
-    /* ── CORRECTIONS 2 · 3 · 4 · 5 ────────────────────────── */
     .q-label               { display: none; }
     .page-int .int-pagenum { display: none; }
 
-    /* +39% textes pages intérieures (+10% sur la version précédente) */
     .page-int .q-title          { font-size: 2.93rem;  margin-bottom: 10px; }
     .page-int .q-lead           { font-size: 1.56rem;  margin-bottom: 8px; }
     .page-int .int-para         { font-size: 1.19rem;  margin-bottom: 8px; font-weight: 500; line-height: 1.85; letter-spacing: .010em; }
@@ -290,22 +277,18 @@
     .page-int .q-lead           { max-width: 860px; }
     .page-int .int-para         { max-width: 860px; }
 
-    /* footer → lisible */
     .page-int .int-footer-brand { opacity: 1; }
     .page-int .int-footer-pnum  { opacity: 1; }
-    /* breadcrumb → coin supérieur droit, couleur titre */
     .page-int .int-breadcrumb   {
       position: absolute; top: 14px; bottom: auto; right: 64px;
       opacity: 1; font-size: .77rem; letter-spacing: .12em; color: var(--plum);
     }
-    /* footer fiches → fond plum, textes ivoire */
     .page-int .int-footer       { background: var(--plum); padding: 10px 64px 12px; }
     .page-int .int-footer-rule  { background: rgba(246,241,235,.18); }
     .page-int .int-footer-brand { opacity: 1; color: rgba(246,241,235,.70); }
     .page-int .int-footer-pnum  { opacity: 1; color: var(--ivory); }
     .tc { color: #C75F62; }
 
-    /* ── FICHES 01–05 · +10% ──────────────────────── */
     #q1 .q-title, #q2 .q-title, #q3 .q-title, #q4 .q-title, #q5 .q-title       { font-size: 3.22rem; }
     #q1 .q-lead,  #q2 .q-lead,  #q3 .q-lead,  #q4 .q-lead,  #q5 .q-lead        { font-size: 1.72rem; }
     #q1 .q-lead { max-width: none; }
@@ -324,7 +307,7 @@
     .page-int .int-box-title { color: #3d1f2a; font-size: 1.54rem; }
     .page-int .int-box li    { font-size: 1.10rem; padding-left: 32px; color: #3d1f2a; }
     .tc { color: #C75F62; }
-    .page-int .int-dir-label { color: #FAF6F2; display: none; }
+    .page-int .int-dir-label { color: #FAF6F2; }
     .page-int .int-para { font-family: var(--serif); font-weight: 400; }
     #q1 .int-pull,#q2 .int-pull,#q3 .int-pull,#q4 .int-pull,#q5 .int-pull                            { font-size: 1.82rem; color: #3d1f2a; }
     #q1 .int-box-title,#q2 .int-box-title,#q3 .int-box-title,#q4 .int-box-title,#q5 .int-box-title    { font-size: 1.69rem; color: #3d1f2a; }
@@ -332,7 +315,7 @@
     #q2 .q-title { font-size: 2.75rem; }
     .page-int .int-box li::before { font-size: 1.05rem; }
 
-    /* ── FORMULAIRE D'ACCÈS ── */
+    /* ── ACCESS FORM ── */
     [data-gated] .page-int { display: none; }
     .gate-overlay {
       position: fixed; inset: 0;
@@ -407,35 +390,35 @@
     <div class="top-right">
       <div class="badge-q4">Q4 2026</div>
       <div class="top-langs">
-        <a href="cover-5questions-en.html">🇬🇧 English</a>
+        <a href="cover-5questions.html">🇫🇷 Français</a>
         <a href="cover-5questions-es.html">🇪🇸 Español</a>
       </div>
     </div>
     <div class="centre">
       <div class="grand-chiffre">5</div>
-      <p class="cover-title">Essentiels</p>
+      <p class="cover-title">The 5 Essentials</p>
       <div class="sep"></div>
       <p class="cover-subtitle">
-        Ce qui mérite vraiment votre attention<br>avant de devenir <span class="accent">une urgence</span>
+        What truly deserves your attention<br>before it becomes <span class="accent">an emergency</span>
       </p>
       <div class="boutons">
-        <a class="btn-q" href="#q1"><span class="btn-num">01</span>Quel sujet vous reprocherez-vous de ne pas avoir traité dans 90 jours ?</a>
-        <a class="btn-q" href="#q2"><span class="btn-num">02</span>Que feraient vos meilleurs managers si vous leur rendiez enfin 20 % de leur temps ?</a>
-        <a class="btn-q" href="#q3"><span class="btn-num">03</span>Que restera-t-il lorsque 20 ans d'expérience partiront à la retraite ?</a>
-        <a class="btn-q" href="#q4"><span class="btn-num">04</span>Quel client croyez-vous acquis alors qu'il ne l'est peut-être plus ?</a>
-        <a class="btn-q" href="#q5"><span class="btn-num">05</span>Quel angle mort coûte déjà plus cher que votre plus gros investissement ?</a>
+        <a class="btn-q" href="#q1"><span class="btn-num">01</span>What topic will you regret not having addressed in 90 days?</a>
+        <a class="btn-q" href="#q2"><span class="btn-num">02</span>What would your best managers do if you finally gave them back 20% of their time?</a>
+        <a class="btn-q" href="#q3"><span class="btn-num">03</span>What will remain when 20 years of experience retire?</a>
+        <a class="btn-q" href="#q4"><span class="btn-num">04</span>Which client do you believe is loyal when they may no longer be?</a>
+        <a class="btn-q" href="#q5"><span class="btn-num">05</span>Which blind spot is already costing more than your biggest investment?</a>
       </div>
     </div>
   </div>
   <footer>
     <div class="footer-logo-text">EXEC'<span class="logo-ia">IA</span></div>
     <p class="footer-logo-sub">Consulting</p>
-    <p class="footer-tag">Une expérience dirigeante au service de votre transformation IA</p>
+    <p class="footer-tag">Executive experience at the service of your AI transformation</p>
     <div class="footer-btns">
       <a class="footer-contact-btn" href="mailto:contact@exec-ia.ai">✉️ contact@exec-ia.ai</a>
-      <a class="footer-contact-btn" href="https://www.exec-ia.ai">🌐 www.exec-ia.ai</a>
+      <a class="footer-contact-btn" href="https://www.exec-ia.ai/en">🌐 www.exec-ia.ai</a>
     </div>
-    <p class="footer-copy">© EXEC'<span class="logo-ia">IA</span> — Tous droits réservés</p>
+    <p class="footer-copy">© EXEC'<span class="logo-ia">IA</span> — All rights reserved</p>
   </footer>
 </div>
 
@@ -443,38 +426,38 @@
 <div class="page page-int" id="q1">
   <div class="top-rule"></div>
   <div class="int-header">
-    <span class="int-breadcrumb">EXEC'IA · 5 Essentiels · Q4 2026</span>
+    <span class="int-breadcrumb">EXEC'IA · The 5 Essentials · Q4 2026</span>
     <span class="int-pagenum">01 / 05</span>
   </div>
   <div class="wm-num">01</div>
   <div class="int-body">
     <p class="q-label">Question 01</p>
-    <h2 class="q-title">Quel sujet vous reprocherez-vous<br>de ne pas avoir traité dans 90 jours ?</h2>
+    <h2 class="q-title">What topic will you regret not having addressed in 90 days?</h2>
     <div class="int-sep"></div>
-    <p class="q-lead">Les entreprises n'ont généralement pas un problème de vision. Elles ont un problème de priorisation.</p>
-    <div class="int-pull">Les sujets les plus coûteux sont rarement ceux que l'on ne voit pas. <span style="white-space:nowrap">Ce sont souvent ceux que l'on reporte.</span></div>
-    <p class="int-para">Chaque comité de direction possède sa liste de sujets importants. Ils sont connus. Ils sont documentés. Ils sont régulièrement évoqués. Et pourtant, certains demeurent en suspens pendant des mois — non parce qu'ils manquent d'importance, mais parce qu'ils ne semblent jamais assez urgents.</p>
+    <p class="q-lead">Companies generally don't have a vision problem. They have a prioritization problem.</p>
+    <div class="int-pull">The most costly topics are rarely those we don't see. <span style="white-space:nowrap">They're often the ones we keep postponing.</span></div>
+    <p class="int-para">Every executive committee has its list of important topics. They are known. They are documented. They are regularly brought up. Yet some remain in limbo for months — not because they lack importance, but because they never seem urgent enough.</p>
     <div class="int-box">
-      <p class="int-box-title">Les sujets qui attendent toujours leur tour</p>
+      <p class="int-box-title">Topics that always wait their turn</p>
       <ul>
-        <li>Une connaissance critique concentrée dans quelques têtes</li>
-        <li>Une information qui existe mais reste difficile à exploiter</li>
-        <li>Une décision ralentie par manque de visibilité</li>
-        <li>Un processus accepté alors qu'il ne satisfait plus personne</li>
+        <li>Critical knowledge concentrated in a few minds</li>
+        <li>Information that exists but remains difficult to use</li>
+        <li>A decision slowed by lack of visibility</li>
+        <li>A process accepted even though it no longer satisfies anyone</li>
       </ul>
     </div>
-    <div class="int-pull">Lorsqu'un sujet important reste trop longtemps dans la catégorie « plus tard », il finit souvent dans la catégorie « trop tard ».</div>
-    <p class="int-para">L'<span class="tc">Intelligence Artificielle</span> devient intéressante lorsqu'elle permet enfin de résoudre des problèmes que l'entreprise connaissait déjà, mais qu'elle n'avait jamais réussi à traiter simplement.</p>
-    <p class="int-para" style="max-width:none">Elle n'apporte pas la connaissance. Elle permet d'exploiter celle qui existe déjà.</p>
+    <div class="int-pull">When an important topic stays too long in the "later" category, it often ends up in the "too late" category.</div>
+    <p class="int-para"><span class="tc">Artificial Intelligence</span> becomes valuable when it finally makes it possible to solve problems the company already knew about, but had never managed to address simply.</p>
+    <p class="int-para" style="max-width:none">It doesn't bring knowledge. It makes it possible to leverage what already exists.</p>
     <div class="int-dir">
-      <p class="int-dir-label">Question de dirigeant</p>
-      <p class="int-dir-q">Quel sujet parfaitement identifié continuez-vous à repousser alors que son coût augmente chaque mois ?</p>
+      <p class="int-dir-label">Executive question</p>
+      <p class="int-dir-q">Which clearly identified topic do you keep postponing even though its cost grows every month?</p>
     </div>
   </div>
   <div class="int-footer">
     <div class="int-footer-rule"></div>
     <div class="int-footer-row">
-      <span class="int-footer-brand">EXEC'<span class="logo-ia">IA</span> — Tous droits réservés</span>
+      <span class="int-footer-brand">EXEC'<span class="logo-ia">IA</span> — All rights reserved</span>
       <span class="int-footer-pnum">1 / 5</span>
     </div>
   </div>
@@ -484,40 +467,39 @@
 <div class="page page-int" id="q2">
   <div class="top-rule"></div>
   <div class="int-header">
-    <span class="int-breadcrumb">EXEC'IA · 5 Essentiels · Q4 2026</span>
+    <span class="int-breadcrumb">EXEC'IA · The 5 Essentials · Q4 2026</span>
     <span class="int-pagenum">02 / 05</span>
   </div>
   <div class="wm-num">02</div>
   <div class="int-body">
     <p class="q-label">Question 02</p>
-    <h2 class="q-title">Que feraient vos meilleurs managers<br>si vous leur rendiez enfin 20 % de leur temps&nbsp;?</h2>
+    <h2 class="q-title">What would your best managers do<br>if you finally gave them back 20% of their time?</h2>
     <div class="int-sep"></div>
-    <p class="q-lead">Les entreprises parlent souvent de productivité. Les dirigeants devraient peut-être parler davantage d'effet de levier.</p>
-    <p class="int-para">Toutes les heures n'ont pas la même valeur. Une heure gagnée sur une tâche administrative n'a pas le même impact qu'une heure rendue à un manager capable d'accélérer un projet, développer un talent clé, débloquer une décision ou faire progresser un client stratégique.</p>
-    <div class="int-pull">Le sujet n'est pas le temps gagné. Le sujet est ce qui devient enfin possible.</div>
-    <p class="int-para">Dans beaucoup d'entreprises, les managers les plus expérimentés sont aussi les plus sollicités. Ils arbitrent, débloquent, expliquent, rassurent — et compensent parfois les limites des systèmes ou de l'organisation.</p>
-    <p class="int-para">C'est souvent le signe qu'ils créent de la valeur. C'est parfois le signe qu'ils en absorbent trop.</p>
+    <p class="q-lead">Companies often talk about productivity. Leaders should perhaps talk more about leverage.</p>
+    <p class="int-para">Not all hours have the same value. An hour saved on an administrative task doesn't have the same impact as an hour given back to a manager capable of accelerating a project, developing a key talent, unblocking a decision or advancing a strategic client.</p>
+    <div class="int-pull">The issue isn't the time gained. The issue is what finally becomes possible.</div>
+    <p class="int-para">In many companies, the most experienced managers are also the most in demand. They arbitrate, unblock, explain, reassure — and sometimes compensate for the limits of systems or the organization. This is often a sign that they create value. It is sometimes a sign that they absorb too much of it.</p>
     <div class="int-box">
-      <p class="int-box-title">Si demain ils récupéraient 20 % de leur temps, que construiriez-vous ?</p>
+      <p class="int-box-title">If tomorrow they got back 20% of their time, what would you build?</p>
       <ul>
-        <li>Une meilleure exécution des priorités stratégiques</li>
-        <li>Une relève managériale plus solide</li>
-        <li>Une relation client plus forte et plus durable</li>
-        <li>Une croissance plus rapide sur les marchés clés</li>
-        <li>Des décisions mieux éclairées, prises plus tôt</li>
+        <li>Better execution of strategic priorities</li>
+        <li>A stronger management pipeline</li>
+        <li>A stronger and more durable client relationship</li>
+        <li>Faster growth in key markets</li>
+        <li>Better-informed decisions, made earlier</li>
       </ul>
     </div>
-    <div class="int-pull">La ressource la plus rare n'est pas le temps. C'est l'attention des personnes capables de faire avancer l'entreprise.</div>
-    <p class="int-para">L'<span class="tc">Intelligence Artificielle</span> devient intéressante lorsqu'elle permet de libérer cette ressource. Non pas pour faire plus. Pour faire mieux.</p>
+    <div class="int-pull">The scarcest resource isn't time. It's the attention of people capable of moving the company forward.</div>
+    <p class="int-para"><span class="tc">Artificial Intelligence</span> becomes valuable when it makes it possible to free up this resource. Not to do more. To do better.</p>
     <div class="int-dir">
-      <p class="int-dir-label">Question de dirigeant</p>
-      <p class="int-dir-q">Que pourrait accomplir votre entreprise si vos meilleurs managers consacraient davantage de temps à construire qu'à compenser ?</p>
+      <p class="int-dir-label">Executive question</p>
+      <p class="int-dir-q">What could your company achieve if your best managers spent more time building than compensating?</p>
     </div>
   </div>
   <div class="int-footer">
     <div class="int-footer-rule"></div>
     <div class="int-footer-row">
-      <span class="int-footer-brand">EXEC'<span class="logo-ia">IA</span> — Tous droits réservés</span>
+      <span class="int-footer-brand">EXEC'<span class="logo-ia">IA</span> — All rights reserved</span>
       <span class="int-footer-pnum">2 / 5</span>
     </div>
   </div>
@@ -527,37 +509,37 @@
 <div class="page page-int" id="q3">
   <div class="top-rule"></div>
   <div class="int-header">
-    <span class="int-breadcrumb">EXEC'IA · 5 Essentiels · Q4 2026</span>
+    <span class="int-breadcrumb">EXEC'IA · The 5 Essentials · Q4 2026</span>
     <span class="int-pagenum">03 / 05</span>
   </div>
   <div class="wm-num">03</div>
   <div class="int-body">
     <p class="q-label">Question 03</p>
-    <h2 class="q-title">Que restera-t-il lorsque 20 ans<br>d'expérience partiront à la retraite ?</h2>
+    <h2 class="q-title">What will remain when 20 years of experience retire?</h2>
     <div class="int-sep"></div>
-    <p class="q-lead">Toutes les entreprises ont des organigrammes. Certaines reposent pourtant sur quelques personnes bien plus que sur leur organigramme.</p>
-    <div class="int-pull">Lorsqu'une entreprise dépend trop de quelques personnes, elle devient plus fragile qu'elle ne le pense.</div>
-    <p class="int-para">Certaines expertises sont visibles. D'autres sont presque invisibles : pourquoi un client stratégique agit de cette manière, quels risques surveiller avant qu'ils n'apparaissent dans les indicateurs, quelles décisions ont déjà été testées et pourquoi certaines ont réussi. Cette connaissance n'apparaît dans aucun organigramme, aucun processus, aucun tableau de bord.</p>
+    <p class="q-lead">Every company has an org chart. Yet some rely on a few people far more than on their org chart.</p>
+    <div class="int-pull">When a company depends too much on a few people, it becomes more fragile than it thinks.</div>
+    <p class="int-para">Some expertise is visible. Other expertise is nearly invisible: why a strategic client behaves in a certain way, which risks to monitor before they appear in the indicators, which decisions have already been tested and why some succeeded. This knowledge doesn't appear in any org chart, any process, any dashboard.</p>
     <div class="int-box">
-      <p class="int-box-title">Signaux à ne pas banaliser</p>
+      <p class="int-box-title">Signals not to normalize</p>
       <ul>
-        <li>Certaines décisions avancent uniquement lorsque quelques personnes interviennent</li>
-        <li>Certains sujets ralentissent dès qu'un expert est absent</li>
-        <li>Certaines connaissances sont connues mais difficilement transmissibles</li>
-        <li>Certaines réponses existent sans que personne sache réellement où les trouver</li>
+        <li>Some decisions only move forward when a few specific people are involved</li>
+        <li>Some topics slow down as soon as an expert is absent</li>
+        <li>Some knowledge is known but difficult to transfer</li>
+        <li>Some answers exist without anyone really knowing where to find them</li>
       </ul>
     </div>
-    <div class="int-pull">Le risque n'est pas le départ d'une personne. Le risque est de découvrir, après son départ, tout ce qu'elle était seule à savoir.</div>
-    <p class="int-para">L'<span class="tc">Intelligence Artificielle</span> permet aujourd'hui de structurer, retrouver et diffuser cette expérience avant qu'elle ne quitte l'entreprise. L'enjeu n'est pas de conserver des documents. L'enjeu est de réduire la dépendance à quelques personnes pour sécuriser la capacité collective à décider et à agir.</p>
+    <div class="int-pull">The risk isn't a person leaving. The risk is discovering, after they leave, everything only they knew.</div>
+    <p class="int-para"><span class="tc">Artificial Intelligence</span> now makes it possible to structure, retrieve and share this experience before it leaves the company. The challenge isn't to preserve documents. The challenge is to reduce dependence on a few people to secure the collective capacity to decide and act.</p>
     <div class="int-dir">
-      <p class="int-dir-label">Question de dirigeant</p>
-      <p class="int-dir-q">Quelles décisions de votre entreprise reposent encore davantage sur certaines personnes que sur l'organisation elle-même ?</p>
+      <p class="int-dir-label">Executive question</p>
+      <p class="int-dir-q">Which decisions in your company still rely more on certain individuals than on the organization itself?</p>
     </div>
   </div>
   <div class="int-footer">
     <div class="int-footer-rule"></div>
     <div class="int-footer-row">
-      <span class="int-footer-brand">EXEC'<span class="logo-ia">IA</span> — Tous droits réservés</span>
+      <span class="int-footer-brand">EXEC'<span class="logo-ia">IA</span> — All rights reserved</span>
       <span class="int-footer-pnum">3 / 5</span>
     </div>
   </div>
@@ -567,37 +549,37 @@
 <div class="page page-int" id="q4">
   <div class="top-rule"></div>
   <div class="int-header">
-    <span class="int-breadcrumb">EXEC'IA · 5 Essentiels · Q4 2026</span>
+    <span class="int-breadcrumb">EXEC'IA · The 5 Essentials · Q4 2026</span>
     <span class="int-pagenum">04 / 05</span>
   </div>
   <div class="wm-num">04</div>
   <div class="int-body">
     <p class="q-label">Question 04</p>
-    <h2 class="q-title">Quel client croyez-vous acquis<br>alors qu'il ne l'est peut-être plus ?</h2>
+    <h2 class="q-title">Which client do you believe is loyal when they may no longer be?</h2>
     <div class="int-sep"></div>
-    <p class="q-lead">Les entreprises consacrent beaucoup d'énergie à conquérir de nouveaux clients. Elles consacrent parfois moins d'attention à ceux qu'elles pensent déjà avoir gagnés.</p>
-    <div class="int-pull">Le plus grand risque n'est pas toujours de perdre un client. Le plus grand risque est de ne pas voir qu'il s'éloigne.</div>
-    <p class="int-para">Peu de clients annoncent leur départ à l'avance. Ils commandent un peu moins, répondent un peu plus tard, consultent d'autres acteurs, posent moins de questions, partagent moins d'informations. La relation ne se dégrade pas brutalement. Elle s'affaiblit progressivement.</p>
+    <p class="q-lead">Companies invest a great deal of energy in acquiring new clients. They sometimes invest less attention in those they believe they've already won.</p>
+    <div class="int-pull">The greatest risk isn't always losing a client. The greatest risk is not seeing that they're drifting away.</div>
+    <p class="int-para">Few clients announce their departure in advance. They order a little less, respond a little later, consult other players, ask fewer questions, share less information. The relationship doesn't deteriorate suddenly. It weakens gradually.</p>
     <div class="int-box">
-      <p class="int-box-title">Signaux à ne pas banaliser</p>
+      <p class="int-box-title">Signals not to normalize</p>
       <ul>
-        <li>Certains clients historiques deviennent plus silencieux</li>
-        <li>Certaines opportunités récurrentes disparaissent sans explication</li>
-        <li>Certains échanges deviennent plus transactionnels, moins stratégiques</li>
-        <li>Certaines décisions prennent plus de temps qu'auparavant</li>
+        <li>Some long-standing clients are becoming quieter</li>
+        <li>Some recurring opportunities disappear without explanation</li>
+        <li>Some exchanges become more transactional, less strategic</li>
+        <li>Some decisions take longer than before</li>
       </ul>
     </div>
-    <div class="int-pull">La fidélité d'un client se mesure rarement à ce qu'il a acheté hier. Elle se mesure à ce qu'il choisira demain.</div>
-    <p class="int-para">L'<span class="tc">Intelligence Artificielle</span> devient intéressante lorsqu'elle aide à révéler des évolutions que personne ne voyait isolément, mais qui deviennent évidentes une fois reliées entre elles. L'enjeu n'est pas de vendre davantage. L'enjeu est de comprendre plus tôt ce qui change réellement chez ses clients.</p>
+    <div class="int-pull">A client's loyalty is rarely measured by what they bought yesterday. It's measured by what they'll choose tomorrow.</div>
+    <p class="int-para"><span class="tc">Artificial Intelligence</span> becomes valuable when it helps reveal shifts that no one was seeing individually, but which become evident once connected. The challenge isn't to sell more. The challenge is to understand earlier what is genuinely changing with your clients.</p>
     <div class="int-dir">
-      <p class="int-dir-label">Question de dirigeant</p>
-      <p class="int-dir-q">Quels clients considérez-vous encore comme acquis alors que leurs comportements racontent peut-être déjà une autre histoire ?</p>
+      <p class="int-dir-label">Executive question</p>
+      <p class="int-dir-q">Which clients do you still consider loyal when their behavior may already be telling a different story?</p>
     </div>
   </div>
   <div class="int-footer">
     <div class="int-footer-rule"></div>
     <div class="int-footer-row">
-      <span class="int-footer-brand">EXEC'<span class="logo-ia">IA</span> — Tous droits réservés</span>
+      <span class="int-footer-brand">EXEC'<span class="logo-ia">IA</span> — All rights reserved</span>
       <span class="int-footer-pnum">4 / 5</span>
     </div>
   </div>
@@ -607,37 +589,37 @@
 <div class="page page-int" id="q5">
   <div class="top-rule"></div>
   <div class="int-header">
-    <span class="int-breadcrumb">EXEC'IA · 5 Essentiels · Q4 2026</span>
+    <span class="int-breadcrumb">EXEC'IA · The 5 Essentials · Q4 2026</span>
     <span class="int-pagenum">05 / 05</span>
   </div>
   <div class="wm-num">05</div>
   <div class="int-body">
     <p class="q-label">Question 05</p>
-    <h2 class="q-title">Quel angle mort coûte déjà plus cher<br>que votre plus gros investissement ?</h2>
+    <h2 class="q-title">Which blind spot is already costing<br>more than your biggest investment?</h2>
     <div class="int-sep"></div>
-    <p class="q-lead">Les dirigeants décident avec les informations qu'ils ont. Le problème n'est jamais ce qu'on sait mal. C'est ce qu'on ne sait pas encore qu'on ignore.</p>
-    <div class="int-pull">Un angle mort ne coûte pas au moment où on le découvre. Il coûte depuis le début — en silence.</div>
-    <p class="int-para">Dans chaque organisation, certaines zones restent systématiquement hors du champ de vision : un marché qui évolue plus vite qu'on ne le perçoit, un concurrent qui progresse sans que ses signaux soient remontés, une tendance interne qui s'installe avant d'être nommée. Ces angles morts ne manquent pas de données. Ils manquent souvent de recul, de connexions entre les sources, ou de quelqu'un pour les signaler au bon niveau.</p>
+    <p class="q-lead">Leaders decide with the information they have. The problem is never what we know poorly. It's what we don't yet know we're ignoring.</p>
+    <div class="int-pull">A blind spot doesn't cost at the moment of discovery. It has been costing since the beginning — in silence.</div>
+    <p class="int-para">In every organization, some areas remain systematically out of sight: a market evolving faster than perceived, a competitor advancing without their signals being flagged, an internal trend establishing itself before it's named. These blind spots don't lack data. They often lack perspective, connections between sources, or someone to flag them at the right level.</p>
     <div class="int-box">
-      <p class="int-box-title">Les angles morts les plus coûteux sont rarement les plus visibles</p>
+      <p class="int-box-title">The most costly blind spots are rarely the most visible</p>
       <ul>
-        <li>Un marché ou un segment qui évolue plus vite que vos capteurs internes</li>
-        <li>Une dépendance dont vous mesurez la taille seulement quand elle devient critique</li>
-        <li>Une décision stratégique prise sur des données partielles ou obsolètes</li>
-        <li>Un signal faible que chacun perçoit isolément, mais que personne n'a relié</li>
+        <li>A market or segment evolving faster than your internal sensors</li>
+        <li>A dependency whose size you only measure when it becomes critical</li>
+        <li>A strategic decision made on partial or outdated data</li>
+        <li>A weak signal each person perceives individually, but that no one has connected</li>
       </ul>
     </div>
-    <div class="int-pull">Ce n'est pas l'information qui manque. C'est la capacité à la voir avant qu'elle ne coûte.</div>
-    <p class="int-para">L'<span class="tc">Intelligence Artificielle</span> devient intéressante lorsqu'elle connecte des données que personne ne reliait, et révèle ce que l'organisation ne savait pas qu'elle ne voyait pas. L'enjeu n'est pas de tout surveiller. L'enjeu est de voir plus tôt ce qui comptera.</p>
+    <div class="int-pull">It's not information that's missing. It's the ability to see it before it costs.</div>
+    <p class="int-para"><span class="tc">Artificial Intelligence</span> becomes valuable when it connects data that no one was linking, and reveals what the organization didn't know it wasn't seeing. The challenge isn't to monitor everything. The challenge is to see earlier what will matter.</p>
     <div class="int-dir">
-      <p class="int-dir-label">Question de dirigeant</p>
-      <p class="int-dir-q">Quel sujet traverse aujourd'hui votre organisation sans que personne ne soit réellement chargé de le surveiller ?</p>
+      <p class="int-dir-label">Executive question</p>
+      <p class="int-dir-q">Which topic is currently moving through your organization without anyone truly responsible for monitoring it?</p>
     </div>
   </div>
   <div class="int-footer">
     <div class="int-footer-rule"></div>
     <div class="int-footer-row">
-      <span class="int-footer-brand">EXEC'<span class="logo-ia">IA</span> — Tous droits réservés</span>
+      <span class="int-footer-brand">EXEC'<span class="logo-ia">IA</span> — All rights reserved</span>
       <span class="int-footer-pnum">5 / 5</span>
     </div>
   </div>
@@ -648,33 +630,33 @@
 <div class="gate-overlay" id="gateOverlay" role="dialog" aria-modal="true">
   <div class="gate-modal">
     <div class="gate-top-rule"></div>
-    <p class="gate-eyebrow">Accès document</p>
-    <h2 class="gate-title">Avant d'accéder aux <em>5 Essentiels</em></h2>
-    <p class="gate-sub">Renseignez vos coordonnées pour accéder au document.</p>
+    <p class="gate-eyebrow">Document access</p>
+    <h2 class="gate-title">Before accessing <em>The 5 Essentials</em></h2>
+    <p class="gate-sub">Fill in your details to access the document.</p>
     <form id="gateForm" novalidate>
       <div class="gate-field">
-        <label for="gf-name">Prénom et NOM</label>
-        <input id="gf-name" name="fullname" type="text" placeholder="Marie Dupont" autocomplete="name">
+        <label for="gf-name">First and Last Name</label>
+        <input id="gf-name" name="fullname" type="text" placeholder="Jane Smith" autocomplete="name">
         <span class="gate-err" id="err-name"></span>
       </div>
       <div class="gate-field">
-        <label for="gf-role">Fonction</label>
-        <input id="gf-role" name="role" type="text" placeholder="Directrice Générale" autocomplete="organization-title">
+        <label for="gf-role">Job Title</label>
+        <input id="gf-role" name="role" type="text" placeholder="Chief Executive Officer" autocomplete="organization-title">
         <span class="gate-err" id="err-role"></span>
       </div>
       <div class="gate-field">
-        <label for="gf-company">Société</label>
-        <input id="gf-company" name="company" type="text" placeholder="Nom de votre entreprise" autocomplete="organization">
+        <label for="gf-company">Company</label>
+        <input id="gf-company" name="company" type="text" placeholder="Your company name" autocomplete="organization">
         <span class="gate-err" id="err-company"></span>
       </div>
       <div class="gate-field">
-        <label for="gf-email">E-mail professionnel</label>
-        <input id="gf-email" name="email" type="email" placeholder="marie.dupont@entreprise.fr" autocomplete="email">
+        <label for="gf-email">Professional Email</label>
+        <input id="gf-email" name="email" type="email" placeholder="jane.smith@company.com" autocomplete="email">
         <span class="gate-err" id="err-email"></span>
       </div>
-      <button type="submit" class="gate-submit">Accéder au document</button>
+      <button type="submit" class="gate-submit">Access the document</button>
     </form>
-    <p class="gate-note">Vos coordonnées sont utilisées uniquement pour vous transmettre ce document.<br>Aucun démarchage.</p>
+    <p class="gate-note">Your information is used solely to provide you with this document.<br>No solicitation.</p>
   </div>
 </div>
 <script>
@@ -690,15 +672,15 @@
   fm.addEventListener('submit',function(e){
     e.preventDefault();
     var els=fm.elements,n=els['fullname'].value.trim(),r=els['role'].value.trim(),c=els['company'].value.trim(),em=els['email'].value.trim(),ok=true;
-    if(!n){setErr('err-name','Veuillez indiquer votre prénom et nom.');ok=false;}else setErr('err-name','');
-    if(!r){setErr('err-role','Veuillez indiquer votre fonction.');ok=false;}else setErr('err-role','');
-    if(!c){setErr('err-company','Veuillez indiquer le nom de votre société.');ok=false;}else setErr('err-company','');
+    if(!n){setErr('err-name','Please enter your first and last name.');ok=false;}else setErr('err-name','');
+    if(!r){setErr('err-role','Please enter your job title.');ok=false;}else setErr('err-role','');
+    if(!c){setErr('err-company','Please enter your company name.');ok=false;}else setErr('err-company','');
     var d=(em.split('@')[1]||'').toLowerCase();
-    if(!em){setErr('err-email','Veuillez indiquer votre adresse e-mail professionnelle.');ok=false;}
-    else if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em)){setErr('err-email','Format d\'adresse e-mail invalide.');ok=false;}
-    else if(C.has(d)){setErr('err-email','Une adresse e-mail professionnelle est requise — Gmail, Yahoo, Hotmail et autres messageries grand public ne sont pas acceptées.');ok=false;}
+    if(!em){setErr('err-email','Please enter your professional email address.');ok=false;}
+    else if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em)){setErr('err-email','Invalid email address format.');ok=false;}
+    else if(C.has(d)){setErr('err-email','A professional email address is required — Gmail, Yahoo, Hotmail and other personal email providers are not accepted.');ok=false;}
     else setErr('err-email','');
-    if(ok){submitAT({fullname:n,role:r,company:c,email:em,langue:'FR',document_telecharge:'Les 5 Essentiels',source:'Direct'});unlock();}
+    if(ok){submitAT({fullname:n,role:r,company:c,email:em,langue:'EN',document_telecharge:'The 5 Essentials',source:'Direct'});unlock();}
   });
   ov.addEventListener('click',function(e){if(e.target===ov)ov.classList.remove('open');});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')ov.classList.remove('open');});

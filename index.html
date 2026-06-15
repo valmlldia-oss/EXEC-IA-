@@ -751,6 +751,109 @@
   </div>
 </section>
 
+<!-- ═══ LEAD MAGNET — LES 5 ESSENTIELS ════════════════════════ -->
+<section id="lead-magnet" class="lm-section">
+  <div class="wrap">
+    <div class="lm-inner">
+      <div class="lm-text reveal">
+        <span class="eyebrow">Ressource exclusive dirigeants</span>
+        <h2 class="lm-title">Les questions que vous ne<br>vous posez pas encore.</h2>
+        <p class="lm-desc">Un guide stratégique conçu pour les dirigeants qui veulent avancer sur l'IA avec clarté, méthode et sans perdre de temps.</p>
+        <ul class="lm-bullets">
+          <li>Les 5 décisions IA à prendre en priorité</li>
+          <li>Les pièges à éviter dès maintenant</li>
+          <li>Une grille de lecture immédiatement actionnable</li>
+        </ul>
+      </div>
+      <div class="lm-card reveal delay-2">
+        <div class="lm-card-meta">
+          <span class="lm-card-label">EXEC'IA</span>
+          <span class="lm-card-divider"></span>
+          <span class="lm-card-quarter">Q2 2026</span>
+        </div>
+        <h3 class="lm-card-title">Les 5<br>Essentiels</h3>
+        <p class="lm-card-sub">Guide stratégique IA<br>pour dirigeants</p>
+        <button class="btn btn-rose lm-btn" id="lm-open">LES 5 ESSENTIELS<br>À TÉLÉCHARGER</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ GATE — LES 5 ESSENTIELS ════════════════════════════════ -->
+<div id="lm-overlay" class="lm-overlay" role="dialog" aria-modal="true" aria-labelledby="lm-modal-title">
+  <div class="lm-modal">
+    <button class="lm-modal-close" id="lm-close" aria-label="Fermer">&times;</button>
+    <p class="lm-modal-eyebrow">Accès document</p>
+    <h2 class="lm-modal-title" id="lm-modal-title">Avant de télécharger<br><em>Les 5 Essentiels</em></h2>
+    <form id="lm-form" novalidate>
+      <div class="lm-field">
+        <label for="lm-name">Prénom et NOM <span class="lm-req">*</span></label>
+        <input id="lm-name" name="fullname" type="text" placeholder="Marie DUPONT" autocomplete="name">
+      </div>
+      <div class="lm-field">
+        <label for="lm-role">Fonction <span class="lm-req">*</span></label>
+        <input id="lm-role" name="role" type="text" placeholder="Directrice Générale" autocomplete="organization-title">
+      </div>
+      <div class="lm-field">
+        <label for="lm-company">Société <span class="lm-req">*</span></label>
+        <input id="lm-company" name="company" type="text" placeholder="Nom de votre société" autocomplete="organization">
+      </div>
+      <div class="lm-field">
+        <label for="lm-email">E-mail professionnel <span class="lm-req">*</span></label>
+        <input id="lm-email" name="email" type="email" placeholder="prenom@votresociete.com" autocomplete="email">
+      </div>
+      <div class="lm-global-err" id="lm-global-err"></div>
+      <button type="submit" class="btn btn-rose lm-submit" id="lm-submit">Télécharger le document</button>
+      <div class="lm-api-err" id="lm-api-err"></div>
+    </form>
+  </div>
+</div>
+<script>
+(function(){
+  /* ── URLs PDF — renseigner avant déploiement ──────────────── */
+  var LM_PDFS = {
+    FR: '/assets/EXECIA_5Questions_Q4_2026_FR.pdf',   /* ← URL du PDF français  */
+    EN: '/assets/EXECIA_5Questions_Q4_2026_EN.pdf',   /* ← URL du PDF anglais   */
+    ES: '/assets/EXECIA_5Questions_Q4_2026_ES.pdf',   /* ← URL du PDF espagnol  */
+  };
+  /* ─────────────────────────────────────────────────────────── */
+  var LM_LANG='FR', LM_DOC='Les 5 Essentiels';
+  var BLOCKED=new Set(['gmail.com','googlemail.com','yahoo.com','yahoo.fr','yahoo.co.uk','hotmail.com','hotmail.fr','hotmail.co.uk','outlook.com','outlook.fr','live.com','live.fr','icloud.com','me.com','mac.com','proton.me','protonmail.com','pm.me','aol.com','zoho.com','ymail.com','mail.com','gmx.com','gmx.fr','gmx.de','laposte.net','free.fr','orange.fr','wanadoo.fr','sfr.fr','bbox.fr','neuf.fr','numericable.fr','club-internet.fr','aliceadsl.fr','cegetel.net']);
+  var ov=document.getElementById('lm-overlay'),fm=document.getElementById('lm-form'),btn=document.getElementById('lm-submit'),ger=document.getElementById('lm-global-err'),aer=document.getElementById('lm-api-err');
+  function resetForm(){fm.reset();ger.textContent='';aer.textContent='';fm.querySelectorAll('input').forEach(function(i){i.classList.remove('err');});}
+  function closeModal(){ov.classList.remove('open');}
+  document.getElementById('lm-open').addEventListener('click',function(){ov.classList.add('open');resetForm();setTimeout(function(){document.getElementById('lm-name').focus();},120);});
+  document.getElementById('lm-close').addEventListener('click',closeModal);
+  ov.addEventListener('click',function(e){if(e.target===ov)closeModal();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
+  fm.addEventListener('submit',async function(e){
+    e.preventDefault();
+    ger.textContent='';aer.textContent='';
+    fm.querySelectorAll('input').forEach(function(i){i.classList.remove('err');});
+    var n=fm.elements['fullname'].value.trim(),r=fm.elements['role'].value.trim(),c=fm.elements['company'].value.trim(),em=fm.elements['email'].value.trim(),ok=true;
+    if(!n){document.getElementById('lm-name').classList.add('err');ok=false;}
+    if(!r){document.getElementById('lm-role').classList.add('err');ok=false;}
+    if(!c){document.getElementById('lm-company').classList.add('err');ok=false;}
+    var domain=(em.split('@')[1]||'').toLowerCase();
+    if(!em){document.getElementById('lm-email').classList.add('err');ok=false;}
+    else if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em)){document.getElementById('lm-email').classList.add('err');ok=false;}
+    else if(BLOCKED.has(domain)){document.getElementById('lm-email').classList.add('err');ger.textContent='Merci d\'utiliser votre adresse e-mail professionnelle.';ok=false;}
+    if(!ok){if(!ger.textContent)ger.textContent='Merci de compléter l\'ensemble des champs obligatoires.';return;}
+    btn.disabled=true;btn.textContent='Enregistrement…';
+    try{
+      var res=await fetch('/api/airtable',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({fullname:n,role:r,company:c,email:em,langue:LM_LANG,document_telecharge:LM_DOC,source:'EXECIA_PRUNE'})});
+      if(!res.ok)throw new Error('api');
+      var a=document.createElement('a');a.href=LM_PDFS[LM_LANG];a.download='';document.body.appendChild(a);a.click();document.body.removeChild(a);
+      closeModal();
+    }catch(err){
+      aer.textContent='Une erreur est survenue. Veuillez réessayer ou nous contacter directement.';
+    }finally{
+      btn.disabled=false;btn.textContent='Télécharger le document';
+    }
+  });
+})();
+</script>
+
 <!-- ═══ NEWSLETTER ════════════════════════════════════════════ -->
 <section id="newsletter" class="newsletter-section">
   <div class="wrap">
@@ -772,7 +875,7 @@
       <div class="newsletter-form-wrap reveal delay-2">
         <div class="newsletter-magnet">
           <span class="magnet-label">GRILLE EXEC'IA</span>
-          <strong>XXX</strong>
+          <strong>Les 5 priorités IA<br>des dirigeants</strong>
           <span class="magnet-sub">Identifiez rapidement les initiatives qui méritent réellement votre attention.</span>
         </div>
         <ul class="magnet-bullets">
