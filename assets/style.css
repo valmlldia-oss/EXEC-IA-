@@ -2018,14 +2018,14 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
   overflow: hidden;
   position: relative;
   aspect-ratio: 1586 / 992;
-  background: var(--ivory);
+  background: #3d2030;
 }
 .agent-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  mix-blend-mode: multiply;
+  mix-blend-mode: normal;
 }
 /* No overlay gradient */
 .agent-img::after {
@@ -2039,13 +2039,12 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
 .agent-card:nth-child(3) .agent-img img {
   transform: translateY(3px);
 }
-/* Facturation : idem */
+/* Facturation */
 .agent-card:nth-child(6) .agent-img {
-  background: var(--plum);
+  background: #3d2030;
 }
 .agent-card:nth-child(6) .agent-img img {
   mix-blend-mode: normal;
-  filter: brightness(1.2) saturate(1.05);
 }
 
 /* Soon placeholder */
