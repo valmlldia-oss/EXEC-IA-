@@ -1,21 +1,44 @@
+/* ── Bloquer le scroll-restore du navigateur (évite les sauts au chargement) ── */
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+
 /* ── Nav scroll ── */
 const nav = document.getElementById('nav');
 const onScroll = () => nav.classList.toggle('scrolled', scrollY > 56);
 window.addEventListener('scroll', onScroll, { passive: true });
 onScroll();
 
+/* ── Helper : scroll vers un élément sans saut ── */
+function smoothScrollTo(id) {
+  const target = document.getElementById(id);
+  if (!target) return;
+  document.querySelector('.nav-links')?.classList.remove('open');
+  /* Double-RAF : 1er frame = fermeture menu / 2e frame = layout stabilisé */
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    const navH = document.getElementById('nav')?.offsetHeight || 80;
+    const top = target.getBoundingClientRect().top + window.scrollY - navH;
+    window.scrollTo({ top, behavior: 'smooth' });
+  }));
+}
+
 /* ── Smooth anchor scrolling (JS only — no CSS scroll-behavior) ── */
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', function(e) {
     const id = this.getAttribute('href').slice(1);
     if (!id) return;
-    const target = document.getElementById(id);
-    if (!target) return;
+    if (!document.getElementById(id)) return;
     e.preventDefault();
-    const navH = document.getElementById('nav')?.offsetHeight || 72;
-    const top = target.getBoundingClientRect().top + window.scrollY - navH;
-    window.scrollTo({ top, behavior: 'smooth' });
+    smoothScrollTo(id);
   });
+});
+
+/* ── Gérer le hash initial dans l'URL (évite le saut natif au chargement) ── */
+window.addEventListener('DOMContentLoaded', () => {
+  if (location.hash) {
+    const id = location.hash.slice(1);
+    /* Remonter immédiatement en haut, puis scroller en douceur */
+    window.scrollTo(0, 0);
+    setTimeout(() => smoothScrollTo(id), 120);
+  }
 });
 
 /* ── Mobile menu ── */

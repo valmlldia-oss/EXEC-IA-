@@ -61,18 +61,14 @@ module.exports = async function handler(req, res) {
   }
 };
 
-const PDF_PATHS = {
-  FR: '/assets/EXECIA_5Questions_Q4_2026_FR.pdf',
-  EN: '/assets/EXECIA_5Questions_Q4_2026_EN.pdf',
-  ES: '/assets/EXECIA_5Questions_Q4_2026_ES.pdf',
-};
+const DOC_URL = '/assets/Les%205%20Essentiels_The%205%20Essentials_Los%205%20Esenciales.html';
 
 const EMAIL_COPY = {
   FR: {
     subject: "EXEC'IA — Les 5 Essentiels IA pour dirigeants",
     greeting: 'Bonjour',
     intro: "Merci de votre intérêt pour <strong>Les 5 Essentiels IA pour dirigeants</strong>. Retrouvez ci-dessous votre document à télécharger.",
-    btn: 'Télécharger le document',
+    btn: 'Voir le document',
     note: "Ce lien vous permet d'accéder directement au PDF. Si le bouton ne s'affiche pas, copiez-collez ce lien dans votre navigateur :",
     rights: 'Tous droits réservés',
   },
@@ -80,7 +76,7 @@ const EMAIL_COPY = {
     subject: "EXEC'IA — The 5 AI Essentials for Leaders",
     greeting: 'Hello',
     intro: "Thank you for your interest in <strong>The 5 AI Essentials for Leaders</strong>. Find your document below.",
-    btn: 'Download the document',
+    btn: 'View the document',
     note: 'This link gives you direct access to the PDF. If the button does not display, copy and paste this link into your browser:',
     rights: 'All rights reserved',
   },
@@ -88,7 +84,7 @@ const EMAIL_COPY = {
     subject: "EXEC'IA — Los 5 Esenciales de IA para Directivos",
     greeting: 'Hola',
     intro: "Gracias por su interés en <strong>Los 5 Esenciales de IA para Directivos</strong>. Encontrará su documento a continuación.",
-    btn: 'Descargar el documento',
+    btn: 'Ver el documento',
     note: 'Este enlace le da acceso directo al PDF. Si el botón no se muestra, copie y pegue este enlace en su navegador:',
     rights: 'Todos los derechos reservados',
   },
@@ -97,7 +93,7 @@ const EMAIL_COPY = {
 async function sendBrevoEmail({ fullname, email, langue, siteUrl }) {
   const lang = ['FR', 'EN', 'ES'].includes(langue) ? langue : 'FR';
   const copy = EMAIL_COPY[lang];
-  const pdfUrl = siteUrl + PDF_PATHS[lang];
+  const pdfUrl = siteUrl + DOC_URL;
 
   const html = `<!DOCTYPE html>
 <html>
