@@ -140,7 +140,7 @@ async function sendBrevoEmail({ fullname, email, langue, siteUrl }) {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      sender: { name: "EXEC'IA", email: 'contact@execia.fr' },
+      sender: { name: "EXEC'IA", email: 'contact@exec-ia.ai' },
       to: [{ email, name: fullname }],
       subject: copy.subject,
       htmlContent: html,
