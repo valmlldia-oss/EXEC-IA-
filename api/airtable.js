@@ -20,6 +20,7 @@ module.exports = async function handler(req, res) {
 
   const fields = {
     'Horodatage': now.toISOString(),
+    'Trimestre': trimestre,
     'Statut': 'Nouveau',
     'Prénom_NOM': fullname,
     'Fonction': role || '',
