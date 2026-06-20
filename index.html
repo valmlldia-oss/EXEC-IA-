@@ -810,6 +810,13 @@
           <p class="newsletter-trust">🔒 Pas de spam &nbsp;•&nbsp; Désinscription en un clic &nbsp;•&nbsp; Conforme RGPD</p>
         </div>
 
+        <!-- Message de confirmation -->
+        <div id="nl-box-success" style="display:none;padding:32px 24px;text-align:center;">
+          <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.6rem;color:#FAF6F2;font-weight:400;margin:0 0 12px;line-height:1.3;">Merci <span id="nl-success-name"></span>&nbsp;—</p>
+          <p style="font-size:.95rem;color:#D9C9C3;margin:0 0 20px;line-height:1.6;">Votre document est en route.<br>Vérifiez votre boîte email professionnelle dans quelques instants.</p>
+          <p style="font-size:.78rem;color:#B8B1AA;">🔒 Conforme RGPD &nbsp;•&nbsp; Désinscription en un clic</p>
+        </div>
+
       </div>
 
     </div>
@@ -854,10 +861,13 @@
       var res=await fetch('/api/airtable',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({fullname:n,role:r,company:c,email:em,langue:LANG,document_telecharge:'5 Essentiels',source:'EXECIA_PRUNE'})});
       if(!res.ok)throw new Error('api');
       window.open(PDFS[LANG],'_blank');
+      var prenom=n.split(' ')[0];
+      document.getElementById('nl-success-name').textContent=prenom;
+      document.getElementById('nl-box-form').style.display='none';
+      document.getElementById('nl-box-success').style.display='block';
     }catch(err){
       errEl.textContent='Une erreur est survenue. Merci de réessayer dans quelques instants.';
       errEl.style.display='block';
-    }finally{
       sb.disabled=false;sb.textContent='Recevoir la ressource';
     }
   });

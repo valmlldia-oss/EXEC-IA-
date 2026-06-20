@@ -830,6 +830,11 @@
       <button type="submit" class="btn btn-rose lm-submit" id="lm-submit">Descargar el documento</button>
       <div class="lm-api-err" id="lm-api-err"></div>
     </form>
+    <div id="lm-success" style="display:none;text-align:center;padding:24px 0;">
+      <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.5rem;color:#6B625D;font-weight:400;margin:0 0 10px;">Gracias <span id="lm-success-name"></span>&nbsp;—</p>
+      <p style="font-size:.93rem;color:#6B625D;margin:0 0 16px;line-height:1.6;">Su documento está en camino.<br>Revise su bandeja de entrada profesional en unos instantes.</p>
+      <p style="font-size:.76rem;color:#B8B1AA;">🔒 Conforme RGPD &nbsp;•&nbsp; Cancelar suscripción en un clic</p>
+    </div>
   </div>
 </div>
 <script>
@@ -867,10 +872,12 @@
       var res=await fetch('/api/airtable',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({fullname:n,role:r,company:c,email:em,langue:LM_LANG,document_telecharge:LM_DOC,source:'EXECIA_PRUNE'})});
       if(!res.ok)throw new Error('api');
       window.open(LM_PDFS[LM_LANG],'_blank');
-      closeModal();
+      var prenom=n.split(' ')[0];
+      document.getElementById('lm-success-name').textContent=prenom;
+      document.getElementById('lm-form').style.display='none';
+      document.getElementById('lm-success').style.display='block';
     }catch(err){
       aer.textContent='Se ha producido un error. Por favor, inténtelo de nuevo o contáctenos directamente.';
-    }finally{
       btn.disabled=false;btn.textContent='Descargar el documento';
     }
   });
