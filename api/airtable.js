@@ -46,7 +46,7 @@ module.exports = async function handler(req, res) {
 
     if (!atRes.ok) {
       console.error('Airtable error:', JSON.stringify(atData));
-      return res.status(502).json({ error: 'Upstream error', detail: atData });
+      return res.status(502).json({ error: 'Upstream error' });
     }
 
     sendBrevoEmail({ fullname, email, langue: langue || 'FR', siteUrl }).catch(err =>

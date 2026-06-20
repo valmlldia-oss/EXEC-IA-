@@ -858,7 +858,7 @@
     if(!ok){if(!errEl.textContent){errEl.textContent='Merci de compléter l\'ensemble des champs obligatoires.';errEl.style.display='block';}return;}
     sb.disabled=true;sb.textContent='Enregistrement…';
     try{
-      var res=await fetch('/api/airtable',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({fullname:n,role:r,company:c,email:em,langue:LANG,document_telecharge:'5 Essentiels',source:'EXECIA_PRUNE'})});
+      var res=await fetch('/api/airtable',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({fullname:n,role:r,company:c,email:em,langue:LANG,document_telecharge:'Les 5 Essentiels',source:'EXECIA_PRUNE'})});
       if(!res.ok)throw new Error('api');
       window.open(PDFS[LANG],'_blank');
       var prenom=n.split(' ')[0];
