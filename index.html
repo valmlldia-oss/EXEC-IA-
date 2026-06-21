@@ -875,20 +875,15 @@
     else if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em)){document.getElementById('nl-email').classList.add('err');ok=false;}
     else if(BLOCKED.has(domain)){document.getElementById('nl-email').classList.add('err');errEl.textContent='Merci d\'utiliser votre adresse e-mail professionnelle.';errEl.style.display='block';ok=false;}
     if(!ok){if(!errEl.textContent){errEl.textContent='Merci de compléter l\'ensemble des champs obligatoires.';errEl.style.display='block';}return;}
-    sb.disabled=true;sb.textContent='Enregistrement…';
-    try{
-      var res=await fetch('/api/airtable',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({fullname:n,role:r,company:c,email:em,langue:LANG,document_telecharge:'Les 5 Essentiels',source:'EXECIA_PRUNE'})});
-      if(!res.ok)throw new Error('api');
-      var prenom=n.split(' ')[0];
-      document.getElementById('nl-success-name').textContent=prenom;
-      document.getElementById('nl-doc-link').href=PDFS[LANG];
-      document.getElementById('nl-box-form').style.display='none';
-      document.getElementById('nl-box-success').style.display='block';
-    }catch(err){
-      errEl.textContent='Erreur : '+(err&&err.message?err.message:'fetch failed');
-      errEl.style.display='block';
-      sb.disabled=false;sb.textContent='Recevoir la ressource';
-    }
+    /* 1. Accès immédiat au document — ne dépend pas de l'API */
+    var prenom=n.split(' ')[0];
+    document.getElementById('nl-success-name').textContent=prenom;
+    document.getElementById('nl-doc-link').href=PDFS[LANG];
+    document.getElementById('nl-box-form').style.display='none';
+    document.getElementById('nl-box-success').style.display='block';
+
+    /* 2. Enregistrement en arrière-plan (fire-and-forget) */
+    fetch('/api/airtable',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({fullname:n,role:r,company:c,email:em,langue:LANG,document_telecharge:'Les 5 Essentiels',source:'EXECIA_PRUNE'})}).catch(function(){});
   });
 })();
 </script>
