@@ -807,9 +807,10 @@
         <!-- Message de confirmation -->
         <div id="nl-box-success" style="display:none;padding:32px 24px;text-align:center;">
           <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.6rem;color:#FAF6F2;font-weight:400;margin:0 0 12px;line-height:1.3;">Merci <span id="nl-success-name"></span>&nbsp;—</p>
-          <p style="font-size:.95rem;color:#D9C9C3;margin:0 0 20px;line-height:1.6;">Votre document est en route.<br>Vérifiez votre boîte email professionnelle dans quelques instants.</p>
+          <p style="font-size:.95rem;color:#D9C9C3;margin:0 0 20px;line-height:1.6;">Un email est en route vers votre boîte professionnelle.<br>Vous pouvez aussi accéder directement au document&nbsp;:</p>
+          <a id="nl-doc-link" href="#" target="_blank" rel="noopener" style="display:inline-block;margin-bottom:20px;background:#C75F62;color:#FAF6F2;font-family:'Raleway',sans-serif;font-size:.88rem;font-weight:500;letter-spacing:.1em;text-decoration:none;padding:13px 28px;border-radius:2px;">Voir le document</a>
           <p style="font-size:.78rem;color:#B8B1AA;">🔒 Conforme RGPD &nbsp;•&nbsp; Désinscription en un clic</p>
-          <button type="button" id="nl-new-signup" style="margin-top:20px;background:transparent;border:1px solid rgba(250,246,242,.35);color:#FAF6F2;font-family:'Raleway',sans-serif;font-size:.82rem;letter-spacing:.08em;padding:10px 22px;cursor:pointer;border-radius:2px;">Inscrire un autre participant</button>
+          <button type="button" id="nl-new-signup" style="margin-top:16px;display:block;width:100%;background:transparent;border:1px solid rgba(250,246,242,.25);color:#B8B1AA;font-family:'Raleway',sans-serif;font-size:.78rem;letter-spacing:.08em;padding:9px 20px;cursor:pointer;border-radius:2px;">Inscrire un autre participant</button>
         </div>
 
       </div>
@@ -877,9 +878,9 @@
     try{
       var res=await fetch('/api/airtable',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({fullname:n,role:r,company:c,email:em,langue:LANG,document_telecharge:'Les 5 Essentiels',source:'EXECIA_PRUNE'})});
       if(!res.ok)throw new Error('api');
-      window.open(PDFS[LANG],'_blank');
       var prenom=n.split(' ')[0];
       document.getElementById('nl-success-name').textContent=prenom;
+      document.getElementById('nl-doc-link').href=PDFS[LANG];
       document.getElementById('nl-box-form').style.display='none';
       document.getElementById('nl-box-success').style.display='block';
     }catch(err){
