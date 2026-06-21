@@ -3012,10 +3012,10 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
 }
 .vrai-enjeu-accent {
   font-family: var(--serif);
-  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  font-size: clamp(1.15rem, 1.65vw, 1.6rem);
   font-style: italic;
   color: var(--ivory);
-  line-height: 1.5;
+  line-height: 1.55;
 }
 .vrai-enjeu-section .ia-perf-box {
   background: rgba(246,241,235,.1);
