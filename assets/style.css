@@ -2017,7 +2017,7 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
   width: 100%;
   overflow: hidden;
   position: relative;
-  aspect-ratio: 1586 / 992;
+  aspect-ratio: 3 / 2;
   background: #3d2030;
 }
 .agent-img img {
@@ -2166,7 +2166,7 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
 }
 .agents-cta-img-slot {
   width: 420px;
-  aspect-ratio: 1586 / 992;
+  aspect-ratio: 3 / 2;
   background: rgba(93,47,55,.06);
   overflow: hidden;
   display: block;
