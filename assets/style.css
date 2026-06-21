@@ -549,6 +549,7 @@ section { padding: clamp(72px, 9vw, 112px) 0; }
   flex-shrink: 0;
   display: inline-block;
   line-height: 1;
+  color: #FAF6F2;
   animation: star-shimmer 2.4s ease-in-out infinite;
 }
 @keyframes star-shimmer {
@@ -961,7 +962,7 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
 }
 
 /* ─── STATS STRIP ────────────────────────────────────────── */
-.stats-strip { background: var(--plum); padding: 16px 0 36px; overflow: hidden; }
+.stats-strip { background: var(--plum); padding: 16px 0 36px; overflow: hidden; border-top: 1px solid rgba(250,246,242,.28); }
 .ss-grid--5 { grid-template-columns: repeat(5, 1fr) !important; }
 .ss-grid {
   display: grid;
