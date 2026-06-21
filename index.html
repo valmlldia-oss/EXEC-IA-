@@ -58,7 +58,7 @@
 
       <p class="eyebrow hero-eyebrow">Conseil stratégique pour dirigeants</p>
 
-      <p class="hero-sub">L'Intelligence Artificielle est d'abord un sujet de <span style="color:var(--rose);">Direction Générale.</span></p>
+      <p class="hero-sub">L'Intelligence Artificielle est d'abord un sujet de<br><span style="color:var(--rose);">Direction Générale.</span></p>
       <p class="hero-sub2">J'aide les dirigeants à transformer le potentiel de l'IA en création de valeur,<br>grâce à une approche stratégique, pragmatique et orientée résultats.</p>
       <p class="hero-clarif">L'enjeu n'est pas d'adopter plus d'outils.<br>L'enjeu est d'identifier où l'IA créera réellement de la valeur pour votre organisation.</p>
 
@@ -884,7 +884,7 @@
       document.getElementById('nl-box-form').style.display='none';
       document.getElementById('nl-box-success').style.display='block';
     }catch(err){
-      errEl.textContent='Une erreur est survenue. Merci de réessayer dans quelques instants.';
+      errEl.textContent='Erreur : '+(err&&err.message?err.message:'fetch failed');
       errEl.style.display='block';
       sb.disabled=false;sb.textContent='Recevoir la ressource';
     }
