@@ -815,6 +815,7 @@
           <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.6rem;color:#FAF6F2;font-weight:400;margin:0 0 12px;line-height:1.3;">Merci <span id="nl-success-name"></span>&nbsp;—</p>
           <p style="font-size:.95rem;color:#D9C9C3;margin:0 0 20px;line-height:1.6;">Votre document est en route.<br>Vérifiez votre boîte email professionnelle dans quelques instants.</p>
           <p style="font-size:.78rem;color:#B8B1AA;">🔒 Conforme RGPD &nbsp;•&nbsp; Désinscription en un clic</p>
+          <button type="button" id="nl-new-signup" style="margin-top:20px;background:transparent;border:1px solid rgba(250,246,242,.35);color:#FAF6F2;font-family:'Raleway',sans-serif;font-size:.82rem;letter-spacing:.08em;padding:10px 22px;cursor:pointer;border-radius:2px;">Inscrire un autre participant</button>
         </div>
 
       </div>
@@ -827,21 +828,43 @@
   var PDFS={FR:'/assets/Les%205%20Essentiels_The%205%20Essentials_Los%205%20Esenciales.html',EN:'/assets/Les%205%20Essentiels_The%205%20Essentials_Los%205%20Esenciales.html',ES:'/assets/Les%205%20Essentiels_The%205%20Essentials_Los%205%20Esenciales.html'};
   var LANG='FR';
   var BLOCKED=new Set(['gmail.com','googlemail.com','yahoo.com','yahoo.fr','yahoo.co.uk','hotmail.com','hotmail.fr','hotmail.co.uk','outlook.com','outlook.fr','live.com','live.fr','icloud.com','me.com','mac.com','proton.me','protonmail.com','pm.me','aol.com','zoho.com','ymail.com','mail.com','gmx.com','gmx.fr','gmx.de','laposte.net','free.fr','orange.fr','wanadoo.fr','sfr.fr','bbox.fr','neuf.fr','numericable.fr','club-internet.fr','aliceadsl.fr','cegetel.net']);
+
+  var fm=document.getElementById('nl-form'),sb=document.getElementById('nl-submit-btn'),errEl=document.getElementById('nl-global-err');
+
+  function resetToIntro(){
+    if(fm){fm.reset();fm.querySelectorAll('input').forEach(function(i){i.classList.remove('err');});}
+    if(sb){sb.disabled=false;sb.textContent='Recevoir la ressource';}
+    if(errEl){errEl.style.display='none';errEl.textContent='';}
+    document.getElementById('nl-box-success').style.display='none';
+    document.getElementById('nl-box-form').style.display='none';
+    document.getElementById('nl-box-intro').style.display='';
+  }
+
   /* révèle le formulaire */
   var revBtn=document.getElementById('nl-reveal-btn');
   if(revBtn)revBtn.addEventListener('click',function(){
+    document.getElementById('nl-box-success').style.display='none';
     document.getElementById('nl-box-intro').style.display='none';
     document.getElementById('nl-box-form').style.display='block';
     setTimeout(function(){document.getElementById('nl-fullname').focus();},80);
   });
-  /* retour au guide */
+
+  /* retour au guide + reset complet */
   var closeBtn=document.getElementById('nl-close-form');
-  if(closeBtn)closeBtn.addEventListener('click',function(){
-    document.getElementById('nl-box-form').style.display='none';
-    document.getElementById('nl-box-intro').style.display='';
+  if(closeBtn)closeBtn.addEventListener('click',resetToIntro);
+
+  /* bouton "Inscrire un autre participant" */
+  var newBtn=document.getElementById('nl-new-signup');
+  if(newBtn)newBtn.addEventListener('click',function(){
+    resetToIntro();
+    setTimeout(function(){
+      document.getElementById('nl-box-intro').style.display='none';
+      document.getElementById('nl-box-form').style.display='block';
+      setTimeout(function(){document.getElementById('nl-fullname').focus();},80);
+    },20);
   });
+
   /* soumission */
-  var fm=document.getElementById('nl-form'),sb=document.getElementById('nl-submit-btn'),errEl=document.getElementById('nl-global-err');
   if(!fm)return;
   fm.addEventListener('submit',async function(e){
     e.preventDefault();
