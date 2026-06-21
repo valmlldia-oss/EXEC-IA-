@@ -475,7 +475,7 @@ section { padding: clamp(72px, 9vw, 112px) 0; }
   letter-spacing: .2em; text-transform: uppercase;
   color: var(--rose); opacity: .85;
 }
-.eyebrow-light { color: rgba(199,95,98,.72); }
+.eyebrow-light { color: #D4888B; opacity: 1; }
 .section-title {
   font-family: var(--serif);
   font-size: clamp(2.45rem, 4.4vw, 3.65rem);
