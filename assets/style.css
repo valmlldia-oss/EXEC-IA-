@@ -957,7 +957,7 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
 }
 
 /* ─── STATS STRIP ────────────────────────────────────────── */
-.stats-strip { background: #3D2030; padding: 16px 0 48px; overflow: hidden; border-top: 1px solid rgba(250,246,242,.28); border-bottom: 4px solid rgba(250,246,242,.55); }
+.stats-strip { background: #3D2030; padding: 16px 0 48px; overflow: hidden; border-top: 1px solid rgba(250,246,242,.18); }
 .ss-grid--5 { grid-template-columns: repeat(5, 1fr) !important; }
 .ss-grid {
   display: grid;
