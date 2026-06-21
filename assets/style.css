@@ -961,7 +961,7 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
 }
 
 /* ─── STATS STRIP ────────────────────────────────────────── */
-.stats-strip { background: var(--deep); padding: 16px 0 36px; overflow: hidden; }
+.stats-strip { background: var(--plum); padding: 16px 0 36px; overflow: hidden; }
 .ss-grid--5 { grid-template-columns: repeat(5, 1fr) !important; }
 .ss-grid {
   display: grid;
@@ -1240,7 +1240,7 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
 
 /* ─── TICKER ─────────────────────────────────────────────── */
 .ticker-bar {
-  background: var(--deep); overflow: hidden; padding: 16px 0;
+  background: var(--plum); overflow: hidden; padding: 16px 0;
   border-bottom: 1px solid rgba(246,241,235,.05);
 }
 .ticker-track {
@@ -2232,7 +2232,7 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
 
 /* ── Newsletter ─────────────────────────────────────────────── */
 .newsletter-section {
-  background: var(--deep);
+  background: var(--plum);
   padding: 140px 0 100px;
   position: relative;
   overflow: hidden;
