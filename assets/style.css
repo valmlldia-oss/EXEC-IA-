@@ -339,18 +339,26 @@ a { text-decoration: none; color: inherit; }
   animation: slideup .9s var(--ease) .55s both;
 }
 .hero-lm-label {
-  font-family: var(--sans); font-size: .68rem; font-weight: 600;
+  font-family: var(--sans); font-size: .75rem; font-weight: 600;
   letter-spacing: .14em; text-transform: uppercase;
   color: var(--rose); opacity: .85;
 }
 .hero-lm-link {
-  display: inline-flex; align-items: baseline; gap: 5px;
-  font-family: var(--sans); font-size: .88rem; font-weight: 400;
-  color: var(--plum); opacity: .82;
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--sans); font-size: .82rem; font-weight: 300;
+  letter-spacing: .06em;
+  color: #633B4A;
   text-decoration: none;
-  transition: opacity .2s;
+  border: 1px solid rgba(99,59,74,.38);
+  padding: 10px 22px;
+  border-radius: 8px;
+  transition: all .22s;
 }
-.hero-lm-link:hover { opacity: 1; }
+.hero-lm-link strong { font-weight: 700; }
+.hero-lm-link:hover {
+  border-color: #633B4A;
+  background: rgba(99,59,74,.05);
+}
 
 .hero-linkedin-link {
   display: inline-flex; align-items: center; gap: 8px;
