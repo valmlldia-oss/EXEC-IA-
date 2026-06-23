@@ -110,9 +110,27 @@
     }
     .cover-title {
       font-family: var(--serif); font-size: 3.00rem; font-weight: 600;
+      font-style: italic;
       color: var(--plum); letter-spacing: .06em; text-transform: uppercase;
       line-height: 1; margin-bottom: 0;
       display: flex; align-items: baseline; justify-content: center; gap: 10px;
+    }
+    .cover-sig {
+      display: flex; flex-direction: column; align-items: center; gap: 3px;
+      margin: 18px 0 22px;
+    }
+    .cover-sig-sep {
+      width: 28px; height: 1px; background: var(--plum); opacity: .40;
+      margin-bottom: 10px;
+    }
+    .cover-sig-name {
+      font-family: var(--serif); font-size: 1.08rem; font-weight: 500;
+      color: var(--plum); letter-spacing: .04em;
+    }
+    .cover-sig-role {
+      font-family: var(--sans); font-size: .64rem; font-weight: 400;
+      letter-spacing: .18em; text-transform: uppercase;
+      color: var(--plum); opacity: .65;
     }
     .title-5 {
       font-size: 4.20rem; font-weight: 600; color: #C75F62;
@@ -500,6 +518,11 @@
       <p class="cover-subtitle">
         Ce qui mérite vraiment votre attention<br>avant de devenir <span class="accent">une urgence</span>
       </p>
+      <div class="cover-sig">
+        <div class="cover-sig-sep"></div>
+        <span class="cover-sig-name">Valérie Mailland</span>
+        <span class="cover-sig-role">Présidente &amp; Fondatrice</span>
+      </div>
       <div class="boutons">
         <a class="btn-q" href="#q1"><span class="btn-num">01</span>Quel sujet vous reprocherez-vous de ne pas avoir traité dans 90 jours ?</a>
         <a class="btn-q" href="#q2"><span class="btn-num">02</span>Que feraient vos meilleurs managers si vous leur rendiez enfin 20 % de leur temps ?</a>

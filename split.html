@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { display: flex; height: 100vh; overflow: hidden; background: #1a1a1a; gap: 2px; }
+  iframe { flex: 1; height: 100%; border: none; }
+  .label {
+    position: fixed; top: 8px; font-family: monospace; font-size: 11px;
+    background: rgba(0,0,0,.55); color: #fff; padding: 3px 8px; border-radius: 4px;
+    pointer-events: none; z-index: 9;
+  }
+  .label-1 { left: 10px; }
+  .label-2 { left: calc(33.33% + 10px); }
+  .label-3 { left: calc(66.66% + 10px); }
+</style>
+</head>
+<body>
+  <span class="label label-1">FR</span>
+  <span class="label label-2">EN</span>
+  <span class="label label-3">ES</span>
+  <iframe src="/assets/Les%205%20Essentiels_The%205%20Essentials_Los%205%20Esenciales.html"></iframe>
+  <iframe src="/assets/cover-5questions-en.html"></iframe>
+  <iframe src="/assets/cover-5questions-es.html"></iframe>
+</body>
+</html>

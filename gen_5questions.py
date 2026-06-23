@@ -3,14 +3,14 @@
 """EXEC\'IA — 5 Questions · Lead Magnet Q4 2026 · FR / EN / ES"""
 
 from reportlab.pdfgen import canvas as pdfcanvas
-from reportlab.lib.pagesizes import A4
+from reportlab.lib.pagesizes import A4, landscape
 from reportlab.lib.colors import HexColor, white
 from reportlab.lib.units import mm
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 import os
 
-W, H = A4
+W, H = landscape(A4)
 
 # ── Palette EXEC\'IA — valeurs exactes, aucune autre ──────────────────────────
 PLUM       = HexColor('#633B4A')   # prune bordeaux rosé
@@ -28,7 +28,7 @@ M  = 18*mm
 CW = W - 2*M
 
 SITE_URL  = 'https://www.exec-ia.ai'
-OFFER_URL = 'https://www.exec-ia.ai/#offres'
+OFFER_URL = 'https://calendly.com/valerie-mailland'
 MAIL      = 'contact@exec-ia.ai'
 
 BASE   = os.path.dirname(os.path.abspath(__file__))
@@ -97,7 +97,17 @@ def thin_bar(c, x, y_top, height, color=TERRA):
 
 
 # ── FOOTER — identique site web ───────────────────────────────────────────────
-BAND_H = 46*mm   # footer identique site web — logo + tagline + langues + copyright
+# ── FOOTER — empilement strict de bas en haut, aucun overlap ─────────────────
+#
+#  [BAND_H=50mm]
+#  top:    logo centré (fond blanc) 12mm         y=35..47mm
+#          tagline Cormorant Italic terracotta    y=30mm
+#          mention IA Inter Regular gris          y=24mm
+#          boutons langue pill                    y=15..21mm
+#          copyright Inter 6.5pt                 y=4mm
+#  bottom: 0
+
+BAND_H = 50*mm
 LANG_URLS = {
     'fr': SITE_URL,
     'en': 'https://www.exec-ia.ai/index-en.html',
@@ -107,72 +117,72 @@ LANG_LABELS = {'fr': 'Français', 'en': 'English', 'es': 'Español'}
 
 LOGO_FOOTER = os.path.join(ASSETS, 'EXECIA_CONSULTING_zoomé.png')
 if not os.path.exists(LOGO_FOOTER):
-    LOGO_FOOTER = os.path.join(ASSETS, "EXEC\'IA CONSULTING new.png")
+    LOGO_FOOTER = os.path.join(ASSETS, "EXEC'IA CONSULTING new.png")
 
 def footer(c, lang, pg=None):
-    """Footer identique site web — fond PLUM #633B4A."""
+    """Footer identique site web — fond PLUM #633B4A. Empilement strict bas→haut."""
     c.setFillColor(PLUM)
     c.rect(0, 0, W, BAND_H, fill=1, stroke=0)
     c.setStrokeColor(TERRA); c.setLineWidth(0.6)
     c.line(0, BAND_H, W, BAND_H)
 
-    # ── Logo EXEC\'IA CONSULTING centré en haut du footer ─────────────────────
-    logo_w = 44*mm; logo_h = 12*mm
-    logo_x = (W - logo_w) / 2
-    logo_y = BAND_H - logo_h - 3*mm
-    if os.path.exists(LOGO_FOOTER):
-        # Fond blanc pour le logo (comme sur le site)
-        c.setFillColor(white)
-        c.roundRect(logo_x - 2*mm, logo_y - 1.5*mm,
-                    logo_w + 4*mm, logo_h + 3*mm, 1.5*mm, fill=1, stroke=0)
-        c.drawImage(LOGO_FOOTER, logo_x, logo_y, width=logo_w, height=logo_h,
-                    preserveAspectRatio=True, mask='auto')
-    else:
-        c.setFont(ISB, 9); c.setFillColor(white)
-        c.drawCentredString(W / 2, logo_y + 3*mm, "EXEC\'IA CONSULTING")
-    c.linkURL(SITE_URL, (logo_x - 2*mm, logo_y - 1.5*mm,
-                          logo_x + logo_w + 2*mm, logo_y + logo_h + 1.5*mm), thickness=0)
-
-    # ── Tagline — Cormorant Garamond Italic terracotta (identique site) ───────
-    tagline_y = logo_y - 7*mm
-    c.setFont(CGI, 11); c.setFillColor(TERRA)
-    c.drawCentredString(W / 2, tagline_y,
-                        'Une expérience dirigeante au service de votre transformation IA')
-
-    # ── Mention IA — Inter Regular gris pâle ─────────────────────────────────
-    mention_y = tagline_y - 6*mm
-    c.setFont(IR, 7); c.setFillColor(GREY_PALE)
-    c.drawCentredString(W / 2, mention_y,
-                        'Conception, contenus et automatisations assistés par Intelligence Artificielle · Validation humaine systématique')
-
-    # ── Boutons langue — pill outline centrés (style site) ───────────────────
-    btn_y = mention_y - 7.5*mm
-    langs_to_show = [(lc, LANG_LABELS[lc]) for lc in ['fr', 'en', 'es'] if lc != lang]
-    # Calculer largeur totale
-    btn_w_list = [c.stringWidth(lbl, IR, 8) + 8*mm for _, lbl in langs_to_show]
-    total_w = sum(btn_w_list) + 3*mm * (len(langs_to_show) - 1)
-    bx = (W - total_w) / 2
-    BH_BTN = 6.5*mm
-    for i, ((lc, lbl), bw) in enumerate(zip(langs_to_show, btn_w_list)):
-        c.setStrokeColor(GREY_PALE); c.setLineWidth(0.6)
-        c.setFillColor(PLUM)
-        c.roundRect(bx, btn_y - BH_BTN, bw, BH_BTN, BH_BTN / 2, fill=1, stroke=1)
-        c.setFont(IR, 8); c.setFillColor(GREY_PALE)
-        c.drawCentredString(bx + bw / 2, btn_y - BH_BTN + 1.5*mm, lbl)
-        c.linkURL(LANG_URLS[lc], (bx, btn_y - BH_BTN, bx + bw, btn_y), thickness=0)
-        bx += bw + 3*mm
-
-    # ── Copyright — centré en bas ─────────────────────────────────────────────
+    # 1) COPYRIGHT — bas de page, y=4mm
     copy_y = 4*mm
     copy = "© 2026 Valérie Mailland · EXEC'IA · " + MAIL + " · Tous droits réservés"
     c.setFont(IR, 6.5); c.setFillColor(GREY_PALE)
     c.drawCentredString(W / 2, copy_y, copy)
     c.linkURL('mailto:' + MAIL,
-              (W / 2 - 20*mm, copy_y - 2*mm, W / 2 + 20*mm, copy_y + 5*mm), thickness=0)
-
+              (W / 2 - 22*mm, copy_y - 1*mm, W / 2 + 22*mm, copy_y + 4*mm), thickness=0)
     if pg:
         c.setFont(IR, 6); c.setFillColor(GREY_PALE)
         c.drawRightString(W - M, copy_y, f'{pg}/7')
+
+    # 2) BOUTONS LANGUE — au-dessus du copyright
+    BH_BTN  = 6.5*mm
+    btn_bot = copy_y + 5*mm          # bas des boutons
+    btn_top = btn_bot + BH_BTN       # haut des boutons = 15.5mm
+
+    langs_to_show = [(lc, LANG_LABELS[lc]) for lc in ['fr', 'en', 'es'] if lc != lang]
+    btn_w_list = [c.stringWidth(lbl, IR, 8) + 10*mm for _, lbl in langs_to_show]
+    total_w = sum(btn_w_list) + 4*mm * (len(langs_to_show) - 1)
+    bx = (W - total_w) / 2
+    for (lc, lbl), bw in zip(langs_to_show, btn_w_list):
+        c.setFillColor(PLUM)
+        c.setStrokeColor(GREY_PALE); c.setLineWidth(0.6)
+        c.roundRect(bx, btn_bot, bw, BH_BTN, BH_BTN / 2, fill=1, stroke=1)
+        c.setFont(IR, 8); c.setFillColor(GREY_PALE)
+        c.drawCentredString(bx + bw / 2, btn_bot + 1.5*mm, lbl)
+        c.linkURL(LANG_URLS[lc], (bx, btn_bot, bx + bw, btn_top), thickness=0)
+        bx += bw + 4*mm
+
+    # 3) MENTION IA — au-dessus des boutons
+    mention_y = btn_top + 5*mm       # = 20.5mm
+    c.setFont(IR, 6.5); c.setFillColor(GREY_PALE)
+    c.drawCentredString(W / 2, mention_y,
+        'Conception, contenus et automatisations assistés par IA · Validation humaine systématique')
+
+    # 4) TAGLINE — Cormorant Garamond Italic terracotta
+    tagline_y = mention_y + 7*mm     # = 27.5mm
+    c.setFont(CGI, 11); c.setFillColor(TERRA)
+    c.drawCentredString(W / 2, tagline_y,
+        'Une expérience dirigeante au service de votre transformation IA')
+
+    # 5) LOGO centré — fond blanc, au-dessus de la tagline
+    logo_h = 8*mm; logo_w = 30*mm
+    logo_y = tagline_y + 5*mm
+    logo_x = (W - logo_w) / 2
+    if os.path.exists(LOGO_FOOTER):
+        c.setFillColor(white)
+        c.roundRect(logo_x - 2*mm, logo_y - 1*mm,
+                    logo_w + 4*mm, logo_h + 2*mm, 1.5*mm, fill=1, stroke=0)
+        c.drawImage(LOGO_FOOTER, logo_x, logo_y, width=logo_w, height=logo_h,
+                    preserveAspectRatio=True, mask='auto')
+    else:
+        c.setFont(ISB, 8); c.setFillColor(white)
+        c.drawCentredString(W / 2, logo_y + 3*mm, "EXEC'IA CONSULTING")
+    c.linkURL(SITE_URL,
+              (logo_x - 2*mm, logo_y - 1*mm, logo_x + logo_w + 2*mm, logo_y + logo_h + 1*mm),
+              thickness=0)
 
 
 # ── COVER ─────────────────────────────────────────────────────────────────────
@@ -217,18 +227,19 @@ def cover(c, lang, content):
     c.drawString(M, y, content['cover_caption'])
     y -= 13*mm
 
-    # ── 5 BOUTONS PILLS ───────────────────────────────────────────────────────
+    # ── 5 BOUTONS — pills avec cercle terracotta + numéro ────────────────────
     NUM_R  = 4*mm
     TXT_X  = M + NUM_R * 2 + 5*mm
     TXT_W  = W - M - TXT_X - 5*mm
     GAP    = 2.5*mm
-    CTA_H  = 16*mm
-    CTA_GAP = 6*mm
-    L_LEAD  = 9.5 * 1.35
-    PAD_V   = 3.5*mm
+    L_LEAD = 9.5 * 1.35
+    PAD_V  = 3.5*mm
 
     def btn_h(txt):
         return len(wrap(c, txt, IM, 9.5, TXT_W)) * L_LEAD + PAD_V * 2
+
+    CTA_H   = 28*mm
+    CTA_GAP = 5*mm
 
     btn_heights = [btn_h(q['btn']) for q in content['questions']]
     total = sum(btn_heights) + GAP * 4 + CTA_H + CTA_GAP
@@ -250,25 +261,45 @@ def cover(c, lang, content):
         c.circle(cx, cy, NUM_R, fill=1, stroke=0)
         c.setFont(ISB, 7); c.setFillColor(white)
         c.drawCentredString(cx, cy - 2.5*mm, f'0{i+1}')
-        # Texte — Inter Medium prune
+        # Texte Inter Medium prune
         lines = wrap(c, q['btn'], IM, 9.5, TXT_W)
         th_txt = len(lines) * L_LEAD
         ty = cy + th_txt / 2 - L_LEAD * 0.25
         c.setFont(IM, 9.5); c.setFillColor(PLUM)
         for ln in lines:
             c.drawString(TXT_X, ty, ln); ty -= L_LEAD
-        c.linkURL(OFFER_URL, (M, y - bh, W - M, y), thickness=0)
+        c.linkAbsolute("", f"question_{i+1}", (M, y - bh, W - M, y), thickness=0)
         y -= bh + GAP
 
     y -= CTA_GAP
 
-    # CTA terracotta
-    c.setFillColor(TERRA)
+    # ── CTA — identique site : "Entretien préliminaire — offert" ─────────────
+    # Box fond terracotta pâle + bord terracotta + bouton PLUM_DARK à droite
+    c.setFillColor(TERRA_PALE)
     c.roundRect(M, y - CTA_H, CW, CTA_H, 5*mm, fill=1, stroke=0)
+    c.setStrokeColor(TERRA); c.setLineWidth(0.8)
+    c.roundRect(M, y - CTA_H, CW, CTA_H, 5*mm, fill=0, stroke=1)
+
+    # Texte gauche
+    c.setFont(CGB, 11); c.setFillColor(PLUM_DARK)
+    c.drawString(M + 6*mm, y - 7*mm, content['cta_title'])
+    c.setFont(IR, 8); c.setFillColor(TEXT)
+    c.drawString(M + 6*mm, y - 13*mm, content['cta_line1'])
+    c.drawString(M + 6*mm, y - 19*mm, content['cta_line2'])
+    c.setFont(ISB, 7.5); c.setFillColor(TERRA)
+    c.drawString(M + 6*mm, y - 25*mm, content['cta_tags'])
+
+    # Bouton Terracotta à droite — "Prendre rendez-vous"
+    btn_txt = content['cta_btn']
+    bw = c.stringWidth(btn_txt, ISB, 8.5) + 10*mm
+    bx = W - M - bw - 4*mm
+    by = y - CTA_H + 5*mm
+    bh2 = 12*mm
+    c.setFillColor(TERRA)
+    c.roundRect(bx, by, bw, bh2, bh2 / 2, fill=1, stroke=0)
     c.setFont(ISB, 8.5); c.setFillColor(white)
-    c.drawCentredString(W / 2, y - 6.5*mm, content['cover_cta_title'])
-    c.setFont(IR, 7.5); c.setFillColor(IVORY)
-    c.drawCentredString(W / 2, y - 12.5*mm, content['cover_cta_sub'])
+    c.drawCentredString(bx + bw / 2, by + bh2 / 2 - 1.5*mm, btn_txt)
+    c.linkURL(OFFER_URL, (bx, by, bx + bw, by + bh2), thickness=0)
     c.linkURL(OFFER_URL, (M, y - CTA_H, W - M, y), thickness=0)
 
     footer(c, lang)
@@ -277,6 +308,7 @@ def cover(c, lang, content):
 
 # ── PAGE INTÉRIEURE ───────────────────────────────────────────────────────────
 def inner(c, lang, qnum, q, pg):
+    c.bookmarkPage(f"question_{qnum}")
     c.setFillColor(IVORY)
     c.rect(0, 0, W, H, fill=1, stroke=0)
 
@@ -292,12 +324,12 @@ def inner(c, lang, qnum, q, pg):
     c.drawString(M, y, f'0{qnum}  ·  {q["cat"].upper()}')
     y -= 10*mm
 
-    # Titre Cormorant Garamond Bold + barre fine terracotta
-    title_lines = wrap(c, q['title'], CGB, 21, CW - 6*mm)
-    t_lead = 21 * 1.25
+    # Titre Cormorant Garamond SemiBold + barre fine terracotta
+    title_lines = wrap(c, q['title'], CGSB, 22, CW - 6*mm)
+    t_lead = 22 * 1.25
     title_h = len(title_lines) * t_lead
     thin_bar(c, M, y + 2*mm, title_h + 2*mm)
-    c.setFont(CGB, 21); c.setFillColor(PLUM_DARK)
+    c.setFont(CGSB, 22); c.setFillColor(PLUM_DARK)
     for ln in title_lines:
         c.drawString(M + 5*mm, y, ln); y -= t_lead
     y -= 5*mm
@@ -432,15 +464,28 @@ def final(c, lang, content):
         c.drawString(M + 12*mm, y - 3.5*mm, d)
         y -= 10.5*mm
 
-    y -= 7*mm
+    # Conviction avant CTA
+    body2 = content.get('final_body2', [])
+    if body2:
+        y -= 5*mm
+        for line in body2:
+            if not line:
+                y -= 3*mm
+            else:
+                y = draw_text(c, M, y, line, CGI, 9.5, GREY_PALE, CW, 9.5 * 1.45)
+        y -= 6*mm
+    else:
+        y -= 7*mm
 
-    cta_h = 24*mm
+    cta_h = 29*mm
     c.setFillColor(TERRA)
     c.roundRect(M, y - cta_h, CW, cta_h, 5*mm, fill=1, stroke=0)
-    c.setFont(ISB, 10); c.setFillColor(white)
+    c.setFont(ISB, 9.5); c.setFillColor(white)
     c.drawCentredString(W / 2, y - 8*mm, content['final_cta_title'])
-    c.setFont(IR, 8.5); c.setFillColor(IVORY)
-    c.drawCentredString(W / 2, y - 14.5*mm, content['final_cta_sub'])
+    c.setFont(IR, 8); c.setFillColor(IVORY)
+    c.drawCentredString(W / 2, y - 15*mm, content['final_cta_sub'])
+    c.setFont(IR, 8); c.setFillColor(IVORY)
+    c.drawCentredString(W / 2, y - 21*mm, content.get('final_cta_email', MAIL))
     c.linkURL(OFFER_URL, (M, y - cta_h, W - M, y), thickness=0)
     y -= cta_h + 8*mm
 
@@ -459,11 +504,16 @@ def final(c, lang, content):
 CONTENT = {
 'fr': {
     'cover_pretitle': 'DIRECTION GÉNÉRALE  ·  INTELLIGENCE ARTIFICIELLE  ·  Q4 2026',
-    'cover_title': ['5 QUESTIONS QUI VALENT', "PLUS QU\'UN NOUVEAU PROJET IA"],
+    'cover_title': ['5 QUESTIONS QUI VALENT', "PLUS QU\'UN NOUVEAU PROJET IA —"],
     'cover_subtitle': 'La plupart des entreprises cherchent de nouvelles solutions.',
-    'cover_caption': 'Les meilleures commencent par se poser les bonnes questions.  5 min de lecture.',
-    'cover_cta_title': 'Entretien préliminaire offert  ·  30 min  ·  Sans engagement  ·  Confidentiel',
+    'cover_caption': "L'IA redessine déjà les règles. La question est de savoir qui tient encore le crayon.  5 min de lecture.",
+    'cover_cta_title': 'Entretien préliminaire — offert',
     'cover_cta_sub': 'contact@exec-ia.ai  ·  exec-ia.ai',
+    'cta_title': 'Entretien préliminaire — offert',
+    'cta_line1': '30 minutes pour comprendre votre situation et évaluer ensemble —',
+    'cta_line2': 'la façon dont je peux vous être utile.',
+    'cta_tags': 'Sans engagement  ·  Confidentiel',
+    'cta_btn': 'Prendre rendez-vous',
     'questions': [
         {
             'btn': '0 dirigeant ne connaît le coût réel de l\'attente stratégique',
@@ -474,8 +524,8 @@ CONTENT = {
                 'Les dirigeants craignent les mauvaises décisions.',
                 '',
                 'Ils devraient davantage craindre les décisions qui n\'arrivent jamais.',
-                'Chaque arbitrage repoussé immobilise un budget, ralentit les équipes',
-                'et crée un coût caché — invisible jusqu\'au jour où il devient stratégique.',
+                'Chaque arbitrage repoussé immobilise un budget, retarde des revenus,',
+                'ralentit les équipes et laisse parfois un concurrent décider avant vous.',
             ],
             'codir_label': 'Question de CODIR',
             'codir': 'Quelle décision importante est discutée depuis plus de trois mois sans avoir été prise — et quel est le coût réel de ce report ?',
@@ -487,7 +537,7 @@ CONTENT = {
             'offer_link': 'NIVEAU I · CLARIFIEZ  —  Séance de cadrage 490 €  ›  exec-ia.ai',
         },
         {
-            'btn': '30 % du temps manager ne crée aucune valeur stratégique',
+            'btn': 'Une partie significative du temps managérial ne crée aucune valeur stratégique',
             'title': '20 % du temps de vos managers crée-t-il réellement de la valeur ?',
             'cat': 'Productivité managériale',
             'idea_label': 'Idée clé',
@@ -496,7 +546,7 @@ CONTENT = {
                 'des reportings, des validations et des recherches d\'information.',
                 '',
                 'Le sujet n\'est pas le temps perdu.',
-                'Le sujet est la valeur qui n\'est jamais créée.',
+                'Le sujet est la valeur, les décisions et les opportunités qui ne seront jamais créées.',
             ],
             'codir_label': 'Question de CODIR',
             'codir': 'Si vous rendiez une journée par semaine à vos 5 meilleurs managers, où investiriez-vous ce temps ?',
@@ -513,11 +563,12 @@ CONTENT = {
             'cat': 'Transmission du savoir dirigeant',
             'idea_label': 'Idée clé',
             'idea': [
-                '3 experts peuvent détenir 80 % du savoir critique de votre entreprise.',
+                'Une poignée d\'experts peut concentrer une part décisive du savoir critique de votre entreprise.',
                 '',
                 'Ces connaissances ne figurent dans aucun document.',
                 'Elles vivent dans la tête de quelques personnes — raccourcis, arbitrages,',
-                'intuitions. Quand elles partent, la capacité de décider part avec elles.',
+                'intuitions. Quand elles partent, certaines décisions deviennent plus lentes, plus risquées ou plus coûteuses.',
+                'Un dirigeant ressent immédiatement le danger.',
             ],
             'codir_label': 'Question de CODIR',
             'codir': 'Si 3 personnes quittaient l\'entreprise demain, quelles décisions deviendraient impossibles à prendre ?',
@@ -529,7 +580,7 @@ CONTENT = {
             'offer_link': 'NIVEAU III · DÉCIDEZ DANS LA DURÉE  —  Advisory de Direction  ›  exec-ia.ai',
         },
         {
-            'btn': '1 client perdu sur 5 avait déjà envoyé des signaux — ignorés',
+            'btn': 'De nombreux clients perdus avaient déjà envoyé des signaux faibles',
             'title': 'À quel moment précis vos clients commencent-ils à décrocher ?',
             'cat': 'Expérience client et rétention',
             'idea_label': 'Idée clé',
@@ -539,6 +590,9 @@ CONTENT = {
                 'Ils accumulent des micro-déceptions, puis prennent une décision silencieuse.',
                 'La plupart des entreprises détectent cette décision plusieurs semaines trop',
                 'tard — bien après que le client perdu a compté ses pertes.',
+                '',
+                'Un client perdu ne représente pas seulement un chiffre d\'affaires disparu.',
+                'Il représente souvent des années de confiance, de recommandations et d\'opportunités.',
             ],
             'codir_label': 'Question de CODIR',
             'codir': 'Quels sont les 3 moments où un client décide de rester ou de partir — et les observez-vous aujourd\'hui ?',
@@ -573,13 +627,12 @@ CONTENT = {
         },
     ],
     'final_pretitle': "L\'APPROCHE EXEC\'IA  ·  CONSULTING STRATÉGIQUE EN INTELLIGENCE ARTIFICIELLE",
-    'final_title': ['Décider avec clarté.', 'Dans un monde où l\'IA redessine les règles.'],
+    'final_title': ['L\'IA redessine déjà les règles.', 'La question est de savoir qui tient encore le crayon.'],
     'final_body': [
-        'Les entreprises ne manquent pas d\'outils ni d\'informations sur l\'IA.',
-        'Elles manquent de clarté sur ce qui mérite réellement',
-        'l\'attention — et la décision — de leur Direction Générale.',
+        "Les entreprises ne manquent pas d'outils.",
+        "Elles manquent souvent de clarté sur les décisions qui ne devraient jamais être déléguées.",
     ],
-    'final_domains_label': "EXEC\'IA accompagne les dirigeants dans cinq domaines",
+    'final_domains_label': "Ces cinq questions sont au cœur de nos missions",
     'final_domains': [
         'Priorisation des investissements IA',
         'Productivité managériale et gain de temps',
@@ -587,16 +640,31 @@ CONTENT = {
         'Expérience client et rétention',
         'Gouvernance de l\'IA',
     ],
-    'final_cta_title': '30 MINUTES  ·  CONFIDENTIEL  ·  SANS ENGAGEMENT',
-    'final_cta_sub': 'Entretien préliminaire offert  ·  contact@exec-ia.ai',
+    'final_cta_title': '30 minutes pour prendre du recul sur les décisions qui comptent.',
+    'final_cta_sub': 'Entretien préliminaire confidentiel  ·  Sans engagement',
+    'final_cta_email': 'contact@exec-ia.ai',
+    'final_body2': [
+        'Les organisations qui prennent ces cinq questions au sérieux découvrent',
+        'généralement que leur principal sujet n\'est ni technologique ni opérationnel.',
+        'Il est stratégique.',
+        '',
+        'La question n\'est pas de savoir si l\'IA transformera votre organisation.',
+        'La question est de savoir si votre organisation décidera de cette transformation',
+        '— ou la subira.',
+    ],
 },
 'en': {
     'cover_pretitle': 'EXECUTIVE LEADERSHIP  ·  ARTIFICIAL INTELLIGENCE  ·  Q4 2026',
-    'cover_title': ['5 QUESTIONS WORTH MORE', 'THAN A NEW AI PROJECT'],
+    'cover_title': ['5 QUESTIONS WORTH MORE', 'THAN A NEW AI PROJECT —'],
     'cover_subtitle': 'Most companies look for new solutions.',
-    'cover_caption': 'The best ones start by asking the right questions.  5 min read.',
-    'cover_cta_title': 'Complimentary interview  ·  30 min  ·  No commitment  ·  Confidential',
+    'cover_caption': 'AI is already rewriting the rules. The question is who still holds the pen.  5 min read.',
+    'cover_cta_title': 'Complimentary preliminary interview',
     'cover_cta_sub': 'contact@exec-ia.ai  ·  exec-ia.ai',
+    'cta_title': 'Complimentary preliminary interview',
+    'cta_line1': '30 minutes to understand your situation and assess together —',
+    'cta_line2': 'how I can be of use to you.',
+    'cta_tags': 'No commitment  ·  Confidential',
+    'cta_btn': 'Book a meeting',
     'questions': [
         {
             'btn': '0 executives know the real cost of strategic waiting',
@@ -607,8 +675,8 @@ CONTENT = {
                 'Leaders fear making bad decisions.',
                 '',
                 'They should fear even more the decisions that never get made.',
-                'Every postponed choice freezes budget, slows teams and creates',
-                'a hidden cost — invisible until the day it becomes strategic.',
+                'Every postponed choice freezes budget, delays revenue, slows teams',
+                'and sometimes lets a competitor decide before you.',
             ],
             'codir_label': 'Board question',
             'codir': 'What important decision has been discussed for over three months without being made — and what is the real cost of that deferral?',
@@ -620,7 +688,7 @@ CONTENT = {
             'offer_link': 'LEVEL I · CLARIFY  —  Strategic Framing Session 490 €  ›  exec-ia.ai',
         },
         {
-            'btn': "30% of manager time creates no strategic value",
+            'btn': "A significant portion of management time creates no strategic value",
             'title': "Do 20% of your managers' time truly create value?",
             'cat': 'Managerial productivity',
             'idea_label': 'Key insight',
@@ -629,7 +697,7 @@ CONTENT = {
                 'reporting, validations and information searches.',
                 '',
                 'The issue is not wasted time.',
-                'The issue is value that is never created.',
+                'The issue is the value, decisions and opportunities that will never be created.',
             ],
             'codir_label': 'Board question',
             'codir': 'If you gave your top 5 managers one extra day per week, where would you invest that time?',
@@ -646,11 +714,12 @@ CONTENT = {
             'cat': 'Executive knowledge transfer',
             'idea_label': 'Key insight',
             'idea': [
-                '3 experts may hold 80% of your company\'s critical knowledge.',
+                'A handful of experts may hold a decisive share of your company\'s critical knowledge.',
                 '',
                 'That knowledge lives in no document.',
                 'It lives in a few people\'s heads — shortcuts, judgments, intuitions.',
-                'When they leave, the ability to decide accurately leaves with them.',
+                'When they leave, certain decisions become slower, riskier or more costly.',
+                'A leader feels the danger immediately.',
             ],
             'codir_label': 'Board question',
             'codir': 'If 3 people left tomorrow, which decisions would become impossible to make?',
@@ -662,7 +731,7 @@ CONTENT = {
             'offer_link': 'LEVEL III · DECIDE OVER TIME  —  Executive Advisory  ›  exec-ia.ai',
         },
         {
-            'btn': '1 in 5 lost clients had already sent signals — ignored',
+            'btn': 'Many lost clients had already sent weak signals',
             'title': 'At what exact moment do your clients start disengaging?',
             'cat': 'Customer experience and retention',
             'idea_label': 'Key insight',
@@ -672,6 +741,9 @@ CONTENT = {
                 'They accumulate micro-disappointments, then make a silent decision.',
                 'Most companies detect this decision several weeks too late —',
                 'long after the lost client has moved on.',
+                '',
+                'A lost client is not just lost revenue.',
+                'It often represents years of trust, referrals and opportunities that will never return.',
             ],
             'codir_label': 'Board question',
             'codir': 'What are the 3 moments where a client decides to stay or leave — and are you observing them today?',
@@ -705,13 +777,12 @@ CONTENT = {
         },
     ],
     'final_pretitle': "THE EXEC\'IA APPROACH  ·  STRATEGIC AI CONSULTING",
-    'final_title': ['Decide with clarity.', 'In a world where AI rewrites the rules.'],
+    'final_title': ['AI is already rewriting the rules.', 'The question is who still holds the pen.'],
     'final_body': [
-        'Companies don\'t lack tools or information about AI.',
-        "They lack clarity on what truly deserves",
-        "the attention — and the decision — of their Executive Committee.",
+        "Companies don't lack tools.",
+        "They often lack clarity on the decisions that should never be delegated.",
     ],
-    'final_domains_label': "EXEC\'IA supports executives across five domains",
+    'final_domains_label': "These five questions are at the heart of our work",
     'final_domains': [
         'AI investment prioritisation',
         'Managerial productivity and time savings',
@@ -719,16 +790,31 @@ CONTENT = {
         'Customer experience and retention',
         'AI governance',
     ],
-    'final_cta_title': '30 MINUTES  ·  CONFIDENTIAL  ·  NO COMMITMENT',
-    'final_cta_sub': 'Complimentary interview  ·  contact@exec-ia.ai',
+    'final_cta_title': '30 minutes to step back on the decisions that matter.',
+    'final_cta_sub': 'Confidential preliminary interview  ·  No commitment',
+    'final_cta_email': 'contact@exec-ia.ai',
+    'final_body2': [
+        'Organisations that take these five questions seriously typically discover',
+        'their main challenge is neither technological nor operational.',
+        'It is strategic.',
+        '',
+        'The question is not whether AI will transform your organisation.',
+        'The question is whether your organisation will decide that transformation',
+        '— or be swept along by it.',
+    ],
 },
 'es': {
     'cover_pretitle': 'DIRECCIÓN GENERAL  ·  INTELIGENCIA ARTIFICIAL  ·  Q4 2026',
-    'cover_title': ['5 PREGUNTAS QUE VALEN MÁS', 'QUE UN NUEVO PROYECTO DE IA'],
+    'cover_title': ['5 PREGUNTAS QUE VALEN MÁS', 'QUE UN NUEVO PROYECTO DE IA —'],
     'cover_subtitle': 'La mayoría de las empresas buscan nuevas soluciones.',
-    'cover_caption': 'Las mejores empiezan por hacerse las preguntas correctas.  5 min de lectura.',
-    'cover_cta_title': 'Entrevista preliminar gratuita  ·  30 min  ·  Sin compromiso  ·  Confidencial',
+    'cover_caption': 'La IA ya está redibujando las reglas. La pregunta es quién sigue sosteniendo el lápiz.  5 min de lectura.',
+    'cover_cta_title': 'Entrevista preliminar — gratuita',
     'cover_cta_sub': 'contact@exec-ia.ai  ·  exec-ia.ai',
+    'cta_title': 'Entrevista preliminar — gratuita',
+    'cta_line1': '30 minutos para comprender su situación y evaluar juntos —',
+    'cta_line2': 'cómo puedo serle de utilidad.',
+    'cta_tags': 'Sin compromiso  ·  Confidencial',
+    'cta_btn': 'Reservar una cita',
     'questions': [
         {
             'btn': '0 directivos conocen el coste real de la espera estratégica',
@@ -739,8 +825,8 @@ CONTENT = {
                 'Los directivos temen tomar malas decisiones.',
                 '',
                 'Deberían temer aún más las decisiones que nunca se toman.',
-                'Cada arbitraje aplazado inmoviliza un presupuesto, ralentiza equipos',
-                'y crea un coste oculto — invisible hasta que se vuelve estratégico.',
+                'Cada arbitraje aplazado inmoviliza un presupuesto, retrasa ingresos, ralentiza equipos',
+                'y a veces deja que un competidor decida antes que usted.',
             ],
             'codir_label': 'Pregunta de Comité de Dirección',
             'codir': '¿Qué decisión importante lleva más de tres meses debatiéndose — y cuál es el coste real de ese aplazamiento?',
@@ -752,7 +838,7 @@ CONTENT = {
             'offer_link': 'NIVEL I · CLARIFICAR  —  Sesión de encuadre 490 €  ›  exec-ia.ai',
         },
         {
-            'btn': 'El 30 % del tiempo directivo no genera ningún valor estratégico',
+            'btn': 'Una parte significativa del tiempo directivo no genera ningún valor estratégico',
             'title': '¿El 20 % del tiempo de sus managers crea realmente valor?',
             'cat': 'Productividad directiva',
             'idea_label': 'Idea clave',
@@ -761,7 +847,7 @@ CONTENT = {
                 'por reuniones, informes, validaciones y búsquedas de información.',
                 '',
                 'El problema no es el tiempo perdido.',
-                'El problema es el valor que nunca se crea.',
+                'El problema es el valor, las decisiones y las oportunidades que nunca se crearán.',
             ],
             'codir_label': 'Pregunta de Comité de Dirección',
             'codir': '¿Si diera un día extra a la semana a sus 5 mejores managers, dónde invertiría ese tiempo?',
@@ -778,11 +864,12 @@ CONTENT = {
             'cat': 'Transmisión del conocimiento directivo',
             'idea_label': 'Idea clave',
             'idea': [
-                '3 expertos pueden concentrar el 80 % del conocimiento crítico.',
+                'Un puñado de expertos puede concentrar una parte decisiva del conocimiento crítico.',
                 '',
                 'Ese conocimiento no figura en ningún documento.',
                 'Vive en la mente de unas pocas personas — atajos, criterios,',
-                'intuiciones. Cuando se van, la capacidad de decidir se va con ellas.',
+                'intuiciones. Cuando se van, ciertas decisiones se vuelven más lentas, más arriesgadas o más costosas.',
+                'Un directivo siente el peligro de inmediato.',
             ],
             'codir_label': 'Pregunta de Comité de Dirección',
             'codir': '¿Si 3 personas se marcharan mañana, qué decisiones serían imposibles de tomar?',
@@ -794,7 +881,7 @@ CONTENT = {
             'offer_link': 'NIVEL III · DECIDIR EN EL TIEMPO  —  Advisory de Dirección  ›  exec-ia.ai',
         },
         {
-            'btn': '1 de cada 5 clientes perdidos ya había enviado señales — ignoradas',
+            'btn': 'Muchos clientes perdidos ya habían enviado señales débiles',
             'title': '¿En qué momento exacto sus clientes empiezan a desconectarse?',
             'cat': 'Experiencia del cliente y retención',
             'idea_label': 'Idea clave',
@@ -804,6 +891,9 @@ CONTENT = {
                 'Acumulan micro-decepciones y luego toman una decisión silenciosa.',
                 'La mayoría de las empresas detectan esta decisión varias semanas tarde',
                 '— mucho después de que el cliente perdido haya tomado su decisión.',
+                '',
+                'Un cliente perdido no representa solo un volumen de negocio perdido.',
+                'Representa a menudo años de confianza, recomendaciones y oportunidades que no volverán.',
             ],
             'codir_label': 'Pregunta de Comité de Dirección',
             'codir': '¿Cuáles son los 3 momentos en los que un cliente decide quedarse o marcharse — y los observa hoy?',
@@ -837,13 +927,12 @@ CONTENT = {
         },
     ],
     'final_pretitle': "EL ENFOQUE EXEC\'IA  ·  CONSULTORÍA ESTRATÉGICA EN INTELIGENCIA ARTIFICIAL",
-    'final_title': ['Decidir con claridad.', 'En un mundo donde la IA redefine las reglas.'],
+    'final_title': ['La IA ya está redibujando las reglas.', 'La pregunta es quién sigue sosteniendo el lápiz.'],
     'final_body': [
-        'Las empresas no carecen de herramientas ni de información sobre IA.',
-        'Carecen de claridad sobre lo que merece realmente',
-        'la atención — y la decisión — de su Dirección General.',
+        "Las empresas no carecen de herramientas.",
+        "A menudo les falta claridad sobre las decisiones que nunca deberían delegarse.",
     ],
-    'final_domains_label': "EXEC\'IA acompaña a los directivos en cinco ámbitos",
+    'final_domains_label': "Estas cinco preguntas están en el corazón de nuestras misiones",
     'final_domains': [
         'Priorización de inversiones en IA',
         'Productividad directiva y ahorro de tiempo',
@@ -851,21 +940,31 @@ CONTENT = {
         'Experiencia del cliente y retención',
         'Gobernanza de la IA',
     ],
-    'final_cta_title': '30 MINUTOS  ·  CONFIDENCIAL  ·  SIN COMPROMISO',
-    'final_cta_sub': 'Entrevista preliminar gratuita  ·  contact@exec-ia.ai',
+    'final_cta_title': '30 minutos para tomar perspectiva sobre las decisiones que importan.',
+    'final_cta_sub': 'Entrevista preliminar confidencial  ·  Sin compromiso',
+    'final_cta_email': 'contact@exec-ia.ai',
+    'final_body2': [
+        'Las organizaciones que toman en serio estas cinco preguntas descubren',
+        'generalmente que su principal desafío no es tecnológico ni operativo.',
+        'Es estratégico.',
+        '',
+        'La pregunta no es si la IA transformará su organización.',
+        'La pregunta es si su organización decidirá esa transformación',
+        '— o la sufrirá.',
+    ],
 },
 }
 
 OUTPUTS = {
-    'fr': os.path.join(ASSETS, 'EXECIA_5Questions_Q4_2026_FR.pdf'),
-    'en': os.path.join(ASSETS, 'EXECIA_5Questions_Q4_2026_EN.pdf'),
-    'es': os.path.join(ASSETS, 'EXECIA_5Questions_Q4_2026_ES.pdf'),
+    'fr': os.path.join(ASSETS, 'EXECIA_5 Essentiels_Q4_2026_FR.pdf'),
+    'en': os.path.join(ASSETS, 'EXECIA_The 5 Essentials_Q4_2026_EN.pdf'),
+    'es': os.path.join(ASSETS, 'EXECIA_Los 5 Esenciales_Q4_2026_ES.pdf'),
 }
 
 def generate(lang):
     content = CONTENT[lang]
     out = OUTPUTS[lang]
-    c = pdfcanvas.Canvas(out, pagesize=A4)
+    c = pdfcanvas.Canvas(out, pagesize=landscape(A4))
     c.setTitle(content['cover_title'][0] + ' ' + content['cover_title'][1])
     c.setAuthor("Valérie Mailland · Fondatrice · EXEC\'IA Consulting")
     c.setSubject('Lead Magnet Q4 2026 · ' + lang.upper())
