@@ -333,6 +333,25 @@ a { text-decoration: none; color: inherit; }
   margin-top: 40px;
   animation: slideup .9s var(--ease) .4s both;
 }
+.hero-lm-block {
+  margin-top: 20px;
+  display: flex; flex-direction: column; align-items: flex-start; gap: 6px;
+  animation: slideup .9s var(--ease) .55s both;
+}
+.hero-lm-label {
+  font-family: var(--sans); font-size: .68rem; font-weight: 600;
+  letter-spacing: .14em; text-transform: uppercase;
+  color: var(--rose); opacity: .85;
+}
+.hero-lm-link {
+  display: inline-flex; align-items: baseline; gap: 5px;
+  font-family: var(--sans); font-size: .88rem; font-weight: 400;
+  color: var(--plum); opacity: .82;
+  text-decoration: none;
+  transition: opacity .2s;
+}
+.hero-lm-link:hover { opacity: 1; }
+
 .hero-linkedin-link {
   display: inline-flex; align-items: center; gap: 8px;
   margin-top: 72px;

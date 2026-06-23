@@ -19,7 +19,7 @@
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { background: var(--ivory); scroll-behavior: smooth; }
+    html { background: var(--ivory); scroll-behavior: smooth; overflow-y: scroll; scrollbar-gutter: stable; }
 
     body {
       font-family: var(--sans);
@@ -50,11 +50,11 @@
     }
     .top-right {
       position: absolute;
-      top: 40px; right: 20px;
+      top: 36px; right: 20px;
       display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 10px;
+      flex-direction: row;
+      align-items: center;
+      gap: 8px;
     }
     .badge-q4 {
       display: inline-block;
@@ -62,17 +62,28 @@
       color: #C75F62;
       background: var(--ivory);
       font-family: var(--sans);
-      font-size: 1.00rem; font-weight: 600;
+      font-size: .82rem; font-weight: 600;
       letter-spacing: .20em; text-transform: uppercase;
-      padding: 7px 20px;
+      padding: 9px 18px;
       border-radius: 50px;
       pointer-events: none; user-select: none;
     }
+    .btn-back {
+      position: absolute; top: 36px; left: 20px;
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 7px 20px; border-radius: 50px;
+      font-family: var(--sans); font-size: 1.00rem; font-weight: 600;
+      letter-spacing: .06em; text-decoration: none; color: #593543;
+      border: 1.5px solid #593543;
+      background: none;
+      transition: opacity .2s;
+    }
+    .btn-back:hover { opacity: .7; }
     .top-langs { display: flex; gap: 8px; }
     .top-langs a {
       display: inline-flex; align-items: center; gap: 5px;
-      padding: 6px 16px; border-radius: 50px;
-      font-family: var(--sans); font-size: 1.056rem; font-weight: 600;
+      padding: 9px 14px; border-radius: 50px;
+      font-family: var(--sans); font-size: .82rem; font-weight: 600;
       letter-spacing: .06em; text-decoration: none; color: var(--plum);
       border: 1.5px solid #593543;
       transition: background .2s, color .2s, border-color .2s;
@@ -84,21 +95,30 @@
       align-items: center; justify-content: center;
       text-align: center; padding-bottom: 24px;
     }
-    .grand-chiffre {
-      font-family: var(--serif); font-size: 140px; font-weight: 600;
-      color: var(--plum); line-height: .85; letter-spacing: -.02em;
-      margin-bottom: 18px;
+    .badge-center {
+      font-family: var(--sans); font-size: .72rem; font-weight: 600;
+      letter-spacing: .28em; text-transform: uppercase;
+      color: #C75F62; border: 1.5px solid #C75F62;
+      background: transparent; padding: 7px 20px; border-radius: 50px;
+      display: inline-block; margin-top: 12px; margin-bottom: 16px;
+      pointer-events: none; user-select: none;
     }
     .cover-title {
-      font-family: var(--serif); font-size: 3.12rem; font-weight: 600;
-      color: var(--plum); letter-spacing: .08em; text-transform: uppercase;
-      line-height: 1.1; margin-bottom: 18px;
+      font-family: var(--serif); font-size: 3.00rem; font-weight: 600;
+      color: var(--plum); letter-spacing: .06em; text-transform: uppercase;
+      line-height: 1; margin-bottom: 0;
+      display: flex; align-items: center; justify-content: center; gap: 10px;
     }
-    .sep { width: 40px; height: 1px; background: #C75F62; margin: 0 auto 18px; }
+    .title-5 {
+      font-family: var(--serif); font-size: 4.20rem; font-weight: 600;
+      color: #C75F62; line-height: 1; letter-spacing: -.02em;
+      text-transform: none; display: inline-block; transform: translateY(-0.14em);
+    }
+    .sep { width: 40px; height: 1px; background: #C75F62; margin: 0 auto 12px; }
     .cover-subtitle {
       font-family: var(--serif); font-size: 2.05rem; font-weight: 500;
       font-style: italic; color: var(--plum); line-height: 1.60;
-      max-width: 580px; margin: 0 auto 14px;
+      max-width: 580px; margin: 0 auto 10px;
     }
     .cover-subtitle .accent { color: #C75F62; }
     .boutons { display: flex; flex-direction: column; align-items: center; gap: 10px; width: 100%; max-width: 880px; margin: 0 auto; }
@@ -197,7 +217,7 @@
       border-radius: 0 3px 3px 0;
     }
     .int-box {
-      background: var(--mist);
+      background: rgba(199,95,98,.05);
       border-left: 3px solid #C75F62;
       padding: 15px 24px;
       margin: 12px 0;
@@ -216,7 +236,7 @@
     }
     .int-box li:last-child { border-bottom: none; }
     .int-box li::before {
-      content: '→'; position: absolute; left: 0; top: 6px;
+      content: '–'; position: absolute; left: 0; top: 6px;
       color: #C75F62; font-size: .74rem;
     }
     .int-dir {
@@ -315,89 +335,150 @@
     #q2 .q-title { font-size: 2.75rem; }
     .page-int .int-box li::before { font-size: 1.05rem; }
 
-    /* ── ACCESS FORM ── */
-    [data-gated] .page-int { display: none; }
-    .gate-overlay {
-      position: fixed; inset: 0;
-      background: rgba(41,22,28,.52);
-      backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px);
-      z-index: 900; display: flex; align-items: center; justify-content: center;
-      padding: 20px; opacity: 0; pointer-events: none; transition: opacity .3s;
+    /* ══ EXEC'IA Conviction ══ */
+    .int-conviction {
+      margin: 0;
+      padding: 16px 64px 14px 68px;
+      background: rgba(199,95,98,.07);
+      border-left: 4px solid #C75F62;
     }
-    .gate-overlay.open { opacity: 1; pointer-events: all; }
-    .gate-modal {
-      background: var(--ivory); width: 100%; max-width: 500px;
-      border-radius: 6px; padding: 44px 48px 36px; position: relative;
-      box-shadow: 0 20px 72px rgba(41,22,28,.26);
+    .int-conviction-label {
+      font-family: var(--sans); font-size: .62rem; font-weight: 700; letter-spacing: .18em;
+      text-transform: uppercase; color: #C75F62; margin-bottom: 8px;
     }
-    .gate-top-rule {
-      position: absolute; top: 0; left: 0; right: 0;
-      height: 3px; background: #C75F62; border-radius: 6px 6px 0 0;
+    .int-conviction-text {
+      font-family: var(--serif); font-style: italic; font-size: 1.10rem; line-height: 1.68;
+      color: var(--plum); font-weight: 500;
     }
-    .gate-eyebrow {
-      font-family: var(--sans); font-size: .62rem; font-weight: 600;
-      letter-spacing: .22em; text-transform: uppercase; color: #C75F62; margin-bottom: 12px;
+    #q1 .int-conviction-text,#q2 .int-conviction-text,#q3 .int-conviction-text,#q4 .int-conviction-text,#q5 .int-conviction-text { font-size: 1.28rem; }
+    #q1 .int-conviction-label,#q2 .int-conviction-label,#q3 .int-conviction-label,#q4 .int-conviction-label,#q5 .int-conviction-label { font-size: .70rem; }
+
+    /* ══ EXEC'IA Offer ══ */
+    .int-offer {
+      margin: 0;
+      padding: 22px 64px 24px;
+      background: var(--plum);
+      display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0;
+      flex-shrink: 0;
     }
-    .gate-title {
-      font-family: var(--serif); font-size: 1.85rem; font-weight: 500;
-      color: var(--plum); line-height: 1.25; margin-bottom: 6px;
+    .int-offer-left { flex: 1; min-width: 0; padding-right: 24px; }
+    .int-offer-badge {
+      font-family: var(--sans); font-size: .61rem; font-weight: 700; letter-spacing: .18em;
+      text-transform: uppercase; color: rgba(250,246,242,.50); margin-bottom: 4px;
     }
-    .gate-title em { font-style: italic; }
-    .gate-sub {
-      font-family: var(--sans); font-size: .80rem; font-weight: 300;
-      color: var(--plum); opacity: .65; line-height: 1.6; margin-bottom: 26px;
+    .int-offer-name {
+      font-family: var(--serif); font-size: 1.10rem; font-weight: 500; color: #FAF6F2;
+      line-height: 1.3;
     }
-    .gate-field { margin-bottom: 16px; }
-    .gate-field label {
-      display: block; font-family: var(--sans); font-size: .65rem; font-weight: 600;
-      letter-spacing: .12em; text-transform: uppercase; color: var(--plum); margin-bottom: 6px;
+    .int-offer-right {
+      display: flex; flex-direction: column; align-items: center; gap: 9px; flex-shrink: 0;
     }
-    .gate-field input {
-      width: 100%; padding: 10px 14px; box-sizing: border-box;
-      border: 1.5px solid rgba(89,53,67,.22); border-radius: 4px;
-      background: var(--white); font-family: var(--sans); font-size: .86rem;
-      font-weight: 400; color: var(--plum); outline: none; transition: border-color .18s;
+    .int-offer-price {
+      font-family: var(--serif); font-size: 1.55rem; font-weight: 500; color: #FAF6F2;
+      letter-spacing: .02em; line-height: 1;
     }
-    .gate-field input::placeholder { opacity: .38; }
-    .gate-field input:focus { border-color: #C75F62; }
-    .gate-field input.err { border-color: #C75F62; background: rgba(199,95,98,.05); }
-    .gate-err {
-      display: block; font-family: var(--sans); font-size: .71rem;
-      color: #C75F62; margin-top: 4px; line-height: 1.4;
-      max-height: 0; overflow: hidden; transition: max-height .2s;
+    .int-offer-link {
+      display: inline-flex; align-items: center;
+      padding: 10px 22px; border-radius: 50px;
+      background: #C75F62; color: #FAF6F2;
+      font-family: var(--sans); font-size: .77rem; font-weight: 500;
+      letter-spacing: .04em; text-decoration: none; white-space: nowrap;
+      transition: opacity .2s;
     }
-    .gate-err.on { max-height: 80px; }
-    .gate-submit {
-      width: 100%; margin-top: 22px; padding: 13px 24px;
-      background: #C75F62; color: #FAF6F2; border: none; border-radius: 50px;
-      font-family: var(--sans); font-size: .88rem; font-weight: 600;
-      letter-spacing: .06em; cursor: pointer; transition: opacity .18s, transform .1s;
+    .int-offer-link:hover { opacity: .85; }
+    .int-offer-desc {
+      flex: 0 0 100%;
+      font-family: var(--sans); font-size: .86rem; color: rgba(250,246,242,.60); line-height: 1.6;
+      margin-top: 10px;
     }
-    .gate-submit:hover { opacity: .87; }
-    .gate-submit:active { transform: scale(.98); }
-    .gate-note {
-      font-family: var(--sans); font-size: .66rem; font-weight: 300;
-      color: var(--plum); opacity: .48; text-align: center; margin-top: 14px; line-height: 1.5;
+    #q1 .int-offer-name,#q2 .int-offer-name,#q3 .int-offer-name,#q4 .int-offer-name,#q5 .int-offer-name { font-size: 1.26rem; }
+    #q1 .int-offer-desc,#q2 .int-offer-desc,#q3 .int-offer-desc,#q4 .int-offer-desc,#q5 .int-offer-desc { font-size: .97rem; }
+    #q1 .int-offer-price,#q2 .int-offer-price,#q3 .int-offer-price,#q4 .int-offer-price,#q5 .int-offer-price { font-size: 1.78rem; }
+    #q1 .int-offer-link,#q2 .int-offer-link,#q3 .int-offer-link,#q4 .int-offer-link,#q5 .int-offer-link { font-size: .87rem; padding: 11px 24px; }
+    #q1 .int-offer-badge,#q2 .int-offer-badge,#q3 .int-offer-badge,#q4 .int-offer-badge,#q5 .int-offer-badge { font-size: .69rem; }
+
+    /* ══ Download button ══ */
+    .btn-download {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 8px 22px; border-radius: 50px;
+      background: #FAF6F2; color: #633B4A;
+      font-family: var(--sans); font-size: .72rem; font-weight: 500;
+      letter-spacing: .06em; cursor: pointer; border: 1.5px solid #C75F62; text-decoration: none;
+      margin-top: 20px; align-self: center;
+      transition: background .2s, color .2s;
+    }
+    .btn-download:hover { background: #C75F62; color: #FAF6F2; }
+
+    /* ══ Tablet ══ */
+    @media (max-width: 768px) {
+      .cover-body { padding: 60px 20px 0; }
+      .btn-back { left: 12px; top: 20px; font-size: .82rem; padding: 6px 14px; }
+      .top-right { right: 12px; top: 20px; gap: 6px; }
+      .top-langs a { padding: 6px 10px; font-size: .72rem; }
+      .title-5 { font-size: 4.2rem; }
+      .cover-title { font-size: 1.90rem; gap: 10px; }
+      .cover-subtitle { font-size: 1.40rem; }
+      .btn-q { font-size: .92rem; padding: 10px 20px; gap: 14px; }
+      .btn-num { font-size: 1.40rem; }
+      footer { padding: 18px 24px 16px; }
+      .int-body { padding: 16px 24px 12px 52px; }
+      .wm-num { font-size: 34px; left: 12px; top: 46px; }
+      .int-header { padding: 12px 24px 0; }
+      .int-breadcrumb { right: 24px !important; font-size: .65rem !important; }
+      .int-footer { padding: 0 24px 12px; }
+      .int-conviction { padding: 14px 24px 12px 28px; }
+      .int-offer { padding: 18px 24px 20px; }
+      #q1 .q-title,#q2 .q-title,#q3 .q-title,#q4 .q-title,#q5 .q-title { font-size: 2.10rem; }
+      #q1 .q-lead,#q2 .q-lead,#q3 .q-lead,#q4 .q-lead,#q5 .q-lead { font-size: 1.20rem; }
+      #q1 .int-para,#q2 .int-para,#q3 .int-para,#q4 .int-para,#q5 .int-para { font-size: .95rem; }
+      #q1 .int-pull,#q2 .int-pull,#q3 .int-pull,#q4 .int-pull,#q5 .int-pull { font-size: 1.20rem; }
+      #q1 .int-box li,#q2 .int-box li,#q3 .int-box li,#q4 .int-box li,#q5 .int-box li { font-size: .88rem; }
+      #q1 .int-conviction-text,#q2 .int-conviction-text,#q3 .int-conviction-text,#q4 .int-conviction-text,#q5 .int-conviction-text { font-size: 1.00rem; }
+      #q1 .int-offer-name,#q2 .int-offer-name,#q3 .int-offer-name,#q4 .int-offer-name,#q5 .int-offer-name { font-size: 1.05rem; }
+      #q1 .int-offer-desc,#q2 .int-offer-desc,#q3 .int-offer-desc,#q4 .int-offer-desc,#q5 .int-offer-desc { font-size: .82rem; }
+      .int-offer-right { flex-direction: row; gap: 12px; align-items: center; }
+    }
+
+    /* ══ Mobile ══ */
+    @media (max-width: 480px) {
+      .cover-title { font-size: 1.50rem; gap: 8px; }
+      .title-5 { font-size: 3.20rem; }
+      .cover-subtitle { font-size: 1.20rem; max-width: 320px; }
+      .badge-center { font-size: .62rem; padding: 6px 14px; margin-bottom: 20px; }
+      .int-body { padding: 12px 16px 10px 42px; }
+      .wm-num { font-size: 28px; left: 10px; }
+      #q1 .q-title,#q2 .q-title,#q3 .q-title,#q4 .q-title,#q5 .q-title { font-size: 1.70rem; }
+      #q1 .int-pull,#q2 .int-pull,#q3 .int-pull,#q4 .int-pull,#q5 .int-pull { font-size: 1.05rem; }
+      .int-conviction { padding: 12px 16px 10px 20px; }
+      .int-offer { padding: 14px 16px 16px; }
+      .int-footer { padding: 0 16px 10px; }
+    }
+
+    /* ══ Print A4 ══ */
+    @page { size: A4 portrait; margin: 0; }
+    @media print {
+      .btn-back, .top-right, .btn-download { display: none !important; }
+      .page { page-break-after: always; width: 210mm; }
+      .int-dir, .top-rule, .int-offer, .int-offer-link, .grand-chiffre { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     }
   </style>
 </head>
-<body data-gated>
+<body>
 
 <!-- ══ COVER ══ -->
 <div class="page" id="cover">
   <div class="top-rule"></div>
   <div class="cover-body">
+    <a class="btn-back" href="https://execia-v1-prune.vercel.app">← exec-ia.ai</a>
     <div class="top-right">
-      <div class="badge-q4">Q4 2026</div>
       <div class="top-langs">
         <a href="cover-5questions.html">🇫🇷 Français</a>
         <a href="cover-5questions-es.html">🇪🇸 Español</a>
       </div>
     </div>
     <div class="centre">
-      <div class="grand-chiffre">5</div>
-      <p class="cover-title">The 5 Essentials</p>
-      <div class="sep"></div>
+      <p class="cover-title">The <span class="title-5">5</span> Essentials</p>
+      <div class="badge-center">Q4 2026</div>
       <p class="cover-subtitle">
         What truly deserves your attention<br>before it becomes <span class="accent">an emergency</span>
       </p>
@@ -408,6 +489,7 @@
         <a class="btn-q" href="#q4"><span class="btn-num">04</span>Which client do you believe is loyal when they may no longer be?</a>
         <a class="btn-q" href="#q5"><span class="btn-num">05</span>Which blind spot is already costing more than your biggest investment?</a>
       </div>
+      <button class="btn-download" onclick="window.print()">↓ Download PDF</button>
     </div>
   </div>
   <footer>
@@ -415,8 +497,8 @@
     <p class="footer-logo-sub">Consulting</p>
     <p class="footer-tag">Executive experience at the service of your AI transformation</p>
     <div class="footer-btns">
-      <a class="footer-contact-btn" href="mailto:contact@exec-ia.ai">✉️ contact@exec-ia.ai</a>
-      <a class="footer-contact-btn" href="https://www.exec-ia.ai/en">🌐 www.exec-ia.ai</a>
+      <a class="footer-contact-btn" href="mailto:contact@exec-ia.ai">contact@exec-ia.ai</a>
+      <a class="footer-contact-btn" href="https://exec-ia.ai">exec-ia.ai</a>
     </div>
     <p class="footer-copy">© EXEC'<span class="logo-ia">IA</span> — All rights reserved</p>
   </footer>
@@ -454,10 +536,24 @@
       <p class="int-dir-q">Which clearly identified topic do you keep postponing even though its cost grows every month?</p>
     </div>
   </div>
+  <div class="int-conviction">
+    <div class="int-conviction-label">EXEC'IA Conviction</div>
+    <p class="int-conviction-text">AI does not create priorities. It accelerates the execution of what your leadership team should have decided six months ago.</p>
+  </div>
+  <div class="int-offer">
+    <div class="int-offer-left">
+      <div class="int-offer-badge">EXEC'IA Offer · Level I</div>
+      <div class="int-offer-name">Scoping Session</div>
+    </div>
+    <div class="int-offer-right">
+      <a class="int-offer-link" href="https://calendly.com/valerie-mailland">Book</a>
+    </div>
+    <div class="int-offer-desc">90 minutes to clarify the AI priorities that truly deserve the attention of your Executive Leadership.</div>
+  </div>
   <div class="int-footer">
     <div class="int-footer-rule"></div>
     <div class="int-footer-row">
-      <span class="int-footer-brand">EXEC'<span class="logo-ia">IA</span> — All rights reserved</span>
+      <span class="int-footer-brand">© EXEC'<span class="logo-ia">IA</span> — All rights reserved</span>
       <span class="int-footer-pnum">1 / 5</span>
     </div>
   </div>
@@ -496,10 +592,24 @@
       <p class="int-dir-q">What could your company achieve if your best managers spent more time building than compensating?</p>
     </div>
   </div>
+  <div class="int-conviction">
+    <div class="int-conviction-label">EXEC'IA Conviction</div>
+    <p class="int-conviction-text">Giving 20% of their time back to your best managers is not a productivity gain. It is sometimes the most important strategic decision of the year.</p>
+  </div>
+  <div class="int-offer">
+    <div class="int-offer-left">
+      <div class="int-offer-badge">EXEC'IA Offer · Level II</div>
+      <div class="int-offer-name">AI Leadership & Decision</div>
+    </div>
+    <div class="int-offer-right">
+      <a class="int-offer-link" href="https://calendly.com/valerie-mailland">Discover</a>
+    </div>
+    <div class="int-offer-desc">Building your executive team's AI decision framework — before your vendors define it for you.</div>
+  </div>
   <div class="int-footer">
     <div class="int-footer-rule"></div>
     <div class="int-footer-row">
-      <span class="int-footer-brand">EXEC'<span class="logo-ia">IA</span> — All rights reserved</span>
+      <span class="int-footer-brand">© EXEC'<span class="logo-ia">IA</span> — All rights reserved</span>
       <span class="int-footer-pnum">2 / 5</span>
     </div>
   </div>
@@ -536,10 +646,24 @@
       <p class="int-dir-q">Which decisions in your company still rely more on certain individuals than on the organization itself?</p>
     </div>
   </div>
+  <div class="int-conviction">
+    <div class="int-conviction-label">EXEC'IA Conviction</div>
+    <p class="int-conviction-text">Intangible capital is your most fragile asset — and the least visible on your balance sheets. AI can document it before it walks out the door.</p>
+  </div>
+  <div class="int-offer">
+    <div class="int-offer-left">
+      <div class="int-offer-badge">EXEC'IA Offer · Level III</div>
+      <div class="int-offer-name">Executive Advisory</div>
+    </div>
+    <div class="int-offer-right">
+      <a class="int-offer-link" href="https://calendly.com/valerie-mailland">Discover</a>
+    </div>
+    <div class="int-offer-desc">An independent perspective for every AI decision that commits your organization long-term.</div>
+  </div>
   <div class="int-footer">
     <div class="int-footer-rule"></div>
     <div class="int-footer-row">
-      <span class="int-footer-brand">EXEC'<span class="logo-ia">IA</span> — All rights reserved</span>
+      <span class="int-footer-brand">© EXEC'<span class="logo-ia">IA</span> — All rights reserved</span>
       <span class="int-footer-pnum">3 / 5</span>
     </div>
   </div>
@@ -576,10 +700,24 @@
       <p class="int-dir-q">Which clients do you still consider loyal when their behavior may already be telling a different story?</p>
     </div>
   </div>
+  <div class="int-conviction">
+    <div class="int-conviction-label">EXEC'IA Conviction</div>
+    <p class="int-conviction-text">Commercial disruption does not happen suddenly. It announces itself. The signals were there — they simply weren't in the right place at the right time.</p>
+  </div>
+  <div class="int-offer">
+    <div class="int-offer-left">
+      <div class="int-offer-badge">EXEC'IA Offer · Level I</div>
+      <div class="int-offer-name">Scoping Session</div>
+    </div>
+    <div class="int-offer-right">
+      <a class="int-offer-link" href="https://calendly.com/valerie-mailland">Book</a>
+    </div>
+    <div class="int-offer-desc">Identify areas of commercial vulnerability before they turn into ruptures.</div>
+  </div>
   <div class="int-footer">
     <div class="int-footer-rule"></div>
     <div class="int-footer-row">
-      <span class="int-footer-brand">EXEC'<span class="logo-ia">IA</span> — All rights reserved</span>
+      <span class="int-footer-brand">© EXEC'<span class="logo-ia">IA</span> — All rights reserved</span>
       <span class="int-footer-pnum">4 / 5</span>
     </div>
   </div>
@@ -616,10 +754,25 @@
       <p class="int-dir-q">Which topic is currently moving through your organization without anyone truly responsible for monitoring it?</p>
     </div>
   </div>
+  <div class="int-conviction">
+    <div class="int-conviction-label">EXEC'IA Conviction</div>
+    <p class="int-conviction-text">A blind spot is not a visibility problem. It is a governance problem. AI can instrument it — but it is up to Leadership to name it.</p>
+  </div>
+  <div class="int-offer">
+    <div class="int-offer-left">
+      <div class="int-offer-badge">AI Diagnostic · Complimentary session</div>
+      <div class="int-offer-name">Your AI Diagnostic</div>
+    </div>
+    <div class="int-offer-right">
+      <div class="int-offer-price">Complimentary</div>
+      <a class="int-offer-link" href="https://calendly.com/valerie-mailland">Book</a>
+    </div>
+    <div class="int-offer-desc">30 minutes to assess together what AI can truly bring to your organization.</div>
+  </div>
   <div class="int-footer">
     <div class="int-footer-rule"></div>
     <div class="int-footer-row">
-      <span class="int-footer-brand">EXEC'<span class="logo-ia">IA</span> — All rights reserved</span>
+      <span class="int-footer-brand">© EXEC'<span class="logo-ia">IA</span> — All rights reserved</span>
       <span class="int-footer-pnum">5 / 5</span>
     </div>
   </div>
@@ -627,65 +780,6 @@
 
 
 <!-- ══ GATE ══ -->
-<div class="gate-overlay" id="gateOverlay" role="dialog" aria-modal="true">
-  <div class="gate-modal">
-    <div class="gate-top-rule"></div>
-    <p class="gate-eyebrow">Document access</p>
-    <h2 class="gate-title">Before accessing <em>The 5 Essentials</em></h2>
-    <p class="gate-sub">Fill in your details to access the document.</p>
-    <form id="gateForm" novalidate>
-      <div class="gate-field">
-        <label for="gf-name">First and Last Name</label>
-        <input id="gf-name" name="fullname" type="text" placeholder="Jane Smith" autocomplete="name">
-        <span class="gate-err" id="err-name"></span>
-      </div>
-      <div class="gate-field">
-        <label for="gf-role">Job Title</label>
-        <input id="gf-role" name="role" type="text" placeholder="Chief Executive Officer" autocomplete="organization-title">
-        <span class="gate-err" id="err-role"></span>
-      </div>
-      <div class="gate-field">
-        <label for="gf-company">Company</label>
-        <input id="gf-company" name="company" type="text" placeholder="Your company name" autocomplete="organization">
-        <span class="gate-err" id="err-company"></span>
-      </div>
-      <div class="gate-field">
-        <label for="gf-email">Professional Email</label>
-        <input id="gf-email" name="email" type="email" placeholder="jane.smith@company.com" autocomplete="email">
-        <span class="gate-err" id="err-email"></span>
-      </div>
-      <button type="submit" class="gate-submit">Access the document</button>
-    </form>
-    <p class="gate-note">Your information is used solely to provide you with this document.<br>No solicitation.</p>
-  </div>
-</div>
-<script>
-(function(){
-  var C=new Set(['gmail.com','googlemail.com','yahoo.com','yahoo.fr','yahoo.co.uk','yahoo.es','yahoo.it','yahoo.de','hotmail.com','hotmail.fr','hotmail.co.uk','hotmail.es','hotmail.it','hotmail.de','outlook.com','outlook.fr','live.com','live.fr','live.co.uk','msn.com','icloud.com','me.com','mac.com','orange.fr','free.fr','sfr.fr','laposte.net','wanadoo.fr','neuf.fr','bbox.fr','aol.com','aol.fr','protonmail.com','proton.me','tutanota.com','tutamail.com','yandex.com','yandex.ru','mail.ru','inbox.ru','gmx.com','gmx.fr','gmx.de','gmx.net','web.de','t-online.de','libero.it','virgilio.it','btinternet.com','sky.com','talktalk.net']);
-  var KEY='execia_gate_v1',pending='#q1';
-  var ov=document.getElementById('gateOverlay'),fm=document.getElementById('gateForm');
-  function setErr(id,msg){var el=document.getElementById(id);el.textContent=msg;el.classList.toggle('on',!!msg);el.previousElementSibling.classList.toggle('err',!!msg);}
-  function submitAT(d){fetch('/api/airtable',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)}).catch(function(){});}
-  function unlock(){sessionStorage.setItem(KEY,'1');document.body.removeAttribute('data-gated');ov.classList.remove('open');setTimeout(function(){var t=document.querySelector(pending);if(t)t.scrollIntoView({behavior:'smooth',block:'start'});},60);}
-  function openGate(a){pending=a;ov.classList.add('open');fm.reset();fm.querySelectorAll('.gate-err').forEach(function(e){e.textContent='';e.classList.remove('on');});fm.querySelectorAll('input').forEach(function(i){i.classList.remove('err');});setTimeout(function(){fm.querySelector('input').focus();},120);}
-  document.querySelectorAll('.btn-q').forEach(function(b){b.addEventListener('click',function(e){if(!document.body.hasAttribute('data-gated'))return;e.preventDefault();openGate(b.getAttribute('href'));});});
-  fm.addEventListener('submit',function(e){
-    e.preventDefault();
-    var els=fm.elements,n=els['fullname'].value.trim(),r=els['role'].value.trim(),c=els['company'].value.trim(),em=els['email'].value.trim(),ok=true;
-    if(!n){setErr('err-name','Please enter your first and last name.');ok=false;}else setErr('err-name','');
-    if(!r){setErr('err-role','Please enter your job title.');ok=false;}else setErr('err-role','');
-    if(!c){setErr('err-company','Please enter your company name.');ok=false;}else setErr('err-company','');
-    var d=(em.split('@')[1]||'').toLowerCase();
-    if(!em){setErr('err-email','Please enter your professional email address.');ok=false;}
-    else if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em)){setErr('err-email','Invalid email address format.');ok=false;}
-    else if(C.has(d)){setErr('err-email','A professional email address is required — Gmail, Yahoo, Hotmail and other personal email providers are not accepted.');ok=false;}
-    else setErr('err-email','');
-    if(ok){submitAT({fullname:n,role:r,company:c,email:em,langue:'EN',document_telecharge:'The 5 Essentials',source:'Direct'});unlock();}
-  });
-  ov.addEventListener('click',function(e){if(e.target===ov)ov.classList.remove('open');});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape')ov.classList.remove('open');});
-  if(sessionStorage.getItem(KEY)){document.body.removeAttribute('data-gated');}
-})();
-</script>
+
 </body>
 </html>

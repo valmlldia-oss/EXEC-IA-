@@ -58,7 +58,7 @@
 
       <div class="hero-cta" style="margin-top:48px;">
         <a href="https://calendly.com/valerie-mailland" target="_blank" rel="noopener" class="btn btn-rose">Book my strategic exchange</a>
-        <a href="#agents" class="btn btn-ivory">Evaluate my AI opportunities</a>
+        <a href="#newsletter" class="btn btn-ivory" style="font-size:.85em;opacity:.85;">The 5 Essentials — free</a>
       </div>
       <p style="margin-top:20px;margin-bottom:4px;font-family:'Raleway',sans-serif;font-size:.72rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--plum);opacity:.75;">Founder &amp; President</p>
       <h1 style="margin-top:0;">Valérie<em style="background:linear-gradient(to right,#633B4A,#C75F62);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Mailland</em></h1>
@@ -721,13 +721,13 @@
 
       <!-- 01 -->
       <div class="testi reveal delay-1">
-        <div class="testi-tag">Executive leadership &amp; trust</div>
+        <div class="testi-tag">International leadership &amp; cross-cultural collaboration</div>
         <div class="testi-q">&#x201C;</div>
-        <p>Valérie has always demonstrated exemplary professionalism. Her organisational skills, reliability and ability to manage complex priorities make her a valuable collaborator for any executive. She moves forward with method, discretion and efficiency, even in the most demanding environments.</p>
+        <p>Valerie is a dedicated professional who operates effectively in international and multicultural environments. She combines sound judgment, adaptability, and a collaborative approach with the ability to coordinate projects and align diverse stakeholders. <br>Her ability to build trusted relationships, connect people, and facilitate communication across functions and cultures brings clarity and structure to fast-moving initiatives. She is a valuable contributor in demanding organizations.</p>
         <div class="testi-author">
-          <div class="testi-avatar testi-avatar--initials">Xx</div>
+          <div class="testi-avatar testi-avatar--initials">HH</div>
           <div>
-            <span class="testi-name">Xxxx</span>
+            <span class="testi-name">Holger Hellmich</span>
             <strong class="testi-role">Former President &amp; Chief Executive Officer — Groupauto International</strong>
           </div>
         </div>
@@ -781,157 +781,131 @@
   </div>
 </section>
 
-<!-- ═══ LEAD MAGNET — THE 5 ESSENTIALS ════════════════════════ -->
-<section id="lead-magnet" class="lm-section">
-  <div class="wrap">
-    <div class="lm-inner">
-      <div class="lm-text reveal">
-        <span class="eyebrow">Exclusive executive resource</span>
-        <h2 class="lm-title">The questions you're not<br>asking yourself — yet.</h2>
-        <p class="lm-desc">A strategic guide designed for executives who want to move forward on AI with clarity, method and without wasting time.</p>
-        <ul class="lm-bullets">
-          <li>The 5 AI decisions to prioritise first</li>
-          <li>The pitfalls to avoid right now</li>
-          <li>A framework you can act on immediately</li>
-        </ul>
-      </div>
-      <div class="lm-card reveal delay-2">
-        <div class="lm-card-meta">
-          <span class="lm-card-label">EXEC'IA</span>
-          <span class="lm-card-divider"></span>
-          <span class="lm-card-quarter">Q2 2026</span>
-        </div>
-        <h3 class="lm-card-title">The 5<br>Essentials</h3>
-        <p class="lm-card-sub">AI strategic guide<br>for executives</p>
-        <button class="btn btn-rose lm-btn" id="lm-open">THE 5 ESSENTIALS<br>DOWNLOAD</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ GATE — THE 5 ESSENTIALS ════════════════════════════════ -->
-<div id="lm-overlay" class="lm-overlay" role="dialog" aria-modal="true" aria-labelledby="lm-modal-title">
-  <div class="lm-modal">
-    <button class="lm-modal-close" id="lm-close" aria-label="Close">&times;</button>
-    <p class="lm-modal-eyebrow">Document access</p>
-    <h2 class="lm-modal-title" id="lm-modal-title">Before downloading<br><em>The 5 Essentials</em></h2>
-    <form id="lm-form" novalidate>
-      <div class="lm-field">
-        <label for="lm-name">First name and LAST NAME <span class="lm-req">*</span></label>
-        <input id="lm-name" name="fullname" type="text" placeholder="Marie DUPONT" autocomplete="name">
-      </div>
-      <div class="lm-field">
-        <label for="lm-role">Role <span class="lm-req">*</span></label>
-        <input id="lm-role" name="role" type="text" placeholder="Chief Executive Officer" autocomplete="organization-title">
-      </div>
-      <div class="lm-field">
-        <label for="lm-company">Company <span class="lm-req">*</span></label>
-        <input id="lm-company" name="company" type="text" placeholder="Your company name" autocomplete="organization">
-      </div>
-      <div class="lm-field">
-        <label for="lm-email">Professional email <span class="lm-req">*</span></label>
-        <input id="lm-email" name="email" type="email" placeholder="firstname@yourcompany.com" autocomplete="email">
-      </div>
-      <div class="lm-global-err" id="lm-global-err"></div>
-      <button type="submit" class="btn btn-rose lm-submit" id="lm-submit">Download the document</button>
-      <div class="lm-api-err" id="lm-api-err"></div>
-    </form>
-    <div id="lm-success" style="display:none;text-align:center;padding:24px 0;">
-      <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.5rem;color:#6B625D;font-weight:400;margin:0 0 10px;">Thank you <span id="lm-success-name"></span>&nbsp;—</p>
-      <p style="font-size:.93rem;color:#6B625D;margin:0 0 16px;line-height:1.6;">Your document is on its way.<br>Check your professional inbox in a few moments.</p>
-      <p style="font-size:.76rem;color:#B8B1AA;">🔒 GDPR compliant &nbsp;•&nbsp; Unsubscribe in one click</p>
-    </div>
-  </div>
-</div>
-<script>
-(function(){
-  var LM_PDFS = {
-    FR: '/assets/Les%205%20Essentiels_The%205%20Essentials_Los%205%20Esenciales.html',
-    EN: '/assets/Les%205%20Essentiels_The%205%20Essentials_Los%205%20Esenciales.html',
-    ES: '/assets/Les%205%20Essentiels_The%205%20Essentials_Los%205%20Esenciales.html',
-  };
-  /* ─────────────────────────────────────────────────────────── */
-  var LM_LANG='EN', LM_DOC='The 5 Essentials';
-  var BLOCKED=new Set(['gmail.com','googlemail.com','yahoo.com','yahoo.fr','yahoo.co.uk','hotmail.com','hotmail.fr','hotmail.co.uk','outlook.com','outlook.fr','live.com','live.fr','icloud.com','me.com','mac.com','proton.me','protonmail.com','pm.me','aol.com','zoho.com','ymail.com','mail.com','gmx.com','gmx.fr','gmx.de','laposte.net','free.fr','orange.fr','wanadoo.fr','sfr.fr','bbox.fr','neuf.fr','numericable.fr','club-internet.fr','aliceadsl.fr','cegetel.net']);
-  var ov=document.getElementById('lm-overlay'),fm=document.getElementById('lm-form'),btn=document.getElementById('lm-submit'),ger=document.getElementById('lm-global-err'),aer=document.getElementById('lm-api-err');
-  function resetForm(){fm.reset();ger.textContent='';aer.textContent='';fm.querySelectorAll('input').forEach(function(i){i.classList.remove('err');});}
-  function closeModal(){ov.classList.remove('open');}
-  document.getElementById('lm-open').addEventListener('click',function(){ov.classList.add('open');resetForm();setTimeout(function(){document.getElementById('lm-name').focus();},120);});
-  document.getElementById('lm-close').addEventListener('click',closeModal);
-  ov.addEventListener('click',function(e){if(e.target===ov)closeModal();});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
-  fm.addEventListener('submit',async function(e){
-    e.preventDefault();
-    ger.textContent='';aer.textContent='';
-    fm.querySelectorAll('input').forEach(function(i){i.classList.remove('err');});
-    var n=fm.elements['fullname'].value.trim(),r=fm.elements['role'].value.trim(),c=fm.elements['company'].value.trim(),em=fm.elements['email'].value.trim(),ok=true;
-    if(!n){document.getElementById('lm-name').classList.add('err');ok=false;}
-    if(!r){document.getElementById('lm-role').classList.add('err');ok=false;}
-    if(!c){document.getElementById('lm-company').classList.add('err');ok=false;}
-    var domain=(em.split('@')[1]||'').toLowerCase();
-    if(!em){document.getElementById('lm-email').classList.add('err');ok=false;}
-    else if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em)){document.getElementById('lm-email').classList.add('err');ok=false;}
-    else if(BLOCKED.has(domain)){document.getElementById('lm-email').classList.add('err');ger.textContent='Please use your professional email address.';ok=false;}
-    if(!ok){if(!ger.textContent)ger.textContent='Please complete all required fields.';return;}
-    btn.disabled=true;btn.textContent='Saving…';
-    try{
-      var res=await fetch('/api/airtable',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({fullname:n,role:r,company:c,email:em,langue:LM_LANG,document_telecharge:LM_DOC,source:'EXECIA_PRUNE'})});
-      if(!res.ok)throw new Error('api');
-      window.open(LM_PDFS[LM_LANG],'_blank');
-      var prenom=n.split(' ')[0];
-      document.getElementById('lm-success-name').textContent=prenom;
-      document.getElementById('lm-form').style.display='none';
-      document.getElementById('lm-success').style.display='block';
-    }catch(err){
-      aer.textContent='An error occurred. Please try again or contact us directly.';
-      btn.disabled=false;btn.textContent='Download the document';
-    }
-  });
-})();
-</script>
-
-<!-- ═══ NEWSLETTER ════════════════════════════════════════════ -->
+<!-- ═══ THE 5 ESSENTIALS ═════════════════════════════════════════ -->
 <section id="newsletter" class="newsletter-section">
   <div class="wrap">
+    <p class="nl-section-label">FOR THOSE WHO DECIDE</p>
     <div class="newsletter-inner">
 
       <div class="newsletter-content reveal">
-        <span class="eyebrow nl-eyebrow">AI Letter · Exclusive</span>
-        <h2>Stay ahead<br>in Executive AI</h2>
-        <p>Analysis, field experience and strategic insights to help executives make better decisions.</p>
-        <ul class="newsletter-perks">
-          <li><span class="nl-bullet">»</span> Clear insights, no technical jargon</li>
-          <li><span class="nl-bullet">»</span> Real-world use cases from the field</li>
-          <li><span class="nl-bullet">»</span> Strategic decisions and executive feedback</li>
+        <h2>The most important decisions are rarely the most visible.<br><br>Until the day their consequences become so.</h2>
+        <div class="nl-filet"></div>
+        <ul class="nl-checklist">
+          <li>A critical decision that never gets made</li>
+          <li>Busy managers with little availability</li>
+          <li>Critical knowledge no one has passed on</li>
+          <li>Clients drifting away in silence</li>
+          <li>Decisions made without real governance</li>
         </ul>
       </div>
 
-      <div class="newsletter-form-wrap reveal delay-2">
-        <div class="newsletter-magnet">
-          <span class="magnet-label">EXEC'IA FRAMEWORK</span>
-          <strong>XXX</strong>
-          <span class="magnet-sub">Quickly identify the initiatives that truly deserve your attention.</span>
+      <div class="nl-box reveal delay-2">
+
+        <div id="nl-box-intro">
+          <div class="nl-box-hero">
+            <span class="nl-hero-num">5</span>
+            <span class="nl-hero-word">THE 5 ESSENTIALS</span>
+          </div>
+          <div class="nl-box-body">
+            <p>5 C-suite questions.<br><br>The ones already shaping your organisation.</p>
+          </div>
+          <button class="btn btn-rose nl-box-cta" id="nl-reveal-btn" type="button">See the questions</button>
+          <p class="nl-box-trust">🔒 No spam<br>Unsubscribe in one click<br>GDPR compliant</p>
         </div>
-        <ul class="magnet-bullets">
-          <li>✓ Focus on what actually matters</li>
-          <li>✓ Avoid unnecessary investments</li>
-          <li>✓ Identify quick wins</li>
-          <li>✓ Decide with greater clarity</li>
-        </ul>
-        <form class="newsletter-form" action="brevo-en-cours.html" method="get" novalidate>
-          <input type="text" name="prenom" placeholder="First name" autocomplete="given-name" required>
-          <input type="text" name="nom" placeholder="Last name" autocomplete="family-name" required>
-          <input type="email" name="email" id="nl-email" placeholder="Professional email address" autocomplete="email" required>
-          <button type="submit" class="btn btn-rose nl-submit">
-            Receive the resource
-          </button>
-        </form>
-        <p class="newsletter-trust">🔒 No spam · Unsubscribe in one click · GDPR compliant</p>
+
+        <div id="nl-box-form" class="nl-box-form">
+          <button type="button" id="nl-close-form" class="nl-form-back">← Back to the guide</button>
+          <form id="nl-form" novalidate>
+            <div class="nl-gate-field">
+              <label for="nl-fullname">First name and LAST NAME <span class="nl-req">*</span></label>
+              <input type="text" id="nl-fullname" name="fullname" placeholder="Marie DUPONT" autocomplete="name" required>
+            </div>
+            <div class="nl-gate-field">
+              <label for="nl-role">Role <span class="nl-req">*</span></label>
+              <input type="text" id="nl-role" name="role" placeholder="Chief Executive Officer" autocomplete="organization-title" required>
+            </div>
+            <div class="nl-gate-field">
+              <label for="nl-company">Company <span class="nl-req">*</span></label>
+              <input type="text" id="nl-company" name="company" autocomplete="organization" required>
+            </div>
+            <div class="nl-gate-field">
+              <label for="nl-email">Professional email <span class="nl-req">*</span></label>
+              <input type="email" id="nl-email" name="email" autocomplete="email" required>
+            </div>
+            <p id="nl-global-err" style="display:none;color:#C75F62;font-size:.82rem;margin:0 0 6px;padding-left:2px;"></p>
+            <button type="submit" class="btn btn-rose nl-submit" id="nl-submit-btn">Receive the resource</button>
+          </form>
+          <p class="newsletter-trust">🔒 No spam &nbsp;•&nbsp; Unsubscribe in one click &nbsp;•&nbsp; GDPR compliant</p>
+        </div>
+
+        <div id="nl-box-success" style="display:none;padding:32px 24px;text-align:center;">
+          <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.6rem;color:#FAF6F2;font-weight:400;margin:0 0 12px;line-height:1.3;">Thank you <span id="nl-success-name"></span>&nbsp;—</p>
+          <p style="font-size:.95rem;color:#D9C9C3;margin:0 0 20px;line-height:1.6;">An email is on its way to your professional inbox.<br>You can also access the document directly:</p>
+          <a id="nl-doc-link" href="#" target="_blank" rel="noopener" style="display:inline-block;margin-bottom:20px;background:#C75F62;color:#FAF6F2;font-family:'Raleway',sans-serif;font-size:.88rem;font-weight:500;letter-spacing:.1em;text-decoration:none;padding:13px 28px;border-radius:2px;">View the document</a>
+          <p style="font-size:.78rem;color:#B8B1AA;">🔒 GDPR compliant &nbsp;•&nbsp; Unsubscribe in one click</p>
+          <button type="button" id="nl-new-signup" style="margin-top:16px;display:block;width:100%;background:transparent;border:1px solid rgba(250,246,242,.25);color:#B8B1AA;font-family:'Raleway',sans-serif;font-size:.78rem;letter-spacing:.08em;padding:9px 20px;cursor:pointer;border-radius:2px;">Register another participant</button>
+        </div>
+
       </div>
 
     </div>
   </div>
 </section>
+<script>
+(function(){
+  var PDFS={FR:'/assets/Les%205%20Essentiels_The%205%20Essentials_Los%205%20Esenciales.html',EN:'/assets/Les%205%20Essentiels_The%205%20Essentials_Los%205%20Esenciales.html',ES:'/assets/Les%205%20Essentiels_The%205%20Essentials_Los%205%20Esenciales.html'};
+  var LANG='EN';
+  var BLOCKED=new Set(['gmail.com','googlemail.com','yahoo.com','yahoo.fr','yahoo.co.uk','hotmail.com','hotmail.fr','hotmail.co.uk','outlook.com','outlook.fr','live.com','live.fr','icloud.com','me.com','mac.com','proton.me','protonmail.com','pm.me','aol.com','zoho.com','ymail.com','mail.com','gmx.com','gmx.fr','gmx.de','laposte.net','free.fr','orange.fr','wanadoo.fr','sfr.fr','bbox.fr','neuf.fr','numericable.fr','club-internet.fr','aliceadsl.fr','cegetel.net']);
+  var fm=document.getElementById('nl-form'),sb=document.getElementById('nl-submit-btn'),errEl=document.getElementById('nl-global-err');
+  function resetToIntro(){
+    if(fm){fm.reset();fm.querySelectorAll('input').forEach(function(i){i.classList.remove('err');});}
+    if(sb){sb.disabled=false;sb.textContent='Receive the resource';}
+    if(errEl){errEl.style.display='none';errEl.textContent='';}
+    document.getElementById('nl-box-success').style.display='none';
+    document.getElementById('nl-box-form').style.display='none';
+    document.getElementById('nl-box-intro').style.display='';
+  }
+  var revBtn=document.getElementById('nl-reveal-btn');
+  if(revBtn)revBtn.addEventListener('click',function(){
+    document.getElementById('nl-box-success').style.display='none';
+    document.getElementById('nl-box-intro').style.display='none';
+    document.getElementById('nl-box-form').style.display='block';
+    setTimeout(function(){document.getElementById('nl-fullname').focus();},80);
+  });
+  var closeBtn=document.getElementById('nl-close-form');
+  if(closeBtn)closeBtn.addEventListener('click',resetToIntro);
+  var newBtn=document.getElementById('nl-new-signup');
+  if(newBtn)newBtn.addEventListener('click',function(){
+    resetToIntro();
+    setTimeout(function(){
+      document.getElementById('nl-box-intro').style.display='none';
+      document.getElementById('nl-box-form').style.display='block';
+      setTimeout(function(){document.getElementById('nl-fullname').focus();},80);
+    },20);
+  });
+  if(!fm)return;
+  fm.addEventListener('submit',async function(e){
+    e.preventDefault();
+    errEl.style.display='none';errEl.textContent='';
+    fm.querySelectorAll('input').forEach(function(i){i.classList.remove('err');});
+    var n=fm.elements['fullname'].value.trim(),r=fm.elements['role'].value.trim(),c=fm.elements['company'].value.trim(),em=fm.elements['email'].value.trim(),ok=true;
+    if(!n){document.getElementById('nl-fullname').classList.add('err');ok=false;}
+    if(!r){document.getElementById('nl-role').classList.add('err');ok=false;}
+    if(!c){document.getElementById('nl-company').classList.add('err');ok=false;}
+    var domain=(em.split('@')[1]||'').toLowerCase();
+    if(!em){document.getElementById('nl-email').classList.add('err');ok=false;}
+    else if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em)){document.getElementById('nl-email').classList.add('err');ok=false;}
+    else if(BLOCKED.has(domain)){document.getElementById('nl-email').classList.add('err');errEl.textContent='Please use your professional email address.';errEl.style.display='block';ok=false;}
+    if(!ok){if(!errEl.textContent){errEl.textContent='Please complete all required fields.';errEl.style.display='block';}return;}
+    var prenom=n.split(' ')[0];
+    document.getElementById('nl-success-name').textContent=prenom;
+    document.getElementById('nl-doc-link').href=PDFS[LANG];
+    document.getElementById('nl-box-form').style.display='none';
+    document.getElementById('nl-box-success').style.display='block';
+    fetch('/api/airtable',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({fullname:n,role:r,company:c,email:em,langue:LANG,document_telecharge:'The 5 Essentials',source:'EXECIA_PRUNE'})}).catch(function(){});
+  });
+})();
+</script>
 
 <!-- ═══ CONTACT ═══════════════════════════════════════════════ -->
 <section id="contact" class="bg-white">
