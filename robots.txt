@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /assets/
+Allow: /assets/photo-valerie.jpg
+Allow: /assets/logo-execia.png
+Allow: /assets/BANNIERE CONSULTING.png
+
+Sitemap: https://exec-ia.ai/sitemap.xml
