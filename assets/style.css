@@ -271,18 +271,19 @@ a { text-decoration: none; color: inherit; }
 .hero-id-block {
   display: flex; align-items: center; gap: 16px;
   margin-top: 40px;
-  animation: slideup .9s var(--ease) .35s both;
+  opacity: 1;
 }
 .hero-id-photo {
-  width: 64px; height: 64px; border-radius: 50%;
+  display: block !important;
+  width: 48px; height: 48px; border-radius: 50%;
   object-fit: cover; object-position: center top;
   flex-shrink: 0;
   box-shadow: 0 4px 16px rgba(99,59,74,.18);
 }
 .hero-id-text { display: flex; flex-direction: column; }
 .hero-id-text h1 {
-  font-size: clamp(1.23rem, 2vw, 1.92rem) !important;
-  animation: none;
+  font-size: clamp(1.1rem, 1.8vw, 1.6rem) !important;
+  animation: none !important;
 }
 
 .hero-location {
