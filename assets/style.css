@@ -2140,7 +2140,7 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
   overflow: hidden;
   position: relative;
   aspect-ratio: 3 / 2;
-  background: #3d2030;
+  background: var(--ivory);
 }
 .agent-img img {
   width: 100%;
@@ -2163,7 +2163,7 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
 }
 /* Facturation */
 .agent-card:nth-child(6) .agent-img {
-  background: #3d2030;
+  background: var(--ivory);
 }
 .agent-card:nth-child(6) .agent-img img {
   mix-blend-mode: normal;
@@ -2916,7 +2916,7 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
   .vrai-enjeu-section { padding: 14px 0 !important; }
 
   /* Pourquoi conclusion */
-  .pourquoi-conclusion { font-size: clamp(1.2rem, 4.5vw, 1.6rem) !important; padding: 18px 18px !important; }
+  .pourquoi-conclusion { font-size: clamp(.9rem, 3.5vw, 1.1rem) !important; padding: 10px 14px !important; }
 
   /* Stats strip mobile — tous les 5 visibles */
   .stats-strip { overflow: hidden; }
@@ -3086,24 +3086,24 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 8px;
 }
 .ce-que-list li {
-  display: flex;
-  align-items: baseline;
-  gap: 14px;
-  font-size: clamp(1.15rem, 1.6vw, 1.4rem);
+  display: block;
+  position: relative;
+  padding-left: 16px;
+  font-size: clamp(.95rem, 1.3vw, 1.1rem);
   font-weight: 400;
   color: var(--text);
-  line-height: 1.55;
+  line-height: 1.5;
 }
 .ce-que-list li::before {
   content: '•';
   color: var(--rose);
-  font-size: 1.3em;
-  line-height: 1;
-  flex-shrink: 0;
-  margin-top: .05em;
+  font-size: 1em;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 .ce-que-list li strong {
   font-weight: 700;
@@ -3182,13 +3182,13 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
 }
 .pourquoi-conclusion {
   font-family: var(--serif);
-  font-size: clamp(1.9rem, 3vw, 3rem);
+  font-size: clamp(.95rem, 1.3vw, 1.15rem);
   color: var(--rose);
   font-style: italic;
   font-weight: 400;
-  line-height: 1.45;
-  margin-top: 16px;
-  padding: 24px 32px;
+  line-height: 1.5;
+  margin-top: 10px;
+  padding: 10px 16px;
   background: rgba(199,95,98,.07);
   border-radius: 4px;
 }
