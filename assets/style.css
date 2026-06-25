@@ -543,10 +543,73 @@ section { padding: clamp(40px, 5vw, 60px) 0; }
 }
 .section-title-light { color: var(--white); }
 
+/* ─── PORTRAIT CITATION ─────────────────────────────────── */
+.portrait-section {
+  background: var(--ivory);
+  padding: clamp(28px, 3.5vw, 44px) 0;
+  border-top: 1px solid rgba(99,59,74,.1);
+  border-bottom: 1px solid rgba(99,59,74,.1);
+}
+.portrait-inner {
+  display: flex; align-items: center; gap: clamp(28px, 4vw, 56px);
+}
+.portrait-photo {
+  flex-shrink: 0;
+  width: 96px; height: 96px; border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(99,59,74,.2);
+  border: 2px solid rgba(199,95,98,.28);
+}
+.portrait-photo img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center top;
+}
+.portrait-content {
+  display: flex; flex-direction: column; gap: 6px;
+}
+.portrait-eyebrow {
+  font-family: var(--sans); font-size: .75rem; font-weight: 600;
+  letter-spacing: .2em; text-transform: uppercase; color: var(--rose);
+}
+.portrait-quote {
+  font-family: var(--serif);
+  font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+  font-style: italic; font-weight: 400;
+  color: var(--plum); margin: 0; line-height: 1.45;
+  border-left: 3px solid var(--rose); padding-left: 18px;
+}
+.portrait-creds {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 6px;
+  font-family: var(--sans); font-size: .82rem;
+  color: var(--text); opacity: .75; margin: 2px 0 0;
+}
+.portrait-sep { opacity: .45; }
+.portrait-cred--mckinsey { color: var(--plum); font-weight: 600; opacity: 1; }
+.portrait-name {
+  font-family: var(--serif); font-size: .95rem;
+  font-style: normal; color: var(--plum);
+  font-weight: 500; letter-spacing: .04em; opacity: .7;
+}
+@media (max-width: 640px) {
+  .portrait-inner { flex-direction: column; gap: 16px; }
+  .portrait-quote { border-left: none; padding-left: 0; font-size: 1.05rem; }
+  .portrait-creds { flex-direction: column; align-items: flex-start; gap: 3px; }
+}
+
 /* ─── ABOUT ──────────────────────────────────────────────── */
 .about-grid {
-  display: grid; grid-template-columns: 3fr 2fr;
-  gap: 80px; align-items: stretch;
+  display: grid; grid-template-columns: 3fr 1fr 1fr;
+  gap: 56px; align-items: start;
+}
+.about-portrait {
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+}
+.about-portrait-img {
+  width: 100%; max-width: 160px;
+  aspect-ratio: 1/1; border-radius: 50%;
+  object-fit: cover; object-position: center top;
+  box-shadow: 0 8px 32px rgba(99,59,74,.18);
+  border: 2px solid rgba(199,95,98,.25);
 }
 .about-body {
   display: flex; flex-direction: column;
@@ -696,10 +759,10 @@ section { padding: clamp(40px, 5vw, 60px) 0; }
 .parcours-header-text .section-title { margin-bottom: 20px; font-size: clamp(2.62rem, 4.8vw, 4.38rem); }
 .parcours-photo {
   flex-shrink: 0;
-  width: 200px; height: 200px; border-radius: 50%;
+  width: 300px; height: 300px; border-radius: 50%;
   overflow: hidden;
-  border: 3px solid rgba(199,95,98,.25);
-  box-shadow: 0 8px 32px rgba(99,59,74,.15);
+  border: 3px solid rgba(199,95,98,.3);
+  box-shadow: 0 12px 48px rgba(99,59,74,.22);
 }
 .parcours-photo img {
   width: 100%; height: 100%;
@@ -707,7 +770,7 @@ section { padding: clamp(40px, 5vw, 60px) 0; }
 }
 @media (max-width: 768px) {
   .parcours-header { flex-direction: column-reverse; gap: 28px; }
-  .parcours-photo  { width: 140px; height: 140px; }
+  .parcours-photo  { width: 180px; height: 180px; }
 }
 
 /* ─── TIMELINE ───────────────────────────────────────────── */
