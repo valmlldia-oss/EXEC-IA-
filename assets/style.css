@@ -574,11 +574,11 @@ section { padding: clamp(8px, 1vw, 14px) 0; }
 .portrait-content {
   display: flex; flex-direction: column; gap: 6px;
   border-left: 3px solid var(--rose); padding-left: 28px;
-  max-width: 52%; margin-left: auto; margin-right: 0;
+  max-width: 680px; margin: 0;
 }
 .portrait-eyebrow {
   font-family: var(--sans); font-size: .75rem; font-weight: 600;
-  letter-spacing: .2em; text-transform: uppercase; color: var(--rose);
+  letter-spacing: .05em; text-transform: none; color: var(--plum);
 }
 .portrait-quote {
   font-family: var(--serif);
@@ -602,7 +602,8 @@ section { padding: clamp(8px, 1vw, 14px) 0; }
 }
 @media (max-width: 640px) {
   .portrait-inner { flex-direction: column; gap: 16px; }
-  .portrait-content { max-width: 100%; margin-left: 0; }
+  .portrait-content { max-width: 100%; }
+  .pourquoi-title { white-space: normal !important; font-size: clamp(1.1rem, 4vw, 1.35rem) !important; }
   .portrait-quote { border-left: none; padding-left: 0; font-size: 1.05rem; }
   .portrait-creds { flex-direction: column; align-items: flex-start; gap: 3px; }
 }
@@ -3149,6 +3150,7 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
 /* ─── POURQUOI LES PROJETS IA DÉCÈVENT ──────────────────── */
 .pourquoi-section { padding: clamp(8px, 1vw, 14px) 0; }
 .pourquoi-inner { max-width: 1000px; }
+.pourquoi-title { font-size: clamp(1.1rem, 1.5vw, 1.3rem) !important; white-space: nowrap; }
 .pourquoi-intro {
   font-family: var(--serif);
   font-size: clamp(.95rem, 1.3vw, 1.15rem);
