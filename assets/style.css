@@ -2914,8 +2914,7 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
 
   /* Ce que vous obtenez — intro trop grand + layout liste cassé */
   .ce-que-intro { font-size: 1.05rem !important; }
-  .ce-que-list li { display: block !important; font-size: .95rem !important; }
-  .ce-que-list li .cq-arr { display: inline !important; margin-right: 6px !important; }
+  .ce-que-list li { font-size: .95rem !important; }
 
   /* À propos — about-lede trop grand + formation-list flex brisé sur mobile */
   .about-lede { font-size: .95rem !important; }
@@ -3016,22 +3015,24 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 18px;
 }
 .ce-que-list li {
   display: flex;
   align-items: baseline;
-  gap: 16px;
+  gap: 14px;
   font-size: clamp(1.15rem, 1.6vw, 1.4rem);
   font-weight: 400;
   color: var(--text);
   line-height: 1.55;
 }
-.cq-arr {
+.ce-que-list li::before {
+  content: '•';
   color: var(--rose);
-  font-weight: 600;
+  font-size: 1.3em;
+  line-height: 1;
   flex-shrink: 0;
-  font-size: 1.2rem;
+  margin-top: .05em;
 }
 .ce-que-list li strong {
   font-weight: 700;
@@ -3088,22 +3089,25 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
   margin-bottom: 48px;
 }
 .pourquoi-list li {
   display: flex;
   align-items: baseline;
-  gap: 16px;
+  gap: 14px;
   font-size: clamp(1.2rem, 1.7vw, 1.5rem);
   font-weight: 400;
   color: var(--text);
   line-height: 1.55;
 }
-.pq-arr {
+.pourquoi-list li::before {
+  content: '•';
   color: var(--rose);
-  font-weight: 600;
+  font-size: 1.3em;
+  line-height: 1;
   flex-shrink: 0;
+  margin-top: .05em;
 }
 .pourquoi-conclusion {
   font-family: var(--serif);
