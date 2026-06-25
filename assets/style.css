@@ -3153,12 +3153,13 @@ footer { background: #633B4A; padding: 22px 36px; text-align: center; }
 .vrai-enjeu-section .ia-perf-box {
   background: rgba(246,241,235,.1);
   border: 1px solid rgba(246,241,235,.2);
+  max-width: 560px;
 }
 
 /* ─── POURQUOI LES PROJETS IA DÉCÈVENT ──────────────────── */
 .pourquoi-section { padding: clamp(8px, 1vw, 14px) 0; }
 .pourquoi-inner { max-width: 1000px; }
-.pourquoi-title { font-size: clamp(1.1rem, 1.5vw, 1.3rem) !important; white-space: nowrap; }
+.pourquoi-title { font-size: clamp(1.5rem, 2.2vw, 2rem) !important; white-space: normal; }
 .pourquoi-intro {
   font-family: var(--serif);
   font-size: clamp(.95rem, 1.3vw, 1.15rem);
