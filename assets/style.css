@@ -574,7 +574,7 @@ section { padding: clamp(8px, 1vw, 14px) 0; }
 .portrait-content {
   display: flex; flex-direction: column; gap: 6px;
   border-left: 3px solid var(--rose); padding-left: 28px;
-  max-width: 760px; margin: 0 auto;
+  max-width: 52%; margin-left: auto; margin-right: 0;
 }
 .portrait-eyebrow {
   font-family: var(--sans); font-size: .75rem; font-weight: 600;
@@ -602,6 +602,7 @@ section { padding: clamp(8px, 1vw, 14px) 0; }
 }
 @media (max-width: 640px) {
   .portrait-inner { flex-direction: column; gap: 16px; }
+  .portrait-content { max-width: 100%; margin-left: 0; }
   .portrait-quote { border-left: none; padding-left: 0; font-size: 1.05rem; }
   .portrait-creds { flex-direction: column; align-items: flex-start; gap: 3px; }
 }
@@ -1877,15 +1878,15 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
 .ia-perf-sub { font-family: var(--serif); font-size: clamp(1.3rem, 2vw, 1.8rem); color: var(--plum); font-weight: 400; line-height: 1.45; margin: 0; }
 .ia-perf-sub--accent { color: #C75F62; font-style: italic; font-size: clamp(1.4rem, 2.2vw, 2rem); }
 .ia-perf-box {
-  display: flex; flex-direction: column; gap: 8px;
-  background: rgba(199,95,98,.07); border-radius: 16px;
-  padding: 24px 32px; margin-top: 24px;
+  display: flex; flex-direction: column; gap: 6px;
+  background: rgba(199,95,98,.07); border-radius: 12px;
+  padding: 12px 18px; margin-top: 10px;
 }
 .ia-perf-accent { color: var(--rose); font-weight: 700; font-style: italic; }
 .ia-perf-body p { font-family: var(--serif); font-size: clamp(1.3rem, 2vw, 1.8rem); font-weight: 400; line-height: 1.45; color: var(--plum); margin: 0; }
 .ia-perf-stat { display: flex; align-items: baseline; gap: 20px; flex-wrap: wrap; margin-bottom: 8px; }
 .ia-perf-num { font-family: var(--serif); font-size: clamp(4rem, 7vw, 6.5rem); font-weight: 700; color: #C75F62; line-height: 1; flex-shrink: 0; }
-.ia-perf-stat-label { font-family: var(--serif); font-size: clamp(1.6rem, 2.4vw, 2.4rem); font-weight: 400; color: var(--plum); line-height: 1.4; white-space: normal; }
+.ia-perf-stat-label { font-family: var(--serif); font-size: clamp(1rem, 1.5vw, 1.4rem); font-weight: 400; color: var(--plum); line-height: 1.4; white-space: normal; }
 
 .roi-section { background: var(--ivory); padding: clamp(8px, 1vw, 14px) 0; border-top: 1px solid rgba(93,47,55,.1); margin-top: 0; }
 .roi-intro { font-family: var(--sans); font-size: clamp(1rem, 2.46vw, 1.94rem); font-weight: 400; color: var(--text); max-width: 900px; margin: 16px auto 48px; line-height: 1.55; text-align: center; white-space: normal; }
@@ -3075,11 +3076,11 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
 .ce-que-section .section-title { font-size: clamp(1.5rem, 2.2vw, 2rem); }
 .ce-que-intro {
   font-family: var(--serif);
-  font-size: clamp(1.7rem, 2.64vw, 2.31rem);
+  font-size: clamp(.95rem, 1.3vw, 1.15rem);
   color: var(--plum);
   font-style: italic;
   font-weight: 500;
-  margin-bottom: 28px;
+  margin-bottom: 8px;
   line-height: 1.5;
 }
 .ce-que-list {
@@ -3150,35 +3151,35 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
 .pourquoi-inner { max-width: 1000px; }
 .pourquoi-intro {
   font-family: var(--serif);
-  font-size: clamp(1.8rem, 2.6vw, 2.4rem);
+  font-size: clamp(.95rem, 1.3vw, 1.15rem);
   color: var(--plum);
   font-style: italic;
-  margin-bottom: 40px;
-  line-height: 1.55;
+  margin-bottom: 8px;
+  line-height: 1.5;
 }
 .pourquoi-list {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 18px;
-  margin-bottom: 48px;
+  gap: 6px;
+  margin-bottom: 8px;
 }
 .pourquoi-list li {
-  display: flex;
-  align-items: baseline;
-  gap: 14px;
-  font-size: clamp(1.2rem, 1.7vw, 1.5rem);
+  display: block;
+  position: relative;
+  padding-left: 14px;
+  font-size: clamp(.9rem, 1.2vw, 1.05rem);
   font-weight: 400;
   color: var(--text);
-  line-height: 1.55;
+  line-height: 1.5;
 }
 .pourquoi-list li::before {
   content: '•';
   color: var(--rose);
-  font-size: 1.3em;
-  line-height: 1;
-  flex-shrink: 0;
-  margin-top: .05em;
+  font-size: 1em;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 .pourquoi-conclusion {
   font-family: var(--serif);
