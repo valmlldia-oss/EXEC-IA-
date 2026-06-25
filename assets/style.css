@@ -322,22 +322,22 @@ a { text-decoration: none; color: inherit; }
 }
 .hero-sub {
   font-family: var(--sans);
-  font-size: clamp(1.98rem, 3.375vw, 2.77rem);
+  font-size: clamp(1.45rem, 2.4vw, 1.9rem);
   font-weight: 400;
   color: #633B4A;
-  line-height: 1.4;
-  margin-top: 16px;
+  line-height: 1.38;
+  margin-top: 12px;
   margin-bottom: 0;
   animation: slideup .9s var(--ease) .28s both;
 }
 .hero-sub2 {
   font-family: var(--sans);
-  font-size: clamp(1.25rem, 2vw, 1.65rem);
+  font-size: clamp(1rem, 1.6vw, 1.3rem);
   white-space: normal;
   font-weight: 400;
   color: rgba(99,59,74,.72);
   line-height: 1.6;
-  margin-top: 12px;
+  margin-top: 10px;
   margin-bottom: 0;
   animation: slideup .9s var(--ease) .38s both;
 }
@@ -516,10 +516,10 @@ a { text-decoration: none; color: inherit; }
 .btn-lg { padding: 16px 42px; font-size: .95rem; }
 
 /* ─── SHARED SECTION ─────────────────────────────────────── */
-section { padding: clamp(72px, 9vw, 112px) 0; }
+section { padding: clamp(40px, 5vw, 60px) 0; }
 .bg-ivory { background: var(--ivory); }
 .bg-white { background: var(--white); }
-#contact { padding-top: 40px; padding-bottom: 72px; }
+#contact { padding-top: 24px; padding-bottom: 44px; }
 #contact .section-title { border-left: none; padding-left: 0; }
 #contact .contact-btns { align-items: center; }
 .bg-plum  {
@@ -537,7 +537,7 @@ section { padding: clamp(72px, 9vw, 112px) 0; }
   font-family: var(--serif);
   font-size: clamp(2.2rem, 4vw, 3.2rem);
   font-weight: 600; line-height: 1.1; letter-spacing: -.01em;
-  color: var(--plum); margin-bottom: 56px;
+  color: var(--plum); margin-bottom: 32px;
   border-left: 4px solid #C75F62;
   padding-left: 24px;
 }
@@ -1018,7 +1018,7 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
 }
 
 /* ─── STATS STRIP ────────────────────────────────────────── */
-.stats-strip { background: #3D2030; padding: 16px 0 48px; overflow: hidden; border-top: 1px solid rgba(250,246,242,.18); }
+.stats-strip { background: #3D2030; padding: 12px 0 28px; overflow: hidden; border-top: 1px solid rgba(250,246,242,.18); }
 .ss-grid--5 { grid-template-columns: repeat(5, 1fr) !important; }
 .ss-grid {
   display: grid;
@@ -1578,7 +1578,7 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
 }
 
 /* ─── FEATURE CARDS ──────────────────────────────────────── */
-.fcards-section { background: var(--ivory); padding: clamp(64px, 8vw, 96px) 0; }
+.fcards-section { background: var(--ivory); padding: clamp(36px, 4.5vw, 56px) 0; }
 .fcards-section .eyebrow { color: var(--rose); }
 .fcards-section .section-title { color: var(--deep); }
 .fcards-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 52px; }
@@ -1802,7 +1802,7 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
 .iso-label { font-size: .56rem; color: #888; letter-spacing: .06em; text-transform: uppercase; max-width: 70px; line-height: 1.4; }
 
 /* ─── ROI SIMULATOR ──────────────────────────────────────── */
-.ia-performance-section { background: var(--ivory); padding: clamp(56px, 7vw, 88px) 0 clamp(32px, 4vw, 48px); }
+.ia-performance-section { background: var(--ivory); padding: clamp(36px, 4.5vw, 52px) 0 clamp(20px, 3vw, 32px); }
 .ia-performance-wrap { max-width: 100%; text-align: left; }
 .ia-performance-section .section-title { margin-bottom: 40px; font-size: clamp(2.82rem, 5.05vw, 4.23rem); }
 .ia-perf-rule { border: none; border-top: 1.5px solid rgba(99,59,74,.2); margin: 32px 0; }
@@ -1822,11 +1822,11 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
 .ia-perf-num { font-family: var(--serif); font-size: clamp(4rem, 7vw, 6.5rem); font-weight: 700; color: #C75F62; line-height: 1; flex-shrink: 0; }
 .ia-perf-stat-label { font-family: var(--serif); font-size: clamp(1.6rem, 2.4vw, 2.4rem); font-weight: 400; color: var(--plum); line-height: 1.4; white-space: normal; }
 
-.roi-section { background: var(--ivory); padding: clamp(64px, 8vw, 96px) 0; border-top: 1px solid rgba(93,47,55,.1); margin-top: 32px; }
+.roi-section { background: var(--ivory); padding: clamp(36px, 4.5vw, 52px) 0; border-top: 1px solid rgba(93,47,55,.1); margin-top: 20px; }
 .roi-intro { font-family: var(--sans); font-size: clamp(1rem, 2.46vw, 1.94rem); font-weight: 400; color: var(--text); max-width: 900px; margin: 16px auto 48px; line-height: 1.55; text-align: center; white-space: normal; }
 .roi-card {
   background: var(--white); border: 2px solid rgba(99,59,74,.12);
-  border-radius: 24px; padding: clamp(28px, 5vw, 52px);
+  border-radius: 24px; padding: clamp(20px, 3.5vw, 36px);
   max-width: 760px; margin: 0 auto;
   box-shadow: 0 12px 48px rgba(99,59,74,.1);
 }
@@ -2995,17 +2995,17 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
 /* ─── HERO CLARIFICATION PHRASE ─────────────────────────── */
 .hero-clarif {
   font-family: var(--sans);
-  font-size: clamp(1.38rem, 2.21vw, 1.8rem);
+  font-size: clamp(.95rem, 1.5vw, 1.2rem);
   font-weight: 400;
-  color: rgba(99,59,74,.72);
-  line-height: 1.65;
-  margin-top: 20px;
+  color: rgba(99,59,74,.65);
+  line-height: 1.6;
+  margin-top: 14px;
   letter-spacing: .015em;
   animation: slideup .9s var(--ease) .48s both;
 }
 
 /* ─── CE QUE VOUS OBTENEZ ────────────────────────────────── */
-.ce-que-section { padding: clamp(64px, 8vw, 104px) 0; background: var(--white); }
+.ce-que-section { padding: clamp(36px, 4.5vw, 56px) 0; background: var(--white); }
 .ce-que-inner { max-width: 900px; }
 .ce-que-section .section-title { font-size: clamp(2.8rem, 4.8vw, 4.2rem); }
 .ce-que-intro {
@@ -3048,7 +3048,7 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
 /* ─── LE VRAI ENJEU ──────────────────────────────────────── */
 .vrai-enjeu-section {
   background: var(--plum);
-  padding: clamp(104px, 13vw, 152px) 0 clamp(48px, 6vw, 72px);
+  padding: clamp(52px, 7vw, 80px) 0 clamp(32px, 4vw, 48px);
 }
 .vrai-enjeu-section + section { padding-top: clamp(40px, 5vw, 56px); }
 .vrai-enjeu-inner { max-width: 1100px; }
@@ -3081,7 +3081,7 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
 }
 
 /* ─── POURQUOI LES PROJETS IA DÉCÈVENT ──────────────────── */
-.pourquoi-section { padding: clamp(64px, 8vw, 104px) 0; }
+.pourquoi-section { padding: clamp(36px, 4.5vw, 56px) 0; }
 .pourquoi-inner { max-width: 1000px; }
 .pourquoi-intro {
   font-family: var(--serif);
@@ -3376,7 +3376,7 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
 }
 
 /* ─── QUESTIONS DE DIRIGEANT ────────────────────────────────── */
-.questions-section { padding: clamp(64px,8vw,104px) 0; background: var(--ivory); }
+.questions-section { padding: clamp(36px,4.5vw,56px) 0; background: var(--ivory); }
 .questions-section .eyebrow { font-size: .95rem; letter-spacing: .25em; }
 .questions-section .section-title { font-size: clamp(2.74rem,4.95vw,4.1rem); }
 .accord-list { max-width: 860px; margin: 44px auto 0; }
