@@ -561,21 +561,12 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
   border-bottom: 1px solid rgba(99,59,74,.1);
 }
 .portrait-inner {
-  display: flex; align-items: center; gap: clamp(28px, 4vw, 56px);
-}
-.portrait-photo {
-  flex-shrink: 0;
-  width: 96px; height: 96px; border-radius: 50%;
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(99,59,74,.2);
-  border: 2px solid rgba(199,95,98,.28);
-}
-.portrait-photo img {
-  width: 100%; height: 100%;
-  object-fit: cover; object-position: center top;
+  display: block;
 }
 .portrait-content {
   display: flex; flex-direction: column; gap: 6px;
+  border-left: 3px solid var(--rose); padding-left: 28px;
+  max-width: 760px; margin: 0 auto;
 }
 .portrait-eyebrow {
   font-family: var(--sans); font-size: .75rem; font-weight: 600;
@@ -583,10 +574,9 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
 }
 .portrait-quote {
   font-family: var(--serif);
-  font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+  font-size: clamp(1.15rem, 1.9vw, 1.55rem);
   font-style: italic; font-weight: 400;
   color: var(--plum); margin: 0; line-height: 1.45;
-  border-left: 3px solid var(--rose); padding-left: 18px;
 }
 .portrait-creds {
   display: flex; align-items: center; flex-wrap: wrap; gap: 6px;
@@ -608,18 +598,8 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
 
 /* ─── ABOUT ──────────────────────────────────────────────── */
 .about-grid {
-  display: grid; grid-template-columns: 3fr 1fr 1fr;
-  gap: 56px; align-items: start;
-}
-.about-portrait {
-  display: flex; flex-direction: column; align-items: center; gap: 10px;
-}
-.about-portrait-img {
-  width: 100%; max-width: 160px;
-  aspect-ratio: 1/1; border-radius: 50%;
-  object-fit: cover; object-position: center top;
-  box-shadow: 0 8px 32px rgba(99,59,74,.18);
-  border: 2px solid rgba(199,95,98,.25);
+  display: grid; grid-template-columns: 3fr 2fr;
+  gap: 64px; align-items: start;
 }
 .about-body {
   display: flex; flex-direction: column;
@@ -628,19 +608,19 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
   font-size: 1.0rem; line-height: 1.9; color: var(--text); margin-bottom: 18px;
 }
 .about-section-title {
-  font-size: clamp(2.45rem, 4.8vw, 3.85rem) !important;
-  line-height: 1.08 !important;
-  margin-bottom: 48px !important;
+  font-size: clamp(1.9rem, 3.2vw, 2.7rem) !important;
+  line-height: 1.1 !important;
+  margin-bottom: 14px !important;
 }
 .expertise-section-title {
-  font-size: clamp(2.5rem, 4.5vw, 3.8rem) !important;
+  font-size: clamp(1.9rem, 3.2vw, 2.7rem) !important;
   line-height: 1.1 !important;
-  margin-bottom: 52px !important;
+  margin-bottom: 14px !important;
 }
 .offres-section-title {
-  font-size: clamp(2.45rem, 4.8vw, 3.85rem) !important;
-  line-height: 1.08 !important;
-  margin-bottom: 16px !important;
+  font-size: clamp(1.9rem, 3.2vw, 2.7rem) !important;
+  line-height: 1.1 !important;
+  margin-bottom: 14px !important;
 }
 .offres-subtitle {
   font-family: var(--serif);
@@ -1877,13 +1857,13 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
 /* ─── ROI SIMULATOR ──────────────────────────────────────── */
 .ia-performance-section { background: var(--ivory); padding: clamp(18px, 2.2vw, 28px) 0 clamp(10px, 1.5vw, 16px); }
 .ia-performance-wrap { max-width: 100%; text-align: left; }
-.ia-performance-section .section-title { margin-bottom: 40px; font-size: clamp(2.82rem, 5.05vw, 4.23rem); }
+.ia-performance-section .section-title { margin-bottom: 14px; font-size: clamp(2rem, 3.5vw, 3rem); }
 .ia-perf-rule { border: none; border-top: 1.5px solid rgba(99,59,74,.2); margin: 32px 0; }
 .ia-perf-body { display: flex; flex-direction: column; gap: 20px; }
 .ia-perf-title { font-family: var(--serif); font-size: clamp(1rem, 1.2vw, 1.1rem); font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: #C75F62; margin-bottom: 8px; }
 .ia-perf-heading { border-left: 4px solid #C75F62; padding-left: 24px; margin-bottom: 32px; }
 .ia-perf-sub { font-family: var(--serif); font-size: clamp(1.9rem, 3vw, 3rem); color: var(--plum); font-weight: 400; line-height: 1.45; margin: 0; }
-.ia-perf-sub--accent { color: #C75F62; font-style: italic; font-size: clamp(2rem, 3.2vw, 3.2rem); }
+.ia-perf-sub--accent { color: #C75F62; font-style: italic; font-size: clamp(1.4rem, 2.2vw, 2rem); }
 .ia-perf-box {
   display: flex; flex-direction: column; gap: 8px;
   background: rgba(199,95,98,.07); border-radius: 16px;
@@ -1989,7 +1969,7 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
 }
 .agents-team-title {
   font-family: var(--serif);
-  font-size: clamp(2.8rem, 5.5vw, 4.4rem);
+  font-size: clamp(2rem, 3.5vw, 3rem);
   color: var(--plum);
   font-weight: 700;
   margin: 0 0 4px;
@@ -2038,7 +2018,7 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
 }
 .agents-title {
   font-family: var(--serif);
-  font-size: clamp(2.8rem, 5.5vw, 4.4rem);
+  font-size: clamp(2rem, 3.5vw, 3rem);
   color: var(--deep);
   margin-bottom: .8rem;
   line-height: 1.1;
@@ -2279,7 +2259,7 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
   text-align: center; padding: 0 1.5rem 1.2rem;
 }
 .agents-cta-title {
-  font-family: var(--serif); font-size: clamp(2.8rem, 5.5vw, 4.4rem);
+  font-family: var(--serif); font-size: clamp(2rem, 3.5vw, 3rem);
   font-weight: 700; letter-spacing: -.01em; color: var(--plum); margin: 0 0 4px;
   line-height: 1.1;
 }
@@ -3080,7 +3060,7 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
 /* ─── CE QUE VOUS OBTENEZ ────────────────────────────────── */
 .ce-que-section { padding: clamp(18px, 2.2vw, 28px) 0; background: var(--white); }
 .ce-que-inner { max-width: 900px; }
-.ce-que-section .section-title { font-size: clamp(2.8rem, 4.8vw, 4.2rem); }
+.ce-que-section .section-title { font-size: clamp(2rem, 3.5vw, 3rem); }
 .ce-que-intro {
   font-family: var(--serif);
   font-size: clamp(1.7rem, 2.64vw, 2.31rem);
@@ -3127,7 +3107,7 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
 .vrai-enjeu-inner { max-width: 1100px; }
 .vrai-enjeu-title {
   font-family: var(--serif);
-  font-size: clamp(2.8rem, 5vw, 4.4rem);
+  font-size: clamp(2rem, 3.5vw, 3rem);
   font-weight: 500;
   color: var(--ivory);
   line-height: 1.15;
@@ -3451,7 +3431,7 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
 /* ─── QUESTIONS DE DIRIGEANT ────────────────────────────────── */
 .questions-section { padding: clamp(18px,2.2vw,28px) 0; background: var(--ivory); }
 .questions-section .eyebrow { font-size: .95rem; letter-spacing: .25em; }
-.questions-section .section-title { font-size: clamp(2.74rem,4.95vw,4.1rem); }
+.questions-section .section-title { font-size: clamp(2rem, 3.5vw, 3rem); }
 .accord-list { max-width: 860px; margin: 44px auto 0; }
 .accord-item { border-bottom: 1px solid rgba(107,98,93,.15); }
 .accord-item:first-child { border-top: 1px solid rgba(107,98,93,.15); }
