@@ -182,7 +182,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 .hero-wrap {
-  max-width: var(--max); margin: 0 auto; padding: 36px 24px 20px;
+  max-width: var(--max); margin: 0 auto; padding: 18px 24px 10px;
   display: flex; align-items: center;
   justify-content: space-between; gap: 0;
   position: relative; z-index: 2;
@@ -358,14 +358,14 @@ a { text-decoration: none; color: inherit; }
 .stat-chip strong { color: var(--plum); font-weight: 600; }
 
 .hero-cta {
-  display: flex; gap: 14px; flex-wrap: nowrap; align-items: center;
-  margin-top: 28px;
+  display: flex; flex-direction: column; gap: 10px; align-items: flex-start;
+  margin-top: 18px;
   animation: slideup .9s var(--ease) .4s both;
 }
 .hero-cta-secondary {
-  font-size: .82rem;
-  padding: 14px 22px;
-  white-space: nowrap;
+  font-size: 1rem;
+  padding: 15px 32px;
+  white-space: normal;
 }
 .hero-lm-block {
   margin-top: 20px;
@@ -516,10 +516,10 @@ a { text-decoration: none; color: inherit; }
 .btn-lg { padding: 16px 42px; font-size: .95rem; }
 
 /* ─── SHARED SECTION ─────────────────────────────────────── */
-section { padding: clamp(40px, 5vw, 60px) 0; }
+section { padding: clamp(18px, 2.2vw, 28px) 0; }
 .bg-ivory { background: var(--ivory); }
 .bg-white { background: var(--white); }
-#contact { padding-top: 24px; padding-bottom: 44px; }
+#contact { padding-top: 12px; padding-bottom: 24px; }
 #contact .section-title { border-left: none; padding-left: 0; }
 #contact .contact-btns { align-items: center; }
 .bg-plum  {
@@ -537,16 +537,26 @@ section { padding: clamp(40px, 5vw, 60px) 0; }
   font-family: var(--serif);
   font-size: clamp(2.2rem, 4vw, 3.2rem);
   font-weight: 600; line-height: 1.1; letter-spacing: -.01em;
-  color: var(--plum); margin-bottom: 32px;
+  color: var(--plum); margin-bottom: 14px;
   border-left: 4px solid #C75F62;
   padding-left: 24px;
 }
 .section-title-light { color: var(--white); }
 
+/* ─── POURQUOI + CE QUE — 2 COLONNES ───────────────────── */
+.pourquoi-ce-que-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+@media (max-width: 900px) {
+  .pourquoi-ce-que-row { grid-template-columns: 1fr; }
+}
+
 /* ─── PORTRAIT CITATION ─────────────────────────────────── */
 .portrait-section {
   background: var(--ivory);
-  padding: clamp(28px, 3.5vw, 44px) 0;
+  padding: clamp(12px, 1.5vw, 18px) 0;
   border-top: 1px solid rgba(99,59,74,.1);
   border-bottom: 1px solid rgba(99,59,74,.1);
 }
@@ -867,16 +877,16 @@ section { padding: clamp(40px, 5vw, 60px) 0; }
 
 .testi-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 28px;
-  margin-top: 48px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 20px;
 }
 .testi {
   background: #fff;
   border: 1.5px solid rgba(199,95,98,.22);
   border-top: 3px solid #C75F62;
   border-radius: 20px;
-  padding: 56px 52px 52px;
+  padding: 28px 28px 28px;
   box-shadow: 0 4px 24px rgba(99,59,74,.07);
   transition: box-shadow .25s, transform .25s;
   display: flex; flex-direction: column;
@@ -1081,7 +1091,7 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
 }
 
 /* ─── STATS STRIP ────────────────────────────────────────── */
-.stats-strip { background: #3D2030; padding: 12px 0 28px; overflow: hidden; border-top: 1px solid rgba(250,246,242,.18); }
+.stats-strip { background: #3D2030; padding: 6px 0 14px; overflow: hidden; border-top: 1px solid rgba(250,246,242,.18); }
 .ss-grid--5 { grid-template-columns: repeat(5, 1fr) !important; }
 .ss-grid {
   display: grid;
@@ -1641,7 +1651,7 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
 }
 
 /* ─── FEATURE CARDS ──────────────────────────────────────── */
-.fcards-section { background: var(--ivory); padding: clamp(36px, 4.5vw, 56px) 0; }
+.fcards-section { background: var(--ivory); padding: clamp(18px, 2.2vw, 28px) 0; }
 .fcards-section .eyebrow { color: var(--rose); }
 .fcards-section .section-title { color: var(--deep); }
 .fcards-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 52px; }
@@ -1669,7 +1679,7 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
 @media (max-width: 1024px) {
   .fcards-grid { grid-template-columns: 1fr; }
   .cards-grid  { grid-template-columns: 1fr; }
-  .testi-grid  { grid-template-columns: repeat(2, 1fr); }
+  .testi-grid  { grid-template-columns: repeat(2, 1fr); gap: 16px; }
   .about-grid  { grid-template-columns: 1fr; gap: 44px; }
   .lt-wrap     { grid-template-columns: 1fr; gap: 48px; }
   .timeline    { padding-left: 140px; }
@@ -1865,7 +1875,7 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
 .iso-label { font-size: .56rem; color: #888; letter-spacing: .06em; text-transform: uppercase; max-width: 70px; line-height: 1.4; }
 
 /* ─── ROI SIMULATOR ──────────────────────────────────────── */
-.ia-performance-section { background: var(--ivory); padding: clamp(36px, 4.5vw, 52px) 0 clamp(20px, 3vw, 32px); }
+.ia-performance-section { background: var(--ivory); padding: clamp(18px, 2.2vw, 28px) 0 clamp(10px, 1.5vw, 16px); }
 .ia-performance-wrap { max-width: 100%; text-align: left; }
 .ia-performance-section .section-title { margin-bottom: 40px; font-size: clamp(2.82rem, 5.05vw, 4.23rem); }
 .ia-perf-rule { border: none; border-top: 1.5px solid rgba(99,59,74,.2); margin: 32px 0; }
@@ -1885,7 +1895,7 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
 .ia-perf-num { font-family: var(--serif); font-size: clamp(4rem, 7vw, 6.5rem); font-weight: 700; color: #C75F62; line-height: 1; flex-shrink: 0; }
 .ia-perf-stat-label { font-family: var(--serif); font-size: clamp(1.6rem, 2.4vw, 2.4rem); font-weight: 400; color: var(--plum); line-height: 1.4; white-space: normal; }
 
-.roi-section { background: var(--ivory); padding: clamp(36px, 4.5vw, 52px) 0; border-top: 1px solid rgba(93,47,55,.1); margin-top: 20px; }
+.roi-section { background: var(--ivory); padding: clamp(18px, 2.2vw, 28px) 0; border-top: 1px solid rgba(93,47,55,.1); margin-top: 0; }
 .roi-intro { font-family: var(--sans); font-size: clamp(1rem, 2.46vw, 1.94rem); font-weight: 400; color: var(--text); max-width: 900px; margin: 16px auto 48px; line-height: 1.55; text-align: center; white-space: normal; }
 .roi-card {
   background: var(--white); border: 2px solid rgba(99,59,74,.12);
@@ -3068,7 +3078,7 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
 }
 
 /* ─── CE QUE VOUS OBTENEZ ────────────────────────────────── */
-.ce-que-section { padding: clamp(36px, 4.5vw, 56px) 0; background: var(--white); }
+.ce-que-section { padding: clamp(18px, 2.2vw, 28px) 0; background: var(--white); }
 .ce-que-inner { max-width: 900px; }
 .ce-que-section .section-title { font-size: clamp(2.8rem, 4.8vw, 4.2rem); }
 .ce-que-intro {
@@ -3111,9 +3121,9 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
 /* ─── LE VRAI ENJEU ──────────────────────────────────────── */
 .vrai-enjeu-section {
   background: var(--plum);
-  padding: clamp(52px, 7vw, 80px) 0 clamp(32px, 4vw, 48px);
+  padding: clamp(22px, 3vw, 36px) 0 clamp(14px, 2vw, 22px);
 }
-.vrai-enjeu-section + section { padding-top: clamp(40px, 5vw, 56px); }
+.vrai-enjeu-section + section { padding-top: clamp(18px, 2.2vw, 28px); }
 .vrai-enjeu-inner { max-width: 1100px; }
 .vrai-enjeu-title {
   font-family: var(--serif);
@@ -3144,7 +3154,7 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
 }
 
 /* ─── POURQUOI LES PROJETS IA DÉCÈVENT ──────────────────── */
-.pourquoi-section { padding: clamp(36px, 4.5vw, 56px) 0; }
+.pourquoi-section { padding: clamp(18px, 2.2vw, 28px) 0; }
 .pourquoi-inner { max-width: 1000px; }
 .pourquoi-intro {
   font-family: var(--serif);
@@ -3439,7 +3449,7 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
 }
 
 /* ─── QUESTIONS DE DIRIGEANT ────────────────────────────────── */
-.questions-section { padding: clamp(36px,4.5vw,56px) 0; background: var(--ivory); }
+.questions-section { padding: clamp(18px,2.2vw,28px) 0; background: var(--ivory); }
 .questions-section .eyebrow { font-size: .95rem; letter-spacing: .25em; }
 .questions-section .section-title { font-size: clamp(2.74rem,4.95vw,4.1rem); }
 .accord-list { max-width: 860px; margin: 44px auto 0; }
