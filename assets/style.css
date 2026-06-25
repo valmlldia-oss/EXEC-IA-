@@ -367,6 +367,16 @@ a { text-decoration: none; color: inherit; }
   padding: 15px 32px;
   white-space: normal;
 }
+.hero-cta-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--sans); font-size: .9rem; font-weight: 500;
+  color: var(--plum); text-decoration: none;
+  letter-spacing: .04em;
+  border-bottom: 1px solid rgba(99,59,74,.3);
+  padding-bottom: 2px;
+  transition: color .2s, border-color .2s;
+}
+.hero-cta-link:hover { color: var(--rose); border-color: var(--rose); }
 .hero-lm-block {
   margin-top: 20px;
   display: flex; flex-direction: column; align-items: flex-start; gap: 6px;
@@ -586,9 +596,11 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
 .portrait-sep { opacity: .45; }
 .portrait-cred--mckinsey { color: var(--plum); font-weight: 600; opacity: 1; }
 .portrait-name {
-  font-family: var(--serif); font-size: .95rem;
-  font-style: normal; color: var(--plum);
-  font-weight: 500; letter-spacing: .04em; opacity: .7;
+  font-family: var(--serif); font-size: clamp(1.3rem, 2vw, 1.7rem);
+  font-style: italic; font-weight: 600; letter-spacing: .03em;
+  background: linear-gradient(to right, #633B4A, #C75F62);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 @media (max-width: 640px) {
   .portrait-inner { flex-direction: column; gap: 16px; }
