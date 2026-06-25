@@ -3451,13 +3451,13 @@ footer { background: #633B4A; padding: 22px 36px; text-align: center; }
 .questions-section { padding: clamp(8px,1vw,14px) 0; background: var(--ivory); }
 .questions-section .eyebrow { font-size: .95rem; letter-spacing: .25em; }
 .questions-section .section-title { font-size: clamp(1.5rem, 2.2vw, 2rem); }
-.accord-list { max-width: 860px; margin: 12px auto 0; }
+.accord-list { max-width: 860px; margin: 44px auto 0; }
 .accord-item { border-bottom: 1px solid rgba(107,98,93,.15); }
 .accord-item:first-child { border-top: 1px solid rgba(107,98,93,.15); }
 .accord-btn {
   width: 100%; display: flex; justify-content: space-between; align-items: center;
-  gap: 32px; padding: 12px 0; background: none; border: none; cursor: pointer;
-  font-family: var(--serif); font-size: clamp(1.1rem,1.8vw,1.6rem); font-weight: 500;
+  gap: 32px; padding: 24px 0; background: none; border: none; cursor: pointer;
+  font-family: var(--serif); font-size: clamp(1.2rem,1.8vw,1.7rem); font-weight: 500;
   color: var(--plum); text-align: left; line-height: 1.35;
 }
 .accord-btn:hover { color: var(--rose); }
@@ -3468,18 +3468,18 @@ footer { background: #633B4A; padding: 22px 36px; text-align: center; }
 .accord-btn[aria-expanded="true"] .accord-icon { transform: rotate(45deg); }
 .accord-body { overflow: hidden; max-height: 0; transition: max-height .45s var(--ease); }
 .accord-body p {
-  padding: 0 40px 14px 0; max-width: 700px;
-  font-family: var(--sans); font-size: clamp(.9rem,1.2vw,1.1rem); color: var(--text);
-  line-height: 1.75; margin: 0 0 8px;
+  padding: 0 60px 24px 0; max-width: 700px;
+  font-family: var(--sans); font-size: clamp(1rem,1.3vw,1.2rem); color: var(--text);
+  line-height: 1.75; margin: 0 0 10px;
 }
 .accord-body p:last-child { margin-bottom: 0; }
 .questions-coda {
-  max-width: 860px; margin: 20px auto 0;
-  font-family: var(--serif); font-size: clamp(1.2rem,1.8vw,1.5rem);
+  max-width: 860px; margin: 52px auto 0;
+  font-family: var(--serif); font-size: clamp(1.3rem,1.9vw,1.7rem);
   font-style: italic; font-weight: 400;
   color: var(--plum); text-align: center; line-height: 1.65;
 }
-.questions-cta { max-width: 860px; margin: 8px auto 0; text-align: center; }
+.questions-cta { max-width: 860px; margin: 16px auto 0; text-align: center; }
 .questions-cta-lead {
   font-family: var(--serif); font-size: clamp(1.1rem,1.6vw,1.4rem);
   color: var(--plum); margin-bottom: 28px; font-style: italic; opacity: .85;
