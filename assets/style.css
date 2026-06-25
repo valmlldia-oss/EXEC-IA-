@@ -545,7 +545,7 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
 .eyebrow-light { color: rgba(250,246,242,.88); }
 .section-title {
   font-family: var(--serif);
-  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
   font-weight: 600; line-height: 1.1; letter-spacing: -.01em;
   color: var(--plum); margin-bottom: 14px;
   border-left: 4px solid #C75F62;
@@ -758,7 +758,7 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
   gap: 56px; margin-bottom: 24px;
 }
 .parcours-header-text { flex: 1; }
-.parcours-header-text .section-title { margin-bottom: 20px; font-size: clamp(2.62rem, 4.8vw, 4.38rem); }
+.parcours-header-text .section-title { margin-bottom: 20px; font-size: clamp(1.8rem, 3vw, 2.6rem); }
 .parcours-photo {
   flex-shrink: 0;
   width: 300px; height: 300px; border-radius: 50%;
@@ -1874,7 +1874,7 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
 .ia-perf-body { display: flex; flex-direction: column; gap: 20px; }
 .ia-perf-title { font-family: var(--serif); font-size: clamp(1rem, 1.2vw, 1.1rem); font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: #C75F62; margin-bottom: 8px; }
 .ia-perf-heading { border-left: 4px solid #C75F62; padding-left: 24px; margin-bottom: 32px; }
-.ia-perf-sub { font-family: var(--serif); font-size: clamp(1.9rem, 3vw, 3rem); color: var(--plum); font-weight: 400; line-height: 1.45; margin: 0; }
+.ia-perf-sub { font-family: var(--serif); font-size: clamp(1.3rem, 2vw, 1.8rem); color: var(--plum); font-weight: 400; line-height: 1.45; margin: 0; }
 .ia-perf-sub--accent { color: #C75F62; font-style: italic; font-size: clamp(1.4rem, 2.2vw, 2rem); }
 .ia-perf-box {
   display: flex; flex-direction: column; gap: 8px;
@@ -1882,7 +1882,7 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
   padding: 24px 32px; margin-top: 24px;
 }
 .ia-perf-accent { color: var(--rose); font-weight: 700; font-style: italic; }
-.ia-perf-body p { font-family: var(--serif); font-size: clamp(1.9rem, 3vw, 3rem); font-weight: 400; line-height: 1.45; color: var(--plum); margin: 0; }
+.ia-perf-body p { font-family: var(--serif); font-size: clamp(1.3rem, 2vw, 1.8rem); font-weight: 400; line-height: 1.45; color: var(--plum); margin: 0; }
 .ia-perf-stat { display: flex; align-items: baseline; gap: 20px; flex-wrap: wrap; margin-bottom: 8px; }
 .ia-perf-num { font-family: var(--serif); font-size: clamp(4rem, 7vw, 6.5rem); font-weight: 700; color: #C75F62; line-height: 1; flex-shrink: 0; }
 .ia-perf-stat-label { font-family: var(--serif); font-size: clamp(1.6rem, 2.4vw, 2.4rem); font-weight: 400; color: var(--plum); line-height: 1.4; white-space: normal; }
