@@ -2407,13 +2407,22 @@ footer { background: #633B4A; padding: 22px 36px; text-align: center; }
   letter-spacing: .14em !important;
   margin-bottom: 14px !important;
 }
+.nl-eyebrow-sub {
+  color: rgba(255,255,255,.85);
+  font-family: var(--serif);
+  font-size: clamp(1.2rem, 1.7vw, 1.5rem);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 10px 0 0;
+}
 .nl-filet {
   width: 40px;
   height: 1px;
   background: rgba(255,255,255,.45);
   flex-shrink: 0;
-  margin-top: 8px;
-  margin-bottom: 14px;
+  margin-top: 18px;
+  margin-bottom: 18px;
 }
 .newsletter-content h2 {
   color: rgba(255,255,255,.92);
