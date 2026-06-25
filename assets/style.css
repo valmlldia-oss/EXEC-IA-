@@ -256,6 +256,34 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 24px;
   animation: slideup .9s var(--ease) .18s both;
 }
+.hero-phrase {
+  font-family: var(--serif);
+  font-size: clamp(.98rem, 1.35vw, 1.15rem);
+  color: var(--plum); line-height: 1.65;
+  margin: 16px 0 28px; opacity: .85;
+  animation: slideup .9s var(--ease) .22s both;
+}
+.hero-sep {
+  width: 100%; height: 1px;
+  background: rgba(99,59,74,.12);
+  margin: 4px 0 24px;
+}
+.hero-id-block {
+  display: flex; align-items: center; gap: 16px;
+  margin-top: 40px;
+  animation: slideup .9s var(--ease) .35s both;
+}
+.hero-id-photo {
+  width: 64px; height: 64px; border-radius: 50%;
+  object-fit: cover; object-position: center top;
+  flex-shrink: 0;
+  box-shadow: 0 4px 16px rgba(99,59,74,.18);
+}
+.hero-id-text { display: flex; flex-direction: column; }
+.hero-id-text h1 {
+  font-size: clamp(1.23rem, 2vw, 1.92rem) !important;
+  animation: none;
+}
 
 .hero-location {
   font-family: var(--sans); font-size: 1.15rem; color: var(--text); opacity: .85;
@@ -339,13 +367,13 @@ a { text-decoration: none; color: inherit; }
   animation: slideup .9s var(--ease) .55s both;
 }
 .hero-lm-label {
-  font-family: var(--sans); font-size: .75rem; font-weight: 600;
+  font-family: var(--sans); font-size: .83rem; font-weight: 600;
   letter-spacing: .14em; text-transform: uppercase;
   color: var(--rose); opacity: .85;
 }
 .hero-lm-link {
   display: inline-flex; align-items: center; gap: 8px;
-  font-family: var(--sans); font-size: .82rem; font-weight: 300;
+  font-family: var(--sans); font-size: .82rem; font-weight: 600;
   letter-spacing: .06em;
   color: #633B4A;
   text-decoration: none;
@@ -2776,10 +2804,11 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
   /* Hero mobile */
   .hero-wrap {
     flex-direction: column;
-    padding: calc(64px + 24px) 20px 32px;
+    padding: 32px 20px 32px;
     width: 100%; overflow: hidden;
   }
   .hero-left { padding-right: 0; width: 100%; }
+  .hero-photo { display: none; }
   .hero-tagline { font-size: 1rem; }
   .hero-sub { font-size: 1.3rem !important; }
   .hero-sub2 { font-size: 1.1rem !important; }
@@ -2965,7 +2994,6 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
   color: rgba(99,59,74,.72);
   line-height: 1.65;
   margin-top: 20px;
-  font-style: italic;
   letter-spacing: .015em;
   animation: slideup .9s var(--ease) .48s both;
 }
@@ -3334,4 +3362,87 @@ footer { background: #633B4A; padding: 56px 36px; text-align: center; }
   .lm-inner { grid-template-columns: 1fr; gap: 44px; }
   .lm-card { padding: 36px 28px; }
   .lm-modal { padding: 40px 24px; }
+}
+
+/* ─── QUESTIONS DE DIRIGEANT ────────────────────────────────── */
+.questions-section { padding: clamp(64px,8vw,104px) 0; background: var(--ivory); }
+.questions-section .eyebrow { font-size: .95rem; letter-spacing: .25em; }
+.questions-section .section-title { font-size: clamp(2.74rem,4.95vw,4.1rem); }
+.accord-list { max-width: 860px; margin: 44px auto 0; }
+.accord-item { border-bottom: 1px solid rgba(107,98,93,.15); }
+.accord-item:first-child { border-top: 1px solid rgba(107,98,93,.15); }
+.accord-btn {
+  width: 100%; display: flex; justify-content: space-between; align-items: center;
+  gap: 32px; padding: 26px 0; background: none; border: none; cursor: pointer;
+  font-family: var(--serif); font-size: clamp(1.375rem,2.4vw,2.25rem); font-weight: 500;
+  color: var(--plum); text-align: left; line-height: 1.35;
+}
+.accord-btn:hover { color: var(--rose); }
+.accord-icon {
+  font-size: 2rem; font-weight: 400; color: var(--rose); flex-shrink: 0;
+  line-height: 1; transition: transform .35s var(--ease);
+}
+.accord-btn[aria-expanded="true"] .accord-icon { transform: rotate(45deg); }
+.accord-body { overflow: hidden; max-height: 0; transition: max-height .45s var(--ease); }
+.accord-body p {
+  padding: 0 60px 28px 0; max-width: 700px;
+  font-family: var(--sans); font-size: clamp(1.1rem,1.5vw,1.375rem); color: var(--text);
+  line-height: 1.75; margin: 0 0 10px;
+}
+.accord-body p:last-child { margin-bottom: 0; }
+.questions-coda {
+  max-width: 860px; margin: 64px auto 0;
+  font-family: var(--serif); font-size: clamp(1.44rem,2.16vw,1.8rem);
+  font-style: italic; font-weight: 400;
+  color: var(--plum); text-align: center; line-height: 1.65;
+}
+.questions-cta { max-width: 860px; margin: 44px auto 0; text-align: center; }
+.questions-cta-lead {
+  font-family: var(--serif); font-size: clamp(1.1rem,1.6vw,1.4rem);
+  color: var(--plum); margin-bottom: 28px; font-style: italic; opacity: .85;
+}
+@media (max-width: 700px) {
+  .accord-btn { font-size: 1.375rem; gap: 20px; padding: 20px 0; }
+  .accord-body p { padding-right: 0; font-size: 1.1rem; }
+  .questions-coda { font-size: 1.44rem; margin-top: 44px; }
+  .questions-cta { margin-top: 32px; }
+}
+
+/* ─── COOKIE BANNER ─────────────────────────────────────────── */
+.cookie-banner {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 9999;
+  background: #2E1F27;
+  border-top: 1px solid rgba(199,95,98,.25);
+  padding: 16px 32px;
+  transform: translateY(100%);
+  transition: transform .4s cubic-bezier(.4,0,.2,1);
+}
+.cookie-banner.visible { transform: translateY(0); }
+.cookie-banner-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 24px; flex-wrap: wrap;
+}
+.cookie-banner-text {
+  font-family: var(--sans); font-size: .82rem;
+  color: #D9C9C3; line-height: 1.6; margin: 0;
+}
+.cookie-banner-link { color: #C75F62; text-decoration: underline; text-underline-offset: 3px; }
+.cookie-banner-btns { display: flex; gap: 10px; flex-shrink: 0; }
+.cookie-btn {
+  font-family: var(--sans); font-size: .78rem; font-weight: 500;
+  letter-spacing: .08em; padding: 9px 22px; border-radius: 2px;
+  cursor: pointer; border: 1px solid transparent; transition: all .2s;
+}
+.cookie-btn--refuse {
+  background: transparent; border-color: rgba(216,200,195,.3); color: #B8B1AA;
+}
+.cookie-btn--refuse:hover { border-color: #B8B1AA; color: #FAF6F2; }
+.cookie-btn--accept { background: #C75F62; color: #FAF6F2; border-color: #C75F62; }
+.cookie-btn--accept:hover { background: #b85558; }
+@media (max-width: 600px) {
+  .cookie-banner { padding: 16px 20px; }
+  .cookie-banner-inner { flex-direction: column; align-items: flex-start; gap: 14px; }
+  .cookie-banner-btns { width: 100%; }
+  .cookie-btn { flex: 1; text-align: center; }
 }

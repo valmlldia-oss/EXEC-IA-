@@ -50,8 +50,12 @@ links?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => link
 /* ── Scroll reveal ── */
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }});
-}, { threshold: 0.05 });
+}, { threshold: 0.01, rootMargin: '0px 0px -40px 0px' });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+/* Fallback : tout rendre visible après 2.5s si l'observateur ne s'est pas déclenché */
+setTimeout(() => {
+  document.querySelectorAll('.reveal:not(.visible)').forEach(el => el.classList.add('visible'));
+}, 2500);
 
 /* ── Language bar animation ── */
 const barObserver = new IntersectionObserver((entries) => {
