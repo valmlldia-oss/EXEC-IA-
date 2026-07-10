@@ -4,9 +4,9 @@
     {
       "name": "execia-v1-prune",
       "runtimeExecutable": "npx",
-      "runtimeArgs": ["serve", "-l", "8080", "/Users/valeriemailland/Desktop/execia-v1-prune"],
-      "port": 8080,
-      "autoPort": false
+      "runtimeArgs": ["serve", "-l", "8090", "/Users/valeriemailland/Desktop/execia-v1-prune"],
+      "port": 8090,
+      "autoPort": true
     }
   ]
 }

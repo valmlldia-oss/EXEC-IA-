@@ -1,8 +1,8 @@
 User-agent: *
 Allow: /
-Disallow: /assets/
-Allow: /assets/photo-valerie.jpg
-Allow: /assets/logo-execia.png
-Allow: /assets/BANNIERE CONSULTING.png
+
+# Pages utilitaires non destinées à l'indexation
+Disallow: /brevo-en-cours.html
+Disallow: /split.html
 
 Sitemap: https://exec-ia.ai/sitemap.xml
