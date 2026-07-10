@@ -10,6 +10,29 @@ const PDF_NAMES = {
   ES: 'Los 5 Esenciales IA para Directivos — EXEC\'IA.pdf',
 };
 
+const DIAGNOSTIC_COPY = {
+  FR: {
+    subject: "EXEC'IA — Votre diagnostic express",
+    greeting: 'Bonjour',
+    closing: "Je reste disponible si vous souhaitez en échanger de vive voix.",
+    rights: 'Tous droits réservés',
+    results: {
+      align: {
+        title: "Le sujet n'est pas la technologie.<br>C'est la priorisation.",
+        body: "Vous avez les moyens d'avancer, mais sans méthode pour choisir où porter l'effort, chaque décision IA reste un pari. C'est exactement ce que je fais avec les Directions Générales&nbsp;: transformer l'incertitude en priorités claires.",
+      },
+      tech: {
+        title: "La technologie n'est (probablement) pas le problème.",
+        body: "80 à 85&nbsp;% des projets IA qui échouent ne le font pas par manque d'outils, mais par manque d'alignement avec la stratégie. Avant d'ajouter de la technologie, clarifions ce qu'elle doit servir.",
+      },
+      unclear: {
+        title: "Sans portage clair, l'IA reste une idée.",
+        body: "Un projet IA sans propriétaire ni méthode de priorisation a peu de chances d'aboutir. La première étape n'est pas technique&nbsp;: c'est de désigner qui décide, et sur quels critères.",
+      },
+    },
+  },
+};
+
 const EMAIL_COPY = {
   FR: {
     subject: "EXEC'IA — Les 5 Essentiels",
@@ -42,7 +65,7 @@ module.exports = async function handler(req, res) {
   if (req.method === 'OPTIONS') return res.status(200).end();
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
-  const { fullname, role, company, email, langue, document_telecharge, source } = req.body || {};
+  const { fullname, role, company, email, langue, document_telecharge, source, resultat } = req.body || {};
 
   if (!fullname || !email) {
     return res.status(400).json({ error: 'Missing required fields' });
@@ -85,7 +108,11 @@ module.exports = async function handler(req, res) {
     }
 
     try {
-      await sendBrevoEmail({ fullname, email, langue: langue || 'FR' });
+      if (document_telecharge === 'Diagnostic Express') {
+        await sendDiagnosticEmail({ fullname, email, resultat: resultat || 'align' });
+      } else {
+        await sendBrevoEmail({ fullname, email, langue: langue || 'FR' });
+      }
       console.log('Brevo OK:', email);
     } catch (err) {
       console.error('Brevo error:', err.message);
@@ -166,6 +193,81 @@ async function sendBrevoEmail({ fullname, email, langue }) {
       subject: copy.subject,
       htmlContent: html,
       attachment: [{ url: pdfUrl, name: PDF_NAMES[lang] }],
+    }),
+  });
+
+  if (!brevoRes.ok) {
+    const errData = await brevoRes.json().catch(() => ({}));
+    throw new Error(`Brevo ${brevoRes.status}: ${JSON.stringify(errData)}`);
+  }
+}
+
+async function sendDiagnosticEmail({ fullname, email, resultat }) {
+  const copy = DIAGNOSTIC_COPY.FR;
+  const r = copy.results[resultat] || copy.results.align;
+  const prenom = fullname.split(' ')[0];
+
+  const signature = `
+    <table cellpadding="0" cellspacing="0" style="margin-top:32px;border-top:1px solid #D9C9C3;padding-top:20px;">
+      <tr>
+        <td>
+          <p style="margin:0 0 4px 0;font-family:Georgia,'Times New Roman',serif;font-size:15px;color:#6B625D;font-weight:400;">Valérie MAILLAND</p>
+          <p style="margin:0 0 4px 0;font-size:13px;color:#B8B1AA;line-height:1.5;">Fondatrice &amp; Directrice Générale</p>
+          <p style="margin:0 0 4px 0;font-size:13px;color:#B8B1AA;line-height:1.5;">
+            <span style="font-family:Georgia,serif;color:#6B625D;">EXEC'<span style="color:#C75F62;">IA</span></span>
+          </p>
+          <p style="margin:8px 0 0 0;font-size:12px;color:#B8B1AA;line-height:1.6;">
+            <a href="mailto:valerie@exec-ia.ai" style="color:#B8B1AA;text-decoration:none;">valerie@exec-ia.ai</a>
+            &nbsp;|&nbsp;
+            <a href="https://exec-ia.ai" style="color:#B8B1AA;text-decoration:none;">exec-ia.ai</a>
+          </p>
+        </td>
+      </tr>
+    </table>`;
+
+  const html = `<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"></head>
+<body style="margin:0;padding:0;background:#F4EDE7;font-family:Helvetica,Arial,sans-serif;">
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#F4EDE7;padding:40px 16px;">
+<tr><td align="center">
+<table width="560" cellpadding="0" cellspacing="0" style="max-width:560px;width:100%;">
+  <tr>
+    <td style="padding:0 0 24px 0;text-align:center;">
+      <span style="font-family:Georgia,'Times New Roman',serif;font-size:22px;letter-spacing:.08em;color:#6B625D;font-weight:400;">EXEC'<span style="color:#C75F62;">IA</span></span>
+    </td>
+  </tr>
+  <tr>
+    <td style="background:#FAF6F2;border-radius:4px;padding:44px;">
+      <p style="font-family:Georgia,'Times New Roman',serif;font-size:22px;color:#6B625D;margin:0 0 24px 0;line-height:1.3;font-weight:400;">${copy.greeting} ${prenom},</p>
+      <p style="font-family:Georgia,'Times New Roman',serif;font-size:19px;color:#6B625D;margin:0 0 16px 0;line-height:1.35;font-weight:500;">${r.title}</p>
+      <p style="font-size:15px;color:#6B625D;line-height:1.9;margin:0 0 20px 0;">${r.body}</p>
+      <p style="font-size:15px;color:#6B625D;line-height:1.9;margin:0;">${copy.closing}</p>
+      ${signature}
+    </td>
+  </tr>
+  <tr>
+    <td style="padding:24px 0 0 0;text-align:center;">
+      <p style="font-size:11px;color:#B8B1AA;margin:0;line-height:1.6;font-family:Georgia,'Times New Roman',serif;">EXEC'<span style="color:#C75F62;">IA</span> &mdash; ${copy.rights}</p>
+    </td>
+  </tr>
+</table>
+</td></tr>
+</table>
+</body>
+</html>`;
+
+  const brevoRes = await fetch('https://api.brevo.com/v3/smtp/email', {
+    method: 'POST',
+    headers: {
+      'api-key': process.env.BREVO_API_KEY,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      sender: { name: "EXEC'IA — Valérie Mailland", email: 'valerie@exec-ia.ai' },
+      to: [{ email, name: fullname }],
+      subject: copy.subject,
+      htmlContent: html,
     }),
   });
 

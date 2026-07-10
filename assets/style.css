@@ -4963,3 +4963,133 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   white-space: nowrap;
   border: 0;
 }
+
+/* ═══ SLIDE 3bis · DIAGNOSTIC EXPRESS (mini-outil interactif) ═══
+   Bloc autonome — aucune règle ci-dessous ne touche à un sélecteur existant. */
+.diagnostic-section { background: var(--white); }
+.diag-title { margin-bottom: 10px; }
+.diagnostic-section .conviction-lead { margin-bottom: 34px; }
+
+.diag-box {
+  max-width: 640px; margin: 0 auto;
+  background: var(--ivory);
+  border-radius: 20px;
+  padding: clamp(28px, 4vw, 44px) clamp(24px, 4vw, 48px);
+  position: relative;
+}
+
+.diag-progress {
+  display: flex; justify-content: center; gap: 8px;
+  margin-bottom: 26px;
+}
+.diag-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: rgba(99,59,74,.18);
+  transition: background .3s var(--ease);
+}
+.diag-dot.is-active { background: var(--rose); }
+.diag-progress.is-done .diag-dot { background: var(--rose); }
+
+.diag-q { display: none; }
+.diag-q.is-active { display: block; animation: diagFade .4s var(--ease); }
+
+.diag-q-title {
+  font-family: var(--serif);
+  font-size: clamp(1.25rem, 2vw, 1.55rem);
+  font-weight: 600; color: var(--plum);
+  text-align: center;
+  margin: 0 0 22px;
+  line-height: 1.3;
+}
+.diag-opts { display: flex; flex-direction: column; gap: 10px; }
+.diag-opt {
+  font-family: var(--sans);
+  font-size: clamp(.92rem, 1.1vw, 1rem);
+  font-weight: 500;
+  color: var(--plum);
+  background: var(--white);
+  border: 1.5px solid rgba(99,59,74,.14);
+  border-radius: 12px;
+  padding: 14px 20px;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color .25s var(--ease), transform .25s var(--ease), background .25s var(--ease);
+}
+.diag-opt:hover {
+  border-color: var(--rose);
+  background: #FCF7F5;
+  transform: translateY(-1px);
+}
+
+.diag-lead { display: none; }
+.diag-lead.is-active { display: block; animation: diagFade .4s var(--ease); }
+.diag-lead-form { display: flex; flex-direction: column; gap: 10px; }
+.diag-input {
+  font-family: var(--sans);
+  font-size: clamp(.92rem, 1.1vw, 1rem);
+  font-weight: 500;
+  color: var(--plum);
+  background: var(--white);
+  border: 1.5px solid rgba(99,59,74,.14);
+  border-radius: 12px;
+  padding: 14px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color .25s var(--ease);
+}
+.diag-input::placeholder { color: rgba(99,59,74,.45); }
+.diag-input:focus { outline: none; border-color: var(--rose); }
+.diag-input.err { border-color: var(--rose); background: rgba(199,95,98,.04); }
+.diag-lead-err {
+  display: none;
+  font-family: var(--sans); font-size: .85rem;
+  color: var(--rose); margin: 2px 0 0;
+}
+.diag-lead-submit { width: 100%; border: none; margin-top: 4px; }
+
+.diag-result { display: none; text-align: center; animation: diagFade .5s var(--ease); }
+.diag-box.is-result .diag-result.is-active { display: block; }
+.diag-result-title {
+  font-family: var(--serif);
+  font-size: clamp(1.35rem, 2.2vw, 1.75rem);
+  font-weight: 600; line-height: 1.25;
+  color: var(--plum);
+  margin: 0 0 16px;
+}
+.diag-result-body {
+  font-family: var(--sans); font-weight: 300;
+  font-size: clamp(.98rem, 1.15vw, 1.05rem);
+  line-height: 1.6; color: var(--plum);
+  max-width: 480px; margin: 0 auto 26px;
+}
+.diag-cta {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--sans); font-weight: 600;
+  font-size: .95rem; letter-spacing: .02em;
+  color: var(--white);
+  background: var(--rose);
+  border-radius: 999px;
+  padding: 13px 28px;
+  transition: transform .25s var(--ease), box-shadow .25s var(--ease);
+}
+.diag-cta:hover { transform: translateY(-2px); box-shadow: 0 14px 28px rgba(199,95,98,.32); }
+
+.diag-restart {
+  display: none;
+  margin: 22px auto 0;
+  font-family: var(--sans); font-size: .85rem; font-weight: 500;
+  color: rgba(99,59,74,.6);
+  background: none; border: none;
+  text-decoration: underline; cursor: pointer;
+}
+.diag-box.is-result .diag-restart { display: block; }
+
+@keyframes diagFade {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (max-width: 640px) {
+  .diag-box { padding: 26px 20px; border-radius: 16px; }
+  .diag-opt { padding: 12px 16px; }
+}

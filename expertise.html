@@ -306,6 +306,187 @@
   <div class="conviction-band conviction-band--bottom" aria-hidden="true"></div>
 </section>
 
+<!-- ═══ SLIDE 3bis · DIAGNOSTIC EXPRESS ═══════════════════════ -->
+<section id="diagnostic" class="diagnostic-section snap-page">
+  <div class="wrap conviction-inner reveal">
+    <span class="eyebrow">Diagnostic express</span>
+    <h2 class="section-title slide-title diag-title">Et votre projet <span style="color:var(--rose)">IA</span>, il en est où&nbsp;?</h2>
+    <p class="slide-intro conviction-lead">3 questions. 30 secondes. Une réponse honnête.</p>
+
+    <div class="diag-box" id="diagBox">
+      <div class="diag-progress" aria-hidden="true">
+        <span class="diag-dot is-active" data-dot="1"></span>
+        <span class="diag-dot" data-dot="2"></span>
+        <span class="diag-dot" data-dot="3"></span>
+      </div>
+
+      <div class="diag-q is-active" data-q="1">
+        <p class="diag-q-title">Aujourd&#8217;hui, votre projet IA est&#8230;</p>
+        <div class="diag-opts">
+          <button type="button" class="diag-opt" data-tag="unclear">Une idée qu&#8217;on n&#8217;a pas encore lancée</button>
+          <button type="button" class="diag-opt" data-tag="align">En cours, mais on n&#8217;est pas sûr de la direction</button>
+          <button type="button" class="diag-opt" data-tag="tech">Déployé, mais les résultats ne sont pas là</button>
+        </div>
+      </div>
+
+      <div class="diag-q" data-q="2">
+        <p class="diag-q-title">Le principal frein, selon vous, c&#8217;est&#8230;</p>
+        <div class="diag-opts">
+          <button type="button" class="diag-opt" data-tag="unclear">On ne sait pas par où commencer</button>
+          <button type="button" class="diag-opt" data-tag="align">Les priorités changent selon les urgences du moment</button>
+          <button type="button" class="diag-opt" data-tag="tech">Les outils ou les compétences techniques</button>
+        </div>
+      </div>
+
+      <div class="diag-q" data-q="3">
+        <p class="diag-q-title">Qui décide aujourd&#8217;hui des priorités IA chez vous&nbsp;?</p>
+        <div class="diag-opts">
+          <button type="button" class="diag-opt" data-tag="unclear">Personne, de façon formelle</button>
+          <button type="button" class="diag-opt" data-tag="align">La Direction Générale, mais sans méthode dédiée</button>
+          <button type="button" class="diag-opt" data-tag="tech">Une équipe technique ou un prestataire</button>
+        </div>
+      </div>
+
+      <div class="diag-lead" data-step="lead">
+        <p class="diag-q-title">Pour recevoir votre diagnostic&#8230;</p>
+        <form id="diagLeadForm" class="diag-lead-form" novalidate>
+          <input type="text" name="fullname" class="diag-input" placeholder="Nom complet" autocomplete="name">
+          <input type="text" name="role" class="diag-input" placeholder="Fonction" autocomplete="organization-title">
+          <input type="text" name="company" class="diag-input" placeholder="Société" autocomplete="organization">
+          <input type="email" name="email" class="diag-input" placeholder="Email professionnel" autocomplete="email">
+          <p class="diag-lead-err" id="diagLeadErr"></p>
+          <button type="submit" class="diag-cta diag-lead-submit">Voir mon diagnostic <span class="portrait-link-arrow">→</span></button>
+        </form>
+      </div>
+
+      <div class="diag-result" data-result="align">
+        <p class="diag-result-title">Le sujet n&#8217;est pas la technologie.<br>C&#8217;est la priorisation.</p>
+        <p class="diag-result-body">Vous avez les moyens d&#8217;avancer, mais sans méthode pour choisir où porter l&#8217;effort, chaque décision IA reste un pari. C&#8217;est exactement ce que je fais avec les Directions Générales&nbsp;: transformer l&#8217;incertitude en priorités claires.</p>
+        <a href="contact.html" class="diag-cta">Prendre rendez-vous <span class="portrait-link-arrow">→</span></a>
+      </div>
+      <div class="diag-result" data-result="tech">
+        <p class="diag-result-title">La technologie n&#8217;est (probablement) pas le problème.</p>
+        <p class="diag-result-body">80 à 85&nbsp;% des projets IA qui échouent ne le font pas par manque d&#8217;outils, mais par manque d&#8217;alignement avec la stratégie. Avant d&#8217;ajouter de la technologie, clarifions ce qu&#8217;elle doit servir.</p>
+        <a href="contact.html" class="diag-cta">Prendre rendez-vous <span class="portrait-link-arrow">→</span></a>
+      </div>
+      <div class="diag-result" data-result="unclear">
+        <p class="diag-result-title">Sans portage clair, l&#8217;IA reste une idée.</p>
+        <p class="diag-result-body">Un projet IA sans propriétaire ni méthode de priorisation a peu de chances d&#8217;aboutir. La première étape n&#8217;est pas technique&nbsp;: c&#8217;est de désigner qui décide, et sur quels critères.</p>
+        <a href="contact.html" class="diag-cta">Prendre rendez-vous <span class="portrait-link-arrow">→</span></a>
+      </div>
+
+      <button type="button" class="diag-restart">Recommencer</button>
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  var box = document.getElementById('diagBox');
+  if (!box) return;
+  var tags = [];
+  var qs = box.querySelectorAll('.diag-q');
+  var dots = box.querySelectorAll('.diag-dot');
+  var results = box.querySelectorAll('.diag-result');
+  var restart = box.querySelector('.diag-restart');
+  var leadStep = box.querySelector('.diag-lead');
+  var leadForm = document.getElementById('diagLeadForm');
+  var leadErr = document.getElementById('diagLeadErr');
+  var BLOCKED = new Set(['gmail.com','googlemail.com','yahoo.com','yahoo.fr','yahoo.co.uk','hotmail.com','hotmail.fr','hotmail.co.uk','outlook.com','outlook.fr','live.com','live.fr','icloud.com','me.com','mac.com','proton.me','protonmail.com','pm.me','aol.com','zoho.com','ymail.com','mail.com','gmx.com','gmx.fr','gmx.de','laposte.net','free.fr','orange.fr','wanadoo.fr','sfr.fr','bbox.fr','neuf.fr','numericable.fr','club-internet.fr','aliceadsl.fr','cegetel.net']);
+
+  function computeWinner() {
+    var count = { align: 0, tech: 0, unclear: 0 };
+    tags.forEach(function (t) { count[t]++; });
+    var winner = 'align';
+    if (count.tech > count[winner]) winner = 'tech';
+    if (count.unclear > count[winner]) winner = 'unclear';
+    return winner;
+  }
+
+  function showResult(winner) {
+    box.querySelector('.diag-progress').classList.add('is-done');
+    results.forEach(function (r) {
+      r.classList.toggle('is-active', r.getAttribute('data-result') === winner);
+    });
+    box.classList.add('is-result');
+  }
+
+  box.addEventListener('click', function (e) {
+    var opt = e.target.closest('.diag-opt');
+    if (opt) {
+      var q = opt.closest('.diag-q');
+      var step = parseInt(q.getAttribute('data-q'), 10);
+      tags.push(opt.getAttribute('data-tag'));
+      q.classList.remove('is-active');
+      if (step < 3) {
+        var next = box.querySelector('.diag-q[data-q="' + (step + 1) + '"]');
+        next.classList.add('is-active');
+        dots.forEach(function (d) {
+          d.classList.toggle('is-active', parseInt(d.getAttribute('data-dot'), 10) <= step + 1);
+        });
+      } else {
+        leadStep.classList.add('is-active');
+        setTimeout(function () { leadForm.elements['fullname'].focus(); }, 80);
+      }
+      return;
+    }
+    if (e.target.closest('.diag-restart')) {
+      tags = [];
+      box.classList.remove('is-result');
+      box.querySelector('.diag-progress').classList.remove('is-done');
+      results.forEach(function (r) { r.classList.remove('is-active'); });
+      leadStep.classList.remove('is-active');
+      leadForm.reset();
+      leadForm.querySelectorAll('input').forEach(function (i) { i.classList.remove('err'); });
+      leadErr.style.display = 'none';
+      leadErr.textContent = '';
+      qs.forEach(function (q) { q.classList.remove('is-active'); });
+      qs[0].classList.add('is-active');
+      dots.forEach(function (d) {
+        d.classList.toggle('is-active', d.getAttribute('data-dot') === '1');
+      });
+    }
+  });
+
+  if (leadForm) {
+    leadForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      leadErr.style.display = 'none';
+      leadErr.textContent = '';
+      leadForm.querySelectorAll('input').forEach(function (i) { i.classList.remove('err'); });
+
+      var n = leadForm.elements['fullname'].value.trim();
+      var r = leadForm.elements['role'].value.trim();
+      var c = leadForm.elements['company'].value.trim();
+      var em = leadForm.elements['email'].value.trim();
+      var ok = true;
+
+      if (!n) { leadForm.elements['fullname'].classList.add('err'); ok = false; }
+      if (!r) { leadForm.elements['role'].classList.add('err'); ok = false; }
+      if (!c) { leadForm.elements['company'].classList.add('err'); ok = false; }
+      var domain = (em.split('@')[1] || '').toLowerCase();
+      if (!em) { leadForm.elements['email'].classList.add('err'); ok = false; }
+      else if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em)) { leadForm.elements['email'].classList.add('err'); ok = false; }
+      else if (BLOCKED.has(domain)) { leadForm.elements['email'].classList.add('err'); leadErr.textContent = "Merci d'utiliser votre adresse e-mail professionnelle."; leadErr.style.display = 'block'; ok = false; }
+      if (!ok) {
+        if (!leadErr.textContent) { leadErr.textContent = "Merci de compléter l'ensemble des champs obligatoires."; leadErr.style.display = 'block'; }
+        return;
+      }
+
+      var winner = computeWinner();
+      leadStep.classList.remove('is-active');
+      showResult(winner);
+
+      fetch('/api/airtable', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ fullname: n, role: r, company: c, email: em, langue: 'FR', document_telecharge: 'Diagnostic Express', source: 'EXECIA_PRUNE_DIAGNOSTIC', resultat: winner })
+      }).catch(function () {});
+    });
+  }
+})();
+</script>
+
 <!-- ═══ EXPERTISE ═════════════════════════════════════════════ -->
 <section id="expertise" class="bg-white snap-page expertise-page-rule">
   <div class="wrap">
@@ -432,7 +613,7 @@
     <div class="footer-brand">
       <img src="assets/EXECIA_CONSULTING_zoom.png" alt="EXEC'IA Consulting" class="footer-logo-main">
       <p class="footer-tag"><span class="footer-tag-lead">Une expérience dirigeante</span><br><span class="footer-tag-rest">au service de votre transformation <span style="color:var(--rose)">IA</span></span></p>
-      <p class="footer-mention-ia">Conception, contenus et automatisations assistés par Intelligence<br>Artificielle&nbsp;• Validation humaine systématique</p>
+      <p class="footer-mention-ia">Conception, contenus et automatisations assistés par Intelligence Artificielle&nbsp;• Validation humaine systématique</p>
     </div>
 
     <div class="footer-col">
