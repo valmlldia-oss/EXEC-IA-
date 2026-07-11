@@ -155,6 +155,178 @@ const TOOLS = {
       maturity:'Découverte',
       avis:'La qualité des décisions dépend souvent de la qualité des informations disponibles.'
     }
+  },
+  en: {
+    claude: {
+      name:'Claude', cat:'Artificial intelligence · Anthropic',
+      subtitle:'My strategic copilot',
+      desc:'Claude helps me analyse complex documents, prepare executive summaries and produce content with high decision-making value.',
+      when:'When decision quality and analysis speed are critical.',
+      cases:['<tc>Leadership committee notes</tc>','<tc>Strategic summaries</tc>','Document analysis','Web development with Claude Code'],
+      value:'Reduces preparation time for leadership meetings and improves decision quality.',
+      watch:'Claude does not replace strategic judgment. It structures, it synthesises — but the final decision remains human.',
+      execia:'It is my go-to tool for thinking, structuring and producing.',
+      maturity:'Intermediate · Advanced',
+      avis:'Claude is the tool I recommend first to executives who want to accelerate their strategic thinking.'
+    },
+    chatgpt: {
+      name:'ChatGPT', cat:'Artificial intelligence · OpenAI',
+      subtitle:'My thinking partner',
+      desc:'ChatGPT speeds up idea exploration and challenges assumptions.',
+      when:'When <tc>several scenarios</tc> need to be explored quickly.',
+      cases:['Strategic brainstorming','Scenario analysis','Problem solving','Everyday productivity'],
+      value:'<tc>Speeds up decision-making</tc> and helps new opportunities emerge.',
+      watch:'Its popularity can lead to superficial use. The tool is powerful when used with intention.',
+      execia:'It brings speed, versatility and exploration.',
+      maturity:'Discovery · Intermediate',
+      avis:'An excellent partner for widening the field of possibilities before deciding.'
+    },
+    make: {
+      name:'Make', cat:'Automation · No-code',
+      subtitle:'My automation engine',
+      desc:'Make connects tools and automates business processes.',
+      when:'When teams lose time on <tc>repetitive tasks</tc>.',
+      cases:['Workflow automation','Data synchronisation','Business processes','AI agent deployment'],
+      value:'<tc>Improves productivity</tc> and reduces low-value tasks.',
+      watch:'Automating a broken process just makes it fail faster. The diagnostic phase is essential.',
+      execia:'It turns decisions into execution.',
+      maturity:'Intermediate',
+      avis:'Automation becomes relevant when it directly supports business objectives.'
+    },
+    airtable: {
+      name:'Airtable', cat:'Database · No-code',
+      subtitle:'My control centre',
+      desc:'Airtable structures information and makes it easier to track initiatives.',
+      when:'When <tc>visibility on priorities</tc> becomes insufficient.',
+      cases:['Project tracking','Business databases','Metrics tracking','Process management'],
+      value:'Improves visibility, coordination and oversight.',
+      watch:'Airtable is not a Business Intelligence tool. Define the scope of use upfront.',
+      execia:'It brings structure and governance.',
+      maturity:'Discovery · Intermediate',
+      avis:'A good decision relies on reliable, accessible information.'
+    },
+    gamma: {
+      name:'Gamma', cat:'AI creation · Presentations',
+      subtitle:'My communication accelerator',
+      desc:'Gamma quickly turns ideas into professional materials.',
+      when:'When a recommendation needs to be understood and validated quickly.',
+      cases:['Executive presentations','Leadership committee materials','Strategic recommendations','Client debriefs'],
+      value:'Speeds up communication and buy-in.',
+      watch:'Gamma structures and formats — it does not build the thinking for you.',
+      execia:'It turns ideas into decision-making materials.',
+      maturity:'Discovery · Intermediate',
+      avis:'A strategy only has value if it is understood and owned by the organisation.'
+    },
+    notion: {
+      name:'Notion', cat:'Workspace · No-code',
+      subtitle:'My hub for oversight and knowledge-building',
+      desc:'Notion organises knowledge, projects and content.',
+      when:'When an organisation wants to structure its <tc>knowledge capital</tc>.',
+      cases:['Documentation','Editorial calendars','Project management','Knowledge capitalisation'],
+      value:'Reduces information scatter and improves team <tc>alignment</tc>.',
+      watch:'Notion can quickly become disorganised if the architecture is not planned upfront.',
+      execia:'It forms the backbone of the organisation.',
+      maturity:'Discovery · Intermediate',
+      avis:'High-performing organisations know how to find the right information at the right time.'
+    },
+    perplexity: {
+      name:'Perplexity', cat:'AI research · Strategic monitoring',
+      subtitle:'My research assistant',
+      desc:'Perplexity speeds up reliable research and market monitoring.',
+      when:'When you need to quickly understand a market, a trend or a competitor.',
+      cases:['Sector monitoring','Strategic research','Competitive analysis','Source verification'],
+      value:'Improves the quality of information used to decide.',
+      watch:'Sources should always be verified for critical topics. Perplexity is an accelerator, not an oracle.',
+      execia:'It gives quick access to sourced information.',
+      maturity:'Discovery',
+      avis:'Decision quality often depends on the quality of information available.'
+    }
+  },
+  es: {
+    claude: {
+      name:'Claude', cat:'Inteligencia artificial · Anthropic',
+      subtitle:'Mi copiloto estratégico',
+      desc:'Claude me ayuda a analizar documentos complejos, preparar síntesis ejecutivas y producir contenidos de alto valor decisorio.',
+      when:'Cuando la calidad de las decisiones y la velocidad de análisis son críticas.',
+      cases:['<tc>Notas de comité de dirección</tc>','<tc>Síntesis estratégicas</tc>','Análisis documental','Desarrollo web con Claude Code'],
+      value:'Reduce el tiempo de preparación de las reuniones de dirección y mejora la calidad de las decisiones.',
+      watch:'Claude no sustituye el juicio estratégico. Estructura, sintetiza — pero la decisión final sigue siendo humana.',
+      execia:'Es mi herramienta de referencia para pensar, estructurar y producir.',
+      maturity:'Intermedio · Avanzado',
+      avis:'Claude es la herramienta que recomiendo en primer lugar a los directivos que desean acelerar su reflexión estratégica.'
+    },
+    chatgpt: {
+      name:'ChatGPT', cat:'Inteligencia artificial · OpenAI',
+      subtitle:'Mi compañero de reflexión',
+      desc:'ChatGPT acelera la exploración de ideas y el cuestionamiento de hipótesis.',
+      when:'Cuando hay que explorar <tc>varios escenarios</tc> rápidamente.',
+      cases:['Brainstorming estratégico','Análisis de escenarios','Resolución de problemas','Productividad diaria'],
+      value:'<tc>Acelera la toma de decisiones</tc> y favorece la aparición de nuevas oportunidades.',
+      watch:'Su popularidad puede inducir a un uso superficial. La herramienta es potente cuando se usa con intención.',
+      execia:'Aporta velocidad, versatilidad y exploración.',
+      maturity:'Descubrimiento · Intermedio',
+      avis:'Un excelente compañero para ampliar el abanico de posibilidades antes de decidir.'
+    },
+    make: {
+      name:'Make', cat:'Automatización · No-code',
+      subtitle:'Mi motor de automatización',
+      desc:'Make conecta herramientas y automatiza los procesos de negocio.',
+      when:'Cuando los equipos pierden tiempo en <tc>tareas repetitivas</tc>.',
+      cases:['Automatización de flujos de trabajo','Sincronización de datos','Procesos de negocio','Despliegue de agentes IA'],
+      value:'<tc>Mejora la productividad</tc> y reduce las tareas sin valor añadido.',
+      watch:'Automatizar un proceso defectuoso lo hace fallar más rápido. La fase de diagnóstico es indispensable.',
+      execia:'Convierte las decisiones en ejecución.',
+      maturity:'Intermedio',
+      avis:'La automatización cobra sentido cuando sostiene directamente los objetivos de negocio.'
+    },
+    airtable: {
+      name:'Airtable', cat:'Base de datos · No-code',
+      subtitle:'Mi centro de control',
+      desc:'Airtable estructura la información y facilita el seguimiento de las iniciativas.',
+      when:'Cuando la <tc>visibilidad sobre las prioridades</tc> se vuelve insuficiente.',
+      cases:['Gestión de proyectos','Bases de datos de negocio','Seguimiento de indicadores','Gestión de procesos'],
+      value:'Mejora la visibilidad, la coordinación y el control.',
+      watch:'Airtable no es una herramienta de Business Intelligence. Defina bien el alcance de uso de antemano.',
+      execia:'Aporta estructura y gobernanza.',
+      maturity:'Descubrimiento · Intermedio',
+      avis:'Una buena decisión se apoya en información fiable y accesible.'
+    },
+    gamma: {
+      name:'Gamma', cat:'Creación IA · Presentaciones',
+      subtitle:'Mi acelerador de comunicación',
+      desc:'Gamma transforma rápidamente las ideas en materiales profesionales.',
+      when:'Cuando una recomendación debe entenderse y validarse rápidamente.',
+      cases:['Presentaciones ejecutivas','Materiales para comité de dirección','Recomendaciones estratégicas','Informes a clientes'],
+      value:'Acelera la comunicación y la adhesión.',
+      watch:'Gamma estructura y da forma — no construye la reflexión en su lugar.',
+      execia:'Convierte las ideas en materiales de decisión.',
+      maturity:'Descubrimiento · Intermedio',
+      avis:'Una estrategia solo tiene valor si la organización la entiende y la asume.'
+    },
+    notion: {
+      name:'Notion', cat:'Workspace · No-code',
+      subtitle:'Mi espacio de control y capitalización',
+      desc:'Notion organiza el conocimiento, los proyectos y los contenidos.',
+      when:'Cuando una organización desea estructurar su <tc>capital de conocimiento</tc>.',
+      cases:['Documentación','Calendarios editoriales','Gestión de proyectos','Capitalización del conocimiento'],
+      value:'Reduce la dispersión de la información y mejora la <tc>alineación</tc> de los equipos.',
+      watch:'Notion puede desorganizarse rápidamente si la arquitectura no se piensa de antemano.',
+      execia:'Constituye la base de la organización.',
+      maturity:'Descubrimiento · Intermedio',
+      avis:'Las organizaciones de alto rendimiento saben encontrar la información adecuada en el momento adecuado.'
+    },
+    perplexity: {
+      name:'Perplexity', cat:'Investigación IA · Vigilancia estratégica',
+      subtitle:'Mi asistente de investigación',
+      desc:'Perplexity acelera la búsqueda de información fiable y la vigilancia.',
+      when:'Cuando hay que entender rápidamente un mercado, una tendencia o un competidor.',
+      cases:['Vigilancia sectorial','Investigación estratégica','Análisis competitivo','Verificación de fuentes'],
+      value:'Mejora la calidad de la información utilizada para decidir.',
+      watch:'Las fuentes siempre deben verificarse en temas críticos. Perplexity es un acelerador, no un oráculo.',
+      execia:'Permite acceder rápidamente a información con fuentes verificadas.',
+      maturity:'Descubrimiento',
+      avis:'La calidad de las decisiones depende a menudo de la calidad de la información disponible.'
+    }
   }
 };
 
@@ -165,7 +337,8 @@ function tc(str) {
   return (str || '').replace(/<tc>(.*?)<\/tc>/g, '<span class="tc">$1</span>');
 }
 function openToolModal(toolId) {
-  const data = TOOLS.fr[toolId];
+  const lang = document.documentElement.lang || 'fr';
+  const data = (TOOLS[lang] && TOOLS[lang][toolId]) || TOOLS.fr[toolId];
   if (!data) return;
   document.getElementById('tmi-logo').src             = `assets/logos/${toolId}.png`;
   document.getElementById('tmi-logo').alt             = data.name;

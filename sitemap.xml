@@ -128,27 +128,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://exec-ia.ai/temoignages.html"/>
   </url>
   <url>
-    <loc>https://exec-ia.ai/7-opportunites-ia.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://exec-ia.ai/7-opportunites-ia.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://exec-ia.ai/7-opportunites-ia-en.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://exec-ia.ai/7-opportunites-ia-es.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://exec-ia.ai/7-opportunites-ia.html"/>
-  </url>
-  <url>
-    <loc>https://exec-ia.ai/7-opportunites-ia-en.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://exec-ia.ai/7-opportunites-ia.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://exec-ia.ai/7-opportunites-ia-en.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://exec-ia.ai/7-opportunites-ia-es.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://exec-ia.ai/7-opportunites-ia.html"/>
-  </url>
-  <url>
-    <loc>https://exec-ia.ai/7-opportunites-ia-es.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://exec-ia.ai/7-opportunites-ia.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://exec-ia.ai/7-opportunites-ia-en.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://exec-ia.ai/7-opportunites-ia-es.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://exec-ia.ai/7-opportunites-ia.html"/>
-  </url>
-  <url>
     <loc>https://exec-ia.ai/mentions-legales.html</loc>
   </url>
 </urlset>

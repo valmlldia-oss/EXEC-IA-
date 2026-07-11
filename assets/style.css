@@ -189,9 +189,6 @@ a { text-decoration: none; color: inherit; }
   color: var(--plum); transition: color .2s;
 }
 .nav-links a:hover { color: var(--rose); }
-/* ES : libellés plus longs (« Especialización ») — on réduit très subtilement pour éviter les collisions */
-html[lang="es"] .nav-links { gap: 24px; }
-html[lang="es"] .nav-links a { font-size: .76rem; letter-spacing: .04em; }
 .nav-langs { display: inline-flex; align-items: center; gap: 0; flex-shrink: 0; margin-left: auto; }
 .nav-lang {
   position: relative;
@@ -675,7 +672,7 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
 .contact-handshake > * { position: relative; z-index: 2; }
 .contact-handshake::before {
   content: ""; position: absolute; inset: 0;
-  background: url("Poignée de mains.png") no-repeat right center;
+  background: url("poignee-de-mains.png") no-repeat right center;
   background-size: auto 88%;
   opacity: .5;
   pointer-events: none;
@@ -1300,7 +1297,7 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
 .testi-author .testi-title {
   display: block;
   font-family: var(--sans);
-  font-size: .84rem;
+  font-size: .78rem;
   line-height: 1.42;
   font-weight: 400;
   color: rgba(99,59,74,.78);
