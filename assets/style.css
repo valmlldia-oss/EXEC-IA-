@@ -3154,7 +3154,7 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   flex-shrink: 0;
   width: 420px;
   background: transparent;
-  border: 1.5px solid var(--deep);
+  border: 1.5px solid var(--plum);
   border-radius: 1.25rem;
   overflow: hidden;
   display: block;
@@ -3163,7 +3163,7 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
 }
 /* Cadre fin prune foncé uniforme : certaines images d'agents (général, marketing)
    ont un cadre trop clair/absent — on l'homogénéise en CSS. Exclut les mockups CTA. */
-.agent-card:not(.agents-cta-img-slot) { border: 1.5px solid var(--deep); }
+.agent-card:not(.agents-cta-img-slot) { border: 1.5px solid var(--plum); }
 /* RH card : image pleine carte, épaule gauche sort du cadre */
 .agent-card--rh {
   overflow: visible;
@@ -3209,10 +3209,15 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
 .agent-card:first-child .agent-img img {
   transform: translateY(4px);
 }
-/* Marketing : prune trop haut → décale vers le bas pour aligner les 3 tops */
+/* Marketing : titre plus haut/petit que Général sur les 3 langues (mesuré : ~2.2% en
+   moyenne) → léger zoom + décalage vers le bas pour aligner avec Général. */
 .agent-card:nth-child(3) .agent-img img {
-  transform: translateY(3px);
+  transform: scale(1.05) translateY(2.2%);
+  transform-origin: center;
 }
+/* Commercial : le zoom compensatoire coupait la tête du personnage en haut du cadre
+   → abandonné. Le vrai problème (police + veste plus fines/claires que Général) est
+   cuit dans le PNG et doit être corrigé en régénérant l'image, pas en CSS. */
 /* Facturation */
 .agent-card:nth-child(6) .agent-img {
   background: var(--ivory);
@@ -3352,15 +3357,18 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
 .agents-cta-img-slot {
   width: 420px;
   aspect-ratio: 3 / 2;
-  background: rgba(93,47,55,.06);
+  background: var(--ivory);
   overflow: hidden;
   display: block;
+  padding: 16px;
 }
 .agents-cta-img-slot img {
-  width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;
+  /* contain (et non cover) : la maquette entière reste visible — plus aucun
+     logo (ALTURA, FACTURA…) coupé par le recadrage. Le padding donne de l'air. */
+  width: 100%; height: 100%; object-fit: contain; object-position: center; display: block;
 }
 .agents-cta-img-slot:nth-child(3) img {
-  object-position: left;
+  object-position: center;
 }
 
 .agents-arrows {
@@ -4967,8 +4975,14 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
 /* ═══ SLIDE 3bis · DIAGNOSTIC EXPRESS (mini-outil interactif) ═══
    Bloc autonome — aucune règle ci-dessous ne touche à un sélecteur existant. */
 .diagnostic-section { background: var(--white); }
-.diag-title { margin-bottom: 10px; }
-.diagnostic-section .conviction-lead { margin-bottom: 34px; }
+.diag-title {
+  margin-bottom: 10px;
+  font-family: var(--sans);
+  font-weight: 400;
+  font-size: clamp(2.2rem, 3.8vw, 3rem);
+  letter-spacing: -.01em;
+}
+.diagnostic-section .conviction-lead { margin-bottom: 34px; font-size: clamp(1.07rem, 1.23vw, 1.22rem); }
 
 .diag-box {
   max-width: 640px; margin: 0 auto;
@@ -5093,3 +5107,9 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   .diag-box { padding: 26px 20px; border-radius: 16px; }
   .diag-opt { padding: 12px 16px; }
 }
+
+/* Diagnostic — question 3 (« Qui décide… ») : +10% par rapport aux autres questions */
+.diag-q[data-q="3"] .diag-q-title { font-size: clamp(1.375rem, 2.2vw, 1.705rem); }
+
+/* Diagnostic — question 1 : +15% par rapport aux autres questions */
+.diag-q[data-q="1"] .diag-q-title { font-size: clamp(1.6531rem, 2.645vw, 2.0499rem); }
