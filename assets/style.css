@@ -672,7 +672,7 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
 .contact-handshake > * { position: relative; z-index: 2; }
 .contact-handshake::before {
   content: ""; position: absolute; inset: 0;
-  background: url("poignee-de-mains.png") no-repeat right center;
+  background: url("poignee-de-mains.webp") no-repeat right center;
   background-size: auto 88%;
   opacity: .5;
   pointer-events: none;
@@ -1907,59 +1907,6 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   to   { transform: translateX(-25%); }
 }
 
-/* ─── TOOL LOGOS ──────────────────────────────────────────── */
-.tools-logo-section { padding: 14px 0; background: var(--white); }
-.tools-logo-label {
-  text-align: center; font-size: .72rem; letter-spacing: .12em;
-  text-transform: uppercase; color: var(--grey); margin-bottom: 10px;
-}
-.tools-logos-row {
-  display: flex; flex-wrap: wrap; gap: 28px;
-  justify-content: center; align-items: center;
-}
-.tool-logo-item {
-  display: flex; flex-direction: column; align-items: center; gap: 8px;
-  transition: transform .2s;
-  cursor: pointer;
-}
-.tool-logo-item:hover { transform: translateY(-3px); }
-.tool-logo-wrap {
-  position: relative; display: inline-flex;
-}
-.tool-logo-wrap::after {
-  content: '+';
-  position: absolute; top: -5px; right: -5px;
-  width: 16px; height: 16px;
-  background: var(--plum); color: var(--ivory);
-  border-radius: 50%; font-size: .6rem; font-weight: 700;
-  line-height: 16px; text-align: center;
-  transition: background .15s, transform .15s;
-  pointer-events: none;
-}
-.tool-logo-item.active .tool-logo-wrap::after {
-  content: '×'; background: var(--rose); transform: rotate(90deg);
-}
-.tool-logo-item img {
-  width: 52px; height: 52px; object-fit: contain;
-  border-radius: 14px;
-  box-shadow: 0 2px 10px rgba(99,59,74,.12);
-}
-.tool-logo-item span {
-  font-size: .66rem; color: var(--grey); font-weight: 500; letter-spacing: .04em;
-}
-.tool-desc {
-  display: block; font-size: .62rem; color: var(--plum);
-  background: rgba(99,59,74,.07); border: 1px solid rgba(99,59,74,.15);
-  border-radius: 10px; text-align: center; line-height: 1.4;
-  letter-spacing: .02em; max-width: 100px;
-  opacity: 0; max-height: 0; overflow: hidden;
-  padding: 0 10px; margin-top: 0;
-  transition: opacity .22s ease, max-height .22s ease, margin-top .22s ease, padding .22s ease;
-}
-.tool-logo-item.active .tool-desc {
-  opacity: 1; max-height: 50px; margin-top: 0; padding: 5px 10px;
-}
-
 /* ─── BADGE LINK / FL LINK ────────────────────────────────── */
 .badge-link {
   color: var(--rose); font-weight: 700; text-decoration: none;
@@ -2174,22 +2121,6 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   display: flex; justify-content: space-between;
   margin-top: 10px;
   font-size: .88rem; color: rgba(246,241,235,.55); letter-spacing: .04em;
-}
-
-/* ─── TOOLS STRIP ────────────────────────────────────────── */
-.tools-strip { background: var(--white); padding: 16px 0 12px; border-bottom: 1px solid rgba(99,59,74,.07); }
-.tools-strip-label {
-  text-align: center; font-size: .66rem; letter-spacing: .18em;
-  text-transform: uppercase; color: var(--grey); margin-bottom: 10px; font-weight: 500;
-}
-.tools-strip-logos {
-  display: flex; justify-content: center; align-items: center;
-  gap: 40px; flex-wrap: wrap; margin-bottom: 28px;
-}
-.tools-strip-logos .tool-logo-item img { width: 48px; height: 48px; }
-.tools-strip-caption {
-  text-align: center; font-size: .84rem; color: var(--grey);
-  max-width: 580px; margin: 0 auto; line-height: 1.75; font-style: italic;
 }
 
 /* ─── FEATURE CARDS ──────────────────────────────────────── */
@@ -4002,10 +3933,6 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   .formation-list li { display: block !important; font-size: 1rem !important; }
   .fl-rose { font-size: 1rem !important; }
   .fl-star { margin-right: 4px; }
-
-  /* Tools strip */
-  .tools-strip-logos { gap: 14px; flex-wrap: wrap; justify-content: center; }
-  .tool-logo-wrap { width: 44px; height: 44px; }
 
   /* Agents */
   .agent-card { min-width: 82vw; }
