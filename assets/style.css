@@ -273,7 +273,7 @@ a { text-decoration: none; color: inherit; }
 }
 .hero-team-badge {
   display: inline-block;
-  background: var(--rose); color: #fff;
+  background: var(--rose); color: #F4EDE7;
   font-size: .72rem; font-weight: 700;
   letter-spacing: .1em; text-transform: uppercase;
   padding: 4px 14px; border-radius: 20px;
@@ -635,7 +635,7 @@ a { text-decoration: none; color: inherit; }
   border-color: var(--plum); background: rgba(99,59,74,.05);
 }
 .btn-ivory {
-  background: #fff; color: var(--plum); font-weight: 700;
+  background: #F4EDE7; color: var(--plum); font-weight: 700;
   border: none;
   outline: 2px solid transparent;
   box-shadow:
@@ -646,7 +646,7 @@ a { text-decoration: none; color: inherit; }
   transition: transform .2s var(--ease), box-shadow .25s, background .25s, color .25s;
 }
 .btn-ivory:hover {
-  background: var(--plum); color: #fff;
+  background: var(--plum); color: #F4EDE7;
   box-shadow:
     0 0 0 2px var(--plum),
     0 10px 32px rgba(99,59,74,.28);
@@ -1181,7 +1181,7 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
   }
 }
 .testi {
-  background: #fff;
+  background: #F4EDE7;
   border: 1.5px solid rgba(199,95,98,.22);
   border-top: 3px solid #C75F62;
   border-radius: 16px;
@@ -1320,7 +1320,7 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
   border: 1.5px solid rgba(255,255,255,.18);
 }
 .testi--dark .testi-q {
-  color: #fff;
+  color: #F4EDE7;
   opacity: .25;
 }
 .testi--dark p {
@@ -1329,7 +1329,7 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
 .testi--dark .testi-avatar {
   background: rgba(255,255,255,.1);
   border-color: rgba(255,255,255,.25);
-  color: #fff;
+  color: #F4EDE7;
 }
 .testi--dark .testi-author strong:not(.testi-role) {
   color: var(--ivory);
@@ -1395,7 +1395,7 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
 .footer-mention-ia { font-size: 1.05rem; color: rgba(246,241,235,.68); letter-spacing: .02em; line-height: 1.65; margin-bottom: 32px; font-style: italic; }
 .footer-nav { display: flex; gap: 16px; justify-content: center; margin-bottom: 32px; flex-wrap: wrap; }
 .footer-nav a { display: inline-flex; align-items: center; gap: 8px; padding: 13px 32px; border-radius: 50px; font-family: var(--sans); font-size: .98rem; font-weight: 500; letter-spacing: .05em; text-decoration: none; background: transparent; color: rgba(246,241,235,.85); border: 1.5px solid rgba(246,241,235,.45); transition: background .2s, color .2s, border-color .2s; }
-.footer-nav a:hover { background: var(--rose); color: #fff; border-color: var(--rose); }
+.footer-nav a:hover { background: var(--rose); color: #F4EDE7; border-color: var(--rose); }
 .footer-copy { font-size: 1rem; color: rgba(246,241,235,.86); }
 .footer-copy-br { display: none; }
 
@@ -1667,7 +1667,7 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   padding-bottom: 8px;
 }
 .offre-card {
-  background: #fff;
+  background: #F4EDE7;
   border: 1.5px solid rgba(199,95,98,.22);
   border-top: 3px solid #C75F62;
   border-radius: 20px; padding: 18px 20px;
@@ -1679,7 +1679,7 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
 .offre-card:hover { box-shadow: 0 6px 28px rgba(99,59,74,.12); }
 .offre-card--accent {
   border-color: rgba(199,95,98,.3);
-  background: #fff;
+  background: #F4EDE7;
 }
 .offre-card--accent:hover { border-color: rgba(199,95,98,.5); }
 .offre-card--ivory {
@@ -1984,7 +1984,7 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   gap: 24px;
 }
 .approach-card {
-  background: #fff;
+  background: #F4EDE7;
   border: 1px solid rgba(99,59,74,.1);
   border-radius: 20px;
   padding: 14px 18px 12px;
@@ -2057,7 +2057,7 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
 }
 /* Image équipe carte 3 — fond blanc + multiply pour effacer arrière-plan + plus petite */
 .approach-card-img--team {
-  background: #fff;
+  background: #F4EDE7;
   aspect-ratio: 16/10;
   max-height: none;
   margin-left: auto;
@@ -2124,7 +2124,7 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   width: 76px; height: 76px; border-radius: 50%;
   background: var(--rose);
   display: flex; align-items: center; justify-content: center;
-  color: #fff; font-size: 1.8rem;
+  color: #F4EDE7; font-size: 1.8rem;
   padding-left: 6px;
   box-shadow: 0 8px 32px rgba(199,95,98,.5);
   cursor: pointer;
@@ -2155,7 +2155,7 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   width: 76px; height: 76px; border-radius: 50%;
   background: var(--rose); border: none; cursor: pointer;
   display: flex; align-items: center; justify-content: center;
-  color: #fff; font-size: 1.7rem; padding-left: 5px;
+  color: #F4EDE7; font-size: 1.7rem; padding-left: 5px;
   box-shadow: 0 8px 28px rgba(199,95,98,.5);
   transition: transform .22s, box-shadow .22s;
 }
@@ -2198,7 +2198,7 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
 .fcards-section .section-title { color: var(--deep); }
 .fcards-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 14px; }
 .fcard {
-  background: #fff;
+  background: #F4EDE7;
   border: 1px solid rgba(99,59,74,.1);
   border-radius: 20px; padding: 18px 20px;
   box-shadow: 0 2px 18px rgba(99,59,74,.06);
@@ -2387,7 +2387,7 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
 .qualiopi-seal {
   display: inline-flex; align-items: center; gap: 10px;
   border: 2px solid #E37222; border-radius: 10px; padding: 8px 16px;
-  background: #fff;
+  background: #F4EDE7;
 }
 .qualiopi-seal-q {
   font-size: 1.8rem; font-weight: 900; color: #E37222; line-height: 1; font-family: Georgia, serif;
@@ -2413,7 +2413,7 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   flex-shrink: 0;
 }
 .iso-certified { font-size: .36rem; color: rgba(255,255,255,.75); letter-spacing: .12em; text-transform: uppercase; }
-.iso-num { font-size: .72rem; font-weight: 800; color: #fff; line-height: 1.1; text-align: center; font-family: Georgia, serif; }
+.iso-num { font-size: .72rem; font-weight: 800; color: #F4EDE7; line-height: 1.1; text-align: center; font-family: Georgia, serif; }
 .iso-year { font-size: .36rem; color: rgba(255,255,255,.7); letter-spacing: .06em; margin-top: 1px; }
 .iso-label { font-size: .56rem; color: #888; letter-spacing: .06em; text-transform: uppercase; max-width: 70px; line-height: 1.4; }
 
@@ -3512,7 +3512,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 .nl-title-num {
   font-size: 1.45em;
   line-height: 1.15;
-  color: #fff;
+  color: #F4EDE7;
   display: inline;
   vertical-align: baseline;
 }
@@ -3584,7 +3584,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   font-family: var(--serif);
   font-size: 5.6rem;
   line-height: 1;
-  color: #fff;
+  color: #F4EDE7;
   font-weight: 400;
   letter-spacing: -.02em;
 }
@@ -3620,7 +3620,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   font-family: var(--serif);
   font-size: 2.8rem;
   font-weight: 400;
-  color: #fff;
+  color: #F4EDE7;
   line-height: 1.08;
   margin: 0 0 20px;
 }
@@ -3636,7 +3636,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   font-family: var(--serif);
   font-size: 5.5rem;
   line-height: 1;
-  color: #fff;
+  color: #F4EDE7;
   font-weight: 300;
   letter-spacing: -.03em;
   padding-bottom: 6px;
@@ -3754,7 +3754,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   border: 1px solid rgba(199,95,98,.55);
   border-radius: 10px;
   padding: 13px 18px;
-  color: #fff;
+  color: #F4EDE7;
   font-size: .92rem;
   font-family: var(--sans);
   outline: none;
@@ -3852,7 +3852,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   border: 1px solid rgba(255,255,255,.35);
   border-radius: 12px;
   padding: 14px 18px;
-  color: #fff;
+  color: #F4EDE7;
   font-size: .93rem;
   font-family: var(--sans);
   outline: none;
