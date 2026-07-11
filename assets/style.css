@@ -1173,27 +1173,15 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
     grid-row: 6;
     margin-top: 14px;
   }
-  /* Page FR : 3 témoignages → 3 colonnes, Wissam remonte à côté des deux autres */
-  html[lang="fr"] .testi-grid { grid-template-columns: repeat(3, 1fr); }
-  html[lang="fr"] .testi-grid > .testi--dark {
+  /* 3 témoignages sur les 3 langues → 3 colonnes, Wissam à côté des deux autres */
+  .testi-grid { grid-template-columns: repeat(3, 1fr); }
+  .testi-grid > .testi--dark {
     display: grid;
     grid-template-rows: subgrid;
     grid-column: auto;
     grid-row: span 5;
     margin-top: 0;
   }
-  /* Pages EN/ES : 4 témoignages (2 cartes sombres) → grille 2×2 uniforme,
-     pas de carte pleine largeur */
-  html[lang="en"] .testi-grid > .testi--dark,
-  html[lang="es"] .testi-grid > .testi--dark {
-    display: grid;
-    grid-template-rows: subgrid;
-    grid-column: auto;
-    grid-row: span 5;
-    margin-top: 0;
-  }
-  html[lang="en"] .testi-grid > .testi:nth-child(n+3),
-  html[lang="es"] .testi-grid > .testi:nth-child(n+3) { margin-top: 14px; }
 }
 .testi {
   background: #fff;
@@ -1319,6 +1307,9 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
   margin-top: 2px;
 }
 .testi--dark .testi-author .testi-title { color: rgba(250,246,242,.72); }
+/* Le "IA"/"AI" coloré imbriqué dans testi-title hérite sinon de
+   `.testi-author span { display:block }` et saute toujours de ligne. */
+.testi-title span { display: inline; font-size: inherit; font-weight: inherit; }
 .testi-translated   { font-size: .88rem; color: rgba(99,59,74,.6); font-style: italic; display: block; margin-top: 4px; font-weight: 500; }
 /* Variante fond prune */
 .testi--dark {
@@ -1373,7 +1364,7 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
   margin-top: 14px; text-align: center;
   /* une ligne de respiration avant le footer */
   margin-bottom: clamp(28px, 3.4vh, 40px);
-  font-size: 1rem; color: rgba(99,59,74,.85); font-style: italic;
+  font-size: .93rem; color: rgba(99,59,74,.85); font-style: italic;
   font-weight: 500;
 }
 
