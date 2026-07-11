@@ -2882,13 +2882,16 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   pointer-events: none;
 }
 .expertise-contact > .expertise-contact-inner { position: relative; z-index: 2; }
-/* Filet prune d'ouverture — au-dessus du voile de l'image */
+/* Filet prune d'ouverture — au-dessus du voile de l'image.
+   position:absolute + top:0 : ignore le padding-top:var(--nav-h) hérité de
+   .snap-page (qui poussait le filet plus bas et laissait la photo seule,
+   sans filet, dans toute cette zone de padding). */
 .contact-slide-band {
-  position: relative; z-index: 3;
+  position: absolute; top: 0; left: 0; z-index: 3;
   background: var(--deep);
-  height: 8px; width: 100%; flex: 0 0 auto;
-  margin-bottom: 34px;
+  height: 8px; width: 100%;
 }
+.expertise-contact-inner { margin-top: 34px; }
 /* Slide élargie : le texte respire au lieu d'être comprimé */
 .expertise-contact-inner { max-width: 940px; text-align: center; }
 .expertise-contact-inner .eyebrow { text-align: center; margin-bottom: 10px; }
