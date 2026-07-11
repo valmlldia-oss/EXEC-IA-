@@ -3206,6 +3206,19 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
 /* Commercial : le zoom compensatoire coupait la tête du personnage en haut du cadre
    → abandonné. Le vrai problème (police + veste plus fines/claires que Général) est
    cuit dans le PNG et doit être corrigé en régénérant l'image, pas en CSS. */
+/* Commercial : fond du PNG mesuré plus blanc (~#F8F0EB) que les autres agents
+   (~#F6EC E4) → léger voile ivoire en mix-blend-mode:multiply, qui réchauffe
+   les zones claires sans assombrir la veste/cheveux (déjà foncés). */
+.agent-card:nth-child(2) .agent-img { position: relative; }
+.agent-card:nth-child(2) .agent-img::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: #F4EDE7;
+  opacity: .3;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  z-index: 1;
+}
 /* Facturation */
 .agent-card:nth-child(6) .agent-img {
   background: var(--ivory);
