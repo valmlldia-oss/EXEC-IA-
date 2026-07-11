@@ -5112,5 +5112,5 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
 /* Diagnostic — question 3 (« Qui décide… ») : +10% par rapport aux autres questions */
 .diag-q[data-q="3"] .diag-q-title { font-size: clamp(1.375rem, 2.2vw, 1.705rem); }
 
-/* Diagnostic — question 1 : +15% par rapport aux autres questions */
-.diag-q[data-q="1"] .diag-q-title { font-size: clamp(1.6531rem, 2.645vw, 2.0499rem); }
+/* Diagnostic — question 1 : +15% par rapport aux autres questions, puis +10% supplémentaire */
+.diag-q[data-q="1"] .diag-q-title { font-size: clamp(1.8184rem, 2.9095vw, 2.2549rem); }
