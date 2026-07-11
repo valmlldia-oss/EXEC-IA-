@@ -2883,11 +2883,12 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 }
 .expertise-contact > .expertise-contact-inner { position: relative; z-index: 2; }
 /* Filet prune d'ouverture — au-dessus du voile de l'image.
-   position:absolute + top:0 : ignore le padding-top:var(--nav-h) hérité de
-   .snap-page (qui poussait le filet plus bas et laissait la photo seule,
-   sans filet, dans toute cette zone de padding). */
+   top:0 le plaçait derrière la nav fixe (position:fixed, z-index:999) qui
+   recouvre le haut de la section au moment du snap-scroll : le filet se
+   retrouvait cachė sous la nav au lieu d'être juste en dessous.
+   top:var(--nav-h) l'aligne pile au bord inférieur (très fin) de la nav. */
 .contact-slide-band {
-  position: absolute; top: 0; left: 0; z-index: 3;
+  position: absolute; top: var(--nav-h); left: 0; z-index: 3;
   background: var(--deep);
   height: 8px; width: 100%;
 }
