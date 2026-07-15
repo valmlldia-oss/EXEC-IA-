@@ -92,9 +92,13 @@ body {
    comportement par défaut) : avec un wrap plus court que 100vh, ça laissait
    ~166px de vide avant l'eyebrow. Calé en haut comme les slides voisines ;
    aucun lien du site ne cible #diagnostic par ancre, pas besoin de
-   scroll-margin-top. */
+   scroll-margin-top. Le contenu (titre + bloc diagnostic) est plus court
+   qu'un écran : forcer min-height:100vh laissait ~240px de vide sous le
+   bloc beige rosé. Hauteur libre + respiration avant la slide suivante. */
 #diagnostic.snap-page {
   padding-top: calc(var(--nav-h) - 40px);
+  min-height: auto;
+  padding-bottom: clamp(52px, 6vh, 68px);
 }
 /* Filet prune doit être collé en haut (séparation nette avec la slide
    précédente, sans vide avant) ; le lien ancre "La méthode EXEC'IA →"
@@ -2801,7 +2805,10 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 .ia-perf-num { font-family: var(--serif); font-size: clamp(4rem, 7vw, 6.5rem); font-weight: 700; color: #C75F62; line-height: 1; flex-shrink: 0; }
 .ia-perf-stat-label { font-family: var(--serif); font-size: clamp(1.2rem, 1.8vw, 1.65rem); font-weight: 400; color: var(--plum); line-height: 1.4; white-space: normal; }
 
-.roi-section { background: var(--ivory); padding-bottom: var(--nav-h); border-top: 1px solid rgba(93,47,55,.1); margin-top: 0; }
+/* padding-bottom nav-h (80px) + les 28px de .roi-disclaimer + le bouton
+   laissaient ~135px avant le footer — ramené au même repère que les autres
+   pages (~52-68px, cf. .expertise-contact). */
+.roi-section { background: var(--ivory); padding-bottom: clamp(24px, 3vh, 36px); border-top: 1px solid rgba(93,47,55,.1); margin-top: 0; }
 /* Filet prune foncé d'ouverture du calculateur */
 .roi-band { background: var(--deep); height: 8px; width: 100%; flex: 0 0 auto; margin-bottom: 28px; }
 .roi-intro { font-family: var(--sans); font-size: clamp(1rem, 2.46vw, 1.94rem); font-weight: 400; color: var(--text); max-width: 900px; margin: 6px auto 14px; line-height: 1.55; text-align: center; white-space: normal; }
