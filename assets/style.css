@@ -62,8 +62,8 @@ body {
 .snap-page > .lm-inner {
   width: 100%;
 }
-.snap-page:not(#offres):not(#agents):not(#questions):not(#expertise) > .wrap,
-.snap-page:not(#offres):not(#agents):not(#questions):not(#expertise) > .lm-inner {
+.snap-page:not(#offres):not(#agents):not(#questions):not(#expertise):not(#diagnostic) > .wrap,
+.snap-page:not(#offres):not(#agents):not(#questions):not(#expertise):not(#diagnostic) > .lm-inner {
   margin-top: auto;
   margin-bottom: auto;
 }
@@ -72,7 +72,8 @@ body {
 #offres.snap-page,
 #agents.snap-page,
 #questions.snap-page,
-#expertise.snap-page {
+#expertise.snap-page,
+#diagnostic.snap-page {
   justify-content: flex-start;
 }
 /* Le filet prune doit être collé au haut de la section : aucun lien du site
@@ -86,6 +87,14 @@ body {
 #agents.snap-page {
   padding-top: calc(var(--nav-h) - 40px);
   scroll-margin-top: 40px;
+}
+/* Diagnostic express était centré verticalement (héritage de l'ancien
+   comportement par défaut) : avec un wrap plus court que 100vh, ça laissait
+   ~166px de vide avant l'eyebrow. Calé en haut comme les slides voisines ;
+   aucun lien du site ne cible #diagnostic par ancre, pas besoin de
+   scroll-margin-top. */
+#diagnostic.snap-page {
+  padding-top: calc(var(--nav-h) - 40px);
 }
 /* Filet prune doit être collé en haut (séparation nette avec la slide
    précédente, sans vide avant) ; le lien ancre "La méthode EXEC'IA →"
