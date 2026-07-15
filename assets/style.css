@@ -75,11 +75,25 @@ body {
 #expertise.snap-page {
   justify-content: flex-start;
 }
+/* Le filet prune doit être collé au haut de la section : aucun lien du site
+   ne cible #questions par ancre, donc le padding-top nav-h générique n'a pas
+   lieu d'être ici (il ne laissait qu'un vide beige avant le filet). */
+#questions.snap-page {
+  padding-top: 0;
+}
 /* Titre "Exemples d'initiatives IA" remonté d'une ligne ; le scroll-margin
    compense pour que le titre reste sous la nav quand la section se snappe. */
 #agents.snap-page {
   padding-top: calc(var(--nav-h) - 40px);
   scroll-margin-top: 40px;
+}
+/* Filet prune doit être collé en haut (séparation nette avec la slide
+   précédente, sans vide avant) ; le lien ancre "La méthode EXEC'IA →"
+   (#agents) utilise scroll-margin-top pour rester sous la nav au lieu du
+   padding-top générique, qui laissait trop d'espace avant l'eyebrow. */
+#expertise.snap-page {
+  padding-top: 0;
+  scroll-margin-top: var(--nav-h);
 }
 img { max-width: 100%; height: auto; display: block; }
 a { text-decoration: none; color: inherit; }
@@ -2448,6 +2462,14 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 .expertise-page-rule {
   border-bottom: 1px solid rgba(61, 32, 48, .35);
 }
+/* Filet prune foncé d'ouverture de la slide Expertise — même traitement que
+   .questions-band / .conviction-band : collé en haut, air réduit avant
+   l'eyebrow (moins de vide qu'avec le seul padding-top nav-h précédent). */
+.expertise-band {
+  background: var(--deep);
+  height: 8px; width: 100%; flex: 0 0 auto;
+  margin-bottom: 40px;
+}
 /* Entrefilet Expertise : bandeau bordeaux très fin (transition élégante,
    pas un bloc dominant comme le maf-band de l'Accueil). */
 .mon-approche-section .maf-band--hairline {
@@ -2707,7 +2729,8 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   opacity: 1;
   pointer-events: none;
 }
-/* Voile léger : le texte reste lisible au centre, l'image reste perceptible */
+/* Voile léger : le texte reste lisible au centre, l'image reste perceptible en
+   intégralité — pas de zone opaque qui la tronquerait en haut. */
 .expertise-contact::after {
   content: ""; position: absolute; inset: 0;
   background:
@@ -2723,13 +2746,13 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   pointer-events: none;
 }
 .expertise-contact > .expertise-contact-inner { position: relative; z-index: 2; }
-/* Filet prune d'ouverture — au-dessus du voile de l'image.
-   top:0 le plaçait derrière la nav fixe (position:fixed, z-index:999) qui
-   recouvre le haut de la section au moment du snap-scroll : le filet se
-   retrouvait cachė sous la nav au lieu d'être juste en dessous.
-   top:var(--nav-h) l'aligne pile au bord inférieur (très fin) de la nav. */
+/* Filet prune d'ouverture — remonté tout en haut de la section pour laisser
+   l'image en transparence visible en intégralité en dessous (pas de zone
+   masquée). z-index sous la nav fixe : au repos (section snappée), le filet
+   se retrouve sous la nav — c'est volontaire, l'important est qu'il n'y ait
+   plus aucune coupe visible dans l'image pendant le scroll. */
 .contact-slide-band {
-  position: absolute; top: var(--nav-h); left: 0; z-index: 3;
+  position: absolute; top: 0; left: 0; z-index: 3;
   background: var(--deep);
   height: 8px; width: 100%;
 }
@@ -4682,7 +4705,10 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 /* Clôture stratégique : bloc centré, plus d'air après la FAQ,
    moins de vide avant le footer. */
 .questions-close {
-  max-width: 780px;
+  /* 780px cassait "valeur" et "bonnes décisions." sur une 2e ligne malgré
+     les <br> voulus (chaque ligne du h1 a besoin de ~860px à la taille max
+     du clamp) — élargi pour que les 3 lignes prévues restent sur une ligne. */
+  max-width: 940px;
   margin: clamp(72px, 9vh, 108px) 0 clamp(20px, 2.4vh, 30px);
   text-align: left;
 }
