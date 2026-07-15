@@ -2734,10 +2734,9 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
      100vh de la section, laissant la photo seule au-dessus du filet prune —
      qui se retrouve à couper la photo en plein milieu au lieu d'ouvrir la slide. */
   justify-content: flex-start;
-  /* Respiration sous "Réserver un échange →" avant d'entrer dans le footer
-     (sinon le bouton se retrouvait à ~29px du bord, juste avant le prune
-     foncé du footer) — même repère que .tl-item:last-child. */
-  padding-bottom: clamp(52px, 6vh, 68px);
+  /* Respiration sous "Réserver un échange →" avant d'entrer dans le footer —
+     resserré à ~0,5cm (52-68px jugé encore trop grand). */
+  padding-bottom: 0.5cm;
 }
 .expertise-contact::before {
   content: ""; position: absolute; inset: 0;
@@ -2805,10 +2804,8 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 .ia-perf-num { font-family: var(--serif); font-size: clamp(4rem, 7vw, 6.5rem); font-weight: 700; color: #C75F62; line-height: 1; flex-shrink: 0; }
 .ia-perf-stat-label { font-family: var(--serif); font-size: clamp(1.2rem, 1.8vw, 1.65rem); font-weight: 400; color: var(--plum); line-height: 1.4; white-space: normal; }
 
-/* padding-bottom nav-h (80px) + les 28px de .roi-disclaimer + le bouton
-   laissaient ~135px avant le footer — ramené au même repère que les autres
-   pages (~52-68px, cf. .expertise-contact). */
-.roi-section { background: var(--ivory); padding-bottom: clamp(24px, 3vh, 36px); border-top: 1px solid rgba(93,47,55,.1); margin-top: 0; }
+/* Resserré à ~0,5cm avant le footer, cohérent avec .expertise-contact. */
+.roi-section { background: var(--ivory); padding-bottom: 0.5cm; border-top: 1px solid rgba(93,47,55,.1); margin-top: 0; }
 /* Filet prune foncé d'ouverture du calculateur */
 .roi-band { background: var(--deep); height: 8px; width: 100%; flex: 0 0 auto; margin-bottom: 28px; }
 .roi-intro { font-family: var(--sans); font-size: clamp(1rem, 2.46vw, 1.94rem); font-weight: 400; color: var(--text); max-width: 900px; margin: 6px auto 14px; line-height: 1.55; text-align: center; white-space: normal; }
