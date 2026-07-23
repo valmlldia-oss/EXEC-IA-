@@ -21,7 +21,7 @@ TERRA_PALE = HexColor('#F0E6E3')   # terracotta très pâle pour fond card
 IVORY      = HexColor('#F6F1EB')   # fond ivoire
 IVORY2     = HexColor('#FAF6F2')   # cards légères
 TEXT       = HexColor('#2A1020')   # corps de texte
-GREY       = HexColor('#847680')   # texte secondaire
+PRUNE_LIGHT = HexColor('#8A5A68')  # texte secondaire
 GREY_PALE  = HexColor('#D9C9C3')   # texte sur fond sombre
 
 M  = 18*mm
@@ -220,10 +220,10 @@ def cover(c, lang, content):
     y -= 6*mm
 
     # Sous-titre — Cormorant Garamond Italic gris, comme site
-    c.setFont(CGI, 12); c.setFillColor(GREY)
+    c.setFont(CGI, 12); c.setFillColor(PRUNE_LIGHT)
     c.drawString(M, y, content['cover_subtitle'])
     y -= 7*mm
-    c.setFont(IR, 8); c.setFillColor(GREY)
+    c.setFont(IR, 8); c.setFillColor(PRUNE_LIGHT)
     c.drawString(M, y, content['cover_caption'])
     y -= 13*mm
 

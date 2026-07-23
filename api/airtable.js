@@ -137,15 +137,15 @@ async function sendBrevoEmail({ fullname, email, langue }) {
     <table cellpadding="0" cellspacing="0" style="margin-top:32px;border-top:1px solid #D9C9C3;padding-top:20px;">
       <tr>
         <td>
-          <p style="margin:0 0 4px 0;font-family:Georgia,'Times New Roman',serif;font-size:15px;color:#6B625D;font-weight:400;">Valérie MAILLAND</p>
-          <p style="margin:0 0 4px 0;font-size:13px;color:#B8B1AA;line-height:1.5;">Fondatrice &amp; Directrice Générale</p>
-          <p style="margin:0 0 4px 0;font-size:13px;color:#B8B1AA;line-height:1.5;">
-            <span style="font-family:Georgia,serif;color:#6B625D;">EXEC'<span style="color:#C75F62;">IA</span></span>
+          <p style="margin:0 0 4px 0;font-family:Georgia,'Times New Roman',serif;font-size:15px;color:#633B4A;font-weight:400;">Valérie MAILLAND</p>
+          <p style="margin:0 0 4px 0;font-size:13px;color:#D9C9C3;line-height:1.5;">Fondatrice &amp; Directrice Générale</p>
+          <p style="margin:0 0 4px 0;font-size:13px;color:#D9C9C3;line-height:1.5;">
+            <span style="font-family:Georgia,serif;color:#633B4A;">EXEC'<span style="color:#C75F62;">IA</span></span>
           </p>
-          <p style="margin:8px 0 0 0;font-size:12px;color:#B8B1AA;line-height:1.6;">
-            <a href="mailto:valerie@exec-ia.ai" style="color:#B8B1AA;text-decoration:none;">valerie@exec-ia.ai</a>
+          <p style="margin:8px 0 0 0;font-size:12px;color:#D9C9C3;line-height:1.6;">
+            <a href="mailto:valerie@exec-ia.ai" style="color:#D9C9C3;text-decoration:none;">valerie@exec-ia.ai</a>
             &nbsp;|&nbsp;
-            <a href="https://exec-ia.ai" style="color:#B8B1AA;text-decoration:none;">exec-ia.ai</a>
+            <a href="https://exec-ia.ai" style="color:#D9C9C3;text-decoration:none;">exec-ia.ai</a>
           </p>
         </td>
       </tr>
@@ -160,19 +160,19 @@ async function sendBrevoEmail({ fullname, email, langue }) {
 <table width="560" cellpadding="0" cellspacing="0" style="max-width:560px;width:100%;">
   <tr>
     <td style="padding:0 0 24px 0;text-align:center;">
-      <span style="font-family:Georgia,'Times New Roman',serif;font-size:22px;letter-spacing:.08em;color:#6B625D;font-weight:400;">EXEC'<span style="color:#C75F62;">IA</span></span>
+      <span style="font-family:Georgia,'Times New Roman',serif;font-size:22px;letter-spacing:.08em;color:#633B4A;font-weight:400;">EXEC'<span style="color:#C75F62;">IA</span></span>
     </td>
   </tr>
   <tr>
     <td style="background:#FAF6F2;border-radius:4px;padding:44px;">
-      <p style="font-family:Georgia,'Times New Roman',serif;font-size:22px;color:#6B625D;margin:0 0 28px 0;line-height:1.3;font-weight:400;">${copy.greeting} ${prenom},</p>
-      <p style="font-size:15px;color:#6B625D;line-height:1.9;margin:0;">${copy.body(copy.docName)}</p>
+      <p style="font-family:Georgia,'Times New Roman',serif;font-size:22px;color:#633B4A;margin:0 0 28px 0;line-height:1.3;font-weight:400;">${copy.greeting} ${prenom},</p>
+      <p style="font-size:15px;color:#633B4A;line-height:1.9;margin:0;">${copy.body(copy.docName)}</p>
       ${signature}
     </td>
   </tr>
   <tr>
     <td style="padding:24px 0 0 0;text-align:center;">
-      <p style="font-size:11px;color:#B8B1AA;margin:0;line-height:1.6;font-family:Georgia,'Times New Roman',serif;">EXEC'<span style="color:#C75F62;">IA</span> &mdash; ${copy.rights}</p>
+      <p style="font-size:11px;color:#D9C9C3;margin:0;line-height:1.6;font-family:Georgia,'Times New Roman',serif;">EXEC'<span style="color:#C75F62;">IA</span> &mdash; ${copy.rights}</p>
     </td>
   </tr>
 </table>
@@ -211,15 +211,15 @@ async function sendDiagnosticEmail({ fullname, email, resultat }) {
     <table cellpadding="0" cellspacing="0" style="margin-top:32px;border-top:1px solid #D9C9C3;padding-top:20px;">
       <tr>
         <td>
-          <p style="margin:0 0 4px 0;font-family:Georgia,'Times New Roman',serif;font-size:15px;color:#6B625D;font-weight:400;">Valérie MAILLAND</p>
-          <p style="margin:0 0 4px 0;font-size:13px;color:#B8B1AA;line-height:1.5;">Fondatrice &amp; Directrice Générale</p>
-          <p style="margin:0 0 4px 0;font-size:13px;color:#B8B1AA;line-height:1.5;">
-            <span style="font-family:Georgia,serif;color:#6B625D;">EXEC'<span style="color:#C75F62;">IA</span></span>
+          <p style="margin:0 0 4px 0;font-family:Georgia,'Times New Roman',serif;font-size:15px;color:#633B4A;font-weight:400;">Valérie MAILLAND</p>
+          <p style="margin:0 0 4px 0;font-size:13px;color:#D9C9C3;line-height:1.5;">Fondatrice &amp; Directrice Générale</p>
+          <p style="margin:0 0 4px 0;font-size:13px;color:#D9C9C3;line-height:1.5;">
+            <span style="font-family:Georgia,serif;color:#633B4A;">EXEC'<span style="color:#C75F62;">IA</span></span>
           </p>
-          <p style="margin:8px 0 0 0;font-size:12px;color:#B8B1AA;line-height:1.6;">
-            <a href="mailto:valerie@exec-ia.ai" style="color:#B8B1AA;text-decoration:none;">valerie@exec-ia.ai</a>
+          <p style="margin:8px 0 0 0;font-size:12px;color:#D9C9C3;line-height:1.6;">
+            <a href="mailto:valerie@exec-ia.ai" style="color:#D9C9C3;text-decoration:none;">valerie@exec-ia.ai</a>
             &nbsp;|&nbsp;
-            <a href="https://exec-ia.ai" style="color:#B8B1AA;text-decoration:none;">exec-ia.ai</a>
+            <a href="https://exec-ia.ai" style="color:#D9C9C3;text-decoration:none;">exec-ia.ai</a>
           </p>
         </td>
       </tr>
@@ -234,21 +234,21 @@ async function sendDiagnosticEmail({ fullname, email, resultat }) {
 <table width="560" cellpadding="0" cellspacing="0" style="max-width:560px;width:100%;">
   <tr>
     <td style="padding:0 0 24px 0;text-align:center;">
-      <span style="font-family:Georgia,'Times New Roman',serif;font-size:22px;letter-spacing:.08em;color:#6B625D;font-weight:400;">EXEC'<span style="color:#C75F62;">IA</span></span>
+      <span style="font-family:Georgia,'Times New Roman',serif;font-size:22px;letter-spacing:.08em;color:#633B4A;font-weight:400;">EXEC'<span style="color:#C75F62;">IA</span></span>
     </td>
   </tr>
   <tr>
     <td style="background:#FAF6F2;border-radius:4px;padding:44px;">
-      <p style="font-family:Georgia,'Times New Roman',serif;font-size:22px;color:#6B625D;margin:0 0 24px 0;line-height:1.3;font-weight:400;">${copy.greeting} ${prenom},</p>
-      <p style="font-family:Georgia,'Times New Roman',serif;font-size:19px;color:#6B625D;margin:0 0 16px 0;line-height:1.35;font-weight:500;">${r.title}</p>
-      <p style="font-size:15px;color:#6B625D;line-height:1.9;margin:0 0 20px 0;">${r.body}</p>
-      <p style="font-size:15px;color:#6B625D;line-height:1.9;margin:0;">${copy.closing}</p>
+      <p style="font-family:Georgia,'Times New Roman',serif;font-size:22px;color:#633B4A;margin:0 0 24px 0;line-height:1.3;font-weight:400;">${copy.greeting} ${prenom},</p>
+      <p style="font-family:Georgia,'Times New Roman',serif;font-size:19px;color:#633B4A;margin:0 0 16px 0;line-height:1.35;font-weight:500;">${r.title}</p>
+      <p style="font-size:15px;color:#633B4A;line-height:1.9;margin:0 0 20px 0;">${r.body}</p>
+      <p style="font-size:15px;color:#633B4A;line-height:1.9;margin:0;">${copy.closing}</p>
       ${signature}
     </td>
   </tr>
   <tr>
     <td style="padding:24px 0 0 0;text-align:center;">
-      <p style="font-size:11px;color:#B8B1AA;margin:0;line-height:1.6;font-family:Georgia,'Times New Roman',serif;">EXEC'<span style="color:#C75F62;">IA</span> &mdash; ${copy.rights}</p>
+      <p style="font-size:11px;color:#D9C9C3;margin:0;line-height:1.6;font-family:Georgia,'Times New Roman',serif;">EXEC'<span style="color:#C75F62;">IA</span> &mdash; ${copy.rights}</p>
     </td>
   </tr>
 </table>
