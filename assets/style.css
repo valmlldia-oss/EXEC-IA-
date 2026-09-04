@@ -2504,11 +2504,12 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   flex: 0 0 60%;
   display: flex; flex-direction: column; align-items: flex-start;
 }
-/* Titre = strictement le .hero-sub de l'Accueil */
+/* Titre = matrice typographique ve-title (Cormorant, 500) — manifeste niveau 1 */
 .expertise-hero-title {
-  font-family: var(--sans);
+  font-family: var(--serif);
   font-size: clamp(1.8rem, 3.2vw, 2.6rem);
-  font-weight: 400;
+  font-weight: 500;
+  letter-spacing: -.01em;
   line-height: 1.3;
   color: #633B4A;
   margin: 0;
@@ -2516,7 +2517,8 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   border-left: 3px solid var(--rose);
   padding-left: 22px;
 }
-.expertise-hero-title .ehg-rose { color: var(--rose); }
+/* Chute éditoriale : prune italique, pas de terracotta (un seul effet par titre) */
+.expertise-hero-title .ehg-rose { font-style: italic; color: #633B4A; }
 /* Sous-titre = strictement le .hero-sub2 de l'Accueil */
 .expertise-hero-lead {
   font-family: var(--sans);
@@ -2529,6 +2531,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   padding-left: 25px;
 }
 .expertise-hero-lead .ehg-rose { color: var(--rose); }
+.expertise-hero-lead strong { font-weight: 600; }
 /* CTA secondaire : point d'ancrage bas-gauche, face au poids de l'escalier.
    Bouton fantôme terracotta — présent sans concurrencer le CTA principal. */
 .expertise-hero-cta {
@@ -2587,13 +2590,29 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   align-items: center;
 }
 .expertise-strip > .wrap { width: 100%; }
-/* Les 3 mots occupent toute la largeur du bandeau, points ronds entre eux */
+/* Piste de défilement : deux copies de la ligne bout à bout, translatées de -50% en boucle */
+.es-track {
+  display: flex;
+  width: max-content;
+  overflow: hidden;
+  animation: es-scroll 32s linear infinite;
+}
+.es-track:hover { animation-play-state: paused; }
+@keyframes es-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .es-track { animation: none; }
+}
+/* Les 3 mots, répétés en continu, points ronds entre eux */
 .es-line {
   margin: 0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  flex: 0 0 auto;
   gap: clamp(16px, 3vw, 48px);
+  padding: 0 clamp(16px, 3vw, 48px);
 }
 .es-bar {
   flex: 0 0 auto;
@@ -2675,15 +2694,17 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 }
 .mon-approche-section--manifeste .maf-lead {
   border-left: none; padding-left: 0;
+  font-family: var(--serif);
   font-size: clamp(1.02rem, 1.45vw, 1.25rem);
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.5;
   color: rgba(99, 59, 74, .6);
 }
 .mon-approche-section--manifeste .maf-body {
-  font-family: var(--sans);
+  font-family: var(--serif);
   font-size: clamp(1.55rem, 2.7vw, 2.25rem);
-  font-weight: 400;
+  font-weight: 500;
+  letter-spacing: -.01em;
   line-height: 1.25;
   color: #633B4A;
 }
@@ -3130,10 +3151,11 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   50%      { opacity:.4; transform:scale(.75); }
 }
 .agents-title {
-  font-family: var(--sans); /* Inter — identique au H1 Accueil (.hero-sub) */
+  font-family: var(--serif); /* Cormorant — matrice ve-title, niveau 3 (titre d'expertise) */
   /* Même taille que le titre du hero (hero-sub) */
   font-size: clamp(1.8rem, 3.2vw, 2.6rem);
-  font-weight: 400; /* léger comme le H1 Accueil (pas le gras h2 par défaut) */
+  font-weight: 500;
+  letter-spacing: -.01em;
   color: var(--deep);
   margin-bottom: .8rem;
   line-height: 1.1;
@@ -3142,6 +3164,8 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   border-left: 4px solid #C75F62;
   padding-left: 20px;
 }
+/* Ces 2 titres restent 100% prune (pas de terracotta) — un seul niveau, une seule couleur */
+.agents-title .agents-rose { color: #633B4A; }
 .agents-rose { color: var(--rose); }
 .agents-plum { color: #633B4A; }
 @media (max-width: 640px) {
