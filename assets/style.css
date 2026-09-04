@@ -462,7 +462,9 @@ a { text-decoration: none; color: inherit; }
 }
 .hero-sub {
   font-family: var(--serif);
-  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  /* Harmonisé sur la taille de .ve-title ("Le vrai enjeu...") — le H1 doit
+     être au moins aussi imposant que les titres de section qui suivent. */
+  font-size: clamp(2.35rem, 3.95vw, 3.2rem);
   font-weight: 500;
   letter-spacing: -.01em;
   color: #633B4A;
@@ -1132,9 +1134,9 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
 }
 /* Hero À propos : le pré-titre était collé à la nav. 28px, comme sur l'Accueil. */
 #about > .wrap { padding-top: 28px; }
-/* Filet prune foncé d'ouverture de la section Parcours */
+/* Ouverture de la section Parcours — plus de filet prune, la rupture se fait par le fond */
 .parcours-band {
-  background: var(--deep);
+  background: transparent;
   height: 8px;
   width: 100%;
   flex: 0 0 auto;
@@ -2695,13 +2697,13 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
    .questions-band / .conviction-band : collé en haut, air réduit avant
    l'eyebrow (moins de vide qu'avec le seul padding-top nav-h précédent). */
 .expertise-band {
-  background: var(--deep);
+  background: transparent;
   height: 8px; width: 100%; flex: 0 0 auto;
   margin-bottom: 40px;
 }
-/* Entrefilet Expertise : bandeau bordeaux très fin (transition élégante,
-   pas un bloc dominant comme le maf-band de l'Accueil). */
+/* Entrefilet Expertise : plus de filet visible, juste l'espacement */
 .mon-approche-section .maf-band--hairline {
+  background: transparent;
   height: 8px;
   margin-top: clamp(18px, 2.6vh, 28px);
 }
@@ -2745,7 +2747,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 /* Filet bordeaux d'ouverture, avant "Une conviction" — 8px, comme celui
    avant "Exemples d'initiatives IA". */
 .conviction-band {
-  background: var(--deep);
+  background: transparent;
   height: 8px;
   width: 100%;
   flex: 0 0 auto;
@@ -2900,7 +2902,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   position: absolute; top: 0; left: 50%;
   transform: translateX(-50%);
   width: 100vw; height: 8px;
-  background: var(--deep);
+  background: transparent;
 }
 /* Bloc "Avant l'IA, la décision" : le titre est le point focal.
    Tension stratégique — cabinet de direction, pas agence IA. */
@@ -2987,7 +2989,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
    plus aucune coupe visible dans l'image pendant le scroll. */
 .contact-slide-band {
   position: absolute; top: 0; left: 0; z-index: 3;
-  background: var(--deep);
+  background: transparent;
   height: 8px; width: 100%;
 }
 .expertise-contact-inner { margin-top: 4px; }
@@ -3025,7 +3027,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 /* Resserré à ~0,5cm avant le footer, cohérent avec .expertise-contact. */
 .roi-section { background: var(--ivory); padding-bottom: 0.5cm; border-top: 1px solid rgba(93,47,55,.1); margin-top: 0; }
 /* Filet prune foncé d'ouverture du calculateur */
-.roi-band { background: var(--deep); height: 8px; width: 100%; flex: 0 0 auto; margin-bottom: 28px; }
+.roi-band { background: transparent; height: 8px; width: 100%; flex: 0 0 auto; margin-bottom: 28px; }
 .roi-intro { font-family: var(--sans); font-size: clamp(1rem, 2.46vw, 1.94rem); font-weight: 400; color: var(--text); max-width: 900px; margin: 6px auto 14px; line-height: 1.55; text-align: center; white-space: normal; }
 .roi-card {
   background: var(--white); border: 2px solid rgba(99,59,74,.12);
@@ -4641,12 +4643,16 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   display: flex; flex-direction: column; gap: 18px;
 }
 .diag-list li, .res-list li {
-  position: relative; padding-left: 22px;
+  position: relative; padding-left: 28px;
 }
 .diag-list li::before, .res-list li::before {
-  content: ''; position: absolute; left: 0; top: .5em;
-  width: 6px; height: 6px; border-radius: 50%; background: var(--rose);
+  position: absolute; left: 0; top: 0;
+  font-family: var(--sans); font-size: 1.05rem; font-weight: 400;
+  line-height: 1.35; color: var(--rose);
 }
+/* Gauche = ce qui bloque (croix fine) · Droite = ce qui est obtenu (coche fine) */
+.diag-list li::before { content: '\00D7'; }
+.res-list li::before { content: '\2713'; }
 .li-label {
   display: block; font-family: var(--sans);
   font-size: clamp(1.07rem, 1.37vw, 1.26rem); font-weight: 600;
@@ -4671,13 +4677,10 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 /* Paragraphes de la trajectoire : +7%, pleine largeur, sur une ligne */
 .tl-intro--wide {
   max-width: none;
-  white-space: nowrap;
+  white-space: normal;
   font-size: clamp(1.36rem, 1.88vw, 1.6rem);
 }
-.tl-intro--fil { max-width: none; white-space: nowrap; }
-@media (max-width: 1180px) {
-  .tl-intro--wide, .tl-intro--fil { white-space: normal; }
-}
+.tl-intro--fil { max-width: none; white-space: normal; }
 
 /* ─── LEAD MAGNET ────────────────────────────────────────── */
 .lm-section {
@@ -4923,7 +4926,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 .questions-section { padding-bottom: clamp(8px,1vw,14px); background: var(--ivory); }
 /* Filet prune foncé d'ouverture de la FAQ */
 .questions-band {
-  background: var(--deep);
+  background: transparent;
   height: 8px; width: 100%; flex: 0 0 auto;
   /* plus d'air entre le filet et l'eyebrow « FAQ pour dirigeants » */
   margin-bottom: 60px;
@@ -5002,7 +5005,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 .faq-end-rule {
   width: 100%;
   height: 8px;
-  background: var(--deep);
+  background: transparent;
   margin: clamp(28px, 4vh, 52px) 0 0;
 }
 .questions-coda-sub .qc-soft { color: var(--rose); opacity: .68; font-style: normal; }
