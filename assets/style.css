@@ -1766,7 +1766,8 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   font-size: 2.3232rem; color: var(--ivory);
   display: inline-block; transform-origin: 50% 52%;
   backface-visibility: hidden; /* jamais le glyphe affiché à l'envers/en miroir en cours de rotation */
-  animation: ss-globe-spin 22s linear infinite;
+  /* Même dynamisme que les compteurs (4.2s) plutôt qu'une rotation paresseuse */
+  animation: ss-globe-spin 4s linear infinite;
   /* Démarre en même temps que les compteurs 20/18, pas dès le chargement de la page */
   animation-play-state: paused;
 }
@@ -1777,10 +1778,11 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   from { transform: perspective(240px) rotateY(0deg); }
   to   { transform: perspective(240px) rotateY(360deg); }
 }
-.ss-num--ia.ss-ia-pulse { animation: ss-ia-glow 1.9s ease-in-out 2; }
+/* Halo plus marqué, respiration continue plutôt que 2 pulses puis silence */
+.ss-num--ia.ss-ia-pulse { animation: ss-ia-glow 2.6s ease-in-out infinite; }
 @keyframes ss-ia-glow {
   0%   { text-shadow: 0 0 0 rgba(199,95,98,0); transform: scale(1); }
-  50%  { text-shadow: 0 0 28px rgba(199,95,98,.95), 0 0 46px rgba(199,95,98,.5); transform: scale(1.07); }
+  50%  { text-shadow: 0 0 34px rgba(199,95,98,1), 0 0 60px rgba(199,95,98,.65), 0 0 4px rgba(199,95,98,.9); transform: scale(1.12); }
   100% { text-shadow: 0 0 0 rgba(199,95,98,0); transform: scale(1); }
 }
 @media (prefers-reduced-motion: reduce) {
