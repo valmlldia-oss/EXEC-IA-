@@ -1679,30 +1679,44 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
 .site-footer::after {
   content: "";
   position: absolute;
-  top: 0; right: 0; bottom: 0;
-  /* Centre-droit : commence avant LANGUES (~72% de la largeur du footer),
-     se prolonge jusqu'au bord droit. Empreinte architecturale, pas une
-     photo posée derrière les colonnes. */
-  width: 55%;
-  background: url('ESCALIER-5-clean.webp') no-repeat center right / cover;
+  /* Hauteur/largeur FIXES (clamp), ancrées en bas — jamais top:0/bottom:0.
+     Le footer peut s'étirer verticalement selon le nombre de lignes des
+     colonnes (langue du site, largeur, casse des liens) : si l'image
+     suivait cette hauteur variable, elle se retrouverait tantôt écrasée,
+     tantôt démesurément étirée (bande devenue grande photo dominante).
+     Un gabarit fixe, proche du ratio réel de la photo (portrait), garde
+     un cadrage constant et montre la même portion de l'escalier partout. */
+  bottom: 0; right: 0;
+  width: clamp(300px, 27vw, 440px);
+  height: clamp(340px, 31vw, 500px);
+  /* Cadrage centré sur la volute : montre la courbe, les marches et la
+     profondeur, sans zoomer sur un seul fragment. */
+  background: url('ESCALIER-5-clean.webp') no-repeat center center / cover;
   /* L'image est très claire (escalier blanc) : en simple opacité sur un fond
      déjà clair, elle devient invisible quel que soit le %. mix-blend-mode:
      multiply fait ressortir les ombres/courbes de l'escalier comme une
      texture qui assombrit légèrement le fond, au lieu d'un voile blanchâtre
      imperceptible. */
   mix-blend-mode: multiply;
-  opacity: .3;
-  filter: grayscale(0.3) contrast(1.05);
+  opacity: .5;
+  filter: grayscale(0.25) contrast(1.1);
   pointer-events: none;
   z-index: 0;
-  /* Fondu très progressif : quasi invisible sous LANGUES/COORDONNÉES,
-     ne devient perceptible que dans l'espace vide à l'extrême droite */
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, transparent 28%, rgba(0,0,0,.3) 62%, rgba(0,0,0,.65) 85%, #000 100%);
-  mask-image: linear-gradient(to right, transparent 0%, transparent 28%, rgba(0,0,0,.3) 62%, rgba(0,0,0,.65) 85%, #000 100%);
+  /* Fondu progressif : inexistant côté gauche du bloc, perceptible dès le
+     premier tiers (avant LANGUES), pleinement présent au centre-droit
+     (LANGUES → COORDONNÉES → bord droit) — sans frontière visible. */
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,.25) 22%, rgba(0,0,0,.7) 45%, rgba(0,0,0,.95) 68%, #000 100%);
+  mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,.25) 22%, rgba(0,0,0,.7) 45%, rgba(0,0,0,.95) 68%, #000 100%);
 }
 .site-footer > * { position: relative; z-index: 1; }
 @media (max-width: 900px) {
-  .site-footer::after { width: 34%; opacity: .16; }
+  /* Tablette : gabarit réduit, toujours ancré en bas-droite — n'écrase
+     aucune colonne quelle que soit la hauteur du footer empilé. */
+  .site-footer::after {
+    width: clamp(220px, 32vw, 320px);
+    height: clamp(260px, 36vw, 360px);
+    opacity: .22;
+  }
 }
 @media (max-width: 640px) {
   .site-footer::after { display: none; }
