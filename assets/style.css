@@ -793,7 +793,7 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
   padding-left: 22px;
   /* Rapprochée de "Ceux qui m'ont accompagnée..." pour rattacher visuellement
      le titre à sa phrase d'introduction (était 32px, trop de vide) */
-  margin-bottom: 12px;
+  margin-bottom: 4px;
 }
 /* À propos uniquement — matrice ve-title (Cormorant, 500) */
 .parcours-header-text .section-title {
@@ -1293,7 +1293,7 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
 .testi-section .section-title { color: var(--plum); }
 .testi-intro em { font-style: italic; }
 .testi-intro {
-  margin-top: 4px;
+  margin-top: 0;
   font-size: clamp(1rem, 1.4vw, 1.4rem); line-height: 1.7;
   color: #633B4A;
   font-family: var(--sans);
@@ -1639,6 +1639,22 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
 .footer-linkedin-logo { height: 18px; width: auto; display: inline-block; }
 
 .footer-rule { border: none; border-top: 1px solid rgba(99,59,74,.14); margin: 0; }
+/* Fil conducteur — Accueil uniquement, injecté par script.js */
+.fil-conducteur {
+  position: absolute; left: 18px; width: 1px;
+  background: rgba(99,59,74,.1);
+  z-index: 2; pointer-events: none;
+  opacity: 0; transition: opacity .6s var(--ease);
+}
+.fil-conducteur--visible { opacity: 1; }
+.fil-conducteur-fill {
+  width: 100%; height: 0%;
+  background: var(--rose);
+  transition: height .1s linear;
+}
+@media (max-width: 900px) {
+  .fil-conducteur { display: none; }
+}
 /* Habillage discret : fragment de l'escalier (Expertise), filigrane architectural
    très pâle côté droit — n'est jamais un cadre photo, juste une présence graphique
    qui se fond dans l'ivoire rosé. Masque en dégradé pour disparaître sous les colonnes
@@ -2695,18 +2711,20 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   display: flex;
   align-items: center;
   overflow: hidden;
-  /* fondu aux bords : les mots coupés par le défilement continu se
-     dissolvent au lieu d'être tranchés net */
-  -webkit-mask-image: linear-gradient(to right, transparent 0, transparent 90px, #000 320px, #000 calc(100% - 320px), transparent calc(100% - 90px), transparent 100%);
-  mask-image: linear-gradient(to right, transparent 0, transparent 90px, #000 320px, #000 calc(100% - 320px), transparent calc(100% - 90px), transparent 100%);
+  /* Fond plein et opaque en permanence — ne doit JAMAIS laisser transparaître
+     l'escalier du hero derrière lui. Le fondu (ci-dessous) ne s'applique
+     qu'au texte qui défile, pas à ce bandeau. */
 }
 .expertise-strip > .wrap { width: 100%; }
-/* Piste de défilement : deux copies de la ligne bout à bout, translatées de -50% en boucle */
+/* Piste de défilement : deux copies de la ligne bout à bout, translatées de -50% en boucle.
+   Le fondu aux bords est ICI (sur le texte), jamais sur .expertise-strip (le fond). */
 .es-track {
   display: flex;
   width: max-content;
   overflow: hidden;
   animation: es-scroll 32s linear infinite;
+  -webkit-mask-image: linear-gradient(to right, transparent 0, transparent 60px, #000 180px, #000 calc(100% - 180px), transparent calc(100% - 60px), transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0, transparent 60px, #000 180px, #000 calc(100% - 180px), transparent calc(100% - 60px), transparent 100%);
 }
 .es-track:hover { animation-play-state: paused; }
 @keyframes es-scroll {

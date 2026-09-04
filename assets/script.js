@@ -408,4 +408,53 @@ window.addEventListener('load', () => {
   if (teamImg.complete) { removeCheckerboard(teamImg); }
   else { teamImg.addEventListener('load', () => removeCheckerboard(teamImg)); }
 });
+
+/* ── Fil conducteur — Accueil uniquement : trait très fin, progresse avec le
+   scroll de "Le point de départ" à "Ce que vous obtenez". Injecté en JS,
+   ne touche à aucune structure existante ; se désactive proprement si les
+   sections cibles n'existent pas (toute page hors Accueil) ou en cas de
+   prefers-reduced-motion. */
+(function () {
+  const start = document.querySelector('.constat-section');
+  const end = document.querySelector('.ce-que-section');
+  if (!start || !end) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const rail = document.createElement('div');
+  rail.className = 'fil-conducteur';
+  rail.setAttribute('aria-hidden', 'true');
+  const fill = document.createElement('div');
+  fill.className = 'fil-conducteur-fill';
+  rail.appendChild(fill);
+  document.body.appendChild(rail);
+
+  let railTop = 0, railHeight = 0;
+  function measure() {
+    const s = start.getBoundingClientRect();
+    const e = end.getBoundingClientRect();
+    const docTop = window.scrollY;
+    railTop = s.top + docTop;
+    railHeight = (e.bottom + docTop) - railTop;
+    rail.style.top = railTop + 'px';
+    rail.style.height = railHeight + 'px';
+  }
+
+  let ticking = false;
+  function update() {
+    ticking = false;
+    const viewCenter = window.scrollY + window.innerHeight * 0.5;
+    const p = railHeight > 0 ? (viewCenter - railTop) / railHeight : 0;
+    const clamped = Math.max(0, Math.min(1, p));
+    fill.style.height = (clamped * 100) + '%';
+    rail.classList.toggle('fil-conducteur--visible', clamped > 0 && clamped < 1);
+  }
+  function onScroll() {
+    if (!ticking) { ticking = true; requestAnimationFrame(update); }
+  }
+
+  measure();
+  update();
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', () => { measure(); update(); });
+})();
 })();
