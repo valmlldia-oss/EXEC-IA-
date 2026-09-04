@@ -758,11 +758,11 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
   padding-left: 24px;
 }
 .section-title-light { color: var(--white); }
-/* Uniformisation des grands titres au format .hero-sub de l'Accueil */
+/* Témoignages — matrice ve-title (Cormorant, 500) */
 .testi-section .section-title {
-  font-family: var(--sans);
+  font-family: var(--serif);
   font-size: clamp(1.8rem, 3.2vw, 2.6rem);
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.3;
   letter-spacing: -.01em;
   color: #633B4A;
@@ -1332,9 +1332,9 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
   text-align: center;
   line-height: 1.4;
 }
-/* Tags en terracotta (cartes claires) */
+/* Pastille : fond légèrement teinté, texte prune — un seul mot-clé passe en terracotta (span inline) */
 .testi-tag--rose {
-  color: var(--rose);
+  color: #633B4A;
   background: rgba(199,95,98,.07);
   border-color: rgba(199,95,98,.35);
 }
@@ -1404,10 +1404,10 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
   color: #FAF6F2;
 }
 .testi-author strong { display: block; font-size: 1.2rem; color: var(--plum); font-weight: 300; }
-.testi-author .testi-role { font-size: 1rem; font-weight: 700; color: var(--plum); }
+.testi-author .testi-role { font-size: 1rem; font-weight: 400; color: rgba(99,59,74,.78); }
 .testi-author span  { font-size: 1rem; color: var(--plum); display: block; font-weight: 300; }
-.testi-name { display: block; font-size: 1.2rem; color: var(--plum); font-weight: 300; }
-.testi-role { display: block; font-size: 1rem; color: var(--plum); font-weight: 700; }
+.testi-name { display: block; font-size: 1.2rem; color: var(--plum); font-weight: 600; }
+.testi-role { display: block; font-size: 1rem; color: rgba(99,59,74,.78); font-weight: 400; }
 /* Fonction, sous le nom de l'organisation — plus de tirets à rallonge.
    Scopé sous .testi-author pour battre `.testi-author span { font-size: 1rem }`. */
 .testi-author .testi-title {
@@ -1459,12 +1459,12 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
   color: var(--ivory);
   /* même taille que Holger / Sandrine (cartes claires plafonnées à 1rem) */
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 600;
 }
 .testi--dark strong.testi-role {
-  color: rgba(255,255,255,.85);
+  color: rgba(255,255,255,.65);
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 400;
 }
 .testi--dark .testi-translated {
   color: rgba(255,255,255,.65);
