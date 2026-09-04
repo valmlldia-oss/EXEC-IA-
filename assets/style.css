@@ -11,6 +11,7 @@
   --rose:      #C75F62;
   --ivory:     #F6F1EB;
   --white:     #FCFCFA;
+  --pale-rose: #D9C9C3;
   --plum-muted: #8C6B76;
   --text:      #633B4A;
   --serif:     'Cormorant Garamond', Georgia, serif;
@@ -191,7 +192,7 @@ a { text-decoration: none; color: inherit; }
 }
 .nav-logo-x { height: 52px; width: auto; mix-blend-mode: multiply; }
 .nav-logo-rond { height: 48px; width: 48px; object-fit: contain; border-radius: 50%; flex-shrink: 0; }
-.nav-logo-full { height: 44px; width: auto; }
+.nav-logo-full { height: 49px; width: auto; }
 .nav-logo-wordmark { display: flex; flex-direction: column; align-items: flex-start; gap: 0; padding: 2px 0; }
 .nav-wm-name { font-family: var(--serif); font-size: 1.42rem; font-weight: 600; letter-spacing: .05em; color: var(--plum); line-height: 1; }
 .nav-wm-apo { color: var(--plum); opacity: .7; }
@@ -462,9 +463,10 @@ a { text-decoration: none; color: inherit; }
 }
 .hero-sub {
   font-family: var(--serif);
-  /* Harmonisé sur la taille de .ve-title ("Le vrai enjeu...") — le H1 doit
-     être au moins aussi imposant que les titres de section qui suivent. */
-  font-size: clamp(2.35rem, 3.95vw, 3.2rem);
+  /* Taille "standard" (identique à .constat-title / ve-title) sur la 1re ligne.
+     Seule "Direction Générale." (span ci-dessous) reçoit une taille
+     exceptionnelle : c'est le H1, il doit rester le point focal. */
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
   font-weight: 500;
   letter-spacing: -.01em;
   color: #633B4A;
@@ -475,6 +477,8 @@ a { text-decoration: none; color: inherit; }
   padding-left: 22px;
   animation: slideup .9s var(--ease) .28s both;
 }
+/* Point focal du Hero — taille exceptionnelle réservée à cette seule ligne */
+.hero-sub-focal { font-size: clamp(2.5rem, 4.4vw, 3.6rem); display: inline-block; }
 .hero-sub2 {
   font-family: var(--sans);
   font-size: clamp(1.25rem, 1.9vw, 1.55rem);
@@ -523,6 +527,19 @@ a { text-decoration: none; color: inherit; }
 }
 .hero-cta-link strong { font-weight: 700; }
 .hero-cta-link:hover { color: var(--rose); border-color: var(--rose); }
+.hero-cta-link .portrait-link-arrow { display: inline-block; }
+.hero-cta-link:hover .portrait-link-arrow { transform: translateX(4px); }
+/* Discret rappel visuel périodique — incite au téléchargement sans être criard */
+.hero-cta-link .portrait-link-arrow { animation: hero-cta-nudge 5s ease-in-out infinite; }
+.hero-cta-link:hover .portrait-link-arrow { animation: none; }
+@keyframes hero-cta-nudge {
+  0%, 82%, 100% { transform: translateX(0); }
+  88% { transform: translateX(3px); }
+  94% { transform: translateX(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-cta-link .portrait-link-arrow { animation: none; }
+}
 .hero-lm-block {
   margin-top: 20px;
   display: flex; flex-direction: column; align-items: flex-start; gap: 6px;
@@ -843,7 +860,11 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
   font-family: var(--sans); font-size: 1rem; font-weight: 500;
   color: var(--rose); letter-spacing: .02em;
   margin-top: 2px;
+  white-space: nowrap;
   transition: opacity .2s;
+}
+@media (max-width: 480px) {
+  .portrait-link { white-space: normal; }
 }
 .portrait-link:hover { opacity: .75; }
 .portrait-link-arrow { transition: transform .2s var(--ease); }
@@ -943,6 +964,9 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
 #parcours.snap-page {
   justify-content: flex-start;
   padding-top: 0;
+  /* Rythme de fond (remplace l'ancien filet prune épais) : se distingue
+     de #about, identique en teinte sans lui */
+  background: linear-gradient(180deg, rgba(217,201,195,.2), rgba(217,201,195,.07) 40%, var(--ivory) 80%);
 }
 .about-label--piliers { font-size: .82rem; font-weight: 700; letter-spacing: .18em; padding: 6px 18px; margin-bottom: 4px; }
 .about-body .about-label:first-child { margin-top: 0; }
@@ -1520,6 +1544,8 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
 /* ─── SITE FOOTER — multi-colonne (HEC-style) ───────────────── */
 .site-footer {
   background: var(--white);
+  /* Démarcation douce avec le contenu au-dessus (fond clair sur fond clair) */
+  border-top: 1px solid rgba(99,59,74,.12);
   padding: 0;
   text-align: left;
   /* Grille commune : les colonnes du haut et la ligne du bas partagent
@@ -1545,7 +1571,7 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   padding-bottom: 56px;
 }
 .footer-brand { display: flex; flex-direction: column; align-items: flex-start; gap: 18px; }
-.footer-brand .footer-logo-main { height: 60px; width: auto; }
+.footer-brand .footer-logo-main { height: 67px; width: auto; }
 .footer-brand .footer-tag { font-size: clamp(1.46rem, 1.83vw, 1.72rem); margin: 0; text-align: left; white-space: nowrap; line-height: 1.35; }
 /* Ligne 1 : plus grande — Ligne 2 : plus petite, blanc cassé */
 .footer-tag-lead { font-size: clamp(2.09rem, 2.65vw, 2.46rem); }
@@ -1680,12 +1706,17 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   display: inline-block; transform-origin: 50% 52%;
   animation: ss-globe-spin 22s linear infinite;
 }
-@keyframes ss-globe-spin { to { transform: rotate(360deg); } }
-.ss-num--ia.ss-ia-pulse { animation: ss-ia-glow 1.7s ease-out 1; }
+/* Rotation sur l'axe vertical (comme une vraie Terre qui tourne),
+   jamais un flip à plat qui mettrait les continents la tête en bas */
+@keyframes ss-globe-spin {
+  from { transform: perspective(240px) rotateY(0deg); }
+  to   { transform: perspective(240px) rotateY(360deg); }
+}
+.ss-num--ia.ss-ia-pulse { animation: ss-ia-glow 1.9s ease-in-out 2; }
 @keyframes ss-ia-glow {
-  0%   { text-shadow: 0 0 0 rgba(199,95,98,0); }
-  45%  { text-shadow: 0 0 16px rgba(199,95,98,.55); }
-  100% { text-shadow: 0 0 0 rgba(199,95,98,0); }
+  0%   { text-shadow: 0 0 0 rgba(199,95,98,0); transform: scale(1); }
+  50%  { text-shadow: 0 0 28px rgba(199,95,98,.95), 0 0 46px rgba(199,95,98,.5); transform: scale(1.07); }
+  100% { text-shadow: 0 0 0 rgba(199,95,98,0); transform: scale(1); }
 }
 @media (prefers-reduced-motion: reduce) {
   .ss-num--globe { animation: none; }
@@ -3025,7 +3056,8 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 .ia-perf-stat-label { font-family: var(--serif); font-size: clamp(1.2rem, 1.8vw, 1.65rem); font-weight: 400; color: var(--plum); line-height: 1.4; white-space: normal; }
 
 /* Resserré à ~0,5cm avant le footer, cohérent avec .expertise-contact. */
-.roi-section { background: var(--ivory); padding-bottom: 0.5cm; border-top: 1px solid rgba(93,47,55,.1); margin-top: 0; }
+/* Rythme de fond (remplace l'ancien filet prune épais) */
+.roi-section { background: linear-gradient(180deg, rgba(217,201,195,.22), rgba(217,201,195,.08) 45%, var(--ivory) 85%); padding-bottom: 0.5cm; border-top: 1px solid rgba(93,47,55,.1); margin-top: 0; }
 /* Filet prune foncé d'ouverture du calculateur */
 .roi-band { background: transparent; height: 8px; width: 100%; flex: 0 0 auto; margin-bottom: 28px; }
 .roi-intro { font-family: var(--sans); font-size: clamp(1rem, 2.46vw, 1.94rem); font-weight: 400; color: var(--text); max-width: 900px; margin: 6px auto 14px; line-height: 1.55; text-align: center; white-space: normal; }
@@ -4513,7 +4545,8 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 
 /* ─── MON APPROCHE — ENTREFILET (calque « Ma différence ») ─ */
 .mon-approche-section {
-  background: var(--ivory);
+  /* Rythme de fond (remplace l'ancien filet prune épais) : ivoire → blanc */
+  background: var(--white);
   border-top: 1px solid rgba(99,59,74,.1);
   height: auto; min-height: 0;
   justify-content: flex-start;
@@ -4923,7 +4956,8 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 }
 
 /* ─── QUESTIONS DE DIRIGEANT ────────────────────────────────── */
-.questions-section { padding-bottom: clamp(8px,1vw,14px); background: var(--ivory); }
+/* Rythme de fond (remplace l'ancien filet prune épais) */
+.questions-section { padding-bottom: clamp(8px,1vw,14px); background: linear-gradient(180deg, rgba(217,201,195,.2), rgba(217,201,195,.07) 40%, var(--ivory) 80%); }
 /* Filet prune foncé d'ouverture de la FAQ */
 .questions-band {
   background: transparent;
@@ -5242,7 +5276,8 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
    LE POINT DE DÉPART — bloc miroir du problème dirigeant
    (vision · priorisation · clarté), placé avant l'accompagnement
    ═══════════════════════════════════════════════════════════════ */
-.constat-section { background: var(--ivory); padding: clamp(14px, 2vw, 26px) 0 clamp(34px, 4.5vw, 56px); }
+/* Rythme de fond : blanc → rose minéral pâle très diffus (au lieu du filet prune) */
+.constat-section { background: linear-gradient(180deg, rgba(217,201,195,.22), rgba(217,201,195,.1) 55%, var(--ivory) 100%); padding: clamp(14px, 2vw, 26px) 0 clamp(34px, 4.5vw, 56px); }
 /* Gauche-aligné exactement comme le hero (pas de centrage) → même marge que .hero-eyebrow */
 .constat-inner { max-width: 1060px; text-align: left; margin-left: 0; margin-right: auto; }
 .constat-eyebrow { display: block; margin-bottom: 14px; }
