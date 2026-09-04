@@ -125,6 +125,7 @@ strong, b { font-weight: 600; }
 .delay-2 { transition-delay: .2s; }
 .delay-3 { transition-delay: .3s; }
 .delay-4 { transition-delay: .4s; }
+.delay-5 { transition-delay: .5s; }
 
 /* ═══ POLISH PREMIUM — micro-interactions (transform/opacity uniquement) ═══
    N'altère aucune couleur / texte / disposition. Uniquement la sensation. */
@@ -790,6 +791,9 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
   color: #633B4A;
   border-left: 3px solid var(--rose);
   padding-left: 22px;
+  /* Rapprochée de "Ceux qui m'ont accompagnée..." pour rattacher visuellement
+     le titre à sa phrase d'introduction (était 32px, trop de vide) */
+  margin-bottom: 12px;
 }
 /* À propos uniquement — matrice ve-title (Cormorant, 500) */
 .parcours-header-text .section-title {
@@ -1287,8 +1291,9 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
 }
 .testi-section .eyebrow { color: var(--rose); }
 .testi-section .section-title { color: var(--plum); }
+.testi-intro em { font-style: italic; }
 .testi-intro {
-  margin-top: 14px;
+  margin-top: 4px;
   font-size: clamp(1rem, 1.4vw, 1.4rem); line-height: 1.7;
   color: #633B4A;
   font-family: var(--sans);
