@@ -1517,7 +1517,7 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
 
 /* ─── SITE FOOTER — multi-colonne (HEC-style) ───────────────── */
 .site-footer {
-  background: #3d2030;
+  background: var(--white);
   padding: 0;
   text-align: left;
   /* Grille commune : les colonnes du haut et la ligne du bas partagent
@@ -1547,8 +1547,8 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
 .footer-brand .footer-tag { font-size: clamp(1.46rem, 1.83vw, 1.72rem); margin: 0; text-align: left; white-space: nowrap; line-height: 1.35; }
 /* Ligne 1 : plus grande — Ligne 2 : plus petite, blanc cassé */
 .footer-tag-lead { font-size: clamp(2.09rem, 2.65vw, 2.46rem); }
-.footer-tag-rest { font-size: clamp(1.59rem, 1.99vw, 1.87rem); color: rgba(250,246,242,1); }
-.footer-brand .footer-mention-ia { font-size: .95rem; margin: 0; text-align: left; color: #B7A7AD; white-space: nowrap; }
+.footer-tag-rest { font-size: clamp(1.59rem, 1.99vw, 1.87rem); color: var(--plum); }
+.footer-brand .footer-mention-ia { font-size: .95rem; margin: 0; text-align: left; color: rgba(99,59,74,.6); white-space: nowrap; }
 @media (max-width: 1024px) {
   .footer-brand .footer-tag, .footer-brand .footer-mention-ia { white-space: normal; }
 }
@@ -1558,23 +1558,23 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
 .footer-col-title {
   font-family: var(--sans); font-size: .75rem; font-weight: 700;
   letter-spacing: .16em; text-transform: uppercase;
-  color: rgba(246,241,235,.45); margin-bottom: 6px;
+  color: rgba(99,59,74,.5); margin-bottom: 6px;
 }
 /* Hiérarchie de lisibilité : menu 95 % — coordonnées 90 % */
 .footer-col a, .footer-col .footer-loc {
   font-family: var(--sans); font-size: 1.02rem; font-weight: 400;
-  color: rgba(246,241,235,.95); text-decoration: none;
+  color: rgba(99,59,74,.92); text-decoration: none;
   transition: color .2s;
 }
 .footer-grid > .footer-col:nth-of-type(4) a,
 .footer-grid > .footer-col:nth-of-type(4) .footer-loc {
-  color: rgba(246,241,235,.90);
+  color: rgba(99,59,74,.88);
 }
 .footer-col a:hover { color: var(--rose); }
-.footer-col .footer-loc { color: rgba(246,241,235,.55); }
+.footer-col .footer-loc { color: rgba(99,59,74,.55); }
 /* Langues : boutons rectangulaires arrondis, comme EN/ES de la nav */
 .footer-col a.footer-lang-btn {
-  border: 1px solid rgba(246,241,235,.4);
+  border: 1px solid rgba(99,59,74,.3);
   border-radius: 4px;
   padding: 4px 11px;
   font-size: .85rem;
@@ -1584,7 +1584,7 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
 .footer-col a.footer-linkedin-btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 8px;
   text-align: center;
-  border: 1px solid rgba(246,241,235,.4);
+  border: 1px solid rgba(99,59,74,.3);
   border-radius: 2rem;
   padding: 6px 16px;
   margin-top: 4px;
@@ -1592,7 +1592,7 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
 .footer-col a.footer-linkedin-btn:hover { border-color: var(--rose); }
 .footer-linkedin-logo { height: 18px; width: auto; display: inline-block; }
 
-.footer-rule { border: none; border-top: 1px solid rgba(246,241,235,.14); margin: 0; }
+.footer-rule { border: none; border-top: 1px solid rgba(99,59,74,.14); margin: 0; }
 
 .studeria-certifs {
   display: flex; align-items: center; gap: 28px; flex-wrap: wrap;
@@ -1607,15 +1607,15 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   grid-template-columns: subgrid;
   align-items: center;
   padding-top: 28px; padding-bottom: 40px;
-  font-size: .88rem; color: rgba(246,241,235,.55);
+  font-size: .88rem; color: rgba(99,59,74,.55);
 }
 .footer-legal { margin: 0; grid-column: 1; }
 /* Mentions légales : bouton arrondi, sans soulignement — même police que le © */
 .footer-legal a {
   display: inline-block;
-  color: rgba(246,241,235,.86); text-decoration: none;
+  color: rgba(99,59,74,.8); text-decoration: none;
   font-size: .98rem;
-  border: 1px solid rgba(246,241,235,.35);
+  border: 1px solid rgba(99,59,74,.3);
   border-radius: 2rem;
   padding: 6px 16px;
   transition: color .2s, border-color .2s;
@@ -1623,9 +1623,9 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
 .footer-legal a:hover { color: var(--rose); border-color: var(--rose); }
 /* "Tous droits réservés" : même colonne que "Le site" → T aligné sous L,
    même police que le © */
-.footer-rights { margin: 0; grid-column: 2; font-size: .98rem; color: rgba(246,241,235,.86); }
+.footer-rights { margin: 0; grid-column: 2; font-size: .98rem; color: rgba(99,59,74,.8); }
 .footer-bottom .footer-copy { grid-column: 4; justify-self: start; }
-.site-footer .footer-copy { margin: 0; font-size: .98rem; }
+.site-footer .footer-copy { margin: 0; font-size: .98rem; color: rgba(99,59,74,.8); }
 
 @media (max-width: 900px) {
   .footer-grid { grid-template-columns: 1fr 1fr; row-gap: 40px; }
@@ -2603,6 +2603,11 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   min-height: 116px;
   display: flex;
   align-items: center;
+  overflow: hidden;
+  /* fondu aux bords : les mots coupés par le défilement continu se
+     dissolvent au lieu d'être tranchés net */
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 64px, #000 calc(100% - 64px), transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0, #000 64px, #000 calc(100% - 64px), transparent 100%);
 }
 .expertise-strip > .wrap { width: 100%; }
 /* Piste de défilement : deux copies de la ligne bout à bout, translatées de -50% en boucle */
