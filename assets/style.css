@@ -461,9 +461,10 @@ a { text-decoration: none; color: inherit; }
   color: var(--plum);
 }
 .hero-sub {
-  font-family: var(--sans);
+  font-family: var(--serif);
   font-size: clamp(1.8rem, 3.2vw, 2.6rem);
-  font-weight: 400;
+  font-weight: 500;
+  letter-spacing: -.01em;
   color: #633B4A;
   line-height: 1.3;
   margin-top: 22px;
@@ -758,8 +759,6 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
 }
 .section-title-light { color: var(--white); }
 /* Uniformisation des grands titres au format .hero-sub de l'Accueil */
-.section-title.pourquoi-title,
-.ce-que-section .section-title,
 .testi-section .section-title,
 .parcours-header-text .section-title {
   font-family: var(--sans);
@@ -770,6 +769,12 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
   color: #633B4A;
   border-left: 3px solid var(--rose);
   padding-left: 22px;
+}
+/* Accueil uniquement — retour à la matrice typographique ve-title (Cormorant, 500),
+   pas d'accent italique/terracotta sur ces deux titres sobres */
+.section-title.pourquoi-title,
+.ce-que-section .section-title {
+  font-weight: 500;
 }
 
 /* ─── POURQUOI + CE QUE — 2 COLONNES ───────────────────── */
@@ -1820,7 +1825,7 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
 }
 .offre-web-desc {
   font-size: 1rem; color: var(--text); line-height: 1.55;
-  max-width: 560px; margin: 0 auto 20px;
+  max-width: 900px; margin: 0 auto 20px;
 }
 .offre-web-tiers {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
@@ -4312,7 +4317,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   border-left: 3px solid var(--rose);
   padding-left: 22px;
 }
-.ve-title em { font-style: italic; color: var(--rose); font-weight: 500; }
+.ve-title em { font-style: italic; color: var(--plum); font-weight: 500; }
 
 /* ── Carte intérieure ── */
 .ve-card {
@@ -4502,6 +4507,12 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   color: #633B4A; margin: 0;
   border-left: 3px solid var(--rose);
   padding-left: 23px;
+}
+/* Variante Accueil uniquement — matrice typographique ve-title (Cormorant, 500) */
+.maf-lead--home {
+  font-family: var(--serif);
+  font-weight: 500;
+  letter-spacing: -.01em;
 }
 .maf-body {
   font-family: var(--sans);
@@ -5186,9 +5197,9 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 /* Gauche-aligné exactement comme le hero (pas de centrage) → même marge que .hero-eyebrow */
 .constat-inner { max-width: 1060px; text-align: left; margin-left: 0; margin-right: auto; }
 .constat-eyebrow { display: block; margin-bottom: 14px; }
-/* Titre aligné sur le H1 hero : Inter, poids 400, barre verticale terracotta */
+/* Titre aligné sur la matrice typographique (ve-title) : Cormorant, poids 500, barre verticale terracotta */
 .constat-title {
-  font-family: var(--sans); font-weight: 400; color: var(--plum);
+  font-family: var(--serif); font-weight: 500; letter-spacing: -.01em; color: var(--plum);
   font-size: clamp(1.8rem, 3.2vw, 2.6rem); line-height: 1.22;
   border-left: 3px solid var(--rose); padding-left: 22px;
   margin-bottom: 15px;
