@@ -2680,8 +2680,8 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   overflow: hidden;
   /* fondu aux bords : les mots coupés par le défilement continu se
      dissolvent au lieu d'être tranchés net */
-  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 110px, #000 calc(100% - 110px), transparent 100%);
-  mask-image: linear-gradient(to right, transparent 0, #000 110px, #000 calc(100% - 110px), transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 220px, #000 calc(100% - 220px), transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0, #000 220px, #000 calc(100% - 220px), transparent 100%);
 }
 .expertise-strip > .wrap { width: 100%; }
 /* Piste de défilement : deux copies de la ligne bout à bout, translatées de -50% en boucle */
