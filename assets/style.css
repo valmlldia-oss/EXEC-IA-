@@ -4733,8 +4733,12 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   height: clamp(80px, 10vh, 102px);
   margin-top: clamp(14px, 2vh, 22px);
 }
-/* Entrefilet prune FIN (comme les autres sections) */
-.maf-band--thin { height: 8px; margin-top: clamp(16px, 2.4vh, 26px); }
+/* Entrefilet prune FIN (comme les autres sections) — vrai filet, pas une bande pleine */
+.maf-band--thin {
+  height: 1px;
+  background: rgba(99,59,74,.15);
+  margin-top: clamp(16px, 2.4vh, 26px);
+}
 .mon-approche-inner {
   display: flex; align-items: stretch; gap: 64px;
 }
