@@ -1665,7 +1665,14 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   top: 0; right: 0; bottom: 0;
   width: 46%;
   background: url('ESCALIER-5-clean.webp') no-repeat center right / cover;
-  opacity: .11;
+  /* L'image est très claire (escalier blanc) : en simple opacité sur un fond
+     déjà clair, elle devient invisible quel que soit le %. mix-blend-mode:
+     multiply fait ressortir les ombres/courbes de l'escalier comme une
+     texture qui assombrit légèrement le fond, au lieu d'un voile blanchâtre
+     imperceptible. */
+  mix-blend-mode: multiply;
+  opacity: .32;
+  filter: grayscale(0.3) contrast(1.05);
   pointer-events: none;
   z-index: 0;
   -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,.6) 45%, #000 100%);
@@ -1673,7 +1680,7 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
 }
 .site-footer > * { position: relative; z-index: 1; }
 @media (max-width: 900px) {
-  .site-footer::after { width: 32%; opacity: .045; }
+  .site-footer::after { width: 32%; opacity: .22; }
 }
 @media (max-width: 640px) {
   .site-footer::after { display: none; }
