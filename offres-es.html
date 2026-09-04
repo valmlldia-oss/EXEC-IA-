@@ -208,6 +208,18 @@
     <h2 class="section-title offres-section-title reveal delay-1">Toda transformación empieza por una decisión.</h2>
     <p class="offres-subtitle reveal delay-2">Tres áreas de especialización, tres formas de acompañarle.</p>
 
+    <div class="offre-decouverte offre-decouverte--transverse reveal delay-2">
+      <div class="offre-decouverte-left">
+        <p class="offre-decouverte-title">Entrevista estratégica gratuita — <strong>30 minutos</strong></p>
+        <p class="offre-decouverte-desc">Para comprender sus retos y determinar si un acompañamiento es pertinente.</p>
+        <ul class="offre-decouverte-points">
+          <li>✓ Sin compromiso</li>
+          <li>✓ Estrictamente confidencial</li>
+        </ul>
+      </div>
+      <a href="https://calendly.com/exec-ia" target="_blank" rel="noopener" class="btn btn-rose offre-decouverte-btn">Reservar una cita <span class="btn-arrow">→</span></a>
+    </div>
+
     <div class="offres-categories reveal delay-2">
 
       <!-- 1 · SITIOS WEB -->
@@ -219,7 +231,7 @@
         <div class="offres-cat-body">
           <div class="offres-cat-inner">
             <div class="offre-web">
-              <p class="offre-web-desc">Un sitio a medida y multilingüe, pensado para transmitir una identidad, poner en valor una experiencia y afirmar un posicionamiento.</p>
+              <p class="offre-web-desc">Un sitio a medida y multilingüe, pensado para transmitir su identidad.<br>Poner en valor su experiencia y afirmar su posicionamiento.</p>
               <div class="offre-web-tiers">
                 <div class="offre-web-tier">
                   <span class="offre-web-tier-name">Sitio esencial</span>
@@ -287,18 +299,6 @@
         </button>
         <div class="offres-cat-body">
           <div class="offres-cat-inner">
-
-            <div class="offre-decouverte reveal delay-2">
-              <div class="offre-decouverte-left">
-                <p class="offre-decouverte-title">Entrevista estratégica gratuita — <strong>30 minutos</strong></p>
-                <p class="offre-decouverte-desc">Para comprender sus retos y determinar si un acompañamiento es pertinente.</p>
-                <ul class="offre-decouverte-points">
-                  <li>✓ Sin compromiso</li>
-                  <li>✓ Estrictamente confidencial</li>
-                </ul>
-              </div>
-              <a href="https://calendly.com/exec-ia" target="_blank" rel="noopener" class="btn btn-rose offre-decouverte-btn">Reservar una cita <span class="btn-arrow">→</span></a>
-            </div>
 
             <div class="offres-grid">
 
@@ -387,6 +387,27 @@
 
     </div>
 
+    <div class="offres-orientation reveal">
+      <h3 class="offres-orientation-title">¿Por dónde empezar?</h3>
+      <div class="offres-orientation-grid">
+        <button type="button" class="offres-orientation-card" data-target="0">
+          <span class="ooc-title">Crear o repensar mi sitio web</span>
+          <span class="ooc-desc">Creación, rediseño o evolución de un sitio web.</span>
+          <span class="ooc-arrow">Ver la oferta <span class="portrait-link-arrow">→</span></span>
+        </button>
+        <button type="button" class="offres-orientation-card" data-target="1">
+          <span class="ooc-title">Automatizar un proceso</span>
+          <span class="ooc-desc">Utilizar la IA para ganar tiempo en tareas y flujos de trabajo.</span>
+          <span class="ooc-arrow">Ver la oferta <span class="portrait-link-arrow">→</span></span>
+        </button>
+        <button type="button" class="offres-orientation-card" data-target="2">
+          <span class="ooc-title">Estructurar mi enfoque de IA</span>
+          <span class="ooc-desc">Identificar los usos adecuados, priorizar y encuadrar la transformación.</span>
+          <span class="ooc-arrow">Ver la oferta <span class="portrait-link-arrow">→</span></span>
+        </button>
+      </div>
+    </div>
+
   </div>
 </section>
 <script>
@@ -417,6 +438,24 @@
       if(item.querySelector('.offres-cat-btn').getAttribute('aria-expanded') === 'true'){
         item.querySelector('.offres-cat-body').style.maxHeight = item.querySelector('.offres-cat-body').scrollHeight + 'px';
       }
+    });
+  });
+
+  document.querySelectorAll('.offres-orientation-card').forEach(function(card){
+    card.addEventListener('click', function(){
+      var idx = parseInt(card.getAttribute('data-target'), 10);
+      var item = items[idx];
+      if(!item) return;
+      var btn = item.querySelector('.offres-cat-btn');
+      var wasOpen = btn.getAttribute('aria-expanded') === 'true';
+      if(!wasOpen){ btn.click(); }
+      function scrollToItem(){
+        var nav = document.getElementById('nav');
+        var navH = nav ? nav.offsetHeight : 0;
+        var top = window.scrollY + item.getBoundingClientRect().top - navH - 16;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+      }
+      if(wasOpen){ scrollToItem(); } else { setTimeout(scrollToItem, 460); }
     });
   });
 })();

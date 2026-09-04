@@ -208,6 +208,18 @@
     <h2 class="section-title offres-section-title reveal delay-1">Chaque transformation commence par une décision.</h2>
     <p class="offres-subtitle reveal delay-2">Trois savoir-faire, trois façons de vous accompagner.</p>
 
+    <div class="offre-decouverte offre-decouverte--transverse reveal delay-2">
+      <div class="offre-decouverte-left">
+        <p class="offre-decouverte-title">Entretien stratégique offert — <strong>30 minutes</strong></p>
+        <p class="offre-decouverte-desc">Pour comprendre vos enjeux et déterminer si un accompagnement est pertinent.</p>
+        <ul class="offre-decouverte-points">
+          <li>✓ Sans engagement</li>
+          <li>✓ Strictement confidentiel</li>
+        </ul>
+      </div>
+      <a href="https://calendly.com/exec-ia" target="_blank" rel="noopener" class="btn btn-rose offre-decouverte-btn">Prendre rendez-vous <span class="btn-arrow">→</span></a>
+    </div>
+
     <div class="offres-categories reveal delay-2">
 
       <!-- 1 · SITES WEB -->
@@ -219,7 +231,7 @@
         <div class="offres-cat-body">
           <div class="offres-cat-inner">
             <div class="offre-web">
-              <p class="offre-web-desc">Un site sur mesure et multilingue, pensé pour traduire une identité, valoriser une expertise et affirmer un positionnement.</p>
+              <p class="offre-web-desc">Un site sur mesure et multilingue, pensé pour traduire votre identité.<br>Valoriser votre expertise et affirmer votre positionnement.</p>
               <div class="offre-web-tiers">
                 <div class="offre-web-tier">
                   <span class="offre-web-tier-name">Site essentiel</span>
@@ -287,18 +299,6 @@
         </button>
         <div class="offres-cat-body">
           <div class="offres-cat-inner">
-
-            <div class="offre-decouverte reveal delay-2">
-              <div class="offre-decouverte-left">
-                <p class="offre-decouverte-title">Entretien stratégique offert — <strong>30 minutes</strong></p>
-                <p class="offre-decouverte-desc">Pour comprendre vos enjeux et déterminer si un accompagnement est pertinent.</p>
-                <ul class="offre-decouverte-points">
-                  <li>✓ Sans engagement</li>
-                  <li>✓ Strictement confidentiel</li>
-                </ul>
-              </div>
-              <a href="https://calendly.com/exec-ia" target="_blank" rel="noopener" class="btn btn-rose offre-decouverte-btn">Prendre rendez-vous <span class="btn-arrow">→</span></a>
-            </div>
 
             <div class="offres-grid">
 
@@ -387,6 +387,27 @@
 
     </div>
 
+    <div class="offres-orientation reveal">
+      <h3 class="offres-orientation-title">Par où commencer&nbsp;?</h3>
+      <div class="offres-orientation-grid">
+        <button type="button" class="offres-orientation-card" data-target="0">
+          <span class="ooc-title">Créer ou repenser mon site</span>
+          <span class="ooc-desc">Création, refonte ou évolution d&#8217;un site web.</span>
+          <span class="ooc-arrow">Voir l&#8217;offre <span class="portrait-link-arrow">→</span></span>
+        </button>
+        <button type="button" class="offres-orientation-card" data-target="1">
+          <span class="ooc-title">Automatiser un processus</span>
+          <span class="ooc-desc">Utiliser l&#8217;IA pour gagner du temps sur des tâches et workflows métier.</span>
+          <span class="ooc-arrow">Voir l&#8217;offre <span class="portrait-link-arrow">→</span></span>
+        </button>
+        <button type="button" class="offres-orientation-card" data-target="2">
+          <span class="ooc-title">Structurer ma démarche IA</span>
+          <span class="ooc-desc">Identifier les bons usages, prioriser et cadrer la transformation.</span>
+          <span class="ooc-arrow">Voir l&#8217;offre <span class="portrait-link-arrow">→</span></span>
+        </button>
+      </div>
+    </div>
+
   </div>
 </section>
 <script>
@@ -416,6 +437,34 @@
     items.forEach(function(item){
       if(item.querySelector('.offres-cat-btn').getAttribute('aria-expanded') === 'true'){
         item.querySelector('.offres-cat-body').style.maxHeight = item.querySelector('.offres-cat-body').scrollHeight + 'px';
+      }
+    });
+  });
+
+  /* Module d'orientation — pilote les accordéons existants, aucune logique dupliquée */
+  document.querySelectorAll('.offres-orientation-card').forEach(function(card){
+    card.addEventListener('click', function(){
+      var idx = parseInt(card.getAttribute('data-target'), 10);
+      var item = items[idx];
+      if(!item) return;
+      var btn = item.querySelector('.offres-cat-btn');
+      var wasOpen = btn.getAttribute('aria-expanded') === 'true';
+      if(!wasOpen){
+        btn.click();
+      }
+      function scrollToItem(){
+        var nav = document.getElementById('nav');
+        var navH = nav ? nav.offsetHeight : 0;
+        var top = window.scrollY + item.getBoundingClientRect().top - navH - 16;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+      }
+      /* Si un autre item se referme (transition max-height .45s), sa hauteur
+         encore animée fausserait le calcul de position — on attend la fin
+         de la transition avant de mesurer/scroller. Sinon, exécution immédiate. */
+      if(wasOpen){
+        scrollToItem();
+      }else{
+        setTimeout(scrollToItem, 460);
       }
     });
   });

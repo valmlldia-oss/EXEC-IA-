@@ -1929,6 +1929,7 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   font-size: 1.05rem; color: var(--rose); font-weight: 600;
 }
 .offre-decouverte-btn { white-space: nowrap; flex-shrink: 0; }
+.offre-decouverte--transverse { margin-top: 28px; margin-bottom: 40px; }
 
 /* ── Accordéon des 3 catégories d'offres (Sites web / Agents / Direction générale) ── */
 .offres-categories { margin-top: 32px; }
@@ -1970,7 +1971,7 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
 }
 .offre-web-desc {
   font-size: 1rem; color: var(--text); line-height: 1.55;
-  max-width: 900px; margin: 0 auto 20px;
+  max-width: 900px; margin: 0 auto 31px;
 }
 .offre-web-tiers {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
@@ -2024,6 +2025,52 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
 }
 @media (max-width: 760px) {
   .offre-web-tiers { grid-template-columns: 1fr; }
+}
+
+/* ── Module d'orientation « Par où commencer ? » ── */
+.offres-orientation {
+  margin: 64px 0 8px;
+  text-align: center;
+}
+.offres-orientation-title {
+  font-family: var(--serif); font-size: clamp(1.5rem, 2.4vw, 2rem); font-weight: 500;
+  color: var(--plum); margin: 0 0 28px;
+}
+.offres-orientation-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
+  max-width: 980px; margin: 0 auto;
+}
+.offres-orientation-card {
+  display: flex; flex-direction: column; align-items: flex-start; gap: 8px;
+  background: var(--white); border: 1px solid rgba(99,59,74,.14);
+  border-radius: 14px; padding: 26px 24px; text-align: left;
+  cursor: pointer; font: inherit; color: inherit; width: 100%;
+  transition: border-color .25s var(--ease), box-shadow .25s var(--ease), transform .25s var(--ease);
+}
+.offres-orientation-card:hover,
+.offres-orientation-card:focus-visible {
+  border-color: var(--rose);
+  box-shadow: 0 16px 36px rgba(199,95,98,.14);
+  transform: translateY(-3px);
+}
+.offres-orientation-card:focus-visible { outline: 2px solid var(--rose); outline-offset: 3px; }
+.ooc-title {
+  font-family: var(--serif); font-size: 1.15rem; font-weight: 600; color: var(--plum);
+  transition: color .25s;
+}
+.offres-orientation-card:hover .ooc-title,
+.offres-orientation-card:focus-visible .ooc-title { color: var(--rose); }
+.ooc-desc { font-size: .86rem; color: rgba(61,30,42,.6); line-height: 1.5; }
+.ooc-arrow {
+  margin-top: 6px; font-size: .78rem; font-weight: 600; color: var(--rose);
+  letter-spacing: .01em; opacity: 0; transform: translateX(-4px);
+  transition: opacity .25s var(--ease), transform .25s var(--ease);
+}
+.offres-orientation-card:hover .ooc-arrow,
+.offres-orientation-card:focus-visible .ooc-arrow { opacity: 1; transform: translateX(0); }
+@media (max-width: 760px) {
+  .offres-orientation-grid { grid-template-columns: 1fr; }
+  .offres-orientation { margin-top: 48px; }
 }
 
 .offres-grid {
@@ -2175,7 +2222,7 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   line-height: 1.5;
 }
 .offre-livrable-list li::before {
-  content: '→';
+  content: '\2713';
   position: absolute; left: 0; top: 0;
   color: var(--rose); font-weight: 600;
 }
