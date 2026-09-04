@@ -1603,6 +1603,15 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
 .footer-tag-lead { font-size: clamp(2.09rem, 2.65vw, 2.46rem); }
 .footer-tag-rest { font-size: clamp(1.59rem, 1.99vw, 1.87rem); color: var(--plum); }
 .footer-brand .footer-mention-ia { font-size: .95rem; margin: 0; text-align: left; color: rgba(99,59,74,.6); white-space: nowrap; }
+/* Grille éditoriale du footer (desktop uniquement) :
+   — axe haut : centre vertical du logo aligné sur la ligne des titres LE SITE/LANGUES/COORDONNÉES
+   — axe bas : dernière ligne ("Validation humaine systématique") alignée sur "Contact"
+   Mesuré et calculé sur le rendu réel, la colonne de droite n'est pas déplacée. */
+@media (min-width: 901px) {
+  .footer-brand { gap: 0; margin-top: -44px; }
+  .footer-brand .footer-logo-main { margin-bottom: 6px; }
+  .footer-brand .footer-mention-ia { margin-top: 33px; }
+}
 @media (max-width: 1024px) {
   .footer-brand .footer-tag, .footer-brand .footer-mention-ia { white-space: normal; }
 }
@@ -1671,7 +1680,10 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   content: "";
   position: absolute;
   top: 0; right: 0; bottom: 0;
-  width: 46%;
+  /* Centre-droit : commence avant LANGUES (~72% de la largeur du footer),
+     se prolonge jusqu'au bord droit. Empreinte architecturale, pas une
+     photo posée derrière les colonnes. */
+  width: 55%;
   background: url('ESCALIER-5-clean.webp') no-repeat center right / cover;
   /* L'image est très claire (escalier blanc) : en simple opacité sur un fond
      déjà clair, elle devient invisible quel que soit le %. mix-blend-mode:
@@ -1679,16 +1691,18 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
      texture qui assombrit légèrement le fond, au lieu d'un voile blanchâtre
      imperceptible. */
   mix-blend-mode: multiply;
-  opacity: .32;
+  opacity: .3;
   filter: grayscale(0.3) contrast(1.05);
   pointer-events: none;
   z-index: 0;
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,.6) 45%, #000 100%);
-  mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,.6) 45%, #000 100%);
+  /* Fondu très progressif : quasi invisible sous LANGUES/COORDONNÉES,
+     ne devient perceptible que dans l'espace vide à l'extrême droite */
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, transparent 28%, rgba(0,0,0,.3) 62%, rgba(0,0,0,.65) 85%, #000 100%);
+  mask-image: linear-gradient(to right, transparent 0%, transparent 28%, rgba(0,0,0,.3) 62%, rgba(0,0,0,.65) 85%, #000 100%);
 }
 .site-footer > * { position: relative; z-index: 1; }
 @media (max-width: 900px) {
-  .site-footer::after { width: 32%; opacity: .22; }
+  .site-footer::after { width: 34%; opacity: .16; }
 }
 @media (max-width: 640px) {
   .site-footer::after { display: none; }
