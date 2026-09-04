@@ -5404,8 +5404,13 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 .constat-desc {
   font-family: var(--sans); font-size: 1rem; line-height: 1.55;
   color: var(--text); opacity: .9;
+  /* Chaque ligne (séparée par le <br> dans le HTML) doit tenir sur une seule ligne */
+  white-space: nowrap;
 }
 .constat-desc em { font-style: italic; }
+@media (max-width: 760px) {
+  .constat-desc { white-space: normal; }
+}
 .constat-pivot {
   font-family: var(--serif); font-weight: 400;
   font-size: clamp(1.3rem, 2.3vw, 1.82rem); line-height: 1.28;
