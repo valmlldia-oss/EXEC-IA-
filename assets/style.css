@@ -1565,6 +1565,11 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   border-top: 2px solid rgba(99,59,74,.16);
   padding: 0;
   text-align: left;
+  /* Le footer porte aussi .snap-page (min-height:100vh) sur presque toutes
+     les pages : ça forçait le footer à occuper tout l'écran même quand son
+     contenu réel est plus court, créant une grande bande blanche vide en
+     dessous. Le footer doit toujours se limiter à la hauteur de son contenu. */
+  min-height: 0 !important;
   position: relative;
   overflow: hidden;
   /* Grille commune : les colonnes du haut et la ligne du bas partagent
