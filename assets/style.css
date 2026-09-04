@@ -1546,9 +1546,11 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
 .site-footer {
   background: var(--white);
   /* Démarcation douce avec le contenu au-dessus (fond clair sur fond clair) */
-  border-top: 1px solid rgba(99,59,74,.12);
+  border-top: 2px solid rgba(99,59,74,.16);
   padding: 0;
   text-align: left;
+  position: relative;
+  overflow: hidden;
   /* Grille commune : les colonnes du haut et la ligne du bas partagent
      les mêmes pistes (subgrid) → "Tous droits réservés" aligné sous "Le site" */
   display: grid;
@@ -1622,6 +1624,29 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
 .footer-linkedin-logo { height: 18px; width: auto; display: inline-block; }
 
 .footer-rule { border: none; border-top: 1px solid rgba(99,59,74,.14); margin: 0; }
+/* Habillage discret : fragment de l'escalier (Expertise), filigrane architectural
+   très pâle côté droit — n'est jamais un cadre photo, juste une présence graphique
+   qui se fond dans l'ivoire rosé. Masque en dégradé pour disparaître sous les colonnes
+   de texte : ne reste visible que dans les zones vides à droite. */
+.site-footer::after {
+  content: "";
+  position: absolute;
+  top: 0; right: 0; bottom: 0;
+  width: 46%;
+  background: url('ESCALIER-5-clean.webp') no-repeat center right / cover;
+  opacity: .06;
+  pointer-events: none;
+  z-index: 0;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,.6) 45%, #000 100%);
+  mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,.6) 45%, #000 100%);
+}
+.site-footer > * { position: relative; z-index: 1; }
+@media (max-width: 900px) {
+  .site-footer::after { width: 32%; opacity: .045; }
+}
+@media (max-width: 640px) {
+  .site-footer::after { display: none; }
+}
 
 .studeria-certifs {
   display: flex; align-items: center; gap: 28px; flex-wrap: wrap;
@@ -1705,8 +1730,12 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
 .ss-num--globe {
   font-size: 2.3232rem; color: var(--ivory);
   display: inline-block; transform-origin: 50% 52%;
+  backface-visibility: hidden; /* jamais le glyphe affiché à l'envers/en miroir en cours de rotation */
   animation: ss-globe-spin 22s linear infinite;
+  /* Démarre en même temps que les compteurs 20/18, pas dès le chargement de la page */
+  animation-play-state: paused;
 }
+.ss-num--globe.ss-globe-active { animation-play-state: running; }
 /* Rotation sur l'axe vertical (comme une vraie Terre qui tourne),
    jamais un flip à plat qui mettrait les continents la tête en bas */
 @keyframes ss-globe-spin {
@@ -2135,8 +2164,13 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   to   { opacity: 1; }
 }
 @keyframes slideup {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-eyebrow, .hero-sub, .hero-sub2, .hero-clarif, .hero-cta, .hero-certif {
+    animation: none !important; opacity: 1 !important; transform: none !important;
+  }
 }
 
 /* ─── TICKER ─────────────────────────────────────────────── */

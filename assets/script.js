@@ -93,6 +93,16 @@ const countObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.4 });
 document.querySelectorAll('.ss-num[data-count-to]').forEach(el => countObserver.observe(el));
 
+/* ── Globe — démarre en même temps que les compteurs (même bandeau, même instant) ── */
+const globeObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    globeObserver.unobserve(e.target);
+    e.target.classList.add('ss-globe-active');
+  });
+}, { threshold: 0.4 });
+document.querySelectorAll('.ss-num--globe').forEach(el => globeObserver.observe(el));
+
 /* ── Halo discret sur "IA" — se déclenche quand les compteurs terminent ── */
 if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   const iaGlowObserver = new IntersectionObserver((entries) => {
