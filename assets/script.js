@@ -68,6 +68,43 @@ const barObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.3 });
 document.querySelectorAll('.lt-wrap').forEach(el => barObserver.observe(el));
 
+/* ── Compteurs animés (bandeau stats) ── */
+const countObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    countObserver.unobserve(e.target);
+    const target = +e.target.dataset.countTo;
+    const el = e.target.querySelector('.ss-count');
+    if (!el || !target) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      el.textContent = target;
+      return;
+    }
+    const duration = target < 10 ? 1800 : 4200;
+    const start = performance.now();
+    function tick(now) {
+      const p = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - p, 3); /* easeOutCubic */
+      el.textContent = Math.round(eased * target);
+      if (p < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  });
+}, { threshold: 0.4 });
+document.querySelectorAll('.ss-num[data-count-to]').forEach(el => countObserver.observe(el));
+
+/* ── Halo discret sur "IA" — se déclenche quand les compteurs terminent ── */
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const iaGlowObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      iaGlowObserver.unobserve(e.target);
+      setTimeout(() => e.target.classList.add('ss-ia-pulse'), 4200);
+    });
+  }, { threshold: 0.4 });
+  document.querySelectorAll('.ss-num--ia').forEach(el => iaGlowObserver.observe(el));
+}
+
 /* ── ROI Simulator ── */
 (function () {
   const collab = document.getElementById('rs-collab');
@@ -86,7 +123,7 @@ document.querySelectorAll('.lt-wrap').forEach(el => barObserver.observe(el));
     const hM = c * h * 4.33;
     document.getElementById('rsv-collab').textContent = c;
     document.getElementById('rsv-h').textContent      = h + ' h';
-    document.getElementById('rsv-t').textContent      = t + ' €/h';
+    document.getElementById('rsv-t').textContent      = lang === 'en' ? ('€' + t + '/h') : (t + ' €/h');
     document.getElementById('roi-out-h').textContent  = Math.round(hM) + ' h';
     document.getElementById('roi-out-m').textContent  = fmtMoney(hM * t);
     document.getElementById('roi-out-an').textContent = fmtMoney(hM * t * 12);
@@ -167,6 +204,92 @@ document.querySelectorAll('.lt-wrap').forEach(el => barObserver.observe(el));
   btnPrev?.addEventListener('click', () => goTo(current - 1));
   btnNext?.addEventListener('click', () => goTo(current + 1));
   dots.forEach(d => d.addEventListener('click', () => goTo(+d.dataset.ctaIdx)));
+
+  outer.addEventListener('scroll', () => {
+    const idx = Math.round(outer.scrollLeft / cardWidth());
+    if (idx !== current) { current = idx; dots.forEach((d, i) => d.classList.toggle('active', i === current)); }
+  }, { passive: true });
+
+  let drag = false, startX = 0, startScroll = 0;
+  outer.addEventListener('mousedown', e => { drag = true; startX = e.pageX; startScroll = outer.scrollLeft; outer.style.scrollBehavior = 'auto'; });
+  outer.addEventListener('mouseleave', () => { drag = false; outer.style.scrollBehavior = ''; });
+  outer.addEventListener('mouseup',    () => { drag = false; outer.style.scrollBehavior = ''; });
+  outer.addEventListener('mousemove',  e => { if (!drag) return; e.preventDefault(); outer.scrollLeft = startScroll - (e.pageX - startX); });
+
+  goTo(0);
+})();
+
+/* ── Sites web carousel ── */
+(function () {
+  const outer = document.getElementById('webTrack');
+  if (!outer) return;
+  const track = outer.querySelector('.agents-track');
+  const cards = outer.querySelectorAll('.agent-card');
+  const dots  = document.querySelectorAll('[data-web-idx]');
+  const btnPrev = document.getElementById('webPrev');
+  const btnNext = document.getElementById('webNext');
+  let current = 0;
+
+  function cardWidth() {
+    const c = cards[0];
+    if (!c) return 445;
+    return c.offsetWidth + parseInt(getComputedStyle(track).gap || '20');
+  }
+
+  function goTo(idx) {
+    current = Math.max(0, Math.min(idx, cards.length - 1));
+    outer.scrollTo({ left: current * cardWidth(), behavior: 'smooth' });
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    if (btnPrev) btnPrev.disabled = current === 0;
+    if (btnNext) btnNext.disabled = current === cards.length - 1;
+  }
+
+  btnPrev?.addEventListener('click', () => goTo(current - 1));
+  btnNext?.addEventListener('click', () => goTo(current + 1));
+  dots.forEach(d => d.addEventListener('click', () => goTo(+d.dataset.webIdx)));
+
+  outer.addEventListener('scroll', () => {
+    const idx = Math.round(outer.scrollLeft / cardWidth());
+    if (idx !== current) { current = idx; dots.forEach((d, i) => d.classList.toggle('active', i === current)); }
+  }, { passive: true });
+
+  let drag = false, startX = 0, startScroll = 0;
+  outer.addEventListener('mousedown', e => { drag = true; startX = e.pageX; startScroll = outer.scrollLeft; outer.style.scrollBehavior = 'auto'; });
+  outer.addEventListener('mouseleave', () => { drag = false; outer.style.scrollBehavior = ''; });
+  outer.addEventListener('mouseup',    () => { drag = false; outer.style.scrollBehavior = ''; });
+  outer.addEventListener('mousemove',  e => { if (!drag) return; e.preventDefault(); outer.scrollLeft = startScroll - (e.pageX - startX); });
+
+  goTo(0);
+})();
+
+/* ── Témoignages sites web carousel ── */
+(function () {
+  const outer = document.getElementById('testiTrack');
+  if (!outer) return;
+  const track = outer.querySelector('.agents-track');
+  const cards = outer.querySelectorAll('.web-testi-card');
+  const dots  = document.querySelectorAll('[data-testi-idx]');
+  const btnPrev = document.getElementById('testiPrev');
+  const btnNext = document.getElementById('testiNext');
+  let current = 0;
+
+  function cardWidth() {
+    const c = cards[0];
+    if (!c) return 680;
+    return c.offsetWidth + parseInt(getComputedStyle(track).gap || '20');
+  }
+
+  function goTo(idx) {
+    current = Math.max(0, Math.min(idx, cards.length - 1));
+    outer.scrollTo({ left: current * cardWidth(), behavior: 'smooth' });
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    if (btnPrev) btnPrev.disabled = current === 0;
+    if (btnNext) btnNext.disabled = current === cards.length - 1;
+  }
+
+  btnPrev?.addEventListener('click', () => goTo(current - 1));
+  btnNext?.addEventListener('click', () => goTo(current + 1));
+  dots.forEach(d => d.addEventListener('click', () => goTo(+d.dataset.testiIdx)));
 
   outer.addEventListener('scroll', () => {
     const idx = Math.round(outer.scrollLeft / cardWidth());

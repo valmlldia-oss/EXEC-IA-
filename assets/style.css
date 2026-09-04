@@ -14,7 +14,7 @@
   --plum-muted: #8C6B76;
   --text:      #633B4A;
   --serif:     'Cormorant Garamond', Georgia, serif;
-  --sans:      'Raleway', 'Helvetica Neue', sans-serif;
+  --sans:      'Inter', 'Helvetica Neue', sans-serif;
   --nav-h:     80px;
   --max:       1600px;
   --ease:      cubic-bezier(.25,.46,.45,.94);
@@ -62,7 +62,7 @@ body {
 .snap-page > .lm-inner {
   width: 100%;
 }
-.snap-page:not(#offres):not(#agents):not(#questions):not(#expertise):not(#diagnostic) > .wrap,
+.snap-page:not(#offres):not(#agents):not(#questions):not(#expertise):not(#diagnostic):not(#parcours) > .wrap,
 .snap-page:not(#offres):not(#agents):not(#questions):not(#expertise):not(#diagnostic) > .lm-inner {
   margin-top: auto;
   margin-bottom: auto;
@@ -900,7 +900,7 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
   width: fit-content;
   align-self: flex-start;
   /* demi-espace (nouveau paragraphe) avant chaque bloc… */
-  margin: 30px 0 8px;
+  margin: 12px 0 2px;
   padding: 5px 16px;
   font-family: var(--sans);
   font-size: .74rem; font-weight: 600;
@@ -910,7 +910,21 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
   border-radius: 999px;
   line-height: 1;
 }
-.about-label--mission { margin-top: 44px; }
+.about-label--mission { margin-top: 26px; }
+.about-lede--last { margin-bottom: 0 !important; }
+.about-body p.about-lede { line-height: 1.38; }
+/* Sections À propos + Parcours : callées en haut, plus de grand vide dû au centrage plein écran */
+#about.snap-page {
+  min-height: auto;
+  justify-content: flex-start;
+  padding-top: calc(var(--nav-h) + 18px);
+  padding-bottom: 26px;
+}
+#parcours.snap-page {
+  justify-content: flex-start;
+  padding-top: 0;
+}
+.about-label--piliers { font-size: .82rem; font-weight: 700; letter-spacing: .18em; padding: 6px 18px; margin-bottom: 4px; }
 .about-body .about-label:first-child { margin-top: 0; }
 .formation-list {
   list-style: none; padding: 0;
@@ -920,13 +934,64 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
 .formation-list li {
   display: flex; align-items: baseline; gap: 12px;
   font-size: 1.45rem; color: var(--text);
-  /* interligne resserré entre les deux étoiles */
-  padding: 3px 0; line-height: 1.5;
+  /* espacement généreux entre chaque puce (rendu premium) */
+  padding: 10px 0; line-height: 1.5;
 }
 .fl-icon { color: var(--rose); font-size: 1rem; flex-shrink: 0; }
 .formation-list em { color: var(--plum-muted); font-style: normal; font-size: 1.3rem; }
 /* terracotta mais police fine, comme « — McKinsey & Company » */
 .fl-rose { color: var(--rose) !important; font-style: normal; font-weight: 400; font-size: 1.45rem; }
+/* Triptyque « Les meilleurs » : label doré + crédit dessous */
+.fl-body { display: flex; flex-direction: column; gap: 5px; }
+.fl-credit { font-size: 1.25rem; color: var(--plum); font-weight: 600; line-height: 1.4; padding-left: 18px; }
+.fl-credit strong { font-weight: 700; color: #4F2F3B; }
+.fl-credit .fl-link-plain { text-decoration: none; }
+.fl-credit .fl-link-plain strong { color: #4F2F3B; }
+/* ═══ Trois fondations (À propos) — cartes translucides, esprit institutionnel ═══ */
+.piliers {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 16px; margin: 0 0 34px; width: 100%;
+}
+.pilier {
+  position: relative; overflow: hidden;
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  padding: 12px 18px 16px;
+  background: linear-gradient(180deg, rgba(250,246,242,.72), rgba(250,246,242,.30));
+  border: 1px solid rgba(216,200,195,.6);
+  border-radius: 6px;
+  -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px);
+  box-shadow: 0 14px 34px rgba(99,59,74,.05);
+}
+.pilier-star { color: #D4AF37; font-size: 1.6rem; line-height: 1; margin-bottom: 8px; }
+.pilier-title {
+  color: var(--rose); font-family: var(--sans);
+  font-size: 1.28rem; font-weight: 500; line-height: 1.32; letter-spacing: .005em;
+  margin-bottom: 4px;
+}
+.pilier-title strong { font-weight: 700; color: var(--rose); }
+.pilier-title::after {
+  content: ""; display: block; width: 34px; height: 2px;
+  background: var(--rose); border-radius: 2px; margin: 10px auto 0;
+}
+.pilier-col { width: auto; height: 145px; margin: 0 0 6px; opacity: .42; }
+.pilier-sub {
+  color: var(--plum); font-size: 1.02rem; font-weight: 400; line-height: 1.4;
+  white-space: nowrap; margin-bottom: 14px;
+}
+.pilier-ref { margin-top: auto; }
+.pilier-btn {
+  display: inline-block; text-decoration: none;
+  border: 1px solid var(--rose); border-radius: 6px; padding: 9px 20px;
+  color: #4F2F3B; font-weight: 700; font-size: 1.04rem; letter-spacing: .01em;
+  background: rgba(250,246,242,.5); transition: background .2s, border-color .2s;
+}
+.pilier-btn--link:hover { background: rgba(199,95,98,.09); }
+.piliers-intro { max-width: 860px; }
+@media (max-width: 760px) {
+  .piliers { grid-template-columns: 1fr; gap: 16px; }
+  .pilier { padding: 28px 22px; }
+  .pilier-title { min-height: 0; margin-bottom: 14px; }
+}
 .fl-star {
   font-size: 1.4rem;
   flex-shrink: 0;
@@ -1055,7 +1120,7 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
   width: 100%;
   flex: 0 0 auto;
   /* « Parcours » abaissé d'une ligne */
-  margin-bottom: 56px;
+  margin-bottom: 28px;
 }
 /* Un peu d'air avant la première liste étoilée */
 #about .formation-list { margin-top: 4px; margin-bottom: 2px; }
@@ -1116,6 +1181,10 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
 }
 .tl-item h3 { font-family: var(--serif); font-size: 1.8rem; color: var(--plum); margin-bottom: 5px; }
 .tl-role { font-size: .95rem; color: var(--plum-muted); font-style: italic; margin-bottom: 10px; }
+.tl-item--studeria { display: flex; align-items: center; gap: 10px 22px; flex-wrap: wrap; }
+.tl-item--studeria .tl-studeria-text { flex: 1 1 auto; }
+.tl-item--studeria .tl-role { margin-bottom: 0; max-width: none; }
+.tl-item--studeria .studeria-certifs { margin-top: 0; }
 .tl-item p { font-size: 1.05rem; line-height: 1.65; color: var(--text); max-width: 780px; }
 .tl-link {
   display: inline-block; margin-top: 7px;
@@ -1305,7 +1374,7 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
   font-size: 1.7rem;
   letter-spacing: .1em;
   font-weight: 400;
-  font-family: 'Inter', 'Helvetica Neue', sans-serif;
+  font-family: var(--sans);
   color: #C75F62;
   -webkit-font-smoothing: antialiased;
 }
@@ -1511,6 +1580,8 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   margin-top: 2px;
 }
 .studeria-certifs .iso-label { max-width: 110px; }
+.qualiopi-logo-link { display: inline-flex; text-decoration: none; }
+.qualiopi-logo { height: 58px; width: auto; display: block; mix-blend-mode: multiply; }
 .footer-bottom {
   display: grid;
   grid-template-columns: subgrid;
@@ -1582,7 +1653,22 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   justify-content: center;
 }
 .ss-num--sm { font-size: 2.55rem; letter-spacing: .04em; }
-.ss-num--globe { font-size: 3rem; color: var(--ivory); }
+.ss-num--globe {
+  font-size: 2.3232rem; color: var(--ivory);
+  display: inline-block; transform-origin: 50% 52%;
+  animation: ss-globe-spin 22s linear infinite;
+}
+@keyframes ss-globe-spin { to { transform: rotate(360deg); } }
+.ss-num--ia.ss-ia-pulse { animation: ss-ia-glow 1.7s ease-out 1; }
+@keyframes ss-ia-glow {
+  0%   { text-shadow: 0 0 0 rgba(199,95,98,0); }
+  45%  { text-shadow: 0 0 16px rgba(199,95,98,.55); }
+  100% { text-shadow: 0 0 0 rgba(199,95,98,0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ss-num--globe { animation: none; }
+  .ss-num--ia.ss-ia-pulse { animation: none; }
+}
 /* "+" : repositionné en haut via flex au lieu de vertical-align */
 .ss-sup {
   font-size: 2.65rem; font-weight: 700; color: var(--rose);
@@ -1590,9 +1676,21 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   margin-top: 2px;
   text-shadow: 0 0 18px rgba(199,95,98,.45);
 }
+.ss-count { font-variant-numeric: tabular-nums; }
 .ss-label {
   font-size: .92rem; color: rgba(245,241,236,.82);
   letter-spacing: .06em; text-transform: uppercase; line-height: 1.45;
+}
+/* petit trait terracotta sous chaque label, sauf McKinsey (qui ressort) */
+.ss-label::after {
+  content: ""; display: block; width: 26px; height: 2px;
+  background: var(--rose); border-radius: 2px; margin: 10px auto 0; opacity: .75;
+}
+.ss-label:has(.ss-firm)::after { display: none; }
+/* Nom de cabinet sur une seule ligne, en gras — reste lisible et tient dans la colonne */
+.ss-firm {
+  display: inline-block; font-weight: 700; white-space: nowrap;
+  letter-spacing: .01em; font-size: 1.3422em; text-transform: none;
 }
 .ss-item-link {
   text-decoration: none; color: inherit;
@@ -1683,6 +1781,82 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
 }
 .offre-decouverte-btn { white-space: nowrap; flex-shrink: 0; }
 
+/* ── Accordéon des 3 catégories d'offres (Sites web / Agents / Direction générale) ── */
+.offres-categories { margin-top: 32px; }
+.offres-cat-item {
+  border-top: 1.5px solid rgba(99,59,74,.18);
+}
+.offres-cat-item:last-child { border-bottom: 1.5px solid rgba(99,59,74,.18); }
+.offres-cat-btn {
+  width: 100%; display: flex; justify-content: space-between; align-items: center;
+  gap: 24px; padding: 22px 4px; background: none; border: none; cursor: pointer;
+  text-align: left;
+}
+.offres-cat-btn:hover .offres-cat-btn-label { color: var(--rose); }
+.offres-cat-btn-label {
+  font-family: var(--serif); font-size: clamp(1.4rem, 2.1vw, 1.9rem); font-weight: 700;
+  color: var(--plum); transition: color .2s;
+}
+.offres-cat-icon {
+  font-size: 1.8rem; font-weight: 400; color: var(--rose); flex-shrink: 0;
+  line-height: 1; transition: transform .35s var(--ease);
+}
+.offres-cat-btn[aria-expanded="true"] .offres-cat-icon { transform: rotate(45deg); }
+.offres-cat-body { overflow: hidden; max-height: 0; transition: max-height .45s var(--ease); }
+.offres-cat-inner { padding: 4px 4px 32px; }
+
+.offre-web {
+  margin-top: 0;
+  background: rgba(99,59,74,.045);
+  border: 1.5px solid rgba(99,59,74,.22);
+  border-radius: 16px;
+  padding: 28px 28px 24px;
+  text-align: center;
+}
+.offre-web-eyebrow { display: block; margin-bottom: 8px; }
+.offre-web-title {
+  font-family: var(--serif); font-size: 1.6rem; font-weight: 700;
+  color: var(--plum); margin: 0 0 8px;
+}
+.offre-web-desc {
+  font-size: 1rem; color: var(--text); line-height: 1.55;
+  max-width: 560px; margin: 0 auto 20px;
+}
+.offre-web-tiers {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
+  margin-bottom: 22px;
+}
+.offre-web-tier {
+  background: var(--ivory);
+  border: 1px solid rgba(99,59,74,.15);
+  border-radius: 12px;
+  padding: 16px 14px;
+  display: flex; flex-direction: column; gap: 4px;
+  position: relative;
+}
+.offre-web-tier--popular {
+  border-color: rgba(199,95,98,.5);
+}
+.offre-web-tier-name {
+  font-family: var(--sans); font-size: .78rem; font-weight: 700;
+  letter-spacing: .04em; text-transform: uppercase; color: var(--plum);
+}
+.offre-web-tier-badge {
+  font-family: var(--sans); font-size: .64rem; font-weight: 600;
+  letter-spacing: .05em; text-transform: uppercase; color: var(--rose);
+  opacity: .85;
+}
+.offre-web-tier-price {
+  font-family: var(--serif); font-size: 1.2rem; font-weight: 700;
+  color: var(--rose);
+}
+.offre-web-tier-desc {
+  font-size: .82rem; color: rgba(61,30,42,.65); line-height: 1.4;
+}
+@media (max-width: 760px) {
+  .offre-web-tiers { grid-template-columns: 1fr; }
+}
+
 .offres-grid {
   display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px;
 }
@@ -1732,7 +1906,7 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   letter-spacing: .04em; text-transform: uppercase;
   color: var(--rose);
 }
-.offre-niveau strong { font-weight: 800; }
+.offre-niveau strong { font-weight: 700; }
 .offre-niveau--light {
   color: var(--rose);
 }
@@ -2932,7 +3106,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   padding: .42rem 1.3rem;
   color: var(--rose);
   font-size: .95rem;
-  font-weight: 800;
+  font-weight: 700;
   -webkit-text-stroke: .3px currentColor;
   letter-spacing: .09em;
   text-transform: uppercase;
@@ -2951,7 +3125,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   50%      { opacity:.4; transform:scale(.75); }
 }
 .agents-title {
-  font-family: var(--sans); /* Raleway — identique au H1 Accueil (.hero-sub) */
+  font-family: var(--sans); /* Inter — identique au H1 Accueil (.hero-sub) */
   /* Même taille que le titre du hero (hero-sub) */
   font-size: clamp(1.8rem, 3.2vw, 2.6rem);
   font-weight: 400; /* léger comme le H1 Accueil (pas le gras h2 par défaut) */
@@ -3378,7 +3552,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   margin-bottom: 18px;
 }
 .newsletter-content h2 {
-  /* Sur le modèle du hero : eyebrow + phrase en Raleway (hero-sub) */
+  /* Sur le modèle du hero : eyebrow + phrase en Inter (hero-sub) */
   color: rgba(255,255,255,.92);
   font-family: var(--sans);
   font-size: clamp(1.8rem, 3.2vw, 2.6rem);
@@ -4095,9 +4269,10 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   flex: 1 1 auto;
   width: 100%;
   max-width: 1160px;
-  margin: 0 auto;
+  margin-left: max(24px, calc((100% - var(--max)) / 2));
+  margin-right: auto;
   box-sizing: border-box;
-  padding: calc(var(--nav-h) + clamp(16px, 2.2vh, 32px)) clamp(24px, 4vw, 56px) clamp(20px, 2.8vh, 38px);
+  padding: calc(var(--nav-h) + clamp(16px, 2.2vh, 32px)) 24px clamp(20px, 2.8vh, 38px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -4126,7 +4301,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 .ve-eyebrow-rule { display: none; }
 .ve-title {
   font-family: var(--serif);
-  /* Cormorant a une x-height bien plus basse que le Raleway du hero :
+  /* Cormorant a une x-height bien plus basse que l'Inter du hero :
      on l'agrandit (~+24 %) pour que le bas-de-casse lise à la même taille
      que « Comprendre le contexte » (H1 de référence). */
   font-size: clamp(2.35rem, 3.95vw, 3.2rem);
@@ -4297,6 +4472,8 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   height: clamp(80px, 10vh, 102px);
   margin-top: clamp(14px, 2vh, 22px);
 }
+/* Entrefilet prune FIN (comme les autres sections) */
+.maf-band--thin { height: 8px; margin-top: clamp(16px, 2.4vh, 26px); }
 .mon-approche-inner {
   display: flex; align-items: stretch; gap: 64px;
 }
@@ -4695,7 +4872,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   margin-bottom: 60px;
 }
 .questions-section .eyebrow { font-size: .95rem; letter-spacing: .25em; }
-.accord-list { max-width: 860px; margin: 44px 0 0; }
+.accord-list { max-width: 1440px; margin: 44px 0 0; }
 .accord-item { border-bottom: 1px solid rgba(107,98,93,.15); }
 .accord-item:first-child { border-top: 1px solid rgba(107,98,93,.15); }
 .accord-btn {
@@ -4712,9 +4889,9 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 .accord-btn[aria-expanded="true"] .accord-icon { transform: rotate(45deg); }
 .accord-body { overflow: hidden; max-height: 0; transition: max-height .45s var(--ease); }
 .accord-body p {
-  padding: 0 60px 24px 0; max-width: 700px;
+  padding: 0 60px 24px 0; max-width: 800px;
   font-family: var(--sans); font-size: clamp(1rem,1.3vw,1.2rem); color: var(--text);
-  line-height: 1.75; margin: 0 0 10px;
+  font-weight: 400; line-height: 1.75; margin: 0 0 10px;
 }
 .accord-body p:last-child { margin-bottom: 0; }
 /* Clôture stratégique : bloc centré, plus d'air après la FAQ,
@@ -5000,3 +5177,156 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 
 /* Diagnostic — question 1 : +15% par rapport aux autres questions, puis +10% supplémentaire */
 .diag-q[data-q="1"] .diag-q-title { font-size: clamp(1.8184rem, 2.9095vw, 2.2549rem); }
+
+/* ═══════════════════════════════════════════════════════════════
+   LE POINT DE DÉPART — bloc miroir du problème dirigeant
+   (vision · priorisation · clarté), placé avant l'accompagnement
+   ═══════════════════════════════════════════════════════════════ */
+.constat-section { background: var(--ivory); padding: clamp(14px, 2vw, 26px) 0 clamp(34px, 4.5vw, 56px); }
+/* Gauche-aligné exactement comme le hero (pas de centrage) → même marge que .hero-eyebrow */
+.constat-inner { max-width: 1060px; text-align: left; margin-left: 0; margin-right: auto; }
+.constat-eyebrow { display: block; margin-bottom: 14px; }
+/* Titre aligné sur le H1 hero : Inter, poids 400, barre verticale terracotta */
+.constat-title {
+  font-family: var(--sans); font-weight: 400; color: var(--plum);
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem); line-height: 1.22;
+  border-left: 3px solid var(--rose); padding-left: 22px;
+  margin-bottom: 15px;
+}
+.constat-intro {
+  font-family: var(--sans); font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+  line-height: 1.55; color: var(--text); max-width: none;
+  margin-bottom: clamp(30px, 3.4vw, 44px);
+}
+.constat-intro strong { color: var(--plum); font-weight: 600; }
+/* 3 colonnes alignées, séparées par un fin trait vertical (comme le bandeau chiffres) */
+.constat-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  align-items: stretch; gap: 0 clamp(20px, 2.4vw, 34px);
+  max-width: 1040px;
+  margin-bottom: clamp(38px, 4.4vw, 56px);
+}
+/* Chaque colonne = une carte façon "Témoignages" : bord supérieur terracotta arrondi */
+.constat-item {
+  background: #F4EDE7;
+  border: 1.5px solid rgba(199,95,98,.22);
+  border-top: 3px solid var(--rose);
+  border-radius: 16px;
+  padding: 20px 20px 22px;
+  box-shadow: 0 4px 24px rgba(99,59,74,.07);
+}
+.constat-desc { max-width: none; }
+/* Chiffres très grands, terracotta, légère transparence */
+.constat-num {
+  display: block; font-family: var(--serif); font-weight: 500;
+  font-size: clamp(2.7rem, 4.6vw, 3.7rem); line-height: 1;
+  color: var(--rose); opacity: .92; margin-bottom: 12px;
+}
+.constat-label {
+  font-family: var(--sans); font-weight: 600; font-size: 1.1rem;
+  color: var(--plum); letter-spacing: .01em; margin-bottom: 9px;
+  white-space: nowrap;
+}
+.constat-desc {
+  font-family: var(--sans); font-size: 1rem; line-height: 1.55;
+  color: var(--text); opacity: .9;
+}
+.constat-desc em { font-style: italic; }
+.constat-pivot {
+  font-family: var(--serif); font-weight: 400;
+  font-size: clamp(1.3rem, 2.3vw, 1.82rem); line-height: 1.28;
+  color: var(--plum); max-width: none;
+}
+.constat-pivot-q { font-style: italic; font-size: 1.12em; display: block; margin-bottom: .7em; }
+.constat-pivot-punch { font-weight: 600; }
+@media (max-width: 760px) {
+  .constat-grid { grid-template-columns: 1fr; gap: 18px; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   CRÉATION DE SITES WEB — placeholders (visuel + texte visible)
+   ═══════════════════════════════════════════════════════════════ */
+.agent-card--link { text-decoration: none; color: inherit; cursor: pointer; }
+.web-testi-section {
+  margin-top: clamp(32px, 4.5vh, 52px);
+}
+.web-testi-card {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: min(680px, 86vw);
+  text-align: center;
+  padding: 6px 4px;
+}
+.web-testi-quote {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.02rem, 1.4vw, 1.2rem);
+  line-height: 1.65;
+  color: var(--plum);
+}
+.web-testi-author {
+  display: block;
+  margin-top: 16px;
+  font-family: var(--sans);
+  font-style: normal;
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--rose);
+}
+.agent-visit-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--sans); font-size: .8rem; font-weight: 600;
+  color: var(--rose); letter-spacing: .02em; margin-top: .3rem;
+}
+.agent-card--link:hover .agent-visit-link .portrait-link-arrow { transform: translateX(4px); }
+.web-intro {
+  font-family: var(--sans);
+  font-size: clamp(1rem, 1.3vw, 1.14rem);
+  line-height: 1.7;
+  color: var(--text);
+  max-width: 920px;
+  margin: 14px auto 0;
+}
+/* Le visuel placeholder (SVG mockup) remplit le cadre 3:2 comme une image d'agent */
+#webTrack .web-img { display: block; padding: 0; background: #FBF7F2; }
+#webTrack .web-img svg { width: 100%; height: 100%; display: block; }
+/* Ici, contrairement aux agents, le texte n'est pas cuit dans l'image : on l'affiche */
+#webTrack .agent-body {
+  display: block;
+  padding: 1.3rem 1.5rem 1.55rem;
+  text-align: left;
+}
+#webTrack .agent-eyebrow-txt { color: rgba(199,95,98,.9); font-size: .74rem; }
+#webTrack .agent-name { font-size: 1.5rem; }
+#webTrack .agent-desc { font-size: .92rem; line-height: 1.55; color: rgba(61,30,42,.66); }
+/* Neutralise les micro-ajustements d'images agents (translate/scale/voile) sur ces cartes */
+#webTrack .agent-card .agent-img img { transform: none !important; }
+#webTrack .agent-card .agent-img::before { display: none !important; }
+
+/* ═══════════════════════════════════════════════════════════════
+   OFFRE III — mise en avant "Accompagnement de référence"
+   Hiérarchie visuelle discrète : bordure marquée, ombre, légèrement
+   plus haute, badge sobre, CTA un peu plus présent.
+   ═══════════════════════════════════════════════════════════════ */
+.offre-card--reference {
+  position: relative;
+  border: 1.5px solid var(--rose);
+  box-shadow: 0 18px 48px rgba(199,95,98,.18);
+  transform: translateY(-12px);
+}
+.offre-card--reference .btn { box-shadow: 0 8px 20px rgba(199,95,98,.34); }
+.offre-badge {
+  position: absolute; top: 0; left: 50%;
+  transform: translate(-50%, -52%);
+  background: var(--rose); color: #FAF6F2;
+  font-family: var(--sans); font-weight: 600; font-size: .66rem;
+  letter-spacing: .09em; text-transform: uppercase;
+  padding: 6px 15px; border-radius: 2rem; white-space: nowrap;
+  box-shadow: 0 4px 14px rgba(199,95,98,.3); z-index: 3;
+}
+@media (max-width: 900px) {
+  .offre-card--reference { transform: none; }
+}
