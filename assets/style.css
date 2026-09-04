@@ -1665,7 +1665,7 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   top: 0; right: 0; bottom: 0;
   width: 46%;
   background: url('ESCALIER-5-clean.webp') no-repeat center right / cover;
-  opacity: .06;
+  opacity: .11;
   pointer-events: none;
   z-index: 0;
   -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,.6) 45%, #000 100%);
