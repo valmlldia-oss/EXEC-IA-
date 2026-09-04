@@ -1775,18 +1775,18 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
 .ss-num--globe {
   font-size: 2.3232rem; color: var(--ivory);
   display: inline-block; transform-origin: 50% 52%;
-  backface-visibility: hidden; /* jamais le glyphe affiché à l'envers/en miroir en cours de rotation */
-  /* Même dynamisme que les compteurs (4.2s) plutôt qu'une rotation paresseuse */
-  animation: ss-globe-spin 4s linear infinite;
+  /* Même dynamisme que les compteurs, sans jamais disparaître : un plein
+     tour à 360° passe par un angle "de profil" où le glyphe (plat) devient
+     invisible ou en miroir. On oscille donc entre -35° et 35° : jamais
+     edge-on, jamais de backface, toujours visible. */
+  animation: ss-globe-spin 4s ease-in-out infinite;
   /* Démarre en même temps que les compteurs 20/18, pas dès le chargement de la page */
   animation-play-state: paused;
 }
 .ss-num--globe.ss-globe-active { animation-play-state: running; }
-/* Rotation sur l'axe vertical (comme une vraie Terre qui tourne),
-   jamais un flip à plat qui mettrait les continents la tête en bas */
 @keyframes ss-globe-spin {
-  from { transform: perspective(240px) rotateY(0deg); }
-  to   { transform: perspective(240px) rotateY(360deg); }
+  0%, 100% { transform: perspective(240px) rotateY(-35deg); }
+  50%      { transform: perspective(240px) rotateY(35deg); }
 }
 /* Halo plus marqué, respiration continue plutôt que 2 pulses puis silence */
 .ss-num--ia.ss-ia-pulse { animation: ss-ia-glow 2.6s ease-in-out infinite; }
