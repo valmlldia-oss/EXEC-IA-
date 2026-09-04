@@ -870,8 +870,14 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
   .portrait-link { white-space: normal; }
 }
 .portrait-link:hover { opacity: .75; }
-.portrait-link-arrow { transition: transform .2s var(--ease); }
+.portrait-link-arrow { transition: transform .2s var(--ease); display: inline-block; }
 .portrait-link:hover .portrait-link-arrow { transform: translateX(4px); }
+/* Discret rappel visuel périodique, cohérent avec le lien de téléchargement du Hero */
+.portrait-link .portrait-link-arrow { animation: hero-cta-nudge 5s ease-in-out infinite; }
+.portrait-link:hover .portrait-link-arrow { animation: none; }
+@media (prefers-reduced-motion: reduce) {
+  .portrait-link .portrait-link-arrow { animation: none; }
+}
 .portrait-name {
   font-family: var(--serif); font-size: clamp(1.3rem, 2vw, 1.7rem);
   font-style: italic; font-weight: 600; letter-spacing: .03em;
@@ -2638,7 +2644,11 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   color: var(--plum);
   transition: background .25s var(--ease), border-color .25s, color .25s, transform .25s var(--ease);
 }
-.expertise-hero-cta .portrait-link-arrow { color: var(--rose); transition: color .25s; }
+.expertise-hero-cta .portrait-link-arrow { color: var(--rose); transition: color .25s; display: inline-block; animation: hero-cta-nudge 5s ease-in-out infinite; }
+.expertise-hero-cta:hover .portrait-link-arrow { animation: none; }
+@media (prefers-reduced-motion: reduce) {
+  .expertise-hero-cta .portrait-link-arrow { animation: none; }
+}
 .expertise-hero-cta:hover {
   background: var(--rose);
   border-color: var(--rose);
