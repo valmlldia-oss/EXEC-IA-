@@ -1991,7 +1991,7 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   transform: translateY(-6px);
 }
 @media (max-width: 760px) {
-  .offre-web-tier--popular { transform: none; }
+  .offre-web-tier--popular { transform: none; margin-top: 12px; }
 }
 .offre-web-tier-name {
   font-family: var(--sans); font-size: .78rem; font-weight: 600;
@@ -5603,5 +5603,5 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   box-shadow: 0 4px 14px rgba(199,95,98,.3); z-index: 3;
 }
 @media (max-width: 900px) {
-  .offre-card--reference { transform: none; }
+  .offre-card--reference { transform: none; margin-top: 10px; }
 }
