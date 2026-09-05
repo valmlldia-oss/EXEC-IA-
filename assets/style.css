@@ -87,10 +87,17 @@ body {
   padding-top: 0;
 }
 /* Titre "Exemples d'initiatives IA" remonté d'une ligne ; le scroll-margin
-   compense pour que le titre reste sous la nav quand la section se snappe. */
+   compense pour que le titre reste sous la nav quand la section se snappe.
+   Le bloc CTA "90 jours" est mis de côté temporairement (voir commentaire
+   dans expertise.html) : sans lui, le contenu (titre + 6 cartes + nav du
+   carrousel) est bien plus court qu'un écran, et min-height:100vh laissait
+   un grand vide sous les cartes. Hauteur libre le temps que le bloc soit
+   remis en ligne — à revoir ensemble à ce moment-là. */
 #agents.snap-page {
   padding-top: calc(var(--nav-h) - 40px);
   scroll-margin-top: 40px;
+  min-height: auto;
+  padding-bottom: clamp(56px, 7vh, 80px);
 }
 /* Diagnostic express était centré verticalement (héritage de l'ancien
    comportement par défaut) : avec un wrap plus court que 100vh, ça laissait
