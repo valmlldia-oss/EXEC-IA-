@@ -3849,6 +3849,8 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   font-weight: 500;
   font-style: normal;
 }
+/* Chute en italique : respiration resserrée (pas un saut de ligne complet) */
+.nl-hero-em { display: inline-block; margin-top: .35em; }
 .newsletter-content h2 em { font-style: italic; }
 .nl-title-num {
   font-size: 1.45em;
