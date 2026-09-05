@@ -4173,7 +4173,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   position: relative;
 }
 .nl-checklist li::before {
-  content: '✓';
+  content: '\00D7';
   position: absolute;
   left: 0;
   top: 0;
