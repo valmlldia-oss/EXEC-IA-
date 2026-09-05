@@ -1254,7 +1254,7 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
 .tl-item--studeria .tl-studeria-text { flex: 1 1 auto; }
 .tl-item--studeria .tl-role { margin-bottom: 0; max-width: none; }
 .tl-item--studeria .studeria-certifs { margin-top: 0; }
-.tl-item p { font-size: 1.05rem; line-height: 1.65; color: var(--text); max-width: 780px; }
+.tl-item p { font-size: 1.05rem; line-height: 1.65; color: var(--text); max-width: 860px; }
 .tl-link {
   display: inline-block; margin-top: 7px;
   font-size: .82rem; font-weight: 500; color: var(--rose);
@@ -2837,13 +2837,23 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 .expertise-strip > .wrap { width: 100%; }
 /* Piste de défilement : deux copies de la ligne bout à bout, translatées de -50% en boucle.
    Le fondu aux bords est ICI (sur le texte), jamais sur .expertise-strip (le fond). */
+/* Le fondu doit rester fixe par rapport à la bande visible, pas au texte qui
+   défile en dessous : appliqué sur .es-track (qui bouge), le masque était
+   calé sur la largeur totale du texte (largement > à la bande visible) et
+   ne coïncidait presque jamais avec les bords réels — d'où des mots/barres
+   coupés net au lieu d'un fondu, et un défilement qui semblait "sauter".
+   Le masque vit donc sur .es-viewport (immobile, largeur = bande visible) ;
+   .es-track défile librement à l'intérieur, sans masque propre. */
+.es-viewport {
+  overflow: hidden;
+  width: 100%;
+  -webkit-mask-image: linear-gradient(to right, transparent 0, transparent 60px, #000 140px, #000 calc(100% - 140px), transparent calc(100% - 60px), transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0, transparent 60px, #000 140px, #000 calc(100% - 140px), transparent calc(100% - 60px), transparent 100%);
+}
 .es-track {
   display: flex;
   width: max-content;
-  overflow: hidden;
   animation: es-scroll 32s linear infinite;
-  -webkit-mask-image: linear-gradient(to right, transparent 0, transparent 60px, #000 180px, #000 calc(100% - 180px), transparent calc(100% - 60px), transparent 100%);
-  mask-image: linear-gradient(to right, transparent 0, transparent 60px, #000 180px, #000 calc(100% - 180px), transparent calc(100% - 60px), transparent 100%);
 }
 .es-track:hover { animation-play-state: paused; }
 @keyframes es-scroll {
