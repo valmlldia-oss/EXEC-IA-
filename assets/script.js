@@ -374,6 +374,7 @@ document.querySelectorAll('[data-calendly]').forEach(btn => {
     const rect = bar.getBoundingClientRect();
     audio.currentTime = ((e.clientX - rect.left) / rect.width) * audio.duration;
   });
+})();
 
 /* ── Suppression damier équipe de choc ── */
 function removeCheckerboard(img) {
@@ -457,4 +458,21 @@ window.addEventListener('load', () => {
   window.addEventListener('scroll', onScroll, { passive: true });
   window.addEventListener('resize', () => { measure(); update(); });
 })();
+
+/* ── Micro-signature EXEC'IA (page À propos) — apparition unique au scroll ── */
+(function () {
+  const mark = document.querySelector('.about-cta-mark');
+  if (!mark) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    mark.classList.add('is-visible');
+    return;
+  }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      mark.classList.add('is-visible');
+      observer.unobserve(mark);
+    });
+  }, { threshold: 0.4 });
+  observer.observe(mark);
 })();
