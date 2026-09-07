@@ -1006,6 +1006,16 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
   padding-bottom: clamp(56px, 7vh, 84px);
 }
 .about-cta-inner { text-align: center; max-width: 640px; margin: 0 auto; }
+.about-cta-mark {
+  display: block; width: 30px; height: auto;
+  margin: 0 auto 18px;
+}
+@media (max-width: 900px) {
+  .about-cta-mark { width: 28px; margin-bottom: 16px; }
+}
+@media (max-width: 560px) {
+  .about-cta-mark { width: 26px; margin-bottom: 14px; }
+}
 .about-cta-title {
   font-family: var(--serif); font-size: clamp(1.9712rem, 2.9568vw, 2.5872rem); font-weight: 500;
   color: var(--plum); margin: 0 0 14px;
