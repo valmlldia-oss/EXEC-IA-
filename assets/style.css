@@ -972,6 +972,13 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
   line-height: 1;
 }
 .about-label--mission { margin-top: 26px; }
+.about-label--principe { margin-top: 26px; }
+/* Texte secondaire sous « Un principe » — sobre, plus petit que les lede */
+.about-principe-sub {
+  font-family: var(--sans); font-size: .92rem; font-weight: 400;
+  color: var(--plum); opacity: .75; line-height: 1.5;
+  margin: 8px 0 0 !important;
+}
 /* Conviction + mission : matrice ve-title (Cormorant, 500) — voix éditoriale */
 .about-lede--voice { font-family: var(--serif); font-weight: 500; }
 .about-lede--voice em { font-style: italic; }
@@ -990,6 +997,23 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
   /* Rythme de fond (remplace l'ancien filet prune épais) : se distingue
      de #about, identique en teinte sans lui */
   background: linear-gradient(180deg, rgba(217,201,195,.2), rgba(217,201,195,.07) 40%, var(--ivory) 80%);
+}
+/* Conclusion — transition sobre vers le diagnostic (avant le footer) :
+   contenu court, pas de hauteur d'écran forcée, pas de bande colorée. */
+#about-cta.snap-page {
+  min-height: auto;
+  padding-top: clamp(48px, 6vh, 72px);
+  padding-bottom: clamp(56px, 7vh, 84px);
+}
+.about-cta-inner { text-align: center; max-width: 640px; margin: 0 auto; }
+.about-cta-title {
+  font-family: var(--serif); font-size: clamp(1.9712rem, 2.9568vw, 2.5872rem); font-weight: 500;
+  color: var(--plum); margin: 0 0 14px;
+}
+.about-cta-sub {
+  font-family: var(--sans); font-size: 1.05rem; font-weight: 400;
+  color: var(--plum); opacity: .82; line-height: 1.5;
+  margin: 0 0 28px;
 }
 .about-label--piliers { font-size: .82rem; font-weight: 600; letter-spacing: .18em; padding: 6px 18px; margin-bottom: 4px; }
 .about-body .about-label:first-child { margin-top: 0; }
