@@ -782,6 +782,8 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
   color: var(--rose); opacity: 1;
 }
 .eyebrow-light { color: rgba(250,246,242,.88); }
+/* Suffixe discret mais lisible — pas d'effet "texte désactivé" */
+.eyebrow-sub { color: var(--plum); opacity: .78; font-weight: 500; }
 .section-title {
   font-family: var(--serif);
   font-size: clamp(2.2rem, 3.4vw, 3.2rem);
@@ -1065,9 +1067,9 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
   background: var(--rose);
 }
 .persp-card-visual-tag {
-  font-family: var(--sans); font-weight: 800; font-size: 1.6rem;
+  font-family: var(--sans); font-weight: 800; font-size: 1.68rem;
   letter-spacing: -.02em; text-transform: uppercase;
-  color: rgba(99,59,74,.09);
+  color: rgba(99,59,74,.2);
   white-space: nowrap;
 }
 .persp-card-meta {
@@ -1244,6 +1246,10 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
   display: block; width: 100%; height: 1px;
   background: rgba(99,59,74,.16);
 }
+/* Perspectives : espace réglementaire entre le filet et le contenu, comme
+   .parcours-top-sep ailleurs sur la page (32px) — #about-cta reste collé
+   volontairement (espace resserré demandé plus haut). */
+#perspectives > .about-cta-sep { margin-bottom: 32px; }
 /* Micro-signature EXEC'IA — tracé inchangé, taille relevée pour devenir
    immédiatement identifiable (48-52px desktop / 42-46px tablette /
    36-40px mobile). */
