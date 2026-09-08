@@ -1481,9 +1481,17 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
   display: inline-block; text-decoration: none;
   border: 1px solid var(--rose); border-radius: 6px; padding: 9px 20px;
   color: #4F2F3B; font-weight: 600; font-size: 1.04rem; letter-spacing: .01em;
-  background: rgba(250,246,242,.5); transition: background .2s, border-color .2s;
+  background: rgba(250,246,242,.5);
+  transition: background .25s var(--ease), border-color .25s var(--ease),
+    transform .25s var(--ease), box-shadow .25s var(--ease);
 }
-.pilier-btn--link:hover { background: rgba(199,95,98,.09); }
+.pilier:hover .pilier-btn {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 22px rgba(199,95,98,.22);
+  border-color: var(--rose);
+  background: rgba(199,95,98,.1);
+}
+.pilier-btn--link:hover { background: rgba(199,95,98,.16); }
 .piliers-intro { max-width: 860px; }
 @media (max-width: 760px) {
   .piliers { grid-template-columns: 1fr; gap: 16px; }
