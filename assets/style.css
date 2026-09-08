@@ -1014,7 +1014,7 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
 }
 .persp-intro {
   font-family: var(--sans); font-size: 1.05rem; font-weight: 400;
-  color: var(--text); line-height: 1.6; max-width: 640px;
+  color: var(--text); line-height: 1.6; max-width: 760px;
   margin: 0 0 36px;
 }
 /* Défilement horizontal — même mécanique que le carousel Agents (expertise.html) */
@@ -1112,7 +1112,7 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
 .persp-card--link:hover .persp-card-title { color: var(--rose); }
 
 /* ═══ ARTICLE PERSPECTIVES — gabarit éditorial (lecture longue) ═══ */
-.article-page { padding-top: calc(var(--nav-h) + 32px); padding-bottom: clamp(60px, 8vw, 100px); }
+.article-page { padding-top: calc(var(--nav-h) + 32px); padding-bottom: clamp(24px, 3vw, 40px); }
 .article-back {
   display: inline-flex; align-items: center; gap: 6px;
   font-family: var(--sans); font-size: .85rem; font-weight: 600;
@@ -1194,12 +1194,20 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
 }
 
 .article-close { max-width: 640px; margin: 60px 0 0; }
-.article-close-line1, .article-close-line2 {
-  font-family: var(--serif); font-weight: 500; font-size: clamp(1.3rem, 2vw, 1.55rem);
+/* Sélecteur renforcé (.article-close .article-close-lineN) : nécessaire pour
+   passer devant ".article-close p" qui a une spécificité plus élevée
+   (classe + élément) et écrasait sinon la police/taille ci-dessous. */
+.article-close .article-close-line1,
+.article-close .article-close-line2 {
+  font-family: var(--serif); font-weight: 500;
+  font-size: clamp(1.9712rem, 2.9568vw, 2.5872rem);
+  line-height: 1.25;
+  color: var(--plum);
   margin: 0;
 }
-.article-close-line1 { color: var(--plum); }
-.article-close-line2 { color: var(--rose); font-style: italic; margin-bottom: 24px; }
+.article-close .article-close-line1 { margin-bottom: 4px; }
+.article-close .article-close-line2 { margin-bottom: 28px; }
+.article-close .article-close-line2 em { color: var(--rose); font-style: italic; }
 .article-close p {
   font-family: var(--sans); font-size: 1.04rem; line-height: 1.75;
   color: var(--text); margin: 0 0 14px;
