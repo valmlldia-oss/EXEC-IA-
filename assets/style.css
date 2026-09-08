@@ -1222,6 +1222,13 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
    de lecture (max-width sur .article-intro etc.), donc pas de vide qui
    revient. */
 .article-page .wrap { max-width: 1180px; }
+/* Aligne le contenu de l'article avec le bord gauche du cadre du
+   logo « EXEC'IA Consulting » dans la nav — et non avec le bord du
+   logo rond qui le précède (62px = largeur du rond + gap). */
+.article-page .wrap { padding-left: 92px; }
+@media (max-width: 640px) {
+  .article-page .wrap { padding-left: 82px; }
+}
 /* En-tête : texte à gauche, image de couverture complète (non recadrée) à
    droite — sur la petite vignette (carte Perspectives) l'image et son
    texte sont coupés ; ici tout reste lisible. */
