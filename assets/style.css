@@ -1069,7 +1069,7 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
 .persp-card-visual-tag {
   font-family: var(--sans); font-weight: 800; font-size: 1.68rem;
   letter-spacing: -.02em; text-transform: uppercase;
-  color: rgba(99,59,74,.2);
+  color: rgba(99,59,74,.28);
   white-space: nowrap;
 }
 .persp-card-meta {

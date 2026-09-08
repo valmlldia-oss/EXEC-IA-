@@ -489,12 +489,20 @@ window.addEventListener('load', () => {
   const btnNext = document.getElementById('perspNext');
   let current = 0;
 
-  /* Position réelle de chaque carte (et non un pas uniforme) : avec seulement
-     3 cartes, la largeur défilable peut être plus petite qu'un pas complet
-     — un calcul par index × largeur fixe saute alors directement à la fin. */
+  /* Position réelle de chaque carte (et non un pas uniforme) : avec peu de
+     cartes, la largeur défilable peut être plus petite qu'un pas complet
+     — un calcul par index × largeur fixe saute alors directement à la fin.
+     Le dernier élément ne peut pas toujours être parfaitement aligné à
+     gauche (pas assez de contenu à faire défiler derrière lui) : on
+     compare toujours à la position réellement atteignable (clampée au
+     scroll max), sinon la détection "carte la plus proche" désigne la
+     mauvaise carte une fois arrivé en butée. */
+  function maxScroll() { return outer.scrollWidth - outer.clientWidth; }
+
   function goTo(idx) {
     current = Math.max(0, Math.min(idx, cards.length - 1));
-    outer.scrollTo({ left: cards[current].offsetLeft, behavior: 'smooth' });
+    const target = Math.min(cards[current].offsetLeft, maxScroll());
+    outer.scrollTo({ left: target, behavior: 'smooth' });
     dots.forEach((d, i) => d.classList.toggle('active', i === current));
     if (btnPrev) btnPrev.disabled = current === 0;
     if (btnNext) btnNext.disabled = current === cards.length - 1;
@@ -505,10 +513,15 @@ window.addEventListener('load', () => {
   dots.forEach(d => d.addEventListener('click', () => goTo(+d.dataset.idx)));
 
   outer.addEventListener('scroll', () => {
+    const cap = maxScroll();
     let idx = 0, minDist = Infinity;
     cards.forEach((c, i) => {
-      const d = Math.abs(c.offsetLeft - outer.scrollLeft);
-      if (d < minDist) { minDist = d; idx = i; }
+      const target = Math.min(c.offsetLeft, cap);
+      const d = Math.abs(target - outer.scrollLeft);
+      /* <= (et non <) : en butée de scroll, plusieurs cartes en fin de liste
+         se clampent au même maxScroll — l'égalité doit désigner la dernière,
+         pas la première rencontrée. */
+      if (d <= minDist) { minDist = d; idx = i; }
     });
     if (idx !== current) {
       current = idx;
