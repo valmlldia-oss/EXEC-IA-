@@ -1094,6 +1094,7 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
 .persp-card-visual--img { height: 175px; padding: 0; }
 .persp-card-visual--img img { width: 100%; height: 100%; object-fit: cover; object-position: 55% 10%; display: block; }
 .persp-card-visual--decision img { object-position: 50% 6%; }
+.persp-card-visual--gouvernance img { transform: scale(0.96); }
 /* Étiquette catégorie en surimpression discrète sur une vraie photo */
 .persp-card-visual-overlay {
   position: absolute; left: 16px; bottom: 10px;
