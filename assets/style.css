@@ -1230,6 +1230,12 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
   align-items: start; margin-bottom: 8px;
 }
 .article-header-image { max-width: 340px; margin-left: auto; }
+/* Image pas encore reçue — espace réservé sobre, même format */
+.article-header-image--pending {
+  aspect-ratio: 1312 / 1199; border-radius: 14px;
+  background: linear-gradient(135deg, rgba(217,201,195,.35), rgba(244,237,231,.6));
+  border: 1px solid rgba(99,59,74,.1);
+}
 .article-header-image img {
   width: 100%; height: auto; display: block; border-radius: 14px;
   box-shadow: 0 12px 40px rgba(99,59,74,.14);
@@ -1283,21 +1289,28 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
 }
 /* Corps de l'article en deux colonnes — effet "double page de livre",
    plus condensé qu'une seule longue colonne. */
+/* Deux colonnes explicites (et non column-count auto) : la 2e "page"
+   démarre exactement à la même ligne que la 1re — column-count aurait
+   laissé le navigateur équilibrer seul, sans garantie d'alignement. */
 .article-book {
-  column-count: 2; column-gap: 52px;
-  column-rule: 1px solid rgba(99,59,74,.14);
-  margin-top: 12px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0 52px;
+  align-items: start; margin-top: 12px; position: relative;
 }
+.article-book::before {
+  content: ''; position: absolute; top: 0; bottom: 0; left: 50%;
+  width: 1px; background: rgba(99,59,74,.14);
+}
+.article-book-col { display: flex; flex-direction: column; }
 .article-book .article-intro,
 .article-book .article-qlist,
 .article-book .article-question,
 .article-book .article-close {
   max-width: none;
-  break-inside: avoid; -webkit-column-break-inside: avoid;
 }
 .article-cta-wrap { text-align: center; margin-top: 44px; }
 @media (max-width: 760px) {
-  .article-book { column-count: 1; column-rule: none; }
+  .article-book { grid-template-columns: 1fr; gap: 0; }
+  .article-book::before { display: none; }
 }
 .article-intro { max-width: 640px; margin: 28px 0 0; }
 .article-intro p {
