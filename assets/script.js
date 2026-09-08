@@ -476,3 +476,53 @@ window.addEventListener('load', () => {
   }, { threshold: 0.4 });
   observer.observe(mark);
 })();
+
+/* ── Perspectives carousel (page À propos) — même mécanique que le carousel Agents ── */
+(function () {
+  const outer = document.getElementById('perspTrack');
+  if (!outer) return;
+  const track = outer.querySelector('.persp-track');
+  const cards = outer.querySelectorAll('.persp-card');
+  const section = document.getElementById('perspectives');
+  const dots  = section.querySelectorAll('[data-idx]');
+  const btnPrev = document.getElementById('perspPrev');
+  const btnNext = document.getElementById('perspNext');
+  let current = 0;
+
+  /* Position réelle de chaque carte (et non un pas uniforme) : avec seulement
+     3 cartes, la largeur défilable peut être plus petite qu'un pas complet
+     — un calcul par index × largeur fixe saute alors directement à la fin. */
+  function goTo(idx) {
+    current = Math.max(0, Math.min(idx, cards.length - 1));
+    outer.scrollTo({ left: cards[current].offsetLeft, behavior: 'smooth' });
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    if (btnPrev) btnPrev.disabled = current === 0;
+    if (btnNext) btnNext.disabled = current === cards.length - 1;
+  }
+
+  btnPrev?.addEventListener('click', () => goTo(current - 1));
+  btnNext?.addEventListener('click', () => goTo(current + 1));
+  dots.forEach(d => d.addEventListener('click', () => goTo(+d.dataset.idx)));
+
+  outer.addEventListener('scroll', () => {
+    let idx = 0, minDist = Infinity;
+    cards.forEach((c, i) => {
+      const d = Math.abs(c.offsetLeft - outer.scrollLeft);
+      if (d < minDist) { minDist = d; idx = i; }
+    });
+    if (idx !== current) {
+      current = idx;
+      dots.forEach((d, i) => d.classList.toggle('active', i === current));
+      if (btnPrev) btnPrev.disabled = current === 0;
+      if (btnNext) btnNext.disabled = current === cards.length - 1;
+    }
+  }, { passive: true });
+
+  let drag = false, startX = 0, startScroll = 0;
+  outer.addEventListener('mousedown', e => { drag = true; startX = e.pageX; startScroll = outer.scrollLeft; outer.style.scrollBehavior = 'auto'; });
+  outer.addEventListener('mouseleave', () => { drag = false; outer.style.scrollBehavior = ''; });
+  outer.addEventListener('mouseup',    () => { drag = false; outer.style.scrollBehavior = ''; });
+  outer.addEventListener('mousemove',  e => { if (!drag) return; e.preventDefault(); outer.scrollLeft = startScroll - (e.pageX - startX); });
+
+  goTo(0);
+})();

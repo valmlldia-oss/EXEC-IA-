@@ -1017,24 +1017,85 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
   color: var(--text); line-height: 1.6; max-width: 640px;
   margin: 0 0 36px;
 }
-.persp-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
-  margin-bottom: 28px;
+/* Défilement horizontal — même mécanique que le carousel Agents (expertise.html) */
+.persp-track-outer {
+  overflow-x: auto; overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  padding: .25rem 0 .5rem;
+  cursor: grab;
+  scroll-padding-left: 1.5rem;
+  max-width: 100vw;
+  scrollbar-width: none;
+}
+.persp-track-outer:active { cursor: grabbing; }
+.persp-track-outer::-webkit-scrollbar { display: none; }
+.persp-track {
+  display: flex; gap: 1.25rem;
+  width: max-content;
+  padding: 0 1.5rem 0 0;
 }
 .persp-card {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: 360px;
   background: var(--white);
   border: 1px solid rgba(99,59,74,.14);
   border-radius: 14px;
-  padding: 26px 24px;
+  overflow: hidden;
+  padding: 0 24px 26px;
   display: flex; flex-direction: column; gap: 12px;
+  box-shadow: 0 4px 24px rgba(99,59,74,.08);
+  transition: transform .3s, box-shadow .3s;
+}
+/* Bandeau visuel sobre — typographique, à la charte, sans photo ni cliché IA */
+.persp-card-visual {
+  height: 92px;
+  margin: 0 -24px 4px;
+  padding: 0 24px;
+  display: flex; align-items: center;
+  position: relative; overflow: hidden;
+  background: linear-gradient(135deg, rgba(217,201,195,.4), rgba(244,237,231,.65));
+  border-bottom: 1px solid rgba(99,59,74,.1);
+}
+.persp-card-visual::before {
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px;
+  background: var(--rose);
+}
+.persp-card-visual-tag {
+  font-family: var(--sans); font-weight: 800; font-size: 2.4rem;
+  letter-spacing: -.02em; text-transform: uppercase;
+  color: rgba(99,59,74,.14);
+  white-space: nowrap;
 }
 .persp-card-meta {
-  font-family: var(--sans); font-size: .72rem; font-weight: 600;
-  letter-spacing: .12em; text-transform: uppercase; color: var(--rose);
+  display: inline-flex; align-self: flex-start;
+  font-family: var(--sans); font-size: .68rem; font-weight: 700;
+  letter-spacing: .1em; text-transform: uppercase; color: var(--rose);
+  background: rgba(199,95,98,.09);
+  border-radius: 20px; padding: 5px 12px;
 }
 .persp-card-title {
   font-family: var(--serif); font-size: 1.25rem; font-weight: 500;
   color: var(--plum); line-height: 1.35; margin: 0;
+}
+.persp-card-subtitle {
+  font-family: var(--serif); font-style: italic; font-weight: 500;
+  font-size: 1rem; color: var(--rose); line-height: 1.4; margin: -6px 0 0;
+}
+.persp-card-desc {
+  font-family: var(--sans); font-size: .92rem; line-height: 1.6;
+  color: var(--text); opacity: .85; margin: 2px 0 0;
+}
+.persp-card-read {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-family: var(--sans); font-size: .85rem; font-weight: 600;
+  color: var(--rose); margin-top: 6px;
+}
+.persp-card-read .portrait-link-arrow { transition: transform .25s var(--ease); }
+.persp-card--link:hover .persp-card-read .portrait-link-arrow { transform: translateX(4px); }
+.persp-card-soon {
+  display: inline-block; font-family: var(--sans); font-size: .8rem;
+  font-weight: 600; color: var(--plum); opacity: .45; margin-top: 6px;
 }
 .persp-all-link {
   display: inline-flex; align-items: center; gap: 6px;
@@ -1043,11 +1104,11 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
 }
 .persp-all-link .portrait-link-arrow { transition: transform .25s var(--ease); }
 .persp-all-link:hover .portrait-link-arrow { transform: translateX(4px); }
-@media (max-width: 760px) {
-  .persp-grid { grid-template-columns: 1fr; }
+@media (max-width: 640px) {
+  .persp-card { width: 82vw; }
 }
-.persp-card--link { text-decoration: none; transition: border-color .25s var(--ease), transform .25s var(--ease); }
-.persp-card--link:hover { border-color: var(--rose); transform: translateY(-2px); }
+.persp-card--link { text-decoration: none; }
+.persp-card--link:hover { border-color: var(--rose); transform: translateY(-5px); box-shadow: 0 20px 50px rgba(99,59,74,.16); }
 .persp-card--link:hover .persp-card-title { color: var(--rose); }
 
 /* ═══ ARTICLE PERSPECTIVES — gabarit éditorial (lecture longue) ═══ */

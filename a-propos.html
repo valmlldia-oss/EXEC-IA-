@@ -32,7 +32,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=block" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css?v=88">
+  <link rel="stylesheet" href="assets/style.css?v=89">
 </head>
 <body>
 <h1 class="sr-only">À propos — Valérie Mailland, conseil stratégique en IA · EXEC'IA</h1>
@@ -171,25 +171,48 @@
 <section id="perspectives" class="bg-ivory snap-page">
   <div class="wrap">
     <span class="eyebrow reveal">Perspectives</span>
-    <h2 class="section-title reveal delay-1">Un regard de dirigeante sur l&#8217;IA.</h2>
+    <h2 class="section-title reveal delay-1">Un regard de dirigeante sur l&#8217;<span style="color:var(--rose)">IA.</span></h2>
     <p class="persp-intro reveal delay-2">Décision, gouvernance, création de valeur, transformation&nbsp;: des analyses pour prendre du recul sur ce que l&#8217;IA change réellement dans l&#8217;entreprise.</p>
 
-    <div class="persp-grid reveal delay-2">
+    <div class="persp-track-outer reveal delay-2" id="perspTrack">
+    <div class="persp-track">
       <a href="perspective-entreprise-utilise-deja-ia.html" class="persp-card persp-card--link">
+        <div class="persp-card-visual" aria-hidden="true"><span class="persp-card-visual-tag">Gouvernance</span></div>
         <span class="persp-card-meta">Gouvernance · 5 min</span>
-        <h3 class="persp-card-title">Votre entreprise utilise déjà l&#8217;IA. Même si vous n&#8217;avez encore rien décidé.</h3>
+        <h3 class="persp-card-title">Votre entreprise utilise déjà l&#8217;IA.</h3>
+        <p class="persp-card-subtitle">Même si vous n&#8217;avez encore rien décidé.</p>
+        <p class="persp-card-desc">L&#8217;IA résume, analyse et priorise déjà certaines décisions dans votre organisation — sans qu&#8217;aucune stratégie ne l&#8217;ait arbitré.</p>
+        <span class="persp-card-read">Lire l&#8217;article <span class="portrait-link-arrow">→</span></span>
       </a>
       <div class="persp-card">
+        <div class="persp-card-visual" aria-hidden="true"><span class="persp-card-visual-tag">Décision</span></div>
         <span class="persp-card-meta">Décision · 6 min</span>
         <h3 class="persp-card-title">Quelles décisions un dirigeant ne devrait-il jamais déléguer à l&#8217;IA&nbsp;?</h3>
+        <p class="persp-card-subtitle">Entre déléguer et abdiquer, la frontière est plus fine qu&#8217;il n&#8217;y paraît.</p>
+        <p class="persp-card-desc">Certaines décisions gagnent à être éclairées par l&#8217;IA. D&#8217;autres engagent une responsabilité que l&#8217;entreprise doit continuer à assumer elle-même.</p>
+        <span class="persp-card-soon">Bientôt en ligne</span>
       </div>
       <div class="persp-card">
+        <div class="persp-card-visual" aria-hidden="true"><span class="persp-card-visual-tag">Valeur</span></div>
         <span class="persp-card-meta">Transformation · 5 min</span>
         <h3 class="persp-card-title">Plus de cas d&#8217;usage IA ne signifie pas plus de valeur.</h3>
+        <p class="persp-card-subtitle">Le prochain enjeu de l&#8217;IA n&#8217;est plus l&#8217;adoption, mais l&#8217;arbitrage.</p>
+        <p class="persp-card-desc">Multiplier les projets IA sans les prioriser dilue l&#8217;effort plus qu&#8217;il ne crée de résultat. La vraie question n&#8217;est pas combien, mais lesquels.</p>
+        <span class="persp-card-soon">Bientôt en ligne</span>
       </div>
     </div>
+    </div>
+    <div class="agents-nav">
+      <button class="agents-dot active" data-idx="0"></button>
+      <button class="agents-dot" data-idx="1"></button>
+      <button class="agents-dot" data-idx="2"></button>
+    </div>
+    <div class="agents-arrows">
+      <button class="agents-arrow" id="perspPrev">&#8592;</button>
+      <button class="agents-arrow" id="perspNext">&#8594;</button>
+    </div>
 
-    <a href="#perspectives" class="persp-all-link">Toutes les Perspectives <span class="portrait-link-arrow">→</span></a>
+    <a href="perspective-entreprise-utilise-deja-ia.html" class="persp-all-link">Toutes les Perspectives <span class="portrait-link-arrow">→</span></a>
   </div>
 </section>
 
