@@ -1226,21 +1226,23 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
    droite — sur la petite vignette (carte Perspectives) l'image et son
    texte sont coupés ; ici tout reste lisible. */
 .article-header-grid {
-  display: grid; grid-template-columns: 1.15fr 1fr; gap: 56px;
+  display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px;
   align-items: start; margin-bottom: 8px;
 }
+.article-header-image { max-width: 340px; margin-left: auto; }
 .article-header-image img {
   width: 100%; height: auto; display: block; border-radius: 14px;
   box-shadow: 0 12px 40px rgba(99,59,74,.14);
 }
 @media (max-width: 860px) {
   .article-header-grid { grid-template-columns: 1fr; gap: 28px; }
+  .article-header-image { max-width: 100%; margin-left: 0; }
 }
 .article-back {
   display: inline-flex; align-items: center; gap: 6px;
   font-family: var(--sans); font-size: .85rem; font-weight: 600;
   color: var(--plum); opacity: .7; text-decoration: none;
-  margin-bottom: 32px; transition: opacity .2s, color .2s;
+  margin-bottom: 20px; transition: opacity .2s, color .2s;
 }
 .article-back:hover { opacity: 1; color: var(--rose); }
 .article-meta {
@@ -1250,8 +1252,8 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
 }
 .article-title {
   font-family: var(--serif); font-weight: 500; letter-spacing: -.01em;
-  font-size: clamp(2.1rem, 4vw, 3rem); line-height: 1.18; color: var(--plum);
-  max-width: 780px; margin: 0;
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem); line-height: 1.22; color: var(--plum);
+  max-width: 560px; margin: 0;
 }
 .article-subtitle {
   font-family: var(--serif); font-style: italic; font-weight: 500;
@@ -1266,7 +1268,7 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
 .article-source-note--linkedin {
   display: inline-flex; align-items: center; gap: 7px; opacity: .85;
 }
-.article-linkedin-icon { height: 15px; width: auto; display: inline-block; }
+.article-linkedin-icon { height: 16.5px; width: auto; display: inline-block; }
 /* Bloc des 3 questions — lisible, élégant, sans accordéon */
 .article-qlist { max-width: 620px; margin: 28px 0 0; padding-left: 22px; border-left: 2px solid rgba(199,95,98,.4); }
 .article-qlist p {
@@ -1278,6 +1280,24 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
   font-family: var(--sans); font-size: .88rem; font-weight: 600;
   color: var(--rose); opacity: .8; letter-spacing: .01em;
   margin: 10px 0 0; line-height: 1.6;
+}
+/* Corps de l'article en deux colonnes — effet "double page de livre",
+   plus condensé qu'une seule longue colonne. */
+.article-book {
+  column-count: 2; column-gap: 52px;
+  column-rule: 1px solid rgba(99,59,74,.14);
+  margin-top: 12px;
+}
+.article-book .article-intro,
+.article-book .article-qlist,
+.article-book .article-question,
+.article-book .article-close {
+  max-width: none;
+  break-inside: avoid; -webkit-column-break-inside: avoid;
+}
+.article-cta-wrap { text-align: center; margin-top: 44px; }
+@media (max-width: 760px) {
+  .article-book { column-count: 1; column-rule: none; }
 }
 .article-intro { max-width: 640px; margin: 28px 0 0; }
 .article-intro p {
