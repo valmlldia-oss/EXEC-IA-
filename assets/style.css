@@ -784,6 +784,13 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
 .eyebrow-light { color: rgba(250,246,242,.88); }
 /* Suffixe discret mais lisible — pas d'effet "texte désactivé" */
 .eyebrow-sub { color: var(--plum); opacity: .78; font-weight: 500; }
+/* Petit trait décoratif terracotta sous "blog" — pas un soulignement complet,
+   effet graphique discret et légèrement décentré. */
+.eyebrow-blog { position: relative; display: inline-block; }
+.eyebrow-blog::after {
+  content: ''; position: absolute; left: 6%; width: 36%; bottom: -3px;
+  height: 2px; background: var(--rose); opacity: .85;
+}
 .section-title {
   font-family: var(--serif);
   font-size: clamp(2.2rem, 3.4vw, 3.2rem);
@@ -1213,6 +1220,23 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
   font-size: clamp(1.25rem, 2.2vw, 1.6rem); color: var(--rose);
   max-width: 780px; margin: 8px 0 0;
 }
+/* Note discrète — provenance LinkedIn / source citée */
+.article-source-note {
+  font-family: var(--sans); font-size: .85rem; font-weight: 500;
+  color: var(--plum); opacity: .55; margin: 10px 0 0;
+}
+/* Bloc des 3 questions — lisible, élégant, sans accordéon */
+.article-qlist { max-width: 620px; margin: 28px 0 0; padding-left: 22px; border-left: 2px solid rgba(199,95,98,.4); }
+.article-qlist p {
+  font-family: var(--serif); font-style: italic; font-weight: 500;
+  font-size: 1.15rem; color: var(--plum); line-height: 1.5; margin: 0 0 8px;
+}
+.article-qlist p:last-child { margin-bottom: 0; }
+.article-hashtags {
+  font-family: var(--sans); font-size: .88rem; font-weight: 600;
+  color: var(--rose); opacity: .8; letter-spacing: .01em;
+  margin: 10px 0 0; line-height: 1.6;
+}
 .article-intro { max-width: 640px; margin: 28px 0 0; }
 .article-intro p {
   font-family: var(--sans); font-size: 1.03rem; line-height: 1.62;
@@ -1284,7 +1308,11 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
   margin: 0;
 }
 .article-close .article-close-line1 { margin-bottom: 4px; }
-.article-close .article-close-line2 { margin-bottom: 28px; }
+.article-close .article-close-line2 {
+  margin-bottom: 28px;
+  font-size: clamp(1.4rem, 2.1vw, 1.75rem);
+  font-style: italic;
+}
 .article-close .article-close-line2 em { color: var(--rose); font-style: italic; }
 .article-close p {
   font-family: var(--sans); font-size: 1.04rem; line-height: 1.75;
