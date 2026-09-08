@@ -1047,9 +1047,12 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
   box-shadow: 0 4px 24px rgba(99,59,74,.08);
   transition: transform .3s, box-shadow .3s;
 }
-/* Bandeau visuel sobre — typographique, à la charte, sans photo ni cliché IA */
+/* Bandeau visuel sobre — typographique, à la charte, sans photo ni cliché IA.
+   Signature graphique éditoriale SECONDAIRE : ne doit plus concurrencer le
+   titre de l'article (correctif hiérarchie 08/09/2026) — taille et hauteur
+   réduites, opacité renforcée. */
 .persp-card-visual {
-  height: 92px;
+  height: 58px;
   margin: 0 -24px 4px;
   padding: 0 24px;
   display: flex; align-items: center;
@@ -1062,9 +1065,9 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
   background: var(--rose);
 }
 .persp-card-visual-tag {
-  font-family: var(--sans); font-weight: 800; font-size: 2.4rem;
+  font-family: var(--sans); font-weight: 800; font-size: 1.6rem;
   letter-spacing: -.02em; text-transform: uppercase;
-  color: rgba(99,59,74,.14);
+  color: rgba(99,59,74,.09);
   white-space: nowrap;
 }
 .persp-card-meta {
@@ -1074,16 +1077,17 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
   background: rgba(199,95,98,.09);
   border-radius: 20px; padding: 5px 12px;
 }
+/* Titre = information dominante de la carte (correctif hiérarchie 08/09/2026) */
 .persp-card-title {
-  font-family: var(--serif); font-size: 1.25rem; font-weight: 500;
-  color: var(--plum); line-height: 1.35; margin: 0;
+  font-family: var(--serif); font-size: 1.45rem; font-weight: 500;
+  color: var(--plum); line-height: 1.28; margin: 0;
 }
 .persp-card-subtitle {
   font-family: var(--serif); font-style: italic; font-weight: 500;
-  font-size: 1rem; color: var(--rose); line-height: 1.4; margin: -6px 0 0;
+  font-size: 1rem; color: var(--rose); line-height: 1.4; margin: -2px 0 0;
 }
 .persp-card-desc {
-  font-family: var(--sans); font-size: .92rem; line-height: 1.6;
+  font-family: var(--sans); font-size: .88rem; line-height: 1.5;
   color: var(--text); opacity: .85; margin: 2px 0 0;
 }
 .persp-card-read {
@@ -1113,6 +1117,10 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
 
 /* ═══ ARTICLE PERSPECTIVES — gabarit éditorial (lecture longue) ═══ */
 .article-page { padding-top: calc(var(--nav-h) + 32px); padding-bottom: clamp(24px, 3vw, 40px); }
+/* Le .wrap global (--max: 1600px) laissait toute la moitié droite vide sur
+   desktop pour une colonne de lecture à 640-780px — resserré à l'échelle
+   réelle du contenu (retour d'HORMOZI). */
+.article-page .wrap { max-width: 860px; }
 .article-back {
   display: inline-flex; align-items: center; gap: 6px;
   font-family: var(--sans); font-size: .85rem; font-weight: 600;
@@ -1135,27 +1143,27 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
   font-size: clamp(1.25rem, 2.2vw, 1.6rem); color: var(--rose);
   max-width: 780px; margin: 8px 0 0;
 }
-.article-intro { max-width: 640px; margin: 36px 0 0; }
+.article-intro { max-width: 640px; margin: 28px 0 0; }
 .article-intro p {
-  font-family: var(--sans); font-size: 1.08rem; line-height: 1.75;
-  color: var(--text); margin: 0 0 20px;
+  font-family: var(--sans); font-size: 1.03rem; line-height: 1.62;
+  color: var(--text); margin: 0 0 15px;
 }
 .article-intro p:last-child { margin-bottom: 0; }
 .article-question {
   font-family: var(--serif); font-style: italic; font-weight: 500;
   font-size: clamp(1.15rem, 1.8vw, 1.35rem); color: var(--plum);
-  max-width: 620px; margin: 32px 0 0; padding-left: 22px;
+  max-width: 620px; margin: 24px 0 0; padding-left: 22px;
   border-left: 2px solid var(--rose);
 }
 
 /* Accordéon — 5 volets fermés au chargement */
-.article-accordion { max-width: 720px; margin: 56px 0 0; }
+.article-accordion { max-width: 720px; margin: 40px 0 0; }
 .acc-item { border-top: 1px solid rgba(99,59,74,.14); }
 .acc-item:last-child { border-bottom: 1px solid rgba(99,59,74,.14); }
 .acc-item summary {
   list-style: none; cursor: pointer;
   display: flex; align-items: baseline; gap: 20px;
-  padding: 24px 0; -webkit-tap-highlight-color: transparent;
+  padding: 20px 0; -webkit-tap-highlight-color: transparent;
 }
 .acc-item summary::-webkit-details-marker { display: none; }
 .acc-num {
@@ -1173,16 +1181,16 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
   color: var(--rose); line-height: 1; transition: transform .3s var(--ease);
 }
 .acc-item[open] .acc-icon { transform: rotate(45deg); }
-.acc-body { padding: 0 0 32px; max-width: 640px; }
+.acc-body { padding: 0 0 24px; max-width: 640px; }
 .acc-body p {
-  font-family: var(--sans); font-size: 1.02rem; line-height: 1.75;
-  color: var(--text); margin: 0 0 18px;
+  font-family: var(--sans); font-size: .98rem; line-height: 1.6;
+  color: var(--text); margin: 0 0 13px;
 }
-.acc-body p.acc-tight { margin-bottom: 5px; }
+.acc-body p.acc-tight { margin-bottom: 4px; }
 .acc-body p.acc-quote {
-  font-family: var(--serif); font-style: italic; font-size: 1.12rem;
+  font-family: var(--serif); font-style: italic; font-size: 1.08rem;
   color: var(--plum); padding-left: 18px; border-left: 2px solid rgba(199,95,98,.4);
-  margin: 4px 0 20px;
+  margin: 3px 0 15px;
 }
 .acc-body p:last-child { margin-bottom: 0; }
 
@@ -1193,7 +1201,7 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
   .acc-item[open] .acc-body { animation: none; }
 }
 
-.article-close { max-width: 640px; margin: 60px 0 0; }
+.article-close { max-width: 640px; margin: 44px 0 0; }
 /* Sélecteur renforcé (.article-close .article-close-lineN) : nécessaire pour
    passer devant ".article-close p" qui a une spécificité plus élevée
    (classe + élément) et écrasait sinon la police/taille ci-dessous. */
