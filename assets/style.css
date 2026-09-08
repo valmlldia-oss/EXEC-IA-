@@ -174,6 +174,15 @@ strong, b { font-weight: 600; }
 }
 
 /* ─── NAVIGATION ─────────────────────────────────────────── */
+/* Barre de progression de lecture — fine, discrète, sous la nav */
+#scroll-progress {
+  position: fixed; top: 0; left: 0; height: 2px; width: 0%;
+  background: var(--rose); z-index: 1001;
+  transition: width .12s linear;
+}
+@media (prefers-reduced-motion: reduce) {
+  #scroll-progress { transition: none; }
+}
 #nav {
   position: fixed; top: 0; left: 0; right: 0;
   height: var(--nav-h); z-index: 999;
@@ -225,11 +234,22 @@ strong, b { font-weight: 600; }
   display: flex; align-items: center; gap: 32px; flex: 1; justify-content: center;
 }
 .nav-links a {
+  position: relative;
   font-size: .83rem; font-weight: 600;
   letter-spacing: .08em; text-transform: uppercase;
   color: var(--plum); transition: color .2s;
 }
 .nav-links a:hover { color: var(--rose); }
+/* Trait animé — se déploie sous l'onglet actif / survolé */
+.nav-links a::after {
+  content: ''; position: absolute; left: 0; bottom: -8px;
+  width: 0; height: 2px; background: var(--rose);
+  transition: width .3s var(--ease);
+}
+.nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+/* Logo — léger effet vivant au survol */
+.nav-brand { transition: transform .3s var(--ease); }
+.nav-brand:hover { transform: scale(1.035); }
 .nav-langs { display: inline-flex; align-items: center; gap: 0; flex-shrink: 0; margin-left: auto; }
 .nav-lang {
   position: relative;
