@@ -1216,8 +1216,26 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
 .article-page { padding-top: calc(var(--nav-h) + 32px); padding-bottom: clamp(24px, 3vw, 40px); }
 /* Le .wrap global (--max: 1600px) laissait toute la moitié droite vide sur
    desktop pour une colonne de lecture à 640-780px — resserré à l'échelle
-   réelle du contenu (retour d'HORMOZI). */
-.article-page .wrap { max-width: 860px; }
+   réelle du contenu (retour d'HORMOZI). Réélargi ensuite pour loger l'image
+   de couverture en pleine largeur à droite de l'en-tête (voir
+   .article-header-grid) — le corps de l'article garde sa propre largeur
+   de lecture (max-width sur .article-intro etc.), donc pas de vide qui
+   revient. */
+.article-page .wrap { max-width: 1180px; }
+/* En-tête : texte à gauche, image de couverture complète (non recadrée) à
+   droite — sur la petite vignette (carte Perspectives) l'image et son
+   texte sont coupés ; ici tout reste lisible. */
+.article-header-grid {
+  display: grid; grid-template-columns: 1.15fr 1fr; gap: 56px;
+  align-items: start; margin-bottom: 8px;
+}
+.article-header-image img {
+  width: 100%; height: auto; display: block; border-radius: 14px;
+  box-shadow: 0 12px 40px rgba(99,59,74,.14);
+}
+@media (max-width: 860px) {
+  .article-header-grid { grid-template-columns: 1fr; gap: 28px; }
+}
 .article-back {
   display: inline-flex; align-items: center; gap: 6px;
   font-family: var(--sans); font-size: .85rem; font-weight: 600;
