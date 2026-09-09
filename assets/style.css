@@ -1100,7 +1100,7 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
 .persp-card-visual--img img { width: 100%; height: 100%; object-fit: cover; object-position: 55% 10%; display: block; }
 .persp-card-visual--decision img { object-position: 50% 6%; }
 .persp-card-visual--transformation img { object-position: 50% 6%; }
-.persp-card-visual--creation img { object-position: 50% 6%; }
+.persp-card-visual--creation img { object-position: 50% 88%; }
 .persp-card-visual--gouvernance img { transform: scale(0.96); }
 /* Étiquette catégorie en surimpression discrète sur une vraie photo */
 .persp-card-visual-overlay {
@@ -1565,6 +1565,8 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
   white-space: nowrap; margin-bottom: 14px;
 }
 .pilier-ref { margin-top: auto; }
+.pilier-ref--double { display: flex; gap: 8px; flex-wrap: wrap; }
+.pilier-ref--double .pilier-btn { padding: 9px 14px; font-size: .92rem; }
 .pilier-btn {
   display: inline-block; text-decoration: none;
   border: 1px solid var(--rose); border-radius: 6px; padding: 9px 20px;
