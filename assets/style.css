@@ -1801,6 +1801,12 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
   color: var(--rose); font-weight: 600; text-decoration: none;
   border-bottom: 1px solid rgba(199,95,98,.4);
 }
+/* Ces 2 lignes tiennent sur une ligne à partir de 900px (texte petit,
+   contrairement au H2 Perspectives) ; en dessous, retour à la ligne
+   naturel pour ne jamais déborder sur mobile/tablette. */
+@media (min-width: 900px) {
+  .tl-studeria-topics, .tl-studeria-quote { white-space: nowrap; max-width: none; }
+}
 .tl-studeria-quote {
   font-size: .9rem; font-style: italic; color: var(--plum-muted); opacity: .85;
   margin: 0 0 10px; max-width: 640px;
@@ -2401,6 +2407,11 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
 .ss-label {
   font-size: .92rem; color: rgba(245,241,236,.82);
   letter-spacing: .06em; text-transform: uppercase; line-height: 1.45;
+}
+.ss-cert-tag {
+  display: block; font-size: .64rem; font-weight: 700;
+  letter-spacing: .1em; text-transform: uppercase;
+  color: var(--rose); opacity: .85; margin: 2px 0 4px;
 }
 /* petit trait terracotta sous chaque label, sauf McKinsey (qui ressort) */
 .ss-label::after {
