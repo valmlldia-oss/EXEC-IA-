@@ -1051,6 +1051,11 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
   color: var(--text); line-height: 1.6; max-width: 760px;
   margin: 0 0 20px;
 }
+.persp-intro-line { display: inline; }
+@media (min-width: 1300px) {
+  .persp-intro { max-width: none; }
+  .persp-intro-line { display: block; white-space: nowrap; }
+}
 /* Défilement horizontal — même mécanique que le carousel Agents (expertise.html) */
 .persp-track-outer {
   overflow-x: auto; overflow-y: hidden;
@@ -1098,10 +1103,10 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
    à la place du mot-fantôme — bandeau plus haut pour rester lisible. */
 .persp-card-visual--img { height: 175px; padding: 0; }
 .persp-card-visual--img img { width: 100%; height: 100%; object-fit: cover; object-position: 55% 10%; display: block; }
-.persp-card-visual--decision img { object-position: 50% 6%; }
+.persp-card-visual--decision img { object-position: 50% 2%; }
 .persp-card-visual--transformation img { object-position: 50% 6%; }
-.persp-card-visual--creation img { object-position: 50% 88%; }
-.persp-card-visual--gouvernance img { transform: scale(0.96); }
+.persp-card-visual--creation img { object-position: 50% 32%; }
+.persp-card-visual--gouvernance img { transform: scale(0.96); object-position: 55% 0%; }
 /* Étiquette catégorie en surimpression discrète sur une vraie photo */
 .persp-card-visual-overlay {
   position: absolute; left: 16px; bottom: 10px;
@@ -1143,7 +1148,7 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
 .persp-card-read {
   display: inline-flex; align-items: center; gap: 5px;
   font-family: var(--sans); font-size: .85rem; font-weight: 600;
-  color: var(--rose); margin-top: 6px;
+  color: var(--rose); margin-top: auto; padding-top: 6px;
 }
 .persp-card-read .portrait-link-arrow { transition: transform .25s var(--ease); }
 .persp-card--link:hover .persp-card-read .portrait-link-arrow { transform: translateX(4px); }
@@ -2220,6 +2225,7 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
 }
 .footer-col a.footer-linkedin-btn:hover { border-color: var(--rose); }
 .footer-linkedin-logo { height: 18px; width: auto; display: inline-block; }
+.persp-intro-linkedin-logo { height: .85em; width: auto; display: inline-block; vertical-align: -.1em; margin-left: .15em; }
 
 .footer-rule { border: none; border-top: 1px solid rgba(99,59,74,.14); margin: 0; }
 /* Fil conducteur — Accueil uniquement, injecté par script.js */
