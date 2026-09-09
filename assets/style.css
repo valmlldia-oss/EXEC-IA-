@@ -1808,6 +1808,11 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
   color: var(--rose); font-weight: 600; text-decoration: none;
   border-bottom: 1px solid rgba(199,95,98,.4);
 }
+.tl-cert-badge {
+  display: inline-block; background: rgba(199,95,98,.12);
+  border: 1px solid rgba(199,95,98,.28);
+  padding: 3px 10px; border-radius: 20px;
+}
 /* Ces 2 lignes tiennent sur une ligne à partir de 900px (texte petit,
    contrairement au H2 Perspectives) ; en dessous, retour à la ligne
    naturel pour ne jamais déborder sur mobile/tablette. */
