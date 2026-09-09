@@ -1094,6 +1094,7 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
 .persp-card-visual--img { height: 175px; padding: 0; }
 .persp-card-visual--img img { width: 100%; height: 100%; object-fit: cover; object-position: 55% 10%; display: block; }
 .persp-card-visual--decision img { object-position: 50% 6%; }
+.persp-card-visual--transformation img { object-position: 50% 6%; }
 .persp-card-visual--gouvernance img { transform: scale(0.96); }
 /* Étiquette catégorie en surimpression discrète sur une vraie photo */
 .persp-card-visual-overlay {
@@ -1783,8 +1784,21 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
 .tl-role { font-size: .95rem; color: var(--plum-muted); font-style: italic; margin-bottom: 10px; }
 .tl-item--studeria { display: flex; align-items: center; gap: 10px 22px; flex-wrap: wrap; }
 .tl-item--studeria .tl-studeria-text { flex: 1 1 auto; }
-.tl-item--studeria .tl-role { margin-bottom: 0; max-width: none; }
+.tl-item--studeria .tl-role { margin-bottom: 6px; max-width: none; }
 .tl-item--studeria .studeria-certifs { margin-top: 0; }
+.tl-studeria-topics {
+  font-size: .82rem; color: var(--plum-muted); letter-spacing: .01em;
+  margin: 0 0 10px; max-width: 640px;
+}
+.tl-studeria-cert { font-size: .95rem; color: var(--text); margin: 0 0 4px; }
+.tl-studeria-cert a {
+  color: var(--rose); font-weight: 600; text-decoration: none;
+  border-bottom: 1px solid rgba(199,95,98,.4);
+}
+.tl-studeria-quote {
+  font-size: .9rem; font-style: italic; color: var(--plum-muted); opacity: .85;
+  margin: 0 0 10px; max-width: 640px;
+}
 .tl-item p { font-size: 1.05rem; line-height: 1.65; color: var(--text); max-width: 860px; }
 .tl-link {
   display: inline-block; margin-top: 7px;
