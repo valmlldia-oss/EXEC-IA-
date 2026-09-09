@@ -1305,11 +1305,30 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
   display: grid; grid-template-columns: 1fr 1fr; gap: 0 52px;
   align-items: start; margin-top: 12px; position: relative;
 }
+/* Correctif UX 09/09/2026 — la reliure. Un simple filet de 1px lisait
+   comme "deux blocs séparés par une règle", pas comme une double page.
+   On remplace par un léger creux de lumière (dégradé, pas de texture)
+   qui évoque la pliure d'un livre ouvert, sans aucun effet vintage/3D. */
 .article-book::before {
   content: ''; position: absolute; top: 0; bottom: 0; left: 50%;
-  width: 1px; background: rgba(99,59,74,.14);
+  width: 33px; margin-left: -16.5px; pointer-events: none;
+  background: linear-gradient(to right,
+    rgba(99,59,74,0) 0%,
+    rgba(99,59,74,.05) 30%,
+    rgba(99,59,74,.16) 50%,
+    rgba(99,59,74,.05) 70%,
+    rgba(99,59,74,0) 100%);
 }
-.article-book-col { display: flex; flex-direction: column; }
+.article-book-col { display: flex; flex-direction: column; position: relative; padding-bottom: 38px; }
+/* Pagination éditoriale discrète — folio de bas de page, comme sur une
+   vraie double page de revue. Résout l'ordre de lecture (gauche puis
+   droite) sans flèche ni instruction : c'est une convention déjà connue. */
+.article-book-folio {
+  position: absolute; left: 0; right: 0; bottom: 8px; text-align: center;
+  font-family: var(--sans); font-size: .68rem; font-weight: 600;
+  letter-spacing: .18em; color: rgba(99,59,74,.34);
+  user-select: none;
+}
 .article-book .article-intro,
 .article-book .article-qlist,
 .article-book .article-question,
@@ -1320,6 +1339,8 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
 @media (max-width: 760px) {
   .article-book { grid-template-columns: 1fr; gap: 0; }
   .article-book::before { display: none; }
+  .article-book-col { padding-bottom: 0; }
+  .article-book-folio { display: none; }
 }
 .article-intro { max-width: 640px; margin: 28px 0 0; }
 .article-intro p {
