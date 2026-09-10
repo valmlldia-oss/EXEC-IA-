@@ -54,12 +54,15 @@ body {
      et défile normalement au lieu d'être coupée par un scroll interne. */
   min-height: 100vh;
   height: auto;
-  padding-top: var(--nav-h);
+  /* Espace avant le pré-titre : identique pour toutes les sections
+     (nav + un petit souffle), au lieu d'un centrage vertical qui variait
+     selon la hauteur du contenu. */
+  padding-top: calc(var(--nav-h) + clamp(10px, 1.8vh, 22px));
   overflow-x: hidden;
   overflow-y: visible;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   box-sizing: border-box;
 }
 .snap-page > .wrap,
@@ -787,8 +790,6 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
   line-height: 1.3;
   letter-spacing: -.01em;
   color: #633B4A;
-  border-left: 3px solid var(--rose);
-  padding-left: 22px;
 }
 #contact .contact-btns { align-items: flex-start; }
 .bg-plum  {
@@ -808,7 +809,7 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
    effet graphique discret et légèrement décentré. */
 .eyebrow-blog { position: relative; display: inline-block; }
 .eyebrow-blog::after {
-  content: ''; position: absolute; left: 6%; width: 36%; bottom: -3px;
+  content: ''; position: absolute; left: 2%; width: 62%; bottom: -3px;
   height: 2px; background: var(--rose); opacity: .85;
 }
 .section-title {
@@ -816,8 +817,6 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
   font-size: clamp(2.2rem, 3.4vw, 3.2rem);
   font-weight: 600; line-height: 1.1; letter-spacing: -.01em;
   color: var(--plum); margin-bottom: 32px;
-  border-left: 3px solid var(--rose);
-  padding-left: 24px;
 }
 .section-title-light { color: var(--white); }
 /* Titre Perspectives — tient sur une ligne à partir de 1300px, revient
@@ -833,8 +832,6 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
   line-height: 1.3;
   letter-spacing: -.01em;
   color: #633B4A;
-  border-left: 3px solid var(--rose);
-  padding-left: 22px;
   /* Rapprochée de "Ceux qui m'ont accompagnée..." pour rattacher visuellement
      le titre à sa phrase d'introduction (était 32px, trop de vide) */
   margin-bottom: 4px;
@@ -847,8 +844,6 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
   line-height: 1.3;
   letter-spacing: -.01em;
   color: #633B4A;
-  border-left: 3px solid var(--rose);
-  padding-left: 22px;
 }
 /* Accueil uniquement — retour à la matrice typographique ve-title (Cormorant, 500),
    pas d'accent italique/terracotta sur ces deux titres sobres */
@@ -1053,7 +1048,7 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
 }
 .persp-intro-line { display: inline; }
 @media (min-width: 1300px) {
-  .persp-intro { max-width: none; }
+  .persp-intro { max-width: none; line-height: 1.35; }
   .persp-intro-line { display: block; white-space: nowrap; }
 }
 /* Défilement horizontal — même mécanique que le carousel Agents (expertise.html) */
@@ -1315,7 +1310,7 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
    laissé le navigateur équilibrer seul, sans garantie d'alignement. */
 .article-book {
   display: grid; grid-template-columns: 1fr 1fr; gap: 0 52px;
-  align-items: start; margin-top: 12px; position: relative;
+  align-items: stretch; margin-top: 12px; position: relative;
 }
 /* Correctif UX 09/09/2026 — la reliure. Un simple filet de 1px lisait
    comme "deux blocs séparés par une règle", pas comme une double page.
@@ -1331,14 +1326,15 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
     rgba(99,59,74,.05) 70%,
     rgba(99,59,74,0) 100%);
 }
-.article-book-col { display: flex; flex-direction: column; position: relative; padding-bottom: 38px; }
+.article-book-col { display: flex; flex-direction: column; position: relative; padding-bottom: 24px; }
+.article-book-col > :first-child { margin-top: 0; }
 /* Pagination éditoriale discrète — folio de bas de page, comme sur une
    vraie double page de revue. Résout l'ordre de lecture (gauche puis
    droite) sans flèche ni instruction : c'est une convention déjà connue. */
 .article-book-folio {
   position: absolute; left: 0; right: 0; bottom: 8px; text-align: center;
-  font-family: var(--sans); font-size: .68rem; font-weight: 600;
-  letter-spacing: .18em; color: rgba(99,59,74,.34);
+  font-family: var(--sans); font-size: .72rem; font-weight: 600;
+  letter-spacing: .18em; color: rgba(99,59,74,.5);
   user-select: none;
 }
 .article-book .article-intro,
@@ -1347,7 +1343,7 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
 .article-book .article-close {
   max-width: none;
 }
-.article-cta-wrap { text-align: center; margin-top: 44px; }
+.article-cta-wrap { text-align: center; margin-top: 20px; }
 @media (max-width: 760px) {
   .article-book { grid-template-columns: 1fr; gap: 0; }
   .article-book::before { display: none; }
@@ -1670,6 +1666,15 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
 }
 .xcard-tag .tag-icon {
   font-size: 1.5em; line-height: 1; letter-spacing: 0;
+}
+/* Carte 04 : deux certifications empilées (Studeria + ESSEC) */
+.xcard-tag-stack {
+  display: flex; flex-direction: column; gap: 7px; align-items: flex-start;
+  margin-top: auto;
+}
+.xcard-tag-stack .xcard-tag {
+  font-size: .76rem; padding: 5px 13px; max-width: 100%;
+  overflow: hidden; text-overflow: ellipsis;
 }
 /* ── Inverted AI card (04) ── */
 .xcard--ia {
@@ -3520,8 +3525,6 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 /* Entrefilet Expertise en manifeste : constat discret, puis affirmation forte.
    La barre terracotta encadre les deux lignes. */
 .mon-approche-section--manifeste .maf-mid {
-  border-left: 3px solid var(--rose);
-  padding-left: 23px;
   gap: 10px;
 }
 .mon-approche-section--manifeste .maf-lead {
@@ -3583,10 +3586,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
    inline-block : la barre colle au texte au lieu de partir au bord du bloc. */
 .conviction-section .conviction-title {
   display: inline-block;
-  border-left: 3px solid var(--rose);
-  padding-left: 22px;
-  /* compense la barre : le texte reste optiquement centré comme l'eyebrow */
-  margin-right: 25px;
+  margin-right: 0;
   /* deux lignes de respiration avant la statistique */
   margin-bottom: 52px;
 }
@@ -4529,17 +4529,21 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 }
 /* ── Box lead magnet (section prune) ───────────────────────── */
 .nl-box {
-  background: rgba(255,255,255,.055);
-  border-top: 2px solid rgba(250,246,242,.6);
+  background: #EEE2DD;
+  border-top: 2px solid rgba(199,95,98,.42);
   border-left: none;
   border-right: none;
   border-bottom: none;
   border-radius: 14px;
   padding: 18px 28px 22px;
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
   align-self: start;
 }
+/* Bloc « Les 5 Essentiels » éclairci en rosé : on repasse les textes en prune */
+.nl-box .nl-hero-num { color: var(--plum); }
+.nl-box .nl-box-body p,
+.nl-box .nl-box-body p:last-child { color: var(--plum); }
+.nl-box .nl-box-trust { color: var(--plum-muted); }
+.nl-box .nl-box-lead { color: rgba(99,59,74,.7); }
 .nl-box-title {
   font-family: var(--serif);
   font-size: 2.8rem;
@@ -5145,7 +5149,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   margin-left: max(24px, calc((100% - var(--max)) / 2));
   margin-right: auto;
   box-sizing: border-box;
-  padding: calc(var(--nav-h) + clamp(16px, 2.2vh, 32px)) 24px clamp(20px, 2.8vh, 38px);
+  padding: calc(var(--nav-h) + clamp(10px, 1.6vh, 20px)) 0 clamp(18px, 2.4vh, 32px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -5169,7 +5173,6 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   letter-spacing: .2em; text-transform: uppercase;
   color: var(--rose);
   margin-bottom: 12px;
-  padding-left: 26px;
 }
 .ve-eyebrow-rule { display: none; }
 .ve-title {
@@ -5177,13 +5180,11 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   /* Cormorant a une x-height bien plus basse que l'Inter du hero :
      on l'agrandit (~+24 %) pour que le bas-de-casse lise à la même taille
      que « Comprendre le contexte » (H1 de référence). */
-  font-size: clamp(2.35rem, 3.95vw, 3.2rem);
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
   font-weight: 500; line-height: 1.2;
   color: var(--plum);
   letter-spacing: -.01em;
   margin: 0 0 32px;
-  border-left: 3px solid var(--rose);
-  padding-left: 22px;
 }
 .ve-title em { font-style: italic; color: var(--plum); font-weight: 500; }
 
@@ -5378,8 +5379,6 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   font-size: clamp(1.8rem, 3.2vw, 2.6rem);
   font-weight: 400; line-height: 1.3;
   color: #633B4A; margin: 0;
-  border-left: 3px solid var(--rose);
-  padding-left: 23px;
 }
 /* Variante Accueil uniquement — matrice typographique ve-title (Cormorant, 500) */
 .maf-lead--home {
@@ -5466,14 +5465,16 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 .pourquoi-conclusion-band {
   grid-column: 1 / -1;
   display: flex; justify-content: center;
-  padding: clamp(24px, 4vh, 46px) 24px clamp(4px, 1.5vh, 14px);
+  padding: clamp(6px, 1.4vh, 16px) 24px clamp(2px, 1vh, 10px);
 }
 .pourquoi-conclusion-band .pourquoi-conclusion {
-  width: min(62%, 840px);
-  text-align: center;
+  width: max-content; max-width: 100%;
+  text-align: center; white-space: nowrap;
+  font-size: clamp(1rem, 1.35vw, 1.32rem);
+  padding: clamp(16px, 2vw, 24px) clamp(24px, 3vw, 40px);
 }
-@media (max-width: 900px) {
-  .pourquoi-conclusion-band .pourquoi-conclusion { width: 100%; }
+@media (max-width: 780px) {
+  .pourquoi-conclusion-band .pourquoi-conclusion { white-space: normal; width: 100%; }
 }
 
 /* ─── Listes premium homogènes (Diagnostic / Résultats) ─── */
@@ -5807,8 +5808,6 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 /* H1 = strictement le .hero-sub de l'Accueil (uniformisation de tous les H1) */
 .questions-coda {
   margin: 0;
-  padding-left: 22px;
-  border-left: 3px solid var(--rose);
   font-family: var(--sans);
   font-size: clamp(1.8rem, 3.2vw, 2.6rem);
   font-weight: 400;
@@ -6091,7 +6090,6 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 .constat-title {
   font-family: var(--serif); font-weight: 500; letter-spacing: -.01em; color: var(--plum);
   font-size: clamp(1.8rem, 3.2vw, 2.6rem); line-height: 1.22;
-  border-left: 3px solid var(--rose); padding-left: 22px;
   margin-bottom: 15px;
 }
 .constat-intro {
@@ -6117,6 +6115,52 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   box-shadow: 0 4px 24px rgba(99,59,74,.07);
 }
 .constat-desc { max-width: none; }
+
+/* ─── Cartes retournables (recto : la question · verso : la réponse) ─── */
+.constat-flip {
+  background: transparent; border: none; box-shadow: none; padding: 0;
+  perspective: 1400px; cursor: pointer; -webkit-tap-highlight-color: transparent;
+}
+.constat-flip:focus-visible { outline: 2px solid var(--rose); outline-offset: 3px; border-radius: 18px; }
+.constat-flip-inner {
+  position: relative; height: 100%; min-height: 172px;
+  transform-style: preserve-3d;
+  transition: transform .55s cubic-bezier(.4,.14,.16,1);
+}
+.constat-flip.is-flipped .constat-flip-inner { transform: rotateY(180deg); }
+.constat-face {
+  -webkit-backface-visibility: hidden; backface-visibility: hidden;
+  background: #F4EDE7;
+  border: 1.5px solid rgba(199,95,98,.22);
+  border-top: 3px solid var(--rose);
+  border-radius: 16px;
+  padding: 20px 20px 44px;
+  box-shadow: 0 4px 24px rgba(99,59,74,.07);
+  display: flex; flex-direction: column;
+  transition: box-shadow .2s;
+}
+.constat-face--front { position: relative; height: 100%; }
+.constat-face--back { position: absolute; inset: 0; }
+.constat-flip:hover .constat-face { box-shadow: 0 10px 32px rgba(199,95,98,.16); }
+.constat-face--back {
+  transform: rotateY(180deg);
+  justify-content: center;
+  background: var(--plum);
+  border-color: var(--deep); border-top-color: var(--rose);
+}
+.constat-face--back .constat-desc { color: #FAF6F2 !important; opacity: 1; }
+.constat-face--back .constat-desc span[style*="--rose"] { color: #E8A9A0 !important; }
+/* Indice « il y a quelque chose à retourner » : pastille terracotta en bas */
+.constat-flip-cue {
+  position: absolute; left: 20px; bottom: 16px;
+  display: inline-flex; align-items: center; gap: 7px;
+  font-family: var(--sans); font-size: .74rem; font-weight: 600;
+  letter-spacing: .04em; text-transform: uppercase; color: var(--rose);
+}
+.constat-flip-cue svg { width: 15px; height: 15px; flex: none; transition: transform .4s; }
+.constat-flip:hover .constat-face--front .constat-flip-cue svg { transform: rotate(-40deg); }
+.constat-flip-cue--back { left: auto; right: 18px; color: rgba(244,237,231,.6); }
+.constat-flip-cue--back .constat-flip-cue-txt { display: none; }
 /* Chiffres très grands, terracotta, légère transparence */
 .constat-num {
   display: block; font-family: var(--serif); font-weight: 500;
