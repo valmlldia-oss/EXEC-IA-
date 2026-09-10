@@ -1841,6 +1841,39 @@ section { padding: var(--section-gap) 0; }
   color: var(--rose); white-space: nowrap; text-align: right;
   width: 180px;
 }
+/* ─── Regroupement visuel « Expertise IA » : ESSEC + STUDERIA forment un
+   bloc formation/expertise IA, distinct du parcours dirigeante en dessous.
+   Cadre très fin ; la ligne chronologique et ses points restent à l'extérieur. */
+.tl-expertise-group {
+  position: relative;
+  /* le bord gauche du cadre est nettement à DROITE de la ligne chronologique
+     et de ses points (qui restent à l'extérieur, dans le couloir de gauche). */
+  margin: 4px 0 20px 34px;
+  padding: 24px 26px 14px 16px;
+  border: 1.25px solid rgba(99,59,74,.3);
+  border-radius: 12px;
+}
+.tl-expertise-group .tl-item { padding-left: 0; margin-bottom: 24px; }
+.tl-expertise-group .tl-item:last-child { margin-bottom: 0; }
+.tl-expertise-group .tl-item::before { left: -51px; }
+.tl-expertise-tag {
+  position: absolute; top: -10px; left: 22px;
+  background: var(--ivory);
+  padding: 2px 11px;
+  font-family: var(--sans);
+  font-size: .68rem; font-weight: 700;
+  letter-spacing: .16em; text-transform: uppercase;
+  color: var(--plum);
+}
+@media (max-width: 1024px) {
+  .tl-expertise-group { margin-left: 24px; padding-left: 14px; }
+  .tl-expertise-group .tl-item::before { left: -41px; }
+}
+@media (max-width: 768px) {
+  .tl-expertise-group { margin-left: 16px; padding: 22px 14px 12px 14px; }
+  .tl-expertise-group .tl-item::before { left: -34px; }
+  .tl-expertise-tag { left: 14px; }
+}
 .tl-item h3 { font-family: var(--serif); font-size: 1.8rem; color: var(--plum); margin-bottom: 5px; }
 .tl-role { font-size: .95rem; color: var(--plum-muted); font-style: italic; margin-bottom: 10px; }
 .tl-item--studeria { display: block; }
@@ -4419,10 +4452,11 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   background: var(--plum);
   position: relative;
 }
-/* +½ cm de respiration avant « POUR CEUX QUI DÉCIDENT » (bat la règle
-   générique body > section.snap-page:first-of-type). */
+/* Respiration symétrique : autant d'espace visible au-dessus de « POUR CEUX
+   QUI DÉCIDENT » qu'en dessous de la carte « Les 5 essentiels ». */
 body > section.newsletter-section.snap-page {
   padding-top: calc(var(--nav-h) + var(--section-gap) + 19px);
+  padding-bottom: calc(var(--section-gap) + 19px);
 }
 .newsletter-section .wrap {
   max-width: var(--max);
