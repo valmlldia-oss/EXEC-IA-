@@ -5548,6 +5548,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 .tl-intro--diff {
   color: var(--rose);
   font-weight: 600;
+  font-style: normal;
   white-space: normal;
   /* même taille que « De Buenos Aires… » + une ligne d'air supplémentaire */
   font-size: clamp(1.54rem, 2.13vw, 1.8rem);
