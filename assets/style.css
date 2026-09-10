@@ -19,6 +19,10 @@
   --nav-h:     80px;
   --max:       1600px;
   --ease:      cubic-bezier(.25,.46,.45,.94);
+  /* RÈGLE GLOBALE — respiration verticale entre deux sections.
+     Espace visible avant un pré-titre = padding-bottom section A + padding-top
+     section B = 2 × --section-gap ≈ 32px desktop, ~28 tablette, ~24 mobile. */
+  --section-gap: clamp(12px, 1.7vh, 17px);
 }
 
 /* ─── RESET ─────────────────────────────────────────────── */
@@ -57,9 +61,15 @@ body {
      l'espace avant chaque pré-titre devient constant. Le scroll-snap reste. */
   min-height: auto;
   height: auto;
-  /* même souffle visible en haut (après la nav) et en bas de chaque section */
-  --snap-breath: clamp(22px, 3.2vh, 42px);
-  padding-top: calc(var(--nav-h) + var(--snap-breath));
+  /* RÈGLE GLOBALE — respiration verticale unique entre deux sections.
+     L'espace visible avant un pré-titre = padding-bottom section A + padding-top
+     section B = 2 × --snap-breath ≈ 32px sur desktop, ~28 tablette, ~24 mobile
+     (le clamp suit la hauteur d'écran). Aucun cumul nav-h + marge ici :
+     le dégagement sous la nav fixe est assuré par scroll-margin-top au snap,
+     et par un padding-top spécifique sur la 1re section de page uniquement. */
+  --snap-breath: var(--section-gap);
+  scroll-margin-top: var(--nav-h);
+  padding-top: var(--snap-breath);
   padding-bottom: var(--snap-breath);
   overflow-x: hidden;
   overflow-y: visible;
@@ -67,6 +77,13 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   box-sizing: border-box;
+}
+/* Première section de la page : elle seule dégage la barre de navigation fixe
+   (les sections suivantes n'en ont pas besoin — au feuilletage, scroll-margin-top
+   les cale déjà sous la nav ; hors snap, elles s'enchaînent avec la seule
+   respiration --snap-breath). */
+body > section.snap-page:first-of-type {
+  padding-top: calc(var(--nav-h) + var(--snap-breath));
 }
 .snap-page > .wrap,
 .snap-page > .lm-inner {
@@ -100,10 +117,10 @@ body {
    un grand vide sous les cartes. Hauteur libre le temps que le bloc soit
    remis en ligne — à revoir ensemble à ce moment-là. */
 #agents.snap-page {
-  padding-top: calc(var(--nav-h) - 40px);
-  scroll-margin-top: 40px;
+  padding-top: var(--snap-breath);
+  scroll-margin-top: var(--nav-h);
   min-height: auto;
-  padding-bottom: clamp(56px, 7vh, 80px);
+  padding-bottom: var(--snap-breath);
 }
 /* Diagnostic express était centré verticalement (héritage de l'ancien
    comportement par défaut) : avec un wrap plus court que 100vh, ça laissait
@@ -113,9 +130,9 @@ body {
    qu'un écran : forcer min-height:100vh laissait ~240px de vide sous le
    bloc beige rosé. Hauteur libre + respiration avant la slide suivante. */
 #diagnostic.snap-page {
-  padding-top: calc(var(--nav-h) - 40px);
+  padding-top: var(--snap-breath);
   min-height: auto;
-  padding-bottom: clamp(52px, 6vh, 68px);
+  padding-bottom: var(--snap-breath);
 }
 /* Filet prune doit être collé en haut (séparation nette avec la slide
    précédente, sans vide avant) ; le lien ancre "La méthode EXEC'IA →"
@@ -749,7 +766,7 @@ strong, b { font-weight: 600; }
 .btn-lg { padding: 22px 54px; font-size: 1.1rem; }
 
 /* ─── SHARED SECTION ─────────────────────────────────────── */
-section { padding: clamp(18px, 2.2vw, 28px) 0; }
+section { padding: var(--section-gap) 0; }
 .bg-ivory { background: var(--ivory); }
 .bg-white { background: var(--white); }
 #contact { padding-bottom: 24px; }
@@ -864,8 +881,8 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
 }
 @media (max-width: 900px) {
   .pourquoi-ce-que-row { grid-template-columns: 1fr; }
-  .pourquoi-section { padding: clamp(24px, 5vh, 56px) 0; }
-  .ce-que-section { padding: clamp(24px, 5vh, 56px) 0; }
+  .pourquoi-section { padding: var(--section-gap) 0; }
+  .ce-que-section { padding: var(--section-gap) 0; }
 }
 
 /* ─── PORTRAIT CITATION ─────────────────────────────────── */
@@ -1041,8 +1058,8 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
    sans image ni pictogramme générique IA. */
 #perspectives.snap-page {
   min-height: auto;
-  padding-top: clamp(32px, 4vh, 48px);
-  padding-bottom: clamp(32px, 4vh, 48px);
+  padding-top: var(--snap-breath);
+  padding-bottom: var(--snap-breath);
 }
 .persp-intro {
   font-family: var(--sans); font-size: 1.1rem; font-weight: 400;
@@ -1169,7 +1186,7 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
 .persp-card--link:hover .persp-card-title { color: var(--rose); }
 
 /* ═══ ACCUEIL — teaser Perspectives (carte unique, pas de carousel) ═══ */
-#home-perspectives { padding: clamp(56px, 7vh, 88px) 0; }
+#home-perspectives { padding: var(--section-gap) 0; }
 .home-persp-card {
   display: flex; align-items: stretch;
   max-width: 760px; margin-top: 8px;
@@ -1447,7 +1464,7 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
 #about-cta.snap-page {
   min-height: auto;
   padding-top: 0;
-  padding-bottom: clamp(56px, 7vh, 84px);
+  padding-bottom: var(--snap-breath);
 }
 .about-cta-inner { text-align: center; max-width: 640px; margin: 0 auto; padding-top: clamp(20px, 2.6vh, 30px); }
 /* Filet discret marquant la fin du parcours avant la conclusion — pleine
@@ -1461,7 +1478,7 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
 /* Perspectives : espace réglementaire entre le filet et le contenu, comme
    .parcours-top-sep ailleurs sur la page (32px) — #about-cta reste collé
    volontairement (espace resserré demandé plus haut). */
-#perspectives > .about-cta-sep { margin-bottom: 32px; }
+#perspectives > .about-cta-sep { margin-bottom: var(--section-gap); }
 /* Micro-signature EXEC'IA — tracé inchangé, taille relevée pour devenir
    immédiatement identifiable (48-52px desktop / 42-46px tablette /
    36-40px mobile). */
@@ -1733,15 +1750,14 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
 .parcours-top-sep {
   display: block; width: 100%; height: 1px;
   background: rgba(99,59,74,.14);
-  margin: 4px 0 32px;
+  margin: 4px 0 var(--section-gap);
 }
 .parcours-band {
   background: transparent;
   height: 8px;
   width: 100%;
   flex: 0 0 auto;
-  /* « Parcours » abaissé d'une ligne */
-  margin-bottom: 28px;
+  margin-bottom: 4px;
 }
 /* Un peu d'air avant la première liste étoilée */
 #about .formation-list { margin-top: 4px; margin-bottom: 2px; }
@@ -1882,8 +1898,8 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
 /* ─── TÉMOIGNAGES ──────────────────────────────────────────── */
 .testi-section {
   background: var(--ivory);
-  /* Respiration sous la nav — le contenu ne colle plus au bord */
-  padding-top: calc(var(--nav-h) + 40px);
+  /* Dégagement sous la nav fixe : géré par la règle globale
+     « body > section.snap-page:first-of-type » (nav-h + --section-gap). */
 }
 .testi-section .eyebrow { color: var(--rose); }
 .testi-section .section-title { color: var(--plum); }
@@ -2642,7 +2658,7 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
 
 /* ── Module d'orientation « Par où commencer ? » ── */
 .offres-orientation {
-  margin: 64px 0 8px;
+  margin: 32px 0 8px;
   text-align: center;
 }
 .offres-orientation-title {
@@ -3526,13 +3542,13 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 .expertise-band {
   background: transparent;
   height: 8px; width: 100%; flex: 0 0 auto;
-  margin-bottom: 40px;
+  margin-bottom: 4px;
 }
 /* Entrefilet Expertise : plus de filet visible, juste l'espacement */
 .mon-approche-section .maf-band--hairline {
   background: transparent;
   height: 8px;
-  margin-top: clamp(18px, 2.6vh, 28px);
+  margin-top: var(--section-gap);
 }
 /* Entrefilet Expertise en manifeste : constat discret, puis affirmation forte.
    La barre terracotta encadre les deux lignes. */
@@ -3852,7 +3868,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 /* Rythme de fond (remplace l'ancien filet prune épais) */
 .roi-section { background: linear-gradient(180deg, rgba(217,201,195,.22), rgba(217,201,195,.08) 45%, var(--ivory) 85%); padding-bottom: 0.5cm; border-top: 1px solid rgba(93,47,55,.1); margin-top: 0; }
 /* Filet prune foncé d'ouverture du calculateur */
-.roi-band { background: transparent; height: 8px; width: 100%; flex: 0 0 auto; margin-bottom: 28px; }
+.roi-band { background: transparent; height: 8px; width: 100%; flex: 0 0 auto; margin-bottom: 4px; }
 .roi-intro { font-family: var(--sans); font-size: clamp(1rem, 2.46vw, 1.94rem); font-weight: 400; color: var(--text); max-width: 900px; margin: 6px auto 14px; line-height: 1.55; text-align: center; white-space: normal; }
 .roi-card {
   background: var(--white); border: 2px solid rgba(99,59,74,.12);
@@ -4388,7 +4404,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   display: grid;
   grid-template-columns: 1fr 420px;
   gap: 48px;
-  align-items: stretch;
+  align-items: start;
   position: relative;
   z-index: 1;
 }
@@ -4425,22 +4441,22 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   height: 1px;
   background: rgba(255,255,255,.45);
   flex-shrink: 0;
-  margin-top: 18px;
-  margin-bottom: 18px;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 .newsletter-content h2 {
   /* Matrice ve-title (Cormorant, 500) — chute en italique, même couleur de base */
   color: rgba(255,255,255,.92);
   font-family: var(--serif);
-  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
-  line-height: 1.3;
+  font-size: clamp(1.55rem, 2.5vw, 2.3rem);
+  line-height: 1.22;
   letter-spacing: -.01em;
   margin: 0;
   font-weight: 500;
   font-style: normal;
 }
 /* Chute en italique : respiration resserrée (pas un saut de ligne complet) */
-.nl-hero-em { display: inline-block; margin-top: .35em; }
+.nl-hero-em { display: inline-block; margin-top: .1em; }
 .newsletter-content h2 em { font-style: italic; }
 .nl-title-num {
   font-size: 1.45em;
@@ -4755,8 +4771,9 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   margin: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  flex: 1;
+  justify-content: flex-start;
+  gap: 14px;
+  flex: none;
 }
 .nl-checklist li {
   font-family: var(--sans);
@@ -4926,7 +4943,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   .hero-left h1 { font-size: 1.5rem; justify-content: center; }
 
   /* Sections */
-  section { padding: 56px 0; overflow: hidden; }
+  section { padding: var(--section-gap) 0; overflow: hidden; }
   .wrap { padding: 0 20px; }
   .section-title { font-size: clamp(1.6rem, 5.5vw, 2.2rem); margin-bottom: 32px; }
   .about-section-title { font-size: clamp(1.8rem, 6vw, 2.4rem) !important; }
@@ -5104,7 +5121,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 }
 
 /* ─── CE QUE VOUS OBTENEZ ────────────────────────────────── */
-.ce-que-section { padding: clamp(24px, 5vh, 56px) 0 clamp(24px, 5vh, 56px) 48px; background: var(--white); }
+.ce-que-section { padding: var(--section-gap) 0 var(--section-gap) 48px; background: var(--white); }
 .ce-que-inner { max-width: 900px; }
 .ce-que-intro {
   font-family: var(--serif);
@@ -5158,10 +5175,10 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   margin-left: max(24px, calc((100% - var(--max)) / 2));
   margin-right: auto;
   box-sizing: border-box;
-  padding: calc(var(--nav-h) + var(--snap-breath)) 0 var(--snap-breath);
+  padding: var(--snap-breath) 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 /* ── Panneau extérieur ── */
@@ -5360,7 +5377,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 .maf-band--thin {
   height: 1px;
   background: rgba(99,59,74,.15);
-  margin-top: clamp(16px, 2.4vh, 26px);
+  margin-top: var(--section-gap);
 }
 .mon-approche-inner {
   display: flex; align-items: stretch; gap: 64px;
@@ -5421,7 +5438,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 }
 
 /* ─── POURQUOI LES PROJETS IA DÉCÈVENT ──────────────────── */
-.pourquoi-section { padding: clamp(24px, 5vh, 56px) 48px clamp(24px, 5vh, 56px) 0; }
+.pourquoi-section { padding: var(--section-gap) 48px var(--section-gap) 0; }
 .pourquoi-inner { max-width: 1000px; }
 .pourquoi-title { white-space: normal; margin-bottom: 24px !important; }
 .pourquoi-intro {
@@ -5778,8 +5795,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 .questions-band {
   background: transparent;
   height: 8px; width: 100%; flex: 0 0 auto;
-  /* plus d'air entre le filet et l'eyebrow « FAQ pour dirigeants » */
-  margin-bottom: 60px;
+  margin-bottom: 4px;
 }
 .questions-section .eyebrow { font-size: .95rem; letter-spacing: .25em; }
 .accord-list { max-width: 1440px; margin: 44px 0 0; }
@@ -6091,7 +6107,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
    (vision · priorisation · clarté), placé avant l'accompagnement
    ═══════════════════════════════════════════════════════════════ */
 /* Rythme de fond : blanc → rose minéral pâle très diffus (au lieu du filet prune) */
-.constat-section { background: linear-gradient(180deg, rgba(217,201,195,.22), rgba(217,201,195,.1) 55%, var(--ivory) 100%); border-top: 1px solid rgba(99,59,74,.12); padding: clamp(14px, 2vw, 26px) 0 clamp(34px, 4.5vw, 56px); }
+.constat-section { background: linear-gradient(180deg, rgba(217,201,195,.22), rgba(217,201,195,.1) 55%, var(--ivory) 100%); border-top: 1px solid rgba(99,59,74,.12); padding: clamp(14px, 2vw, 26px) 0 var(--section-gap); }
 /* Gauche-aligné exactement comme le hero (pas de centrage) → même marge que .hero-eyebrow */
 .constat-inner { max-width: 1320px; text-align: left; margin-left: 0; margin-right: auto; }
 .constat-eyebrow { display: block; margin-bottom: 14px; }
