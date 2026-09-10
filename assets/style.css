@@ -52,12 +52,13 @@ body {
   scroll-snap-stop: normal;
   /* min-height au lieu de height : une section plus haute qu'un écran grandit
      et défile normalement au lieu d'être coupée par un scroll interne. */
-  min-height: 100vh;
+  /* Plus de hauteur forcée à 100vh : chaque section fait la hauteur de son
+     contenu (+ souffle). Fini les grands vides sous les sections courtes ;
+     l'espace avant chaque pré-titre devient constant. Le scroll-snap reste. */
+  min-height: auto;
   height: auto;
-  /* Espace avant le pré-titre : identique pour toutes les sections
-     (nav + un petit souffle), au lieu d'un centrage vertical qui variait
-     selon la hauteur du contenu. */
-  padding-top: calc(var(--nav-h) + clamp(10px, 1.8vh, 22px));
+  padding-top: calc(var(--nav-h) + clamp(14px, 2.4vh, 34px));
+  padding-bottom: clamp(28px, 5vh, 64px);
   overflow-x: hidden;
   overflow-y: visible;
   display: flex;
@@ -1800,10 +1801,19 @@ section { padding: clamp(18px, 2.2vw, 28px) 0; }
 }
 .tl-item h3 { font-family: var(--serif); font-size: 1.8rem; color: var(--plum); margin-bottom: 5px; }
 .tl-role { font-size: .95rem; color: var(--plum-muted); font-style: italic; margin-bottom: 10px; }
-.tl-item--studeria { display: flex; align-items: center; gap: 10px 22px; flex-wrap: wrap; }
+.tl-item--studeria { display: block; }
 .tl-item--studeria .tl-studeria-text { flex: 1 1 auto; }
 .tl-item--studeria .tl-role { margin-bottom: 6px; max-width: none; }
-.tl-item--studeria .studeria-certifs { margin-top: 0; }
+.tl-item--studeria h3 { font-size: 1.5rem; }
+/* Séparateurs discrets entre compétences */
+.tl-pipe { color: rgba(99,59,74,.28); margin: 0 .55em; font-weight: 300; }
+/* Certification + réassurance (Qualiopi / ISO) sur une seule ligne */
+.tl-cert-row {
+  display: flex; align-items: center; gap: 30px; flex-wrap: wrap;
+  margin-top: 6px;
+}
+.tl-cert-row .tl-studeria-cert { margin: 0; }
+.tl-cert-row .studeria-certifs { margin: 0; gap: 16px; }
 .tl-studeria-topics {
   font-size: .82rem; color: var(--plum-muted); letter-spacing: .01em;
   margin: 0 0 10px; max-width: 640px;
@@ -2311,7 +2321,7 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
 }
 .studeria-certifs .iso-label { max-width: 110px; }
 .qualiopi-logo-link { display: inline-flex; text-decoration: none; }
-.qualiopi-logo { height: 58px; width: auto; display: block; mix-blend-mode: multiply; }
+.qualiopi-logo { height: 34px; width: auto; display: block; mix-blend-mode: multiply; }
 .footer-bottom {
   display: grid;
   grid-template-columns: subgrid;
@@ -3264,17 +3274,17 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   margin: 0 0 4px 22px; flex-wrap: wrap;
 }
 .iso-seal {
-  display: flex; align-items: center; gap: 10px;
+  display: flex; align-items: center; gap: 8px;
 }
 .iso-badge {
-  width: 56px; height: 56px; border-radius: 50%;
+  width: 36px; height: 36px; border-radius: 50%;
   background: #1B3A6B;
   display: flex; flex-direction: column; align-items: center; justify-content: center;
   flex-shrink: 0;
 }
-.iso-certified { font-size: .36rem; color: rgba(255,255,255,.75); letter-spacing: .12em; text-transform: uppercase; }
-.iso-num { font-size: .72rem; font-weight: 800; color: #F4EDE7; line-height: 1.1; text-align: center; font-family: Georgia, serif; }
-.iso-year { font-size: .36rem; color: rgba(255,255,255,.7); letter-spacing: .06em; margin-top: 1px; }
+.iso-certified { font-size: .26rem; color: rgba(255,255,255,.75); letter-spacing: .08em; text-transform: uppercase; }
+.iso-num { font-size: .5rem; font-weight: 800; color: #F4EDE7; line-height: 1; text-align: center; font-family: Georgia, serif; }
+.iso-year { font-size: .24rem; color: rgba(255,255,255,.7); letter-spacing: .04em; margin-top: 0; }
 .iso-label { font-size: .56rem; color: #888; letter-spacing: .06em; text-transform: uppercase; max-width: 70px; line-height: 1.4; }
 
 /* ─── ROI SIMULATOR ──────────────────────────────────────── */
