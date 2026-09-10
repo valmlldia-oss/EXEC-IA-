@@ -5288,7 +5288,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   font-family: var(--sans);
   font-size: clamp(.9rem, 1.01vw, 1.01rem); line-height: 1.55;
   color: var(--text); opacity: .84; margin: 0;
-  max-width: 220px;
+  max-width: 250px;
 }
 .ve-card-sep {
   border: none;

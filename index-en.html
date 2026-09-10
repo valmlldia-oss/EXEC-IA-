@@ -73,7 +73,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=block" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css?v=150">
+  <link rel="stylesheet" href="assets/style.css?v=151">
 </head>
 <body>
 <h1 class="sr-only">EXEC'IA — Strategic Artificial Intelligence advisory for executives</h1>
@@ -184,22 +184,61 @@
     <h2 class="constat-title">AI is everywhere.<br>Your <span style="color:var(--rose)">priorities</span>, far less clear.</h2>
     <p class="constat-intro">You do not have <strong>a technology problem</strong>. You have <strong style="color:var(--rose)">3 questions</strong> without a clear answer.</p>
     <div class="constat-grid">
-      <div class="constat-item">
-        <span class="constat-num">1</span>
-        <p class="constat-label">Strategic vision?</p>
-        <p class="constat-desc">You see the potential of <span style="color:var(--rose);font-weight:600">AI</span>. The real question is where it creates the most value.</p>
+      <div class="constat-item constat-flip reveal delay-1" tabindex="0" role="button" aria-pressed="false" aria-label="Strategic vision? Tap to reveal the answer.">
+        <div class="constat-flip-inner">
+          <div class="constat-face constat-face--front">
+            <span class="constat-num">1</span>
+            <p class="constat-label">Strategic vision?</p>
+            <span class="constat-flip-cue" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v4h4"/></svg><span class="constat-flip-cue-txt">The answer</span></span>
+          </div>
+          <div class="constat-face constat-face--back">
+            <p class="constat-desc">You see the potential of <span style="color:var(--rose);font-weight:600">AI</span>. The real question is where it creates the most value.</p>
+            <span class="constat-flip-cue constat-flip-cue--back" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v4h-4"/></svg></span>
+          </div>
+        </div>
       </div>
-      <div class="constat-item">
-        <span class="constat-num">2</span>
-        <p class="constat-label">Prioritising use cases?</p>
-        <p class="constat-desc">Use cases multiply.<br>None stands out as the obvious priority.</p>
+      <div class="constat-item constat-flip reveal delay-2" tabindex="0" role="button" aria-pressed="false" aria-label="Prioritising use cases? Tap to reveal the answer.">
+        <div class="constat-flip-inner">
+          <div class="constat-face constat-face--front">
+            <span class="constat-num">2</span>
+            <p class="constat-label">Prioritising use cases?</p>
+            <span class="constat-flip-cue" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v4h4"/></svg><span class="constat-flip-cue-txt">The answer</span></span>
+          </div>
+          <div class="constat-face constat-face--back">
+            <p class="constat-desc">Use cases multiply.<br>None stands out as the obvious priority.</p>
+            <span class="constat-flip-cue constat-flip-cue--back" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v4h-4"/></svg></span>
+          </div>
+        </div>
       </div>
-      <div class="constat-item">
-        <span class="constat-num">3</span>
-        <p class="constat-label">Clear decisions?</p>
-        <p class="constat-desc">Decisions stall. Plenty of experiments, few calls made.</p>
+      <div class="constat-item constat-flip reveal delay-3" tabindex="0" role="button" aria-pressed="false" aria-label="Clear decisions? Tap to reveal the answer.">
+        <div class="constat-flip-inner">
+          <div class="constat-face constat-face--front">
+            <span class="constat-num">3</span>
+            <p class="constat-label">Clear decisions?</p>
+            <span class="constat-flip-cue" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v4h4"/></svg><span class="constat-flip-cue-txt">The answer</span></span>
+          </div>
+          <div class="constat-face constat-face--back">
+            <p class="constat-desc">Decisions stall. Plenty of experiments, few calls made.</p>
+            <span class="constat-flip-cue constat-flip-cue--back" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v4h-4"/></svg></span>
+          </div>
+        </div>
       </div>
     </div>
+    <script>
+    (function(){
+      var cards = document.querySelectorAll('.constat-flip');
+      cards.forEach(function(c){
+        function toggle(){
+          var f = c.classList.toggle('is-flipped');
+          c.setAttribute('aria-pressed', f ? 'true' : 'false');
+        }
+        c.addEventListener('click', toggle);
+        c.addEventListener('keydown', function(e){
+          if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); toggle(); }
+        });
+      });
+    })();
+    </script>
     <p class="constat-pivot"><em class="constat-pivot-q">The good news?</em>You do not need an <span style="color:var(--rose);font-weight:600">AI</span> expert. You need <strong class="constat-pivot-punch">clear direction</strong>.<br>These are <span style="color:var(--rose);font-weight:600">Executive Leadership</span> decisions.</p>
   </div>
 </section>
@@ -293,7 +332,6 @@
           <li><span class="li-label">Decisions endured, not made</span><span class="li-desc">technology sets the pace, not strategy.</span></li>
         </ul>
       </div>
-      <p class="pourquoi-conclusion">Without clear priorities or leadership decisions,<br><span style="color:var(--rose)">AI</span> remains a cost — never a lever.</p>
     </div>
   </div>
 </section>
@@ -315,6 +353,10 @@
     </div>
   </div>
 </section>
+
+<div class="pourquoi-conclusion-band">
+  <p class="pourquoi-conclusion">Without clear priorities or leadership decisions, <span style="color:var(--rose)">AI</span> remains a cost&nbsp;— never a lever.</p>
+</div>
 
 </div><!-- end .pourquoi-ce-que-row -->
 
