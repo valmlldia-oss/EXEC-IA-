@@ -891,8 +891,8 @@ section { padding: var(--section-gap) 0; }
 /* ─── PORTRAIT CITATION ─────────────────────────────────── */
 .portrait-section {
   background: var(--ivory);
-  border-top: 1px solid rgba(99,59,74,.1);
-  border-bottom: 1px solid rgba(99,59,74,.1);
+  border-top: 1px solid rgba(99,59,74,.2);
+  border-bottom: 1px solid rgba(99,59,74,.2);
   /* Entrefilet : bandeau compact, pas une page 100vh du feuilletage */
   height: auto;
   min-height: 0;
@@ -1486,13 +1486,13 @@ section { padding: var(--section-gap) 0; }
    colorée. Resserré : trop d'espace se formait entre la fin du Parcours
    et la marque graphique. */
 .about-cta-sep {
-  display: block; width: 100%; height: 1px;
-  background: rgba(99,59,74,.16);
+  display: block; width: 100%; height: 1.5px;
+  background: rgba(99,59,74,.26);
 }
 /* Perspectives : espace réglementaire entre le filet et le contenu, comme
    .parcours-top-sep ailleurs sur la page (32px) — #about-cta reste collé
    volontairement (espace resserré demandé plus haut). */
-#perspectives > .about-cta-sep { margin-bottom: var(--section-gap); }
+#perspectives > .about-cta-sep { margin-bottom: calc(var(--section-gap) + 19px); }
 /* Micro-signature EXEC'IA — tracé inchangé, taille relevée pour devenir
    immédiatement identifiable (48-52px desktop / 42-46px tablette /
    36-40px mobile). */
@@ -1762,8 +1762,8 @@ section { padding: var(--section-gap) 0; }
 /* Filet très discret marquant le passage vers « Parcours » — largeur du
    container (.wrap), jamais plein écran ; prune à très faible opacité. */
 .parcours-top-sep {
-  display: block; width: 100%; height: 1px;
-  background: rgba(99,59,74,.14);
+  display: block; width: 100%; height: 1.5px;
+  background: rgba(99,59,74,.26);
   margin: 4px 0 var(--section-gap);
 }
 .parcours-band {
@@ -2285,7 +2285,7 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
 .footer-linkedin-logo { height: 18px; width: auto; display: inline-block; }
 .persp-intro-linkedin-logo { height: .85em; width: auto; display: inline-block; vertical-align: -.1em; margin-left: .15em; }
 
-.footer-rule { border: none; border-top: 1px solid rgba(99,59,74,.14); margin: 0; }
+.footer-rule { border: none; border-top: 1px solid rgba(99,59,74,.22); margin: 0; }
 /* Fil conducteur — Accueil uniquement, injecté par script.js */
 .fil-conducteur {
   position: absolute; left: 18px; width: 1px;
@@ -3564,8 +3564,8 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
    l'eyebrow (moins de vide qu'avec le seul padding-top nav-h précédent). */
 .expertise-band {
   /* filet très fin + 2 lignes de respiration avant le pré-titre « Expertise » */
-  background: rgba(199,95,98,.28);
-  height: 1px; width: 100%; flex: 0 0 auto;
+  background: rgba(199,95,98,.4);
+  height: 1.5px; width: 100%; flex: 0 0 auto;
   margin-bottom: clamp(38px, 5vh, 54px);
 }
 /* Entrefilet Expertise : plus de filet visible, juste l'espacement */
@@ -3936,8 +3936,8 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 .agents-section {
   /* Démarcation élégante : léger voile rosé + filets fins, façon entrefilet */
   background: linear-gradient(180deg, rgba(217,201,195,.32) 0%, rgba(217,201,195,.10) 100%);
-  border-top: 1px solid rgba(99,59,74,.12);
-  border-bottom: 1px solid rgba(99,59,74,.12);
+  border-top: 1px solid rgba(99,59,74,.2);
+  border-bottom: 1px solid rgba(99,59,74,.2);
   padding-bottom: 0.25rem;
 }
 .section-divider {
@@ -5399,8 +5399,8 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 }
 /* Entrefilet prune FIN (comme les autres sections) — vrai filet, pas une bande pleine */
 .maf-band--thin {
-  height: 1px;
-  background: rgba(99,59,74,.15);
+  height: 1.5px;
+  background: rgba(99,59,74,.26);
   margin-top: 0;
 }
 .mon-approche-inner {
@@ -6132,7 +6132,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
    (vision · priorisation · clarté), placé avant l'accompagnement
    ═══════════════════════════════════════════════════════════════ */
 /* Rythme de fond : blanc → rose minéral pâle très diffus (au lieu du filet prune) */
-.constat-section { background: linear-gradient(180deg, rgba(217,201,195,.22), rgba(217,201,195,.1) 55%, var(--ivory) 100%); border-top: 1px solid rgba(99,59,74,.12); padding: clamp(14px, 2vw, 26px) 0 var(--section-gap); }
+.constat-section { background: linear-gradient(180deg, rgba(217,201,195,.22), rgba(217,201,195,.1) 55%, var(--ivory) 100%); border-top: 1px solid rgba(99,59,74,.2); padding: clamp(14px, 2vw, 26px) 0 var(--section-gap); }
 /* Gauche-aligné exactement comme le hero (pas de centrage) → même marge que .hero-eyebrow */
 .constat-inner { max-width: 1320px; text-align: left; margin-left: 0; margin-right: auto; }
 .constat-eyebrow { display: block; margin-bottom: 14px; }
