@@ -5829,13 +5829,13 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 .accord-item:first-child { border-top: 1px solid rgba(107,98,93,.15); }
 .accord-btn {
   width: 100%; display: flex; justify-content: space-between; align-items: center;
-  gap: 32px; padding: 24px 0; background: none; border: none; cursor: pointer;
-  font-family: var(--serif); font-size: clamp(1.39rem,2.08vw,1.97rem); font-weight: 500;
+  gap: 28px; padding: 16px 0; background: none; border: none; cursor: pointer;
+  font-family: var(--serif); font-size: clamp(1.14rem,1.7vw,1.5rem); font-weight: 500;
   color: var(--plum); text-align: left; line-height: 1.35;
 }
 .accord-btn:hover { color: var(--rose); }
 .accord-icon {
-  font-size: 2rem; font-weight: 400; color: var(--rose); flex-shrink: 0;
+  font-size: 1.6rem; font-weight: 400; color: var(--rose); flex-shrink: 0;
   line-height: 1; transition: transform .35s var(--ease);
 }
 .accord-btn[aria-expanded="true"] .accord-icon { transform: rotate(45deg); }
@@ -5881,7 +5881,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   color: var(--rose);
 }
 .questions-coda-sub {
-  margin: 18px 0 0;
+  margin: 13px 0 0;
   padding-left: 0;
   font-family: var(--serif);
   font-size: clamp(1.81rem, 2.58vw, 2.28rem);
@@ -5901,9 +5901,9 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 .questions-coda-sub .qc-soft { color: var(--rose); opacity: .68; font-style: normal; }
 .questions-cta { max-width: none; margin: 26px 0 0; padding-left: 0; text-align: left; }
 .questions-cta-lead {
-  font-family: var(--serif); font-size: clamp(1.4rem, 1.9vw, 1.7rem);
+  font-family: var(--serif); font-size: clamp(1.46rem, 2vw, 1.84rem);
   font-weight: 500;
-  color: var(--plum); margin-bottom: 18px; font-style: italic; opacity: .95;
+  color: var(--plum); margin-bottom: 22px; font-style: italic; opacity: 1;
 }
 /* Bouton final : plus compact en largeur, généreux en hauteur */
 .questions-cta-btn {
@@ -5915,8 +5915,8 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 .questions-cta-btn .btn-arrow { transition: transform .25s var(--ease); }
 .questions-cta-btn:hover .btn-arrow { transform: translateX(4px); }
 @media (max-width: 700px) {
-  .accord-btn { font-size: 1.59rem; gap: 20px; padding: 20px 0; }
-  .accord-body p { padding-right: 0; font-size: 1.1rem; }
+  .accord-btn { font-size: 1.22rem; gap: 16px; padding: 14px 0; }
+  .accord-body p { padding-right: 0; font-size: 1.05rem; }
   .questions-close { margin-top: 52px; }
   .questions-coda { font-size: 1.44rem; }
   .questions-cta { margin-top: 26px; }
