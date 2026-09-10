@@ -1834,6 +1834,12 @@ section { padding: var(--section-gap) 0; }
 .tl-item--studeria .tl-studeria-text { flex: 1 1 auto; }
 .tl-item--studeria .tl-role { margin-bottom: 6px; max-width: none; }
 .tl-item--studeria h3 { font-size: 1.3rem; letter-spacing: .01em; }
+/* ESSEC : nom + intitulé du certificat chacun sur une seule ligne (desktop) */
+.tl-item--essec h3 { font-size: 1.45rem; }
+@media (min-width: 900px) {
+  .tl-item--essec h3,
+  .tl-item--essec .tl-role { white-space: nowrap; }
+}
 /* Séparateurs discrets entre compétences */
 .tl-pipe { color: rgba(99,59,74,.28); margin: 0 .55em; font-weight: 300; }
 /* Certification + réassurance (Qualiopi / ISO) sur une seule ligne */
