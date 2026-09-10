@@ -132,7 +132,8 @@ body > section.snap-page:first-of-type {
    qu'un écran : forcer min-height:100vh laissait ~240px de vide sous le
    bloc beige rosé. Hauteur libre + respiration avant la slide suivante. */
 #diagnostic.snap-page {
-  padding-top: var(--snap-breath);
+  /* +½ ligne de respiration avant « Diagnostic express » */
+  padding-top: calc(var(--snap-breath) + 13px);
   min-height: auto;
   padding-bottom: var(--snap-breath);
 }
@@ -141,7 +142,7 @@ body > section.snap-page:first-of-type {
    (#agents) utilise scroll-margin-top pour rester sous la nav au lieu du
    padding-top générique, qui laissait trop d'espace avant l'eyebrow. */
 #expertise.snap-page {
-  padding-top: 0;
+  padding-top: var(--snap-breath);
   scroll-margin-top: var(--nav-h);
 }
 img { max-width: 100%; height: auto; display: block; }
@@ -3562,9 +3563,10 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
    .questions-band / .conviction-band : collé en haut, air réduit avant
    l'eyebrow (moins de vide qu'avec le seul padding-top nav-h précédent). */
 .expertise-band {
-  background: transparent;
-  height: 8px; width: 100%; flex: 0 0 auto;
-  margin-bottom: 4px;
+  /* filet très fin + 2 lignes de respiration avant le pré-titre « Expertise » */
+  background: rgba(199,95,98,.28);
+  height: 1px; width: 100%; flex: 0 0 auto;
+  margin-bottom: clamp(38px, 5vh, 54px);
 }
 /* Entrefilet Expertise : plus de filet visible, juste l'espacement */
 .mon-approche-section .maf-band--hairline {
@@ -3635,8 +3637,8 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 .conviction-section .conviction-title {
   display: inline-block;
   margin-right: 0;
-  /* deux lignes de respiration avant la statistique */
-  margin-bottom: 52px;
+  /* respiration avant la statistique (trait terracotta supprimé au-dessus du chiffre) */
+  margin-bottom: 30px;
 }
 .conviction-lead { max-width: 720px; margin: 0 auto 14px; }
 /* Ligne de statistique : +10% et un poil plus gras */
@@ -3646,8 +3648,8 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
    « 80 à 85 % » devient un constat documenté, pas une opinion. */
 .stat-figure {
   display: flex; flex-direction: column; align-items: center;
-  /* deux lignes de respiration avant la case terracotta */
-  margin: 0 auto 52px;
+  /* respiration avant la case terracotta */
+  margin: 0 auto 34px;
 }
 .stat-rule {
   display: block;
