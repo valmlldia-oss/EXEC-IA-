@@ -1541,7 +1541,7 @@ section { padding: var(--section-gap) 0; }
 }
 .about-cta-title {
   font-family: var(--serif); font-size: clamp(1.9712rem, 2.9568vw, 2.5872rem); font-weight: 500;
-  color: var(--plum); margin: 0 0 14px;
+  color: var(--plum); margin: 0 0 14px; line-height: 1.16;
 }
 /* Force la césure « Votre entreprise a son propre / point de départ. »
    sur desktop et tablette ; supprimée sur mobile pour laisser le texte
@@ -5624,6 +5624,9 @@ body > section.newsletter-section.snap-page {
   font-size: clamp(1.36rem, 1.88vw, 1.6rem);
 }
 .tl-intro--fil { max-width: none; white-space: normal; }
+/* Mots-clés du fil conducteur : semi-bold romain (l'italique de Cormorant
+   n'existe qu'en 400 — un strong italique produit un faux-gras trop lourd). */
+.tl-intro--fil strong { font-weight: 600; font-style: normal; }
 
 /* ─── LEAD MAGNET ────────────────────────────────────────── */
 .lm-section {
