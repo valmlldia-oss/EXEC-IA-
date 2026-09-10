@@ -1039,8 +1039,8 @@ section { padding: var(--section-gap) 0; }
 .about-label--principe { margin-top: 26px; }
 /* Texte secondaire sous « Un principe » — sobre, plus petit que les lede */
 .about-principe-sub {
-  font-family: var(--serif); font-size: .92rem; font-weight: 400;
-  color: var(--plum); opacity: .75; line-height: 1.5;
+  font-family: var(--serif); font-size: 1.18rem; font-weight: 400;
+  color: var(--plum); opacity: .82; line-height: 1.45;
   margin: 8px 0 0 !important;
 }
 /* Lignes « Un principe » : chacune tient sur une seule ligne (desktop) */
@@ -1594,6 +1594,12 @@ section { padding: var(--section-gap) 0; }
   box-shadow: 0 14px 34px rgba(99,59,74,.05);
 }
 .pilier-star { color: #D4AF37; font-size: 1.6rem; line-height: 1; margin-bottom: 8px; }
+/* Numéro discret 01 / 02 / 03 — rappelle « 3 piliers », sans concurrencer le titre */
+.pilier-num {
+  position: absolute; top: 9px; left: 13px;
+  font-family: var(--serif); font-size: .92rem; font-weight: 600;
+  letter-spacing: .04em; color: rgba(99,59,74,.3);
+}
 .pilier-title {
   color: var(--rose); font-family: var(--sans);
   font-size: 1.28rem; font-weight: 500; line-height: 1.32; letter-spacing: .005em;
