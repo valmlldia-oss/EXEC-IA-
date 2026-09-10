@@ -2286,8 +2286,9 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
 .persp-intro-linkedin-logo { height: .85em; width: auto; display: inline-block; vertical-align: -.1em; margin-left: .15em; }
 
 .footer-rule { border: none; border-top: 1px solid rgba(99,59,74,.22); margin: 0; }
-/* Fil conducteur — Accueil uniquement, injecté par script.js */
+/* Fil conducteur — désactivé (ligne fine parasite sur le bord gauche). */
 .fil-conducteur {
+  display: none !important;
   position: absolute; left: 18px; width: 1px;
   background: rgba(99,59,74,.1);
   z-index: 2; pointer-events: none;
