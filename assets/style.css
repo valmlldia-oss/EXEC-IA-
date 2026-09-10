@@ -6175,7 +6175,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 .constat-flip-inner {
   position: relative; height: 100%; min-height: 172px;
   transform-style: preserve-3d;
-  transition: transform .55s cubic-bezier(.4,.14,.16,1);
+  transition: transform .78s cubic-bezier(.2,.65,.25,1);
 }
 .constat-flip.is-flipped .constat-flip-inner { transform: rotateY(180deg); }
 .constat-face {
@@ -6199,7 +6199,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   border-color: var(--deep); border-top-color: var(--rose);
 }
 .constat-face--back .constat-desc { color: #FAF6F2 !important; opacity: 1; }
-.constat-face--back .constat-desc span[style*="--rose"] { color: #E8A9A0 !important; }
+.constat-face--back .constat-desc span[style*="--rose"] { color: #C75F62 !important; font-weight: 600 !important; }
 /* Indice « il y a quelque chose à retourner » : pastille terracotta en bas */
 .constat-flip-cue {
   position: absolute; left: 20px; bottom: 16px;
