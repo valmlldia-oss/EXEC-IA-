@@ -1043,6 +1043,10 @@ section { padding: var(--section-gap) 0; }
   color: var(--plum); opacity: .75; line-height: 1.5;
   margin: 8px 0 0 !important;
 }
+/* Lignes « Un principe » : chacune tient sur une seule ligne (desktop) */
+@media (min-width: 760px) {
+  .about-lede--1l, .about-principe-sub--1l { white-space: nowrap; }
+}
 /* Conviction + mission : matrice ve-title (Cormorant, 500) — voix éditoriale */
 .about-lede--voice { font-family: var(--serif); font-weight: 500; }
 .about-lede--voice em { font-style: italic; }
