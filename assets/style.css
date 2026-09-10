@@ -57,8 +57,10 @@ body {
      l'espace avant chaque pré-titre devient constant. Le scroll-snap reste. */
   min-height: auto;
   height: auto;
-  padding-top: calc(var(--nav-h) + clamp(14px, 2.4vh, 34px));
-  padding-bottom: clamp(28px, 5vh, 64px);
+  /* même souffle visible en haut (après la nav) et en bas de chaque section */
+  --snap-breath: clamp(22px, 3.2vh, 42px);
+  padding-top: calc(var(--nav-h) + var(--snap-breath));
+  padding-bottom: var(--snap-breath);
   overflow-x: hidden;
   overflow-y: visible;
   display: flex;
@@ -3563,9 +3565,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
     #F3EDE7 0, #F3EDE7 var(--nav-h),
     var(--ivory) var(--nav-h));
   justify-content: flex-start;
-  min-height: 82vh;
-  padding-top: var(--nav-h);
-  padding-bottom: 0;
+  min-height: auto;
 }
 /* Filet bordeaux d'ouverture, avant "Une conviction" — 8px, comme celui
    avant "Exemples d'initiatives IA". */
@@ -4366,7 +4366,6 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 /* ── Newsletter ─────────────────────────────────────────────── */
 .newsletter-section {
   background: var(--plum);
-  padding-bottom: 28px;
   position: relative;
 }
 .newsletter-section .wrap {
@@ -5159,7 +5158,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   margin-left: max(24px, calc((100% - var(--max)) / 2));
   margin-right: auto;
   box-sizing: border-box;
-  padding: calc(var(--nav-h) + clamp(10px, 1.6vh, 20px)) 0 clamp(18px, 2.4vh, 32px);
+  padding: calc(var(--nav-h) + var(--snap-breath)) 0 var(--snap-breath);
   display: flex;
   flex-direction: column;
   justify-content: center;
