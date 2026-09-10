@@ -882,6 +882,12 @@ section { padding: var(--section-gap) 0; }
   align-content: center;
   gap: 0;
 }
+/* Version épurée : « Pourquoi l'IA ne suffit pas » retiré (redondant avec
+   « Le point de départ » et « L'essentiel »). « Ce que vous obtenez » passe
+   pleine largeur, centré. */
+.pcq-row--solo { grid-template-columns: 1fr; align-content: start; }
+.pcq-row--solo .ce-que-section { padding: var(--section-gap) 0; }
+.pcq-row--solo .ce-que-section > .wrap { max-width: 920px; margin: 0 auto; }
 @media (max-width: 900px) {
   .pourquoi-ce-que-row { grid-template-columns: 1fr; }
   .pourquoi-section { padding: var(--section-gap) 0; }
@@ -4409,6 +4415,11 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   background: var(--plum);
   position: relative;
 }
+/* +½ cm de respiration avant « POUR CEUX QUI DÉCIDENT » (bat la règle
+   générique body > section.snap-page:first-of-type). */
+body > section.newsletter-section.snap-page {
+  padding-top: calc(var(--nav-h) + var(--section-gap) + 19px);
+}
 .newsletter-section .wrap {
   max-width: var(--max);
 }
@@ -4429,13 +4440,15 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   display: grid;
   grid-template-columns: 1fr 420px;
   gap: 48px;
-  align-items: start;
+  align-items: stretch;
   position: relative;
   z-index: 1;
 }
 .newsletter-content {
   display: flex;
   flex-direction: column;
+  /* la liste s'arrête au niveau de « Conforme RGPD », pas du bas de la carte */
+  padding-bottom: clamp(18px, 2.4vh, 30px);
 }
 /* Left column */
 .nl-eyebrow {
@@ -4796,9 +4809,9 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   margin: 0;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   gap: 14px;
-  flex: none;
+  flex: 1 1 auto;
 }
 .nl-checklist li {
   font-family: var(--sans);
