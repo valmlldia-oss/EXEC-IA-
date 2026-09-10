@@ -3573,11 +3573,11 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   max-width: 820px;
 }
 .conviction-section > .conviction-inner {
-  margin-top: clamp(20px, 3vh, 34px) !important;
+  margin-top: clamp(2px, 0.6vh, 8px) !important;
   margin-bottom: 0 !important;
 }
 .conviction-inner { max-width: 880px; text-align: center; }
-.conviction-inner .eyebrow { text-align: center; margin-bottom: 18px; }
+.conviction-inner .eyebrow { text-align: center; margin-bottom: 12px; }
 .conviction-title { border-left: none; padding-left: 0; margin-bottom: 12px; }
 /* Barre verticale terracotta devant le titre de la slide "Une conviction".
    inline-block : la barre colle au texte au lieu de partir au bord du bloc. */
@@ -3657,13 +3657,17 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   letter-spacing: .02em;
   color: var(--plum);
 }
-/* l'appel de la source reprend la même taille + le terracotta que le (*) collé au 85% */
+/* l'appel de la source reprend exactement le style du (*) collé au 80 % :
+   Cormorant italique fin, terracotta — pas l'Inter (rendu trop épais). */
 .stat-source-cite .stat-ref {
-  font-size: clamp(1.02rem, 2.04vw, 1.768rem);
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1rem, 1.5vw, 1.35rem);
   color: var(--rose);
   vertical-align: baseline;
   margin-left: 0;
-  margin-right: .15em;
+  margin-right: .2em;
 }
 .conviction-terra {
   background: var(--rose); border-radius: 18px;
@@ -3884,7 +3888,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   background: linear-gradient(180deg, rgba(217,201,195,.32) 0%, rgba(217,201,195,.10) 100%);
   border-top: 1px solid rgba(99,59,74,.12);
   border-bottom: 1px solid rgba(99,59,74,.12);
-  padding-bottom: 0.75rem;
+  padding-bottom: 0.25rem;
 }
 .section-divider {
   display: flex; align-items: center; gap: 16px;
@@ -3945,10 +3949,12 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 .agents-team-sub {
   display: block;
   font-family: var(--serif);
-  font-size: clamp(1.7rem, 3vw, 2.45rem);
+  /* Aligné sur « Votre présence digitale… » (.agents-team-title), légèrement abaissé */
+  font-size: clamp(1.55rem, 2.7vw, 2.2rem);
   font-weight: 600;
   color: var(--rose);
   font-style: italic;
+  line-height: 1.2;
   margin-bottom: 4px;
 }
 .agents-header {
@@ -4299,7 +4305,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   display: flex;
   justify-content: center;
   gap: .9rem;
-  padding-bottom: .5rem;
+  padding-bottom: .1rem;
 }
 .agents-arrow {
   width: 42px;
