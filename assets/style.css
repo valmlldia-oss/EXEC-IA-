@@ -1849,29 +1849,35 @@ section { padding: var(--section-gap) 0; }
   /* le bord gauche du cadre est nettement à DROITE de la ligne chronologique
      et de ses points (qui restent à l'extérieur, dans le couloir de gauche). */
   margin: 4px 0 20px 34px;
-  padding: 24px 26px 14px 16px;
+  padding: 24px 34px 14px 16px;
   border: 1.25px solid rgba(99,59,74,.3);
   border-radius: 12px;
+  /* le cadre enveloppe son contenu : il ne s'étire pas jusqu'au bord droit */
+  width: fit-content;
+  max-width: 100%;
 }
 .tl-expertise-group .tl-item { padding-left: 0; margin-bottom: 24px; }
 .tl-expertise-group .tl-item:last-child { margin-bottom: 0; }
-.tl-expertise-group .tl-item::before { left: -51px; }
+/* points calés sur l'axe de la ligne chronologique (comme les autres jalons) */
+.tl-expertise-group .tl-item::before { left: -58px; }
 .tl-expertise-tag {
   position: absolute; top: -10px; left: 22px;
   background: var(--ivory);
-  padding: 2px 11px;
+  padding: 3px 11px;
   font-family: var(--sans);
   font-size: .68rem; font-weight: 700;
   letter-spacing: .16em; text-transform: uppercase;
   color: var(--plum);
+  border: 1px solid rgba(99,59,74,.38);
+  border-radius: 3px;
 }
 @media (max-width: 1024px) {
   .tl-expertise-group { margin-left: 24px; padding-left: 14px; }
-  .tl-expertise-group .tl-item::before { left: -41px; }
+  .tl-expertise-group .tl-item::before { left: -48px; }
 }
 @media (max-width: 768px) {
   .tl-expertise-group { margin-left: 16px; padding: 22px 14px 12px 14px; }
-  .tl-expertise-group .tl-item::before { left: -34px; }
+  .tl-expertise-group .tl-item::before { left: -41px; }
   .tl-expertise-tag { left: 14px; }
 }
 .tl-item h3 { font-family: var(--serif); font-size: 1.8rem; color: var(--plum); margin-bottom: 5px; }
