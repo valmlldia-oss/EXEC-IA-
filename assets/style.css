@@ -2365,7 +2365,7 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   display: grid;
   grid-template-columns: subgrid;
   align-items: center;
-  padding-top: 20px; padding-bottom: 24px;
+  padding-top: 13px; padding-bottom: 15px;
   font-size: .88rem; color: rgba(99,59,74,.55);
 }
 .footer-legal { margin: 0; grid-column: 1; }
@@ -5871,8 +5871,8 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 /* Pré-titre de la dernière slide — même langage que les eyebrows du site */
 .questions-close-eyebrow {
   display: block;
-  padding-left: 22px;
-  margin-bottom: 18px;
+  padding-left: 0;
+  margin-bottom: 16px;
   font-family: var(--sans);
   font-size: clamp(.82rem, 1vw, .95rem);
   font-weight: 600;
@@ -5881,8 +5881,8 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   color: var(--rose);
 }
 .questions-coda-sub {
-  margin: 20px 0 0;
-  padding-left: 22px;
+  margin: 18px 0 0;
+  padding-left: 0;
   font-family: var(--serif);
   font-size: clamp(1.81rem, 2.58vw, 2.28rem);
   font-style: italic; font-weight: 400;
@@ -5899,11 +5899,11 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   margin: clamp(28px, 4vh, 52px) 0 0;
 }
 .questions-coda-sub .qc-soft { color: var(--rose); opacity: .68; font-style: normal; }
-.questions-cta { max-width: none; margin: 34px 0 0; padding-left: 22px; text-align: left; }
+.questions-cta { max-width: none; margin: 26px 0 0; padding-left: 0; text-align: left; }
 .questions-cta-lead {
-  font-family: var(--serif); font-size: 1.28rem;
+  font-family: var(--serif); font-size: clamp(1.4rem, 1.9vw, 1.7rem);
   font-weight: 500;
-  color: var(--plum); margin-bottom: 24px; font-style: italic; opacity: .78;
+  color: var(--plum); margin-bottom: 18px; font-style: italic; opacity: .95;
 }
 /* Bouton final : plus compact en largeur, généreux en hauteur */
 .questions-cta-btn {
