@@ -116,8 +116,10 @@ body > section.snap-page:first-of-type {
    carrousel) est bien plus court qu'un écran, et min-height:100vh laissait
    un grand vide sous les cartes. Hauteur libre le temps que le bloc soit
    remis en ligne — à revoir ensemble à ce moment-là. */
-#agents.snap-page {
-  padding-top: var(--snap-breath);
+#agents.snap-page,
+#webcreation.snap-page {
+  /* +½ ligne de respiration avant « Création de sites web » / « Exemples d'initiatives IA » */
+  padding-top: calc(var(--snap-breath) + 13px);
   scroll-margin-top: var(--nav-h);
   min-height: auto;
   padding-bottom: var(--snap-breath);
@@ -327,7 +329,7 @@ strong, b { font-weight: 600; }
 }
 /* bandeau des chiffres épinglé en bas du hero, resserré pour garder tout
    le hero dans une seule hauteur d'écran (le site ne doit jamais sauter) */
-.stats-strip--hero { margin-top: auto; padding: 15px 0 17px; }
+.stats-strip.stats-strip--hero { margin-top: auto; padding: 8px 0 10px; }
 
 /* Hero fond ivoire uniforme */
 #hero::before { display: none; }
@@ -2417,16 +2419,16 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   text-align: center;
 }
 .ss-item {
-  padding: 14px 20px;
+  padding: 6px 12px;
   border-right: 1px solid rgba(255,255,255,.08);
-  display: flex; flex-direction: column; gap: 12px; align-items: center;
+  display: flex; flex-direction: column; gap: 5px; align-items: center;
   justify-content: flex-start; flex-shrink: 0;
 }
 .ss-item:last-child { border-right: none; }
 .ss-num {
   font-family: var(--serif); font-size: 2.9rem; font-weight: 600;
   color: #F5F1EC; line-height: 1;
-  height: 44px;
+  height: 38px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2472,19 +2474,19 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   letter-spacing: .06em; text-transform: uppercase; line-height: 1.45;
 }
 /* "Stratégie & transformation" tient sur une seule ligne dans le bandeau chiffres */
-.ss-label--1l { white-space: nowrap; letter-spacing: .03em; }
+.ss-label--1l { white-space: nowrap; font-size: .8rem; letter-spacing: .02em; }
 .ss-label--1l::after { white-space: normal; }
+/* "Certifiée RS6776" : même traitement que les labels (ivoire, capitales), semi-bold */
 .ss-cert-tag {
-  display: block; font-size: .64rem; font-weight: 700;
-  letter-spacing: .1em; text-transform: uppercase;
-  color: var(--rose); opacity: .85; margin: 2px 0 4px;
+  display: block; font-size: .78rem; font-weight: 600;
+  letter-spacing: .06em; text-transform: uppercase;
+  color: rgba(245,241,236,.82); opacity: 1; margin: 0 0 2px;
 }
-/* petit trait terracotta sous chaque label, sauf McKinsey (qui ressort) */
+/* petit trait terracotta sous chaque label du bandeau chiffres */
 .ss-label::after {
   content: ""; display: block; width: 26px; height: 2px;
-  background: var(--rose); border-radius: 2px; margin: 10px auto 0; opacity: .75;
+  background: var(--rose); border-radius: 2px; margin: 8px auto 0; opacity: .75;
 }
-.ss-label:has(.ss-firm)::after { display: none; }
 /* Nom de cabinet sur une seule ligne, en gras — reste lisible et tient dans la colonne */
 .ss-firm {
   display: inline-block; font-weight: 600; white-space: nowrap;
@@ -3984,8 +3986,8 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 }
 .agents-team-title {
   font-family: var(--serif);
-  /* Un point de moins que .agents-title */
-  font-size: clamp(1.7rem, 3vw, 2.45rem);
+  /* Nettement plus petit que .agents-title (le titre de section au-dessus) */
+  font-size: clamp(1.5rem, 2.6vw, 2.05rem);
   color: var(--plum);
   font-weight: 600;
   margin: 0 0 4px;
@@ -3996,7 +3998,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   display: block;
   font-family: var(--serif);
   /* Aligné sur « Votre présence digitale… » (.agents-team-title), légèrement abaissé */
-  font-size: clamp(1.55rem, 2.7vw, 2.2rem);
+  font-size: clamp(1.4rem, 2.42vw, 1.9rem);
   font-weight: 600;
   color: var(--rose);
   font-style: italic;
@@ -5195,7 +5197,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   margin-left: max(24px, calc((100% - var(--max)) / 2));
   margin-right: auto;
   box-sizing: border-box;
-  padding: 6px 0 var(--snap-breath);
+  padding: 32px 0 var(--snap-breath);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -5516,7 +5518,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 .pourquoi-conclusion-band .pourquoi-conclusion {
   width: max-content; max-width: 100%;
   text-align: center; white-space: nowrap;
-  font-size: clamp(1rem, 1.35vw, 1.32rem);
+  font-size: clamp(1.15rem, 1.62vw, 1.5rem);
   padding: clamp(16px, 2vw, 24px) clamp(24px, 3vw, 40px);
 }
 @media (max-width: 780px) {
@@ -6244,7 +6246,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
    ═══════════════════════════════════════════════════════════════ */
 .agent-card--link { text-decoration: none; color: inherit; cursor: pointer; }
 .web-testi-section {
-  margin-top: clamp(32px, 4.5vh, 52px);
+  margin-top: clamp(14px, 2vh, 24px);
 }
 .web-testi-card {
   scroll-snap-align: start;
