@@ -1178,6 +1178,17 @@ section { padding: var(--section-gap) 0; }
 }
 .persp-all-link .portrait-link-arrow { transition: transform .25s var(--ease); }
 .persp-all-link:hover .portrait-link-arrow { transform: translateX(4px); }
+/* Desktop large : les 4 fiches Perspectives tiennent ensemble, sans scroll —
+   espaces resserrés, largeurs égales. En dessous, on garde le carrousel. */
+@media (min-width: 1160px) {
+  .persp-track {
+    gap: 16px;
+    width: 100%;
+    padding-right: 0;
+  }
+  .persp-track-outer { overflow-x: visible; scroll-snap-type: none; }
+  .persp-card { width: auto; flex: 1 1 0; min-width: 0; }
+}
 @media (max-width: 640px) {
   .persp-card { width: 82vw; }
 }
@@ -1822,7 +1833,7 @@ section { padding: var(--section-gap) 0; }
 .tl-item--studeria { display: block; }
 .tl-item--studeria .tl-studeria-text { flex: 1 1 auto; }
 .tl-item--studeria .tl-role { margin-bottom: 6px; max-width: none; }
-.tl-item--studeria h3 { font-size: 1.5rem; }
+.tl-item--studeria h3 { font-size: 1.3rem; letter-spacing: .01em; }
 /* Séparateurs discrets entre compétences */
 .tl-pipe { color: rgba(99,59,74,.28); margin: 0 .55em; font-weight: 300; }
 /* Certification + réassurance (Qualiopi / ISO) sur une seule ligne */
