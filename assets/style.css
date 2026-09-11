@@ -4045,6 +4045,20 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 @media (min-width: 900px) {
   .agents-tasks-1l { white-space: nowrap; }
 }
+/* Compaction verticale — #agents-v2 uniquement : le titre + l'intro doivent
+   tenir dans le premier écran avec le début des cartes. Espacements resserrés,
+   aucune taille de police touchée, mobile/tablette non affectés (> 900px). */
+@media (min-width: 900px) {
+  #agents-v2.agents-section { padding-top: .2rem; padding-bottom: 0; }
+  #agents-v2 .agents-header { padding-bottom: 0; }
+  #agents-v2 .agents-title { margin-bottom: .35rem; }
+  #agents-v2 .agents-team-caption-block { padding-top: 0; padding-bottom: .1rem; }
+  #agents-v2 .agents-team-title { margin: 0 0 2px; }
+  #agents-v2 p.agents-sub--tasks { margin: 4px 0 2px !important; line-height: 1.35; }
+  #agents-v2 em.agents-team-sub { margin-bottom: 2px; }
+  #agents-v2 .agents-team-badge-pill--v2 { margin-top: .4rem; }
+  #agents-v2 .agents-track-outer { padding-top: 0; }
+}
 .agents-team-title {
   font-family: var(--serif);
   /* Nettement plus petit que .agents-title (le titre de section au-dessus) */
