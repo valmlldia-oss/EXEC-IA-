@@ -4041,6 +4041,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 .agents-team-badge-pill--v2 {
   background: rgba(99,59,74,.05);
   color: var(--plum);
+  border-color: #C75F62;
 }
 @media (min-width: 900px) {
   .agents-tasks-1l { white-space: nowrap; }
