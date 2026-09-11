@@ -4042,6 +4042,9 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   background: rgba(99,59,74,.05);
   color: var(--plum);
 }
+@media (min-width: 900px) {
+  .agents-tasks-1l { white-space: nowrap; }
+}
 .agents-team-title {
   font-family: var(--serif);
   /* Nettement plus petit que .agents-title (le titre de section au-dessus) */
