@@ -4165,6 +4165,34 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   padding: 0 1.5rem;
 }
 
+/* Pilules de capacités — version test (section #agents-v2), volontairement
+   différente des pilules sombres de référence : fond ivoire, filet fin prune,
+   icônes trait (pas de pictos pleins). CTA "Découvrir X", pas "Engager X". */
+.agent-pills { display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0 0; }
+.agent-pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 8px 16px;
+  border: 1px solid rgba(99,59,74,.28);
+  border-radius: 999px;
+  background: var(--ivory);
+  font-family: var(--sans); font-size: .8rem; font-weight: 500;
+  color: var(--plum); line-height: 1.3;
+}
+.agent-pill svg { width: 16px; height: 16px; flex-shrink: 0; }
+.agent-pill svg * { stroke: var(--rose); }
+.agent-cta {
+  display: inline-flex; align-items: center; gap: 8px;
+  margin-top: 18px;
+  padding: 10px 22px;
+  border: 1.5px solid var(--plum);
+  border-radius: 999px;
+  font-family: var(--sans); font-size: .88rem; font-weight: 600;
+  color: var(--plum);
+  text-decoration: none;
+  transition: background .2s, color .2s;
+}
+.agent-cta:hover { background: var(--plum); color: var(--white); }
+
 /* Card */
 .agent-card {
   scroll-snap-align: start;
