@@ -4751,6 +4751,23 @@ body > section.newsletter-section.snap-page {
 .nl-box .nl-box-body p:last-child { color: var(--plum); }
 .nl-box .nl-box-trust { color: var(--plum-muted); }
 .nl-box .nl-box-lead { color: rgba(99,59,74,.7); }
+.nl-box .nl-form-back {
+  border-color: rgba(99,59,74,.28);
+  color: rgba(99,59,74,.68);
+}
+.nl-box .nl-form-back:hover {
+  color: var(--plum);
+  border-color: rgba(99,59,74,.5);
+}
+.nl-box .nl-gate-field label { color: rgba(99,59,74,.68); }
+.nl-box .nl-gate-field input {
+  background: rgba(255,255,255,.55);
+  border-color: rgba(199,95,98,.4);
+  color: var(--plum);
+}
+.nl-box .nl-gate-field input::placeholder { color: rgba(99,59,74,.35); }
+.nl-box .nl-gate-field input:focus { background: rgba(255,255,255,.8); }
+.nl-box .newsletter-trust { color: var(--plum-muted); }
 .nl-box-title {
   font-family: var(--serif);
   font-size: 2.8rem;
