@@ -4036,6 +4036,12 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   letter-spacing: .08em;
   margin-top: 1rem;
 }
+/* Section "Vos agents IA" (#agents-v2) uniquement : prune redevient dominant,
+   le terracotta ne reste qu'en ponctuation (contour du badge). */
+.agents-team-badge-pill--v2 {
+  background: rgba(99,59,74,.05);
+  color: var(--plum);
+}
 .agents-team-title {
   font-family: var(--serif);
   /* Nettement plus petit que .agents-title (le titre de section au-dessus) */
