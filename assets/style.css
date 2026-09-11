@@ -4313,10 +4313,22 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   user-select: none;
 }
 
-/* Body — hidden: content is inside the image */
+/* Body — hidden: content is inside the image (agents d'origine, #agents) */
 .agent-body {
   display: none;
 }
+/* #agents-v2 : contrairement aux agents d'origine, le texte n'est PAS cuit
+   dans l'image (contrainte "zéro texte" pour la traduction EN/ES) — on l'affiche. */
+#agents-v2 .agent-body {
+  display: block;
+  padding: 1.3rem 1.5rem 1.55rem;
+  text-align: left;
+}
+/* Neutralise les ajustements d'image positionnels prévus pour les 6 agents
+   d'origine (translate/scale/voile par position nth-child) qui s'appliqueraient
+   sinon aussi aux cartes de #agents-v2. */
+#agents-v2 .agent-card .agent-img img { transform: none !important; }
+#agents-v2 .agent-card .agent-img::before { display: none !important; }
 .agent-eyebrow-txt {
   font-size: .72rem;
   color: rgba(61,30,42,.4);
