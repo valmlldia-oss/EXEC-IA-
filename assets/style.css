@@ -4073,7 +4073,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   font-family: var(--sans); font-size: .78rem; font-weight: 600;
   letter-spacing: .14em; text-transform: uppercase;
   color: #C75F62; opacity: .85;
-  margin: 0 0 6px 30px;
+  margin: 11px 0 6px 30px;
 }
 /* Noms des agents remontent immédiatement sous l'image, sans eyebrow répété */
 #agents-v2 .agent-body { padding-top: 1.1rem; }
