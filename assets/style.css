@@ -5087,6 +5087,9 @@ body > section.newsletter-section.snap-page {
   .ia-perf-stat-label, .roi-intro, .offre-decouverte-btn,
   .agents-cta-title, .xcard-tag, .tl-date, .pillar p,
   .contact-meta, .footer-copy { white-space: normal !important; }
+  /* Exception : les 2 pastilles de certification (RS 6776 · Studeria / RNCP41186BC04 · ESSEC)
+     doivent rester sur une seule ligne même sur mobile, contrairement aux autres .xcard-tag. */
+  .xcard-tag-stack .xcard-tag { white-space: nowrap !important; font-size: .68rem; }
 
   /* Navigation mobile */
   .nav-links { display: none; }
