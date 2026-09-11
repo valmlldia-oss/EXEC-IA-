@@ -4190,8 +4190,18 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   color: var(--plum);
   text-decoration: none;
   transition: background .2s, color .2s;
+  cursor: pointer;
+  list-style: none;
+  width: fit-content;
 }
+.agent-cta::-webkit-details-marker { display: none; }
 .agent-cta:hover { background: var(--plum); color: var(--white); }
+.agent-more[open] .agent-cta .portrait-link-arrow { transform: rotate(90deg); }
+.agent-desc-full {
+  margin: 14px 0 0; padding-top: 14px;
+  border-top: 1px solid rgba(99,59,74,.18);
+  font-size: .92rem; line-height: 1.55; color: var(--plum); opacity: .88;
+}
 
 /* Card */
 .agent-card {
