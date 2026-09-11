@@ -4066,6 +4066,16 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 #agents-v2 .agents-track { gap: .7rem; }
 /* Titre trop collé au trait vertical terracotta : plus de respiration */
 #agents-v2 .agents-title { padding-left: 30px; }
+/* Label de collection "Initiative IA" — une seule fois au niveau de la section,
+   discret, plus petit que le titre. Retiré des cartes individuelles. */
+.agents-v2-eyebrow {
+  font-family: var(--sans); font-size: .78rem; font-weight: 600;
+  letter-spacing: .14em; text-transform: uppercase;
+  color: #C75F62; opacity: .85;
+  margin: 0 0 6px 30px;
+}
+/* Noms des agents remontent immédiatement sous l'image, sans eyebrow répété */
+#agents-v2 .agent-body { padding-top: 1.1rem; }
 .agents-team-title {
   font-family: var(--serif);
   /* Nettement plus petit que .agents-title (le titre de section au-dessus) */
