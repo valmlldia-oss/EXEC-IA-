@@ -4351,8 +4351,17 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 /* Neutralise les ajustements d'image positionnels prévus pour les 6 agents
    d'origine (translate/scale/voile par position nth-child) qui s'appliqueraient
    sinon aussi aux cartes de #agents-v2. */
-#agents-v2 .agent-card .agent-img img { transform: none !important; }
 #agents-v2 .agent-card .agent-img::before { display: none !important; }
+/* Les têtes touchent le bord haut des images sources (1536×1024) : on agrandit
+   le cadre en hauteur et on pousse l'image vers le bas dedans (object-fit:contain
+   + object-position bas) plutôt que cover, pour faire apparaître une marge au-dessus
+   des cheveux. Le fond ivoire du cadre se fond avec le fond des photos. */
+#agents-v2 .agent-img { aspect-ratio: 3 / 2.22; }
+#agents-v2 .agent-card .agent-img img {
+  transform: none !important;
+  object-fit: contain !important;
+  object-position: center 88% !important;
+}
 .agent-eyebrow-txt {
   font-size: .72rem;
   color: rgba(61,30,42,.4);
