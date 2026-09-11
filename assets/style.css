@@ -4057,7 +4057,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   #agents-v2 p.agents-sub--tasks { margin: 4px 0 2px !important; line-height: 1.35; }
   #agents-v2 em.agents-team-sub { margin-bottom: 2px; }
   #agents-v2 .agents-team-badge-pill--v2 { margin-top: .4rem; }
-  #agents-v2 .agents-track-outer { padding-top: 0; }
+  #agents-v2 .agents-track-outer { padding-top: 19px; }
 }
 /* Cartes plus étroites : recadre l'image plus serré sur le personnage
    (object-fit:cover remplit toujours la boîte) et resserre l'espacement
