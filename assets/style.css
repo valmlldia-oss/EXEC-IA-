@@ -4059,6 +4059,11 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   #agents-v2 .agents-team-badge-pill--v2 { margin-top: .4rem; }
   #agents-v2 .agents-track-outer { padding-top: 0; }
 }
+/* Cartes plus étroites : recadre l'image plus serré sur le personnage
+   (object-fit:cover remplit toujours la boîte) et resserre l'espacement
+   entre les 3 cartes — texte court sur une ligne, pas besoin de largeur. */
+#agents-v2 .agent-card { width: 330px; }
+#agents-v2 .agents-track { gap: .7rem; }
 .agents-team-title {
   font-family: var(--serif);
   /* Nettement plus petit que .agents-title (le titre de section au-dessus) */
