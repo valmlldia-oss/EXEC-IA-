@@ -1715,9 +1715,12 @@ section { padding: var(--section-gap) 0; }
 .xcard-tag .tag-icon svg {
   width: 15px; height: 15px; flex-shrink: 0;
 }
+/* Longue liste de références (McKinsey/J.P. Morgan/Warner Bros.) : police réduite
+   pour rester sur une seule ligne, comme les tags de certification à côté. */
+.xcard-tag--refs { font-size: .74rem; padding: 6px 14px; }
 /* Carte 04 : deux certifications empilées (Studeria + ESSEC) */
 .xcard-tag-stack {
-  display: flex; flex-direction: column; gap: 7px; align-items: flex-start;
+  display: flex; flex-direction: row; flex-wrap: wrap; gap: 7px; align-items: flex-start;
   margin-top: auto;
 }
 .xcard-tag-stack .xcard-tag {
