@@ -6510,11 +6510,15 @@ body > section.newsletter-section.snap-page {
 #webTrack .web-img { display: block; padding: 0; background: #FBF7F2; }
 #webTrack .web-img svg { width: 100%; height: 100%; display: block; }
 /* Ici, contrairement aux agents, le texte n'est pas cuit dans l'image : on l'affiche */
+#webTrack .agent-card { display: flex; flex-direction: column; }
 #webTrack .agent-body {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   padding: 1.3rem 1.5rem 1.55rem;
   text-align: left;
 }
+#webTrack .agent-visit-link { margin-top: auto; padding-top: .6rem; }
 #webTrack .agent-eyebrow-txt { color: rgba(199,95,98,.9); font-size: .74rem; }
 #webTrack .agent-name { font-size: 1.5rem; }
 #webTrack .agent-desc { font-size: .92rem; line-height: 1.55; color: rgba(61,30,42,.66); }
