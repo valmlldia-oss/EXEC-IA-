@@ -4054,28 +4054,31 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
    tenir dans le premier écran avec le début des cartes. Espacements resserrés,
    aucune taille de police touchée, mobile/tablette non affectés (> 900px). */
 @media (min-width: 768px) {
-  #agents-v2.agents-section { padding-top: .2rem; padding-bottom: 0; }
+  #agents-v2.agents-section { padding-top: .1rem; padding-bottom: 0; }
   #agents-v2 .agents-header { padding-bottom: 0; }
-  #agents-v2 .agents-title { margin-bottom: .35rem; }
-  #agents-v2 .agents-team-caption-block { padding-top: 0; padding-bottom: .1rem; }
+  #agents-v2 .agents-v2-eyebrow { margin: 6px 0 3px 30px; }
+  #agents-v2 .agents-title { margin-bottom: .2rem; }
+  #agents-v2 .agents-team-caption-block { padding-top: 0; padding-bottom: 0; }
   #agents-v2 .agents-team-title { margin: 0 0 2px; }
-  #agents-v2 p.agents-sub--tasks { margin: 4px 0 2px !important; line-height: 1.35; }
-  #agents-v2 em.agents-team-sub { margin-bottom: 2px; }
-  #agents-v2 .agents-team-badge-pill--v2 { margin-top: .4rem; }
-  #agents-v2 .agents-track-outer { padding-top: 10px; }
+  #agents-v2 p.agents-sub--tasks { margin: 3px 0 1px !important; line-height: 1.25; }
+  #agents-v2 em.agents-team-sub { margin-bottom: 1px; }
+  /* Pilule "24h/24 · 7j/7" masquée sur ce palier étroit uniquement : gain de place,
+     information redondante avec le texte au-dessus, reste visible >900px. */
+  #agents-v2 .agents-team-badge-pill--v2 { display: none; }
+  #agents-v2 .agents-track-outer { padding-top: 4px; }
   /* Carte plus compacte : image raccourcie, respirations resserrées, pour que
      la carte entière + les flèches de navigation tiennent sur un seul écran
      (demande du 12/09 — certaines fenêtres desktop < 900px n'avaient jamais
      ces compactions car le seuil était trop haut). */
-  #agents-v2 .agent-img { aspect-ratio: 3 / 1.85; }
-  #agents-v2 .agent-body { padding-top: .9rem; }
+  #agents-v2 .agent-img { aspect-ratio: 3 / 1.55; }
+  #agents-v2 .agent-body { padding-top: .7rem; }
   #agents-v2 .agent-name { margin-bottom: .3rem; }
-  #agents-v2 .agent-divider { margin-bottom: .45rem; }
-  #agents-v2 .agent-desc { margin-bottom: .5rem; }
-  #agents-v2 .agent-pills { margin-top: 8px; gap: 7px; }
-  #agents-v2 .agent-pill { padding: 6px 14px; }
-  #agents-v2 .agent-cta { margin-top: 10px; padding: 8px 20px; }
-  #agents-v2 .agents-nav { padding: .2rem 0 .1rem; }
+  #agents-v2 .agent-divider { margin-bottom: .4rem; }
+  #agents-v2 .agent-desc { margin-bottom: .35rem; }
+  #agents-v2 .agent-pills { margin-top: 5px; gap: 6px; }
+  #agents-v2 .agent-pill { padding: 5px 13px; }
+  #agents-v2 .agent-cta { margin-top: 6px; padding: 7px 18px; }
+  #agents-v2 .agents-nav { padding: .1rem 0 .06rem; }
 }
 /* Cartes plus étroites : recadre l'image plus serré sur le personnage
    (object-fit:cover remplit toujours la boîte) et resserre l'espacement
