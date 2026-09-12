@@ -1686,7 +1686,11 @@ section { padding: var(--section-gap) 0; }
   border-top: 3px solid var(--plum);
   transition: transform .25s var(--ease), box-shadow .25s;
   position: relative; overflow: hidden;
+  display: flex; flex-direction: column;
 }
+/* Ancre le tag de référence en bas de carte, aligné avec les tags des autres
+   cartes quel que soit le nombre de lignes de texte au-dessus (grid stretch). */
+.xcard > .xcard-tag:last-child { margin-top: auto; }
 .xcard::after {
   content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
   background: var(--rose);
@@ -4056,6 +4060,8 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 /* Compaction verticale — #agents-v2 uniquement : le titre + l'intro doivent
    tenir dans le premier écran avec le début des cartes. Espacements resserrés,
    aucune taille de police touchée, mobile/tablette non affectés (> 900px). */
+/* Évite le doublon de filet avec .expertise-band juste en dessous (section suivante) */
+#agents-v2.agents-section { border-bottom: none; }
 @media (min-width: 768px) {
   #agents-v2.agents-section { padding-top: .1rem; padding-bottom: 0; }
   #agents-v2 .agents-header { padding-bottom: 0; }
