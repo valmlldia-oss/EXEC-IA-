@@ -2207,10 +2207,33 @@ section { padding: var(--section-gap) 0; }
 
 .testi-note {
   margin-top: 14px; text-align: center;
-  /* une ligne de respiration avant le footer */
-  margin-bottom: clamp(28px, 3.4vh, 40px);
   font-size: .93rem; color: rgba(99,59,74,.85); font-style: italic;
   font-weight: 500;
+}
+/* CTA de fin de section, plus visible qu'un simple lien : accroche l'œil
+   sans concurrencer les témoignages principaux au-dessus */
+.testi-more-cta {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  width: fit-content; max-width: 90%; margin: 22px auto 0;
+  padding: 14px 30px;
+  background: var(--pale-rose); border: 1.5px solid var(--rose);
+  border-radius: 999px;
+  font-family: var(--sans); font-size: .95rem; font-weight: 600;
+  color: var(--deep); text-align: center; text-decoration: none;
+  transition: background .25s var(--ease), color .25s var(--ease), transform .25s var(--ease), box-shadow .25s var(--ease);
+}
+.testi-more-cta:hover {
+  background: var(--rose); color: var(--white);
+  transform: translateY(-2px); box-shadow: 0 10px 26px rgba(199,95,98,.3);
+}
+.testi-more-cta .portrait-link-arrow { transition: transform .2s var(--ease); }
+.testi-more-cta:hover .portrait-link-arrow { transform: translateX(4px); }
+.testi-section .testi-more-cta {
+  /* une ligne de respiration avant le footer */
+  margin-bottom: clamp(28px, 3.4vh, 40px);
+}
+@media (max-width: 560px) {
+  .testi-more-cta { font-size: .88rem; padding: 13px 22px; text-align: left; }
 }
 
 /* ─── CONTACT ────────────────────────────────────────────── */
