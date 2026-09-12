@@ -4236,7 +4236,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   width: fit-content;
 }
 .agent-cta::-webkit-details-marker { display: none; }
-.agent-cta:hover { background: var(--plum); color: var(--white); }
+.agent-cta:hover { background: var(--rose); border-color: var(--rose); color: var(--white); }
 .agent-more[open] .agent-cta .portrait-link-arrow { transform: rotate(90deg); }
 .agent-desc-full {
   margin: 14px 0 0; padding-top: 14px;
@@ -4356,7 +4356,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
    dans l'image (contrainte "zéro texte" pour la traduction EN/ES) — on l'affiche. */
 #agents-v2 .agent-body {
   display: block;
-  padding: 1.3rem 1.5rem 1.55rem;
+  padding: 1.3rem 1.5rem 0.3rem;
   text-align: left;
 }
 /* Neutralise les ajustements d'image positionnels prévus pour les 6 agents
