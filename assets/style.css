@@ -1710,6 +1710,10 @@ section { padding: var(--section-gap) 0; }
 }
 .xcard-tag .tag-icon {
   font-size: 1.5em; line-height: 1; letter-spacing: 0;
+  display: inline-flex;
+}
+.xcard-tag .tag-icon svg {
+  width: 15px; height: 15px; flex-shrink: 0;
 }
 /* Carte 04 : deux certifications empilées (Studeria + ESSEC) */
 .xcard-tag-stack {
