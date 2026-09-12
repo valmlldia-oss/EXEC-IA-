@@ -1725,7 +1725,7 @@ section { padding: var(--section-gap) 0; }
 /* Carte 04 : deux certifications empilées (Studeria + ESSEC) */
 .xcard-tag-stack {
   display: flex; flex-direction: row; flex-wrap: wrap; gap: 7px; align-items: flex-start;
-  margin-top: auto;
+  margin-top: auto; padding-top: 12px;
 }
 .xcard-tag-stack .xcard-tag {
   font-size: .76rem; padding: 5px 13px; max-width: 100%;
