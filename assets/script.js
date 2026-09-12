@@ -195,7 +195,12 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   const dots  = document.querySelectorAll('[data-idx2]');
   const btnPrev = document.getElementById('agentsPrev2');
   const btnNext = document.getElementById('agentsNext2');
+  const counter = document.getElementById('agentsCounter2');
   let current = 0;
+
+  function updateCounter() {
+    if (counter) counter.textContent = `· ${current + 1}/${cards.length}`;
+  }
 
   function cardWidth() {
     const c = cards[0];
@@ -209,6 +214,7 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     dots.forEach((d, i) => d.classList.toggle('active', i === current));
     if (btnPrev) btnPrev.disabled = current === 0;
     if (btnNext) btnNext.disabled = current === cards.length - 1;
+    updateCounter();
   }
 
   btnPrev?.addEventListener('click', () => goTo(current - 1));
@@ -217,7 +223,7 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 
   outer.addEventListener('scroll', () => {
     const idx = Math.round(outer.scrollLeft / cardWidth());
-    if (idx !== current) { current = idx; dots.forEach((d, i) => d.classList.toggle('active', i === current)); }
+    if (idx !== current) { current = idx; dots.forEach((d, i) => d.classList.toggle('active', i === current)); updateCounter(); }
   }, { passive: true });
 
   /* Drag / mouse */

@@ -4079,6 +4079,10 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   color: #C75F62; opacity: .85;
   margin: 11px 0 6px 30px;
 }
+.agents-v2-counter {
+  color: var(--plum); opacity: .55; font-weight: 500;
+  letter-spacing: .04em; text-transform: none;
+}
 /* Noms des agents remontent immédiatement sous l'image, sans eyebrow répété */
 #agents-v2 .agent-body { padding-top: 1.1rem; }
 .agents-team-title {
