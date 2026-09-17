@@ -2859,7 +2859,7 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   box-shadow: 0 4px 24px rgba(99,59,74,.07);
   transition: box-shadow .25s, transform .25s;
 }
-.offre-card .btn { margin-top: auto; align-self: center; }
+.offre-card .btn { margin-top: auto; align-self: center; white-space: nowrap; padding: 15px 26px; font-size: 1.02rem; }
 .offre-card:hover { box-shadow: 0 6px 28px rgba(99,59,74,.12); }
 .offre-card--accent {
   border-color: rgba(199,95,98,.3);
