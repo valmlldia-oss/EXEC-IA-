@@ -2513,11 +2513,11 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   display: flex; flex-direction: column; gap: 5px; align-items: center;
   justify-content: flex-start; flex-shrink: 0;
 }
-/* Le dernier élément (celui qui porte le petit trait terracotta) est toujours
-   plaqué en bas de la colonne, quelle que soit la hauteur du contenu au-dessus —
-   ça aligne à la fois la 1ère ligne (juste sous le chiffre) et les traits du bas
-   sur les 4 colonnes du bandeau. */
-.ss-item .ss-label { margin-top: auto; }
+/* Le petit tag et son label restent groupés (pas d'écart mort entre eux) et
+   descendent ensemble en bas de la colonne, quelle que soit la hauteur du
+   contenu au-dessus — ça aligne les traits du bas sur les 4 colonnes tout en
+   gardant le texte compact plutôt qu'étiré sur toute la hauteur. */
+.ss-item .ss-cert-tag { margin-top: auto; }
 .ss-item:last-child { border-right: none; }
 .ss-num {
   font-family: var(--serif); font-size: 2.9rem; font-weight: 600;
