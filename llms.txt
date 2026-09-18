@@ -1,0 +1,23 @@
+# EXEC'IA
+
+> Cabinet de conseil stratégique en Intelligence Artificielle pour dirigeants. Priorisation des initiatives IA, automatisation intelligente, transformation digitale. Fondé par Valérie Mailland (18 ans chez McKinsey & Company).
+
+## Pages principales
+
+- [Accueil](https://exec-ia.ai/): Présentation du positionnement EXEC'IA — l'IA comme sujet de Direction Générale, pas seulement d'outillage.
+- [Expertise](https://exec-ia.ai/expertise.html): Le détail des domaines d'intervention et des agents IA métier développés par EXEC'IA.
+- [Offres](https://exec-ia.ai/offres.html): Les formats d'accompagnement proposés (ateliers CODIR, sparring dirigeant, transformation IA, sites web), avec tarifs publics.
+- [À propos](https://exec-ia.ai/a-propos.html): Parcours de Valérie Mailland (McKinsey, Bureau Veritas) et vision d'EXEC'IA.
+- [Témoignages](https://exec-ia.ai/temoignages.html): Retours sur le parcours professionnel de Valérie Mailland avant EXEC'IA.
+- [Contact](https://exec-ia.ai/contact.html): Diagnostic express et prise de contact.
+
+## Perspectives (articles)
+
+- [L'entreprise utilise déjà l'IA](https://exec-ia.ai/perspective-entreprise-utilise-deja-ia.html): Sur l'écart entre adoption d'outils IA et création de valeur réelle.
+- [Le problème n'est pas les outils mais l'arbitrage](https://exec-ia.ai/perspective-probleme-nest-pas-outils-mais-arbitrage.html): Sur la priorisation des usages IA en comité de direction.
+- [Toutes les décisions ne se délèguent pas](https://exec-ia.ai/perspective-toutes-decisions-ne-se-deleguent-pas.html): Sur les limites de la délégation à l'IA.
+- [La transformation échoue rarement à cause de la technologie](https://exec-ia.ai/perspective-transformation-echoue-rarement-technologie.html): Sur les vrais facteurs d'échec des projets de transformation IA.
+
+## Langues
+
+Le site existe aussi en anglais (index-en.html, offres-en.html, expertise-en.html, a-propos-en.html, contact-en.html, temoignages-en.html) et en espagnol (mêmes pages en -es.html).

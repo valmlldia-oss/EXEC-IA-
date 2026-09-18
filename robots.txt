@@ -5,4 +5,18 @@ Allow: /
 Disallow: /brevo-en-cours.html
 Disallow: /split.html
 
+# Robots d'entraînement de modèles IA (pas de citation) : bloqués au niveau Cloudflare.
+# Déclaré ici pour que robots.txt reflète honnêtement la politique appliquée.
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
 Sitemap: https://exec-ia.ai/sitemap.xml
