@@ -393,7 +393,7 @@ strong, b { font-weight: 600; }
 .hero-left--full { padding-right: 0; max-width: 920px; }
 @media (min-width: 1280px) {
   .hero-left--full { max-width: 1400px; }
-  .hero-sub { white-space: nowrap; font-size: clamp(1.7rem, 2.5vw, 2.4rem); }
+  .hero-sub { font-size: clamp(1.7rem, 2.5vw, 2.4rem); }
   .hero-sub-focal { font-size: clamp(2.3rem, 3.3vw, 3.1rem); }
   .hero-sub2 { white-space: nowrap; }
 }
@@ -453,6 +453,9 @@ strong, b { font-weight: 600; }
 .hero-left h1 em {
   font-style: normal; display: inline;
   color: var(--rose);
+}
+.hero-left h1.hero-sub {
+  display: block;
 }
 
 /* Decorative rule under name */
