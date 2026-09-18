@@ -6234,6 +6234,16 @@ body > section.newsletter-section.snap-page {
   .cookie-btn { flex: 1; text-align: center; }
 }
 
+/* Réserve de l'espace pour la bannière cookies tant qu'elle est visible,
+   pour ne jamais recouvrir le CTA principal du hero (mobile/tablette/petit laptop). */
+body.cookie-banner-open .hero-cta { transition: margin-bottom .3s ease; }
+@media (max-width: 600px) {
+  body.cookie-banner-open .hero-cta { margin-bottom: 170px; }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  body.cookie-banner-open .hero-cta { margin-bottom: 100px; }
+}
+
 /* ─── Garde-fou mobile : robustesse générale (toutes langues) ───
    Neutralise les white-space:nowrap et les grilles figées qui débordent
    sur écran étroit. Le site ne doit jamais scroller horizontalement. */
