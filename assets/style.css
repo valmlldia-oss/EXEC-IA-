@@ -1338,17 +1338,22 @@ section { padding: var(--section-gap) 0; }
   font-family: var(--sans); font-size: .85rem; font-weight: 500;
   color: var(--plum); opacity: .55; margin: 10px 0 0;
 }
+.article-source-note a {
+  color: inherit; text-decoration: underline; text-underline-offset: 2px;
+  transition: opacity .2s;
+}
+.article-source-note a:hover { opacity: .7; }
 .article-source-note--linkedin {
   display: inline-flex; align-items: center; gap: 7px; opacity: .85;
 }
 .article-linkedin-icon { height: 16.5px; width: auto; display: inline-block; }
 /* Bloc des 3 questions — lisible, élégant, sans accordéon */
-.article-qlist { max-width: 620px; margin: 28px 0 0; padding-left: 22px; border-left: 2px solid rgba(199,95,98,.4); }
-.article-qlist p {
+.article-qlist { max-width: 620px; margin: 28px 0 0; padding-left: 22px; border-left: 2px solid rgba(199,95,98,.4); list-style: none; }
+.article-qlist p, .article-qlist li {
   font-family: var(--serif); font-style: italic; font-weight: 500;
   font-size: 1.15rem; color: var(--plum); line-height: 1.5; margin: 0 0 8px;
 }
-.article-qlist p:last-child { margin-bottom: 0; }
+.article-qlist p:last-child, .article-qlist li:last-child { margin-bottom: 0; }
 .article-hashtags {
   font-family: var(--sans); font-size: .88rem; font-weight: 600;
   color: var(--rose); opacity: .8; letter-spacing: .01em;
@@ -1600,7 +1605,7 @@ section { padding: var(--section-gap) 0; }
   -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px);
   box-shadow: 0 14px 34px rgba(99,59,74,.05);
 }
-.pilier-star { color: #D4AF37; font-size: 1.6rem; line-height: 1; margin-bottom: 8px; }
+.pilier-star { color: #BFA06A; font-size: 1.6rem; line-height: 1; margin-bottom: 8px; }
 .pilier-title {
   color: var(--rose); font-family: var(--sans);
   font-size: 1.28rem; font-weight: 500; line-height: 1.32; letter-spacing: .005em;
@@ -1645,7 +1650,7 @@ section { padding: var(--section-gap) 0; }
   flex-shrink: 0;
   display: inline-block;
   line-height: 1;
-  color: #D4AF37;
+  color: #BFA06A;
 }
 @keyframes star-shimmer {
   0%,100% { opacity:1; text-shadow: 0 0 4px rgba(201,168,76,.5); }
@@ -5133,7 +5138,7 @@ body > section.newsletter-section.snap-page {
   padding: 16px 24px !important;
 }
 .nl-submit:hover {
-  background: #a84e51 !important;
+  background: #C75F62 !important; filter: brightness(.88);
   transform: translateY(-2px);
   box-shadow: 0 6px 24px rgba(199,95,98,.35);
 }
@@ -6235,7 +6240,7 @@ body > section.newsletter-section.snap-page {
 }
 .cookie-btn--refuse:hover { border-color: #D9C9C3; color: #FAF6F2; }
 .cookie-btn--accept { background: #C75F62; color: #FAF6F2; border-color: #C75F62; }
-.cookie-btn--accept:hover { background: #b85558; }
+.cookie-btn--accept:hover { background: #C75F62; filter: brightness(.88); }
 @media (max-width: 600px) {
   .cookie-banner { padding: 16px 20px; }
   .cookie-banner-inner { flex-direction: column; align-items: flex-start; gap: 14px; }
