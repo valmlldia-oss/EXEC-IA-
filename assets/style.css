@@ -27,6 +27,13 @@
 
 /* ─── RESET ─────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* Anneau de focus bleu du navigateur (trackpad/clic) remplacé par un anneau
+   terracotta, et affiché seulement à la navigation clavier (:focus-visible)
+   — jamais au clic souris/trackpad. */
+a:focus, button:focus, summary:focus, [tabindex]:focus { outline: none; }
+a:focus-visible, button:focus-visible, summary:focus-visible, [tabindex]:focus-visible {
+  outline: 2px solid var(--rose); outline-offset: 3px;
+}
 html {
   overflow-x: clip;
   /* Empêche le "rebond" (overscroll bounce) qui révèle une bande vide
@@ -239,8 +246,8 @@ strong, b { font-weight: 600; }
   box-shadow: none;
 }
 .nav-logo-x { height: 52px; width: auto; mix-blend-mode: multiply; }
-.nav-logo-rond { height: 48px; width: 48px; object-fit: contain; border-radius: 50%; flex-shrink: 0; }
-.nav-logo-full { height: 60px; width: auto; }
+.nav-brand .nav-logo-rond { height: 54px; width: 54px; object-fit: contain; border-radius: 50%; flex-shrink: 0; }
+.nav-brand .nav-logo-full { height: 75px; width: auto; }
 .nav-logo-wordmark { display: flex; flex-direction: column; align-items: flex-start; gap: 0; padding: 2px 0; }
 .nav-wm-name { font-family: var(--serif); font-size: 1.42rem; font-weight: 600; letter-spacing: .05em; color: var(--plum); line-height: 1; }
 .nav-wm-apo { color: var(--plum); opacity: .7; }
@@ -258,6 +265,12 @@ strong, b { font-weight: 600; }
 .nav-brand-tagline { display: none; }
 .nav-links {
   display: flex; align-items: center; gap: 32px; flex: 1; justify-content: center;
+}
+/* Le logo agrandi (+~20%) prend un peu plus de place dans la nav : entre
+   1025 et 1300px, resserre légèrement l'espace entre les 7 rubriques
+   (jamais leur taille de police) pour que rien ne déborde. */
+@media (max-width: 1300px) and (min-width: 1025px) {
+  .nav-links { gap: 22px; }
 }
 .nav-links a {
   position: relative;
@@ -456,6 +469,7 @@ strong, b { font-weight: 600; }
 }
 .hero-left h1.hero-sub {
   display: block;
+  font-weight: 400;
 }
 
 /* Decorative rule under name */
@@ -536,7 +550,7 @@ strong, b { font-weight: 600; }
      Seule "Direction Générale." (span ci-dessous) reçoit une taille
      exceptionnelle : c'est le H1, il doit rester le point focal. */
   font-size: clamp(2.05rem, 3.7vw, 2.95rem);
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: -.01em;
   color: #633B4A;
   line-height: 1.3;
@@ -655,7 +669,7 @@ strong, b { font-weight: 600; }
   animation: fadein 1.1s var(--ease) .25s both;
 }
 .hero-photo-name {
-  font-family: var(--serif); font-size: clamp(1.44rem, 2.01vw, 1.8rem);
+  font-family: var(--serif); font-size: clamp(1.37rem, 1.91vw, 1.71rem);
   font-style: italic; font-weight: 400; letter-spacing: .03em;
   display: inline-block;
   background: linear-gradient(90deg, #633B4A 0%, #C75F62 100%);
@@ -855,13 +869,14 @@ section { padding: var(--section-gap) 0; }
 /* Titre Perspectives — tient sur une ligne à partir de 1300px, revient
    au retour à la ligne naturel en dessous pour ne jamais déborder. */
 @media (min-width: 1300px) {
-  .section-title--nowrap-lg { white-space: nowrap; }
+  .section-title--nowrap-lg { white-space: nowrap; font-size: clamp(2rem, 3.05vw, 2.9rem); }
 }
-/* Témoignages — matrice ve-title (Cormorant, 500) */
+/* Témoignages — matrice ve-title (Cormorant, 400 — graisse abaissée d'un cran
+   sur tous les grands titres serif, pour plus de sophistication/respiration) */
 .testi-section .section-title {
   font-family: var(--serif);
   font-size: clamp(1.8rem, 3.2vw, 2.6rem);
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.3;
   letter-spacing: -.01em;
   color: #633B4A;
@@ -869,20 +884,20 @@ section { padding: var(--section-gap) 0; }
      le titre à sa phrase d'introduction (était 32px, trop de vide) */
   margin-bottom: 4px;
 }
-/* À propos uniquement — matrice ve-title (Cormorant, 500) */
+/* À propos uniquement — matrice ve-title (Cormorant, 400) */
 .parcours-header-text .section-title {
   font-family: var(--serif);
   font-size: clamp(1.8rem, 3.2vw, 2.6rem);
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.3;
   letter-spacing: -.01em;
   color: #633B4A;
 }
-/* Accueil uniquement — retour à la matrice typographique ve-title (Cormorant, 500),
+/* Accueil uniquement — retour à la matrice typographique ve-title (Cormorant, 400),
    pas d'accent italique/terracotta sur ces deux titres sobres */
 .section-title.pourquoi-title,
 .ce-que-section .section-title {
-  font-weight: 500;
+  font-weight: 400;
 }
 
 /* ─── POURQUOI + CE QUE — 2 COLONNES ───────────────────── */
@@ -992,20 +1007,18 @@ section { padding: var(--section-gap) 0; }
   margin-bottom: 24px !important;
   /* même échelle H1 que « Le vrai enjeu » / le hero */
   font-size: clamp(2.35rem, 3.95vw, 3.2rem) !important;
-  /* même traitement typographique que « D'abord la priorité business. Ensuite la technologie. » (.maf-lead--home) */
-  font-weight: 500 !important;
+  /* graisse abaissée d'un cran sur tous les grands titres serif */
+  font-weight: 400 !important;
 }
 .expertise-section-title {
   line-height: 1.1 !important;
   margin-bottom: 24px !important;
-  /* même traitement typographique que « D'abord la priorité business. Ensuite la technologie. » (.maf-lead--home) */
-  font-weight: 500 !important;
+  font-weight: 400 !important;
 }
 .offres-section-title {
   line-height: 1.1 !important;
   margin-bottom: 24px !important;
-  /* même traitement typographique que « D'abord la priorité business. Ensuite la technologie. » (.maf-lead--home) */
-  font-weight: 500 !important;
+  font-weight: 400 !important;
 }
 .offres-subtitle {
   font-family: var(--serif);
@@ -1737,7 +1750,7 @@ section { padding: var(--section-gap) 0; }
 /* Longue liste de références (McKinsey/J.P. Morgan/Warner Bros.) : police réduite
    pour rester sur une seule ligne, comme les tags de certification à côté. */
 .xcard-tag--refs {
-  font-size: .64rem; padding: 7px 14px;
+  font-size: .76rem; padding: 7px 14px;
   white-space: nowrap; text-align: left; line-height: 1.4;
   border-radius: 20px; max-width: 100%; letter-spacing: .01em;
 }
@@ -1910,7 +1923,7 @@ section { padding: var(--section-gap) 0; }
   .tl-expertise-group .tl-item::before { left: -41px; }
   .tl-expertise-tag { left: 14px; }
 }
-.tl-item h3 { font-family: var(--serif); font-size: 1.8rem; color: var(--plum); margin-bottom: 5px; }
+.tl-item h3 { font-family: var(--serif); font-size: 1.8rem; font-weight: 400; color: var(--plum); margin-bottom: 5px; }
 .tl-role { font-size: .95rem; color: var(--plum-muted); font-style: italic; margin-bottom: 10px; }
 .tl-item--studeria { display: block; }
 .tl-item--studeria .tl-studeria-text { flex: 1 1 auto; }
@@ -2263,7 +2276,7 @@ section { padding: var(--section-gap) 0; }
 }
 .contact-lead strong {
   display: block; font-family: var(--serif);
-  font-size: clamp(1.6rem, 3.2vw, 2.4rem); font-weight: 600;
+  font-size: clamp(1.6rem, 3.2vw, 2.4rem); font-weight: 400;
   color: var(--plum); line-height: 1.25; margin-bottom: 18px;
   white-space: normal;
 }
@@ -2597,6 +2610,13 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   content: ""; display: block; width: 26px; height: 2px;
   background: var(--rose); border-radius: 2px; margin: 8px auto 0; opacity: .75;
 }
+/* Bloc "France · International" (pas de ss-cert-tag au-dessus, contrairement
+   aux 3 autres blocs) : son trait remonte de fait plus haut que les 3 autres
+   — on ne descend QUE le trait pour le réaligner sur la même ligne de base,
+   sans toucher au texte, au globe ni aux espacements. */
+.ss-label--strong::after {
+  margin-top: 62px;
+}
 /* Nom de cabinet sur une seule ligne, en gras — reste lisible et tient dans la colonne */
 .ss-firm {
   display: inline-block; font-weight: 600; white-space: nowrap;
@@ -2780,6 +2800,24 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   font-family: var(--sans); font-size: .78rem; font-weight: 600;
   letter-spacing: .04em; text-transform: uppercase; color: var(--plum);
 }
+.offre-web-tiers--agents .offre-web-tier-name { font-size: .86rem; }
+.offre-agent-pastilles { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 0; }
+.offre-agent-pastille {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 12px;
+  border: 1px solid rgba(99,59,74,.28);
+  border-radius: 999px;
+  background: var(--ivory);
+  font-family: var(--sans); font-size: .74rem; font-weight: 500;
+  color: var(--plum); line-height: 1.3;
+}
+.offre-agent-pastille svg { width: 14px; height: 14px; flex-shrink: 0; }
+.offre-agent-pastille svg * { stroke: var(--rose); }
+.offre-agent-inclus {
+  display: block;
+  font-family: var(--sans); font-size: .7rem; color: rgba(61,30,42,.5);
+  line-height: 1.4; margin-top: auto; padding-top: 12px;
+}
 .offre-web-tier--popular .offre-web-tier-name { margin-top: 8px; }
 .offre-web-tier-badge {
   font-family: var(--sans); font-size: .64rem; font-weight: 600;
@@ -2803,7 +2841,7 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   letter-spacing: .03em; color: rgba(61,30,42,.4); margin-left: 1px;
 }
 .offre-price-note {
-  font-size: .76rem; color: rgba(61,30,42,.55); text-align: center;
+  font-size: .9rem; color: rgba(61,30,42,.55); text-align: center;
   margin: -8px 0 18px;
 }
 @media (max-width: 760px) {
@@ -2857,7 +2895,7 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
 
 .offres-grid {
   display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px;
-  padding-top: 28px; overflow: visible;
+  padding-top: 18px; overflow: visible;
 }
 .offres-grid-4 {
   /* 2 offres + 2 offres en dessous */
@@ -2932,12 +2970,13 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   letter-spacing: .01em;
   line-height: 1.55;
   margin: 0;
-  padding-top: 4px;
+  padding-top: 14px;
   border-top: 1px solid rgba(199,95,98,.18);
 }
 .offre-format {
-  font-size: .88rem; color: var(--plum); font-weight: 600;
+  font-size: .88rem; color: var(--plum); font-weight: 500; opacity: .82;
   line-height: 1.6; text-align: center;
+  padding-top: 10px; border-top: 1px solid rgba(99,59,74,.12);
   min-height: 0;
 }
 .offre-format-sub {
@@ -2967,6 +3006,13 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   list-style: none; padding: 0; margin: 0;
   display: flex; flex-direction: column; gap: 5px;
 }
+/* Les 3 cartes Direction générale partagent une grille : réserve la hauteur
+   du plus long des 3 (Transformation IA, 4 lignes) pour que prix, "Pour qui"
+   et CTA tombent au même niveau sur les 3 cartes, quel que soit le nombre
+   d'éléments. */
+.offres-grid .offre-points { min-height: 128px; }
+.offres-grid .offre-format { min-height: 78px; }
+.offres-grid .offre-pour-qui { min-height: 99px; }
 .offre-points li {
   font-size: 1.05rem; color: var(--text);
   padding-left: 18px; position: relative; line-height: 1.5;
@@ -3507,7 +3553,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 .expertise-hero-title {
   font-family: var(--serif);
   font-size: clamp(1.8rem, 3.2vw, 2.6rem);
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: -.01em;
   line-height: 1.3;
   color: #633B4A;
@@ -3792,7 +3838,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 .stat-number {
   font-family: var(--serif);
   font-size: clamp(2.7rem, 5.4vw, 4.7rem);
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1;
   letter-spacing: -.01em;
   color: var(--rose);
@@ -3859,7 +3905,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 }
 .conviction-terra-lead {
   font-family: var(--serif); font-size: clamp(1.5rem, 2.6vw, 2.1rem);
-  font-weight: 600; line-height: 1.2; color: #FAF6F2; margin-bottom: 10px;
+  font-weight: 400; line-height: 1.2; color: #FAF6F2; margin-bottom: 10px;
 }
 .conviction-terra-sub {
   font-family: var(--sans); font-weight: 400;
@@ -4019,7 +4065,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 .ia-perf-accent { color: var(--rose); font-weight: 600; font-style: italic; }
 .ia-perf-body p { font-family: var(--serif); font-size: clamp(1.3rem, 2vw, 1.8rem); font-weight: 400; line-height: 1.45; color: var(--plum); margin: 0; }
 .ia-perf-stat { display: flex; align-items: baseline; gap: 20px; flex-wrap: wrap; margin-bottom: 8px; }
-.ia-perf-num { font-family: var(--serif); font-size: clamp(4rem, 7vw, 6.5rem); font-weight: 600; color: #C75F62; line-height: 1; flex-shrink: 0; }
+.ia-perf-num { font-family: var(--serif); font-size: clamp(4rem, 7vw, 6.5rem); font-weight: 400; color: #C75F62; line-height: 1; flex-shrink: 0; }
 .ia-perf-stat-label { font-family: var(--serif); font-size: clamp(1.2rem, 1.8vw, 1.65rem); font-weight: 400; color: var(--plum); line-height: 1.4; white-space: normal; }
 
 /* Resserré à ~0,5cm avant le footer, cohérent avec .expertise-contact. */
@@ -4188,7 +4234,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   /* Nettement plus petit que .agents-title (le titre de section au-dessus) */
   font-size: clamp(1.5rem, 2.6vw, 2.05rem);
   color: var(--plum);
-  font-weight: 600;
+  font-weight: 400;
   margin: 0 0 4px;
   line-height: 1.1;
 }
@@ -4461,10 +4507,17 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 /* #agents-v2 : contrairement aux agents d'origine, le texte n'est PAS cuit
    dans l'image (contrainte "zéro texte" pour la traduction EN/ES) — on l'affiche. */
 #agents-v2 .agent-body {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   padding: 1.3rem 1.5rem 0.3rem;
   text-align: left;
 }
+#agents-v2 .agent-card { display: flex; flex-direction: column; }
+#agents-v2 .agent-more { margin-top: auto; }
+/* Nom de l'agent (VIGIE, ÉCHO…) seul élément en gras du bloc titre ;
+   la fonction (Assistant de Direction, Marketing…) repasse en Regular. */
+#agents-v2 .agent-name span:nth-of-type(2) { font-weight: 400; }
 /* Neutralise les ajustements d'image positionnels prévus pour les 6 agents
    d'origine (translate/scale/voile par position nth-child) qui s'appliqueraient
    sinon aussi aux cartes de #agents-v2. */
@@ -4566,12 +4619,12 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 .agents-cta-title {
   /* Identique à .agents-team-title ("Une équipe de choc") */
   font-family: var(--serif); font-size: clamp(1.7rem, 3vw, 2.45rem);
-  font-weight: 600; color: var(--plum); margin: 0 0 4px;
+  font-weight: 400; color: var(--plum); margin: 0 0 4px;
   line-height: 1.1;
 }
 .agents-cta-lead {
   font-family: var(--serif); font-size: clamp(1.7rem, 3vw, 2.45rem);
-  font-weight: 600; font-style: italic; color: var(--plum);
+  font-weight: 400; font-style: italic; color: var(--plum);
   /* Plus d'espace avant la pilule "Vous gardez la maîtrise…" */
   margin-bottom: 30px;
 }
@@ -5804,6 +5857,7 @@ body > section.newsletter-section.snap-page {
   grid-column: 1 / -1;
   display: flex; justify-content: center;
   padding: clamp(6px, 1.4vh, 16px) 24px clamp(2px, 1vh, 10px);
+  margin-bottom: 11px; /* +3mm de respiration sous le bloc, demandé explicitement */
 }
 .pourquoi-conclusion-band .pourquoi-conclusion {
   width: max-content; max-width: 100%;
@@ -5860,6 +5914,11 @@ body > section.newsletter-section.snap-page {
   font-size: clamp(1.36rem, 1.88vw, 1.6rem);
 }
 .tl-intro--fil { max-width: none; white-space: normal; }
+/* Sur une seule ligne à partir de 900px seulement : en dessous, la phrase
+   déborderait de son conteneur (vérifié : léger débordement dès 769px). */
+@media (min-width: 900px) {
+  .tl-intro--diff, .tl-intro--fil { white-space: nowrap; }
+}
 /* Mots-clés du fil conducteur : semi-bold romain (l'italique de Cormorant
    n'existe qu'en 400 — un strong italique produit un faux-gras trop lourd). */
 .tl-intro--fil strong { font-weight: 600; font-style: normal; }
@@ -6124,6 +6183,8 @@ body > section.newsletter-section.snap-page {
   color: var(--plum); text-align: left; line-height: 1.35;
 }
 .accord-btn:hover { color: var(--rose); }
+.accord-btn:focus { outline: none; }
+.accord-btn:focus-visible { outline: 2px solid var(--rose); outline-offset: 3px; border-radius: 4px; }
 .accord-icon {
   font-size: 1.6rem; font-weight: 400; color: var(--rose); flex-shrink: 0;
   line-height: 1; transition: transform .35s var(--ease);
@@ -6131,7 +6192,7 @@ body > section.newsletter-section.snap-page {
 .accord-btn[aria-expanded="true"] .accord-icon { transform: rotate(45deg); }
 .accord-body { overflow: hidden; max-height: 0; transition: max-height .45s var(--ease); }
 .accord-body p {
-  padding: 0 60px 24px 0; max-width: 800px;
+  padding: 0 40px 24px 0; max-width: 960px;
   font-family: var(--sans); font-size: clamp(1rem,1.3vw,1.2rem); color: var(--text);
   font-weight: 400; line-height: 1.75; margin: 0 0 10px;
 }
