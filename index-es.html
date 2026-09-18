@@ -227,21 +227,7 @@
         </div>
       </div>
     </div>
-    <script>
-    (function(){
-      var cards = document.querySelectorAll('.constat-flip');
-      cards.forEach(function(c){
-        function toggle(){
-          var f = c.classList.toggle('is-flipped');
-          c.setAttribute('aria-pressed', f ? 'true' : 'false');
-        }
-        c.addEventListener('click', toggle);
-        c.addEventListener('keydown', function(e){
-          if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); toggle(); }
-        });
-      });
-    })();
-    </script>
+    <script src="assets/inline/index-es-1.js" defer></script>
     <p class="constat-pivot"><em class="constat-pivot-q">¿La buena noticia?</em>No necesita un experto en <span style="color:var(--rose);font-weight:600">IA</span>. Necesita una <strong class="constat-pivot-punch">dirección clara</strong>.<br>Son decisiones de <span style="color:var(--rose);font-weight:600">Dirección General</span>.</p>
   </div>
 </section>
@@ -417,23 +403,6 @@
     </div>
   </div>
 </div>
-<script>
-(function(){
-  var banner=document.getElementById('cookie-banner');
-  var key='execia_cookies';
-  if(!banner||localStorage.getItem(key))return;
-  setTimeout(function(){banner.classList.add('visible');document.body.classList.add('cookie-banner-open');},800);
-  document.getElementById('cookie-accept').addEventListener('click',function(){
-    localStorage.setItem(key,'accepted');
-    banner.classList.remove('visible');
-    document.body.classList.remove('cookie-banner-open');
-  });
-  document.getElementById('cookie-refuse').addEventListener('click',function(){
-    localStorage.setItem(key,'refused');
-    banner.classList.remove('visible');
-    document.body.classList.remove('cookie-banner-open');
-  });
-})();
-</script>
+<script src="assets/inline/index-es-2.js" defer></script>
 </body>
 </html>

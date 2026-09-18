@@ -293,7 +293,8 @@ strong, b { font-weight: 600; }
 }
 .nav-burger {
   display: none; flex-direction: column; gap: 5px;
-  background: none; border: none; cursor: pointer; padding: 4px;
+  background: none; border: none; cursor: pointer; padding: 13px;
+  min-width: 44px; min-height: 44px; align-items: center; justify-content: center;
 }
 .nav-burger span {
   width: 22px; height: 2px; background: var(--plum);
@@ -5216,7 +5217,7 @@ body > section.newsletter-section.snap-page {
   }
   .nav-links.open a { font-size: .9rem; max-width: none !important; }
   .nav-langs { gap: 4px; }
-  .nav-lang { padding: 3px 8px; font-size: .65rem !important; }
+  .nav-lang { padding: 12px 10px; font-size: .65rem !important; min-height: 44px; display: inline-flex; align-items: center; }
 
   /* Hero mobile */
   #hero { height: auto; min-height: 100vh; padding-bottom: 0; }
@@ -5274,7 +5275,8 @@ body > section.newsletter-section.snap-page {
     gap: 8px; width: 100%;
   }
   .ss-item { padding: 14px 6px; }
-  .ss-num { font-size: 1.4rem; }
+  .ss-num { font-size: 2.42rem; }
+  .ss-sup { font-size: 1.15rem; margin-top: 3px; }
   .ss-label { font-size: .58rem; }
 
   /* Performance */
