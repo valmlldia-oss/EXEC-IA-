@@ -2536,20 +2536,20 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
      tour à 360° passe par un angle "de profil" où le glyphe (plat) devient
      invisible ou en miroir. On oscille donc entre -35° et 35° : jamais
      edge-on, jamais de backface, toujours visible. */
-  animation: ss-globe-spin 4s ease-in-out infinite;
-  /* Démarre en même temps que les compteurs 20/18, pas dès le chargement de la page */
+  animation: ss-globe-spin 3.2s ease-in-out infinite;
+  /* Démarre juste après les compteurs 20/18 (2e vague), pas dès le chargement de la page */
   animation-play-state: paused;
 }
 .ss-num--globe.ss-globe-active { animation-play-state: running; }
 @keyframes ss-globe-spin {
-  0%, 100% { transform: perspective(240px) rotateY(-35deg); }
-  50%      { transform: perspective(240px) rotateY(35deg); }
+  0%, 100% { transform: perspective(240px) rotateY(-52deg) scale(1); }
+  50%      { transform: perspective(240px) rotateY(52deg) scale(1.08); }
 }
 /* Halo plus marqué, respiration continue plutôt que 2 pulses puis silence */
 .ss-num--ia.ss-ia-pulse { animation: ss-ia-glow 2.6s ease-in-out infinite; }
 @keyframes ss-ia-glow {
   0%   { text-shadow: 0 0 0 rgba(199,95,98,0); transform: scale(1); }
-  50%  { text-shadow: 0 0 34px rgba(199,95,98,1), 0 0 60px rgba(199,95,98,.65), 0 0 4px rgba(199,95,98,.9); transform: scale(1.12); }
+  50%  { text-shadow: 0 0 42px rgba(199,95,98,1), 0 0 74px rgba(199,95,98,.7), 0 0 6px rgba(199,95,98,.95); transform: scale(1.2); }
   100% { text-shadow: 0 0 0 rgba(199,95,98,0); transform: scale(1); }
 }
 @media (prefers-reduced-motion: reduce) {
