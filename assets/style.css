@@ -2773,7 +2773,7 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   color: var(--plum); margin: 0 0 8px;
 }
 .offre-web-desc {
-  font-size: 1rem; color: var(--text); line-height: 1.55;
+  font-size: 1.15rem; color: var(--text); line-height: 1.55;
   max-width: 900px; margin: 0 auto 31px;
 }
 .offre-web-tiers {
@@ -2797,10 +2797,9 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   .offre-web-tier--popular { transform: none; margin-top: 12px; }
 }
 .offre-web-tier-name {
-  font-family: var(--sans); font-size: .78rem; font-weight: 600;
+  font-family: var(--sans); font-size: .86rem; font-weight: 600;
   letter-spacing: .04em; text-transform: uppercase; color: var(--plum);
 }
-.offre-web-tiers--agents .offre-web-tier-name { font-size: .86rem; }
 .offre-agent-pastilles { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 0; }
 .offre-agent-pastille {
   display: inline-flex; align-items: center; gap: 6px;
@@ -2832,8 +2831,8 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   font-size: .82rem; color: rgba(61,30,42,.65); line-height: 1.4;
 }
 .offre-price-lead {
-  display: block; font-family: var(--sans); font-size: .68rem; font-weight: 500;
-  letter-spacing: .01em; text-transform: none; color: rgba(61,30,42,.5);
+  display: block; font-family: var(--sans); font-size: .84rem; font-weight: 600;
+  letter-spacing: .01em; text-transform: none; color: rgba(61,30,42,.75);
   margin-bottom: 2px;
 }
 .offre-price-ht {
