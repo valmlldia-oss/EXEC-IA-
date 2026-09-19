@@ -4120,6 +4120,8 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   border-bottom: 1px solid rgba(99,59,74,.2);
   padding-bottom: 0.25rem;
 }
+/* +3mm de respiration entre les cartes du Diagnostic et "Vos agents IA" */
+#agents-v2.agents-section { padding-top: calc(12.835px + 11px); }
 .section-divider {
   display: flex; align-items: center; gap: 16px;
   max-width: var(--max); margin: 0 auto; padding: 0 24px 12px;
@@ -4239,12 +4241,13 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   line-height: 1.1;
 }
 .agents-team-tc { color: var(--rose); }
+.agents-tick { font-style: normal; color: var(--plum); opacity: .55; font-size: .85em; margin: 0 .1em; }
 .agents-team-sub {
   display: block;
   font-family: var(--serif);
   /* Aligné sur « Votre présence digitale… » (.agents-team-title), légèrement abaissé */
   font-size: clamp(1.4rem, 2.42vw, 1.9rem);
-  font-weight: 600;
+  font-weight: 400;
   color: var(--rose);
   font-style: italic;
   line-height: 1.2;
@@ -4515,8 +4518,11 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 }
 #agents-v2 .agent-card { display: flex; flex-direction: column; }
 #agents-v2 .agent-more { margin-top: auto; }
-/* Nom de l'agent (VIGIE, ÉCHO…) seul élément en gras du bloc titre ;
-   la fonction (Assistant de Direction, Marketing…) repasse en Regular. */
+/* Nom de l'agent (VIGIE, ÉCHO…) et sa fonction sur la même ligne : seul le
+   nom reste accentué (semi-bold, pas un gras plein), la fonction repasse
+   en Regular — un seul élément fort dans le bloc titre, pas les deux. */
+#agents-v2 .agent-name { font-weight: 600; }
+#agents-v2 .agent-name span { display: inline; }
 #agents-v2 .agent-name span:nth-of-type(2) { font-weight: 400; }
 /* Neutralise les ajustements d'image positionnels prévus pour les 6 agents
    d'origine (translate/scale/voile par position nth-child) qui s'appliqueraient
