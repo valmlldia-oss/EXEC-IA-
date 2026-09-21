@@ -6700,3 +6700,6 @@ body.cookie-banner-open .hero-cta { transition: margin-bottom .3s ease; }
 /* Phrase de conviction du Parcours : sur une seule ligne sur grand écran */
 .tl-one-line { display: block; }
 @media (min-width: 1100px) { .tl-one-line { white-space: nowrap; } }
+
+/* Cadre « Expérience exécutive & internationale » : l'intitulé passe sur 2 lignes en mobile */
+@media (max-width: 768px) { .tl-expertise-group--long { padding-top: 50px; } .tl-expertise-group--long .tl-expertise-tag { max-width: calc(100% - 28px); } }
