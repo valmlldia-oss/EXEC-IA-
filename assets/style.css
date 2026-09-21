@@ -6707,3 +6707,10 @@ body.cookie-banner-open .hero-cta { transition: margin-bottom .3s ease; }
 /* Contact : filet fin prune avant « Diagnostic express » */
 #diagnostic > .about-cta-sep,
 #contact > .about-cta-sep { margin-bottom: var(--section-gap); }
+
+/* FAQ : phrase clé sur une seule ligne sur grand écran */
+.faq-one-line { display: block; }
+@media (min-width: 1240px) { .faq-one-line { white-space: nowrap; } }
+
+/* FAQ : phrase trop longue pour tenir sur une ligne, mais placée à la ligne */
+.faq-line { display: block; }
