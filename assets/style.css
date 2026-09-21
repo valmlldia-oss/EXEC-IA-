@@ -6694,7 +6694,7 @@ body.cookie-banner-open .hero-cta { transition: margin-bottom .3s ease; }
 }
 
 /* Coches « Simples à utiliser… » : sous les 12 agents, centrées */
-.agents-team-ticks { text-align: center; margin: 18px auto 0; padding: 0 16px; }
+.agents-team-ticks { text-align: center; margin: 18px auto 0; padding: 0 16px 11px; }
 .agents-team-ticks .agents-team-sub { display: inline-block; margin: 0; }
 
 /* Phrase de conviction du Parcours : sur une seule ligne sur grand écran */
