@@ -6756,3 +6756,24 @@ body.cookie-banner-open .hero-cta { transition: margin-bottom .3s ease; }
   .site-footer .footer-grid { padding-bottom: 16px; }
   .footer-bottom { padding-top: 20px; }
 }
+
+/* Titres de section harmonisés (hors HERO) : même taille que .section-title de référence */
+#parcours .section-title,
+#contact .section-title,
+#questions .section-title,
+.agents-title,
+.constat-title,
+.ve-title { font-size: clamp(2.2rem, 3.4vw, 3.2rem); }
+
+/* Graisse subtile (500) sur les titres de section qui suivent le HERO (les H1 de HERO gardent leur graisse) */
+h2.section-title,
+.agents-title,
+.constat-title,
+.ve-title { font-weight: 500; }
+#parcours .section-title,
+#contact .section-title,
+#questions .section-title,
+.section-title.pourquoi-title,
+.ce-que-section .section-title { font-weight: 500; }
+#expertise .expertise-section-title { font-weight: 500 !important; }
+.diag-title { font-size: clamp(2.2rem, 3.4vw, 3.2rem) !important; }
