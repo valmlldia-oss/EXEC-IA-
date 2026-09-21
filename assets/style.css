@@ -1896,7 +1896,7 @@ section { padding: var(--section-gap) 0; }
   border: 1.25px solid rgba(99,59,74,.3);
   border-radius: 12px;
   /* le cadre enveloppe son contenu : il ne s'étire pas jusqu'au bord droit */
-  width: fit-content;
+  width: auto;
   max-width: 100%;
 }
 .tl-expertise-group .tl-item { padding-left: 0; margin-bottom: 24px; }
