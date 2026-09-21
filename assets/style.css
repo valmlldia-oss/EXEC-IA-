@@ -3886,20 +3886,21 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   margin-right: .2em;
 }
 .conviction-terra {
-  background: var(--rose); border-radius: 18px;
+  background: var(--pale-rose); border-radius: 18px;
   padding: clamp(28px, 4vw, 44px) clamp(24px, 4vw, 56px);
   max-width: 760px; margin: 0 auto;
-  box-shadow: 0 34px 72px -40px rgba(199,95,98,.6);
+  box-shadow: 0 34px 72px -40px rgba(99,59,74,.35);
 }
 .conviction-terra-lead {
   font-family: var(--serif); font-size: clamp(1.5rem, 2.6vw, 2.1rem);
-  font-weight: 400; line-height: 1.2; color: #FAF6F2; margin-bottom: 10px;
+  font-style: normal; font-weight: 400; line-height: 1.2; color: #633B4A; margin-bottom: 10px;
 }
 .conviction-terra-sub {
   font-family: var(--sans); font-weight: 400;
-  font-size: clamp(1rem, 1.2vw, 1.15rem); line-height: 1.55;
-  color: rgba(250,246,242,.92);
+  font-size: clamp(1.1rem, 1.4vw, 1.3rem); line-height: 1.5;
+  font-weight: 600; color: #633B4A;
 }
+.conviction-terra-sub .ct-accent { color: #C75F62; }
 
 /* Slide "4 expertises" — densification : -20% de hauteur.
    Le vide venait des interlignes titre / badges / cartes. */
