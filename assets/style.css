@@ -6703,3 +6703,7 @@ body.cookie-banner-open .hero-cta { transition: margin-bottom .3s ease; }
 
 /* Cadre « Expérience exécutive & internationale » : l'intitulé passe sur 2 lignes en mobile */
 @media (max-width: 768px) { .tl-expertise-group--long { padding-top: 50px; } .tl-expertise-group--long .tl-expertise-tag { max-width: calc(100% - 28px); } }
+
+/* Contact : filet fin prune avant « Diagnostic express » */
+#diagnostic > .about-cta-sep,
+#contact > .about-cta-sep { margin-bottom: var(--section-gap); }
