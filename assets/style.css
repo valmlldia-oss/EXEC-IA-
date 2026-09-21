@@ -3022,7 +3022,7 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
 .offre-livrable-title {
   font-family: var(--serif);
   font-size: clamp(1.9712rem, 2.9568vw, 2.5872rem);
-  font-weight: 500;
+  font-weight: 600;
   color: var(--plum);
   margin: 0 0 22px;
 }
@@ -3068,7 +3068,7 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
 .offre-approche-step-title {
   font-family: var(--serif);
   font-size: clamp(1.5rem, 2vw, 1.9rem);
-  font-weight: 500; color: var(--plum);
+  font-weight: 600; color: var(--plum);
   margin: 6px 0 10px;
 }
 .offre-approche-step-desc {
