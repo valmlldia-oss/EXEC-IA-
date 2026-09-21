@@ -623,3 +623,24 @@ window.addEventListener('load', () => {
     card.addEventListener('mouseleave', () => { card.style.transform = ''; });
   });
 })();
+
+/* ── À propos : les deux cadres du Parcours s'arrêtent au bout de « PERSPECTIVES » (nav) ── */
+(function () {
+  function alignTimelineFrames() {
+    const groups = document.querySelectorAll('.tl-expertise-group');
+    if (!groups.length) return;
+    groups.forEach(g => { g.style.width = ''; });
+    if (window.innerWidth < 1025) return;
+    const links = document.querySelectorAll('.nav-links a');
+    if (!links.length) return;
+    const right = links[links.length - 1].getBoundingClientRect().right;
+    groups.forEach(g => {
+      const w = right - g.getBoundingClientRect().left;
+      if (w > 320) g.style.width = Math.round(w) + 'px';
+    });
+  }
+  window.addEventListener('load', alignTimelineFrames);
+  window.addEventListener('resize', alignTimelineFrames);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(alignTimelineFrames);
+  alignTimelineFrames();
+})();
