@@ -6200,7 +6200,7 @@ body > section.newsletter-section.snap-page {
      les <br> voulus (chaque ligne du h1 a besoin de ~860px à la taille max
      du clamp) — élargi pour que les 3 lignes prévues restent sur une ligne. */
   max-width: 940px;
-  margin: clamp(72px, 9vh, 108px) 0 clamp(20px, 2.4vh, 30px);
+  margin: clamp(21px, calc(9vh - 51px), 57px) 0 clamp(20px, 2.4vh, 30px); /* 2 lignes de moins entre le filet et le pré-titre */
   text-align: left;
 }
 /* H1 = strictement le .hero-sub de l'Accueil (uniformisation de tous les H1) */
@@ -6264,7 +6264,7 @@ body > section.newsletter-section.snap-page {
 @media (max-width: 700px) {
   .accord-btn { font-size: 1.22rem; gap: 16px; padding: 14px 0; }
   .accord-body p { padding-right: 0; font-size: 1.05rem; }
-  .questions-close { margin-top: 52px; }
+  .questions-close { margin-top: 1px; }
   .questions-coda { font-size: 1.44rem; }
   .questions-cta { margin-top: 26px; }
 }
