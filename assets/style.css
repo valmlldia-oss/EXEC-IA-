@@ -2842,7 +2842,7 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   text-align: center;
 }
 .offres-orientation-title {
-  font-family: var(--serif); font-size: clamp(1.9712rem, 2.9568vw, 2.5872rem); font-weight: 500;
+  font-family: var(--serif); font-size: clamp(1.9712rem, 2.9568vw, 2.5872rem); font-weight: 600;
   color: var(--plum); margin: 0 0 28px;
 }
 .offres-orientation-grid {
