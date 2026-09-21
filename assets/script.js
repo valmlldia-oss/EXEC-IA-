@@ -80,7 +80,7 @@ const countObserver = new IntersectionObserver((entries) => {
       el.textContent = target;
       return;
     }
-    const duration = target < 10 ? 1800 : 4200;
+    const duration = 4200; /* les 3 compteurs (20, 18, 8) défilent ensemble et finissent ensemble */
     const start = performance.now();
     function tick(now) {
       const p = Math.min((now - start) / duration, 1);

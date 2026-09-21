@@ -2602,9 +2602,9 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
    aux 3 autres blocs) : son trait remonte de fait plus haut que les 3 autres
    — on ne descend QUE le trait pour le réaligner sur la même ligne de base,
    sans toucher au texte, au globe ni aux espacements. */
-.ss-label--strong::after {
-  margin-top: 62px;
-}
+/* Globe statique + gros point dans « France • International » */
+.ss-globe-static { display: inline-block; font-size: 1.25em; vertical-align: -.1em; margin-right: .2em; }
+.ss-bigdot { display: inline-block; font-size: 2.1em; line-height: 0; vertical-align: -.16em; margin: 0 .22em; color: var(--rose); }
 /* Nom de cabinet sur une seule ligne, en gras — reste lisible et tient dans la colonne */
 .ss-firm {
   display: inline-block; font-weight: 600; white-space: nowrap;
