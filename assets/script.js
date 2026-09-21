@@ -644,3 +644,37 @@ window.addEventListener('load', () => {
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(alignTimelineFrames);
   alignTimelineFrames();
 })();
+
+/* ── Articles Perspectives : bas des deux pages alignés (espace réparti dans la colonne la plus courte) ── */
+(function () {
+  function balanceBooks() {
+    document.querySelectorAll('.article-book').forEach(function (book) {
+      const cols = book.querySelectorAll('.article-book-col');
+      if (cols.length < 2) return;
+      book.querySelectorAll('.bal-spacer').forEach(function (n) { n.remove(); });
+      const a = cols[0].getBoundingClientRect(), b = cols[1].getBoundingClientRect();
+      if (Math.abs(a.left - b.left) < 10) return; /* colonnes empilées (mobile) */
+      function contentBottom(c) {
+        const kids = Array.from(c.children).filter(function (k) { return !k.classList.contains('article-book-folio'); });
+        return kids.length ? kids[kids.length - 1].getBoundingClientRect().bottom : 0;
+      }
+      const d = contentBottom(cols[0]) - contentBottom(cols[1]);
+      if (Math.abs(d) < 2 || Math.abs(d) > 160) return;
+      const shorter = d > 0 ? cols[1] : cols[0];
+      const kids = Array.from(shorter.children).filter(function (k) { return !k.classList.contains('article-book-folio'); });
+      if (kids.length < 2) return;
+      const each = Math.abs(d) / (kids.length - 1);
+      for (let i = 1; i < kids.length; i++) {
+        const sp = document.createElement('div');
+        sp.className = 'bal-spacer';
+        sp.setAttribute('aria-hidden', 'true');
+        sp.style.cssText = 'flex:none;height:' + each.toFixed(2) + 'px';
+        shorter.insertBefore(sp, kids[i]);
+      }
+    });
+  }
+  window.addEventListener('load', balanceBooks);
+  window.addEventListener('resize', balanceBooks);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(balanceBooks);
+  balanceBooks();
+})();
