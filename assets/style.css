@@ -3825,7 +3825,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 }
 .stat-number {
   font-family: var(--serif);
-  font-size: clamp(2.7rem, 5.4vw, 4.7rem);
+  font-size: clamp(2.45rem, 4.9vw, 4.25rem);
   font-weight: 400;
   line-height: 1;
   letter-spacing: -.01em;
