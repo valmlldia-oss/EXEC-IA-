@@ -2379,6 +2379,10 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
 }
 .footer-col a:hover { color: var(--rose); }
 .footer-col .footer-loc { color: rgba(99,59,74,.55); }
+.footer-col a.footer-persp-link {
+  font-size: .82rem; padding-left: 6px;
+  color: rgba(99,59,74,.68);
+}
 /* Langues : boutons rectangulaires arrondis, comme EN/ES de la nav */
 .footer-col a.footer-lang-btn {
   border: 1px solid rgba(99,59,74,.3);
