@@ -70,7 +70,7 @@ Fondatrice d'EXEC'IA Consulting — 20+ ans auprès de dirigeants, 18 ans chez M
 
 ---
 
-# EN — L'entreprise utilise déjà l'IA
+# EN — Your company already uses AI
 URL: https://exec-ia.ai/perspective-entreprise-utilise-deja-ia-en.html
 
 # Adopting AI is one thing. Creating value from it is another.
@@ -133,7 +133,7 @@ Founder of EXEC'IA Consulting — 20+ years alongside executives, 18 years at Mc
 
 ---
 
-# ES — L'entreprise utilise déjà l'IA
+# ES — Su empresa ya utiliza la IA
 URL: https://exec-ia.ai/perspective-entreprise-utilise-deja-ia-es.html
 
 # Adoptar la IA es una cosa. Crear valor con ella, otra muy distinta.
@@ -262,7 +262,7 @@ Fondatrice d'EXEC'IA Consulting — 20+ ans auprès de dirigeants, 18 ans chez M
 
 ---
 
-# EN — Le problème n'est pas les outils mais l'arbitrage
+# EN — More AI tools, not more impact
 URL: https://exec-ia.ai/perspective-probleme-nest-pas-outils-mais-arbitrage-en.html
 
 # More AI tools do not mean more impact. It is not a tools problem. It is a trade-off problem.
@@ -326,7 +326,7 @@ Founder of EXEC'IA Consulting — 20+ years alongside executives, 18 years at Mc
 
 ---
 
-# ES — Le problème n'est pas les outils mais l'arbitrage
+# ES — Más herramientas de IA, no más impacto
 URL: https://exec-ia.ai/perspective-probleme-nest-pas-outils-mais-arbitrage-es.html
 
 # Más herramientas de IA no significa más impacto. No es un problema de herramientas. Es un problema de elección.
@@ -462,7 +462,7 @@ Fondatrice d'EXEC'IA Consulting — 20+ ans auprès de dirigeants, 18 ans chez M
 
 ---
 
-# EN — Toutes les décisions ne se délèguent pas
+# EN — Not every decision can be delegated
 URL: https://exec-ia.ai/perspective-toutes-decisions-ne-se-deleguent-pas-en.html
 
 # Not every decision can be delegated. Not even to an AI.
@@ -530,7 +530,7 @@ Founder of EXEC'IA Consulting — 20+ years alongside executives, 18 years at Mc
 
 ---
 
-# ES — Toutes les décisions ne se délèguent pas
+# ES — No todas las decisiones se delegan
 URL: https://exec-ia.ai/perspective-toutes-decisions-ne-se-deleguent-pas-es.html
 
 # No todas las decisiones se delegan. Ni siquiera en una IA.
@@ -663,7 +663,7 @@ Fondatrice d'EXEC'IA Consulting — 20+ ans auprès de dirigeants, 18 ans chez M
 
 ---
 
-# EN — La transformation échoue rarement à cause de la technologie
+# EN — AI transformation rarely fails because of the technology
 URL: https://exec-ia.ai/perspective-transformation-echoue-rarement-technologie-en.html
 
 # AI transformation rarely fails because of the technology. It fails when the organisation has not changed, only the tool.
@@ -726,7 +726,7 @@ Founder of EXEC'IA Consulting — 20+ years alongside executives, 18 years at Mc
 
 ---
 
-# ES — La transformation échoue rarement à cause de la technologie
+# ES — La transformación con IA rara vez fracasa por la tecnología
 URL: https://exec-ia.ai/perspective-transformation-echoue-rarement-technologie-es.html
 
 # La transformación con IA rara vez fracasa por la tecnología. Fracasa cuando la organización no ha cambiado, solo la herramienta.
