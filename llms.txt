@@ -18,6 +18,13 @@
 - [Toutes les décisions ne se délèguent pas](https://exec-ia.ai/perspective-toutes-decisions-ne-se-deleguent-pas.html): Sur les limites de la délégation à l'IA.
 - [La transformation échoue rarement à cause de la technologie](https://exec-ia.ai/perspective-transformation-echoue-rarement-technologie.html): Sur les vrais facteurs d'échec des projets de transformation IA.
 
+Ces 4 articles existent aussi en anglais et en espagnol :
+
+- [Adopting AI is one thing. Creating value is another](https://exec-ia.ai/perspective-entreprise-utilise-deja-ia-en.html) · [Adoptar la IA es una cosa. Crear valor, otra](https://exec-ia.ai/perspective-entreprise-utilise-deja-ia-es.html)
+- [More AI tools, not more impact](https://exec-ia.ai/perspective-probleme-nest-pas-outils-mais-arbitrage-en.html) · [Más herramientas de IA, no más impacto](https://exec-ia.ai/perspective-probleme-nest-pas-outils-mais-arbitrage-es.html)
+- [Not every decision can be delegated](https://exec-ia.ai/perspective-toutes-decisions-ne-se-deleguent-pas-en.html) · [No todas las decisiones se delegan](https://exec-ia.ai/perspective-toutes-decisions-ne-se-deleguent-pas-es.html)
+- [AI transformation rarely fails because of the technology](https://exec-ia.ai/perspective-transformation-echoue-rarement-technologie-en.html) · [La transformación con IA rara vez fracasa por la tecnología](https://exec-ia.ai/perspective-transformation-echoue-rarement-technologie-es.html)
+
 ## Langues
 
 Le site existe aussi en anglais (index-en.html, offres-en.html, expertise-en.html, a-propos-en.html, contact-en.html, temoignages-en.html) et en espagnol (mêmes pages en -es.html).
