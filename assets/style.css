@@ -1359,10 +1359,11 @@ section { padding: var(--section-gap) 0; }
   transition: opacity .2s;
 }
 .article-source-note a:hover { opacity: .7; }
-.article-source-note--linkedin {
-  display: inline-flex; align-items: center; gap: 7px; opacity: .85;
+.article-source-note--linkedin { opacity: .85; }
+.article-linkedin-icon {
+  height: 16.5px; width: auto; display: inline-block;
+  vertical-align: middle; margin-right: 6px; margin-top: -2px;
 }
-.article-linkedin-icon { height: 16.5px; width: auto; display: inline-block; }
 /* Repli "version courte" — un article plus long (cible SEO) reste lisible
    en 30 secondes pour qui ne veut que la synthèse. <details> natif :
    contenu toujours dans le HTML (donc lisible par les moteurs), replié
