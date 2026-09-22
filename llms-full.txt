@@ -1,0 +1,788 @@
+# EXEC'IA — Perspectives (contenu intégral)
+
+> Texte complet des 4 articles Perspectives, en français, anglais et espagnol, pour une lecture directe sans analyse du HTML. Source canonique : https://exec-ia.ai/llms.txt
+
+
+---
+
+# FR — L'entreprise utilise déjà l'IA
+URL: https://exec-ia.ai/perspective-entreprise-utilise-deja-ia.html
+
+# Adopter l’IA est une chose. En créer de la valeur en est une autre.
+
+La dernière étude State of AI de McKinsey & Company met en lumière un contraste intéressant : sur près de 1 700 organisations interrogées dans 97 pays, 80 % constatent des gains de productivité individuelle. 37 % seulement parviennent à en montrer un effet mesurable sur leur résultat opérationnel.
+
+Ce décalage n’est pas un accident de mesure. Il révèle où se situe vraiment le travail restant.
+
+Dans la plupart des organisations, l’IA s’installe d’abord dans les mains des collaborateurs, pas dans les priorités de la direction. Chacun trouve un usage qui lui fait gagner du temps : résumer un compte-rendu, dégrossir un premier jet, accélérer une recherche. Ces gains sont réels, individuels, et rarement contestés. Ils restent pourtant dispersés. Aucun ne remonte, seul, jusqu’au compte de résultat.
+
+
+## Et si le prochain enjeu de l’IA n’était plus seulement son adoption, mais son arbitrage ?
+
+- Quels usages méritent réellement un investissement ?
+- Lesquels faut-il prioriser ?
+- Et lesquels faut-il savoir écarter ?
+
+
+## Pourquoi plus de possibilités technologiques rend-il la capacité à choisir plus stratégique ?
+
+En pratique, cet arbitrage repose sur trois repères simples. D’abord la fréquence : un usage répété chaque semaine par plusieurs équipes pèse plus qu’une prouesse ponctuelle, aussi impressionnante soit-elle. Ensuite la mesurabilité : si personne ne peut dire, dans six mois, ce que cet usage a changé, c’est le signe qu’il n’a jamais été relié à un résultat suivi par la direction. Enfin la dépendance : un usage qui exige un expert pour fonctionner ne tiendra pas quand cet expert changera de poste ; celui qui tient sans lui a des chances de durer.
+
+
+## Ça ressemble à quoi, concrètement ?
+
+Prenons un exemple générique : une équipe commerciale utilise l’IA pour préqualifier ses prospects avant le premier appel. Fréquence élevée, résultat mesurable — le taux de conversion du premier rendez-vous —, et l’outil continue de fonctionner même si la personne qui l’a mis en place change de poste. Comparez avec un chatbot interne déployé pour « montrer l’avancée technologique » de l’entreprise, sans usage régulier ni indicateur suivi : le premier usage passe les trois filtres, le second n’en passe aucun.
+
+C’est cette question, comment passer des possibilités de l’IA aux décisions qui créent réellement de la valeur, que j’ai envie d’explorer davantage ici.
+
+
+## Comment distinguer un gain individuel d’un résultat ?
+
+Une façon simple de trier : distinguer ce qui allège une tâche de ce qui change un résultat. Un compte-rendu résumé plus vite est un gain individuel. Un délai de décision raccourci, un client mieux qualifié avant le premier appel, une erreur évitée avant qu’elle ne coûte cher : ce sont des résultats. Le premier type de gain se voit tout de suite et se dilue aussi vite. Le second demande d’être cherché, mesuré, et choisi en amont. Il n’est jamais un sous-produit du hasard.
+
+Le même rapport McKinsey observe un mouvement révélateur, dans le sens inverse : la part des grandes entreprises qui déploient des agents IA à l’échelle de l’organisation, et non plus dans un service isolé, est passée de 27 % à 40 % en un an. Ce sont elles qui commencent à sortir du strict gain individuel, précisément parce qu’elles ont choisi où concentrer l’effort plutôt que de laisser chaque équipe expérimenter de son côté.
+
+Pour une direction générale, la question n’est donc pas « comment adopter l’IA plus vite », mais « quel usage, une fois choisi et soutenu, changera un résultat que nous suivons déjà ». Cette question se pose avant l’outil, jamais après.
+
+Dans les faits, cet arbitrage revient rarement à une seule personne. Le collaborateur qui a trouvé un usage utile n’a ni la vue d’ensemble ni le mandat pour décider où l’étendre. La direction générale, elle, a le mandat mais rarement le temps de tester chaque usage remonté du terrain. Entre les deux, un rôle manque le plus souvent : quelqu’un qui connaît assez le terrain pour repérer ce qui mérite d’être généralisé, et assez la direction pour le relier à un résultat qu’elle suit déjà.
+
+
+## Qui devrait trancher entre ces usages ?
+
+C’est précisément ce rôle d’arbitrage, entre les usages remontés du terrain et les priorités de la direction, qui manque le plus souvent : pas un défaut d’outils, ni un défaut de bonne volonté, mais l’absence de quelqu’un dont le mandat explicite est de trancher.
+
+
+## Par où commencer ?
+
+Concrètement, cela commence par un inventaire simple : lister les usages IA déjà actifs dans l’organisation, souvent plus nombreux qu’on ne l’imagine, puis les passer au filtre des trois repères. La plupart des directions découvrent à cette étape qu’elles financent déjà, sans le savoir, plusieurs usages qui ne passeraient aucun des trois tests — et qu’un ou deux, en revanche, mériteraient un vrai soutien qu’ils n’ont jamais reçu.
+
+💬 Et vous, dans votre organisation,
+
+le défi est-il encore d’adopter l’IA… ou désormais de savoir où elle mérite vraiment d’être déployée ?
+
+Source : McKinsey & Company, « The State of AI in 2026: On the road to ROI », août 2026.
+
+#IntelligenceArtificielle #StrategieIA #Transformation #Leadership #CreationDeValeur
+
+Valérie Mailland
+
+Fondatrice d'EXEC'IA Consulting — 20+ ans auprès de dirigeants, 18 ans chez McKinsey & Company. Suivre sur LinkedIn →
+
+---
+
+# EN — L'entreprise utilise déjà l'IA
+URL: https://exec-ia.ai/perspective-entreprise-utilise-deja-ia-en.html
+
+# Adopting AI is one thing. Creating value from it is another.
+
+The latest State of AI report from McKinsey & Company points to a telling contrast: individual productivity gains are already widely seen, while the contribution to the company’s financial results remains more limited.
+
+That gap raises an essential question, it seems to me.
+
+
+## What if the next challenge for AI were no longer just adoption, but choosing between its uses?
+
+- Which uses truly deserve investment?
+- Which ones should come first?
+- And which should you have the discipline to drop?
+
+
+## Why does the ability to choose become strategic as technological possibilities multiply?
+
+In practice, this trade-off rests on three simple markers. First, frequency: a use repeated every week across several teams carries more weight than an impressive one-off demo, however striking. Second, measurability: if nobody can say, six months from now, what a given use actually changed, it was never tied to a result the leadership team tracks. Third, dependency: a use that only works because one expert carries it will not survive that person moving to a new role; one that holds without them has a real chance of lasting.
+
+
+## What does this look like in practice?
+
+Take a generic example: a sales team uses AI to pre-qualify leads before the first call. High frequency, a measurable outcome — the conversion rate of that first meeting — and the tool keeps working even if the person who set it up moves on. Compare that with an internal chatbot deployed to "show technological progress," with no regular use and no tracked metric: the first use passes all three filters, the second passes none.
+
+This is the question I want to explore further here: how do you move from what AI makes possible to the decisions that genuinely create value?
+
+
+## How do you tell an individual gain from an outcome?
+
+A simple way to sort uses: separate what lightens a task from what changes an outcome. A meeting note summarised faster is an individual gain. A shorter decision cycle, a lead better qualified before the first call, a costly error caught in time — those are outcomes. The first kind of gain shows up immediately and fades just as fast. The second has to be sought, measured and chosen upfront. It is never a by-product of chance.
+
+The same McKinsey report points to a telling shift in the opposite direction: the share of large companies deploying AI agents across the whole organisation, rather than within a single department, rose from 27% to 40% in one year. These are the companies starting to move beyond pure individual gain, precisely because they chose where to concentrate effort instead of letting every team experiment on its own.
+
+For an executive committee, the question is therefore not "how do we adopt AI faster" but "which use, once chosen and backed, will change a result we already track." That question comes before the tool, never after.
+
+In practice, that trade-off rarely belongs to one person. The employee who found a useful case has neither the overview nor the mandate to decide where to extend it. The executive committee has the mandate, but rarely the time to test every use surfacing from the field. Between the two, a role is usually missing: someone who knows the field well enough to spot what deserves to be scaled, and knows the leadership priorities well enough to tie it to a result they already track.
+
+
+## Who should own this trade-off?
+
+That trade-off role, between what surfaces from the field and what leadership prioritises, is exactly what most organisations lack: not a shortage of tools, nor a shortage of goodwill, but the absence of someone whose explicit mandate is to decide.
+
+
+## Where should you start?
+
+In practice, it starts with a simple inventory: list the AI uses already active in the organisation, usually more numerous than expected, then run each through the three markers. Most leadership teams discover at this stage that they are already funding, unknowingly, several uses that would pass none of the three tests — and that one or two others would deserve real backing they never received.
+
+💬 And in your organisation,
+
+is the challenge still adopting AI… or now knowing where it truly deserves to be deployed?
+
+Source: McKinsey & Company, “The State of AI in 2026: On the road to ROI”, August 2026.
+
+#ArtificialIntelligence #AIStrategy #Transformation #Leadership #ValueCreation
+
+Valérie Mailland
+
+Founder of EXEC'IA Consulting — 20+ years alongside executives, 18 years at McKinsey & Company. Follow on LinkedIn →
+
+---
+
+# ES — L'entreprise utilise déjà l'IA
+URL: https://exec-ia.ai/perspective-entreprise-utilise-deja-ia-es.html
+
+# Adoptar la IA es una cosa. Crear valor con ella, otra muy distinta.
+
+El último informe State of AI de McKinsey & Company deja ver un contraste revelador: las ganancias de productividad individual ya se observan de forma generalizada, mientras que la contribución a los resultados económicos de la empresa sigue siendo más limitada.
+
+Esa brecha plantea, a mi juicio, una pregunta esencial.
+
+
+## ¿Y si el próximo reto de la IA ya no fuera solo su adopción, sino saber elegir entre sus usos?
+
+- ¿Qué usos merecen realmente una inversión?
+- ¿Cuáles hay que priorizar?
+- ¿Y cuáles hay que saber descartar?
+
+
+## ¿Por qué la capacidad de elegir se vuelve más estratégica cuantas más posibilidades ofrece la tecnología?
+
+En la práctica, esta elección se apoya en tres referencias sencillas. Primero, la frecuencia: un uso repetido cada semana por varios equipos pesa más que una demostración puntual, por impresionante que sea. Segundo, la capacidad de medirlo: si nadie puede decir, dentro de seis meses, qué ha cambiado realmente ese uso, es que nunca estuvo ligado a un resultado que la dirección sigue de cerca. Tercero, la dependencia: un uso que solo funciona porque una persona experta lo sostiene no sobrevivirá cuando esa persona cambie de puesto; uno que se mantiene sin ella tiene verdaderas posibilidades de durar.
+
+
+## ¿Cómo se ve esto en la práctica?
+
+Tomemos un ejemplo genérico: un equipo comercial usa la IA para precalificar a sus clientes potenciales antes de la primera llamada. Frecuencia alta, resultado medible —la tasa de conversión de la primera cita— y la herramienta sigue funcionando aunque la persona que la implementó cambie de puesto. Compárelo con un chatbot interno desplegado para «mostrar el avance tecnológico» de la empresa, sin uso regular ni indicador seguido: el primer uso pasa los tres filtros, el segundo no pasa ninguno.
+
+Esa es la pregunta que quiero explorar aquí: cómo pasar de lo que la IA hace posible a las decisiones que crean valor de verdad.
+
+
+## ¿Cómo distinguir una ganancia individual de un resultado?
+
+Una forma sencilla de distinguir los usos: separar lo que aligera una tarea de lo que cambia un resultado. Un acta resumida más rápido es una ganancia individual. Un ciclo de decisión más corto, un cliente potencial mejor calificado antes de la primera llamada, un error evitado antes de que salga caro: eso son resultados. El primer tipo de ganancia se ve al instante y se diluye igual de rápido. El segundo hay que buscarlo, medirlo y elegirlo de antemano. Nunca es fruto del azar.
+
+El mismo informe de McKinsey señala un movimiento revelador en sentido contrario: la proporción de grandes empresas que despliegan agentes de IA a escala de toda la organización, y no solo en un departamento aislado, pasó del 27 % al 40 % en un año. Son las que empiezan a superar la simple ganancia individual, precisamente porque eligieron dónde concentrar el esfuerzo en lugar de dejar que cada equipo experimentara por su cuenta.
+
+Para una dirección general, la pregunta no es entonces «cómo adoptar la IA más rápido», sino «qué uso, una vez elegido y respaldado, cambiará un resultado que ya seguimos de cerca». Esa pregunta se plantea antes de la herramienta, nunca después.
+
+En la práctica, esta elección rara vez recae en una sola persona. Quien encuentra un uso útil sobre el terreno no tiene ni la visión de conjunto ni el mandato para decidir dónde extenderlo. La dirección general tiene el mandato, pero rara vez el tiempo para probar cada uso que surge desde abajo. Entre ambos falta, la mayoría de las veces, un papel : alguien que conozca el terreno lo bastante como para detectar qué merece generalizarse, y conozca las prioridades de la dirección lo bastante como para vincularlo a un resultado que ya se sigue de cerca.
+
+
+## ¿Quién debería asumir esta elección?
+
+Ese papel de elección, entre lo que surge del terreno y las prioridades de la dirección, es precisamente lo que suele faltar : no una carencia de herramientas, ni de buena voluntad, sino la ausencia de alguien cuyo mandato explícito sea decidir.
+
+
+## ¿Por dónde empezar?
+
+En la práctica, esto empieza por un inventario sencillo: enumerar los usos de IA ya activos en la organización, casi siempre más numerosos de lo que se imagina, y pasarlos por el filtro de las tres referencias. La mayoría de las direcciones descubren en ese momento que ya financian, sin saberlo, varios usos que no pasarían ninguna de las tres pruebas, y que uno o dos, en cambio, merecerían un apoyo real que nunca recibieron.
+
+💬 Y en su organización,
+
+¿el reto sigue siendo adoptar la IA… o saber ya dónde merece realmente desplegarse?
+
+Fuente: McKinsey & Company, « The State of AI in 2026: On the road to ROI », agosto de 2026.
+
+#InteligenciaArtificial #EstrategiaIA #Transformación #Liderazgo #CreaciónDeValor
+
+Valérie Mailland
+
+Fundadora de EXEC'IA Consulting — 20+ años junto a directivos, 18 años en McKinsey & Company. Seguir en LinkedIn →
+
+---
+
+# FR — Le problème n'est pas les outils mais l'arbitrage
+URL: https://exec-ia.ai/perspective-probleme-nest-pas-outils-mais-arbitrage.html
+
+# Plus d’outils IA ne veut pas dire plus d’impact. Ce n’est pas un problème d’outils. C’est un problème d’arbitrage.
+
+À la tête d’une direction de communication, vous connaissez ce réflexe : dès qu’un nouvel outil IA sort, on l’essaie. Puis un autre. Puis un autre.
+
+En coordonnant la communication du réseau Alumni McKinsey France, j’ai vu combien il est facile d’ajouter un outil de plus, et combien il est rare qu’on prenne le temps de se demander lequel compte vraiment.
+
+Ce réflexe n’est pas de la légèreté. Chaque nouvel outil promet de résoudre ce que le précédent n’a pas tenu, et refuser de l’essayer donne l’impression de prendre du retard : une pression réelle, entretenue par la vitesse à laquelle le marché sort de nouvelles versions.
+
+Ce n’est pas un problème d’outils. C’est un problème d’arbitrage.
+
+Une étude de Gartner prévoyait que 30 % des projets d’IA générative seraient abandonnés après la preuve de concept, faute de valeur métier claire. Ce chiffre ne dit pas que ces projets étaient mal conçus techniquement. Il dit qu’ils n’avaient jamais été reliés à un enjeu assez clair pour justifier qu’on aille au bout.
+
+Le symptôme le plus facile à repérer : une équipe qui peut citer sans hésiter les cinq derniers outils testés, mais peine à dire lequel a changé quelque chose de mesurable. Ce n’est pas un manque de curiosité — c’est un manque de filtre entre l’essai et l’adoption.
+
+
+## Pourquoi plus d’outils IA ne veut-il pas dire plus d’impact ?
+
+Parce que ça veut dire plus de dispersion, et une équipe qui gère cinq initiatives à moitié plutôt que deux jusqu’au bout.
+
+
+## Quels sont les trois critères pour choisir entre plusieurs outils IA ?
+
+- 1. Un vrai enjeu de marque, de crise ou de lancement, pas une tendance à suivre ?
+- 2. Un budget assumé et un nom prêt à trancher, pas à observer ?
+- 3. Un outil qu’on peut couper demain matin, sans que personne ne le regrette ?
+
+
+## Pourquoi ces trois critères en particulier ?
+
+Le premier critère élimine la plupart des velléités : tester un outil parce qu’un concurrent l’utilise n’est pas un enjeu, c’est une comparaison. Le deuxième force une décision réelle : sans budget ni responsable nommé, un outil reste un essai, jamais un choix. Le troisième protège des coûts déjà engagés : un outil qu’on n’ose plus arrêter, par peur d’avoir perdu du temps à le déployer, finit par coûter plus cher à l’organisation que celui qu’on n’a jamais lancé.
+
+Trois initiatives qui vont jusqu’au bout valent mieux que quinze qui avancent en parallèle, sans jamais y arriver.
+
+L’IA peut vous montrer beaucoup d’options. Elle ne choisira jamais à votre place.
+
+Consolider ne veut pas dire renoncer à l’IA. Cela veut dire choisir un nombre d’initiatives que l’équipe peut réellement porter jusqu’au bout, et accepter qu’un outil de moins, mais utilisé pleinement, vaut mieux qu’un outil de plus, testé à moitié.
+
+
+## Que se passe-t-il si personne ne tranche ?
+
+Dans les faits, ce tri se heurte souvent à une difficulté simple : personne dans l’équipe n’a explicitement la mission de le faire. Chacun garde l’outil qu’il a lui-même testé, parce qu’il y a mis du temps et n’a pas envie de le voir écarté. Sans quelqu’un dont le rôle est justement d’arbitrer entre les initiatives, sans lien affectif avec aucune d’elles, la liste ne fait que s’allonger.
+
+Trancher entre outils suppose aussi d’admettre qu’un outil abandonné n’est pas un échec du projet, mais la preuve que le critère de sélection a fonctionné. Une équipe qui n’abandonne jamais rien n’a probablement jamais vraiment trié.
+
+
+## Comment appliquer ce tri au quotidien ?
+
+Dans la pratique, ce tri fonctionne mieux comme un rituel que comme une décision ponctuelle : une revue trimestrielle, courte, où chaque outil actif doit justifier sa place à l’aune des trois critères. Ce qui ne les passe plus est arrêté, sans débat prolongé. Ce format évite l’écueil le plus courant : attendre une grande remise à plat annuelle, le temps que la liste ait déjà doublé.
+
+💬 Dans votre communication, combien d’initiatives IA
+
+avancent vraiment, et combien tournent, sans jamais se terminer ?
+
+Source : Gartner, « Predicts 30% of Generative AI Projects Will Be Abandoned After Proof of Concept By End of 2025 », 2024.
+
+#IntelligenceArtificielle #Communication #CreationDeValeur #StrategieIA
+
+Valérie Mailland
+
+Fondatrice d'EXEC'IA Consulting — 20+ ans auprès de dirigeants, 18 ans chez McKinsey & Company. Suivre sur LinkedIn →
+
+---
+
+# EN — Le problème n'est pas les outils mais l'arbitrage
+URL: https://exec-ia.ai/perspective-probleme-nest-pas-outils-mais-arbitrage-en.html
+
+# More AI tools do not mean more impact. It is not a tools problem. It is a trade-off problem.
+
+If you lead a communications team, you know the reflex: as soon as a new AI tool comes out, you try it. Then another. Then another.
+
+Coordinating communications for the McKinsey France Alumni network, I saw how easy it is to add one more tool, and how rarely anyone stops to ask which one really matters.
+
+That reflex is not carelessness. Every new tool promises to solve what the last one did not, and skipping it feels like falling behind — a real pressure, kept alive by how fast the market ships new versions.
+
+It is not a tools problem. It is a trade-off problem.
+
+A Gartner study predicted that 30% of generative AI projects would be abandoned after proof of concept, for lack of clear business value. That number does not mean generative AI fails. It means a tool with no owner, no budget and no way to be judged rarely survives contact with a real organisation.
+
+The easiest symptom to spot: a team that can rattle off the last five tools it tried, but struggles to name one that changed something measurable. That is not a lack of curiosity — it is a missing filter between trying and adopting.
+
+
+## Why do more AI tools not mean more impact?
+
+Because it means more dispersion, and a team running five initiatives halfway instead of two all the way through.
+
+
+## What three criteria decide which AI tool is worth keeping?
+
+- 1. A real brand, crisis or launch challenge, not a trend to follow?
+- 2. A committed budget and a named owner ready to decide, not just to watch?
+- 3. A tool you could switch off tomorrow morning without anyone missing it?
+
+
+## Why these three criteria specifically?
+
+A brand, crisis or launch challenge forces a use to prove itself against something real, not a trend. A named budget and owner turn an experiment into a decision someone answers for. And a tool you could switch off tomorrow without anyone noticing was never carrying real weight to begin with — keeping it running out of habit is exactly how initiatives pile up without ever being finished.
+
+Three initiatives seen through beat fifteen that move in parallel and never arrive.
+
+AI can show you many options. It will never choose for you.
+
+
+## What happens when no one decides?
+
+In practice, this sorting runs into a simple obstacle: no one on the team explicitly owns it. Everyone keeps the tool they personally tested, because they invested time in it and do not want to see it dropped. Without someone whose role is precisely to arbitrate between initiatives, with no attachment to any of them, the list only grows.
+
+Cutting between tools also means accepting that a dropped tool is not a failed project, but proof the selection criteria worked. A team that never drops anything has probably never really sorted anything.
+
+
+## How do you apply this sorting day to day?
+
+In practice, this sorting works better as a ritual than as a one-off decision: a short quarterly review where every active tool has to justify its place against the three criteria. Whatever no longer passes gets cut, without a drawn-out debate. That format avoids the most common trap: waiting for one big annual clean-up, by which point the list has already doubled.
+
+💬 In your communications, how many AI initiatives
+
+are really moving forward, and how many keep spinning without ever finishing?
+
+Source: Gartner, “Predicts 30% of Generative AI Projects Will Be Abandoned After Proof of Concept By End of 2025”, 2024.
+
+#ArtificialIntelligence #Communications #ValueCreation #AIStrategy
+
+Valérie Mailland
+
+Founder of EXEC'IA Consulting — 20+ years alongside executives, 18 years at McKinsey & Company. Follow on LinkedIn →
+
+---
+
+# ES — Le problème n'est pas les outils mais l'arbitrage
+URL: https://exec-ia.ai/perspective-probleme-nest-pas-outils-mais-arbitrage-es.html
+
+# Más herramientas de IA no significa más impacto. No es un problema de herramientas. Es un problema de elección.
+
+Si dirige un departamento de comunicación, conoce ese reflejo: sale una nueva herramienta de IA y se prueba. Luego otra. Y otra más.
+
+Al coordinar la comunicación de la red Alumni de McKinsey Francia, comprobé lo fácil que es añadir una herramienta más, y lo raro que es detenerse a preguntar cuál importa de verdad.
+
+Ese reflejo no es ligereza. Cada nueva herramienta promete resolver lo que la anterior no logró, y no probarla da la sensación de quedarse atrás: una presión real, alimentada por la velocidad con la que el mercado saca nuevas versiones.
+
+No es un problema de herramientas. Es un problema de elección.
+
+Un estudio de Gartner preveía que el 30 % de los proyectos de IA generativa se abandonarían tras la prueba de concepto, por falta de un valor de negocio claro. Esa cifra no dice que la IA generativa no funcione. Dice que una herramienta sin responsable, sin presupuesto y sin forma de evaluarla rara vez sobrevive al contacto con una organización real.
+
+El síntoma más fácil de detectar: un equipo que enumera sin dudar las últimas cinco herramientas probadas, pero le cuesta decir cuál cambió algo medible. No es falta de curiosidad: es falta de un filtro entre probar y adoptar.
+
+
+## ¿Por qué más herramientas de IA no significa más impacto?
+
+Porque significa más dispersión, y un equipo que lleva cinco iniciativas a medias en lugar de dos hasta el final.
+
+
+## ¿Qué tres criterios deciden si conviene quedarse con una herramienta de IA?
+
+- 1. ¿Un reto real de marca, de crisis o de lanzamiento, y no una moda que seguir?
+- 2. ¿Un presupuesto asumido y una persona lista para decidir, no solo para observar?
+- 3. ¿Una herramienta que se podría apagar mañana por la mañana sin que nadie la echara de menos?
+
+
+## ¿Por qué estos tres criterios en particular?
+
+Un reto real de marca, de crisis o de lanzamiento obliga a un uso a demostrar su valor frente a algo concreto, no frente a una moda. Un presupuesto y un responsable con nombre convierten un experimento en una decisión de la que alguien responde. Y una herramienta que se podría apagar mañana sin que nadie lo notara nunca tuvo un peso real: mantenerla en marcha por costumbre es justo lo que hace que las iniciativas se acumulen sin terminarse nunca.
+
+Tres iniciativas que llegan hasta el final valen más que quince que avanzan en paralelo sin llegar nunca.
+
+La IA puede mostrarle muchas opciones. Nunca elegirá por usted.
+
+
+## ¿Qué pasa si nadie decide?
+
+En la práctica, esta criba tropieza con un obstáculo sencillo : nadie en el equipo tiene explícitamente esa misión. Cada uno conserva la herramienta que probó personalmente, porque le dedicó tiempo y no quiere verla descartada. Sin alguien cuyo papel sea justamente decidir entre iniciativas, sin vínculo afectivo con ninguna de ellas, la lista solo crece.
+
+Decidir entre herramientas también supone aceptar que una herramienta abandonada no es un proyecto fallido, sino la prueba de que el criterio de selección funcionó. Un equipo que nunca abandona nada probablemente nunca ha hecho una criba de verdad.
+
+
+## ¿Cómo aplicar esta criba en el día a día?
+
+En la práctica, esta criba funciona mejor como un ritual que como una decisión puntual: una revisión trimestral, breve, donde cada herramienta activa debe justificar su lugar según los tres criterios. Lo que ya no los supera se retira, sin debate prolongado. Este formato evita el error más común: esperar a una gran revisión anual, cuando la lista ya se ha duplicado.
+
+💬 En su comunicación, ¿cuántas iniciativas de IA
+
+avanzan de verdad y cuántas dan vueltas sin terminar nunca?
+
+Fuente: Gartner, « Predicts 30% of Generative AI Projects Will Be Abandoned After Proof of Concept By End of 2025 », 2024.
+
+#InteligenciaArtificial #Comunicación #CreaciónDeValor #EstrategiaIA
+
+Valérie Mailland
+
+Fundadora de EXEC'IA Consulting — 20+ años junto a directivos, 18 años en McKinsey & Company. Seguir en LinkedIn →
+
+---
+
+# FR — Toutes les décisions ne se délèguent pas
+URL: https://exec-ia.ai/perspective-toutes-decisions-ne-se-deleguent-pas.html
+
+# Toutes les décisions ne se délèguent pas. Même à une IA.
+
+J’ai eu la chance de passer une grande partie de ma carrière au plus près de dirigeants. J’ai énormément appris à leurs côtés, notamment sur ce qui fait la complexité d’une décision lorsque toutes les données ne convergent pas.
+
+Ce que j’ai observé, année après année, c’est que la difficulté ne vient presque jamais du manque d’information. Elle vient du moment où plusieurs signaux valables pointent dans des directions différentes, et où quelqu’un doit trancher malgré cette absence de certitude.
+
+Une orientation stratégique.
+
+Un investissement majeur.
+
+Une réorganisation.
+
+Une décision qui engage des personnes.
+
+Ces quatre situations n’ont rien en commun sur le papier. Elles partagent pourtant une même caractéristique : leurs conséquences dépassent largement la personne qui décide, et se répercutent des mois, parfois des années, après que la décision a été prise.
+
+Une récente étude de Morgan Stanley sur la gouvernance de l’IA apporte un éclairage intéressant : 41 % des dirigeants interrogés considèrent la supervision humaine des situations à haut risque comme la règle de gouvernance la plus importante.
+
+Ce chiffre ne dit pas que les dirigeants se méfient de l’IA. Il dit qu’ils distinguent déjà, intuitivement, ce qui peut être délégué de ce qui ne devrait jamais l’être.
+
+L’IA peut analyser, comparer, simuler, challenger une intuition et faire émerger des options.
+
+
+## Comment savoir si une décision peut être déléguée ?
+
+Un test simple permet souvent de trancher : si la décision est facilement réversible et que ses conséquences restent contenues, la déléguer ne pose pas de problème particulier. Si elle est difficile à défaire, ou si ses effets dépassent largement celui qui l’a prise, la garder entre des mains humaines n’est pas de la prudence excessive : c’est simplement proportionné au risque.
+
+
+## Pourquoi l’arbitrage doit-il rester humain quand une décision engage l’entreprise ?
+
+Parce qu’un dirigeant ne décide pas seulement avec des données. Il décide dans un contexte, avec une responsabilité, et en assume les conséquences.
+
+Deux dirigeants disposant exactement des mêmes chiffres peuvent légitimement prendre des décisions opposées, parce qu’ils n’engagent pas la même organisation, ni la même trajectoire. C’est cette part de jugement, propre à chaque contexte, qu’aucun modèle ne peut assumer à la place de la personne qui en portera les conséquences.
+
+
+## Où placer la frontière entre l’IA et la décision humaine ?
+
+L’IA éclaire la décision. Le dirigeant garde l’arbitrage.
+
+Ce n’est pas un renoncement à l’IA. C’est reconnaître qu’un algorithme, aussi performant soit-il, ne sera jamais celui qui doit se tenir devant l’organisation et assumer ce que la décision a produit.
+
+À mesure que l’IA progressera, savoir quoi lui déléguer, et quoi ne jamais lui déléguer, deviendra, à mon sens, une compétence de dirigeant.
+
+
+## Cette frontière est-elle fixe ?
+
+Cette frontière ne se fixe pas une fois pour toutes. Une décision qui relevait hier du jugement humain peut, avec le temps et la preuve accumulée, basculer du côté de ce qu’un modèle traite correctement seul : le tri d’un premier niveau de dossiers, la détection d’anomalies répétitives, la préparation d’une synthèse. Ce qui ne bouge pas, en revanche, c’est la nécessité de la revoir régulièrement, plutôt que de la fixer une bonne fois et de l’oublier.
+
+La question que je pose le plus souvent n’est donc pas « faites-vous confiance à l’IA », mais « qui, dans votre organisation, a explicitement la responsabilité de dire non à une recommandation qu’elle produit » ? Si la réponse n’est pas claire, la frontière n’existe pas encore vraiment : elle est simplement supposée.
+
+
+## Comment formaliser cette frontière ?
+
+Dans la pratique, formaliser cette frontière prend rarement plus qu’une liste courte : les deux ou trois catégories de décisions que l’organisation s’interdit de déléguer, quelle que soit la qualité de l’outil. Une liste écrite, révisée une fois par an, vaut mieux qu’un principe général dont chacun a sa propre interprétation.
+
+💬 Et vous, quelle décision
+
+ne délégueriez-vous jamais à une IA ?
+
+Source : Morgan Stanley, « AI Governance Survey », 2026.
+
+#IntelligenceArtificielle #Leadership #Gouvernance #Decision #StrategieIA
+
+Valérie Mailland
+
+Fondatrice d'EXEC'IA Consulting — 20+ ans auprès de dirigeants, 18 ans chez McKinsey & Company. Suivre sur LinkedIn →
+
+---
+
+# EN — Toutes les décisions ne se délèguent pas
+URL: https://exec-ia.ai/perspective-toutes-decisions-ne-se-deleguent-pas-en.html
+
+# Not every decision can be delegated. Not even to an AI.
+
+I was fortunate to spend much of my career close to senior executives. I learned a great deal alongside them — above all, that the difficulty almost never comes from a lack of information. It comes from the moment several valid signals point in different directions, and someone has to decide anyway, without certainty.
+
+A strategic direction.
+
+A major investment.
+
+A reorganisation.
+
+A decision that affects people.
+
+What these four situations share is that no dashboard settles them on its own. Data can inform each one; none of them can be handed over entirely to a model.
+
+A recent Morgan Stanley study on AI governance offers a useful insight: 41% of the executives surveyed see human oversight of high-risk situations as the most important governance rule. The fact that oversight ranks first among governance priorities is itself telling: even the organisations moving fastest on AI adoption keep the final call within reach of a human being on the decisions that matter most.
+
+That figure, to me, points to the real question: how far should you delegate?
+
+AI can analyse, compare, simulate, challenge an intuition and bring options to the surface.
+
+
+## How do you know if a decision can be delegated?
+
+A simple test often settles it: if a decision is easily reversible and its consequences stay contained, delegating it is not a problem. If it is hard to undo, or its effects reach well beyond the person who made it, keeping it in human hands is not excessive caution — it is simply proportionate to the risk.
+
+
+## Why must the final call stay human when a decision commits the company?
+
+Because an executive does not decide with data alone. They decide within a context, with responsibility, and they answer for the consequences.
+
+Give two experienced leaders the exact same data and the exact same AI-generated recommendation, and they can reach opposite decisions — both defensible — because each carries a context, a risk appetite and a set of relationships the model never sees. That is not a flaw in the tool. It is the reason the final call has to stay human.
+
+
+## Where should the line sit between AI and human decision-making?
+
+AI informs the decision. The executive keeps the final call.
+
+As AI advances, knowing what to delegate to it, and what never to delegate, will become, in my view, an executive skill. This is not a rejection of AI. It is a boundary drawn on purpose: AI narrows the options and stress-tests the reasoning; the executive still owns the decision, and answers for it.
+
+
+## Is this boundary fixed?
+
+That boundary does not sit still. A decision that used to require human judgment can, over time and with enough evidence, move to what a model handles correctly on its own: a first pass of sorting cases, catching repetitive anomalies, drafting a summary. What does not change is the need to revisit it regularly, rather than fixing it once and forgetting about it.
+
+The question I find myself asking most often is therefore not "do you trust AI," but "who in your organisation explicitly owns the right to say no to one of its recommendations?" If the answer is not clear, the boundary does not really exist yet — it is only assumed.
+
+
+## How do you formalise this boundary?
+
+In practice, formalising that boundary rarely takes more than a short list: the two or three categories of decisions the organisation refuses to delegate, whatever the quality of the tool. A written list, reviewed once a year, beats a general principle everyone interprets differently.
+
+💬 And you, which decision
+
+would you never delegate to an AI?
+
+Source: Morgan Stanley, “AI Governance Survey”, 2026.
+
+#ArtificialIntelligence #Leadership #Governance #Decision #AIStrategy
+
+Valérie Mailland
+
+Founder of EXEC'IA Consulting — 20+ years alongside executives, 18 years at McKinsey & Company. Follow on LinkedIn →
+
+---
+
+# ES — Toutes les décisions ne se délèguent pas
+URL: https://exec-ia.ai/perspective-toutes-decisions-ne-se-deleguent-pas-es.html
+
+# No todas las decisiones se delegan. Ni siquiera en una IA.
+
+Tuve la suerte de pasar gran parte de mi carrera muy cerca de directivos. Aprendí muchísimo a su lado, sobre todo que la dificultad casi nunca viene de la falta de información. Viene del momento en que varias señales, todas válidas, apuntan en direcciones distintas, y alguien tiene que decidir de todos modos, sin certeza.
+
+Una orientación estratégica.
+
+Una inversión importante.
+
+Una reorganización.
+
+Una decisión que afecta a personas.
+
+Lo que tienen en común estas cuatro situaciones es que ningún panel de indicadores las resuelve por sí solo. Los datos pueden orientar cada una de ellas; ninguna puede entregarse por completo a un modelo.
+
+Un estudio reciente de Morgan Stanley sobre la gobernanza de la IA aporta una pista interesante: el 41 % de los directivos encuestados considera que la supervisión humana de las situaciones de alto riesgo es la regla de gobernanza más importante. Que la supervisión ocupe el primer lugar entre las prioridades de gobernanza ya dice algo: incluso las organizaciones más avanzadas en la adopción de la IA mantienen la última palabra al alcance de una persona en las decisiones que más importan.
+
+Esa cifra me parece plantear la verdadera pregunta: ¿hasta dónde delegar?
+
+La IA puede analizar, comparar, simular, poner a prueba una intuición y hacer aflorar opciones.
+
+
+## ¿Cómo saber si una decisión puede delegarse?
+
+Una prueba sencilla suele resolverlo: si una decisión es fácilmente reversible y sus consecuencias quedan contenidas, delegarla no plantea ningún problema. Si es difícil de deshacer, o sus efectos superan ampliamente a quien la tomó, mantenerla en manos humanas no es prudencia excesiva: es simplemente proporcional al riesgo.
+
+
+## ¿Por qué debe seguir siendo humana la última palabra cuando una decisión compromete a la empresa?
+
+Porque un directivo no decide solo con datos. Decide en un contexto, con una responsabilidad, y responde de las consecuencias.
+
+Deles a dos directivos experimentados exactamente los mismos datos y la misma recomendación generada por una IA, y pueden llegar a decisiones opuestas, ambas defendibles, porque cada uno aporta un contexto, un apetito de riesgo y una red de relaciones que el modelo nunca ve. Eso no es un defecto de la herramienta. Es la razón por la que la última palabra debe seguir siendo humana.
+
+
+## ¿Dónde trazar la frontera entre la IA y la decisión humana?
+
+La IA ilumina la decisión. El directivo conserva la última palabra.
+
+A medida que la IA avance, saber qué delegarle, y qué no delegarle nunca, se convertirá, en mi opinión, en una competencia de directivo. Esto no es un rechazo de la IA. Es un límite trazado a propósito: la IA acota las opciones y pone a prueba el razonamiento; el directivo conserva la decisión, y responde de ella.
+
+
+## ¿Es fija esta frontera?
+
+Esa frontera no es fija. Una decisión que ayer exigía criterio humano puede, con el tiempo y suficiente evidencia acumulada, pasar al lado de lo que un modelo gestiona bien por sí solo: una primera criba de expedientes, la detección de anomalías repetitivas, la preparación de un resumen. Lo que no cambia es la necesidad de revisarla con regularidad, en lugar de fijarla una vez y olvidarla.
+
+La pregunta que más me hago no es entonces «¿confía en la IA?», sino «¿quién en su organización tiene explícitamente la responsabilidad de decir no a una de sus recomendaciones?». Si la respuesta no es clara, la frontera todavía no existe de verdad: solo se supone.
+
+
+## ¿Cómo formalizar esta frontera?
+
+En la práctica, formalizar esa frontera rara vez exige más que una lista breve: las dos o tres categorías de decisiones que la organización se prohíbe delegar, sea cual sea la calidad de la herramienta. Una lista escrita, revisada una vez al año, vale más que un principio general que cada uno interpreta a su manera.
+
+💬 Y usted, ¿qué decisión
+
+no delegaría nunca en una IA?
+
+Fuente: Morgan Stanley, « AI Governance Survey », 2026.
+
+#InteligenciaArtificial #Liderazgo #Gobernanza #Decisión #EstrategiaIA
+
+Valérie Mailland
+
+Fundadora de EXEC'IA Consulting — 20+ años junto a directivos, 18 años en McKinsey & Company. Seguir en LinkedIn →
+
+---
+
+# FR — La transformation échoue rarement à cause de la technologie
+URL: https://exec-ia.ai/perspective-transformation-echoue-rarement-technologie.html
+
+# La transformation IA échoue rarement à cause de la technologie. Elle échoue quand l’organisation n’a pas changé, seulement l’outil.
+
+Pendant mes années aux côtés de dirigeants, j’ai vu défiler beaucoup d’outils et de plans de transformation. L’IA n’existait pas encore sous cette forme. Mais le scénario, lui, n’a pas changé.
+
+La qualité de l’outil est rarement en cause. Le vrai sujet, c’est ce qui ne change pas autour de lui.
+
+Ce schéma s’est répété à chaque vague technologique : les ERP dans les années 2000, les CRM ensuite, le cloud plus récemment. Chaque fois, l’outil a tenu ses promesses techniques. Chaque fois, une partie des organisations qui l’ont adopté n’en a tiré qu’une fraction de la valeur annoncée, parce que rien d’autre n’avait bougé autour.
+
+Une étude de RAND Corporation le confirme aujourd’hui pour l’IA : plus de 80 % des projets échouent, non par manque de technologie, mais faute d’alignement avec les priorités et l’organisation de l’entreprise.
+
+Ce chiffre ne dit pas que l’IA ne fonctionne pas.
+
+Il dit que l’outil, seul, ne transforme rien.
+
+
+## Pourquoi changer de logiciel ne suffit-il pas ?
+
+Parce qu’on garde les mêmes processus, les mêmes rôles, les mêmes réunions où personne ne décide vraiment.
+
+Résultat : l’IA s’ajoute à l’existant. Elle ne le transforme pas.
+
+Le signe le plus fiable qu’une transformation n’a pas eu lieu : le nombre de réunions de validation n’a pas changé. Un nouvel outil qui traverse exactement le même circuit d’approbations qu’avant, avec les mêmes personnes consultées dans le même ordre, n’a rien transformé — il a juste changé la vitesse d’un maillon, pas la longueur de la chaîne.
+
+
+## Quelles sont les trois choses qu’une vraie transformation IA doit toucher ?
+
+Si la décision reste au même niveau qu’avant, automatiser ne fait qu’accélérer un goulot d’étranglement déjà là. Reproduire à l’identique une étape inutile, plus vite, ne la rend pas moins inutile. Et si personne ne change ce qu’il fait de son temps libéré, ce temps se remplit d’autre chose, sans gain net pour l’organisation.
+
+Sans ça, l’organisation retrouve vite ses réflexes d’avant, avec un outil en plus.
+
+- 1. Qui décide, et à quel moment.
+- 2. Quels processus sont revus, pas seulement automatisés.
+- 3. Quels rôles évoluent réellement.
+
+
+## Dans quel ordre traiter ces trois points ?
+
+Ces trois points ont un ordre. Décider qui tranche, et quand, vient avant de revoir un processus : sans clarté sur la première question, personne ne sait quel processus mérite d’être repensé en priorité. Revoir le processus vient avant de faire évoluer les rôles : un rôle ne change pas parce qu’on lui a annoncé qu’il devait changer, il change parce que le travail concret qu’il recouvre a changé de forme.
+
+Une organisation qui commence par le troisième point, en annonçant que les rôles vont évoluer sans avoir revu ni la décision ni le processus, obtient rarement ce qu’elle espérait : un changement de discours, pas un changement de résultat.
+
+Le prochain rapport sur l’IA en entreprise ne parlera sans doute pas d’un nouvel outil. Il parlera de celles qui auront changé autre chose que le logiciel.
+
+
+## Par où commencer concrètement ?
+
+Un point de départ concret : avant tout projet IA, cartographier non pas ce que l’outil va faire, mais qui devra décider différemment une fois qu’il sera en place. Si la réponse est « personne », le projet automatise un existant — il ne transforme rien.
+
+💬 Dans votre organisation,
+
+qu’est-ce qui devrait changer avant l’outil, pas après ?
+
+Source : RAND Corporation, « The Root Causes of Failure for Artificial Intelligence Projects and How They Can Succeed », 2024.
+
+#IntelligenceArtificielle #Transformation #Leadership #Organisation #StrategieIA
+
+Valérie Mailland
+
+Fondatrice d'EXEC'IA Consulting — 20+ ans auprès de dirigeants, 18 ans chez McKinsey & Company. Suivre sur LinkedIn →
+
+---
+
+# EN — La transformation échoue rarement à cause de la technologie
+URL: https://exec-ia.ai/perspective-transformation-echoue-rarement-technologie-en.html
+
+# AI transformation rarely fails because of the technology. It fails when the organisation has not changed, only the tool.
+
+During my years alongside senior executives, I saw many tools and transformation plans come and go. AI did not yet exist in its current form. But the script has not changed.
+
+The quality of the tool is rarely the issue. The real subject is what stays the same around it.
+
+This same pattern has repeated at every technology wave: ERPs in the 2000s, then CRMs, more recently the cloud. Each time, the tool delivered on its technical promises. Each time, a share of the organisations that adopted it captured only a fraction of the promised value, because nothing else around it had moved.
+
+A RAND Corporation study now confirms this for AI: more than 80% of projects fail, not for lack of technology, but for lack of alignment with the company’s priorities and organisation.
+
+That figure does not say AI does not work.
+
+It says a tool, on its own, transforms nothing.
+
+
+## Why is changing the software not enough?
+
+Because the processes stay the same, the same roles, the same meetings where nobody really decides.
+
+The result: AI is added to what already exists. It does not transform it.
+
+The most reliable sign that a transformation has not happened: the number of approval meetings has not changed. A new tool that runs through the exact same sign-off chain as before, with the same people consulted in the same order, has not transformed anything — it has just sped up one link, not shortened the chain.
+
+
+## What three things does a real AI transformation have to touch?
+
+Who decides, and when, is a bottleneck question: if a decision still waits on the same three approvals it always did, the tool has not changed anything upstream of it. Redesigning a process is different from automating it — automating a broken step just makes the mistake happen faster. And a role genuinely evolves when the time a tool frees up gets redirected toward judgment calls a person makes, not simply absorbed back into more of the same.
+
+Without that, the organisation quickly slips back into its old habits, with one more tool. A tool changes what is possible. Only the organisation decides what becomes real.
+
+- 1. Who decides, and when.
+- 2. Which processes are rethought, not just automated.
+- 3. Which roles genuinely evolve.
+
+
+## In what order should you tackle these three points?
+
+These three points have an order. Deciding who decides, and when, comes before redesigning a process: without clarity on the first question, no one knows which process deserves to be rethought first. Redesigning the process comes before evolving roles: a role does not change because someone announced it should, it changes because the actual work behind it has taken a different shape.
+
+An organisation that starts with the third point, announcing that roles will evolve without having revisited the decision or the process first, rarely gets what it hoped for: a change in language, not a change in outcome.
+
+
+## Where should you start, concretely?
+
+A concrete starting point: before any AI project, map not what the tool will do, but who will need to decide differently once it is in place. If the answer is "no one," the project automates the existing setup — it transforms nothing.
+
+💬 In your organisation,
+
+what should change before the tool, not after?
+
+Source: RAND Corporation, “The Root Causes of Failure for Artificial Intelligence Projects and How They Can Succeed”, 2024.
+
+#ArtificialIntelligence #Transformation #Leadership #Organisation #AIStrategy
+
+Valérie Mailland
+
+Founder of EXEC'IA Consulting — 20+ years alongside executives, 18 years at McKinsey & Company. Follow on LinkedIn →
+
+---
+
+# ES — La transformation échoue rarement à cause de la technologie
+URL: https://exec-ia.ai/perspective-transformation-echoue-rarement-technologie-es.html
+
+# La transformación con IA rara vez fracasa por la tecnología. Fracasa cuando la organización no ha cambiado, solo la herramienta.
+
+Durante mis años junto a directivos, vi desfilar muchas herramientas y planes de transformación. La IA todavía no existía bajo esta forma. Pero el guion no ha cambiado.
+
+La calidad de la herramienta rara vez es el problema. El verdadero asunto es lo que no cambia a su alrededor.
+
+Este mismo patrón se ha repetido en cada ola tecnológica: los ERP en los años 2000, luego los CRM, más recientemente la nube. Cada vez, la herramienta cumplió sus promesas técnicas. Cada vez, una parte de las organizaciones que la adoptaron solo obtuvo una fracción del valor prometido, porque nada más a su alrededor había cambiado.
+
+Un estudio de RAND Corporation lo confirma hoy para la IA: más del 80 % de los proyectos fracasa, no por falta de tecnología, sino por falta de alineación con las prioridades y la organización de la empresa.
+
+Esa cifra no dice que la IA no funcione.
+
+Dice que la herramienta, por sí sola, no transforma nada.
+
+
+## ¿Por qué no basta con cambiar el software?
+
+Porque se mantienen los mismos procesos, los mismos roles, las mismas reuniones en las que nadie decide de verdad.
+
+Resultado: la IA se suma a lo existente. No lo transforma.
+
+La señal más fiable de que una transformación no ha ocurrido: el número de reuniones de validación no ha cambiado. Una herramienta nueva que atraviesa exactamente el mismo circuito de aprobaciones que antes, con las mismas personas consultadas en el mismo orden, no ha transformado nada: solo ha acelerado un eslabón, no ha acortado la cadena.
+
+
+## ¿Qué tres cosas debe tocar una verdadera transformación con IA?
+
+Quién decide, y en qué momento, es una pregunta de cuello de botella: si una decisión sigue esperando las mismas tres validaciones de siempre, la herramienta no ha cambiado nada aguas arriba. Rediseñar un proceso no es lo mismo que automatizarlo: automatizar un paso defectuoso solo hace que el error ocurra más rápido. Y un rol evoluciona de verdad cuando el tiempo que libera una herramienta se redirige hacia decisiones de criterio que toma una persona, no cuando simplemente se reabsorbe en más de lo mismo.
+
+Sin eso, la organización recupera enseguida sus viejos reflejos, con una herramienta más. Una herramienta cambia lo que es posible. Solo la organización decide lo que se vuelve real.
+
+- 1. Quién decide, y en qué momento.
+- 2. Qué procesos se rediseñan, y no solo se automatizan.
+- 3. Qué roles evolucionan de verdad.
+
+
+## ¿En qué orden abordar estos tres puntos?
+
+Estos tres puntos siguen un orden. Decidir quién decide, y en qué momento, va antes de rediseñar un proceso : sin claridad en la primera pregunta, nadie sabe qué proceso merece repensarse primero. Rediseñar el proceso va antes de hacer evolucionar los roles : un rol no cambia porque se anuncie que debe cambiar, cambia porque el trabajo concreto que recoge ha tomado otra forma.
+
+Una organización que empieza por el tercer punto, anunciando que los roles van a evolucionar sin haber revisado antes la decisión ni el proceso, rara vez obtiene lo que esperaba : un cambio de discurso, no un cambio de resultado.
+
+
+## ¿Por dónde empezar, en concreto?
+
+Un punto de partida concreto: antes de cualquier proyecto de IA, cartografiar no lo que hará la herramienta, sino quién deberá decidir de otra manera una vez implantada. Si la respuesta es «nadie», el proyecto automatiza lo existente: no transforma nada.
+
+💬 En su organización,
+
+¿qué debería cambiar antes de la herramienta, y no después?
+
+Fuente: RAND Corporation, « The Root Causes of Failure for Artificial Intelligence Projects and How They Can Succeed », 2024.
+
+#InteligenciaArtificial #Transformación #Liderazgo #Organización #EstrategiaIA
+
+Valérie Mailland
+
+Fundadora de EXEC'IA Consulting — 20+ años junto a directivos, 18 años en McKinsey & Company. Seguir en LinkedIn →

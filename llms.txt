@@ -2,6 +2,8 @@
 
 > Cabinet de conseil stratégique en Intelligence Artificielle pour dirigeants. Priorisation des initiatives IA, automatisation intelligente, transformation digitale. Fondé par Valérie Mailland (18 ans chez McKinsey & Company).
 
+Contenu intégral des 4 articles Perspectives (FR/EN/ES, sans HTML) : [llms-full.txt](https://exec-ia.ai/llms-full.txt)
+
 ## Pages principales
 
 - [Accueil](https://exec-ia.ai/): Présentation du positionnement EXEC'IA — l'IA comme sujet de Direction Générale, pas seulement d'outillage.
