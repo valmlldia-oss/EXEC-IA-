@@ -4110,6 +4110,20 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   .roi-chip--hero { order: -1; }
 }
 
+.article-author {
+  display: flex; align-items: center; gap: 16px;
+  max-width: 780px; margin: 48px auto 0; padding: 20px 24px;
+  background: var(--surface, var(--rose-pale)); background: rgba(217,201,195,.28);
+  border-top: 1px solid rgba(93,47,55,.18);
+}
+.article-author-photo { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+.article-author-name { font-family: var(--serif); font-size: 1.05rem; color: var(--plum); margin: 0 0 2px; font-weight: 600; }
+.article-author-bio { font-size: .88rem; color: rgba(99,59,74,.75); margin: 0; line-height: 1.5; }
+.article-author-bio a { color: var(--rose); text-decoration: underline; white-space: nowrap; }
+@media (max-width: 560px) {
+  .article-author { flex-direction: column; align-items: flex-start; text-align: left; }
+}
+
 /* ════════════════════════════════════════════════════
    AGENTS IA — Carousel
 ════════════════════════════════════════════════════ */
