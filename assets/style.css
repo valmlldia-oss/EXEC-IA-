@@ -4135,6 +4135,21 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   .roi-chip--hero { order: -1; }
 }
 
+/* Tableau de calendrier — guide conformité IA */
+.aiact-table-wrap { max-width: 900px; margin: 20px 0 0; overflow-x: auto; border: 1px solid rgba(99,59,74,.14); border-radius: 12px; }
+.aiact-table { width: 100%; border-collapse: collapse; font-family: var(--sans); font-size: .88rem; background: var(--white); }
+.aiact-table th, .aiact-table td { padding: 13px 16px; text-align: left; vertical-align: top; border-bottom: 1px solid rgba(99,59,74,.1); }
+.aiact-table th { font-size: .74rem; letter-spacing: .04em; text-transform: uppercase; color: var(--rose); font-weight: 700; background: rgba(217,201,195,.22); white-space: nowrap; }
+.aiact-table td:first-child { white-space: nowrap; font-weight: 600; color: var(--plum); }
+.aiact-table tbody tr:last-child td { border-bottom: none; }
+.aiact-tag { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: .74rem; font-weight: 700; white-space: nowrap; }
+.aiact-tag--ok { background: rgba(63,122,87,.14); color: #3F7A57; }
+.aiact-tag--pending { background: rgba(199,95,98,.14); color: var(--rose); }
+@media (max-width: 620px) {
+  .aiact-table { font-size: .82rem; }
+  .aiact-table th, .aiact-table td { padding: 11px 12px; }
+}
+
 .article-author {
   display: flex; align-items: center; gap: 16px;
   max-width: 780px; margin: 48px auto 0; padding: 20px 24px;
