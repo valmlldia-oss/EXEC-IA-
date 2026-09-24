@@ -1,6 +1,6 @@
 # EXEC'IA — Contenu intégral des articles Perspectives (llms-full.txt)
 
-Ce fichier contient le texte intégral des 4 articles Perspectives d'EXEC'IA Consulting,
+Ce fichier contient le texte intégral des 4 articles Perspectives et du guide AI Act/RGPD pour PME d'EXEC'IA Consulting,
 en français, anglais et espagnol, sans mise en forme HTML, pour une lecture directe par
 les modèles de langage. Voir aussi https://exec-ia.ai/llms.txt pour l'index complet du site.
 
@@ -2362,3 +2362,315 @@ URL: https://exec-ia.ai/perspective-transformation-echoue-rarement-technologie-e
  Todos los derechos reservados
 
  © 2026 Valérie Mailland.
+
+---
+
+# AI Act et RGPD : les obligations réelles d'une PME qui utilise l'IA [FR]
+URL: https://exec-ia.ai/conformite-ia-pme.html
+
+← Expertise
+ Guide pratique • Conformité IA
+
+# AI Act et RGPD : les obligations réelles d’une PME qui utilise l’IA.
+
+Dernière vérification factuelle : 24 septembre 2026
+
+Version courte →
+
+L’AI Act européen s’applique à toute PME qui utilise ou fournit un système d’IA, quelle que soit sa taille — seuls le niveau d’obligation et les allègements changent. Trois blocs sont déjà en vigueur : interdictions de pratiques IA et littératie IA depuis février 2025, gouvernance et obligations des modèles à usage général depuis août 2025, transparence des systèmes qui interagissent avec des personnes depuis août 2026. Le gros des obligations « haut risque » a été reporté au 2 décembre 2027 par le « Digital Omnibus ». Le RGPD s’applique en parallèle dès que des données personnelles sont traitées. Ce contenu est informatif : il ne remplace pas un avis juridique.
+
+La plupart des PME découvrent l’AI Act à travers des articles qui parlent d’amendes à plusieurs millions d’euros et de systèmes « haut risque », sans jamais préciser ce qui s’applique réellement à une structure de dix, trente ou cent personnes. Ce texte fait le tri : ce qui est obligatoire aujourd’hui, ce qui a été reporté, et ce qu’une PME doit concrètement vérifier — avec les sources officielles pour chaque point.
+
+Ce contenu a une vocation informative et pédagogique. Il ne constitue pas un conseil juridique : la situation de chaque entreprise mérite d’être validée par un avocat spécialisé, en particulier pour tout usage touchant au recrutement, au crédit ou aux données sensibles.
+
+## Votre PME est-elle concernée par l’AI Act ?
+
+Oui, systématiquement, dès lors qu’elle fournit ou utilise un système d’IA sur le marché européen. Le règlement (UE) 2024/1689 ne prévoit aucune exception générale liée à la taille de l’entreprise : ce que la taille change, ce sont les allègements disponibles (documentation simplifiée, frais réduits, accès prioritaire aux bacs à sable réglementaires — voir plus bas), pas l’existence des obligations elles-mêmes.
+
+Deux notions comptent avant tout : êtes-vous fournisseur (vous développez ou faites développer un système d’IA que vous mettez sur le marché) ou déployeur (vous utilisez, dans votre activité, un système fourni par un tiers) ? La quasi-totalité des PME sont déployeuses — elles utilisent un outil IA existant plutôt que de le concevoir — et les obligations d’un déployeur sont nettement plus légères que celles d’un fournisseur, sauf lorsque l’usage entre dans la catégorie « haut risque ».
+
+## Le calendrier réel, mis à jour au 24 septembre 2026
+
+Le calendrier a réellement bougé cette année : le paquet « Digital Omnibus », entré en vigueur le 27 juillet 2026, a reporté une partie substantielle des obligations. Voici l’état exact des échéances, avec la source officielle pour chacune.
+
+- Date | Ce qui s’applique | Statut
+
+- 1er août 2024 | Entrée en vigueur du règlement (UE) 2024/1689 | Acquis
+
+- 2 février 2025 | Interdictions de pratiques d’IA (art. 5) et obligation de « littératie IA » des équipes (art. 4) | Applicable
+
+- 2 août 2025 | Règles de gouvernance, obligations des fournisseurs de modèles d’IA à usage général, régime de sanctions | Applicable
+
+- 2 août 2026 | Transparence pour les systèmes qui interagissent avec des personnes : agents conversationnels, contenus de synthèse, deepfakes (art. 50) | Applicable
+
+- 2 décembre 2026 | Deux nouvelles pratiques interdites (art. 5) : deepfakes à caractère intime non consentis, contenus de pédopornographie générés par IA — introduites par le règlement modificatif (UE) 2026/1744 | À venir
+
+- 2 décembre 2027 | Obligations complètes « haut risque » de l’annexe III (recrutement, crédit, biométrie, infrastructures critiques, éducation…) — reporté depuis le 2 août 2026 | Reporté
+
+- 2 août 2028 | Systèmes à haut risque intégrés à des produits déjà réglementés (annexe I : dispositifs médicaux, machines…) | Reporté
+
+Sources : texte consolidé du règlement (EUR-Lex) et Commission européenne — cadre réglementaire IA. Le « Digital Omnibus » correspond au règlement modificatif (UE) 2026/1744 du 8 juillet 2026. Nuance sur l’article 50 : les systèmes déjà mis sur le marché avant le 2 août 2026 disposent, pour le seul marquage des contenus de synthèse (art. 50§2), d’un délai transitoire jusqu’au 2 décembre 2026 (art. 111§4) — les autres obligations de transparence de l’article 50 restent applicables au 2 août 2026.
+
+## Ce qu’une PME doit faire concrètement, dès maintenant
+
+Vérifier qu’aucun usage ne relève des pratiques interdites — notamment la notation sociale généralisée, la manipulation subliminale exploitant une vulnérabilité, la catégorisation biométrique déduisant des opinions politiques ou religieuses, la reconnaissance des émotions au travail hors exceptions médicales ou de sécurité, et, depuis le 2 décembre 2026, les deepfakes à caractère intime non consentis et les contenus de pédopornographie générés par IA. Aucun allègement de taille ne s’applique ici.
+
+Prendre des mesures pour développer la compréhension de l’IA (littératie) des personnes qui utilisent ou décident des usages IA dans l’entreprise — obligation en vigueur depuis février 2025, mais une obligation de moyens : le texte précise explicitement qu’elle n’impose de garantir aucun niveau précis. Une sensibilisation interne documentée peut suffire selon les usages.
+
+Informer clairement toute personne qui interagit avec un système d’IA — agent conversationnel, contenu généré, image de synthèse — qu’il s’agit d’une IA, dès lors que ce n’est pas déjà évident du contexte.
+
+Identifier si un usage entre dans la catégorie « haut risque » (recrutement, notation de crédit, évaluation de salariés…). Les obligations complètes de déployeur s’appliquent à partir du 2 décembre 2027, mais l’inventaire des usages concernés se prépare en amont, pas la veille de l’échéance.
+
+## RGPD et IA : les réflexes qui s’appliquent en parallèle
+
+L’AI Act encadre le système d’IA en tant que tel ; le RGPD encadre les données personnelles qu’il traite, indépendamment du niveau de risque retenu par l’AI Act. Un outil jugé à faible risque par l’AI Act peut malgré tout déclencher une obligation RGPD si les données qu’il manipule sont sensibles. Quatre réflexes s’appliquent dès qu’un système d’IA touche à des données personnelles : une base légale identifiée avant tout traitement (article 6 du RGPD), une information claire des personnes concernées, une minimisation des données utilisées pour paramétrer ou affiner l’outil, et une analyse d’impact relative à la protection des données (AIPD) dès que le traitement est susceptible d’engendrer un risque élevé — la CNIL a publié des recommandations dédiées sur ce point précis. Si le prestataire IA est établi hors Union européenne, l’encadrement du transfert des données (clauses contractuelles types) s’ajoute à ces quatre points.
+
+## Ce que l’AI Act allège spécifiquement pour les PME et microentreprises
+
+Trois articles distincts allègent la charge pour les PME. L’article 11 ouvre à toute PME (et aux petites entreprises à capitalisation intermédiaire), pas seulement aux microentreprises, le droit de fournir une documentation technique simplifiée, acceptée par les autorités. L’article 62 prévoit un accès prioritaire aux bacs à sable réglementaires nationaux pour tester un système en conditions supervisées, des frais de certification réduits proportionnellement à la taille de l’entreprise, ainsi que des actions de sensibilisation et des canaux de communication dédiés. Enfin, l’article 99 plafonne l’amende d’une PME au montant le plus bas entre le forfait fixe et le pourcentage du chiffre d’affaires : pour une pratique interdite, le plafond général est de 35 millions d’euros ou 7 % du chiffre d’affaires mondial — une PME se voit appliquer celui des deux montants qui est le plus bas, jamais le plus élevé. Les PME et microentreprises sans entreprise partenaire ou liée bénéficient en outre, au titre de l’article 63, d’un allègement sur certains éléments du système de gestion de la qualité exigé pour les systèmes à haut risque. Ces allègements ne dispensent d’aucune obligation de fond ; ils réduisent la charge documentaire et le coût d’accès à la conformité.
+
+01Une petite entreprise est-elle vraiment concernée par l’AI Act ?+
+
+Oui, et c’est la confusion la plus fréquente. L’AI Act s’applique à toute organisation qui fournit ou utilise un système d’IA sur le marché européen, quelle que soit sa taille. Ce que la taille change, ce n’est pas si les règles s’appliquent, mais quel niveau d’obligation pèse sur vous et quels allègements vous pouvez faire valoir. Une PME qui utilise un outil IA tiers pour trier des candidatures ou évaluer un risque de crédit est concernée par les obligations de déployeur, même si elle n’a jamais développé la moindre ligne de code d’IA elle-même. La seule vraie question à se poser n’est pas « suis-je assez petit pour être ignoré », mais « quel usage fais-je de l’IA, et dans quelle catégorie de risque tombe-t-il ».
+
+02Quelle est la différence entre fournisseur et déployeur ?+
+
+Le fournisseur développe ou fait développer un système d’IA et le met sur le marché sous son nom ; le déployeur l’utilise dans le cadre de son activité professionnelle. La quasi-totalité des PME sont déployeuses : elles achètent ou abonnent un outil IA existant plutôt que de le concevoir. Or les obligations d’un déployeur sont nettement plus légères que celles d’un fournisseur, sauf lorsque le système utilisé entre dans la catégorie « haut risque » (recrutement, notation de crédit, biométrie...). Savoir de quel côté de cette ligne on se trouve évite de s’imposer, par excès de prudence, des obligations de fournisseur qui ne vous concernent pas — ou à l’inverse de sous-estimer une vraie obligation de déployeur.
+
+03Qu’est-ce qui est obligatoire aujourd’hui, et qu’est-ce qui a été reporté ?+
+
+Trois blocs sont déjà en vigueur : les pratiques d’IA interdites et l’obligation de « littératie IA » des équipes depuis février 2025, puis les règles de gouvernance et les obligations pesant sur les fournisseurs de modèles à usage général depuis août 2025, puis les obligations de transparence pour les systèmes qui interagissent avec des personnes (agents conversationnels, contenus de synthèse) depuis août 2026. Le 2 décembre 2026, deux nouvelles pratiques interdites s’ajoutent (deepfakes à caractère intime non consentis, contenus de pédopornographie générés par IA), introduites par le règlement modificatif (UE) 2026/1744. En revanche, le gros des obligations « haut risque » de l’annexe III, initialement prévu pour août 2026, a été reporté au 2 décembre 2027 par ce même règlement — et les systèmes à haut risque intégrés à des produits déjà réglementés (dispositifs médicaux, machines) ont vu leur échéance repoussée au 2 août 2028. Le calendrier a donc réellement bougé cette année, ce n’est pas une rumeur.
+
+04Quelles pratiques d’IA sont interdites, quelle que soit la taille de l’entreprise ?+
+
+Ces interdictions ne connaissent pas d’exception de taille. Elles couvrent notamment, en vigueur depuis février 2025 : la manipulation subliminale ou l’exploitation de vulnérabilités (âge, handicap, situation sociale ou économique) pour altérer un comportement de façon préjudiciable, la notation sociale généralisée d’une personne à partir de son comportement, la catégorisation biométrique visant à déduire des opinions politiques, religieuses ou une orientation sexuelle, et la reconnaissance des émotions sur le lieu de travail hors exceptions médicales ou de sécurité strictement encadrées. Depuis le 2 décembre 2026 s’ajoutent deux interdictions supplémentaires introduites par le règlement modificatif (UE) 2026/1744 : les deepfakes à caractère intime créés sans le consentement de la personne représentée, et les contenus de pédopornographie générés par IA. Une PME qui envisage un usage IA touchant au recrutement, à la notation de ses clients ou à la surveillance de ses salariés doit vérifier ce point avant toute autre démarche de conformité — c’est la seule catégorie qui n’admet aucun allègement lié à la taille.
+
+05Le RGPD s’applique-t-il en plus de l’AI Act ?+
+
+Systématiquement, dès qu’un système d’IA traite des données personnelles — ce qui couvre la grande majorité des usages en entreprise. L’AI Act encadre le système en tant que tel ; le RGPD encadre les données qu’il traite, indépendamment du niveau de risque retenu par l’AI Act. Concrètement, cela veut dire une base légale identifiée avant tout traitement, une information claire des personnes concernées, une minimisation des données utilisées pour paramétrer ou affiner l’outil, et une analyse d’impact (AIPD) dès que le traitement est susceptible d’engendrer un risque élevé — la CNIL a publié des recommandations dédiées à l’IA sur ce point précis. Un outil IA jugé à faible risque par l’AI Act peut malgré tout déclencher une obligation RGPD si les données qu’il traite sont sensibles.
+
+06Quels allègements l’AI Act prévoit-il pour les PME et microentreprises ?+
+
+Quatre articles distincts allègent la charge pour les PME. L’article 11 ouvre à toute PME, pas seulement aux microentreprises, le droit de fournir une documentation technique simplifiée acceptée par les autorités. L’article 62 prévoit un accès prioritaire aux bacs à sable réglementaires, des frais de certification réduits proportionnellement à la taille de l’entreprise, et des actions de sensibilisation dédiées. L’article 99 plafonne l’amende d’une PME au montant le plus bas entre le forfait fixe et le pourcentage du chiffre d’affaires, jamais le plus élevé. Les PME et microentreprises sans entreprise partenaire ou liée bénéficient en outre, au titre de l’article 63, d’un allègement sur certains éléments du système de gestion de la qualité exigé pour les systèmes à haut risque — ce n’est pas réservé aux seules microentreprises. Ces allègements ne dispensent d’aucune obligation de fond ; ils réduisent la charge documentaire et le coût d’accès à la conformité.
+
+Sources & portée de ce contenu
+
+Rédigé à partir du texte consolidé du règlement (UE) 2024/1689 (EUR-Lex), de la page de la Commission européenne sur le cadre réglementaire IA, des articles 11, 62 et 99 sur les mesures de soutien aux PME, et des fiches pratiques IA de la CNIL.
+
+Ce contenu a une vocation informative et pédagogique. Il ne constitue pas un conseil juridique et ne remplace pas l’avis d’un avocat spécialisé, en particulier pour tout usage touchant au recrutement, au crédit ou à des données sensibles.
+
+Identifier vos usages IA
+
+n’attend pas 2027.
+
+Un diagnostic permet de savoir, en une heure, où se situent vos usages IA actuels au regard de l’AI Act et du RGPD — avant que la question ne se pose dans l’urgence.
+
+ Votre diagnostic IA
+
+---
+
+# AI Act and GDPR: what an SME using AI actually has to do [EN]
+URL: https://exec-ia.ai/conformite-ia-pme-en.html
+
+← Expertise
+ Practical guide • AI compliance
+
+# AI Act and GDPR : what an SME using AI actually has to do.
+
+Last fact-checked : 24 September 2026
+
+Short version →
+
+The EU AI Act applies to any SME that uses or provides an AI system, regardless of size — only the level of obligation and the relief available change. Three blocks are already in force : prohibited practices and AI literacy since February 2025, governance and general-purpose model obligations since August 2025, transparency for systems that interact with people since August 2026. The bulk of the high-risk obligations has been postponed to 2 December 2027 by the Digital Omnibus. The GDPR applies in parallel whenever personal data is processed. This content is informational : it does not replace legal advice.
+
+Most SMEs first encounter the AI Act through articles about multi-million-euro fines and "high-risk" systems, without ever spelling out what actually applies to a ten-, thirty- or hundred-person company. This piece sorts that out : what is mandatory today, what has been postponed, and what an SME should actually check — with the official source behind each point.
+
+This content is informational and educational. It does not constitute legal advice : every company's situation deserves review by a specialised lawyer, particularly for any use touching recruitment, credit or sensitive data.
+
+## Is your SME covered by the AI Act?
+
+Yes, systematically, as soon as it provides or uses an AI system on the European market. Regulation (EU) 2024/1689 sets out no general exception based on company size : what size changes is the relief available (simplified documentation, reduced fees, priority access to regulatory sandboxes — see below), not whether the obligations exist in the first place.
+
+Two notions matter above all : are you a provider (you develop, or have developed, an AI system that you place on the market) or a deployer (you use, in your business, a system supplied by a third party)? Almost every SME is a deployer — it uses an existing AI tool rather than building one — and deployer obligations are markedly lighter than provider obligations, except when the use case falls into the high-risk category.
+
+## The current timeline, updated on 24 September 2026
+
+The timeline genuinely moved this year : the Digital Omnibus package, in force since 27 July 2026, postponed a substantial part of the obligations. Here is the exact state of the deadlines, with the official source for each.
+
+- Date | What applies | Status
+
+- 1 August 2024 | Entry into force of Regulation (EU) 2024/1689 | Settled
+
+- 2 February 2025 | Prohibited AI practices (Art. 5) and the AI literacy obligation for staff (Art. 4) | In force
+
+- 2 August 2025 | Governance rules, obligations for providers of general-purpose AI models, penalty regime | In force
+
+- 2 August 2026 | Transparency for systems that interact with people : conversational agents, synthetic content, deepfakes (Art. 50) | In force
+
+- 2 December 2026 | Two new prohibited practices (Art. 5) : non-consensual intimate deepfakes, AI-generated child sexual abuse material — introduced by amending Regulation (EU) 2026/1744 | Upcoming
+
+- 2 December 2027 | Full Annex III high-risk obligations (recruitment, credit, biometrics, critical infrastructure, education…) — postponed from 2 August 2026 | Postponed
+
+- 2 August 2028 | High-risk systems embedded in already-regulated products (Annex I : medical devices, machinery…) | Postponed
+
+Sources : consolidated text of the Regulation (EUR-Lex) and the European Commission — AI regulatory framework. The Digital Omnibus is amending Regulation (EU) 2026/1744 of 8 July 2026. A nuance on Article 50 : systems already placed on the market before 2 August 2026 have, for the marking of synthetic content only (Art. 50(2)), a transitional deadline until 2 December 2026 (Art. 111(4)) — the other Article 50 transparency obligations remain applicable from 2 August 2026.
+
+## What an SME should actually do, starting now
+
+Check that no use case falls under a prohibited practice — including generalised social scoring, subliminal manipulation exploiting a vulnerability, biometric categorisation inferring political or religious opinions, emotion recognition at work outside medical or safety exceptions, and, from 2 December 2026, non-consensual intimate deepfakes and AI-generated child sexual abuse material. No size-based relief applies here.
+
+Take measures to develop AI literacy among the people who use AI or decide on AI use cases within the company — an obligation in force since February 2025, but an obligation of means : the text explicitly states it does not require guaranteeing any specific level. Documented internal awareness can be enough for an SME, depending on the use case.
+
+Clearly inform anyone interacting with an AI system — a conversational agent, generated content, a synthetic image — that they are dealing with AI, whenever this is not already obvious from context.
+
+Identify whether a use case falls into the high-risk category (recruitment, credit scoring, staff assessment…). Full deployer obligations apply from 2 December 2027, but the inventory of affected use cases is worth building now, not the day before the deadline.
+
+## GDPR and AI : the reflexes that apply in parallel
+
+The AI Act governs the AI system itself; the GDPR governs the personal data it processes, independently of the risk level the AI Act assigns to it. A tool the AI Act treats as low-risk can still trigger a GDPR obligation if the data it handles is sensitive. Four reflexes apply as soon as an AI system touches personal data : an identified lawful basis before any processing (Article 6 GDPR), clear information for the people concerned, minimisation of the data used to configure or fine-tune the tool, and a data protection impact assessment as soon as the processing is likely to result in a high risk — the French data protection authority, the CNIL, has published dedicated AI guidance on this exact point. If the AI provider is established outside the European Union, transfer safeguards (standard contractual clauses) come on top of these four points.
+
+## What the AI Act specifically eases for SMEs and microenterprises
+
+Three separate articles ease the burden for SMEs. Article 11 opens simplified technical documentation, accepted by authorities, to every SME (and to small mid-cap companies), not only to microenterprises. Article 62 sets out priority access to national regulatory sandboxes to test a system under supervised conditions, certification fees reduced in proportion to company size, and dedicated awareness and communication channels. Finally, Article 99 caps an SME's fine at whichever is lower between the fixed amount and the percentage of turnover : for a prohibited practice, the general ceiling is 35 million euros or 7 % of global turnover — an SME is charged whichever of the two is lower, never the higher one. SMEs and microenterprises without partner or linked enterprises also benefit, under Article 63, from simplified compliance with certain elements of the quality management system required for high-risk systems. None of this relief removes a substantive obligation ; it reduces the documentation burden and the cost of reaching compliance.
+
+01Is a small company really covered by the AI Act ?+
+
+Yes, and this is the most common misunderstanding. The AI Act applies to any organisation that provides or uses an AI system on the European market, regardless of size. What size changes is not whether the rules apply, but the level of obligation resting on you and which relief measures you can claim. An SME using a third-party AI tool to screen job applications or assess credit risk is covered by deployer obligations, even if it never wrote a single line of AI code itself. The only question worth asking is not how small you are, but what you actually use AI for and which risk category it falls into.
+
+02What is the difference between a provider and a deployer ?+
+
+A provider develops an AI system, or has one developed, and places it on the market under its own name; a deployer uses that system in the course of its professional activity. Almost every SME is a deployer: it buys or subscribes to an existing AI tool rather than building one. Deployer obligations are markedly lighter than provider obligations, except when the system used falls into the high-risk category (recruitment, credit scoring, biometrics...). Knowing which side of that line you sit on stops you from imposing provider-level obligations on yourself out of excess caution, and equally from underestimating a real deployer obligation.
+
+03What is mandatory today, and what has been postponed ?+
+
+Three blocks are already in force: prohibited AI practices and the AI literacy obligation since February 2025, governance rules and obligations for providers of general-purpose AI models since August 2025, and transparency obligations for systems that interact with people (conversational agents, synthetic content) since August 2026. On 2 December 2026, two new prohibited practices are added (non-consensual intimate deepfakes, AI-generated child sexual abuse material), introduced by amending Regulation (EU) 2026/1744. The bulk of the Annex III high-risk obligations, originally due in August 2026, has been pushed back to 2 December 2027 by that same regulation — and high-risk systems embedded in already-regulated products (medical devices, machinery) now have until 2 August 2028. The timeline genuinely moved this year, this is not a rumour.
+
+04Which AI practices are prohibited, regardless of company size ?+
+
+These bans admit no size exception. They cover, among others, and have been in force since February 2025: subliminal manipulation or exploiting vulnerabilities (age, disability, social or economic situation) to distort behaviour in a harmful way, generalised social scoring of a person based on their behaviour, biometric categorisation used to infer political opinions, religious beliefs or sexual orientation, and emotion recognition in the workplace outside strictly limited medical or safety exceptions. From 2 December 2026, two further bans are added by amending Regulation (EU) 2026/1744: non-consensual intimate deepfakes of an identifiable person, and AI-generated child sexual abuse material. An SME considering an AI use case touching recruitment, customer scoring or staff monitoring should check this point before any other compliance step — it is the one category that admits no size-based relief.
+
+05Does the GDPR apply on top of the AI Act ?+
+
+Systematically, as soon as an AI system processes personal data, which covers the vast majority of business uses. The AI Act governs the system itself; the GDPR governs the data it processes, independently of the risk level the AI Act assigns to it. In practice this means an identified lawful basis before any processing, clear information for the people concerned, minimisation of the data used to configure or fine-tune the tool, and a data protection impact assessment as soon as the processing is likely to result in a high risk. A tool the AI Act treats as low-risk can still trigger a GDPR obligation if the data it processes is sensitive.
+
+06What relief does the AI Act provide for SMEs and microenterprises ?+
+
+Four separate articles ease the burden for SMEs. Article 11 opens simplified technical documentation, accepted by authorities, to every SME, not only to microenterprises. Article 62 sets out priority access to national regulatory sandboxes, certification fees reduced in proportion to company size, and dedicated awareness measures. Article 99 caps an SME's fine at whichever is lower between the fixed amount and the percentage of turnover, never the higher one. SMEs and microenterprises without partner or linked enterprises also benefit, under Article 63, from simplified compliance with certain elements of the quality management system required for high-risk systems — this is not limited to microenterprises alone. None of this relief removes a substantive obligation; it reduces the documentation burden and the cost of reaching compliance.
+
+Sources & scope of this content
+
+Written from the consolidated text of Regulation (EU) 2024/1689 (EUR-Lex), the European Commission's page on the AI regulatory framework, Articles 11, 62 and 99 on SME support measures, and the CNIL's practical AI guidance.
+
+This content is informational and educational. It does not constitute legal advice and does not replace the opinion of a specialised lawyer, particularly for any use touching recruitment, credit or sensitive data.
+
+Mapping your AI use cases
+
+does not wait for 2027.
+
+A diagnostic shows, within an hour, where your current AI use cases stand against the AI Act and the GDPR — before the question becomes urgent.
+
+ Your AI diagnostic
+
+---
+
+# AI Act y RGPD: lo que una PYME que usa IA debe hacer realmente [ES]
+URL: https://exec-ia.ai/conformite-ia-pme-es.html
+
+← Experiencia
+ Guía práctica • Cumplimiento IA
+
+# AI Act y RGPD : las obligaciones reales de una PYME que usa IA.
+
+Última verificación factual : 24 de septiembre de 2026
+
+Versión breve →
+
+El AI Act europeo se aplica a toda PYME que utiliza o suministra un sistema de IA, sea cual sea su tamaño — solo cambian el nivel de obligación y los alivios disponibles. Tres bloques ya están en vigor : prohibiciones y alfabetización en IA desde febrero de 2025, gobernanza y obligaciones de los modelos de uso general desde agosto de 2025, transparencia de los sistemas que interactúan con personas desde agosto de 2026. La mayor parte de las obligaciones de alto riesgo se ha aplazado al 2 de diciembre de 2027 por el «Ómnibus Digital». El RGPD se aplica en paralelo en cuanto se tratan datos personales. Este contenido es informativo : no sustituye un asesoramiento jurídico.
+
+La mayoría de las PYME descubren el AI Act a través de artículos que hablan de multas de varios millones de euros y de sistemas de «alto riesgo», sin precisar nunca qué se aplica realmente a una estructura de diez, treinta o cien personas. Este texto pone orden : qué es obligatorio hoy, qué se ha aplazado, y qué debe comprobar realmente una PYME — con las fuentes oficiales para cada punto.
+
+Este contenido tiene una vocación informativa y pedagógica. No constituye un asesoramiento jurídico : la situación de cada empresa merece ser validada por un abogado especializado, en particular para cualquier uso relacionado con la selección de personal, el crédito o los datos sensibles.
+
+## ¿Su PYME está sujeta al AI Act?
+
+Sí, sistemáticamente, desde el momento en que suministra o utiliza un sistema de IA en el mercado europeo. El Reglamento (UE) 2024/1689 no prevé ninguna excepción general vinculada al tamaño de la empresa : lo que cambia con el tamaño son los alivios disponibles (documentación simplificada, tasas reducidas, acceso prioritario a los sandboxes regulatorios — véase más abajo), no la existencia misma de las obligaciones.
+
+Dos nociones importan por encima de todo : ¿es usted proveedor (desarrolla, o hace desarrollar, un sistema de IA que introduce en el mercado) o responsable del despliegue (utiliza, en su actividad, un sistema suministrado por un tercero)? Casi todas las PYME son responsables del despliegue — utilizan una herramienta de IA ya existente en lugar de crearla — y las obligaciones del responsable del despliegue son claramente más ligeras que las del proveedor, salvo cuando el uso entra en la categoría de alto riesgo.
+
+## El calendario real, actualizado al 24 de septiembre de 2026
+
+El calendario realmente ha cambiado este año : el paquete «Ómnibus Digital», en vigor desde el 27 de julio de 2026, ha aplazado una parte sustancial de las obligaciones. Este es el estado exacto de los plazos, con la fuente oficial de cada uno.
+
+- Fecha | Qué se aplica | Estado
+
+- 1 de agosto de 2024 | Entrada en vigor del Reglamento (UE) 2024/1689 | Consolidado
+
+- 2 de febrero de 2025 | Prácticas de IA prohibidas (art. 5) y obligación de alfabetización en IA de los equipos (art. 4) | Aplicable
+
+- 2 de agosto de 2025 | Normas de gobernanza, obligaciones de los proveedores de modelos de IA de uso general, régimen sancionador | Aplicable
+
+- 2 de agosto de 2026 | Transparencia para los sistemas que interactúan con personas : agentes conversacionales, contenido sintético, deepfakes (art. 50) | Aplicable
+
+- 2 de diciembre de 2026 | Dos nuevas prácticas prohibidas (art. 5) : deepfakes de carácter íntimo no consentidos, contenidos de pornografía infantil generados por IA — introducidas por el reglamento modificativo (UE) 2026/1744 | Próximamente
+
+- 2 de diciembre de 2027 | Obligaciones completas de alto riesgo del anexo III (selección de personal, crédito, biometría, infraestructuras críticas, educación…) — aplazado desde el 2 de agosto de 2026 | Aplazado
+
+- 2 de agosto de 2028 | Sistemas de alto riesgo integrados en productos ya regulados (anexo I : dispositivos médicos, maquinaria…) | Aplazado
+
+Fuentes : texto consolidado del reglamento (EUR-Lex) y Comisión Europea — marco regulador de la IA. El «Ómnibus Digital» corresponde al reglamento modificativo (UE) 2026/1744 del 8 de julio de 2026. Un matiz sobre el artículo 50 : los sistemas ya introducidos en el mercado antes del 2 de agosto de 2026 disponen, únicamente para el marcado de contenido sintético (art. 50§2), de un plazo transitorio hasta el 2 de diciembre de 2026 (art. 111§4) — el resto de obligaciones de transparencia del artículo 50 siguen siendo aplicables desde el 2 de agosto de 2026.
+
+## Qué debe hacer realmente una PYME, desde ahora
+
+Comprobar que ningún uso corresponde a una práctica prohibida — entre otras, la puntuación social generalizada, la manipulación subliminal que explota una vulnerabilidad, la categorización biométrica que deduce opiniones políticas o religiosas, el reconocimiento de emociones en el trabajo fuera de excepciones médicas o de seguridad, y, desde el 2 de diciembre de 2026, los deepfakes de carácter íntimo no consentidos y los contenidos de pornografía infantil generados por IA. Aquí no se aplica ningún alivio por tamaño.
+
+Tomar medidas para desarrollar la alfabetización en IA de las personas que utilizan la IA o deciden sus usos dentro de la empresa — obligación en vigor desde febrero de 2025, pero una obligación de medios : el texto precisa expresamente que no exige garantizar ningún nivel concreto. Una sensibilización interna documentada puede bastar para una PYME, según los usos.
+
+Informar claramente a cualquier persona que interactúe con un sistema de IA — agente conversacional, contenido generado, imagen sintética — de que se trata de una IA, cuando esto no resulte ya evidente por el contexto.
+
+Identificar si un uso entra en la categoría de alto riesgo (selección de personal, puntuación de crédito, evaluación de empleados…). Las obligaciones completas del responsable del despliegue se aplican a partir del 2 de diciembre de 2027, pero el inventario de los usos afectados conviene prepararlo con antelación, no en la víspera del plazo.
+
+## RGPD e IA : los reflejos que se aplican en paralelo
+
+El AI Act regula el sistema de IA en sí mismo; el RGPD regula los datos personales que trata, con independencia del nivel de riesgo que le asigne el AI Act. Una herramienta considerada de bajo riesgo por el AI Act puede, aun así, generar una obligación derivada del RGPD si los datos que maneja son sensibles. Cuatro reflejos se aplican en cuanto un sistema de IA trata datos personales : una base legal identificada antes de cualquier tratamiento (artículo 6 del RGPD), una información clara a las personas afectadas, una minimización de los datos utilizados para configurar o afinar la herramienta, y una evaluación de impacto relativa a la protección de datos en cuanto el tratamiento pueda suponer un riesgo elevado — la autoridad francesa de protección de datos (CNIL) ha publicado recomendaciones específicas sobre este punto. Si el proveedor de IA está establecido fuera de la Unión Europea, las garantías de transferencia de datos (cláusulas contractuales tipo) se añaden a estos cuatro puntos.
+
+## Qué alivia el AI Act específicamente para las PYME y microempresas
+
+Tres artículos distintos alivian la carga para las PYME. El artículo 11 abre a toda PYME (y a las pequeñas empresas de capitalización media), no solo a las microempresas, el derecho a presentar una documentación técnica simplificada, aceptada por las autoridades. El artículo 62 establece acceso prioritario a los sandboxes regulatorios nacionales para probar un sistema en condiciones supervisadas, tasas de certificación reducidas de forma proporcional al tamaño de la empresa, y acciones de sensibilización y canales de comunicación dedicados. Por último, el artículo 99 limita la multa de una PYME al importe más bajo entre el importe fijo y el porcentaje de la facturación : para una práctica prohibida, el techo general es de 35 millones de euros o el 7 % de la facturación mundial — a una PYME se le aplica el más bajo de los dos importes, nunca el más alto. Las PYME y microempresas sin empresa asociada o vinculada se benefician además, en virtud del artículo 63, de una simplificación de ciertos elementos del sistema de gestión de calidad exigido para los sistemas de alto riesgo. Ninguno de estos alivios exime de una obligación de fondo ; reducen la carga documental y el coste de acceso al cumplimiento.
+
+01¿Una empresa pequeña está realmente sujeta al AI Act ?+
+
+Sí, y esta es la confusión más frecuente. El AI Act se aplica a toda organización que suministre o utilice un sistema de IA en el mercado europeo, sea cual sea su tamaño. Lo que cambia con el tamaño no es si las normas se aplican, sino qué nivel de obligación recae sobre usted y qué alivios puede invocar. Una PYME que utiliza una herramienta de IA de un tercero para preseleccionar candidaturas o evaluar un riesgo de crédito está sujeta a las obligaciones de responsable del despliegue, aunque nunca haya desarrollado ni una sola línea de código de IA. La única pregunta que vale la pena hacerse no es si es lo bastante pequeña para pasar desapercibida, sino qué uso hace realmente de la IA y en qué categoría de riesgo encaja.
+
+02¿Cuál es la diferencia entre proveedor y responsable del despliegue ?+
+
+El proveedor desarrolla, o hace desarrollar, un sistema de IA y lo introduce en el mercado bajo su propio nombre; el responsable del despliegue lo utiliza en el marco de su actividad profesional. Casi todas las PYME son responsables del despliegue: utilizan una herramienta de IA ya existente en lugar de crearla. Las obligaciones del responsable del despliegue son claramente más ligeras que las del proveedor, salvo cuando el sistema utilizado entra en la categoría de alto riesgo. Saber de qué lado de esa línea se encuentra evita imponerse, por exceso de prudencia, obligaciones de proveedor que no le corresponden, o al contrario, subestimar una obligación real como responsable del despliegue.
+
+03¿Qué es obligatorio hoy y qué se ha aplazado ?+
+
+Tres bloques ya están en vigor: las prácticas de IA prohibidas y la obligación de alfabetización en IA de los equipos desde febrero de 2025, las normas de gobernanza y las obligaciones de los proveedores de modelos de IA de uso general desde agosto de 2025, y las obligaciones de transparencia para los sistemas que interactúan con personas desde agosto de 2026. El 2 de diciembre de 2026 se añaden dos nuevas prácticas prohibidas (deepfakes de carácter íntimo no consentidos, contenidos de pornografía infantil generados por IA), introducidas por el reglamento modificativo (UE) 2026/1744. En cambio, la mayor parte de las obligaciones de alto riesgo del anexo III, previstas inicialmente para agosto de 2026, se ha aplazado al 2 de diciembre de 2027 mediante ese mismo reglamento — y los sistemas de alto riesgo integrados en productos ya regulados (dispositivos médicos, maquinaria) han visto su plazo ampliado hasta el 2 de agosto de 2028. El calendario realmente ha cambiado este año, no es un rumor.
+
+04¿Qué prácticas de IA están prohibidas, sea cual sea el tamaño de la empresa ?+
+
+Estas prohibiciones no admiten excepción por tamaño. Cubren, entre otras, y están en vigor desde febrero de 2025: la manipulación subliminal o la explotación de vulnerabilidades (edad, discapacidad, situación social o económica) para alterar un comportamiento de forma perjudicial, la puntuación social generalizada de una persona a partir de su comportamiento, la categorización biométrica destinada a deducir opiniones políticas, religiosas o la orientación sexual, y el reconocimiento de emociones en el lugar de trabajo fuera de excepciones médicas o de seguridad estrictamente delimitadas. Desde el 2 de diciembre de 2026 se añaden dos prohibiciones adicionales introducidas por el reglamento modificativo (UE) 2026/1744: los deepfakes de carácter íntimo creados sin el consentimiento de la persona representada, y los contenidos de pornografía infantil generados por IA. Una PYME que valore un uso de IA relacionado con la selección de personal, la puntuación de sus clientes o la vigilancia de sus empleados debe comprobar este punto antes que cualquier otro trámite de cumplimiento: es la única categoría que no admite ningún alivio por tamaño.
+
+05¿Se aplica el RGPD además del AI Act ?+
+
+Sistemáticamente, en cuanto un sistema de IA trata datos personales, lo que cubre la gran mayoría de los usos empresariales. El AI Act regula el sistema en sí mismo; el RGPD regula los datos que trata, con independencia del nivel de riesgo que le asigne el AI Act. En la práctica, esto implica una base legal identificada antes de cualquier tratamiento, una información clara a las personas afectadas, una minimización de los datos utilizados para configurar o afinar la herramienta, y una evaluación de impacto relativa a la protección de datos en cuanto el tratamiento pueda suponer un riesgo elevado. Una herramienta considerada de bajo riesgo por el AI Act puede, aun así, generar una obligación derivada del RGPD si los datos que trata son sensibles.
+
+06¿Qué alivios prevé el AI Act para las PYME y microempresas ?+
+
+Cuatro artículos distintos alivian la carga para las PYME. El artículo 11 abre a toda PYME, no solo a las microempresas, el derecho a presentar una documentación técnica simplificada aceptada por las autoridades. El artículo 62 establece acceso prioritario a los sandboxes regulatorios, tasas de certificación reducidas de forma proporcional al tamaño de la empresa, y acciones de sensibilización dedicadas. El artículo 99 limita la multa de una PYME al importe más bajo entre el importe fijo y el porcentaje de la facturación, nunca el más alto. Las PYME y microempresas sin empresa asociada o vinculada se benefician además, en virtud del artículo 63, de una simplificación de ciertos elementos del sistema de gestión de calidad exigido para los sistemas de alto riesgo — no reservado únicamente a las microempresas. Ninguno de estos alivios exime de una obligación de fondo; reducen la carga documental y el coste de acceso al cumplimiento.
+
+Fuentes y alcance de este contenido
+
+Redactado a partir del texto consolidado del Reglamento (UE) 2024/1689 (EUR-Lex), de la página de la Comisión Europea sobre el marco regulador de la IA, de los artículos 11, 62 y 99 sobre las medidas de apoyo a las PYME, y de las fichas prácticas sobre IA de la CNIL.
+
+Este contenido tiene una vocación informativa y pedagógica. No constituye un asesoramiento jurídico ni sustituye la opinión de un abogado especializado, en particular para cualquier uso relacionado con la selección de personal, el crédito o los datos sensibles.
+
+Identificar sus usos de IA
+
+no espera a 2027.
+
+Un diagnóstico permite saber, en una hora, dónde se sitúan sus usos actuales de IA respecto al AI Act y al RGPD — antes de que la pregunta se plantee con urgencia.
+
+ Su diagnóstico IA

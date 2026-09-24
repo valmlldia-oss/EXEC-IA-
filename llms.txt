@@ -1,8 +1,8 @@
 # EXEC'IA
 
-> Cabinet de conseil stratégique en Intelligence Artificielle pour dirigeants. Priorisation des initiatives IA, automatisation intelligente, transformation digitale. Fondé par Valérie Mailland (18 ans chez McKinsey & Company).
+> Cabinet de conseil stratégique en Intelligence Artificielle pour dirigeants. Priorisation des initiatives IA, automatisation intelligente, transformation digitale. Fondé par Valérie Mailland (18 ans chez McKinsey & Company, en coordination exécutive et communication du réseau Alumni).
 
-Contenu intégral des 4 articles Perspectives (FR/EN/ES, sans HTML) : [llms-full.txt](https://exec-ia.ai/llms-full.txt)
+Contenu intégral des 4 articles Perspectives et du guide AI Act/RGPD pour PME (FR/EN/ES, sans HTML) : [llms-full.txt](https://exec-ia.ai/llms-full.txt)
 
 ## Pages principales
 
@@ -15,6 +15,8 @@ Contenu intégral des 4 articles Perspectives (FR/EN/ES, sans HTML) : [llms-full
 
 ## Perspectives (articles)
 
+- [Perspectives — le blog d'EXEC'IA](https://exec-ia.ai/perspectives.html): Page d'index des 4 articles (aussi en [anglais](https://exec-ia.ai/perspectives-en.html) et [espagnol](https://exec-ia.ai/perspectives-es.html)).
+
 - [L'entreprise utilise déjà l'IA](https://exec-ia.ai/perspective-entreprise-utilise-deja-ia.html): Sur l'écart entre adoption d'outils IA et création de valeur réelle.
 - [Le problème n'est pas les outils mais l'arbitrage](https://exec-ia.ai/perspective-probleme-nest-pas-outils-mais-arbitrage.html): Sur la priorisation des usages IA en comité de direction.
 - [Toutes les décisions ne se délèguent pas](https://exec-ia.ai/perspective-toutes-decisions-ne-se-deleguent-pas.html): Sur les limites de la délégation à l'IA.
@@ -26,6 +28,11 @@ Ces 4 articles existent aussi en anglais et en espagnol :
 - [More AI tools, not more impact](https://exec-ia.ai/perspective-probleme-nest-pas-outils-mais-arbitrage-en.html) · [Más herramientas de IA, no más impacto](https://exec-ia.ai/perspective-probleme-nest-pas-outils-mais-arbitrage-es.html)
 - [Not every decision can be delegated](https://exec-ia.ai/perspective-toutes-decisions-ne-se-deleguent-pas-en.html) · [No todas las decisiones se delegan](https://exec-ia.ai/perspective-toutes-decisions-ne-se-deleguent-pas-es.html)
 - [AI transformation rarely fails because of the technology](https://exec-ia.ai/perspective-transformation-echoue-rarement-technologie-en.html) · [La transformación con IA rara vez fracasa por la tecnología](https://exec-ia.ai/perspective-transformation-echoue-rarement-technologie-es.html)
+
+## Guide conformité IA
+
+- [AI Act et RGPD : les obligations réelles d'une PME qui utilise l'IA](https://exec-ia.ai/conformite-ia-pme.html): Calendrier réel des échéances (Digital Omnibus, règlement modificatif (UE) 2026/1744), fournisseur ou déployeur, pratiques interdites, allègements PME (articles 11, 62, 63, 99), RGPD appliqué à l'IA. Sources officielles citées. Informatif, ne constitue pas un conseil juridique.
+- [English version](https://exec-ia.ai/conformite-ia-pme-en.html) · [Versión en español](https://exec-ia.ai/conformite-ia-pme-es.html)
 
 ## Langues
 
