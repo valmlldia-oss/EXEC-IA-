@@ -2374,13 +2374,13 @@ Guide pratique • Conformité IA
 # AI Act et RGPD : les obligations réelles
 d’une PME qui utilise l’IA.
 
-Dernière vérification factuelle : 24 septembre 2026
+Vérifié le 24/09/2026
 
 Version courte →
 
 L’AI Act européen s’applique à toute PME qui utilise ou fournit un système d’IA, quelle que soit sa taille, seuls le niveau d’obligation et les allègements changent. Trois blocs sont déjà en vigueur :
 
-- interdictions de pratiques IA et littératie IA depuis février 2025 ;
+- interdictions de pratiques IA et littératie IA (comprendre ce que fait l’IA) depuis février 2025 ;
 
 - gouvernance et obligations des modèles à usage général depuis août 2025 ;
 
@@ -2406,49 +2406,48 @@ La quasi-totalité des PME sont déployeuses : elles utilisent un outil IA exist
 
 ## Le calendrier réel, mis à jour au 24 septembre 2026
 
-Le calendrier a réellement bougé cette année : le « Digital Omnibus », un texte européen de simplification (règlement (UE) 2026/1744 du 8 juillet 2026, en vigueur depuis le 27 juillet 2026), a reporté une partie substantielle des obligations. Voici l’état exact des échéances, avec la source officielle pour chacune.
+Le calendrier a réellement bougé cette année : le « Digital Omnibus » a reporté une partie substantielle des obligations.
 
-Calendrier AI Act
+Digital Omnibus, en clair : un texte européen qui simplifie plusieurs règles du numérique et a repoussé les obligations « haut risque » de l’AI Act. C’est le règlement (UE) 2026/1744 du 8 juillet 2026, en vigueur depuis le 27 juillet 2026.
+
+Voici l’état exact des échéances, avec la source officielle pour chacune.
+
+En vigueur
 
 -
 1er août 2024
-En vigueur
 
 Entrée en vigueur du règlement (UE) 2024/1689
 
 -
 2 février 2025
-En vigueur
 
-Interdictions de pratiques d’IA (art. 5) et obligation de « littératie IA » des équipes (art. 4)
+Interdictions de pratiques d’IA (art. 5) et obligation de « littératie IA » des équipes, c’est-à-dire savoir ce qu’un outil d’IA fait et ne fait pas (art. 4)
 
 -
 2 août 2025
-En vigueur
 
 Règles de gouvernance, obligations des fournisseurs de modèles d’IA à usage général, régime de sanctions
 
 -
 2 août 2026
-En vigueur
 
 Transparence pour les systèmes qui interagissent avec des personnes : agents conversationnels, contenus de synthèse, deepfakes (art. 50)
 
+À venir ou reporté
+
 -
 2 décembre 2026
-À venir
 
 Deux nouvelles pratiques interdites (art. 5) : deepfakes à caractère intime non consentis, contenus de pédopornographie générés par IA, introduites par le règlement modificatif (UE) 2026/1744
 
 -
 2 décembre 2027
-À venir
 
 Obligations complètes « haut risque » de l’annexe III (recrutement, crédit, biométrie, infrastructures critiques, éducation…), reporté depuis le 2 août 2026
 
 -
 2 août 2028
-À venir
 
 Systèmes à haut risque intégrés à des produits déjà réglementés (annexe I : dispositifs médicaux, machines…)
 
@@ -2506,13 +2505,13 @@ Valérie Mailland
 
 Fondatrice d'EXEC'IA Consulting. 20+ ans auprès de dirigeants, 18 ans chez McKinsey & Company. Suivre sur LinkedIn →
 
-Identifier vos usages IA
+Où en est votre PME
 
-n’attend pas 2027.
+face à l’AI Act et au RGPD ?
 
-Un entretien offert de 30 minutes pour situer vos usages IA actuels au regard de l’AI Act et du RGPD, avant que la question ne se pose dans l’urgence.
+Un entretien offert de 30 minutes pour situer vos usages IA actuels, avant que la question ne se pose dans l’urgence.
 
-Réserver mon entretien offert →
+Réserver mon point AI Act et RGPD →
 30 minutes · Offert · Sans engagement
 
 ---
@@ -2526,13 +2525,13 @@ Practical guide • AI compliance
 # AI Act and GDPR: what an SME
 using AI actually has to do.
 
-Last fact-checked: 24 September 2026
+Checked on 24/09/2026
 
 Short version →
 
 The EU AI Act applies to any SME that uses or provides an AI system, regardless of size, only the level of obligation and the relief available change. Three blocks are already in force:
 
-- prohibited practices and AI literacy since February 2025;
+- prohibited practices and AI literacy (understanding what AI does) since February 2025;
 
 - governance and general-purpose model obligations since August 2025;
 
@@ -2558,49 +2557,48 @@ Almost every SME is a deployer: it uses an existing AI tool rather than building
 
 ## The current timeline, updated on 24 September 2026
 
-The timeline genuinely moved this year: the Digital Omnibus, an EU simplification text (Regulation (EU) 2026/1744 of 8 July 2026, in force since 27 July 2026), postponed a substantial part of the obligations. Here is the exact state of the deadlines, with the official source for each.
+The timeline genuinely moved this year: the Digital Omnibus postponed a substantial part of the obligations.
 
-AI Act timeline
+Digital Omnibus, in plain terms: an EU text that simplifies several digital rules and pushed back the AI Act's high-risk obligations. It is Regulation (EU) 2026/1744 of 8 July 2026, in force since 27 July 2026.
+
+Here is the exact state of the deadlines, with the official source for each.
+
+In force
 
 -
 1 August 2024
-In force
 
 Entry into force of Regulation (EU) 2024/1689
 
 -
 2 February 2025
-In force
 
-Prohibited AI practices (Art. 5) and the AI literacy obligation for staff (Art. 4)
+Prohibited AI practices (Art. 5) and the AI literacy obligation for staff, meaning knowing what an AI tool can and cannot do (Art. 4)
 
 -
 2 August 2025
-In force
 
 Governance rules, obligations for providers of general-purpose AI models, penalty regime
 
 -
 2 August 2026
-In force
 
 Transparency for systems that interact with people: conversational agents, synthetic content, deepfakes (Art. 50)
 
+Upcoming or postponed
+
 -
 2 December 2026
-Upcoming
 
 Two new prohibited practices (Art. 5): non-consensual intimate deepfakes, AI-generated child sexual abuse material, introduced by amending Regulation (EU) 2026/1744
 
 -
 2 December 2027
-Upcoming
 
 Full Annex III high-risk obligations (recruitment, credit, biometrics, critical infrastructure, education…), postponed from 2 August 2026
 
 -
 2 August 2028
-Upcoming
 
 High-risk systems embedded in already-regulated products (Annex I: medical devices, machinery…)
 
@@ -2658,13 +2656,13 @@ Valérie Mailland
 
 Founder of EXEC'IA Consulting. 20+ years alongside executives, 18 years at McKinsey & Company. Follow on LinkedIn →
 
-Mapping your AI use cases
+Where does your SME stand
 
-does not wait for 2027.
+on the AI Act and GDPR?
 
-A free 30-minute call to see where your current AI use cases stand against the AI Act and the GDPR, before the question becomes urgent.
+A free 30-minute call to see where your current AI use cases stand, before the question becomes urgent.
 
-Book my free call →
+Book my AI Act and GDPR check-in →
 30 minutes · Free · No commitment
 
 ---
@@ -2678,13 +2676,13 @@ Guía práctica • Cumplimiento IA
 # AI Act y RGPD: las obligaciones reales
 de una PYME que usa IA.
 
-Última verificación factual: 24 de septiembre de 2026
+Verificado el 24/09/2026
 
 Versión breve →
 
 El AI Act europeo se aplica a toda PYME que utiliza o suministra un sistema de IA, sea cual sea su tamaño, solo cambian el nivel de obligación y los alivios disponibles. Tres bloques ya están en vigor:
 
-- prohibiciones y alfabetización en IA desde febrero de 2025;
+- prohibiciones y alfabetización en IA (entender qué hace la IA) desde febrero de 2025;
 
 - gobernanza y obligaciones de los modelos de uso general desde agosto de 2025;
 
@@ -2710,49 +2708,48 @@ Casi todas las PYME son responsables del despliegue: utilizan una herramienta de
 
 ## El calendario real, actualizado al 24 de septiembre de 2026
 
-El calendario realmente ha cambiado este año: el «Ómnibus Digital», un texto europeo de simplificación (Reglamento (UE) 2026/1744 del 8 de julio de 2026, en vigor desde el 27 de julio de 2026), ha aplazado una parte sustancial de las obligaciones. Este es el estado exacto de los plazos, con la fuente oficial de cada uno.
+El calendario realmente ha cambiado este año: el «Ómnibus Digital» ha aplazado una parte sustancial de las obligaciones.
 
-Calendario AI Act
+Ómnibus Digital, en claro: un texto europeo que simplifica varias normas digitales y ha retrasado las obligaciones de alto riesgo del AI Act. Es el Reglamento (UE) 2026/1744 del 8 de julio de 2026, en vigor desde el 27 de julio de 2026.
+
+Este es el estado exacto de los plazos, con la fuente oficial de cada uno.
+
+En vigor
 
 -
 1 de agosto de 2024
-En vigor
 
 Entrada en vigor del Reglamento (UE) 2024/1689
 
 -
 2 de febrero de 2025
-En vigor
 
-Prácticas de IA prohibidas (art. 5) y obligación de alfabetización en IA de los equipos (art. 4)
+Prácticas de IA prohibidas (art. 5) y obligación de alfabetización en IA de los equipos, es decir, saber qué puede y qué no puede hacer una herramienta de IA (art. 4)
 
 -
 2 de agosto de 2025
-En vigor
 
 Normas de gobernanza, obligaciones de los proveedores de modelos de IA de uso general, régimen sancionador
 
 -
 2 de agosto de 2026
-En vigor
 
 Transparencia para los sistemas que interactúan con personas: agentes conversacionales, contenido sintético, deepfakes (art. 50)
 
+Próximamente o aplazado
+
 -
 2 de diciembre de 2026
-Próximamente
 
 Dos nuevas prácticas prohibidas (art. 5): deepfakes de carácter íntimo no consentidos, contenidos de pornografía infantil generados por IA, introducidas por el reglamento modificativo (UE) 2026/1744
 
 -
 2 de diciembre de 2027
-Próximamente
 
 Obligaciones completas de alto riesgo del anexo III (selección de personal, crédito, biometría, infraestructuras críticas, educación…), aplazado desde el 2 de agosto de 2026
 
 -
 2 de agosto de 2028
-Próximamente
 
 Sistemas de alto riesgo integrados en productos ya regulados (anexo I: dispositivos médicos, maquinaria…)
 
@@ -2810,11 +2807,11 @@ Valérie Mailland
 
 Fundadora de EXEC'IA Consulting. 20+ años junto a directivos, 18 años en McKinsey & Company. Seguir en LinkedIn →
 
-Identificar sus usos de IA
+¿Dónde está su PYME
 
-no espera a 2027.
+frente al AI Act y al RGPD?
 
-Una entrevista gratuita de 30 minutos para situar sus usos actuales de IA respecto al AI Act y al RGPD, antes de que la pregunta se plantee con urgencia.
+Una entrevista gratuita de 30 minutos para situar sus usos actuales de IA, antes de que la pregunta se plantee con urgencia.
 
-Reservar mi entrevista gratuita →
+Reservar mi punto sobre AI Act y RGPD →
 30 minutos · Gratis · Sin compromiso
