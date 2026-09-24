@@ -7037,3 +7037,9 @@ html { scroll-behavior: smooth; }
 /* Citation : deux lignes maîtrisées, la première tient sur une seule ligne */
 .article-epigraph p { font-size: clamp(1.15rem, 2vw, 1.5rem); text-wrap: initial; }
 @media (max-width: 700px) { .article-epigraph p br { display: none; } }
+
+/* Guide : phrases clés sur une seule ligne sur grand écran */
+@media (min-width: 900px) {
+  .article-page--guide .aiact-oneline { white-space: nowrap; }
+  .article-page--guide .aiact-roles li { white-space: nowrap; }
+}
