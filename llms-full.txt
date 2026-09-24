@@ -77,7 +77,7 @@ C’est précisément ce rôle d’arbitrage, entre les usages remontés du terr
 
 Concrètement, cela commence par un inventaire simple : lister les usages IA déjà actifs dans l’organisation, souvent plus nombreux qu’on ne l’imagine, puis les passer au filtre des trois repères. La plupart des directions découvrent à cette étape qu’elles financent déjà, sans le savoir, plusieurs usages qui ne passeraient aucun des trois tests — et qu’un ou deux, en revanche, mériteraient un vrai soutien qu’ils n’ont jamais reçu. Cet inventaire prend rarement plus d’une réunion ; le vrai travail commence après, quand il faut accepter d’arrêter un usage familier parce qu’il ne passe pas le test, même si personne ne s’en est encore plaint.
 
-### Un cas qui illustre la confusion entre gain individuel et résultat ?
+### Quel cas illustre la confusion entre gain individuel et résultat ?
 
 Le cas de Klarna, l’entreprise suédoise de paiement fractionné, illustre bien cette confusion. En février 2024, son dirigeant annonçait que son assistant IA accomplissait le travail de 700 agents du service client à temps plein, avec une résolution plus rapide des demandes. Un an plus tard, l’entreprise annonçait réembaucher des agents humains, expliquant publiquement ne pas être parvenue à maintenir la qualité de service avec l’IA seule.
 
@@ -614,7 +614,7 @@ Un test simple permet souvent de trancher : si la décision est facilement réve
 
 ## ⚖️ Pourquoi l’arbitrage doit-il rester humain quand une décision engage l’entreprise ?
 
-### Un cas qui a fait jurisprudence ?
+### Quel cas réel a fait jurisprudence en matière de délégation à l’IA ?
 
 En février 2024, un tribunal canadien a tranché une affaire qui illustre bien ce risque. Un client d’Air Canada avait obtenu d’un chatbot de la compagnie une promesse de remboursement qui ne correspondait pas à la politique réelle de l’entreprise. Air Canada a plaidé devant le tribunal que le chatbot devait être considéré comme « une entité juridique distincte responsable de ses propres actes ». Le tribunal a rejeté cet argument sans détour : une entreprise reste responsable de ce que dit n’importe lequel de ses agents, humain ou automatisé. Air Canada a été condamnée à honorer la promesse.
 
@@ -909,13 +909,13 @@ Résultat : l’IA s’ajoute à l’existant. Elle ne le transforme pas.
 
 Le signe le plus fiable qu’une transformation n’a pas eu lieu : le nombre de réunions de validation n’a pas changé. Un nouvel outil qui traverse exactement le même circuit d’approbations qu’avant, avec les mêmes personnes consultées dans le même ordre, n’a rien transformé — il a juste changé la vitesse d’un maillon, pas la longueur de la chaîne.
 
-### Un phénomène déjà nommé par les économistes ?
+### Ce phénomène a-t-il déjà été identifié par les économistes ?
 
 Ce paradoxe n’est pas propre à l’IA. L’économiste Robert Solow l’observait déjà en 1987, à propos de l’informatisation des entreprises : « on voit l’ère de l’ordinateur partout, sauf dans les statistiques de productivité ». Les chercheurs Erik Brynjolfsson et Lorin Hitt ont ensuite montré pourquoi : l’investissement technologique ne produit un gain mesurable que lorsqu’il s’accompagne d’un investissement organisationnel équivalent, souvent invisible dans les budgets : revoir les processus, redistribuer les décisions, faire évoluer les rôles.
 
 L’IA générative reproduit aujourd’hui le même schéma, à une vitesse plus rapide. L’outil s’installe en quelques semaines. L’organisation, elle, met des mois ou des années à suivre, si elle suit. L’écart entre les deux vitesses est précisément ce qu’illustre l’estimation reprise par RAND Corporation : un projet sur cinq seulement franchirait cet écart avec succès.
 
-### Ce que cela change concrètement pour un dirigeant de PME ?
+### Que change concrètement cette analyse pour un dirigeant de PME ?
 
 Dans une structure de taille moyenne, ce constat a une conséquence directe : le budget d’un projet IA ne devrait jamais se limiter au coût de la licence ou de l’intégration technique. Une partie doit être réservée au temps qu’il faudra pour revoir, avec les équipes concernées, qui décide de quoi une fois l’outil en place. Ce temps n’apparaît sur aucune facture de fournisseur ; c’est pourtant lui qui détermine si le projet rejoint les quatre sur cinq qui échouent, ou le cinquième qui réussit.
 
@@ -947,7 +947,7 @@ Le prochain rapport sur l’IA en entreprise ne parlera sans doute pas d’un no
 
 Un point de départ concret : avant tout projet IA, cartographier non pas ce que l’outil va faire, mais qui devra décider différemment une fois qu’il sera en place. Si la réponse est « personne », le projet automatise un existant — il ne transforme rien. Cette cartographie tient sur une page ; c’est justement sa brièveté qui la rend difficile à esquiver.
 
-### Un test rapide pour savoir où en est votre organisation ?
+### Comment savoir rapidement où en est votre organisation ?
 
 Trois questions suffisent généralement à situer un projet IA sur cette échelle. Quelqu’un a-t-il, depuis le déploiement, pris une décision qu’il n’aurait pas prise avant, avec la même autorité qu’auparavant ? Un processus a-t-il perdu une étape, plutôt que d’en gagner une ? Une personne a-t-elle vu son rôle redéfini, pas seulement son outil de travail ? Si les trois réponses sont non, le projet a de bonnes chances de rejoindre les quatre sur cinq qui échouent, selon l’estimation reprise par RAND Corporation, quelle que soit la qualité de l’IA choisie.
 

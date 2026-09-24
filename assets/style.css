@@ -4860,7 +4860,7 @@ body > section.newsletter-section.snap-page {
   margin-top: 16px;
   margin-bottom: 16px;
 }
-.newsletter-content h2 {
+.newsletter-content h2, .newsletter-content .nl-h2 {
   /* Matrice ve-title (Cormorant, 500) — chute en italique, même couleur de base */
   color: rgba(255,255,255,.92);
   font-family: var(--serif);
@@ -4876,7 +4876,7 @@ body > section.newsletter-section.snap-page {
 /* Première phrase du titre : tient sur une seule ligne, taille adaptée à la largeur disponible */
 .nl-hero-line1 { display: inline-block; white-space: nowrap; font-size: clamp(1.05rem, 2.3vw, 1.55rem); }
 @media (max-width: 480px) { .nl-hero-line1 { white-space: normal; font-size: inherit; } }
-.newsletter-content h2 em { font-style: italic; }
+.newsletter-content h2 em, .newsletter-content .nl-h2 em { font-style: italic; }
 .nl-title-num {
   font-size: 1.45em;
   line-height: 1.15;
