@@ -3755,7 +3755,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 }
 
 /* ─── SLIDES FEUILLETAGE EXPERTISE — en-têtes & sections neuves ─── */
-.slide-head { max-width: 820px; margin: 0 auto clamp(28px, 4vh, 48px); text-align: center; padding: 0 24px; }
+.slide-head { max-width: 880px; margin: 0 auto clamp(28px, 4vh, 48px); text-align: center; padding: 0 24px; }
 .slide-head .eyebrow { text-align: center; }
 .slide-title { border-left: none; padding-left: 0; }
 .slide-head .slide-title { margin-bottom: 18px; }
@@ -3840,7 +3840,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   margin-top: clamp(2px, 0.6vh, 8px) !important;
   margin-bottom: 0 !important;
 }
-.conviction-inner { max-width: 820px; text-align: center; }
+.conviction-inner { max-width: 880px; text-align: center; }
 .conviction-inner .eyebrow { text-align: center; margin-bottom: 12px; }
 .conviction-title { border-left: none; padding-left: 0; margin-bottom: 12px; }
 /* Barre verticale terracotta devant le titre de la slide "Une conviction".
@@ -6908,7 +6908,7 @@ h2.section-title,
 .aiact-ref { font-family: var(--sans); font-weight: 600; font-style: normal; color: var(--plum); background: rgba(217,201,195,.38); padding: 0 .32em; border-radius: 4px; white-space: nowrap; }
 .aiact-def { background: rgba(217,201,195,.28); border-left: 3px solid var(--rose); border-radius: 0 8px 8px 0; padding: 12px 16px; }
 .aiact-def strong { color: var(--rose); font-weight: 600; }
-.aiact-sources { font-style: italic; font-size: .86rem !important; color: var(--plum-muted); background: rgba(217,201,195,.22); border: 1px solid rgba(99,59,74,.12); border-radius: 8px; padding: 10px 14px; }
+.aiact-sources { font-style: italic; font-size: .95rem !important; line-height: 1.6 !important; color: var(--plum-muted); background: rgba(217,201,195,.22); border: 1px solid rgba(99,59,74,.12); border-radius: 8px; padding: 10px 14px; }
 .aiact-sources a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
 .aiact-frame--soon { margin-top: 30px; }
 .aiact-frame--soon .aiact-frame-tag { color: var(--rose); border-color: rgba(199,95,98,.55); }
@@ -6967,3 +6967,18 @@ html { scroll-behavior: smooth; }
 .article-page--guide .article-author,
 .article-page--guide .article-close { box-sizing: border-box; width: 100%; max-width: 820px; margin-left: 0; margin-right: 0; }
 .article-page--guide .aiact-def { border-radius: 12px; border: 1.25px solid rgba(99,59,74,.3); border-left: 3px solid var(--rose); }
+
+/* Guide : lisibilité, corps de texte jamais sous 15 px, 16 px sur mobile */
+.article-page--guide .article-source-note { font-size: .9rem; }
+.article-page--guide .article-close-note { font-size: .9rem; }
+.article-page--guide .aiact-toc a { font-size: .88rem; }
+.article-page--guide .aiact-frame-tag { font-size: .74rem; }
+.article-page--guide .aiact-tl-text { font-size: .98rem; }
+.article-page--guide .article-tldr-body p, .article-page--guide .article-tldr-body li { font-size: 1rem; }
+@media (max-width: 700px) {
+  .article-page--guide .aiact-sources { font-size: 1rem !important; }
+  .article-page--guide .aiact-tl-text, .article-page--guide .article-tldr-body p, .article-page--guide .article-tldr-body li, .article-page--guide .article-intro p, .article-page--guide .acc-body p, .article-page--guide .article-qlist--actions li p, .article-page--guide .aiact-def, .article-page--guide .funding-note p { font-size: 1.02rem; line-height: 1.6; }
+  .article-page--guide .article-source-note, .article-page--guide .article-close-note { font-size: .95rem; }
+  .article-page--guide .aiact-toc a { font-size: .95rem; padding: 7px 14px; }
+  .article-page--guide .aiact-frame-tag { font-size: .78rem; }
+}
