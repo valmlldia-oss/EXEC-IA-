@@ -7060,7 +7060,7 @@ html { scroll-behavior: smooth; }
 .guide-link-card { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 4px; margin: 18px 0 4px; padding: 18px 22px 16px; background: rgba(217,201,195,.34); border: 1.25px solid rgba(99,59,74,.34); border-radius: 12px; text-decoration: none; color: var(--plum); transition: background .25s, border-color .25s, box-shadow .25s, transform .25s; }
 .guide-link-title { font-family: var(--sans); font-weight: 700; font-size: 1.12rem; letter-spacing: .01em; color: var(--plum); line-height: 1.3; transition: color .25s; }
 .guide-link-arrow { display: block; margin: 2px auto 0; transition: transform .25s; }
-.guide-link-desc { font-family: var(--sans); font-size: .95rem; line-height: 1.55; color: var(--plum-muted); max-width: 56ch; }
+.guide-link-desc { font-family: var(--sans); font-size: .95rem; line-height: 1.55; color: var(--plum-muted); max-width: 56ch; text-wrap: balance; text-decoration: none; }
 .guide-link-card:hover, .guide-link-card:focus-visible { background: rgba(217,201,195,.52); border-color: var(--rose); box-shadow: 0 8px 22px rgba(99,59,74,.12); transform: translateY(-2px); }
 .guide-link-card:hover .guide-link-title, .guide-link-card:focus-visible .guide-link-title { color: var(--rose); }
 .guide-link-card:hover .guide-link-arrow, .guide-link-card:focus-visible .guide-link-arrow { transform: translateY(-3px); }
