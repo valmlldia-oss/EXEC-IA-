@@ -7043,3 +7043,7 @@ html { scroll-behavior: smooth; }
   .article-page--guide .aiact-oneline { white-space: nowrap; }
   .article-page--guide .aiact-roles li { white-space: nowrap; }
 }
+
+/* Bio auteur : la phrase sur une ligne, le lien LinkedIn dessous */
+.article-author-bio a { display: block; margin-top: 4px; white-space: nowrap; }
+@media (min-width: 900px) { .article-author-bio { white-space: normal; } }
