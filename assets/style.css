@@ -7108,3 +7108,8 @@ body { overflow-wrap: break-word; overflow-x: clip; }
 
 /* Perspectives : le mot posé sur chaque image doublait la pastille de rubrique juste dessous et venait buter contre le texte des visuels. */
 .persp-card-visual-overlay { display: none; }
+
+/* Perspectives : première section de la page (elle doit dégager la barre de navigation fixe) */
+body > section#perspectives.snap-page:first-of-type { padding-top: calc(var(--nav-h) + var(--snap-breath)); }
+/* Bandeau gros chiffres : la précision sous McKinsey passe en majuscules, comme les autres légendes */
+.ss-subnote { text-transform: uppercase; font-size: .72em; letter-spacing: .06em; line-height: 1.55; }
