@@ -6922,3 +6922,11 @@ h2.section-title,
 .article-page--guide [id^="g"] { scroll-margin-top: 100px; }
 html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* Épigraphe / citation : bloc visible */
+.article-epigraph { position: relative; max-width: 780px; margin: 50px 0 0; padding: 34px 36px 28px 64px; background: rgba(217,201,195,.3); border: 1.25px solid rgba(99,59,74,.3); border-radius: 12px; }
+.article-epigraph::before { content: "\201C"; position: absolute; left: 20px; top: 6px; font-family: var(--serif); font-size: 4.6rem; line-height: 1; color: var(--rose); }
+.article-epigraph p { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: clamp(1.35rem, 2.5vw, 1.75rem); line-height: 1.35; color: var(--plum); margin: 0; text-wrap: balance; }
+.article-epigraph cite { display: block; font-family: var(--sans); font-style: normal; font-size: .8rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--rose); margin-top: 14px; }
+.article-epigraph cite i { text-transform: none; letter-spacing: .02em; font-weight: 500; }
+@media (max-width: 600px) { .article-epigraph { padding: 30px 20px 22px 48px; } .article-epigraph::before { left: 14px; font-size: 3.6rem; } }
