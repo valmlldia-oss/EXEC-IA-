@@ -6941,3 +6941,8 @@ html { scroll-behavior: smooth; }
 /* Guide : pas de mot isolé en fin de bloc */
 .article-page--guide h1, .article-page--guide h2, .article-page--guide .article-epigraph p, .article-page--guide .article-close p, .article-page--guide .aiact-def, .article-page--guide summary { text-wrap: balance; }
 .article-page--guide .acc-title { text-wrap: balance; }
+
+/* Sommaire : intitulé au-dessus, puces sur une seule ligne en dessous */
+.aiact-toc { flex-wrap: wrap; row-gap: 10px; }
+.aiact-toc-label { flex: 0 0 100%; margin: 0; }
+@media (min-width: 900px) { .aiact-toc { flex-wrap: wrap; } .aiact-toc a { padding: 5px 12px; } }
