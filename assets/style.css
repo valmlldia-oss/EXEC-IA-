@@ -6873,3 +6873,23 @@ h2.section-title,
 
 .article-tldr-body ul { margin: 8px 0 12px 1.3em; padding: 0; }
 .article-tldr-body li { margin-bottom: 4px; line-height: 1.55; }
+
+/* Cadre fin autour de la frise du calendrier (même langage que le bloc Expertise IA de À propos) */
+.aiact-frame { position: relative; max-width: 900px; margin: 34px 0 6px; padding: 30px 30px 26px 26px; border: 1.25px solid rgba(99,59,74,.3); border-radius: 12px; }
+.aiact-frame .aiact-timeline { margin: 0; }
+.aiact-frame-tag { position: absolute; top: -10px; left: 22px; background: var(--ivory); padding: 3px 11px; font-family: var(--sans); font-size: .68rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--plum); border: 1px solid rgba(99,59,74,.38); border-radius: 3px; }
+@media (max-width: 600px) { .aiact-frame { padding: 26px 16px 20px 14px; } .aiact-frame-tag { left: 14px; } }
+/* Les deux notions : liste numérotée lisible */
+.aiact-roles { max-width: 760px; margin: 6px 0 14px 1.4em; padding: 0; }
+.aiact-roles li { font-family: var(--sans); font-size: 1rem; line-height: 1.6; color: var(--plum); margin-bottom: 8px; padding-left: 4px; }
+.aiact-roles li::marker { color: var(--rose); font-weight: 700; }
+/* Points critiques en Terracotta */
+.aiact-key { color: var(--rose); font-weight: 600; }
+/* Liste d'actions : case à cocher devant chaque verbe d'action */
+.article-qlist--actions { border-left: none; padding-left: 0; max-width: 760px; }
+.article-qlist--actions li { position: relative; padding-left: 38px; margin-bottom: 18px; font-style: normal; font-family: var(--sans); font-size: 1rem; font-weight: 400; line-height: 1.6; }
+.article-qlist--actions li p { font-style: normal; font-family: var(--sans); font-size: 1rem; font-weight: 400; line-height: 1.6; margin: 0; }
+.article-qlist--actions li::before { content: ""; position: absolute; left: 0; top: 3px; width: 20px; height: 20px; border: 1.75px solid var(--rose); border-radius: 5px; background: transparent; }
+.article-qlist--actions li strong { color: var(--rose); font-weight: 600; }
+
+.article-close-note { font-family: var(--sans); font-size: .82rem; letter-spacing: .04em; color: var(--plum-muted); margin: 12px 0 0; }
