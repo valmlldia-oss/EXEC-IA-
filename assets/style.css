@@ -6937,3 +6937,7 @@ html { scroll-behavior: smooth; }
   .aiact-toc-label { white-space: nowrap; flex: 0 0 auto; }
   .aiact-toc a { white-space: nowrap; padding: 5px 12px; font-size: .8rem; }
 }
+
+/* Guide : pas de mot isolé en fin de bloc */
+.article-page--guide h1, .article-page--guide h2, .article-page--guide .article-epigraph p, .article-page--guide .article-close p, .article-page--guide .aiact-def, .article-page--guide summary { text-wrap: balance; }
+.article-page--guide .acc-title { text-wrap: balance; }
