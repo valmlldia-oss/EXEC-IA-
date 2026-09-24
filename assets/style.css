@@ -7033,3 +7033,7 @@ html { scroll-behavior: smooth; }
 @media (max-width: 1100px) { .offre-web-tiers--agents .offre-agent-pastille, .offre-web-tiers--agents .offre-web-tier-price { white-space: normal; } }
 
 .offre-web-tiers--agents .offre-agent-inclus { font-size: .82rem; line-height: 1.45; letter-spacing: 0; }
+
+/* Citation : deux lignes maîtrisées, la première tient sur une seule ligne */
+.article-epigraph p { font-size: clamp(1.15rem, 2vw, 1.5rem); text-wrap: initial; }
+@media (max-width: 700px) { .article-epigraph p br { display: none; } }
