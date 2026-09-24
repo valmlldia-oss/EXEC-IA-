@@ -7047,3 +7047,11 @@ html { scroll-behavior: smooth; }
 /* Bio auteur : la phrase sur une ligne, le lien LinkedIn dessous */
 .article-author-bio a { display: block; margin-top: 4px; white-space: nowrap; }
 @media (min-width: 900px) { .article-author-bio { white-space: normal; } }
+
+/* Guide : texte plus aéré (interligne 1,7, respiration entre paragraphes), frise sur toute la largeur du cadre */
+.article-page--guide .article-intro p, .article-page--guide .article-tldr-body p, .article-page--guide .article-tldr-body li, .article-page--guide .aiact-relief li, .article-page--guide .aiact-roles li, .article-page--guide .acc-body p, .article-page--guide .aiact-tl-text, .article-page--guide .article-qlist--actions li p { line-height: 1.7; }
+.article-page--guide .article-intro p { margin-bottom: 18px; }
+.article-page--guide .aiact-tl-text { max-width: none; }
+.article-page--guide .aiact-tl-item { padding-bottom: 30px; }
+.article-page--guide .article-qlist--actions li { margin-bottom: 22px; }
+.article-page--guide .aiact-relief li { margin-bottom: 14px; }
