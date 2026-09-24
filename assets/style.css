@@ -6956,3 +6956,14 @@ html { scroll-behavior: smooth; }
 .article-page--guide .article-intro p, .article-page--guide .aiact-tl-text, .article-page--guide .article-tldr-body p, .article-page--guide .article-tldr-body li, .article-page--guide .article-qlist--actions li p { text-wrap: balance; }
 
 .article-page--guide .aiact-note { font-style: italic; color: var(--plum-muted); margin-top: 10px; }
+
+/* Guide : tous les encadrés partagent le même bord gauche et le même bord droit (880 px) */
+.article-page--guide .article-tldr,
+.article-page--guide .aiact-def,
+.article-page--guide .aiact-frame,
+.article-page--guide .article-epigraph,
+.article-page--guide .article-accordion,
+.article-page--guide .funding-note,
+.article-page--guide .article-author,
+.article-page--guide .article-close { box-sizing: border-box; width: 100%; max-width: 880px; margin-left: 0; margin-right: 0; }
+.article-page--guide .aiact-def { border-radius: 12px; border: 1.25px solid rgba(99,59,74,.3); border-left: 3px solid var(--rose); }
