@@ -6946,3 +6946,8 @@ html { scroll-behavior: smooth; }
 .aiact-toc { flex-wrap: wrap; row-gap: 10px; }
 .aiact-toc-label { flex: 0 0 100%; margin: 0; }
 @media (min-width: 900px) { .aiact-toc { flex-wrap: wrap; } .aiact-toc a { padding: 5px 12px; } }
+
+/* Guide : la FAQ et les blocs de fin gardent la même largeur que le reste */
+.article-page--guide .acc-body { max-width: none; padding-right: 8px; }
+.article-page--guide .acc-body p { max-width: none; }
+.article-page--guide .funding-note, .article-page--guide .article-author { max-width: 880px; }
