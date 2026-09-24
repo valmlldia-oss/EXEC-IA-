@@ -1214,6 +1214,21 @@ section { padding: var(--section-gap) 0; }
 }
 .persp-all-link .portrait-link-arrow { transition: transform .25s var(--ease); }
 .persp-all-link:hover .portrait-link-arrow { transform: translateX(4px); }
+
+/* Bloc « guide » mis en avant sous le carrousel Perspectives */
+.persp-guide {
+  display: block; margin-top: 40px; padding: 30px 34px;
+  background: var(--white); border: 1px solid rgba(99,59,74,.14); border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(99,59,74,.08); transition: transform .3s, box-shadow .3s;
+  max-width: 860px;
+}
+.persp-guide:hover { transform: translateY(-3px); box-shadow: 0 10px 32px rgba(99,59,74,.14); }
+.persp-guide-eyebrow { display: block; font-family: var(--sans); font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 600; color: var(--rose); margin-bottom: 8px; }
+.persp-guide-title { display: block; font-family: var(--serif); font-weight: 400; font-size: clamp(1.5rem, 2.6vw, 2rem); line-height: 1.15; color: var(--plum); margin-bottom: 10px; }
+.persp-guide-desc { display: block; font-family: var(--sans); font-size: .95rem; line-height: 1.6; color: var(--plum-muted); margin-bottom: 14px; max-width: 62ch; }
+.persp-guide-cta { font-family: var(--sans); font-size: .95rem; font-weight: 600; color: var(--rose); display: inline-flex; align-items: center; gap: 6px; }
+.persp-guide:hover .portrait-link-arrow { transform: translateX(4px); }
+@media (max-width: 600px) { .persp-guide { padding: 24px 20px; } }
 /* Desktop large : les 4 fiches Perspectives tiennent ensemble, sans scroll —
    espaces resserrés, largeurs égales. En dessous, on garde le carrousel. */
 @media (min-width: 1160px) {
