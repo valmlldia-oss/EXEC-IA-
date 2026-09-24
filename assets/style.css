@@ -7105,3 +7105,6 @@ body { overflow-wrap: break-word; overflow-x: clip; }
   .tl-expertise-group--long .tl-item { padding: 16px 20px; border-left: none; border-top: 1px solid rgba(99,59,74,.16); }
   .tl-expertise-group--long .tl-item:first-of-type { border-top: none; }
 }
+
+/* Perspectives : le mot posé sur chaque image doublait la pastille de rubrique juste dessous et venait buter contre le texte des visuels. */
+.persp-card-visual-overlay { display: none; }
