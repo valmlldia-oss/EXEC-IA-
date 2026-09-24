@@ -6998,3 +6998,6 @@ html { scroll-behavior: smooth; }
 .article-page--guide .aiact-toc-label { grid-column: 1 / -1; margin: 0; }
 .article-page--guide .aiact-toc a { white-space: normal; text-align: center; display: flex; align-items: center; justify-content: center; min-height: 40px; line-height: 1.25; padding: 6px 10px; border-radius: 12px; }
 @media (max-width: 480px) { .article-page--guide .aiact-toc { gap: 8px; } .article-page--guide .aiact-toc a { font-size: .88rem; padding: 6px 6px; } }
+
+/* « IA » en Terracotta dans les titres du guide */
+.aiact-ia { color: var(--rose); font-weight: 500; }
