@@ -6857,3 +6857,16 @@ h2.section-title,
 .ce-que-section .section-title { font-weight: 500; }
 #expertise .expertise-section-title { font-weight: 500 !important; }
 .diag-title { font-size: clamp(2.2rem, 3.4vw, 3.2rem) !important; }
+
+/* Frise chronologique du calendrier AI Act (remplace le tableau) */
+.aiact-timeline { list-style: none; max-width: 900px; margin: 24px 0 0; padding: 0 0 0 30px; position: relative; }
+.aiact-timeline::before { content: ""; position: absolute; left: 9px; top: 8px; bottom: 8px; width: 2px; background: rgba(99,59,74,.22); }
+.aiact-tl-item { position: relative; padding: 0 0 26px 0; }
+.aiact-tl-item:last-child { padding-bottom: 0; }
+.aiact-tl-item::before { content: "\2713"; position: absolute; left: -32px; top: 2px; width: 20px; height: 20px; border-radius: 50%; background: var(--plum); border: 2px solid var(--white); box-shadow: 0 0 0 2px var(--plum); display: flex; align-items: center; justify-content: center; font-family: var(--sans); font-size: 11px; font-weight: 700; line-height: 1; color: var(--white); }
+.aiact-tl-item--pending::before { content: ""; background: var(--white); box-shadow: 0 0 0 2px var(--rose); border-color: var(--white); }
+.aiact-tl-head { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 4px; }
+.aiact-tl-date { font-family: var(--serif); font-size: 1.45rem; line-height: 1.2; color: var(--plum); font-weight: 400; }
+.aiact-tl-item--pending .aiact-tl-date { color: var(--rose); }
+.aiact-tl-text { font-family: var(--sans); font-size: .93rem; line-height: 1.6; color: var(--plum-muted); max-width: 66ch; }
+.aiact-tag--done { background: rgba(99,59,74,.1); color: var(--plum); }

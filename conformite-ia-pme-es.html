@@ -39,7 +39,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap"></noscript>
-  <link rel="stylesheet" href="assets/style.css?v=271">
+  <link rel="stylesheet" href="assets/style.css?v=273">
 </head>
 <body>
 
@@ -101,22 +101,36 @@
     <div class="article-intro">
       <p>El calendario realmente ha cambiado este año: el paquete «Ómnibus Digital», en vigor desde el 27 de julio de 2026, ha aplazado una parte sustancial de las obligaciones. Este es el estado exacto de los plazos, con la fuente oficial de cada uno.</p>
     </div>
-    <div class="aiact-table-wrap">
-      <table class="aiact-table">
-        <thead>
-          <tr><th scope="col">Fecha</th><th scope="col">Qué se aplica</th><th scope="col">Estado</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>1 de agosto de 2024</td><td>Entrada en vigor del Reglamento (UE) 2024/1689</td><td><span class="aiact-tag aiact-tag--ok">Consolidado</span></td></tr>
-          <tr><td>2 de febrero de 2025</td><td>Prácticas de IA prohibidas (art. 5) y obligación de alfabetización en IA de los equipos (art. 4)</td><td><span class="aiact-tag aiact-tag--ok">Aplicable</span></td></tr>
-          <tr><td>2 de agosto de 2025</td><td>Normas de gobernanza, obligaciones de los proveedores de modelos de IA de uso general, régimen sancionador</td><td><span class="aiact-tag aiact-tag--ok">Aplicable</span></td></tr>
-          <tr><td>2 de agosto de 2026</td><td>Transparencia para los sistemas que interactúan con personas: agentes conversacionales, contenido sintético, deepfakes (art. 50)</td><td><span class="aiact-tag aiact-tag--ok">Aplicable</span></td></tr>
-          <tr><td>2 de diciembre de 2026</td><td>Dos nuevas prácticas prohibidas (art. 5): deepfakes de carácter íntimo no consentidos, contenidos de pornografía infantil generados por IA — introducidas por el reglamento modificativo (UE) 2026/1744</td><td><span class="aiact-tag aiact-tag--pending">Próximamente</span></td></tr>
-          <tr><td>2 de diciembre de 2027</td><td>Obligaciones completas de alto riesgo del anexo III (selección de personal, crédito, biometría, infraestructuras críticas, educación…) — aplazado desde el 2 de agosto de 2026</td><td><span class="aiact-tag aiact-tag--pending">Aplazado</span></td></tr>
-          <tr><td>2 de agosto de 2028</td><td>Sistemas de alto riesgo integrados en productos ya regulados (anexo I: dispositivos médicos, maquinaria…)</td><td><span class="aiact-tag aiact-tag--pending">Aplazado</span></td></tr>
-        </tbody>
-      </table>
-    </div>
+    <ol class="aiact-timeline">
+          <li class="aiact-tl-item">
+            <div class="aiact-tl-head"><time class="aiact-tl-date">1 de agosto de 2024</time><span class="aiact-tag aiact-tag--done">Consolidado</span></div>
+            <p class="aiact-tl-text">Entrada en vigor del Reglamento (UE) 2024/1689</p>
+          </li>
+          <li class="aiact-tl-item">
+            <div class="aiact-tl-head"><time class="aiact-tl-date">2 de febrero de 2025</time><span class="aiact-tag aiact-tag--done">Aplicable</span></div>
+            <p class="aiact-tl-text">Prácticas de IA prohibidas (art. 5) y obligación de alfabetización en IA de los equipos (art. 4)</p>
+          </li>
+          <li class="aiact-tl-item">
+            <div class="aiact-tl-head"><time class="aiact-tl-date">2 de agosto de 2025</time><span class="aiact-tag aiact-tag--done">Aplicable</span></div>
+            <p class="aiact-tl-text">Normas de gobernanza, obligaciones de los proveedores de modelos de IA de uso general, régimen sancionador</p>
+          </li>
+          <li class="aiact-tl-item">
+            <div class="aiact-tl-head"><time class="aiact-tl-date">2 de agosto de 2026</time><span class="aiact-tag aiact-tag--done">Aplicable</span></div>
+            <p class="aiact-tl-text">Transparencia para los sistemas que interactúan con personas: agentes conversacionales, contenido sintético, deepfakes (art. 50)</p>
+          </li>
+          <li class="aiact-tl-item aiact-tl-item--pending">
+            <div class="aiact-tl-head"><time class="aiact-tl-date">2 de diciembre de 2026</time><span class="aiact-tag aiact-tag--pending">Próximamente</span></div>
+            <p class="aiact-tl-text">Dos nuevas prácticas prohibidas (art. 5): deepfakes de carácter íntimo no consentidos, contenidos de pornografía infantil generados por IA — introducidas por el reglamento modificativo (UE) 2026/1744</p>
+          </li>
+          <li class="aiact-tl-item aiact-tl-item--pending">
+            <div class="aiact-tl-head"><time class="aiact-tl-date">2 de diciembre de 2027</time><span class="aiact-tag aiact-tag--pending">Aplazado</span></div>
+            <p class="aiact-tl-text">Obligaciones completas de alto riesgo del anexo III (selección de personal, crédito, biometría, infraestructuras críticas, educación…) — aplazado desde el 2 de agosto de 2026</p>
+          </li>
+          <li class="aiact-tl-item aiact-tl-item--pending">
+            <div class="aiact-tl-head"><time class="aiact-tl-date">2 de agosto de 2028</time><span class="aiact-tag aiact-tag--pending">Aplazado</span></div>
+            <p class="aiact-tl-text">Sistemas de alto riesgo integrados en productos ya regulados (anexo I: dispositivos médicos, maquinaria…)</p>
+          </li>
+        </ol>
     <div class="article-intro">
       <p style="font-size:.86rem;opacity:.75">Fuentes: <a href="https://eur-lex.europa.eu/eli/reg/2024/1689/2026-07-27/eng" target="_blank" rel="noopener">texto consolidado del reglamento (EUR-Lex)</a> y <a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank" rel="noopener">Comisión Europea — marco regulador de la IA</a>. El «Ómnibus Digital» corresponde al reglamento modificativo (UE) 2026/1744 del 8 de julio de 2026. Un matiz sobre el artículo 50: los sistemas ya introducidos en el mercado antes del 2 de agosto de 2026 disponen, únicamente para el marcado de contenido sintético (art. 50§2), de un plazo transitorio hasta el 2 de diciembre de 2026 (art. 111§4) — el resto de obligaciones de transparencia del artículo 50 siguen siendo aplicables desde el 2 de agosto de 2026.</p>
     </div>
