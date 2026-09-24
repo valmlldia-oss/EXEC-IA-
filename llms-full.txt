@@ -2463,7 +2463,7 @@ Identifier vos usages IA
 
 n’attend pas 2027.
 
-Un diagnostic permet de savoir, en une heure, où se situent vos usages IA actuels au regard de l’AI Act et du RGPD — avant que la question ne se pose dans l’urgence.
+Un entretien de 30 minutes permet de situer vos usages IA actuels au regard de l’AI Act et du RGPD — avant que la question ne se pose dans l’urgence.
 
  Votre diagnostic IA
 
@@ -2567,7 +2567,7 @@ Mapping your AI use cases
 
 does not wait for 2027.
 
-A diagnostic shows, within an hour, where your current AI use cases stand against the AI Act and the GDPR — before the question becomes urgent.
+A 30-minute conversation shows where your current AI use cases stand against the AI Act and the GDPR — before the question becomes urgent.
 
  Your AI diagnostic
 
@@ -2671,6 +2671,6 @@ Identificar sus usos de IA
 
 no espera a 2027.
 
-Un diagnóstico permite saber, en una hora, dónde se sitúan sus usos actuales de IA respecto al AI Act y al RGPD — antes de que la pregunta se plantee con urgencia.
+Una conversación de 30 minutos permite situar sus usos actuales de IA respecto al AI Act y al RGPD — antes de que la pregunta se plantee con urgencia.
 
  Su diagnóstico IA
