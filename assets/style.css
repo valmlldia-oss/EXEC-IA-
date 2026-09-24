@@ -6982,3 +6982,19 @@ html { scroll-behavior: smooth; }
   .article-page--guide .aiact-toc a { font-size: .95rem; padding: 7px 14px; }
   .article-page--guide .aiact-frame-tag { font-size: .78rem; }
 }
+
+/* Guide : textes secondaires jamais sous 15 px, étiquettes à 12,5 px minimum */
+.article-page--guide .article-source-note, .article-page--guide .article-close-note, .article-page--guide .article-author-bio, .article-page--guide .article-tldr summary, .article-page--guide .aiact-toc a, .article-page--guide .article-back { font-size: .95rem; }
+.article-page--guide .article-meta, .article-page--guide .aiact-toc-label, .article-page--guide .aiact-frame-tag, .article-page--guide .article-epigraph cite { font-size: .8rem; }
+.article-page--guide .acc-num { font-size: .9rem; }
+
+/* Allègements PME : une puce par article */
+.aiact-relief { max-width: 820px; margin: 4px 0 14px 1.3em; padding: 0; }
+.aiact-relief li { font-family: var(--sans); font-size: 1.03rem; line-height: 1.62; color: var(--plum); margin-bottom: 12px; padding-left: 4px; }
+.aiact-relief li::marker { color: var(--rose); }
+
+/* Sommaire du guide : 3 puces par ligne */
+.article-page--guide .aiact-toc { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; max-width: 820px; }
+.article-page--guide .aiact-toc-label { grid-column: 1 / -1; margin: 0; }
+.article-page--guide .aiact-toc a { white-space: normal; text-align: center; display: flex; align-items: center; justify-content: center; min-height: 40px; line-height: 1.25; padding: 6px 10px; border-radius: 12px; }
+@media (max-width: 480px) { .article-page--guide .aiact-toc { gap: 8px; } .article-page--guide .aiact-toc a { font-size: .88rem; padding: 6px 6px; } }
