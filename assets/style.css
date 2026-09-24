@@ -7001,3 +7001,9 @@ html { scroll-behavior: smooth; }
 
 /* « IA » en Terracotta dans les titres du guide */
 .aiact-ia { color: var(--rose); font-weight: 500; }
+
+/* Guide : les paragraphes utilisent toute la largeur du cadre (pas d'équilibrage qui creuse le bord droit) */
+.article-page--guide .article-intro p, .article-page--guide .aiact-tl-text, .article-page--guide .article-tldr-body p, .article-page--guide .article-tldr-body li, .article-page--guide .article-qlist--actions li p, .article-page--guide .aiact-relief li, .article-page--guide .aiact-roles li, .article-page--guide .acc-body p { text-wrap: pretty; }
+.article-page--guide .article-tldr-body { padding: 16px 22px 20px; }
+.article-page--guide .article-tldr-body p { margin: 0 0 10px; }
+.article-page--guide .article-tldr-body ul { margin: 6px 0 12px 1.2em; }
