@@ -6870,3 +6870,6 @@ h2.section-title,
 .aiact-tl-item--pending .aiact-tl-date { color: var(--rose); }
 .aiact-tl-text { font-family: var(--sans); font-size: .93rem; line-height: 1.6; color: var(--plum-muted); max-width: 66ch; }
 .aiact-tag--done { background: rgba(99,59,74,.1); color: var(--plum); }
+
+.article-tldr-body ul { margin: 8px 0 12px 1.3em; padding: 0; }
+.article-tldr-body li { margin-bottom: 4px; line-height: 1.55; }
