@@ -7007,3 +7007,9 @@ html { scroll-behavior: smooth; }
 .article-page--guide .article-tldr-body { padding: 16px 22px 20px; }
 .article-page--guide .article-tldr-body p { margin: 0 0 10px; }
 .article-page--guide .article-tldr-body ul { margin: 6px 0 12px 1.2em; }
+
+/* Offres Direction générale : sous-lignes lisibles, une information par ligne */
+.offres-grid .offre-format { min-height: 150px; opacity: 1; font-size: 1rem; }
+.offres-grid .offre-format .offre-format-sub { display: block; margin-top: 6px; font-size: .95rem; font-weight: 400; opacity: 1; color: var(--plum-muted); line-height: 1.5; }
+.offres-grid .offre-format .offre-format-sub > span { display: block; }
+.offres-grid .offre-premium .offre-format .offre-format-sub { color: rgba(250,246,242,.88); }
