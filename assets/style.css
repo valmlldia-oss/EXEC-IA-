@@ -6951,3 +6951,6 @@ html { scroll-behavior: smooth; }
 .article-page--guide .acc-body { max-width: none; padding-right: 8px; }
 .article-page--guide .acc-body p { max-width: none; }
 .article-page--guide .funding-note, .article-page--guide .article-author { max-width: 880px; }
+
+/* Guide : équilibrage des lignes des paragraphes courts (aucune ligne avec un seul mot) */
+.article-page--guide .article-intro p, .article-page--guide .aiact-tl-text, .article-page--guide .article-tldr-body p, .article-page--guide .article-tldr-body li, .article-page--guide .article-qlist--actions li p { text-wrap: balance; }
