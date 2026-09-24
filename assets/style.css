@@ -7068,7 +7068,7 @@ html { scroll-behavior: smooth; }
 
 /* ─── REVUE MOBILE : rien ne doit jamais être coupé ─────────────── */
 body { overflow-wrap: break-word; overflow-x: clip; }
-.ve-top { max-width: min(1160px, calc(100% - 48px)); }
+@media (max-width: 1240px) { .ve-top { width: calc(100% - 48px); max-width: none; } }
 .persp-card-visual--gouvernance img { transform: none; }
 @media (max-width: 900px) {
   /* trait vertical épais et discontinu sur le bord gauche de la chronologie (À propos) : supprimé, points inclus */
@@ -7077,4 +7077,12 @@ body { overflow-wrap: break-word; overflow-x: clip; }
 @media (max-width: 640px) {
   .aiact-ref, .aiact-key, .article-page p, .article-page li { overflow-wrap: anywhere; }
   img, svg, video, iframe { max-width: 100%; }
+}
+@media (max-width: 640px) {
+  .aiact-ref { white-space: normal; }
+  .offres-grid > *, .offres-grid-4 > *, .pilier, .acc-title { min-width: 0; }
+  .acc-icon { flex-shrink: 0; }
+  .pilier-sub { white-space: normal; }
+  .newsletter-inner > *, .newsletter-content { min-width: 0; max-width: 100%; }
+  .offre-card *, .newsletter-content *, .pilier *, .acc-item * { overflow-wrap: anywhere; }
 }
