@@ -3,7 +3,6 @@ Allow: /
 
 # Pages utilitaires non destinées à l'indexation
 Disallow: /brevo-en-cours.html
-Disallow: /split.html
 
 # Robots d'entraînement de modèles IA (pas de citation) : bloqués au niveau Cloudflare.
 # Déclaré ici pour que robots.txt reflète honnêtement la politique appliquée.
