@@ -6954,3 +6954,5 @@ html { scroll-behavior: smooth; }
 
 /* Guide : équilibrage des lignes des paragraphes courts (aucune ligne avec un seul mot) */
 .article-page--guide .article-intro p, .article-page--guide .aiact-tl-text, .article-page--guide .article-tldr-body p, .article-page--guide .article-tldr-body li, .article-page--guide .article-qlist--actions li p { text-wrap: balance; }
+
+.article-page--guide .aiact-note { font-style: italic; color: var(--plum-muted); margin-top: 10px; }
