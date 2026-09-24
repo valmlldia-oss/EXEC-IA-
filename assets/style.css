@@ -7065,3 +7065,16 @@ html { scroll-behavior: smooth; }
 .guide-link-card:hover .guide-link-title, .guide-link-card:focus-visible .guide-link-title { color: var(--rose); }
 .guide-link-card:hover .guide-link-arrow, .guide-link-card:focus-visible .guide-link-arrow { transform: translateY(-3px); }
 @media (prefers-reduced-motion: reduce) { .guide-link-card, .guide-link-arrow { transition: none; } }
+
+/* ─── REVUE MOBILE : rien ne doit jamais être coupé ─────────────── */
+body { overflow-wrap: break-word; overflow-x: clip; }
+.ve-top { max-width: min(1160px, calc(100% - 48px)); }
+.persp-card-visual--gouvernance img { transform: none; }
+@media (max-width: 900px) {
+  /* trait vertical épais et discontinu sur le bord gauche de la chronologie (À propos) : supprimé, points inclus */
+  .timeline::before, .timeline .tl-item::before { display: none; }
+}
+@media (max-width: 640px) {
+  .aiact-ref, .aiact-key, .article-page p, .article-page li { overflow-wrap: anywhere; }
+  img, svg, video, iframe { max-width: 100%; }
+}
