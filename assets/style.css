@@ -7013,3 +7013,13 @@ html { scroll-behavior: smooth; }
 .offres-grid .offre-format .offre-format-sub { display: block; margin-top: 6px; font-size: .95rem; font-weight: 400; opacity: 1; color: var(--plum-muted); line-height: 1.5; }
 .offres-grid .offre-format .offre-format-sub > span { display: block; }
 .offres-grid .offre-premium .offre-format .offre-format-sub { color: rgba(250,246,242,.88); }
+
+/* Offres agents et sites : sous-lignes lisibles (taille, contraste, couleur Prune) */
+.offre-agent-pastilles { flex-direction: column; align-items: flex-start; gap: 8px; margin-top: 12px; }
+.offre-agent-pastille { font-size: .92rem; font-weight: 500; padding: 7px 14px; border-radius: 12px; line-height: 1.35; text-align: left; }
+.offre-agent-pastille svg { width: 16px; height: 16px; }
+.offre-agent-inclus { font-size: .92rem; color: var(--plum-muted); line-height: 1.5; padding-top: 14px; }
+.offre-web-tier-desc { font-size: .95rem; color: var(--plum-muted); line-height: 1.5; }
+.offre-price-lead { color: var(--plum); font-size: .9rem; }
+.offre-web-tier-price { font-size: 1.25rem; }
+.offre-price-note { font-size: 1rem; }
