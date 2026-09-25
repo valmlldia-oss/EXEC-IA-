@@ -1549,7 +1549,6 @@ Source : HubSpot, « Tendances de l’IA pour les marketeurs 2025 », étude men
 Valérie Mailland
 
 Fondatrice d'EXEC'IA Consulting. 20+ ans auprès de dirigeants, 18 ans chez McKinsey & Company. Suivre sur LinkedIn →
-
 ---
 
 # The AI budget is not the issue. Buy-in is. [EN]
@@ -1557,7 +1556,7 @@ URL: https://exec-ia.ai/perspective-budget-ia-adhesion-equipes-en.html
 
 # The AI budget is not the issue. Buy-in is.
 
-25 September 2026
+September 25, 2026
 
 A generous AI budget does not guarantee that teams will use the tool. A HubSpot study of marketers shows a wide gap between company investment and employees’ appetite for using it. Three levers make the difference: explain before equipping, train on everyday uses, and prove a concrete result on a small scope before scaling up.
 
@@ -1642,7 +1641,6 @@ Source: HubSpot, “AI Trends for Marketers 2025”, a 2025 study of more than 1
 Valérie Mailland
 
 Founder of EXEC'IA Consulting. 20+ years alongside executives, 18 years at McKinsey & Company. Follow on LinkedIn →
-
 ---
 
 # El presupuesto de IA no es el tema. La adhesión, sí. [ES]
@@ -1735,7 +1733,6 @@ Fuente: HubSpot, «Tendencias de la IA para profesionales de marketing 2025», e
 Valérie Mailland
 
 Fundadora de EXEC'IA Consulting. 20+ años junto a directivos, 18 años en McKinsey & Company. Seguir en LinkedIn →
-
 ---
 
 # Une politique IA que ses dirigeants ne respectent pas n’est plus une politique. [FR]
@@ -1769,7 +1766,7 @@ Le risque n’est donc pas l’outil en lui-même. C’est l’absence de règle
 
 Les informations sur les clients, les contrats, les données personnelles, les éléments financiers non publics et tout ce qui relève du secret des affaires. Une charte utile le dit en une phrase simple, avec des exemples que chacun reconnaît dans son travail.
 
-Sur le volet réglementaire, notamment le RGPD, notre guide détaille les obligations d’une PME qui utilise l’IA.
+Sur le volet réglementaire, notamment le RGPD, le guide AI Act et RGPD pour une PME détaille les obligations d’une PME qui utilise l’IA.
 
 ### Comment recenser les usages sans chercher de coupable ?
 
@@ -1785,13 +1782,13 @@ Parce qu’il existe déjà, qu’on le veuille ou non. Interdire un usage que l
 
 ### Comment offrir des outils sûrs plus simples que ceux qu’on cache ?
 
-En proposant des outils approuvés dont la prise en main est aussi rapide que celle des outils personnels. Si l’option sûre est plus lourde que l’option cachée, la seconde l’emportera. Le cadre réglementaire (AI Act, RGPD) est détaillé dans notre guide AI Act et RGPD pour une PME .
+En proposant des outils approuvés dont la prise en main est aussi rapide que celle des outils personnels. Si l’option sûre est plus lourde que l’option cachée, la seconde l’emportera.
 
 ### Pourquoi commencer par les pratiques du comité de direction ?
 
 Parce que la cohérence commence en haut. Un comité de direction qui regarde honnêtement ses propres usages donne à la charte une crédibilité qu’aucune note interne ne peut remplacer.
 
-Une organisation ne sécurise jamais ce qu’elle refuse de regarder en face. En matière d’IA, prévenir vaut décidément mieux que guérir.
+Une organisation ne sécurise jamais ce qu’elle refuse de regarder en face. En matière d’IA, mieux vaut prévenir que guérir.
 
 ### Que doit contenir une charte IA utile ?
 
@@ -1828,7 +1825,6 @@ Source : WalkMe, étude menée en juillet 2025, relayée par SAP News et CIO.com
 Valérie Mailland
 
 Fondatrice d'EXEC'IA Consulting. 20+ ans auprès de dirigeants, 18 ans chez McKinsey & Company. Suivre sur LinkedIn →
-
 ---
 
 # An AI policy that its own leaders do not follow is no longer a policy. [EN]
@@ -1836,7 +1832,7 @@ URL: https://exec-ia.ai/perspective-shadow-ia-charte-comite-direction-en.html
 
 # An AI policy that its own leaders do not follow is no longer a policy.
 
-25 September 2026
+September 25, 2026
 
 A WalkMe study from July 2025 finds that 78% of employees use AI tools their company has never approved, and that 93% of the executives surveyed do the same. The issue is not team discipline but the governance around it. Three reflexes: acknowledge real usage before banning it, offer safe and simple tools, and start by examining the leadership team’s own practices.
 
@@ -1862,7 +1858,7 @@ The risk is therefore not the tool itself. It is the absence of a clear rule on 
 
 Customer information, contracts, personal data, non-public financials and anything covered by business secrecy. A useful policy says so in one simple sentence, with examples everyone recognises from their own work.
 
-On the regulatory side, notably GDPR, our guide sets out the obligations of an SME that uses AI.
+On the regulatory side, notably GDPR, the AI Act and GDPR guide for an SME sets out the obligations of an SME that uses AI.
 
 ### How do you map usage without hunting for culprits?
 
@@ -1878,13 +1874,13 @@ Because it already exists, whether we like it or not. Banning a use you do not k
 
 ### How do you offer safe tools that are simpler than the ones people hide?
 
-By providing approved tools that are as quick to pick up as personal ones. If the safe option is heavier than the hidden one, the hidden one wins. The regulatory framework (AI Act, GDPR) is set out in our AI Act and GDPR guide for an SME .
+By providing approved tools that are as quick to pick up as personal ones. If the safe option is heavier than the hidden one, the hidden one wins.
 
 ### Why start with the leadership team’s own practices?
 
 Because consistency starts at the top. An executive committee that looks honestly at its own usage gives the policy a credibility that no internal memo can replace.
 
-An organisation never secures what it refuses to look at. With AI, prevention is decidedly better than cure.
+An organisation never secures what it refuses to look at. With AI, prevention beats cure.
 
 ### What should a useful AI policy contain?
 
@@ -1921,7 +1917,6 @@ Source: WalkMe, study run in July 2025, relayed by SAP News and CIO.com.
 Valérie Mailland
 
 Founder of EXEC'IA Consulting. 20+ years alongside executives, 18 years at McKinsey & Company. Follow on LinkedIn →
-
 ---
 
 # Una política de IA que sus directivos no respetan deja de ser una política. [ES]
@@ -1955,7 +1950,7 @@ El riesgo no es, por tanto, la herramienta en sí. Es la falta de una regla clar
 
 La información sobre clientes, los contratos, los datos personales, los elementos financieros no públicos y todo lo que entre en el secreto empresarial. Una política útil lo dice en una frase sencilla, con ejemplos que cada persona reconoce en su trabajo.
 
-En el plano normativo, en particular el RGPD, nuestra guía detalla las obligaciones de una pyme que utiliza IA.
+En el plano normativo, en particular el RGPD, la guía AI Act y RGPD para una PYME detalla las obligaciones de una pyme que utiliza IA.
 
 ### ¿Cómo registrar los usos sin buscar culpables?
 
@@ -1971,13 +1966,13 @@ Porque ya existe, se quiera o no. Prohibir un uso que no se conoce lo empuja a l
 
 ### ¿Cómo ofrecer herramientas seguras más sencillas que las que se ocultan?
 
-Proponiendo herramientas aprobadas que se aprendan tan rápido como las personales. Si la opción segura es más pesada que la oculta, ganará la oculta. El marco normativo (AI Act, RGPD) se detalla en nuestra guía AI Act y RGPD para una PYME .
+Proponiendo herramientas aprobadas que se aprendan tan rápido como las personales. Si la opción segura es más pesada que la oculta, ganará la oculta.
 
 ### ¿Por qué empezar por las prácticas del comité de dirección?
 
 Porque la coherencia empieza arriba. Un comité de dirección que mira con honestidad sus propios usos da a la política una credibilidad que ninguna nota interna puede sustituir.
 
-Una organización nunca protege lo que se niega a mirar de frente. En materia de IA, prevenir vale decididamente más que curar.
+Una organización nunca protege lo que se niega a mirar de frente. En materia de IA, más vale prevenir que curar.
 
 ### ¿Qué debe contener una política de IA útil?
 
@@ -2014,7 +2009,6 @@ Fuente: WalkMe, estudio realizado en julio de 2025, difundido por SAP News y CIO
 Valérie Mailland
 
 Fundadora de EXEC'IA Consulting. 20+ años junto a directivos, 18 años en McKinsey & Company. Seguir en LinkedIn →
-
 ---
 
 # Le chatbot d’Air France répond seul à 30 % des demandes. Le reste, il sait passer la main. [FR]
@@ -2025,8 +2019,6 @@ URL: https://exec-ia.ai/perspective-chatbot-savoir-passer-la-main.html
 25 septembre 2026
 
 Louis, l’assistant IA d’Air France, traite 30 % des demandes clients en totale autonomie et bascule le reste vers un humain, sans que le client doive tout redemander. Ce chiffre montre moins un progrès de l’IA que la frontière qu’Air France a appris à tracer. Trois signaux permettent de sentir la limite avant de la franchir, et reconnaître le bon moment pour passer la main reste un réflexe humain.
-
-Le chatbot d’Air France répond seul à 30 % des demandes clients. Le reste, il sait passer la main.
 
 Louis, l’assistant IA d’Air France, a fusionné plusieurs générations de chatbots spécialisés (bagages, inspiration voyage, grèves et retards) en un seul assistant, actif sur WhatsApp et Messenger.
 
@@ -2107,7 +2099,6 @@ Source : Usine Digitale, L’Écho touristique (2024-2025).
 Valérie Mailland
 
 Fondatrice d'EXEC'IA Consulting. 20+ ans auprès de dirigeants, 18 ans chez McKinsey & Company. Suivre sur LinkedIn →
-
 ---
 
 # Air France’s chatbot answers 30% of requests alone. For the rest, it knows when to hand over. [EN]
@@ -2115,11 +2106,9 @@ URL: https://exec-ia.ai/perspective-chatbot-savoir-passer-la-main-en.html
 
 # Air France’s chatbot answers 30% of requests alone. For the rest, it knows when to hand over.
 
-25 September 2026
+September 25, 2026
 
 Louis, Air France’s AI assistant, handles 30% of customer requests fully autonomously and passes the rest to a human, without the customer having to start over. The figure says less about AI progress than about the boundary Air France has learned to draw. Three signals help sense the limit before crossing it, and recognising the right moment to hand over remains a human reflex.
-
-Air France’s chatbot answers 30% of customer requests on its own. For the rest, it knows when to hand over.
 
 Louis, Air France’s AI assistant, merged several generations of specialised chatbots (baggage, travel inspiration, strikes and delays) into a single assistant, active on WhatsApp and Messenger.
 
@@ -2200,7 +2189,6 @@ Source: Usine Digitale, L’Écho touristique (2024-2025).
 Valérie Mailland
 
 Founder of EXEC'IA Consulting. 20+ years alongside executives, 18 years at McKinsey & Company. Follow on LinkedIn →
-
 ---
 
 # El chatbot de Air France responde solo al 30 % de las consultas. El resto, sabe pasarlo a una persona. [ES]
@@ -2211,8 +2199,6 @@ URL: https://exec-ia.ai/perspective-chatbot-savoir-passer-la-main-es.html
 25 de septiembre de 2026
 
 Louis, el asistente de IA de Air France, resuelve con total autonomía el 30 % de las consultas de los clientes y traslada el resto a una persona, sin que el cliente tenga que repetirlo todo. La cifra habla menos de un avance de la IA que de la frontera que Air France ha aprendido a trazar. Tres señales permiten notar el límite antes de cruzarlo, y reconocer el momento de pasar el relevo sigue siendo un reflejo humano.
-
-El chatbot de Air France responde solo al 30 % de las consultas de los clientes. El resto, sabe pasarlo a una persona.
 
 Louis, el asistente de IA de Air France, fusionó varias generaciones de chatbots especializados (equipaje, inspiración de viaje, huelgas y retrasos) en un único asistente, activo en WhatsApp y Messenger.
 
@@ -2293,7 +2279,6 @@ Fuente: Usine Digitale, L’Écho touristique (2024-2025).
 Valérie Mailland
 
 Fundadora de EXEC'IA Consulting. 20+ años junto a directivos, 18 años en McKinsey & Company. Seguir en LinkedIn →
-
 ---
 
 # Votre projet IA peut-il être financé ? Oui, mais pas forcément celui que vous pensez. [FR]
@@ -2303,7 +2288,7 @@ URL: https://exec-ia.ai/perspective-projet-ia-peut-il-etre-finance.html
 
 Version étoffée d’une publication sur LinkedIn · 25 septembre 2026
 
-Oui, un projet IA peut être financé, mais pas forcément le vôtre, pas pour toutes les entreprises et pas toutes les prestations. Le diagnostic Diag Data IA finance une analyse technique menée par un expert agréé. Le catalogue Osez l’IA référence des solutions prêtes à l’emploi, pas du conseil stratégique. Une aide ne doit jamais déterminer votre projet : on choisit d’abord le problème à résoudre, puis on regarde les aides.
+Oui, un projet IA peut être financé, mais pas forcément le vôtre, pas pour toutes les entreprises et pas toutes les prestations. Le diagnostic Diag Data IA finance une analyse technique menée par un expert agréé. Le plan Osez l’IA référence des solutions prêtes à l’emploi et des accompagnements d’experts agréés, pas du conseil libre. Une aide ne doit jamais déterminer votre projet : on choisit d’abord le problème à résoudre, puis on regarde les aides.
 
 Tout est parti d’un audit de la visibilité de mon site sur Google et dans les réponses des IA. Une question est remontée : quelles sont les questions que se posent réellement mes futurs clients ?
 
@@ -2319,7 +2304,7 @@ Un projet monté pour correspondre à une aide risque de ne résoudre aucun prob
 
 ### Que finance le Diag Data IA ?
 
-Pour les PME et ETI de 10 à 2 000 salariés, le programme IA Booster de Bpifrance, dans le cadre de France 2030, propose une sensibilisation gratuite, puis un Diag Data IA cofinancé à 40 % : 10 000 € HT, dont 6 000 € HT à charge de l’entreprise. Ce dispositif finance un diagnostic technique mené par un expert agréé Bpifrance.
+Pour les PME et ETI de 10 à 2 000 salariés, le programme IA Booster de Bpifrance, dans le cadre de France 2030, propose une sensibilisation gratuite, puis un Diag Data IA cofinancé à 40 % : 10 000 € HT, dont 6 000 € HT à charge de l’entreprise. Ce dispositif finance un diagnostic technique mené par un expert agréé Bpifrance. Son accès est soumis à des conditions d’éligibilité, notamment un chiffre d’affaires minimum de 1 M€ et le statut d’entreprise indépendante.
 
 Le prestataire n’est donc pas librement choisi, et le diagnostic ne remplace pas l’arbitrage stratégique en amont : quel usage prioriser, et pourquoi celui-là.
 
@@ -2347,11 +2332,11 @@ Pas nécessairement. Attendre une aide peut retarder de plusieurs mois un projet
 
 Un premier usage modeste, mené sur une tâche précise, apporte des enseignements qu’aucun dossier ne remplace. Il rend aussi la suite plus facile à défendre, y compris devant un organisme financeur.
 
-### « Osez l’IA » finance-t-il du conseil ?
+### « Osez l’IA » finance-t-il n’importe quel conseil ?
 
-Non. Le plan national Osez l’IA, porté par la Direction générale des Entreprises et le Hub France IA, référence un catalogue de solutions IA pour PME et ETI : des solutions prêtes à l’emploi (assistants, automatisation, analyse de documents). C’est un catalogue de produits, pas de conseil.
+Non. Le plan national Osez l’IA comporte deux volets. Le premier est un catalogue de solutions IA prêtes à l’emploi pour PME et ETI (assistants, automatisation, analyse de documents) : ce sont des produits. Le second regroupe des accompagnements portés par Bpifrance, comme le Diag Data IA et l’Accélérateur IA, menés par des experts agréés.
 
-Concrètement, un atelier de cadrage stratégique comme Cap IA ne relève pas de ce dispositif, et il ne faut pas laisser croire qu’il serait finançable par lui. Les solutions produit, comme les Agents IA d’EXEC’IA, sont d’une autre nature : ce sont elles que ce type de catalogue a vocation à référencer, à condition d’y être retenu.
+Dans les deux cas, le prestataire n’est pas librement choisi. Un atelier de cadrage stratégique comme Cap IA n’est ni un produit du catalogue ni une prestation d’expert agréé : il ne relève pas de ces dispositifs et ne doit pas être présenté comme finançable par eux. Les Agents IA d’EXEC’IA, eux, sont des solutions produit : elles pourraient relever d’un catalogue de ce type, à condition d’y être retenues.
 
 ### Quelles questions poser avant de déposer un dossier ?
 
@@ -2391,7 +2376,7 @@ Si ces trois points sont acquis, l’aide devient ce qu’elle doit être : un a
 
 ### Quelle place pour un accompagnement stratégique avant une aide ?
 
-Une place en amont, sur la question que les dispositifs financent le moins : où l’IA crée-t-elle de la valeur dans votre organisation, et dans quel ordre agir ? C’est le rôle d’un atelier de cadrage comme Cap IA chez EXEC’IA, qui n’est pas un produit du catalogue Osez l’IA et ne relève pas de ces dispositifs.
+Une place en amont, sur la question que les dispositifs financent le moins : où l’IA crée-t-elle de la valeur dans votre organisation, et dans quel ordre agir ? C’est le rôle d’un atelier de cadrage comme Cap IA chez EXEC’IA.
 
 Une fois le problème et la priorité clarifiés, le diagnostic financé, la solution retenue et les éventuelles aides s’articulent beaucoup plus simplement. Vous choisissez avec un cap, au lieu de subir un menu.
 
@@ -2406,7 +2391,6 @@ Source : France Num, IA Booster · France Num, Diag Data IA · entreprises.gouv.
 Valérie Mailland
 
 Fondatrice d'EXEC'IA Consulting. 20+ ans auprès de dirigeants, 18 ans chez McKinsey & Company. Suivre sur LinkedIn →
-
 ---
 
 # Can your AI project be funded? Yes, but not necessarily the one you have in mind. [EN]
@@ -2414,9 +2398,9 @@ URL: https://exec-ia.ai/perspective-projet-ia-peut-il-etre-finance-en.html
 
 # Can your AI project be funded? Yes, but not necessarily the one you have in mind.
 
-Expanded version of a LinkedIn post · 25 September 2026
+Expanded version of a LinkedIn post · September 25, 2026
 
-Yes, an AI project can be funded, but not necessarily yours, not for every company and not every service. The Diag Data IA scheme funds a technical analysis carried out by an approved expert. The Osez l’IA catalogue lists ready-to-use solutions, not strategic consulting. A subsidy should never determine your project: first choose the problem to solve, then look at what support applies.
+Yes, an AI project can be funded, but not necessarily yours, not for every company and not every service. The Diag Data IA scheme funds a technical analysis carried out by an approved expert. The Osez l’IA plan lists ready-to-use solutions and approved-expert support, not open consulting. A subsidy should never determine your project: first choose the problem to solve, then look at what support applies.
 
 It all started with an audit of my site’s visibility on Google and in AI answers. One question surfaced: what questions do my future clients really ask?
 
@@ -2432,7 +2416,7 @@ A project built to fit a scheme risks solving no real problem.
 
 ### What does Diag Data IA fund?
 
-For SMEs and mid-sized companies with 10 to 2,000 employees, Bpifrance’s IA Booster programme, under France 2030, offers free awareness-raising, then a Diag Data IA co-funded at 40%: €10,000 excl. VAT, of which €6,000 excl. VAT is paid by the company. The scheme funds a technical diagnosis carried out by a Bpifrance-approved expert.
+For SMEs and mid-sized companies with 10 to 2,000 employees, Bpifrance’s IA Booster programme, under France 2030, offers free awareness-raising, then a Diag Data IA co-funded at 40%: €10,000 excl. VAT, of which €6,000 excl. VAT is paid by the company. The scheme funds a technical diagnosis carried out by a Bpifrance-approved expert. Access is subject to eligibility conditions, notably minimum turnover of €1 million and independent-company status.
 
 The provider is therefore not freely chosen, and the diagnosis does not replace the strategic choice upstream: which use to prioritise, and why that one.
 
@@ -2460,11 +2444,11 @@ Not necessarily. Waiting for support can delay by several months a project whose
 
 A modest first use, run on a precise task, brings lessons that no application file can replace. It also makes the next step easier to defend, including in front of a funding body.
 
-### Does “Osez l’IA” fund consulting?
+### Does “Osez l’IA” fund any kind of consulting?
 
-No. The national Osez l’IA plan, run by the French Directorate General for Enterprise and Hub France IA, lists a catalogue of AI solutions for SMEs and mid-sized companies: ready-to-use solutions (assistants, automation, document analysis). It is a product catalogue, not a consulting one.
+No. The national Osez l’IA plan has two strands. The first is a catalogue of ready-to-use AI solutions for SMEs and mid-sized companies (assistants, automation, document analysis): these are products. The second groups support delivered through Bpifrance, such as Diag Data IA and the AI Accelerator, carried out by approved experts.
 
-In practice, a strategic scoping workshop such as Cap IA falls outside the scheme, and no one should imply it could be funded by it. Product solutions, like EXEC’IA’s AI Agents, are of a different nature: they are what this kind of catalogue is meant to list, provided they are selected.
+In both cases, the provider is not freely chosen. A strategic scoping workshop such as Cap IA is neither a catalogue product nor an approved expert’s service: it falls outside these schemes and should not be presented as fundable by them. EXEC’IA’s AI Agents, by contrast, are product solutions: they could fall under a catalogue of this kind, provided they are selected.
 
 ### Which questions should you ask before filing an application?
 
@@ -2504,7 +2488,7 @@ If these three points are in place, the support becomes what it should be: an ac
 
 ### What place for strategic support before funding?
 
-A place upstream, on the question that schemes fund least: where does AI create value in your organisation, and in what order should you act? That is the role of a scoping workshop such as EXEC’IA’s Cap IA, which is not a product in the Osez l’IA catalogue and does not fall under these schemes.
+A place upstream, on the question that schemes fund least: where does AI create value in your organisation, and in what order should you act? That is the role of a scoping workshop such as EXEC’IA’s Cap IA.
 
 Once the problem and the priority are clear, the funded diagnosis, the chosen solution and any support fit together much more simply. You choose with a direction, instead of enduring a menu.
 
@@ -2519,7 +2503,6 @@ Source: France Num, IA Booster · France Num, Diag Data IA · entreprises.gouv.f
 Valérie Mailland
 
 Founder of EXEC'IA Consulting. 20+ years alongside executives, 18 years at McKinsey & Company. Follow on LinkedIn →
-
 ---
 
 # ¿Se puede financiar su proyecto de IA? Sí, pero no necesariamente el que usted imagina. [ES]
@@ -2529,7 +2512,7 @@ URL: https://exec-ia.ai/perspective-projet-ia-peut-il-etre-finance-es.html
 
 Versión ampliada de una publicación en LinkedIn · 25 de septiembre de 2026
 
-Sí, un proyecto de IA puede financiarse, pero no necesariamente el suyo, no para todas las empresas y no todos los servicios. El dispositivo Diag Data IA financia un análisis técnico realizado por un experto homologado. El catálogo Osez l’IA reúne soluciones listas para usar, no consultoría estratégica. Una ayuda nunca debe determinar su proyecto: primero se elige el problema que resolver, y después se miran las ayudas.
+Sí, un proyecto de IA puede financiarse, pero no necesariamente el suyo, no para todas las empresas y no todos los servicios. El dispositivo Diag Data IA financia un análisis técnico realizado por un experto homologado. El plan Osez l’IA reúne soluciones listas para usar y acompañamientos de expertos homologados, no consultoría libre. Una ayuda nunca debe determinar su proyecto: primero se elige el problema que resolver, y después se miran las ayudas.
 
 Todo empezó con una auditoría de la visibilidad de mi sitio en Google y en las respuestas de las IA. Surgió una pregunta: ¿qué preguntas se hacen realmente mis futuros clientes?
 
@@ -2545,7 +2528,7 @@ Un proyecto montado para encajar en una ayuda corre el riesgo de no resolver nin
 
 ### ¿Qué financia el Diag Data IA?
 
-Para las pymes y empresas medianas de 10 a 2000 empleados, el programa IA Booster de Bpifrance, dentro de France 2030, ofrece una sensibilización gratuita y después un Diag Data IA cofinanciado al 40 %: 10 000 € sin IVA, de los cuales 6000 € sin IVA corren a cargo de la empresa. El dispositivo financia un diagnóstico técnico realizado por un experto homologado por Bpifrance.
+Para las pymes y empresas medianas de 10 a 2000 empleados, el programa IA Booster de Bpifrance, dentro de France 2030, ofrece una sensibilización gratuita y después un Diag Data IA cofinanciado al 40 %: 10 000 € sin IVA, de los cuales 6000 € sin IVA corren a cargo de la empresa. El dispositivo financia un diagnóstico técnico realizado por un experto homologado por Bpifrance. El acceso está sujeto a condiciones de elegibilidad, en particular una facturación mínima de 1 millón de euros y la condición de empresa independiente.
 
 El proveedor no se elige, por tanto, libremente, y el diagnóstico no sustituye la decisión estratégica previa: qué uso priorizar y por qué ese.
 
@@ -2573,11 +2556,11 @@ No necesariamente. Esperar una ayuda puede retrasar varios meses un proyecto cuy
 
 Un primer uso modesto, realizado sobre una tarea precisa, aporta enseñanzas que ningún expediente sustituye. También hace más fácil defender el paso siguiente, incluso ante un organismo financiador.
 
-### ¿«Osez l’IA» financia consultoría?
+### ¿«Osez l’IA» financia cualquier tipo de consultoría?
 
-No. El plan nacional Osez l’IA, impulsado por la Dirección General de Empresas y el Hub France IA, reúne un catálogo de soluciones de IA para pymes y empresas medianas: soluciones listas para usar (asistentes, automatización, análisis de documentos). Es un catálogo de productos, no de consultoría.
+No. El plan nacional Osez l’IA tiene dos vertientes. La primera es un catálogo de soluciones de IA listas para usar para pymes y empresas medianas (asistentes, automatización, análisis de documentos): son productos. La segunda reúne acompañamientos impulsados por Bpifrance, como el Diag Data IA y el Acelerador de IA, realizados por expertos homologados.
 
-En la práctica, un taller de enfoque estratégico como Cap IA queda fuera de este dispositivo, y no debe darse a entender que pudiera financiarse con él. Las soluciones de producto, como los Agentes IA de EXEC’IA, son de otra naturaleza: son las que este tipo de catálogo tiene vocación de reunir, siempre que sean seleccionadas.
+En ambos casos, el proveedor no se elige libremente. Un taller de enfoque estratégico como Cap IA no es ni un producto del catálogo ni un servicio de experto homologado: queda fuera de estos dispositivos y no debe presentarse como financiable con ellos. Los Agentes IA de EXEC’IA, en cambio, son soluciones de producto: podrían entrar en un catálogo de este tipo, siempre que sean seleccionadas.
 
 ### ¿Qué preguntas hacer antes de presentar un expediente?
 
@@ -2617,7 +2600,7 @@ Si estos tres puntos están resueltos, la ayuda se convierte en lo que debe ser:
 
 ### ¿Qué lugar tiene un acompañamiento estratégico antes de una ayuda?
 
-Un lugar previo, sobre la cuestión que los dispositivos menos financian: ¿dónde crea valor la IA en su organización y en qué orden actuar? Es el papel de un taller de enfoque como Cap IA de EXEC’IA, que no es un producto del catálogo Osez l’IA y no entra en estos dispositivos.
+Un lugar previo, sobre la cuestión que los dispositivos menos financian: ¿dónde crea valor la IA en su organización y en qué orden actuar? Es el papel de un taller de enfoque como Cap IA de EXEC’IA.
 
 Una vez aclarados el problema y la prioridad, el diagnóstico financiado, la solución elegida y las posibles ayudas encajan mucho más sencillamente. Usted elige con un rumbo, en lugar de soportar un menú.
 
