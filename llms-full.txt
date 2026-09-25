@@ -1854,7 +1854,7 @@ Un budget IA généreux ne garantit pas que les équipes s’en serviront. Une �
 
 Un budget généreux validé sans discussion. Des équipes qui ne suivent pas au même rythme. Ce scénario, je l’ai déjà vu dans des comités de direction, bien avant que l’IA ne devienne le sujet.
 
-Une étude HubSpot, découverte en 2026, le confirme : 98 % des entreprises avaient renforcé leurs investissements en IA en 2025. Seulement la moitié de leurs salariés (51 %) avaient envie de s’en servir.
+Une étude HubSpot, découverte en 2026, le confirme : 98 % des entreprises prévoyaient de maintenir ou d’augmenter leurs investissements en IA en 2025. Seulement la moitié de leurs salariés (51 %) avaient envie de s’en servir.
 
 Cette étude porte sur des marketeurs. Elle se lit comme un signal, pas comme une statistique valable pour toutes les fonctions. Mais le signal est net : le budget n’est pas le sujet. L’adhésion, si.
 
@@ -1950,7 +1950,7 @@ Mettez en avant un résultat concret plutôt qu’un chiffre d’usage : une tâ
 
 vous le mesurez comment ?
 
-Source : HubSpot, « Tendances de l’IA pour les marketeurs 2025 », étude menée en 2025 auprès de plus de 1 500 marketeurs dans le monde.
+Source : HubSpot, « Tendances de l’IA pour les marketeurs 2025 », étude menée en 2025 auprès de marketeurs dans le monde.
 
 #IntelligenceArtificielle #Leadership #TransformationIA #Gouvernance #EXECIA
 
@@ -1970,7 +1970,7 @@ A generous AI budget does not guarantee that teams will use the tool. A HubSpot 
 
 A generous budget approved without discussion. Teams that do not move at the same pace. I have seen this scenario in executive committees, long before AI became the topic.
 
-A HubSpot study, which I came across in 2026, confirms it: 98% of companies had increased their AI investment in 2025. Only half of their employees (51%) wanted to use it.
+A HubSpot study, which I came across in 2026, confirms it: 98% of companies planned to maintain or increase their AI investment in 2025. Only half of their employees (51%) wanted to use it.
 
 The study covers marketers. Read it as a signal, not as a statistic that holds for every function. But the signal is clear: the budget is not the issue. Buy-in is.
 
@@ -2068,7 +2068,7 @@ Every team has its own rhythm, and comparing one team with another rarely helps.
 
 the gap between investment and buy-in?
 
-Source: HubSpot, “AI Trends for Marketers 2025”, a 2025 study of more than 1,500 marketers worldwide.
+Source: HubSpot, “AI Trends for Marketers 2025”, a 2025 study of marketers worldwide.
 
 #ArtificialIntelligence #Leadership #AITransformation #Governance #EXECIA
 
@@ -2088,7 +2088,7 @@ Un presupuesto generoso de IA no garantiza que los equipos usen la herramienta. 
 
 Un presupuesto generoso aprobado sin discusión. Equipos que no avanzan al mismo ritmo. Este escenario ya lo he visto en comités de dirección, mucho antes de que la IA fuera el tema.
 
-Un estudio de HubSpot, que descubrí en 2026, lo confirma: el 98 % de las empresas había reforzado su inversión en IA en 2025. Solo la mitad de sus empleados (51 %) tenía ganas de usarla.
+Un estudio de HubSpot, que descubrí en 2026, lo confirma: el 98 % de las empresas preveía mantener o aumentar su inversión en IA en 2025. Solo la mitad de sus empleados (51 %) tenía ganas de usarla.
 
 El estudio se refiere a profesionales de marketing. Debe leerse como una señal, no como una estadística válida para todas las funciones. Pero la señal es nítida: el presupuesto no es el tema. La adhesión, sí.
 
@@ -2184,7 +2184,7 @@ Destaque un resultado concreto en lugar de una cifra de uso: una tarea acortada,
 
 entre inversión y adhesión?
 
-Fuente: HubSpot, «Tendencias de la IA para profesionales de marketing 2025», estudio de 2025 con más de 1500 profesionales de marketing en todo el mundo.
+Fuente: HubSpot, «Tendencias de la IA para profesionales de marketing 2025», estudio de 2025 con profesionales de marketing de todo el mundo.
 
 #InteligenciaArtificial #Liderazgo #TransformaciónIA #Gobernanza #EXECIA
 
@@ -2200,11 +2200,11 @@ URL: https://exec-ia.ai/perspective-shadow-ia-charte-comite-direction.html
 
 25 septembre 2026
 
-Une étude WalkMe de juillet 2025 indique que 78 % des salariés utilisent des outils d’IA que leur entreprise n’a jamais validés, et que 93 % des cadres dirigeants interrogés font de même. Le sujet n’est pas la discipline des équipes mais la gouvernance qui l’entoure. Trois réflexes : reconnaître l’usage réel avant de l’interdire, offrir des outils sûrs et simples, interroger d’abord les pratiques du comité de direction.
+Une étude WalkMe de juillet 2025 indique que 78 % des salariés utilisent des outils d’IA que leur entreprise n’a jamais validés. Une enquête Cybernews de 2025 ajoute que 93 % des dirigeants et cadres supérieurs interrogés font de même. Le sujet n’est pas la discipline des équipes mais la gouvernance qui l’entoure. Trois réflexes : reconnaître l’usage réel avant de l’interdire, offrir des outils sûrs et simples, interroger d’abord les pratiques du comité de direction.
 
 On rédige une charte IA en comité de direction. Dans l’ascenseur, chacun retourne pourtant à son outil IA personnel.
 
-Une étude WalkMe menée en juillet 2025 le confirme à grande échelle : 78 % des salariés utilisent des outils IA que leur entreprise n’a jamais validés. Plus surprenant encore, 93 % des cadres dirigeants interrogés font exactement la même chose.
+Une étude WalkMe menée en juillet 2025 le confirme à grande échelle : 78 % des salariés utilisent des outils IA que leur entreprise n’a jamais validés. Plus surprenant encore, une enquête Cybernews de 2025 montre que 93 % des dirigeants et cadres supérieurs interrogés font exactement la même chose.
 
 ## 🔍 Pourquoi le shadow IA n’est-il pas une question de discipline ?
 
@@ -2308,7 +2308,7 @@ Ce porteur n’a pas besoin d’être un spécialiste de l’IA. Il doit savoir 
 
 quels outils IA vos équipes utilisent aujourd’hui ?
 
-Source : WalkMe, étude menée en juillet 2025, relayée par SAP News et CIO.com.
+Sources : WalkMe, étude menée en juillet 2025 auprès de 1 000 salariés américains (SAP News) ; Cybernews, enquête 2025 auprès de plus de 1 000 salariés américains.
 
 #IntelligenceArtificielle #Leadership #Gouvernance #ShadowIA #EXECIA
 
@@ -2324,11 +2324,11 @@ URL: https://exec-ia.ai/perspective-shadow-ia-charte-comite-direction-en.html
 
 September 25, 2026
 
-A WalkMe study from July 2025 finds that 78% of employees use AI tools their company has never approved, and that 93% of the executives surveyed do the same. The issue is not team discipline but the governance around it. Three reflexes: acknowledge real usage before banning it, offer safe and simple tools, and start by examining the leadership team’s own practices.
+A WalkMe study from July 2025 finds that 78% of employees use AI tools their company has never approved. A 2025 Cybernews survey adds that 93% of the executives and senior managers surveyed do the same. The issue is not team discipline but the governance around it. Three reflexes: acknowledge real usage before banning it, offer safe and simple tools, and start by examining the leadership team’s own practices.
 
 An AI policy is drafted in the executive committee. In the lift afterwards, everyone goes back to their personal AI tool.
 
-A WalkMe study run in July 2025 confirms it at scale: 78% of employees use AI tools their company has never approved. Even more surprising, 93% of the executives surveyed do exactly the same.
+A WalkMe study run in July 2025 confirms it at scale: 78% of employees use AI tools their company has never approved. Even more surprising, a 2025 Cybernews survey shows that 93% of the executives and senior managers surveyed do exactly the same.
 
 ## 🔍 Why is shadow AI not a question of discipline?
 
@@ -2434,7 +2434,7 @@ The same principle applies to every future tool. Each time a new AI service appe
 
 which AI tools your teams use today?
 
-Source: WalkMe, study run in July 2025, relayed by SAP News and CIO.com.
+Sources: WalkMe, study run in July 2025 among 1,000 US employees (SAP News); Cybernews, 2025 survey of more than 1,000 US employees.
 
 #ArtificialIntelligence #Leadership #Governance #ShadowAI #EXECIA
 
@@ -2450,11 +2450,11 @@ URL: https://exec-ia.ai/perspective-shadow-ia-charte-comite-direction-es.html
 
 25 de septiembre de 2026
 
-Un estudio de WalkMe de julio de 2025 indica que el 78 % de los empleados usa herramientas de IA que su empresa nunca ha validado, y que el 93 % de los altos directivos encuestados hace lo mismo. El tema no es la disciplina de los equipos, sino la gobernanza que la rodea. Tres reflejos: reconocer el uso real antes de prohibirlo, ofrecer herramientas seguras y sencillas, y empezar por las prácticas del comité de dirección.
+Un estudio de WalkMe de julio de 2025 indica que el 78 % de los empleados usa herramientas de IA que su empresa nunca ha validado. Una encuesta de Cybernews de 2025 añade que el 93 % de los directivos y mandos superiores encuestados hace lo mismo. El tema no es la disciplina de los equipos, sino la gobernanza que la rodea. Tres reflejos: reconocer el uso real antes de prohibirlo, ofrecer herramientas seguras y sencillas, y empezar por las prácticas del comité de dirección.
 
 Se redacta una política de uso de la IA en el comité de dirección. En el ascensor, cada uno vuelve sin embargo a su herramienta de IA personal.
 
-Un estudio de WalkMe realizado en julio de 2025 lo confirma a gran escala: el 78 % de los empleados usa herramientas de IA que su empresa nunca ha validado. Más sorprendente aún, el 93 % de los altos directivos encuestados hace exactamente lo mismo.
+Un estudio de WalkMe realizado en julio de 2025 lo confirma a gran escala: el 78 % de los empleados usa herramientas de IA que su empresa nunca ha validado. Más sorprendente aún, una encuesta de Cybernews de 2025 muestra que el 93 % de los directivos y mandos superiores encuestados hace exactamente lo mismo.
 
 ## 🔍 ¿Por qué el shadow IA no es una cuestión de disciplina?
 
@@ -2558,7 +2558,7 @@ Este responsable no necesita ser un especialista en IA. Debe saber hacer las pre
 
 qué herramientas de IA usan hoy sus equipos?
 
-Fuente: WalkMe, estudio realizado en julio de 2025, difundido por SAP News y CIO.com.
+Fuentes: WalkMe, estudio realizado en julio de 2025 con 1000 empleados estadounidenses (SAP News); Cybernews, encuesta de 2025 a más de 1000 empleados estadounidenses.
 
 #InteligenciaArtificial #Liderazgo #Gobernanza #ShadowIA #EXECIA
 
