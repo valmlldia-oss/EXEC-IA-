@@ -461,6 +461,11 @@
       .page { page-break-after: always; width: 210mm; }
       .int-dir, .top-rule, .int-offer, .int-offer-link, .grand-chiffre { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     }
+  
+    /* titres de questions : plus de coupure orpheline */
+    .q-title { text-wrap: balance; }
+    .btn-q { text-wrap: pretty; }
+    @media (max-width: 1100px) { .q-title br { display: none; } }
   </style>
 </head>
 <body>
