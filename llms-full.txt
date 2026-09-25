@@ -77,6 +77,30 @@ Source : McKinsey & Company, « The State of AI in 2026: On the road to ROI », 
 
 #IntelligenceArtificielle #StrategieIA #Transformation #Leadership #CreationDeValeur
 
+### Comment relier un usage de l’IA à un résultat de l’entreprise ?
+
+Il faut suivre le fil depuis la tâche jusqu’à la décision : quelle tâche l’outil raccourcit-il, quel temps cela libère-t-il, et à quoi ce temps est-il réellement employé ? Sans cette dernière étape, le gain reste individuel.
+
+Une phrase simple sert de test : « grâce à cet usage, nous décidons ou livrons plus vite ce qui compte pour nos clients ». Si elle ne peut pas être prononcée, l’usage n’est pas encore relié à un résultat.
+
+### Quel indicateur choisir pour juger un premier usage ?
+
+Un seul, compréhensible par tous : le temps gagné sur une tâche précise, le nombre d’erreurs évitées ou le délai de réponse à un client. Multiplier les indicateurs dilue l’attention et rend la décision plus difficile.
+
+L’indicateur doit exister avant le test, pas après. Sinon, il est choisi pour confirmer ce que l’on espérait déjà.
+
+### À quelle fréquence revoir ses arbitrages ?
+
+À un rythme régulier et court, par exemple chaque trimestre. Les outils, les usages et les besoins évoluent vite, et un arbitrage pris il y a un an ne décrit plus forcément la réalité d’aujourd’hui.
+
+Cette revue ne demande pas de long comité : une liste des usages, ce qu’ils ont apporté et une décision pour chacun, garder, ajuster ou arrêter.
+
+### Que dire aux équipes quand un usage est arrêté ?
+
+La raison, sans détour. Une équipe qui comprend pourquoi un outil disparaît accepte mieux la décision, et sait mieux proposer une alternative.
+
+L’arrêt d’un usage fait aussi partie de l’arbitrage : c’est la preuve que l’organisation choisit, au lieu d’accumuler.
+
 Valérie Mailland
 
 Fondatrice d'EXEC'IA Consulting. 20+ ans auprès de dirigeants, 18 ans chez McKinsey & Company. Suivre sur LinkedIn →
@@ -151,6 +175,30 @@ Source: McKinsey & Company, “The State of AI in 2026: On the road to ROI”, A
 
 #ArtificialIntelligence #AIStrategy #Transformation #Leadership #ValueCreation
 
+### How do you link an AI use to a company result?
+
+Follow the thread from the task to the decision: which task does the tool shorten, how much time does that free up, and what is that time actually used for? Without this last step, the gain remains individual.
+
+A simple sentence serves as a test: “thanks to this use, we decide or deliver faster what matters to our customers”. If it cannot be said, the use is not yet linked to a result.
+
+### Which indicator should you choose to judge a first use?
+
+Just one, understood by everyone: the time saved on a precise task, the number of errors avoided or the response time to a customer. Multiplying indicators dilutes attention and makes the decision harder.
+
+The indicator must exist before the test, not after. Otherwise it is chosen to confirm what was already hoped.
+
+### How often should you review your choices?
+
+At a regular, short rhythm, for example every quarter. Tools, uses and needs change fast, and a choice made a year ago no longer necessarily describes today’s reality.
+
+This review does not need a long committee: a list of uses, what each brought and one decision for each, keep, adjust or stop.
+
+### What do you tell teams when a use is stopped?
+
+The reason, plainly. A team that understands why a tool disappears accepts the decision better and is better placed to suggest an alternative.
+
+Stopping a use is also part of the choice: it proves the organisation selects instead of accumulating.
+
 Valérie Mailland
 
 Founder of EXEC'IA Consulting. 20+ years alongside executives, 18 years at McKinsey & Company. Follow on LinkedIn →
@@ -224,6 +272,30 @@ La primera cifra medía una ganancia individual: menos llamadas, resolución má
 Fuente: McKinsey & Company, « The State of AI in 2026: On the road to ROI », agosto de 2026 .
 
 #InteligenciaArtificial #EstrategiaIA #Transformación #Liderazgo #CreaciónDeValor
+
+### ¿Cómo vincular un uso de la IA con un resultado de la empresa?
+
+Hay que seguir el hilo desde la tarea hasta la decisión: qué tarea acorta la herramienta, cuánto tiempo libera y en qué se emplea realmente ese tiempo. Sin este último paso, la ventaja sigue siendo individual.
+
+Una frase sencilla sirve de prueba: «gracias a este uso, decidimos o entregamos más deprisa lo que importa a nuestros clientes». Si no puede pronunciarse, el uso aún no está vinculado a un resultado.
+
+### ¿Qué indicador elegir para juzgar un primer uso?
+
+Solo uno, comprensible para todos: el tiempo ganado en una tarea concreta, el número de errores evitados o el plazo de respuesta a un cliente. Multiplicar los indicadores diluye la atención y dificulta la decisión.
+
+El indicador debe existir antes de la prueba, no después. De lo contrario, se elige para confirmar lo que ya se esperaba.
+
+### ¿Con qué frecuencia revisar las decisiones?
+
+A un ritmo regular y corto, por ejemplo cada trimestre. Las herramientas, los usos y las necesidades cambian rápido, y una decisión tomada hace un año ya no describe necesariamente la realidad de hoy.
+
+Esta revisión no exige un comité largo: una lista de los usos, lo que aportó cada uno y una decisión para cada uno, mantener, ajustar o parar.
+
+### ¿Qué decir a los equipos cuando se detiene un uso?
+
+La razón, sin rodeos. Un equipo que entiende por qué desaparece una herramienta acepta mejor la decisión y sabe proponer mejor una alternativa.
+
+Detener un uso también forma parte de la decisión: prueba que la organización elige en lugar de acumular.
 
 Valérie Mailland
 
@@ -303,6 +375,38 @@ Source : Gartner, « Predicts 30% of Generative AI Projects Will Be Abandoned Af
 
 #IntelligenceArtificielle #Communication #CreationDeValeur #StrategieIA
 
+### Comment éviter l’empilement d’outils ?
+
+Par une règle simple : aucun nouvel outil sans usage nommé, sans responsable et sans date de revue. Un outil qui n’a pas de propriétaire finit par ne servir à personne, tout en continuant à coûter.
+
+Quand un nouvel outil arrive, la question utile est celle de l’outil qu’il remplace ou de l’usage qu’il rend inutile.
+
+Cette discipline protège aussi le budget : chaque outil retiré libère un abonnement, du temps de formation et de l’attention pour ce qui reste.
+
+### Comment arrêter proprement un outil qui ne sert plus ?
+
+En le décidant à une date connue, en prévenant ceux qui l’utilisent et en récupérant ce qui doit l’être : données, modèles de travail, habitudes utiles. L’arrêt se prépare comme un lancement, en plus court.
+
+Une organisation qui sait arrêter ose davantage tester, parce qu’elle sait qu’un essai n’engage pas pour toujours.
+
+Prévenir les utilisateurs quelques semaines à l’avance et leur laisser exporter leurs travaux évite l’essentiel des mécontentements.
+
+### Combien coûte l’arbitrage lui-même ?
+
+Très peu d’argent, un peu de temps. Une revue mensuelle de quelques usages suffit souvent, avec quelqu’un qui a le pouvoir de dire oui ou non. Le coût réel est celui de ne pas le faire : des initiatives éparpillées qui n’aboutissent pas.
+
+L’arbitrage est un investissement d’attention, pas un budget supplémentaire.
+
+Certaines organisations confient ce rendez-vous à la personne qui pilote déjà les priorités de l’équipe : le rituel s’insère alors dans un temps existant.
+
+### Comment aider une équipe à dire non à un bon outil ?
+
+En rappelant que le critère n’est pas la qualité de l’outil, mais son utilité pour un enjeu précis, maintenant. Un excellent outil qui ne sert aucun besoin prioritaire attend, sans que l’équipe ait tort de l’apprécier.
+
+Dire non à ce moment-là permet de dire oui plus fort à ce qui compte.
+
+Il vaut mieux poser cette réponse par écrit : elle sert de référence la prochaine fois que le même outil reviendra dans la conversation.
+
 Valérie Mailland
 
 Fondatrice d'EXEC'IA Consulting. 20+ ans auprès de dirigeants, 18 ans chez McKinsey & Company. Suivre sur LinkedIn →
@@ -379,6 +483,38 @@ Source: Gartner, “Predicts 30% of Generative AI Projects Will Be Abandoned Aft
 
 #ArtificialIntelligence #Communications #ValueCreation #AIStrategy
 
+### How do you avoid piling up tools?
+
+With a simple rule: no new tool without a named use, an owner and a review date. A tool with no owner ends up serving nobody while continuing to cost money.
+
+When a new tool arrives, the useful question is which tool it replaces or which use it makes redundant.
+
+This discipline also protects the budget: each tool withdrawn frees a subscription, training time and attention for what remains.
+
+### How do you properly retire a tool that is no longer used?
+
+By deciding on a known date, warning those who use it and recovering what should be recovered: data, working templates, useful habits. Retiring is prepared like a launch, only shorter.
+
+An organisation that knows how to stop dares to test more, because it knows a trial does not commit it forever.
+
+Warning users a few weeks in advance and letting them export their work avoids most of the discontent.
+
+### What does the choosing itself cost?
+
+Very little money, a little time. A monthly review of a few uses is often enough, with someone who has the power to say yes or no. The real cost is that of not doing it: scattered initiatives that come to nothing.
+
+Choosing is an investment of attention, not an extra budget.
+
+Some organisations give this meeting to the person who already steers the team’s priorities: the ritual then fits into existing time.
+
+### How do you help a team say no to a good tool?
+
+By reminding it that the criterion is not the quality of the tool but its usefulness for a precise issue, now. An excellent tool that serves no priority need waits, without the team being wrong to like it.
+
+Saying no at that moment allows a stronger yes to what matters.
+
+It is better to put the answer in writing: it serves as a reference the next time the same tool comes back into the conversation.
+
 Valérie Mailland
 
 Founder of EXEC'IA Consulting. 20+ years alongside executives, 18 years at McKinsey & Company. Follow on LinkedIn →
@@ -454,6 +590,38 @@ avanzan de verdad y cuántas dan vueltas sin terminar nunca?
 Fuente: Gartner, « Predicts 30% of Generative AI Projects Will Be Abandoned After Proof of Concept By End of 2025 », 2024 .
 
 #InteligenciaArtificial #Comunicación #CreaciónDeValor #EstrategiaIA
+
+### ¿Cómo evitar la acumulación de herramientas?
+
+Con una regla sencilla: ninguna herramienta nueva sin un uso concreto, un responsable y una fecha de revisión. Una herramienta sin propietario acaba sin servir a nadie, mientras sigue costando.
+
+Cuando llega una herramienta nueva, la pregunta útil es qué herramienta sustituye o qué uso vuelve innecesario.
+
+Esta disciplina también protege el presupuesto: cada herramienta retirada libera una suscripción, tiempo de formación y atención para lo que queda.
+
+### ¿Cómo dejar de usar bien una herramienta que ya no sirve?
+
+Decidiéndolo en una fecha conocida, avisando a quienes la usan y recuperando lo que debe recuperarse: datos, modelos de trabajo, hábitos útiles. Se prepara la retirada como un lanzamiento, pero más corto.
+
+Una organización que sabe parar se atreve más a probar, porque sabe que un ensayo no la compromete para siempre.
+
+Avisar a los usuarios con unas semanas de antelación y dejarles exportar su trabajo evita la mayor parte del descontento.
+
+### ¿Cuánto cuesta el propio proceso de decidir?
+
+Muy poco dinero y un poco de tiempo. Una revisión mensual de unos pocos usos suele bastar, con alguien que tenga poder para decir sí o no. El coste real es el de no hacerlo: iniciativas dispersas que no llegan a nada.
+
+Decidir es una inversión de atención, no un presupuesto adicional.
+
+Algunas organizaciones confían esta cita a la persona que ya dirige las prioridades del equipo: el ritual se integra entonces en un tiempo existente.
+
+### ¿Cómo ayudar a un equipo a decir no a una buena herramienta?
+
+Recordándole que el criterio no es la calidad de la herramienta, sino su utilidad para un asunto concreto, ahora. Una herramienta excelente que no atiende ninguna necesidad prioritaria espera, sin que el equipo se equivoque al apreciarla.
+
+Decir no en ese momento permite decir un sí más firme a lo que importa.
+
+Conviene dejar la respuesta por escrito: sirve de referencia la próxima vez que la misma herramienta vuelva a la conversación.
 
 Valérie Mailland
 
@@ -543,6 +711,30 @@ Source : Morgan Stanley, « AI Governance Survey », 2026 .
 
 #IntelligenceArtificielle #Leadership #Gouvernance #Decision #StrategieIA
 
+### Comment documenter une décision prise avec l’aide d’une IA ?
+
+En gardant trace de trois éléments : la question posée, les options examinées et la raison du choix final. Ce court récit permet de relire la décision plus tard et de comprendre ce qui a compté.
+
+Il n’est pas nécessaire d’en faire un dossier : quelques lignes, écrites au moment de la décision, valent mieux qu’une reconstitution après coup.
+
+### En quoi consiste une supervision humaine réelle ?
+
+Elle suppose quelqu’un qui relit, à un moment précis, avec le pouvoir de dire non. Une relecture de pure forme, sans pouvoir d’arrêter, n’est pas une supervision : c’est une signature.
+
+La question utile est donc : qui, dans l’organisation, peut refuser une recommandation de l’IA, et à quelles conditions ?
+
+### Comment apprendre aux équipes à challenger une recommandation ?
+
+En leur donnant trois questions : sur quoi repose cette recommandation, qu’est-ce qui pourrait la rendre fausse, et que se passe-t-il si nous nous trompons ? Ces questions s’apprennent vite et s’appliquent à tout.
+
+Elles transforment la réponse de l’IA en point de départ d’une réflexion, pas en conclusion.
+
+### Quelle place laisser à l’intuition du dirigeant ?
+
+Une place réelle, à condition qu’elle soit dite. L’intuition résume souvent une longue expérience ; l’écarter au nom des données serait aussi discutable que de la suivre sans les regarder.
+
+L’IA peut éclairer, l’intuition peut alerter : c’est le dirigeant qui tranche, en assumant ce qu’il choisit.
+
 Il n’y a rien de plus inutile que de faire efficacement ce qui ne devrait pas être fait du tout.
 
 Valérie Mailland
@@ -628,6 +820,30 @@ would you never delegate to an AI?
 Source: Morgan Stanley, “AI Governance Survey”, 2026 .
 
 #ArtificialIntelligence #Leadership #Governance #Decision #AIStrategy
+
+### How do you document a decision made with the help of an AI?
+
+By keeping a record of three things: the question asked, the options examined and the reason for the final choice. This short account lets you reread the decision later and understand what mattered.
+
+It does not need to become a file: a few lines, written at the time of the decision, are worth more than an after-the-fact reconstruction.
+
+### What does real human oversight consist of?
+
+It requires someone who reviews, at a precise moment, with the power to say no. A purely formal review, with no power to stop, is not oversight: it is a signature.
+
+The useful question is therefore: who in the organisation can refuse an AI recommendation, and under what conditions?
+
+### How do you teach teams to challenge a recommendation?
+
+By giving them three questions: what does this recommendation rest on, what could make it wrong, and what happens if we are mistaken? These questions are learned quickly and apply to everything.
+
+They turn the AI’s answer into the starting point of a reflection, not a conclusion.
+
+### What place should be left for the leader’s intuition?
+
+A real one, provided it is spoken. Intuition often sums up long experience; setting it aside in the name of data would be as questionable as following it without looking at the data.
+
+AI can inform, intuition can warn: the leader decides, owning what they choose.
 
 There is nothing so useless as doing efficiently that which should not be done at all.
 
@@ -715,6 +931,30 @@ Fuente: Morgan Stanley, « AI Governance Survey », 2026 .
 
 #InteligenciaArtificial #Liderazgo #Gobernanza #Decisión #EstrategiaIA
 
+### ¿Cómo documentar una decisión tomada con ayuda de una IA?
+
+Guardando constancia de tres elementos: la pregunta planteada, las opciones examinadas y la razón de la elección final. Este breve relato permite releer la decisión más tarde y entender qué pesó.
+
+No hace falta convertirlo en un expediente: unas líneas, escritas en el momento de la decisión, valen más que una reconstrucción posterior.
+
+### ¿En qué consiste una supervisión humana real?
+
+Supone alguien que revisa, en un momento preciso, con poder para decir no. Una revisión meramente formal, sin poder de detener, no es supervisión: es una firma.
+
+La pregunta útil es, por tanto: ¿quién, en la organización, puede rechazar una recomendación de la IA y en qué condiciones?
+
+### ¿Cómo enseñar a los equipos a cuestionar una recomendación?
+
+Dándoles tres preguntas: en qué se basa esta recomendación, qué podría hacerla falsa y qué ocurre si nos equivocamos. Estas preguntas se aprenden rápido y sirven para todo.
+
+Convierten la respuesta de la IA en punto de partida de una reflexión, no en una conclusión.
+
+### ¿Qué lugar dejar a la intuición del directivo?
+
+Un lugar real, siempre que se diga. La intuición suele resumir una larga experiencia; descartarla en nombre de los datos sería tan discutible como seguirla sin mirarlos.
+
+La IA puede iluminar, la intuición puede alertar: es el directivo quien decide, asumiendo lo que elige.
+
 No hay nada tan inútil como hacer con eficiencia lo que no debería hacerse en absoluto.
 
 Valérie Mailland
@@ -795,6 +1035,38 @@ Source : RAND Corporation, « The Root Causes of Failure for Artificial Intellig
 
 #IntelligenceArtificielle #Transformation #Leadership #Organisation #StrategieIA
 
+### Comment associer les équipes dès le départ ?
+
+En les faisant participer à la description du problème avant d’évoquer la solution. Les personnes qui font le travail connaissent les vrais points de blocage, ceux qu’aucun schéma d’organisation ne montre.
+
+Une transformation conçue avec elles a bien plus de chances d’être appliquée qu’une transformation annoncée.
+
+Un atelier d’une demi-journée, où chacun décrit une tâche difficile de sa semaine, fait souvent émerger plus de pistes qu’un questionnaire.
+
+### Comment savoir qu’une organisation a réellement changé ?
+
+Trois signes concrets : les décisions se prennent par d’autres personnes ou à un autre moment, des processus ont été modifiés dans les faits, et des rôles ont évolué, avec des tâches abandonnées.
+
+Si rien de cela n’a bougé, l’outil a été installé, mais l’organisation n’a pas changé.
+
+Ces constats sont plus faciles à établir avec une personne extérieure au quotidien, qui pose des questions naïves sans enjeu de pouvoir.
+
+### Que faire quand la transformation piétine ?
+
+Revenir à la question de départ : qu’est-ce qui devait changer, et qu’est-ce qui l’empêche ? La réponse est presque toujours dans une décision non prise, un processus non revu ou un rôle non clarifié.
+
+Ajouter un nouvel outil à ce stade aggrave le problème : il faut d’abord lever l’obstacle organisationnel.
+
+Un point d’étape mensuel, court, sur l’obstacle du moment suffit à éviter que le blocage s’installe.
+
+### Quel rôle pour le dirigeant dans la durée ?
+
+Tenir le cap et rendre visibles les choix : ce qu’on continue, ce qu’on arrête, ce qu’on ne fera pas. Une transformation dure des mois, et l’attention du dirigeant est l’une de ses ressources les plus rares.
+
+Un dirigeant qui reste présent, sans tout piloter, donne à l’organisation la permission de changer.
+
+Ce point vaut aussi comme signal : il montre que le sujet reste une priorité de la direction, pas un projet qui s’étiole en silence.
+
 Valérie Mailland
 
 Fondatrice d'EXEC'IA Consulting. 20+ ans auprès de dirigeants, 18 ans chez McKinsey & Company. Suivre sur LinkedIn →
@@ -871,6 +1143,38 @@ Source: RAND Corporation, “The Root Causes of Failure for Artificial Intellige
 
 #ArtificialIntelligence #Transformation #Leadership #Organisation #AIStrategy
 
+### How do you involve teams from the start?
+
+By having them take part in describing the problem before the solution is mentioned. The people doing the work know the real sticking points, the ones no organisation chart shows.
+
+A transformation designed with them is far more likely to be applied than one that is announced.
+
+A half-day workshop, where each person describes a difficult task from their week, often brings out more leads than a questionnaire.
+
+### How do you know an organisation has really changed?
+
+Three concrete signs: decisions are made by other people or at another time, processes have actually been modified, and roles have evolved, with tasks abandoned.
+
+If none of this has moved, the tool has been installed but the organisation has not changed.
+
+These findings are easier to establish with someone outside daily routines, who asks naive questions with no power stake.
+
+### What do you do when the transformation stalls?
+
+Return to the starting question: what was supposed to change, and what is preventing it? The answer is almost always a decision not taken, a process not reviewed or a role not clarified.
+
+Adding a new tool at this stage makes the problem worse: the organisational obstacle has to be removed first.
+
+A short monthly checkpoint on the obstacle of the moment is enough to stop the blockage from settling in.
+
+### What role does the leader play over time?
+
+Holding the course and making choices visible: what continues, what stops, what will not be done. A transformation lasts months, and the leader’s attention is one of its scarcest resources.
+
+A leader who stays present without steering everything gives the organisation permission to change.
+
+This checkpoint also works as a signal: it shows that the subject remains a leadership priority, not a project quietly fading.
+
 Valérie Mailland
 
 Founder of EXEC'IA Consulting. 20+ years alongside executives, 18 years at McKinsey & Company. Follow on LinkedIn →
@@ -946,6 +1250,38 @@ Esta prueba no sustituye a un diagnóstico completo. Tiene la ventaja de hacerse
 Fuente: RAND Corporation, « The Root Causes of Failure for Artificial Intelligence Projects and How They Can Succeed », 2024 .
 
 #InteligenciaArtificial #Transformación #Liderazgo #Organización #EstrategiaIA
+
+### ¿Cómo implicar a los equipos desde el principio?
+
+Haciéndoles participar en la descripción del problema antes de mencionar la solución. Quienes hacen el trabajo conocen los verdaderos puntos de bloqueo, los que ningún organigrama muestra.
+
+Una transformación diseñada con ellos tiene muchas más probabilidades de aplicarse que una simplemente anunciada.
+
+Un taller de media jornada, en el que cada uno describe una tarea difícil de su semana, suele hacer emerger más pistas que un cuestionario.
+
+### ¿Cómo saber que una organización ha cambiado de verdad?
+
+Tres señales concretas: las decisiones las toman otras personas o en otro momento, se han modificado procesos en la práctica y han evolucionado funciones, con tareas abandonadas.
+
+Si nada de esto se ha movido, la herramienta se ha instalado, pero la organización no ha cambiado.
+
+Estos hallazgos son más fáciles de establecer con alguien ajeno a la rutina, que hace preguntas ingenuas sin pugna de poder.
+
+### ¿Qué hacer cuando la transformación se estanca?
+
+Volver a la pregunta de partida: qué debía cambiar y qué lo impide. La respuesta casi siempre está en una decisión no tomada, un proceso no revisado o una función no aclarada.
+
+Añadir una herramienta nueva en esta fase agrava el problema: primero hay que levantar el obstáculo organizativo.
+
+Un punto de seguimiento mensual y breve sobre el obstáculo del momento basta para evitar que el bloqueo se instale.
+
+### ¿Qué papel tiene el directivo a lo largo del tiempo?
+
+Mantener el rumbo y hacer visibles las decisiones: qué continúa, qué se detiene y qué no se hará. Una transformación dura meses y la atención del directivo es uno de sus recursos más escasos.
+
+Un directivo que sigue presente, sin dirigirlo todo, da a la organización permiso para cambiar.
+
+Este punto sirve también de señal: muestra que el tema sigue siendo una prioridad de la dirección y no un proyecto que se apaga en silencio.
 
 Valérie Mailland
 
@@ -1678,6 +2014,8 @@ How do you keep momentum after launch? A use that is no longer animated fades. P
 
 Highlight a concrete result rather than a usage figure: a task shortened, a file delivered earlier. That is what other teams will remember.
 
+Every team has its own rhythm, and comparing one team with another rarely helps. What matters is that each one can see, in its own work, what has changed since the tool arrived, and that someone listens when it says what still gets in the way. That listening is what keeps the tool alive after the launch effect has faded.
+
 💬 And you, how do you measure
 
 the gap between investment and buy-in?
@@ -2041,6 +2379,8 @@ Note what was learned and build it into the policy: it is the best way to preven
 A clearly named member of the executive committee, with an operational relay. The subject touches tools, data, human resources and compliance all at once: without an owner, it is handled piecemeal and nobody has the full picture.
 
 This owner does not need to be an AI specialist. They must know how to ask the right questions and arbitrate when two needs collide.
+
+The same principle applies to every future tool. Each time a new AI service appears on the market, the question will come back: is it approved, for which uses, and with which data? A policy that answers this question quickly, in writing and in plain words, does more for safety than a long document read once and forgotten. Keeping it short, current and visible is the real discipline, and it is a task that belongs to the leadership team, not only to the people who manage the tools.
 
 💬 And you, do you really know
 
@@ -2413,6 +2753,8 @@ Advisers must also know when to tell the team that a reason for handover keeps c
 How do you keep control as the tool evolves? By treating each change as a boundary to decide, not as a technical update. Before widening the assistant’s scope, the question is simple: which new requests will it handle alone, and who checks that this stays acceptable for the customer?
 
 A regular review of a few real exchanges, at each change, protects the quality of the relationship.
+
+In the end, the customer only remembers how the exchange felt. A good boundary is one the customer barely notices: the simple request is handled at once, the delicate one reaches a person without friction, and nobody has to explain the problem twice. That smoothness is a design choice, made in advance, and it can be reviewed like any other.
 
 💬 In your customer service,
 
