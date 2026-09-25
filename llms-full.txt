@@ -3026,7 +3026,7 @@ Si ces trois points sont acquis, l’aide devient ce qu’elle doit être : un a
 
 ### Quelle place pour un accompagnement stratégique avant une aide ?
 
-Une place en amont, sur la question que les dispositifs financent le moins : où l’IA crée-t-elle de la valeur dans votre organisation, et dans quel ordre agir ? C’est le rôle d’un atelier de cadrage comme Cap IA chez EXEC’IA.
+Une place en amont, pour répondre à une question que les dispositifs de financement traitent rarement : où l’IA peut-elle réellement créer de la valeur dans votre organisation, et par où commencer ? C’est le rôle d’un atelier de cadrage comme Cap IA chez EXEC’IA.
 
 Une fois le problème et la priorité clarifiés, le diagnostic financé, la solution retenue et les éventuelles aides s’articulent beaucoup plus simplement. Vous choisissez avec un cap, au lieu de subir un menu.
 
@@ -3138,7 +3138,7 @@ If these three points are in place, the support becomes what it should be: an ac
 
 ### What place for strategic support before funding?
 
-A place upstream, on the question that schemes fund least: where does AI create value in your organisation, and in what order should you act? That is the role of a scoping workshop such as EXEC’IA’s Cap IA.
+A place upstream, to answer a question that funding schemes rarely address: where can AI really create value in your organisation, and where do you start? That is the role of a scoping workshop such as EXEC’IA’s Cap IA.
 
 Once the problem and the priority are clear, the funded diagnosis, the chosen solution and any support fit together much more simply. You choose with a direction, instead of enduring a menu.
 
@@ -3250,7 +3250,7 @@ Si estos tres puntos están resueltos, la ayuda se convierte en lo que debe ser:
 
 ### ¿Qué lugar tiene un acompañamiento estratégico antes de una ayuda?
 
-Un lugar previo, sobre la cuestión que los dispositivos menos financian: ¿dónde crea valor la IA en su organización y en qué orden actuar? Es el papel de un taller de enfoque como Cap IA de EXEC’IA.
+Un lugar previo, para responder a una pregunta que los dispositivos de financiación rara vez abordan: ¿dónde puede la IA crear valor de verdad en su organización y por dónde empezar? Es el papel de un taller de enfoque como Cap IA de EXEC’IA.
 
 Una vez aclarados el problema y la prioridad, el diagnóstico financiado, la solución elegida y las posibles ayudas encajan mucho más sencillamente. Usted elige con un rumbo, en lugar de soportar un menú.
 
