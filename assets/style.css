@@ -7195,3 +7195,8 @@ body > section#perspectives.snap-page:first-of-type { padding-top: calc(var(--na
 /* Énumérations de trois éléments : numéros terracotta ajoutés par le style, le texte lu par les moteurs reste inchangé */
 .art-num::before { content: attr(data-n) "."; color: var(--rose); font-family: var(--sans); font-weight: 600; margin-right: .45em; }
 .article-title br { display: block; }
+
+/* Texte des articles justifié sur ordinateur : bord droit net, plus d'effet d'escalier (les retours à la ligne ne changent pas, seuls les espaces s'ajustent) */
+@media (min-width: 900px) {
+  .article-book .article-intro p, .article-book .article-close p { text-align: justify; text-justify: inter-word; }
+}
