@@ -1492,13 +1492,11 @@ Parce qu’il mesure une intention, pas un changement. Un budget dépensé prouv
 
 Le bon indicateur est l’usage régulier : combien de personnes se servent de l’outil chaque semaine, pour quelle tâche précise, et qu’ont-elles cessé de faire à la main ?
 
-### Comment mesurer l’adhésion, concrètement ?
-
-Trois questions suffisent pour commencer. Qui l’utilise chaque semaine, et pour quoi ? Qui l’a essayé puis abandonné, et pourquoi ? Quelle tâche a réellement disparu ou raccourci ?
+Comment mesurer l’adhésion, concrètement ? Trois questions suffisent pour commencer. Qui l’utilise chaque semaine, et pour quoi ? Qui l’a essayé puis abandonné, et pourquoi ? Quelle tâche a réellement disparu ou raccourci ?
 
 Ces réponses se recueillent par une conversation de vingt minutes avec quelques membres de l’équipe, pas par un formulaire de satisfaction. Elles donnent une image plus fidèle que n’importe quelle statistique de connexion.
 
-### 🎯 Quels leviers font vraiment la différence ?
+## 🎯 Quels leviers font vraiment la différence ?
 
 Trois leviers, du plus simple au plus exigeant : expliquer avant d’équiper, former sur les usages, prouver tôt.
 
@@ -1506,17 +1504,13 @@ Trois leviers, du plus simple au plus exigeant : expliquer avant d’équiper, f
 
 Le pourquoi précède toujours l’outil. Une équipe qui comprend ce que l’outil change dans son travail quotidien, et ce qu’il ne change pas, l’adopte plus facilement qu’une équipe à qui l’on annonce un déploiement.
 
-### Comment former sans noyer les équipes ?
-
-En partant des usages du quotidien, pas de la liste des fonctionnalités. Une heure sur une tâche que la personne fait chaque semaine vaut mieux qu’une journée de démonstration générale.
+Comment former sans noyer les équipes ? En partant des usages du quotidien, pas de la liste des fonctionnalités. Une heure sur une tâche que la personne fait chaque semaine vaut mieux qu’une journée de démonstration générale.
 
 ### Quand étendre l’outil à toute l’organisation ?
 
 Après avoir prouvé un résultat concret, tôt, sur un périmètre restreint. Ce résultat devient l’argument, à la place de la promesse. L’extension se fait alors avec des équipes qui ont déjà vu ce que l’outil apporte.
 
-### Que faire quand une équipe contourne l’outil ?
-
-Commencer par comprendre, avant de rappeler la règle. Un contournement n’est presque jamais de la mauvaise volonté. Il révèle un besoin que l’outil ne couvre pas, une étape trop lourde, ou une habitude que personne n’a aidé à transformer.
+Que faire quand une équipe contourne l’outil ? Commencer par comprendre, avant de rappeler la règle. Un contournement n’est presque jamais de la mauvaise volonté. Il révèle un besoin que l’outil ne couvre pas, une étape trop lourde, ou une habitude que personne n’a aidé à transformer.
 
 Une équipe qui contourne un outil dit, sans le formuler, ce qu’elle attend de lui. C’est une information précieuse, à condition de la recueillir sans chercher de coupable.
 
@@ -1526,9 +1520,7 @@ Un rôle de démonstration plus que de décision. Un dirigeant qui utilise lui-m
 
 À l’inverse, un outil imposé sans être utilisé par ceux qui l’imposent envoie un message contraire à celui du discours.
 
-### Quelles erreurs éviter dans un déploiement ?
-
-Quatre erreurs reviennent : déployer partout en même temps, former sur la liste des fonctionnalités, annoncer sans expliquer le pourquoi, et juger le succès au budget consommé plutôt qu’à l’usage réel.
+Quelles erreurs éviter dans un déploiement ? Quatre erreurs reviennent : déployer partout en même temps, former sur la liste des fonctionnalités, annoncer sans expliquer le pourquoi, et juger le succès au budget consommé plutôt qu’à l’usage réel.
 
 Chacune a la même origine : traiter l’outil comme un achat à réussir plutôt que comme un changement de pratique à accompagner.
 
@@ -1538,9 +1530,9 @@ Première semaine : choisir une équipe volontaire et une tâche qui revient cha
 
 À la fin du mois, le dirigeant dispose de quelque chose que le budget seul ne lui donnait pas : une preuve, dans son organisation, de ce que l’outil apporte ou non.
 
-💬 Et vous, l’écart entre investissement
+💬 Et vous, l’écart entre investissement et adhésion,
 
-et adhésion, vous le mesurez comment ?
+vous le mesurez comment ?
 
 Source : HubSpot, « Tendances de l’IA pour les marketeurs 2025 », étude menée en 2025 auprès de plus de 1 500 marketeurs dans le monde.
 
@@ -1548,7 +1540,7 @@ Source : HubSpot, « Tendances de l’IA pour les marketeurs 2025 », étude men
 
 Valérie Mailland
 
-Fondatrice d'EXEC'IA Consulting. 20+ ans auprès de dirigeants, 18 ans chez McKinsey & Company. Suivre sur LinkedIn →
+Fondatrice d’EXEC’IA Consulting. Plus de 20 ans auprès de dirigeants, 18 ans chez McKinsey & Company. Suivre sur LinkedIn →
 ---
 
 # The AI budget is not the issue. Buy-in is. [EN]
@@ -1584,13 +1576,11 @@ Because it measures an intention, not a change. A budget spent proves that a dec
 
 The right indicator is regular use: how many people use the tool each week, for which precise task, and what have they stopped doing by hand?
 
-### How do you measure buy-in, in practice?
-
-Three questions are enough to start. Who uses it every week, and for what? Who tried it and gave up, and why? Which task has really disappeared or become shorter?
+How do you measure buy-in, in practice? Three questions are enough to start. Who uses it every week, and for what? Who tried it and gave up, and why? Which task has really disappeared or become shorter?
 
 These answers come from a twenty-minute conversation with a few team members, not from a satisfaction form. They give a truer picture than any login statistic.
 
-### 🎯 Which levers really make the difference?
+## 🎯 Which levers really make the difference?
 
 Three levers, from the simplest to the most demanding: explain before equipping, train on real uses, prove early.
 
@@ -1598,17 +1588,13 @@ Three levers, from the simplest to the most demanding: explain before equipping,
 
 The why always comes before the tool. A team that understands what the tool changes in its daily work, and what it does not change, adopts it more readily than a team told that a rollout is coming.
 
-### How do you train without overwhelming teams?
-
-By starting from everyday uses, not from the list of features. One hour on a task a person does every week is worth more than a day of general demonstration.
+How do you train without overwhelming teams? By starting from everyday uses, not from the list of features. One hour on a task a person does every week is worth more than a day of general demonstration.
 
 ### When should the tool be extended to the whole organisation?
 
 After proving a concrete result, early, on a limited scope. That result becomes the argument, in place of the promise. The rollout then reaches teams who have already seen what the tool delivers.
 
-### What should you do when a team works around the tool?
-
-Start by understanding, before restating the rule. A workaround is almost never ill will. It reveals a need the tool does not cover, a step that is too heavy, or a habit nobody helped to change.
+What should you do when a team works around the tool? Start by understanding, before restating the rule. A workaround is almost never ill will. It reveals a need the tool does not cover, a step that is too heavy, or a habit nobody helped to change.
 
 A team that works around a tool is telling you, without saying it, what it expects from it. That is valuable information, provided you gather it without hunting for culprits.
 
@@ -1618,9 +1604,7 @@ A role of demonstration more than of decision. A leader who uses the tool person
 
 Conversely, a tool imposed without being used by those who impose it sends a message that contradicts the speech.
 
-### Which mistakes should you avoid in a rollout?
-
-Four mistakes come back: deploying everywhere at once, training on the list of features, announcing without explaining the why, and judging success by the budget consumed rather than by real use.
+Which mistakes should you avoid in a rollout? Four mistakes come back: deploying everywhere at once, training on the list of features, announcing without explaining the why, and judging success by the budget consumed rather than by real use.
 
 Each has the same origin: treating the tool as a purchase to succeed rather than as a change of practice to support.
 
@@ -1630,9 +1614,9 @@ Week one: choose a volunteer team and a task that recurs every week, then explai
 
 At the end of the month, the leader has something the budget alone never provided: proof, inside their own organisation, of what the tool brings or does not bring.
 
-💬 And you, how do you measure the gap
+💬 And you, how do you measure
 
-between investment and buy-in?
+the gap between investment and buy-in?
 
 Source: HubSpot, “AI Trends for Marketers 2025”, a 2025 study of more than 1,500 marketers worldwide.
 
@@ -1676,13 +1660,11 @@ Porque mide una intención, no un cambio. Un presupuesto gastado demuestra que s
 
 El buen indicador es el uso regular: cuántas personas usan la herramienta cada semana, para qué tarea concreta y qué han dejado de hacer a mano.
 
-### ¿Cómo medir la adhesión, en concreto?
-
-Tres preguntas bastan para empezar. ¿Quién la usa cada semana y para qué? ¿Quién la probó y la abandonó, y por qué? ¿Qué tarea ha desaparecido o se ha acortado realmente?
+¿Cómo medir la adhesión, en concreto? Tres preguntas bastan para empezar. ¿Quién la usa cada semana y para qué? ¿Quién la probó y la abandonó, y por qué? ¿Qué tarea ha desaparecido o se ha acortado realmente?
 
 Estas respuestas se obtienen con una conversación de veinte minutos con algunos miembros del equipo, no con un formulario de satisfacción. Dan una imagen más fiel que cualquier estadística de conexión.
 
-### 🎯 ¿Qué palancas marcan de verdad la diferencia?
+## 🎯 ¿Qué palancas marcan de verdad la diferencia?
 
 Tres palancas, de la más sencilla a la más exigente: explicar antes de equipar, formar en los usos y demostrar pronto.
 
@@ -1690,17 +1672,13 @@ Tres palancas, de la más sencilla a la más exigente: explicar antes de equipar
 
 El porqué precede siempre a la herramienta. Un equipo que entiende qué cambia la herramienta en su trabajo diario, y qué no cambia, la adopta con más facilidad que un equipo al que se le anuncia un despliegue.
 
-### ¿Cómo formar sin abrumar a los equipos?
-
-Partiendo de los usos del día a día, no de la lista de funcionalidades. Una hora sobre una tarea que la persona hace cada semana vale más que una jornada de demostración general.
+¿Cómo formar sin abrumar a los equipos? Partiendo de los usos del día a día, no de la lista de funcionalidades. Una hora sobre una tarea que la persona hace cada semana vale más que una jornada de demostración general.
 
 ### ¿Cuándo ampliar la herramienta a toda la organización?
 
 Después de haber demostrado un resultado concreto, pronto, en un ámbito reducido. Ese resultado se convierte en el argumento, en lugar de la promesa. La ampliación llega entonces a equipos que ya han visto lo que aporta la herramienta.
 
-### ¿Qué hacer cuando un equipo rodea la herramienta?
-
-Empezar por comprender, antes de recordar la regla. Rodear una herramienta casi nunca es mala voluntad. Revela una necesidad que la herramienta no cubre, un paso demasiado pesado o un hábito que nadie ayudó a transformar.
+¿Qué hacer cuando un equipo rodea la herramienta? Empezar por comprender, antes de recordar la regla. Rodear una herramienta casi nunca es mala voluntad. Revela una necesidad que la herramienta no cubre, un paso demasiado pesado o un hábito que nadie ayudó a transformar.
 
 Un equipo que rodea una herramienta dice, sin formularlo, lo que espera de ella. Es una información valiosa, siempre que se recoja sin buscar culpables.
 
@@ -1710,9 +1688,7 @@ Un papel de demostración más que de decisión. Un directivo que usa él mismo 
 
 Al contrario, una herramienta impuesta sin que la usen quienes la imponen transmite un mensaje opuesto al del discurso.
 
-### ¿Qué errores evitar en un despliegue?
-
-Cuatro errores se repiten: desplegar en todas partes a la vez, formar sobre la lista de funcionalidades, anunciar sin explicar el porqué y juzgar el éxito por el presupuesto consumido en lugar del uso real.
+¿Qué errores evitar en un despliegue? Cuatro errores se repiten: desplegar en todas partes a la vez, formar sobre la lista de funcionalidades, anunciar sin explicar el porqué y juzgar el éxito por el presupuesto consumido en lugar del uso real.
 
 Todos tienen el mismo origen: tratar la herramienta como una compra que hay que lograr en lugar de un cambio de práctica que hay que acompañar.
 
@@ -1722,9 +1698,9 @@ Primera semana: elegir un equipo voluntario y una tarea que se repita cada seman
 
 Al final del mes, el directivo dispone de algo que el presupuesto solo no le daba: una prueba, dentro de su organización, de lo que la herramienta aporta o no.
 
-💬 Y usted, la brecha entre inversión
+💬 Y usted, ¿cómo mide la brecha
 
-y adhesión, ¿cómo la mide?
+entre inversión y adhesión?
 
 Fuente: HubSpot, «Tendencias de la IA para profesionales de marketing 2025», estudio de 2025 con más de 1500 profesionales de marketing en todo el mundo.
 
@@ -1732,7 +1708,7 @@ Fuente: HubSpot, «Tendencias de la IA para profesionales de marketing 2025», e
 
 Valérie Mailland
 
-Fundadora de EXEC'IA Consulting. 20+ años junto a directivos, 18 años en McKinsey & Company. Seguir en LinkedIn →
+Fundadora de EXEC'IA Consulting. Más de 20 años junto a directivos, 18 años en McKinsey & Company. Seguir en LinkedIn →
 ---
 
 # Une politique IA que ses dirigeants ne respectent pas n’est plus une politique. [FR]
@@ -1768,31 +1744,27 @@ Les informations sur les clients, les contrats, les données personnelles, les �
 
 Sur le volet réglementaire, notamment le RGPD, le guide AI Act et RGPD pour une PME détaille les obligations d’une PME qui utilise l’IA.
 
-### Comment recenser les usages sans chercher de coupable ?
-
-En posant la question d’une manière qui ne sanctionne pas : quels outils vous font gagner du temps, et pour quelles tâches ? Un échange en petit groupe ou un court questionnaire anonyme donne une image plus honnête qu’un contrôle.
+Comment recenser les usages sans chercher de coupable ? En posant la question d’une manière qui ne sanctionne pas : quels outils vous font gagner du temps, et pour quelles tâches ? Un échange en petit groupe ou un court questionnaire anonyme donne une image plus honnête qu’un contrôle.
 
 L’objectif est de faire remonter les besoins réels, puis de leur répondre avec des outils approuvés.
 
-### 🎯 Quels réflexes changent la donne ?
+## 🎯 Quels réflexes changent la donne ?
+
+Trois réflexes suffisent pour commencer : reconnaître l’usage réel, offrir des outils sûrs et simples, montrer l’exemple au sommet.
 
 ### Pourquoi reconnaître l’usage réel avant de l’interdire ?
 
 Parce qu’il existe déjà, qu’on le veuille ou non. Interdire un usage que l’on ne connaît pas le fait passer dans l’ombre. Le recenser, sans chercher de coupable, donne enfin une image fidèle de ce que font les équipes.
 
-### Comment offrir des outils sûrs plus simples que ceux qu’on cache ?
-
-En proposant des outils approuvés dont la prise en main est aussi rapide que celle des outils personnels. Si l’option sûre est plus lourde que l’option cachée, la seconde l’emportera.
+Comment offrir des outils sûrs plus simples que ceux qu’on cache ? En proposant des outils approuvés dont la prise en main est aussi rapide que celle des outils personnels. Si l’option sûre est plus lourde que l’option cachée, la seconde l’emportera.
 
 ### Pourquoi commencer par les pratiques du comité de direction ?
 
 Parce que la cohérence commence en haut. Un comité de direction qui regarde honnêtement ses propres usages donne à la charte une crédibilité qu’aucune note interne ne peut remplacer.
 
-Une organisation ne sécurise jamais ce qu’elle refuse de regarder en face. En matière d’IA, mieux vaut prévenir que guérir.
+Une organisation ne sécurise jamais ce qu’elle refuse de regarder en face.
 
-### Que doit contenir une charte IA utile ?
-
-Cinq éléments suffisent souvent : les usages autorisés, les données interdites, les outils approuvés, une personne référente à qui poser une question, et une date de révision.
+Que doit contenir une charte IA utile ? Cinq éléments suffisent souvent : les usages autorisés, les données interdites, les outils approuvés, une personne référente à qui poser une question, et une date de révision.
 
 Une charte de deux pages que chacun a lue vaut mieux qu’un document de vingt pages que personne n’ouvre. Elle doit aussi être écrite pour ceux qui l’utilisent, avec leurs tâches et leurs mots.
 
@@ -1802,9 +1774,7 @@ Régulièrement, parce que les outils et les usages évoluent vite. Un rythme tr
 
 Une règle figée depuis un an décrit une situation qui n’existe plus.
 
-### Comment un dirigeant donne-t-il l’exemple ?
-
-En appliquant lui-même la charte, en disant quels outils il utilise et pour quoi, et en acceptant que la question lui soit posée. Quand les cadres dirigeants font ce qu’ils demandent aux autres de faire, la règle cesse d’être une contrainte pour devenir une norme partagée.
+Comment un dirigeant donne-t-il l’exemple ? En appliquant lui-même la charte, en disant quels outils il utilise et pour quoi, et en acceptant que la question lui soit posée. Quand les cadres dirigeants font ce qu’ils demandent aux autres de faire, la règle cesse d’être une contrainte pour devenir une norme partagée.
 
 C’est la condition pour que la politique cesse d’être une fiction et redevienne un outil de pilotage.
 
@@ -1814,9 +1784,9 @@ Par une conversation d’une demi-heure en comité de direction : quels outils I
 
 Elle fournit la seule base solide pour décider de ce qu’on autorise, de ce qu’on propose et de ce qu’on interdit.
 
-💬 Et vous, savez-vous vraiment quels outils
+💬 Et vous, savez-vous vraiment
 
-IA vos équipes utilisent aujourd’hui ?
+quels outils IA vos équipes utilisent aujourd’hui ?
 
 Source : WalkMe, étude menée en juillet 2025, relayée par SAP News et CIO.com.
 
@@ -1824,7 +1794,7 @@ Source : WalkMe, étude menée en juillet 2025, relayée par SAP News et CIO.com
 
 Valérie Mailland
 
-Fondatrice d'EXEC'IA Consulting. 20+ ans auprès de dirigeants, 18 ans chez McKinsey & Company. Suivre sur LinkedIn →
+Fondatrice d’EXEC’IA Consulting. Plus de 20 ans auprès de dirigeants, 18 ans chez McKinsey & Company. Suivre sur LinkedIn →
 ---
 
 # An AI policy that its own leaders do not follow is no longer a policy. [EN]
@@ -1860,31 +1830,27 @@ Customer information, contracts, personal data, non-public financials and anythi
 
 On the regulatory side, notably GDPR, the AI Act and GDPR guide for an SME sets out the obligations of an SME that uses AI.
 
-### How do you map usage without hunting for culprits?
-
-By asking in a way that does not punish: which tools save you time, and for which tasks? A small-group conversation or a short anonymous questionnaire gives a more honest picture than a control exercise.
+How do you map usage without hunting for culprits? By asking in a way that does not punish: which tools save you time, and for which tasks? A small-group conversation or a short anonymous questionnaire gives a more honest picture than a control exercise.
 
 The goal is to bring real needs to the surface, then answer them with approved tools.
 
-### 🎯 Which reflexes change the game?
+## 🎯 Which reflexes change the game?
+
+Three reflexes are enough to start: acknowledge real usage, offer safe and simple tools, set the example at the top.
 
 ### Why acknowledge real usage before banning it?
 
 Because it already exists, whether we like it or not. Banning a use you do not know about pushes it into the shadows. Mapping it, without hunting for culprits, finally gives an accurate picture of what teams actually do.
 
-### How do you offer safe tools that are simpler than the ones people hide?
-
-By providing approved tools that are as quick to pick up as personal ones. If the safe option is heavier than the hidden one, the hidden one wins.
+How do you offer safe tools that are simpler than the ones people hide? By providing approved tools that are as quick to pick up as personal ones. If the safe option is heavier than the hidden one, the hidden one wins.
 
 ### Why start with the leadership team’s own practices?
 
 Because consistency starts at the top. An executive committee that looks honestly at its own usage gives the policy a credibility that no internal memo can replace.
 
-An organisation never secures what it refuses to look at. With AI, prevention beats cure.
+An organisation never secures what it refuses to look at.
 
-### What should a useful AI policy contain?
-
-Five elements are often enough: authorised uses, forbidden data, approved tools, a named person to ask, and a review date.
+What should a useful AI policy contain? Five elements are often enough: authorised uses, forbidden data, approved tools, a named person to ask, and a review date.
 
 A two-page policy that everyone has read is worth more than a twenty-page document nobody opens. It should also be written for those who use it, with their tasks and their words.
 
@@ -1894,9 +1860,7 @@ Regularly, because tools and uses change fast. A quarterly rhythm, with a short 
 
 A rule frozen for a year describes a situation that no longer exists.
 
-### How does a leader set the example?
-
-By applying the policy personally, saying which tools they use and for what, and accepting that the question is put to them. When executives do what they ask others to do, the rule stops being a constraint and becomes a shared norm.
+How does a leader set the example? By applying the policy personally, saying which tools they use and for what, and accepting that the question is put to them. When executives do what they ask others to do, the rule stops being a constraint and becomes a shared norm.
 
 That is the condition for the policy to stop being a fiction and become a steering tool again.
 
@@ -1906,9 +1870,9 @@ With a half-hour conversation in the executive committee: which AI tools does ea
 
 It provides the only solid basis for deciding what to allow, what to offer and what to forbid.
 
-💬 And you, do you really know which AI tools
+💬 And you, do you really know
 
-your teams use today?
+which AI tools your teams use today?
 
 Source: WalkMe, study run in July 2025, relayed by SAP News and CIO.com.
 
@@ -1928,7 +1892,7 @@ URL: https://exec-ia.ai/perspective-shadow-ia-charte-comite-direction-es.html
 
 Un estudio de WalkMe de julio de 2025 indica que el 78 % de los empleados usa herramientas de IA que su empresa nunca ha validado, y que el 93 % de los altos directivos encuestados hace lo mismo. El tema no es la disciplina de los equipos, sino la gobernanza que la rodea. Tres reflejos: reconocer el uso real antes de prohibirlo, ofrecer herramientas seguras y sencillas, y empezar por las prácticas del comité de dirección.
 
-Se redacta una carta de uso de la IA en el comité de dirección. En el ascensor, cada uno vuelve sin embargo a su herramienta de IA personal.
+Se redacta una política de uso de la IA en el comité de dirección. En el ascensor, cada uno vuelve sin embargo a su herramienta de IA personal.
 
 Un estudio de WalkMe realizado en julio de 2025 lo confirma a gran escala: el 78 % de los empleados usa herramientas de IA que su empresa nunca ha validado. Más sorprendente aún, el 93 % de los altos directivos encuestados hace exactamente lo mismo.
 
@@ -1952,31 +1916,27 @@ La información sobre clientes, los contratos, los datos personales, los element
 
 En el plano normativo, en particular el RGPD, la guía AI Act y RGPD para una PYME detalla las obligaciones de una pyme que utiliza IA.
 
-### ¿Cómo registrar los usos sin buscar culpables?
-
-Preguntando de una forma que no sancione: ¿qué herramientas le hacen ganar tiempo y para qué tareas? Una conversación en grupo pequeño o un breve cuestionario anónimo da una imagen más honesta que un control.
+¿Cómo registrar los usos sin buscar culpables? Preguntando de una forma que no sancione: ¿qué herramientas le hacen ganar tiempo y para qué tareas? Una conversación en grupo pequeño o un breve cuestionario anónimo da una imagen más honesta que un control.
 
 El objetivo es hacer emerger las necesidades reales y responder a ellas con herramientas aprobadas.
 
-### 🎯 ¿Qué reflejos cambian el juego?
+## 🎯 ¿Qué reflejos cambian el juego?
+
+Tres reflejos bastan para empezar: reconocer el uso real, ofrecer herramientas seguras y sencillas, dar ejemplo desde arriba.
 
 ### ¿Por qué reconocer el uso real antes de prohibirlo?
 
 Porque ya existe, se quiera o no. Prohibir un uso que no se conoce lo empuja a la sombra. Registrarlo, sin buscar culpables, ofrece por fin una imagen fiel de lo que hacen los equipos.
 
-### ¿Cómo ofrecer herramientas seguras más sencillas que las que se ocultan?
-
-Proponiendo herramientas aprobadas que se aprendan tan rápido como las personales. Si la opción segura es más pesada que la oculta, ganará la oculta.
+¿Cómo ofrecer herramientas seguras más sencillas que las que se ocultan? Proponiendo herramientas aprobadas que se aprendan tan rápido como las personales. Si la opción segura es más pesada que la oculta, ganará la oculta.
 
 ### ¿Por qué empezar por las prácticas del comité de dirección?
 
 Porque la coherencia empieza arriba. Un comité de dirección que mira con honestidad sus propios usos da a la política una credibilidad que ninguna nota interna puede sustituir.
 
-Una organización nunca protege lo que se niega a mirar de frente. En materia de IA, más vale prevenir que curar.
+Una organización nunca protege lo que se niega a mirar de frente.
 
-### ¿Qué debe contener una política de IA útil?
-
-Cinco elementos suelen bastar: los usos autorizados, los datos prohibidos, las herramientas aprobadas, una persona de referencia a quien preguntar y una fecha de revisión.
+¿Qué debe contener una política de IA útil? Cinco elementos suelen bastar: los usos autorizados, los datos prohibidos, las herramientas aprobadas, una persona de referencia a quien preguntar y una fecha de revisión.
 
 Una política de dos páginas que todos han leído vale más que un documento de veinte que nadie abre. También debe estar escrita para quienes la utilizan, con sus tareas y sus palabras.
 
@@ -1986,9 +1946,7 @@ Con regularidad, porque las herramientas y los usos cambian rápido. Un ritmo tr
 
 Una regla congelada desde hace un año describe una situación que ya no existe.
 
-### ¿Cómo da ejemplo un directivo?
-
-Aplicando él mismo la política, diciendo qué herramientas usa y para qué, y aceptando que se le haga la pregunta. Cuando los directivos hacen lo que piden a los demás, la regla deja de ser una restricción y se convierte en una norma compartida.
+¿Cómo da ejemplo un directivo? Aplicando él mismo la política, diciendo qué herramientas usa y para qué, y aceptando que se le haga la pregunta. Cuando los directivos hacen lo que piden a los demás, la regla deja de ser una restricción y se convierte en una norma compartida.
 
 Es la condición para que la política deje de ser una ficción y vuelva a ser una herramienta de dirección.
 
@@ -1998,9 +1956,9 @@ Con una conversación de media hora en el comité de dirección: ¿qué herramie
 
 Ofrece la única base sólida para decidir qué se autoriza, qué se propone y qué se prohíbe.
 
-💬 Y usted, ¿sabe de verdad qué herramientas
+💬 Y usted, ¿sabe de verdad
 
-de IA usan hoy sus equipos?
+qué herramientas de IA usan hoy sus equipos?
 
 Fuente: WalkMe, estudio realizado en julio de 2025, difundido por SAP News y CIO.com.
 
@@ -2008,7 +1966,7 @@ Fuente: WalkMe, estudio realizado en julio de 2025, difundido por SAP News y CIO
 
 Valérie Mailland
 
-Fundadora de EXEC'IA Consulting. 20+ años junto a directivos, 18 años en McKinsey & Company. Seguir en LinkedIn →
+Fundadora de EXEC'IA Consulting. Más de 20 años junto a directivos, 18 años en McKinsey & Company. Seguir en LinkedIn →
 ---
 
 # Le chatbot d’Air France répond seul à 30 % des demandes. Le reste, il sait passer la main. [FR]
@@ -2042,13 +2000,11 @@ Celles où l’enjeu est élevé ou l’émotion forte : un litige, une situatio
 
 Pour ces cas, la meilleure automatisation est celle qui repère la situation et prévient un humain rapidement.
 
-### Que retenir de l’exemple d’Air France ?
-
-Que le résultat ne tient pas à la sophistication de l’outil, mais à la clarté de la répartition des rôles. L’assistant traite ce qui est fréquent et simple. Les personnes traitent ce qui exige du jugement, de l’écoute ou une décision.
+Que retenir de l’exemple d’Air France ? Que le résultat ne tient pas à la sophistication de l’outil, mais à la clarté de la répartition des rôles. L’assistant traite ce qui est fréquent et simple. Les personnes traitent ce qui exige du jugement, de l’écoute ou une décision.
 
 Cette répartition n’est pas définitive : elle se révise à mesure que l’outil progresse et que les équipes apprennent ce qu’il fait bien.
 
-### Comment sentir la limite avant de la franchir ?
+## Comment sentir la limite avant de la franchir ?
 
 Trois signaux permettent de la repérer.
 
@@ -2056,17 +2012,13 @@ Trois signaux permettent de la repérer.
 
 Quand la même question revient plusieurs fois, l’outil ne répond pas au besoin réel. C’est le premier signal que la conversation doit changer de main.
 
-### Existe-t-il une option simple pour joindre un humain ?
-
-Si aucune option claire n’apparaît, le client se sent enfermé. Une bonne automatisation rend la sortie vers un interlocuteur humain visible et immédiate.
+Existe-t-il une option simple pour joindre un humain ? Si aucune option claire n’apparaît, le client se sent enfermé. Une bonne automatisation rend la sortie vers un interlocuteur humain visible et immédiate.
 
 ### Le ton s’adapte-t-il à la gravité de la demande ?
 
 Le ton ne peut pas rester identique, que la demande soit anodine ou urgente : une grève de personnel n’appelle pas le même registre qu’une question de bagage. L’IA traite le volume. Reconnaître le bon moment pour passer la main à un humain, ça reste un réflexe humain.
 
-### Qui décide de la limite entre l’outil et la personne ?
-
-Une personne identifiée, pas un réglage technique. La limite est une décision de service : quelles demandes l’assistant traite seul, lesquelles il transmet, sur quels signaux. Elle doit avoir un propriétaire, être écrite et être révisée.
+Qui décide de la limite entre l’outil et la personne ? Une personne identifiée, pas un réglage technique. La limite est une décision de service : quelles demandes l’assistant traite seul, lesquelles il transmet, sur quels signaux. Elle doit avoir un propriétaire, être écrite et être révisée.
 
 Sans propriétaire, la limite se déplace par défaut, au gré des mises à jour, sans que personne l’ait choisie.
 
@@ -2076,9 +2028,7 @@ En écoutant deux sources : les clients, à travers leurs retours et leurs deman
 
 Le pourcentage de demandes traitées seul est un résultat à lire avec prudence : il compte moins que la satisfaction de ceux qui sont passés par l’outil.
 
-### Par où commencer dans votre service client ?
-
-Par les demandes les plus fréquentes et les plus simples : c’est là que l’automatisation libère le plus de temps avec le moins de risque. En parallèle, définir dès le départ les signaux qui déclenchent le passage à une personne, et vérifier que ce passage est visible et rapide.
+Par où commencer dans votre service client ? Par les demandes les plus fréquentes et les plus simples : c’est là que l’automatisation libère le plus de temps avec le moins de risque. En parallèle, définir dès le départ les signaux qui déclenchent le passage à une personne, et vérifier que ce passage est visible et rapide.
 
 Ensuite, élargir progressivement, en gardant toujours la même règle : l’outil traite le volume, la personne traite ce qui compte.
 
@@ -2098,7 +2048,7 @@ Source : Usine Digitale, L’Écho touristique (2024-2025).
 
 Valérie Mailland
 
-Fondatrice d'EXEC'IA Consulting. 20+ ans auprès de dirigeants, 18 ans chez McKinsey & Company. Suivre sur LinkedIn →
+Fondatrice d’EXEC’IA Consulting. Plus de 20 ans auprès de dirigeants, 18 ans chez McKinsey & Company. Suivre sur LinkedIn →
 ---
 
 # Air France’s chatbot answers 30% of requests alone. For the rest, it knows when to hand over. [EN]
@@ -2132,13 +2082,11 @@ Those where the stakes are high or the emotion strong: a dispute, an emergency, 
 
 For these cases, the best automation is the one that spots the situation and alerts a human quickly.
 
-### What should you take from the Air France example?
-
-That the result does not come from the sophistication of the tool, but from the clarity of how roles are shared. The assistant handles what is frequent and simple. People handle what requires judgement, listening or a decision.
+What should you take from the Air France example? That the result does not come from the sophistication of the tool, but from the clarity of how roles are shared. The assistant handles what is frequent and simple. People handle what requires judgement, listening or a decision.
 
 This split is not final: it is revised as the tool improves and teams learn what it does well.
 
-### How do you sense the limit before crossing it?
+## How do you sense the limit before crossing it?
 
 Three signals help spot it.
 
@@ -2146,17 +2094,13 @@ Three signals help spot it.
 
 When the same question keeps coming back, the tool is not meeting the real need. It is the first signal that the conversation should change hands.
 
-### Is there a simple option to reach a human?
-
-If no clear option appears, customers feel trapped. Good automation makes the way out to a human contact visible and immediate.
+Is there a simple option to reach a human? If no clear option appears, customers feel trapped. Good automation makes the way out to a human contact visible and immediate.
 
 ### Does the tone adapt to how serious the request is?
 
 The tone cannot stay the same whether the request is trivial or urgent: a staff strike does not call for the same register as a baggage question. AI handles the volume. Recognising the right moment to hand over to a human remains a human reflex.
 
-### Who decides the limit between the tool and the person?
-
-A named person, not a technical setting. The limit is a service decision: which requests the assistant handles alone, which it passes on, and on which signals. It needs an owner, must be written down and reviewed.
+Who decides the limit between the tool and the person? A named person, not a technical setting. The limit is a service decision: which requests the assistant handles alone, which it passes on, and on which signals. It needs an owner, must be written down and reviewed.
 
 Without an owner, the limit drifts by default, with each update, without anyone having chosen it.
 
@@ -2166,9 +2110,7 @@ By listening to two sources: customers, through their feedback and repeated requ
 
 The percentage of requests handled alone is a result to read with care: it matters less than the satisfaction of those who went through the tool.
 
-### Where do you start in your customer service?
-
-With the most frequent and simplest requests: that is where automation frees the most time with the least risk. In parallel, define from the outset the signals that trigger a move to a person, and check that this move is visible and quick.
+Where do you start in your customer service? With the most frequent and simplest requests: that is where automation frees the most time with the least risk. In parallel, define from the outset the signals that trigger a move to a person, and check that this move is visible and quick.
 
 Then widen gradually, always keeping the same rule: the tool handles the volume, the person handles what matters.
 
@@ -2222,13 +2164,11 @@ Aquellas en las que hay mucho en juego o la emoción es fuerte: un litigio, una 
 
 Para estos casos, la mejor automatización es la que detecta la situación y avisa rápidamente a una persona.
 
-### ¿Qué retener del ejemplo de Air France?
-
-Que el resultado no depende de lo sofisticada que sea la herramienta, sino de la claridad en el reparto de papeles. El asistente gestiona lo frecuente y sencillo. Las personas gestionan lo que exige criterio, escucha o una decisión.
+¿Qué retener del ejemplo de Air France? Que el resultado no depende de lo sofisticada que sea la herramienta, sino de la claridad en el reparto de papeles. El asistente gestiona lo frecuente y sencillo. Las personas gestionan lo que exige criterio, escucha o una decisión.
 
 Este reparto no es definitivo: se revisa a medida que la herramienta progresa y los equipos aprenden lo que hace bien.
 
-### ¿Cómo notar el límite antes de cruzarlo?
+## ¿Cómo notar el límite antes de cruzarlo?
 
 Tres señales permiten detectarlo.
 
@@ -2236,17 +2176,13 @@ Tres señales permiten detectarlo.
 
 Cuando la misma pregunta vuelve varias veces, la herramienta no responde a la necesidad real. Es la primera señal de que la conversación debe cambiar de manos.
 
-### ¿Existe una opción sencilla para hablar con una persona?
-
-Si no aparece ninguna opción clara, el cliente se siente atrapado. Una buena automatización hace visible e inmediata la salida hacia un interlocutor humano.
+¿Existe una opción sencilla para hablar con una persona? Si no aparece ninguna opción clara, el cliente se siente atrapado. Una buena automatización hace visible e inmediata la salida hacia un interlocutor humano.
 
 ### ¿El tono se adapta a la gravedad de la consulta?
 
 El tono no puede ser el mismo si la consulta es trivial o urgente: una huelga de personal no pide el mismo registro que una pregunta sobre el equipaje. La IA gestiona el volumen. Reconocer el momento de pasar el relevo a una persona sigue siendo un reflejo humano.
 
-### ¿Quién decide el límite entre la herramienta y la persona?
-
-Una persona identificada, no un ajuste técnico. El límite es una decisión de servicio: qué consultas resuelve el asistente por sí solo, cuáles traslada y con qué señales. Debe tener un responsable, estar escrito y revisarse.
+¿Quién decide el límite entre la herramienta y la persona? Una persona identificada, no un ajuste técnico. El límite es una decisión de servicio: qué consultas resuelve el asistente por sí solo, cuáles traslada y con qué señales. Debe tener un responsable, estar escrito y revisarse.
 
 Sin responsable, el límite se desplaza por defecto, con cada actualización, sin que nadie lo haya elegido.
 
@@ -2256,9 +2192,7 @@ Escuchando dos fuentes: los clientes, a través de sus comentarios y de sus cons
 
 El porcentaje de consultas resueltas en solitario es un resultado que hay que leer con prudencia: importa menos que la satisfacción de quienes han pasado por la herramienta.
 
-### ¿Por dónde empezar en su servicio de atención al cliente?
-
-Por las consultas más frecuentes y sencillas: ahí es donde la automatización libera más tiempo con menos riesgo. En paralelo, definir desde el principio las señales que activan el paso a una persona y comprobar que ese paso es visible y rápido.
+¿Por dónde empezar en su servicio de atención al cliente? Por las consultas más frecuentes y sencillas: ahí es donde la automatización libera más tiempo con menos riesgo. En paralelo, definir desde el principio las señales que activan el paso a una persona y comprobar que ese paso es visible y rápido.
 
 Después, ampliar progresivamente, manteniendo siempre la misma regla: la herramienta gestiona el volumen, la persona gestiona lo que importa.
 
@@ -2278,7 +2212,7 @@ Fuente: Usine Digitale, L’Écho touristique (2024-2025).
 
 Valérie Mailland
 
-Fundadora de EXEC'IA Consulting. 20+ años junto a directivos, 18 años en McKinsey & Company. Seguir en LinkedIn →
+Fundadora de EXEC'IA Consulting. Más de 20 años junto a directivos, 18 años en McKinsey & Company. Seguir en LinkedIn →
 ---
 
 # Votre projet IA peut-il être financé ? Oui, mais pas forcément celui que vous pensez. [FR]
@@ -2310,7 +2244,7 @@ Le prestataire n’est donc pas librement choisi, et le diagnostic ne remplace p
 
 ## Quelles grandes familles d’aides existent pour un projet IA ?
 
-Trois familles se distinguent, avec des logiques différentes. Les dispositifs de diagnostic financent une analyse, comme le Diag Data IA. Les catalogues de solutions référencent des produits prêts à l’emploi, comme le plan Osez l’IA. Enfin, des aides plus générales, nationales ou régionales, soutiennent la transformation numérique ou l’investissement.
+Trois familles se distinguent, avec des logiques différentes. Les dispositifs de diagnostic financent une analyse, comme le Diag Data IA. Les catalogues de solutions référencent des produits prêts à l’emploi, comme l’un des deux volets du plan Osez l’IA. Enfin, des aides plus générales, nationales ou régionales, soutiennent la transformation numérique ou l’investissement.
 
 Aucune de ces familles n’est interchangeable avec les autres. Confondre un diagnostic financé avec un déploiement financé est l’une des erreurs les plus fréquentes.
 
@@ -2320,9 +2254,7 @@ Parce que, selon le dispositif, le prestataire est soit librement choisi, soit s
 
 Un financement obtenu pour un prestataire qui ne correspond pas au projet coûte du temps, même quand il ne coûte pas d’argent.
 
-### Comment articuler un diagnostic financé et un projet stratégique ?
-
-En gardant chacun à sa place. Le diagnostic technique éclaire ce qui est possible avec vos données et vos outils. L’arbitrage stratégique décide de ce qui mérite d’être fait, dans quel ordre, avec quels moyens.
+Comment articuler un diagnostic financé et un projet stratégique ? En gardant chacun à sa place. Le diagnostic technique éclaire ce qui est possible avec vos données et vos outils. L’arbitrage stratégique décide de ce qui mérite d’être fait, dans quel ordre, avec quels moyens.
 
 Le second précède idéalement le premier : un diagnostic bien ciblé sur un usage déjà priorisé apporte beaucoup plus qu’un diagnostic général sans question précise.
 
@@ -2332,9 +2264,7 @@ Pas nécessairement. Attendre une aide peut retarder de plusieurs mois un projet
 
 Un premier usage modeste, mené sur une tâche précise, apporte des enseignements qu’aucun dossier ne remplace. Il rend aussi la suite plus facile à défendre, y compris devant un organisme financeur.
 
-### « Osez l’IA » finance-t-il n’importe quel conseil ?
-
-Non. Le plan national Osez l’IA comporte deux volets. Le premier est un catalogue de solutions IA prêtes à l’emploi pour PME et ETI (assistants, automatisation, analyse de documents) : ce sont des produits. Le second regroupe des accompagnements portés par Bpifrance, comme le Diag Data IA et l’Accélérateur IA, menés par des experts agréés.
+« Osez l’IA » finance-t-il n’importe quel conseil ? Non. Le plan national Osez l’IA comporte deux volets. Le premier est un catalogue de solutions IA prêtes à l’emploi pour PME et ETI (assistants, automatisation, analyse de documents) : ce sont des produits. Le second regroupe des accompagnements portés par Bpifrance, comme le Diag Data IA et l’Accélérateur IA, menés par des experts agréés.
 
 Dans les deux cas, le prestataire n’est pas librement choisi. Un atelier de cadrage stratégique comme Cap IA n’est ni un produit du catalogue ni une prestation d’expert agréé : il ne relève pas de ces dispositifs et ne doit pas être présenté comme finançable par eux. Les Agents IA d’EXEC’IA, eux, sont des solutions produit : elles pourraient relever d’un catalogue de ce type, à condition d’y être retenues.
 
@@ -2344,9 +2274,7 @@ Cinq vérifications évitent les mauvaises surprises : votre entreprise est-elle
 
 Les conditions précises sont publiées par les organismes eux-mêmes (France Num, Bpifrance, entreprises.gouv.fr) et évoluent : elles se vérifient à la source, au moment du dépôt.
 
-### Par où commencer, concrètement ?
-
-Par le problème, pas par le guichet. Formulez ce que l’IA doit changer dans votre activité, identifiez où elle crée de la valeur, priorisez un premier projet. Le financement se cherche ensuite, en fonction de ce projet.
+Par où commencer, concrètement ? Par le problème, pas par le guichet. Formulez ce que l’IA doit changer dans votre activité, identifiez où elle crée de la valeur, priorisez un premier projet. Le financement se cherche ensuite, en fonction de ce projet.
 
 Financement et conformité s’anticipent dès le cadrage : pour cette seconde question, voir le guide AI Act et RGPD pour une PME .
 
@@ -2356,9 +2284,7 @@ Cinq erreurs reviennent : monter un projet pour correspondre à une aide, ignore
 
 La dernière mérite une vérification systématique : selon les dispositifs, la demande doit parfois précéder le démarrage de la prestation. Cette règle se lit dans les conditions officielles, avant tout engagement.
 
-### Que faire si votre entreprise n’est pas éligible ?
-
-Ne pas renoncer au projet. Une entreprise non éligible peut financer un premier usage sur ses propres moyens, en commençant petit : une tâche, une équipe, un résultat mesurable. C’est d’ailleurs la meilleure façon de savoir si le projet mérite un investissement plus large.
+Que faire si votre entreprise n’est pas éligible ? Ne pas renoncer au projet. Une entreprise non éligible peut financer un premier usage sur ses propres moyens, en commençant petit : une tâche, une équipe, un résultat mesurable. C’est d’ailleurs la meilleure façon de savoir si le projet mérite un investissement plus large.
 
 L’absence d’aide n’est pas un verdict sur la valeur du projet. Elle change simplement le rythme et la taille du premier pas.
 
@@ -2368,9 +2294,7 @@ En revenant à la question de départ : quel problème voulez-vous résoudre ? L
 
 Un dirigeant qui a clarifié son problème lit un catalogue d’aides comme une liste d’options. Celui qui ne l’a pas fait le lit comme une liste de contraintes.
 
-### Que retenir avant de déposer un dossier ?
-
-Trois choses. Le projet doit exister sans l’aide, même en plus petit. Les conditions doivent être vérifiées à la source, à la date du dépôt. Et la conformité doit être pensée dès le cadrage, pas après le déploiement.
+Quelles trois choses garder en tête ? Trois choses. Le projet doit exister sans l’aide, même en plus petit. Les conditions doivent être vérifiées à la source, à la date du dépôt. Et la conformité doit être pensée dès le cadrage, pas après le déploiement.
 
 Si ces trois points sont acquis, l’aide devient ce qu’elle doit être : un accélérateur d’un projet déjà choisi, et non la raison de le choisir.
 
@@ -2390,7 +2314,7 @@ Source : France Num, IA Booster · France Num, Diag Data IA · entreprises.gouv.
 
 Valérie Mailland
 
-Fondatrice d'EXEC'IA Consulting. 20+ ans auprès de dirigeants, 18 ans chez McKinsey & Company. Suivre sur LinkedIn →
+Fondatrice d’EXEC’IA Consulting. Plus de 20 ans auprès de dirigeants, 18 ans chez McKinsey & Company. Suivre sur LinkedIn →
 ---
 
 # Can your AI project be funded? Yes, but not necessarily the one you have in mind. [EN]
@@ -2422,7 +2346,7 @@ The provider is therefore not freely chosen, and the diagnosis does not replace 
 
 ## Which main families of support exist for an AI project?
 
-Three families stand out, each with its own logic. Diagnostic schemes fund an analysis, such as Diag Data IA. Solution catalogues list ready-to-use products, such as the Osez l’IA plan. Finally, more general national or regional schemes support digital transformation or investment.
+Three families stand out, each with its own logic. Diagnostic schemes fund an analysis, such as Diag Data IA. Solution catalogues list ready-to-use products, such as one of the two strands of the Osez l’IA plan. Finally, more general national or regional schemes support digital transformation or investment.
 
 None of these families is interchangeable with the others. Confusing a funded diagnosis with a funded deployment is one of the most frequent mistakes.
 
@@ -2432,9 +2356,7 @@ Because, depending on the scheme, the provider is either freely chosen or select
 
 Funding obtained for a provider who does not fit the project costs time, even when it costs no money.
 
-### How do you combine a funded diagnosis with a strategic project?
-
-By keeping each in its place. The technical diagnosis clarifies what is possible with your data and tools. The strategic choice decides what deserves to be done, in what order, with what means.
+How do you combine a funded diagnosis with a strategic project? By keeping each in its place. The technical diagnosis clarifies what is possible with your data and tools. The strategic choice decides what deserves to be done, in what order, with what means.
 
 The second ideally comes before the first: a diagnosis well targeted on an already prioritised use brings far more than a general diagnosis with no precise question.
 
@@ -2444,9 +2366,7 @@ Not necessarily. Waiting for support can delay by several months a project whose
 
 A modest first use, run on a precise task, brings lessons that no application file can replace. It also makes the next step easier to defend, including in front of a funding body.
 
-### Does “Osez l’IA” fund any kind of consulting?
-
-No. The national Osez l’IA plan has two strands. The first is a catalogue of ready-to-use AI solutions for SMEs and mid-sized companies (assistants, automation, document analysis): these are products. The second groups support delivered through Bpifrance, such as Diag Data IA and the AI Accelerator, carried out by approved experts.
+Does “Osez l’IA” fund any kind of consulting? No. The national Osez l’IA plan has two strands. The first is a catalogue of ready-to-use AI solutions for SMEs and mid-sized companies (assistants, automation, document analysis): these are products. The second groups support delivered through Bpifrance, such as Diag Data IA and the AI Accelerator, carried out by approved experts.
 
 In both cases, the provider is not freely chosen. A strategic scoping workshop such as Cap IA is neither a catalogue product nor an approved expert’s service: it falls outside these schemes and should not be presented as fundable by them. EXEC’IA’s AI Agents, by contrast, are product solutions: they could fall under a catalogue of this kind, provided they are selected.
 
@@ -2456,9 +2376,7 @@ Five checks avoid unpleasant surprises: is your company eligible (size, turnover
 
 Precise conditions are published by the bodies themselves (France Num, Bpifrance, entreprises.gouv.fr) and change over time: check them at the source, when you apply.
 
-### Where do you start, in practice?
-
-With the problem, not the counter. State what AI should change in your business, identify where it creates value, prioritise a first project. Funding comes afterwards, based on that project.
+Where do you start, in practice? With the problem, not the counter. State what AI should change in your business, identify where it creates value, prioritise a first project. Funding comes afterwards, based on that project.
 
 Funding and compliance should both be anticipated at the scoping stage: for the second, see the AI Act and GDPR guide for an SME .
 
@@ -2468,9 +2386,7 @@ Five mistakes come back: building a project to fit a scheme, ignoring the out-of
 
 The last deserves a systematic check: depending on the scheme, the application sometimes has to come before the service starts. That rule is found in the official conditions, before any commitment.
 
-### What if your company is not eligible?
-
-Do not give up on the project. An ineligible company can fund a first use with its own means, starting small: one task, one team, one measurable result. That is, incidentally, the best way to find out whether the project deserves a wider investment.
+What if your company is not eligible? Do not give up on the project. An ineligible company can fund a first use with its own means, starting small: one task, one team, one measurable result. That is, incidentally, the best way to find out whether the project deserves a wider investment.
 
 The absence of support is not a verdict on the project’s value. It simply changes the pace and the size of the first step.
 
@@ -2480,9 +2396,7 @@ By coming back to the starting question: what problem do you want to solve? Sche
 
 A leader who has clarified their problem reads a catalogue of support as a list of options. One who has not reads it as a list of constraints.
 
-### What should you keep in mind before filing an application?
-
-Three things. The project must exist without the support, even if smaller. The conditions must be checked at the source, on the date of filing. And compliance must be thought through at the scoping stage, not after deployment.
+Which three things should you keep in mind? Three things. The project must exist without the support, even if smaller. The conditions must be checked at the source, on the date of filing. And compliance must be thought through at the scoping stage, not after deployment.
 
 If these three points are in place, the support becomes what it should be: an accelerator for a project already chosen, not the reason for choosing it.
 
@@ -2496,7 +2410,7 @@ Once the problem and the priority are clear, the funded diagnosis, the chosen so
 
 think to check which support you may claim?
 
-Source: France Num, IA Booster · France Num, Diag Data IA · entreprises.gouv.fr . Conditions checked on 24 September 2026, to be re-checked at the time of application.
+Source: France Num, IA Booster · France Num, Diag Data IA · entreprises.gouv.fr . Conditions checked on September 24, 2026, to be re-checked at the time of application.
 
 #ArtificialIntelligence #SME #Bpifrance #France2030 #OsezLIA #EXECIA #BlogEXECIA
 
@@ -2534,7 +2448,7 @@ El proveedor no se elige, por tanto, libremente, y el diagnóstico no sustituye 
 
 ## ¿Qué grandes familias de ayudas existen para un proyecto de IA?
 
-Se distinguen tres familias, con lógicas distintas. Los dispositivos de diagnóstico financian un análisis, como el Diag Data IA. Los catálogos de soluciones reúnen productos listos para usar, como el plan Osez l’IA. Por último, ayudas más generales, nacionales o regionales, apoyan la transformación digital o la inversión.
+Se distinguen tres familias, con lógicas distintas. Los dispositivos de diagnóstico financian un análisis, como el Diag Data IA. Los catálogos de soluciones reúnen productos listos para usar, como una de las dos vertientes del plan Osez l’IA. Por último, ayudas más generales, nacionales o regionales, apoyan la transformación digital o la inversión.
 
 Ninguna de estas familias es intercambiable con las demás. Confundir un diagnóstico financiado con un despliegue financiado es uno de los errores más frecuentes.
 
@@ -2544,9 +2458,7 @@ Porque, según el dispositivo, el proveedor se elige libremente o se selecciona 
 
 Una financiación obtenida para un proveedor que no encaja con el proyecto cuesta tiempo, incluso cuando no cuesta dinero.
 
-### ¿Cómo combinar un diagnóstico financiado con un proyecto estratégico?
-
-Manteniendo cada uno en su lugar. El diagnóstico técnico aclara lo que es posible con sus datos y sus herramientas. La decisión estratégica determina lo que merece hacerse, en qué orden y con qué medios.
+¿Cómo combinar un diagnóstico financiado con un proyecto estratégico? Manteniendo cada uno en su lugar. El diagnóstico técnico aclara lo que es posible con sus datos y sus herramientas. La decisión estratégica determina lo que merece hacerse, en qué orden y con qué medios.
 
 Lo ideal es que la segunda preceda al primero: un diagnóstico bien enfocado en un uso ya priorizado aporta mucho más que un diagnóstico general sin una pregunta precisa.
 
@@ -2556,9 +2468,7 @@ No necesariamente. Esperar una ayuda puede retrasar varios meses un proyecto cuy
 
 Un primer uso modesto, realizado sobre una tarea precisa, aporta enseñanzas que ningún expediente sustituye. También hace más fácil defender el paso siguiente, incluso ante un organismo financiador.
 
-### ¿«Osez l’IA» financia cualquier tipo de consultoría?
-
-No. El plan nacional Osez l’IA tiene dos vertientes. La primera es un catálogo de soluciones de IA listas para usar para pymes y empresas medianas (asistentes, automatización, análisis de documentos): son productos. La segunda reúne acompañamientos impulsados por Bpifrance, como el Diag Data IA y el Acelerador de IA, realizados por expertos homologados.
+¿«Osez l’IA» financia cualquier tipo de consultoría? No. El plan nacional Osez l’IA tiene dos vertientes. La primera es un catálogo de soluciones de IA listas para usar para pymes y empresas medianas (asistentes, automatización, análisis de documentos): son productos. La segunda reúne acompañamientos impulsados por Bpifrance, como el Diag Data IA y el Acelerador de IA, realizados por expertos homologados.
 
 En ambos casos, el proveedor no se elige libremente. Un taller de enfoque estratégico como Cap IA no es ni un producto del catálogo ni un servicio de experto homologado: queda fuera de estos dispositivos y no debe presentarse como financiable con ellos. Los Agentes IA de EXEC’IA, en cambio, son soluciones de producto: podrían entrar en un catálogo de este tipo, siempre que sean seleccionadas.
 
@@ -2568,9 +2478,7 @@ Cinco comprobaciones evitan malas sorpresas: ¿es elegible su empresa (tamaño, 
 
 Las condiciones exactas las publican los propios organismos (France Num, Bpifrance, entreprises.gouv.fr) y cambian con el tiempo: se comprueban en la fuente, en el momento de la solicitud.
 
-### ¿Por dónde empezar, en concreto?
-
-Por el problema, no por la ventanilla. Formule qué debe cambiar la IA en su actividad, identifique dónde crea valor y priorice un primer proyecto. La financiación se busca después, en función de ese proyecto.
+¿Por dónde empezar, en concreto? Por el problema, no por la ventanilla. Formule qué debe cambiar la IA en su actividad, identifique dónde crea valor y priorice un primer proyecto. La financiación se busca después, en función de ese proyecto.
 
 Financiación y cumplimiento se anticipan desde el enfoque: para lo segundo, vea la guía AI Act y RGPD para una PYME .
 
@@ -2580,9 +2488,7 @@ Se repiten cinco errores: montar un proyecto para encajar en una ayuda, ignorar 
 
 El último merece una comprobación sistemática: según los dispositivos, la solicitud a veces debe preceder al inicio del servicio. Esta regla se lee en las condiciones oficiales, antes de cualquier compromiso.
 
-### ¿Qué hacer si su empresa no es elegible?
-
-No renunciar al proyecto. Una empresa no elegible puede financiar un primer uso con sus propios medios, empezando en pequeño: una tarea, un equipo, un resultado medible. Es, además, la mejor manera de saber si el proyecto merece una inversión mayor.
+¿Qué hacer si su empresa no es elegible? No renunciar al proyecto. Una empresa no elegible puede financiar un primer uso con sus propios medios, empezando en pequeño: una tarea, un equipo, un resultado medible. Es, además, la mejor manera de saber si el proyecto merece una inversión mayor.
 
 La ausencia de ayuda no es un veredicto sobre el valor del proyecto. Cambia simplemente el ritmo y el tamaño del primer paso.
 
@@ -2592,9 +2498,7 @@ Volviendo a la pregunta de partida: ¿qué problema quiere resolver? Los disposi
 
 Un directivo que ha aclarado su problema lee un catálogo de ayudas como una lista de opciones. El que no lo ha hecho lo lee como una lista de restricciones.
 
-### ¿Qué recordar antes de presentar un expediente?
-
-Tres cosas. El proyecto debe existir sin la ayuda, aunque sea más pequeño. Las condiciones deben comprobarse en la fuente, en la fecha de la solicitud. Y el cumplimiento debe pensarse desde el enfoque, no después del despliegue.
+¿Qué tres cosas tener presentes? Tres cosas. El proyecto debe existir sin la ayuda, aunque sea más pequeño. Las condiciones deben comprobarse en la fuente, en la fecha de la solicitud. Y el cumplimiento debe pensarse desde el enfoque, no después del despliegue.
 
 Si estos tres puntos están resueltos, la ayuda se convierte en lo que debe ser: un acelerador de un proyecto ya elegido, y no la razón para elegirlo.
 
@@ -2614,4 +2518,4 @@ Fuente: France Num, IA Booster · France Num, Diag Data IA · entreprises.gouv.f
 
 Valérie Mailland
 
-Fundadora de EXEC'IA Consulting. 20+ años junto a directivos, 18 años en McKinsey & Company. Seguir en LinkedIn →
+Fundadora de EXEC'IA Consulting. Más de 20 años junto a directivos, 18 años en McKinsey & Company. Seguir en LinkedIn →
