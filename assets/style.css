@@ -7197,7 +7197,7 @@ body > section#perspectives.snap-page:first-of-type { padding-top: calc(var(--na
 .article-title br { display: block; }
 
 /* Texte des articles : aligné à gauche, avec un retour à la ligne soigné (évite les lignes très courtes et les mots isolés) */
-.article-book .article-intro p, .article-book .article-close p { text-align: left; text-wrap: pretty; }
+.article-book .article-intro p, .article-book .article-close p, .article-book .art-list li { text-align: left; text-wrap: pretty; hyphens: auto; -webkit-hyphens: auto; hyphenate-limit-chars: 6 3 3; }
 
 /* Suites de questions ou de vérifications : une ligne par élément, à puces ou numérotées (plus lisible qu'un paragraphe continu) */
 .art-list { list-style: none; margin: 12px 0 4px; padding: 0; counter-reset: artl; }
