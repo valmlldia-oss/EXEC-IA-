@@ -7196,10 +7196,8 @@ body > section#perspectives.snap-page:first-of-type { padding-top: calc(var(--na
 .art-num::before { content: attr(data-n) "."; color: var(--rose); font-family: var(--sans); font-weight: 600; margin-right: .45em; }
 .article-title br { display: block; }
 
-/* Texte des articles justifié sur ordinateur : bord droit net, plus d'effet d'escalier (les retours à la ligne ne changent pas, seuls les espaces s'ajustent) */
-@media (min-width: 900px) {
-  .article-book .article-intro p, .article-book .article-close p { text-align: justify; text-justify: inter-word; }
-}
+/* Texte des articles : aligné à gauche, avec un retour à la ligne soigné (évite les lignes très courtes et les mots isolés) */
+.article-book .article-intro p, .article-book .article-close p { text-align: left; text-wrap: pretty; }
 
 /* Suites de questions ou de vérifications : une ligne par élément, à puces ou numérotées (plus lisible qu'un paragraphe continu) */
 .art-list { list-style: none; margin: 12px 0 4px; padding: 0; counter-reset: artl; }
