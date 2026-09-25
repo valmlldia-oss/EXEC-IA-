@@ -3000,7 +3000,7 @@ Cinq vérifications évitent les mauvaises surprises : votre entreprise est-elle
 
 Les conditions précises sont publiées par les organismes eux-mêmes (France Num, Bpifrance, entreprises.gouv.fr) et évoluent : elles se vérifient à la source, au moment du dépôt.
 
-Par où commencer, concrètement ? Par le problème, pas par le guichet. Formulez ce que l’IA doit changer dans votre activité, identifiez où elle crée de la valeur, priorisez un premier projet. Le financement se cherche ensuite, en fonction de ce projet.
+Par où commencer, concrètement ? Par le problème, pas par le guichet. Formulez ce que l’IA doit changer dans votre activité. Identifiez où elle crée de la valeur. Priorisez un premier projet. Le financement se cherche ensuite, en fonction de ce projet.
 
 Financement et conformité s’anticipent dès le cadrage : pour cette seconde question, voir le guide AI Act et RGPD pour une PME .
 
@@ -3112,7 +3112,7 @@ Five checks avoid unpleasant surprises: is your company eligible (size, turnover
 
 Precise conditions are published by the bodies themselves (France Num, Bpifrance, entreprises.gouv.fr) and change over time: check them at the source, when you apply.
 
-Where do you start, in practice? With the problem, not the counter. State what AI should change in your business, identify where it creates value, prioritise a first project. Funding comes afterwards, based on that project.
+Where do you start, in practice? With the problem, not the counter. State what AI should change in your business. Identify where it creates value. Prioritise a first project. Funding comes afterwards, based on that project.
 
 Funding and compliance should both be anticipated at the scoping stage: for the second, see the AI Act and GDPR guide for an SME .
 
@@ -3224,7 +3224,7 @@ Cinco comprobaciones evitan malas sorpresas: ¿es elegible su empresa (tamaño, 
 
 Las condiciones exactas las publican los propios organismos (France Num, Bpifrance, entreprises.gouv.fr) y cambian con el tiempo: se comprueban en la fuente, en el momento de la solicitud.
 
-¿Por dónde empezar, en concreto? Por el problema, no por la ventanilla. Formule qué debe cambiar la IA en su actividad, identifique dónde crea valor y priorice un primer proyecto. La financiación se busca después, en función de ese proyecto.
+¿Por dónde empezar, en concreto? Por el problema, no por la ventanilla. Formule qué debe cambiar la IA en su actividad. Identifique dónde crea valor. Priorice un primer proyecto. La financiación se busca después, en función de ese proyecto.
 
 Financiación y cumplimiento se anticipan desde el enfoque: para lo segundo, vea la guía AI Act y RGPD para una PYME .
 
