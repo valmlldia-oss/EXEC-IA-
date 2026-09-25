@@ -1232,13 +1232,19 @@ section { padding: var(--section-gap) 0; }
 /* Desktop large : les 4 fiches Perspectives tiennent ensemble, sans scroll —
    espaces resserrés, largeurs égales. En dessous, on garde le carrousel. */
 @media (min-width: 1160px) {
+  /* Huit articles : quatre cartes visibles à la fois, à leur taille d'origine, les autres se font défiler (souris glissée ou pavé tactile) */
   .persp-track {
     gap: 16px;
-    width: 100%;
+    width: max-content;
     padding-right: 0;
   }
-  .persp-track-outer { overflow-x: visible; scroll-snap-type: none; }
-  .persp-card { width: auto; flex: 1 1 0; min-width: 0; }
+  .persp-track-outer { overflow-x: auto; scroll-snap-type: x mandatory; padding-top: .6rem; container-type: inline-size; scroll-padding-left: 0; }
+  .persp-card { width: 270px; flex: 0 0 auto; min-width: 0; }
+}
+@supports (width: 1cqw) {
+  @media (min-width: 1160px) {
+    .persp-card { width: calc((100cqw - 48px) / 4); }
+  }
 }
 @media (max-width: 640px) {
   .persp-card { width: 82vw; }
