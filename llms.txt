@@ -15,19 +15,27 @@ Contenu intégral des 4 articles Perspectives et du guide AI Act/RGPD pour PME (
 
 ## Perspectives (articles)
 
-- [Perspectives — le blog d'EXEC'IA](https://exec-ia.ai/perspectives.html): Page d'index des 4 articles (aussi en [anglais](https://exec-ia.ai/perspectives-en.html) et [espagnol](https://exec-ia.ai/perspectives-es.html)).
+- [Perspectives — le blog d'EXEC'IA](https://exec-ia.ai/perspectives.html): Page d'index des 8 articles (aussi en [anglais](https://exec-ia.ai/perspectives-en.html) et [espagnol](https://exec-ia.ai/perspectives-es.html)).
 
 - [L'entreprise utilise déjà l'IA](https://exec-ia.ai/perspective-entreprise-utilise-deja-ia.html): Sur l'écart entre adoption d'outils IA et création de valeur réelle.
 - [Le problème n'est pas les outils mais l'arbitrage](https://exec-ia.ai/perspective-probleme-nest-pas-outils-mais-arbitrage.html): Sur la priorisation des usages IA en comité de direction.
 - [Toutes les décisions ne se délèguent pas](https://exec-ia.ai/perspective-toutes-decisions-ne-se-deleguent-pas.html): Sur les limites de la délégation à l'IA.
 - [La transformation échoue rarement à cause de la technologie](https://exec-ia.ai/perspective-transformation-echoue-rarement-technologie.html): Sur les vrais facteurs d'échec des projets de transformation IA.
+- [Le budget IA n’est pas le sujet. L’adhésion, si.](https://exec-ia.ai/perspective-budget-ia-adhesion-equipes.html): Sur l'écart entre budget IA et adhésion des équipes.
+- [Une politique IA que ses dirigeants ne respectent pas n’est plus une politique.](https://exec-ia.ai/perspective-shadow-ia-charte-comite-direction.html): Sur l'usage non validé d'outils IA et la gouvernance.
+- [Le chatbot d’Air France répond seul à 30 % des demandes. Le reste, il sait passer la main.](https://exec-ia.ai/perspective-chatbot-savoir-passer-la-main.html): Sur la frontière entre automatisation et relation humaine.
+- [Votre projet IA peut-il être financé ? Oui, mais pas forcément celui que vous pensez.](https://exec-ia.ai/perspective-projet-ia-peut-il-etre-finance.html): Sur les aides publiques au financement d'un projet IA.
 
-Ces 4 articles existent aussi en anglais et en espagnol :
+Ces articles existent aussi en anglais et en espagnol :
 
 - [Adopting AI is one thing. Creating value is another](https://exec-ia.ai/perspective-entreprise-utilise-deja-ia-en.html) · [Adoptar la IA es una cosa. Crear valor, otra](https://exec-ia.ai/perspective-entreprise-utilise-deja-ia-es.html)
 - [More AI tools, not more impact](https://exec-ia.ai/perspective-probleme-nest-pas-outils-mais-arbitrage-en.html) · [Más herramientas de IA, no más impacto](https://exec-ia.ai/perspective-probleme-nest-pas-outils-mais-arbitrage-es.html)
 - [Not every decision can be delegated](https://exec-ia.ai/perspective-toutes-decisions-ne-se-deleguent-pas-en.html) · [No todas las decisiones se delegan](https://exec-ia.ai/perspective-toutes-decisions-ne-se-deleguent-pas-es.html)
 - [AI transformation rarely fails because of the technology](https://exec-ia.ai/perspective-transformation-echoue-rarement-technologie-en.html) · [La transformación con IA rara vez fracasa por la tecnología](https://exec-ia.ai/perspective-transformation-echoue-rarement-technologie-es.html)
+- [The AI budget is not the issue. Buy-in is.](https://exec-ia.ai/perspective-budget-ia-adhesion-equipes-en.html) · [El presupuesto de IA no es el tema. La adhesión, sí.](https://exec-ia.ai/perspective-budget-ia-adhesion-equipes-es.html)
+- [An AI policy that its own leaders do not follow is no longer a policy.](https://exec-ia.ai/perspective-shadow-ia-charte-comite-direction-en.html) · [Una política de IA que sus directivos no respetan deja de ser una política.](https://exec-ia.ai/perspective-shadow-ia-charte-comite-direction-es.html)
+- [Air France’s chatbot answers 30% of requests alone. For the rest, it knows when to hand over.](https://exec-ia.ai/perspective-chatbot-savoir-passer-la-main-en.html) · [El chatbot de Air France responde solo al 30 % de las consultas. El resto, sabe pasarlo a una persona.](https://exec-ia.ai/perspective-chatbot-savoir-passer-la-main-es.html)
+- [Can your AI project be funded? Yes, but not necessarily the one you have in mind.](https://exec-ia.ai/perspective-projet-ia-peut-il-etre-finance-en.html) · [¿Se puede financiar su proyecto de IA? Sí, pero no necesariamente el que usted imagina.](https://exec-ia.ai/perspective-projet-ia-peut-il-etre-finance-es.html)
 
 ## Guide conformité IA
 

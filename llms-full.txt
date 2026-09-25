@@ -1665,3 +1665,639 @@ Una entrevista gratuita de 30 minutos para situar sus usos actuales de IA, antes
 
 Reservar mi punto sobre AI Act y RGPD →
 30 minutos · Gratis · Sin compromiso
+
+---
+
+# Le budget IA n’est pas le sujet. L’adhésion, si. [FR]
+URL: https://exec-ia.ai/perspective-budget-ia-adhesion-equipes.html
+
+# Le budget IA n’est pas le sujet. L’adhésion, si.
+
+25 septembre 2026
+
+Un budget IA généreux ne garantit pas que les équipes s’en serviront. Une étude HubSpot menée auprès de marketeurs montre un écart marqué entre l’investissement des entreprises et l’envie des salariés d’utiliser l’outil. Trois leviers font la différence : expliquer avant d’équiper, former sur les usages du quotidien, prouver un résultat concret sur un petit périmètre avant d’étendre.
+
+Un budget généreux validé sans discussion. Des équipes qui ne suivent pas au même rythme. Ce scénario, je l’ai déjà vu dans des comités de direction, bien avant que l’IA ne devienne le sujet.
+
+Une étude HubSpot, découverte en 2026, le confirme : 98 % des entreprises avaient renforcé leurs investissements en IA en 2025. Seulement la moitié de leurs salariés (51 %) avaient envie de s’en servir.
+
+Cette étude porte sur des marketeurs. Elle se lit comme un signal, pas comme une statistique valable pour toutes les fonctions. Mais le signal est net : le budget n’est pas le sujet. L’adhésion, si.
+
+## 🔑 Pourquoi l’adhésion pèse-t-elle plus lourd que le budget ?
+
+Parce qu’un outil ne change jamais une organisation tout seul. Ce sont les équipes qui décident, chaque jour, de l’utiliser ou de le contourner.
+
+La résistance ne vient presque jamais de la technologie. Elle vient des habitudes qu’on lui demande de remplacer.
+
+### 🎯 Quels leviers font vraiment la différence ?
+
+Trois leviers, du plus simple au plus exigeant : expliquer avant d’équiper, former sur les usages, prouver tôt.
+
+### Pourquoi expliquer avant d’équiper ?
+
+Le pourquoi précède toujours l’outil. Une équipe qui comprend ce que l’outil change dans son travail quotidien, et ce qu’il ne change pas, l’adopte plus facilement qu’une équipe à qui l’on annonce un déploiement.
+
+### Comment former sans noyer les équipes ?
+
+En partant des usages du quotidien, pas de la liste des fonctionnalités. Une heure sur une tâche que la personne fait chaque semaine vaut mieux qu’une journée de démonstration générale.
+
+### Quand étendre l’outil à toute l’organisation ?
+
+Après avoir prouvé un résultat concret, tôt, sur un périmètre restreint. Ce résultat devient l’argument, à la place de la promesse. L’extension se fait alors avec des équipes qui ont déjà vu ce que l’outil apporte.
+
+💬 Et vous, l’écart entre investissement
+
+et adhésion, vous le mesurez comment ?
+
+Source : HubSpot, « Tendances de l’IA pour les marketeurs 2025 », étude menée en 2025 auprès de plus de 1 500 marketeurs dans le monde.
+
+#IntelligenceArtificielle #Leadership #TransformationIA #Gouvernance #EXECIA
+
+Valérie Mailland
+
+Fondatrice d'EXEC'IA Consulting. 20+ ans auprès de dirigeants, 18 ans chez McKinsey & Company. Suivre sur LinkedIn →
+
+---
+
+# The AI budget is not the issue. Buy-in is. [EN]
+URL: https://exec-ia.ai/perspective-budget-ia-adhesion-equipes-en.html
+
+# The AI budget is not the issue. Buy-in is.
+
+25 September 2026
+
+A generous AI budget does not guarantee that teams will use the tool. A HubSpot study of marketers shows a wide gap between company investment and employees’ appetite for using it. Three levers make the difference: explain before equipping, train on everyday uses, and prove a concrete result on a small scope before scaling up.
+
+A generous budget approved without discussion. Teams that do not move at the same pace. I have seen this scenario in executive committees, long before AI became the topic.
+
+A HubSpot study, which I came across in 2026, confirms it: 98% of companies had increased their AI investment in 2025. Only half of their employees (51%) wanted to use it.
+
+The study covers marketers. Read it as a signal, not as a statistic that holds for every function. But the signal is clear: the budget is not the issue. Buy-in is.
+
+## 🔑 Why does buy-in weigh more than budget?
+
+Because a tool never changes an organisation on its own. Teams decide every day whether to use it or work around it.
+
+Resistance almost never comes from the technology. It comes from the habits the tool is asked to replace.
+
+### 🎯 Which levers really make the difference?
+
+Three levers, from the simplest to the most demanding: explain before equipping, train on real uses, prove early.
+
+### Why explain before equipping?
+
+The why always comes before the tool. A team that understands what the tool changes in its daily work, and what it does not change, adopts it more readily than a team told that a rollout is coming.
+
+### How do you train without overwhelming teams?
+
+By starting from everyday uses, not from the list of features. One hour on a task a person does every week is worth more than a day of general demonstration.
+
+### When should the tool be extended to the whole organisation?
+
+After proving a concrete result, early, on a limited scope. That result becomes the argument, in place of the promise. The rollout then reaches teams who have already seen what the tool delivers.
+
+💬 And you, how do you measure the gap
+
+between investment and buy-in?
+
+Source: HubSpot, “AI Trends for Marketers 2025”, a 2025 study of more than 1,500 marketers worldwide.
+
+#ArtificialIntelligence #Leadership #AITransformation #Governance #EXECIA
+
+Valérie Mailland
+
+Founder of EXEC'IA Consulting. 20+ years alongside executives, 18 years at McKinsey & Company. Follow on LinkedIn →
+
+---
+
+# El presupuesto de IA no es el tema. La adhesión, sí. [ES]
+URL: https://exec-ia.ai/perspective-budget-ia-adhesion-equipes-es.html
+
+# El presupuesto de IA no es el tema. La adhesión, sí.
+
+25 de septiembre de 2026
+
+Un presupuesto generoso de IA no garantiza que los equipos usen la herramienta. Un estudio de HubSpot con profesionales de marketing muestra una brecha marcada entre la inversión de las empresas y las ganas de los empleados de usarla. Tres palancas marcan la diferencia: explicar antes de equipar, formar en los usos del día a día y demostrar un resultado concreto en un ámbito reducido antes de ampliar.
+
+Un presupuesto generoso aprobado sin discusión. Equipos que no avanzan al mismo ritmo. Este escenario ya lo he visto en comités de dirección, mucho antes de que la IA fuera el tema.
+
+Un estudio de HubSpot, que descubrí en 2026, lo confirma: el 98 % de las empresas había reforzado su inversión en IA en 2025. Solo la mitad de sus empleados (51 %) tenía ganas de usarla.
+
+El estudio se refiere a profesionales de marketing. Debe leerse como una señal, no como una estadística válida para todas las funciones. Pero la señal es nítida: el presupuesto no es el tema. La adhesión, sí.
+
+## 🔑 ¿Por qué pesa más la adhesión que el presupuesto?
+
+Porque una herramienta nunca cambia sola a una organización. Son los equipos quienes deciden cada día si la usan o la rodean.
+
+La resistencia casi nunca viene de la tecnología. Viene de los hábitos que se le pide reemplazar.
+
+### 🎯 ¿Qué palancas marcan de verdad la diferencia?
+
+Tres palancas, de la más sencilla a la más exigente: explicar antes de equipar, formar en los usos y demostrar pronto.
+
+### ¿Por qué explicar antes de equipar?
+
+El porqué precede siempre a la herramienta. Un equipo que entiende qué cambia la herramienta en su trabajo diario, y qué no cambia, la adopta con más facilidad que un equipo al que se le anuncia un despliegue.
+
+### ¿Cómo formar sin abrumar a los equipos?
+
+Partiendo de los usos del día a día, no de la lista de funcionalidades. Una hora sobre una tarea que la persona hace cada semana vale más que una jornada de demostración general.
+
+### ¿Cuándo ampliar la herramienta a toda la organización?
+
+Después de haber demostrado un resultado concreto, pronto, en un ámbito reducido. Ese resultado se convierte en el argumento, en lugar de la promesa. La ampliación llega entonces a equipos que ya han visto lo que aporta la herramienta.
+
+💬 Y usted, la brecha entre inversión
+
+y adhesión, ¿cómo la mide?
+
+Fuente: HubSpot, «Tendencias de la IA para profesionales de marketing 2025», estudio de 2025 con más de 1500 profesionales de marketing en todo el mundo.
+
+#InteligenciaArtificial #Liderazgo #TransformaciónIA #Gobernanza #EXECIA
+
+Valérie Mailland
+
+Fundadora de EXEC'IA Consulting. 20+ años junto a directivos, 18 años en McKinsey & Company. Seguir en LinkedIn →
+
+---
+
+# Une politique IA que ses dirigeants ne respectent pas n’est plus une politique. [FR]
+URL: https://exec-ia.ai/perspective-shadow-ia-charte-comite-direction.html
+
+# Une politique IA que ses dirigeants ne respectent pas n’est plus une politique.
+
+25 septembre 2026
+
+Une étude WalkMe de juillet 2025 indique que 78 % des salariés utilisent des outils d’IA que leur entreprise n’a jamais validés, et que 93 % des cadres dirigeants interrogés font de même. Le sujet n’est pas la discipline des équipes mais la gouvernance qui l’entoure. Trois réflexes : reconnaître l’usage réel avant de l’interdire, offrir des outils sûrs et simples, interroger d’abord les pratiques du comité de direction.
+
+On rédige une charte IA en comité de direction. Dans l’ascenseur, chacun retourne pourtant à son outil IA personnel.
+
+Une étude WalkMe menée en juillet 2025 le confirme à grande échelle : 78 % des salariés utilisent des outils IA que leur entreprise n’a jamais validés. Plus surprenant encore, 93 % des cadres dirigeants interrogés font exactement la même chose.
+
+## 🔍 Pourquoi le shadow IA n’est-il pas une question de discipline ?
+
+Parce que l’usage est massif, et qu’il est partagé jusqu’en haut de l’organisation. Quand la quasi-totalité des personnes interrogées contourne la règle, ce n’est plus un problème d’individus : c’est le signe que la règle ne répond pas au besoin.
+
+Le sujet, ce n’est pas la discipline des équipes. C’est la gouvernance qui l’entoure.
+
+Une politique IA que ses propres dirigeants ne respectent pas n’est plus une politique. C’est une fiction partagée.
+
+### 🎯 Quels réflexes changent la donne ?
+
+### Pourquoi reconnaître l’usage réel avant de l’interdire ?
+
+Parce qu’il existe déjà, qu’on le veuille ou non. Interdire un usage que l’on ne connaît pas le fait passer dans l’ombre. Le recenser, sans chercher de coupable, donne enfin une image fidèle de ce que font les équipes.
+
+### Comment offrir des outils sûrs plus simples que ceux qu’on cache ?
+
+En proposant des outils approuvés dont la prise en main est aussi rapide que celle des outils personnels. Si l’option sûre est plus lourde que l’option cachée, la seconde l’emportera. Le cadre réglementaire (AI Act, RGPD) est détaillé dans notre guide AI Act et RGPD pour une PME .
+
+### Pourquoi commencer par les pratiques du comité de direction ?
+
+Parce que la cohérence commence en haut. Un comité de direction qui regarde honnêtement ses propres usages donne à la charte une crédibilité qu’aucune note interne ne peut remplacer.
+
+Une organisation ne sécurise jamais ce qu’elle refuse de regarder en face. En matière d’IA, prévenir vaut décidément mieux que guérir.
+
+💬 Et vous, savez-vous vraiment quels outils
+
+IA vos équipes utilisent aujourd’hui ?
+
+Source : WalkMe, étude menée en juillet 2025, relayée par SAP News et CIO.com.
+
+#IntelligenceArtificielle #Leadership #Gouvernance #ShadowIA #EXECIA
+
+Valérie Mailland
+
+Fondatrice d'EXEC'IA Consulting. 20+ ans auprès de dirigeants, 18 ans chez McKinsey & Company. Suivre sur LinkedIn →
+
+---
+
+# An AI policy that its own leaders do not follow is no longer a policy. [EN]
+URL: https://exec-ia.ai/perspective-shadow-ia-charte-comite-direction-en.html
+
+# An AI policy that its own leaders do not follow is no longer a policy.
+
+25 September 2026
+
+A WalkMe study from July 2025 finds that 78% of employees use AI tools their company has never approved, and that 93% of the executives surveyed do the same. The issue is not team discipline but the governance around it. Three reflexes: acknowledge real usage before banning it, offer safe and simple tools, and start by examining the leadership team’s own practices.
+
+An AI policy is drafted in the executive committee. In the lift afterwards, everyone goes back to their personal AI tool.
+
+A WalkMe study run in July 2025 confirms it at scale: 78% of employees use AI tools their company has never approved. Even more surprising, 93% of the executives surveyed do exactly the same.
+
+## 🔍 Why is shadow AI not a question of discipline?
+
+Because usage is massive, and shared all the way to the top of the organisation. When nearly everyone surveyed works around the rule, this is no longer a problem of individuals: it is a sign that the rule does not meet the need.
+
+The issue is not team discipline. It is the governance around it.
+
+An AI policy that its own leaders do not follow is no longer a policy. It is a shared fiction.
+
+### 🎯 Which reflexes change the game?
+
+### Why acknowledge real usage before banning it?
+
+Because it already exists, whether we like it or not. Banning a use you do not know about pushes it into the shadows. Mapping it, without hunting for culprits, finally gives an accurate picture of what teams actually do.
+
+### How do you offer safe tools that are simpler than the ones people hide?
+
+By providing approved tools that are as quick to pick up as personal ones. If the safe option is heavier than the hidden one, the hidden one wins. The regulatory framework (AI Act, GDPR) is set out in our AI Act and GDPR guide for an SME .
+
+### Why start with the leadership team’s own practices?
+
+Because consistency starts at the top. An executive committee that looks honestly at its own usage gives the policy a credibility that no internal memo can replace.
+
+An organisation never secures what it refuses to look at. With AI, prevention is decidedly better than cure.
+
+💬 And you, do you really know which AI tools
+
+your teams use today?
+
+Source: WalkMe, study run in July 2025, relayed by SAP News and CIO.com.
+
+#ArtificialIntelligence #Leadership #Governance #ShadowAI #EXECIA
+
+Valérie Mailland
+
+Founder of EXEC'IA Consulting. 20+ years alongside executives, 18 years at McKinsey & Company. Follow on LinkedIn →
+
+---
+
+# Una política de IA que sus directivos no respetan deja de ser una política. [ES]
+URL: https://exec-ia.ai/perspective-shadow-ia-charte-comite-direction-es.html
+
+# Una política de IA que sus directivos no respetan deja de ser una política.
+
+25 de septiembre de 2026
+
+Un estudio de WalkMe de julio de 2025 indica que el 78 % de los empleados usa herramientas de IA que su empresa nunca ha validado, y que el 93 % de los altos directivos encuestados hace lo mismo. El tema no es la disciplina de los equipos, sino la gobernanza que la rodea. Tres reflejos: reconocer el uso real antes de prohibirlo, ofrecer herramientas seguras y sencillas, y empezar por las prácticas del comité de dirección.
+
+Se redacta una carta de uso de la IA en el comité de dirección. En el ascensor, cada uno vuelve sin embargo a su herramienta de IA personal.
+
+Un estudio de WalkMe realizado en julio de 2025 lo confirma a gran escala: el 78 % de los empleados usa herramientas de IA que su empresa nunca ha validado. Más sorprendente aún, el 93 % de los altos directivos encuestados hace exactamente lo mismo.
+
+## 🔍 ¿Por qué el shadow IA no es una cuestión de disciplina?
+
+Porque el uso es masivo y llega hasta lo más alto de la organización. Cuando casi todos los encuestados se saltan la regla, ya no es un problema de personas: es la señal de que la regla no responde a la necesidad.
+
+El tema no es la disciplina de los equipos. Es la gobernanza que la rodea.
+
+Una política de IA que sus propios directivos no respetan deja de ser una política. Es una ficción compartida.
+
+### 🎯 ¿Qué reflejos cambian el juego?
+
+### ¿Por qué reconocer el uso real antes de prohibirlo?
+
+Porque ya existe, se quiera o no. Prohibir un uso que no se conoce lo empuja a la sombra. Registrarlo, sin buscar culpables, ofrece por fin una imagen fiel de lo que hacen los equipos.
+
+### ¿Cómo ofrecer herramientas seguras más sencillas que las que se ocultan?
+
+Proponiendo herramientas aprobadas que se aprendan tan rápido como las personales. Si la opción segura es más pesada que la oculta, ganará la oculta. El marco normativo (AI Act, RGPD) se detalla en nuestra guía AI Act y RGPD para una PYME .
+
+### ¿Por qué empezar por las prácticas del comité de dirección?
+
+Porque la coherencia empieza arriba. Un comité de dirección que mira con honestidad sus propios usos da a la política una credibilidad que ninguna nota interna puede sustituir.
+
+Una organización nunca protege lo que se niega a mirar de frente. En materia de IA, prevenir vale decididamente más que curar.
+
+💬 Y usted, ¿sabe de verdad qué herramientas
+
+de IA usan hoy sus equipos?
+
+Fuente: WalkMe, estudio realizado en julio de 2025, difundido por SAP News y CIO.com.
+
+#InteligenciaArtificial #Liderazgo #Gobernanza #ShadowIA #EXECIA
+
+Valérie Mailland
+
+Fundadora de EXEC'IA Consulting. 20+ años junto a directivos, 18 años en McKinsey & Company. Seguir en LinkedIn →
+
+---
+
+# Le chatbot d’Air France répond seul à 30 % des demandes. Le reste, il sait passer la main. [FR]
+URL: https://exec-ia.ai/perspective-chatbot-savoir-passer-la-main.html
+
+# Le chatbot d’Air France répond seul à 30 % des demandes. Le reste, il sait passer la main.
+
+25 septembre 2026
+
+Louis, l’assistant IA d’Air France, traite 30 % des demandes clients en totale autonomie et bascule le reste vers un humain, sans que le client doive tout redemander. Ce chiffre montre moins un progrès de l’IA que la frontière qu’Air France a appris à tracer. Trois signaux permettent de sentir la limite avant de la franchir, et reconnaître le bon moment pour passer la main reste un réflexe humain.
+
+Le chatbot d’Air France répond seul à 30 % des demandes clients. Le reste, il sait passer la main.
+
+Louis, l’assistant IA d’Air France, a fusionné plusieurs générations de chatbots spécialisés (bagages, inspiration voyage, grèves et retards) en un seul assistant, actif sur WhatsApp et Messenger.
+
+## 🤝 Que dit vraiment ce chiffre de 30 % ?
+
+Aujourd’hui, Louis traite 30 % des demandes clients en totale autonomie. Le reste bascule vers un humain, sans que le client ait besoin de tout redemander.
+
+Ce chiffre dit quelque chose d’important : ce n’est pas l’IA qui a le plus progressé. C’est la frontière qu’Air France a appris à tracer.
+
+Automatiser une demande fréquente libère du temps. Savoir répartir le reste, c’est le vrai savoir-faire.
+
+### Comment sentir la limite avant de la franchir ?
+
+Trois signaux permettent de la repérer.
+
+### Le client répète-t-il sa question avant d’obtenir une réponse utile ?
+
+Quand la même question revient plusieurs fois, l’outil ne répond pas au besoin réel. C’est le premier signal que la conversation doit changer de main.
+
+### Existe-t-il une option simple pour joindre un humain ?
+
+Si aucune option claire n’apparaît, le client se sent enfermé. Une bonne automatisation rend la sortie vers un interlocuteur humain visible et immédiate.
+
+### Le ton s’adapte-t-il à la gravité de la demande ?
+
+Le ton ne peut pas rester identique, que la demande soit anodine ou urgente : une grève de personnel n’appelle pas le même registre qu’une question de bagage. L’IA traite le volume. Reconnaître le bon moment pour passer la main à un humain, ça reste un réflexe humain.
+
+💬 Dans votre service client,
+
+où tracez-vous cette limite ?
+
+Source : Usine Digitale, L’Écho touristique (2024-2025).
+
+#IntelligenceArtificielle #RelationClient #ExperienceClient #ServiceClient #EXECIA
+
+Valérie Mailland
+
+Fondatrice d'EXEC'IA Consulting. 20+ ans auprès de dirigeants, 18 ans chez McKinsey & Company. Suivre sur LinkedIn →
+
+---
+
+# Air France’s chatbot answers 30% of requests alone. For the rest, it knows when to hand over. [EN]
+URL: https://exec-ia.ai/perspective-chatbot-savoir-passer-la-main-en.html
+
+# Air France’s chatbot answers 30% of requests alone. For the rest, it knows when to hand over.
+
+25 September 2026
+
+Louis, Air France’s AI assistant, handles 30% of customer requests fully autonomously and passes the rest to a human, without the customer having to start over. The figure says less about AI progress than about the boundary Air France has learned to draw. Three signals help sense the limit before crossing it, and recognising the right moment to hand over remains a human reflex.
+
+Air France’s chatbot answers 30% of customer requests on its own. For the rest, it knows when to hand over.
+
+Louis, Air France’s AI assistant, merged several generations of specialised chatbots (baggage, travel inspiration, strikes and delays) into a single assistant, active on WhatsApp and Messenger.
+
+## 🤝 What does that 30% figure really say?
+
+Today, Louis handles 30% of customer requests fully autonomously. The rest goes to a human, without the customer having to ask everything again.
+
+The figure says something important: it is not the AI that progressed the most. It is the boundary Air France learned to draw.
+
+Automating a frequent request frees up time. Knowing how to route the rest is the real skill.
+
+### How do you sense the limit before crossing it?
+
+Three signals help spot it.
+
+### Does the customer repeat the question before getting a useful answer?
+
+When the same question keeps coming back, the tool is not meeting the real need. It is the first signal that the conversation should change hands.
+
+### Is there a simple option to reach a human?
+
+If no clear option appears, customers feel trapped. Good automation makes the way out to a human contact visible and immediate.
+
+### Does the tone adapt to how serious the request is?
+
+The tone cannot stay the same whether the request is trivial or urgent: a staff strike does not call for the same register as a baggage question. AI handles the volume. Recognising the right moment to hand over to a human remains a human reflex.
+
+💬 In your customer service,
+
+where do you draw this limit?
+
+Source: Usine Digitale, L’Écho touristique (2024-2025).
+
+#ArtificialIntelligence #CustomerRelations #CustomerExperience #CustomerService #EXECIA
+
+Valérie Mailland
+
+Founder of EXEC'IA Consulting. 20+ years alongside executives, 18 years at McKinsey & Company. Follow on LinkedIn →
+
+---
+
+# El chatbot de Air France responde solo al 30 % de las consultas. El resto, sabe pasarlo a una persona. [ES]
+URL: https://exec-ia.ai/perspective-chatbot-savoir-passer-la-main-es.html
+
+# El chatbot de Air France responde solo al 30 % de las consultas. El resto, sabe pasarlo a una persona.
+
+25 de septiembre de 2026
+
+Louis, el asistente de IA de Air France, resuelve con total autonomía el 30 % de las consultas de los clientes y traslada el resto a una persona, sin que el cliente tenga que repetirlo todo. La cifra habla menos de un avance de la IA que de la frontera que Air France ha aprendido a trazar. Tres señales permiten notar el límite antes de cruzarlo, y reconocer el momento de pasar el relevo sigue siendo un reflejo humano.
+
+El chatbot de Air France responde solo al 30 % de las consultas de los clientes. El resto, sabe pasarlo a una persona.
+
+Louis, el asistente de IA de Air France, fusionó varias generaciones de chatbots especializados (equipaje, inspiración de viaje, huelgas y retrasos) en un único asistente, activo en WhatsApp y Messenger.
+
+## 🤝 ¿Qué dice realmente esa cifra del 30 %?
+
+Hoy, Louis resuelve con total autonomía el 30 % de las consultas. El resto pasa a una persona, sin que el cliente tenga que volver a explicarlo todo.
+
+La cifra dice algo importante: no es la IA la que más ha progresado. Es la frontera que Air France ha aprendido a trazar.
+
+Automatizar una consulta frecuente libera tiempo. Saber repartir el resto es el verdadero saber hacer.
+
+### ¿Cómo notar el límite antes de cruzarlo?
+
+Tres señales permiten detectarlo.
+
+### ¿El cliente repite su pregunta antes de obtener una respuesta útil?
+
+Cuando la misma pregunta vuelve varias veces, la herramienta no responde a la necesidad real. Es la primera señal de que la conversación debe cambiar de manos.
+
+### ¿Existe una opción sencilla para hablar con una persona?
+
+Si no aparece ninguna opción clara, el cliente se siente atrapado. Una buena automatización hace visible e inmediata la salida hacia un interlocutor humano.
+
+### ¿El tono se adapta a la gravedad de la consulta?
+
+El tono no puede ser el mismo si la consulta es trivial o urgente: una huelga de personal no pide el mismo registro que una pregunta sobre el equipaje. La IA gestiona el volumen. Reconocer el momento de pasar el relevo a una persona sigue siendo un reflejo humano.
+
+💬 En su servicio de atención al cliente,
+
+¿dónde traza usted este límite?
+
+Fuente: Usine Digitale, L’Écho touristique (2024-2025).
+
+#InteligenciaArtificial #RelaciónConElCliente #ExperienciaDeCliente #AtenciónAlCliente #EXECIA
+
+Valérie Mailland
+
+Fundadora de EXEC'IA Consulting. 20+ años junto a directivos, 18 años en McKinsey & Company. Seguir en LinkedIn →
+
+---
+
+# Votre projet IA peut-il être financé ? Oui, mais pas forcément celui que vous pensez. [FR]
+URL: https://exec-ia.ai/perspective-projet-ia-peut-il-etre-finance.html
+
+# Votre projet IA peut-il être financé ? Oui, mais pas forcément celui que vous pensez.
+
+Version étoffée d’une publication sur LinkedIn · 25 septembre 2026
+
+Oui, un projet IA peut être financé, mais pas forcément le vôtre, pas pour toutes les entreprises et pas toutes les prestations. Le diagnostic Diag Data IA finance une analyse technique menée par un expert agréé. Le catalogue Osez l’IA référence des solutions prêtes à l’emploi, pas du conseil stratégique. Une aide ne doit jamais déterminer votre projet : on choisit d’abord le problème à résoudre, puis on regarde les aides.
+
+Tout est parti d’un audit de la visibilité de mon site sur Google et dans les réponses des IA. Une question est remontée : quelles sont les questions que se posent réellement mes futurs clients ?
+
+Parmi elles : « Existe-t-il des aides pour financer mon projet IA ? » Bonne question. Je suis donc allée regarder de plus près.
+
+Osez l’IA, France 2030, Bpifrance, Diag Data IA, France Num, dispositifs régionaux… Les possibilités existent. Mais derrière le mot « aide », les réalités sont très différentes : entreprise éligible ou non, prestation finançable ou non, prestataire librement choisi ou sélectionné, taux de prise en charge, reste à charge.
+
+## 💶 Une aide doit-elle déterminer votre projet IA ?
+
+Non, jamais. L’ordre devrait rester celui-ci : quel problème voulez-vous résoudre ? Où l’IA peut-elle réellement créer de la valeur ? Quel projet faut-il prioriser ? Et seulement ensuite : quelles aides peuvent s’appliquer ?
+
+Un projet monté pour correspondre à une aide risque de ne résoudre aucun problème réel.
+
+### Que finance le Diag Data IA ?
+
+Pour les PME et ETI de 10 à 2 000 salariés, le programme IA Booster de Bpifrance, dans le cadre de France 2030, propose une sensibilisation gratuite, puis un Diag Data IA cofinancé à 40 % : 10 000 € HT, dont 6 000 € HT à charge de l’entreprise. Ce dispositif finance un diagnostic technique mené par un expert agréé Bpifrance.
+
+Le prestataire n’est donc pas librement choisi, et le diagnostic ne remplace pas l’arbitrage stratégique en amont : quel usage prioriser, et pourquoi celui-là.
+
+### « Osez l’IA » finance-t-il du conseil ?
+
+Non. Le plan national Osez l’IA, porté par la Direction générale des Entreprises et le Hub France IA, référence un catalogue de solutions IA pour PME et ETI : des solutions prêtes à l’emploi (assistants, automatisation, analyse de documents). C’est un catalogue de produits, pas de conseil.
+
+Concrètement, un atelier de cadrage stratégique comme Cap IA ne relève pas de ce dispositif, et il ne faut pas laisser croire qu’il serait finançable par lui. Les solutions produit, comme les Agents IA d’EXEC’IA, sont d’une autre nature : ce sont elles que ce type de catalogue a vocation à référencer, à condition d’y être retenu.
+
+### Quelles questions poser avant de déposer un dossier ?
+
+Cinq vérifications évitent les mauvaises surprises : votre entreprise est-elle éligible (taille, chiffre d’affaires, secteur) ? La prestation visée est-elle finançable ? Pouvez-vous choisir librement votre prestataire, ou est-il imposé ? Quel est le taux de prise en charge ? Quel reste à charge, et pour quel résultat ?
+
+Les conditions précises sont publiées par les organismes eux-mêmes (France Num, Bpifrance, entreprises.gouv.fr) et évoluent : elles se vérifient à la source, au moment du dépôt.
+
+### Par où commencer, concrètement ?
+
+Par le problème, pas par le guichet. Formulez ce que l’IA doit changer dans votre activité, identifiez où elle crée de la valeur, priorisez un premier projet. Le financement se cherche ensuite, en fonction de ce projet.
+
+Financement et conformité s’anticipent dès le cadrage : pour cette seconde question, voir le guide AI Act et RGPD pour une PME .
+
+💬 Avant d’investir dans un projet IA, auriez-vous
+
+le réflexe de vérifier les aides possibles ?
+
+Source : France Num, IA Booster · France Num, Diag Data IA · entreprises.gouv.fr . Conditions vérifiées le 24/09/2026, à revalider au moment du dépôt.
+
+#IntelligenceArtificielle #PME #Bpifrance #France2030 #OsezLIA #EXECIA #BlogEXECIA
+
+Valérie Mailland
+
+Fondatrice d'EXEC'IA Consulting. 20+ ans auprès de dirigeants, 18 ans chez McKinsey & Company. Suivre sur LinkedIn →
+
+---
+
+# Can your AI project be funded? Yes, but not necessarily the one you have in mind. [EN]
+URL: https://exec-ia.ai/perspective-projet-ia-peut-il-etre-finance-en.html
+
+# Can your AI project be funded? Yes, but not necessarily the one you have in mind.
+
+Expanded version of a LinkedIn post · 25 September 2026
+
+Yes, an AI project can be funded, but not necessarily yours, not for every company and not every service. The Diag Data IA scheme funds a technical analysis carried out by an approved expert. The Osez l’IA catalogue lists ready-to-use solutions, not strategic consulting. A subsidy should never determine your project: first choose the problem to solve, then look at what support applies.
+
+It all started with an audit of my site’s visibility on Google and in AI answers. One question surfaced: what questions do my future clients really ask?
+
+Among them: “Is there any funding for my AI project?” Good question. So I went and looked more closely.
+
+Osez l’IA, France 2030, Bpifrance, Diag Data IA, France Num, regional schemes… The options exist. But behind the word “funding”, the realities differ widely: eligible company or not, fundable service or not, provider freely chosen or selected, funding rate, out-of-pocket cost.
+
+## 💶 Should funding determine your AI project?
+
+No, never. The order should stay the same: what problem do you want to solve? Where can AI really create value? Which project should be prioritised? And only then: which schemes may apply?
+
+A project built to fit a scheme risks solving no real problem.
+
+### What does Diag Data IA fund?
+
+For SMEs and mid-sized companies with 10 to 2,000 employees, Bpifrance’s IA Booster programme, under France 2030, offers free awareness-raising, then a Diag Data IA co-funded at 40%: €10,000 excl. VAT, of which €6,000 excl. VAT is paid by the company. The scheme funds a technical diagnosis carried out by a Bpifrance-approved expert.
+
+The provider is therefore not freely chosen, and the diagnosis does not replace the strategic choice upstream: which use to prioritise, and why that one.
+
+### Does “Osez l’IA” fund consulting?
+
+No. The national Osez l’IA plan, run by the French Directorate General for Enterprise and Hub France IA, lists a catalogue of AI solutions for SMEs and mid-sized companies: ready-to-use solutions (assistants, automation, document analysis). It is a product catalogue, not a consulting one.
+
+In practice, a strategic scoping workshop such as Cap IA falls outside the scheme, and no one should imply it could be funded by it. Product solutions, like EXEC’IA’s AI Agents, are of a different nature: they are what this kind of catalogue is meant to list, provided they are selected.
+
+### Which questions should you ask before filing an application?
+
+Five checks avoid unpleasant surprises: is your company eligible (size, turnover, sector)? Is the intended service fundable? Can you freely choose your provider, or is it imposed? What is the funding rate? What is the out-of-pocket cost, and for what result?
+
+Precise conditions are published by the bodies themselves (France Num, Bpifrance, entreprises.gouv.fr) and change over time: check them at the source, when you apply.
+
+### Where do you start, in practice?
+
+With the problem, not the counter. State what AI should change in your business, identify where it creates value, prioritise a first project. Funding comes afterwards, based on that project.
+
+Funding and compliance should both be anticipated at the scoping stage: for the second, see the AI Act and GDPR guide for an SME .
+
+💬 Before investing in an AI project, would you
+
+think to check which support you may claim?
+
+Source: France Num, IA Booster · France Num, Diag Data IA · entreprises.gouv.fr . Conditions checked on 24 September 2026, to be re-checked at the time of application.
+
+#ArtificialIntelligence #SME #Bpifrance #France2030 #OsezLIA #EXECIA #BlogEXECIA
+
+Valérie Mailland
+
+Founder of EXEC'IA Consulting. 20+ years alongside executives, 18 years at McKinsey & Company. Follow on LinkedIn →
+
+---
+
+# ¿Se puede financiar su proyecto de IA? Sí, pero no necesariamente el que usted imagina. [ES]
+URL: https://exec-ia.ai/perspective-projet-ia-peut-il-etre-finance-es.html
+
+# ¿Se puede financiar su proyecto de IA ? Sí, pero no necesariamente el que usted imagina.
+
+Versión ampliada de una publicación en LinkedIn · 25 de septiembre de 2026
+
+Sí, un proyecto de IA puede financiarse, pero no necesariamente el suyo, no para todas las empresas y no todos los servicios. El dispositivo Diag Data IA financia un análisis técnico realizado por un experto homologado. El catálogo Osez l’IA reúne soluciones listas para usar, no consultoría estratégica. Una ayuda nunca debe determinar su proyecto: primero se elige el problema que resolver, y después se miran las ayudas.
+
+Todo empezó con una auditoría de la visibilidad de mi sitio en Google y en las respuestas de las IA. Surgió una pregunta: ¿qué preguntas se hacen realmente mis futuros clientes?
+
+Entre ellas: «¿Existen ayudas para financiar mi proyecto de IA?». Buena pregunta. Así que fui a mirar de cerca.
+
+Osez l’IA, France 2030, Bpifrance, Diag Data IA, France Num, dispositivos regionales… Las posibilidades existen. Pero detrás de la palabra «ayuda», las realidades son muy distintas: empresa elegible o no, servicio financiable o no, proveedor elegido libremente o seleccionado, tasa de cobertura, importe a cargo de la empresa.
+
+## 💶 ¿Debe una ayuda determinar su proyecto de IA?
+
+No, nunca. El orden debería seguir siendo este: ¿qué problema quiere resolver? ¿Dónde puede la IA crear valor de verdad? ¿Qué proyecto conviene priorizar? Y solo después: ¿qué ayudas pueden aplicarse?
+
+Un proyecto montado para encajar en una ayuda corre el riesgo de no resolver ningún problema real.
+
+### ¿Qué financia el Diag Data IA?
+
+Para las pymes y empresas medianas de 10 a 2000 empleados, el programa IA Booster de Bpifrance, dentro de France 2030, ofrece una sensibilización gratuita y después un Diag Data IA cofinanciado al 40 %: 10 000 € sin IVA, de los cuales 6000 € sin IVA corren a cargo de la empresa. El dispositivo financia un diagnóstico técnico realizado por un experto homologado por Bpifrance.
+
+El proveedor no se elige, por tanto, libremente, y el diagnóstico no sustituye la decisión estratégica previa: qué uso priorizar y por qué ese.
+
+### ¿«Osez l’IA» financia consultoría?
+
+No. El plan nacional Osez l’IA, impulsado por la Dirección General de Empresas y el Hub France IA, reúne un catálogo de soluciones de IA para pymes y empresas medianas: soluciones listas para usar (asistentes, automatización, análisis de documentos). Es un catálogo de productos, no de consultoría.
+
+En la práctica, un taller de enfoque estratégico como Cap IA queda fuera de este dispositivo, y no debe darse a entender que pudiera financiarse con él. Las soluciones de producto, como los Agentes IA de EXEC’IA, son de otra naturaleza: son las que este tipo de catálogo tiene vocación de reunir, siempre que sean seleccionadas.
+
+### ¿Qué preguntas hacer antes de presentar un expediente?
+
+Cinco comprobaciones evitan malas sorpresas: ¿es elegible su empresa (tamaño, facturación, sector)? ¿Es financiable el servicio previsto? ¿Puede elegir libremente a su proveedor o le viene impuesto? ¿Cuál es la tasa de cobertura? ¿Qué importe queda a su cargo y para qué resultado?
+
+Las condiciones exactas las publican los propios organismos (France Num, Bpifrance, entreprises.gouv.fr) y cambian con el tiempo: se comprueban en la fuente, en el momento de la solicitud.
+
+### ¿Por dónde empezar, en concreto?
+
+Por el problema, no por la ventanilla. Formule qué debe cambiar la IA en su actividad, identifique dónde crea valor y priorice un primer proyecto. La financiación se busca después, en función de ese proyecto.
+
+Financiación y cumplimiento se anticipan desde el enfoque: para lo segundo, vea la guía AI Act y RGPD para una PYME .
+
+💬 Antes de invertir en un proyecto de IA, ¿tendría
+
+el reflejo de comprobar qué ayudas puede solicitar?
+
+Fuente: France Num, IA Booster · France Num, Diag Data IA · entreprises.gouv.fr . Condiciones comprobadas el 24 de septiembre de 2026, a revalidar en el momento de la solicitud.
+
+#InteligenciaArtificial #Pyme #Bpifrance #France2030 #OsezLIA #EXECIA #BlogEXECIA
+
+Valérie Mailland
+
+Fundadora de EXEC'IA Consulting. 20+ años junto a directivos, 18 años en McKinsey & Company. Seguir en LinkedIn →
