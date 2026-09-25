@@ -7114,12 +7114,60 @@ body > section#perspectives.snap-page:first-of-type { padding-top: calc(var(--na
 /* Bandeau gros chiffres : la précision sous McKinsey passe en majuscules, comme les autres légendes */
 .ss-subnote { text-transform: uppercase; font-size: .72em; letter-spacing: .06em; line-height: 1.55; }
 
-/* Pied de page : seconde colonne d'articles Perspectives (5 à 8), calée sur le bord gauche des boutons de langue.
-   Les liens descendent au bas de la colonne pour tomber sur les mêmes lignes que les quatre premiers. */
-.footer-col--langs { justify-content: flex-start; }
-.footer-col a.footer-persp-link--c2 { padding-left: 0; margin-top: -7px; }
-.footer-col a.footer-persp-link--first { margin-top: auto; }
+/* Pied de page : seconde colonne d'articles Perspectives (5 à 8).
+   Le bloc est posé en bas de la colonne des langues (alignement par le bas), son bord gauche sur celui des boutons English / Español.
+   Positionné hors flux : il ne modifie jamais la largeur des colonnes, aucun texte ne sort de la page. */
+.footer-col--langs { position: relative; }
+.footer-persp-c2 { position: absolute; left: 0; bottom: 0; display: flex; flex-direction: column; gap: 6px; }
+.footer-col .footer-persp-c2 a.footer-persp-link { margin-top: 0; padding-left: 0; white-space: nowrap; }
 @media (max-width: 900px) {
-  .footer-col a.footer-persp-link { white-space: normal; }
-  .footer-col a.footer-persp-link--first { margin-top: 6px; }
+  .footer-persp-c2 { position: static; margin-top: 14px; }
+  .footer-col .footer-persp-c2 a.footer-persp-link { white-space: normal; }
 }
+
+/* Navigation : en dessous de 1180 px, les sept rubriques et les boutons de langue ne tiennent plus sur une ligne
+   (les langues étaient coupées) : le menu passe en burger plus tôt. */
+@media (max-width: 1180px) {
+  .nav-links { display: none; }
+  .nav-burger { display: flex; }
+  #nav { overflow: visible; }
+  .nav-links.open {
+    display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start;
+    position: fixed; top: var(--nav-h); left: 0; right: 0; bottom: auto; width: 100vw; height: auto;
+    background: #633B4A; padding: 24px 28px 32px; gap: 22px; z-index: 998;
+    box-shadow: 0 12px 32px rgba(99,59,74,.25);
+  }
+  .nav-links.open a { color: #FAF6F2 !important; font-size: 1rem; max-width: none !important; }
+  .nav-links.open a::after { background: #C75F62; }
+}
+
+/* Pied de page : la signature et la mention IA ne restent sur une ligne que si la largeur le permet (sinon le pied dépassait de l'écran). */
+@media (max-width: 1260px) {
+  .footer-brand .footer-tag, .footer-brand .footer-mention-ia { white-space: normal; }
+}
+
+/* Tablette et petit ordinateur (jusqu'à 1100 px) : piliers d'À propos et fenêtre « 5 Essentiels » ne dépassent plus de l'écran. */
+@media (max-width: 1100px) {
+  .piliers { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .pilier { min-width: 0; }
+  .pilier-sub { white-space: normal; }
+  .pilier *, .newsletter-content *, .nl-box * { overflow-wrap: anywhere; }
+  .newsletter-inner > *, .newsletter-content, .nl-box { min-width: 0; max-width: 100%; }
+}
+
+@media (max-width: 1100px) {
+  .about-body, .about-body > * { min-width: 0; max-width: 100%; }
+  .persp-track-outer { max-width: 100%; }
+}
+@media (max-width: 900px) {
+  .constat-item, .constat-flip-inner, .constat-face { min-width: 0; max-width: 100%; }
+}
+
+/* Garde-fou : les phrases « sur une seule ligne » ne le restent que sur grand écran. En dessous de 1200 px elles reviennent à la ligne, jamais coupées. */
+@media (max-width: 1200px) {
+  .about-lede--1l, .about-principe-sub--1l, .tl-item--essec h3, .tl-item--essec .tl-role,
+  .tl-studeria-topics, .tl-studeria-quote, .agents-tasks-1l, .tl-intro--diff, .tl-one-line,
+  .article-page--guide .article-title--2l,
+  [style*="white-space:nowrap"], [style*="white-space: nowrap"] { white-space: normal !important; }
+}
+@media (max-width: 1300px) { .pilier-sub { white-space: normal; } }
