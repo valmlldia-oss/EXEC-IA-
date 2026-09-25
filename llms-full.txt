@@ -1689,6 +1689,24 @@ Parce qu’un outil ne change jamais une organisation tout seul. Ce sont les éq
 
 La résistance ne vient presque jamais de la technologie. Elle vient des habitudes qu’on lui demande de remplacer.
 
+## Que révèle l’écart entre investissement et envie d’utiliser l’outil ?
+
+Deux horloges tournent en parallèle. La première est celle de la décision : un budget se vote en quelques semaines, un outil se déploie en quelques mois. La seconde est celle des habitudes : elles se modifient au rythme des équipes, pas de l’agenda du comité de direction.
+
+Quand ces deux horloges ne sont pas synchronisées, l’organisation dépense pour un usage qui n’existe pas encore. Le tableau de bord indique que l’outil est déployé. La réalité du terrain indique qu’il est ouvert de temps en temps, puis oublié.
+
+### Pourquoi le budget dépensé est-il un mauvais indicateur ?
+
+Parce qu’il mesure une intention, pas un changement. Un budget dépensé prouve qu’une décision a été prise. Il ne dit rien de ce que les équipes font, lundi matin, différemment d’hier.
+
+Le bon indicateur est l’usage régulier : combien de personnes se servent de l’outil chaque semaine, pour quelle tâche précise, et qu’ont-elles cessé de faire à la main ?
+
+### Comment mesurer l’adhésion, concrètement ?
+
+Trois questions suffisent pour commencer. Qui l’utilise chaque semaine, et pour quoi ? Qui l’a essayé puis abandonné, et pourquoi ? Quelle tâche a réellement disparu ou raccourci ?
+
+Ces réponses se recueillent par une conversation de vingt minutes avec quelques membres de l’équipe, pas par un formulaire de satisfaction. Elles donnent une image plus fidèle que n’importe quelle statistique de connexion.
+
 ### 🎯 Quels leviers font vraiment la différence ?
 
 Trois leviers, du plus simple au plus exigeant : expliquer avant d’équiper, former sur les usages, prouver tôt.
@@ -1704,6 +1722,30 @@ En partant des usages du quotidien, pas de la liste des fonctionnalités. Une he
 ### Quand étendre l’outil à toute l’organisation ?
 
 Après avoir prouvé un résultat concret, tôt, sur un périmètre restreint. Ce résultat devient l’argument, à la place de la promesse. L’extension se fait alors avec des équipes qui ont déjà vu ce que l’outil apporte.
+
+### Que faire quand une équipe contourne l’outil ?
+
+Commencer par comprendre, avant de rappeler la règle. Un contournement n’est presque jamais de la mauvaise volonté. Il révèle un besoin que l’outil ne couvre pas, une étape trop lourde, ou une habitude que personne n’a aidé à transformer.
+
+Une équipe qui contourne un outil dit, sans le formuler, ce qu’elle attend de lui. C’est une information précieuse, à condition de la recueillir sans chercher de coupable.
+
+### Quel rôle le dirigeant joue-t-il dans l’adhésion ?
+
+Un rôle de démonstration plus que de décision. Un dirigeant qui utilise lui-même l’outil, qui dit à quoi il lui sert et où il l’a trouvé décevant, donne aux équipes la permission d’essayer et de dire ce qui ne marche pas.
+
+À l’inverse, un outil imposé sans être utilisé par ceux qui l’imposent envoie un message contraire à celui du discours.
+
+### Quelles erreurs éviter dans un déploiement ?
+
+Quatre erreurs reviennent : déployer partout en même temps, former sur la liste des fonctionnalités, annoncer sans expliquer le pourquoi, et juger le succès au budget consommé plutôt qu’à l’usage réel.
+
+Chacune a la même origine : traiter l’outil comme un achat à réussir plutôt que comme un changement de pratique à accompagner.
+
+### Comment lancer un pilote de trente jours ?
+
+Première semaine : choisir une équipe volontaire et une tâche qui revient chaque semaine, puis expliquer pourquoi. Deuxième semaine : former sur cette tâche uniquement. Troisième semaine : laisser l’équipe l’utiliser et noter ce qui gêne. Quatrième semaine : mesurer le résultat, décider de continuer, d’ajuster ou d’arrêter.
+
+À la fin du mois, le dirigeant dispose de quelque chose que le budget seul ne lui donnait pas : une preuve, dans son organisation, de ce que l’outil apporte ou non.
 
 💬 Et vous, l’écart entre investissement
 
@@ -1740,6 +1782,24 @@ Because a tool never changes an organisation on its own. Teams decide every day 
 
 Resistance almost never comes from the technology. It comes from the habits the tool is asked to replace.
 
+## What does the gap between investment and willingness to use the tool reveal?
+
+Two clocks run in parallel. The first is the clock of the decision: a budget is voted in a few weeks, a tool is rolled out in a few months. The second is the clock of habits: they change at the pace of the teams, not of the executive committee’s calendar.
+
+When these two clocks are not synchronised, the organisation spends money on a use that does not exist yet. The dashboard says the tool is deployed. The reality on the ground says it is opened from time to time, then forgotten.
+
+### Why is the budget spent a poor indicator?
+
+Because it measures an intention, not a change. A budget spent proves that a decision was taken. It says nothing about what teams do differently on Monday morning compared with yesterday.
+
+The right indicator is regular use: how many people use the tool each week, for which precise task, and what have they stopped doing by hand?
+
+### How do you measure buy-in, in practice?
+
+Three questions are enough to start. Who uses it every week, and for what? Who tried it and gave up, and why? Which task has really disappeared or become shorter?
+
+These answers come from a twenty-minute conversation with a few team members, not from a satisfaction form. They give a truer picture than any login statistic.
+
 ### 🎯 Which levers really make the difference?
 
 Three levers, from the simplest to the most demanding: explain before equipping, train on real uses, prove early.
@@ -1755,6 +1815,30 @@ By starting from everyday uses, not from the list of features. One hour on a tas
 ### When should the tool be extended to the whole organisation?
 
 After proving a concrete result, early, on a limited scope. That result becomes the argument, in place of the promise. The rollout then reaches teams who have already seen what the tool delivers.
+
+### What should you do when a team works around the tool?
+
+Start by understanding, before restating the rule. A workaround is almost never ill will. It reveals a need the tool does not cover, a step that is too heavy, or a habit nobody helped to change.
+
+A team that works around a tool is telling you, without saying it, what it expects from it. That is valuable information, provided you gather it without hunting for culprits.
+
+### What role does the leader play in buy-in?
+
+A role of demonstration more than of decision. A leader who uses the tool personally, who says what it is useful for and where it disappointed, gives teams permission to try and to say what does not work.
+
+Conversely, a tool imposed without being used by those who impose it sends a message that contradicts the speech.
+
+### Which mistakes should you avoid in a rollout?
+
+Four mistakes come back: deploying everywhere at once, training on the list of features, announcing without explaining the why, and judging success by the budget consumed rather than by real use.
+
+Each has the same origin: treating the tool as a purchase to succeed rather than as a change of practice to support.
+
+### How do you run a thirty-day pilot?
+
+Week one: choose a volunteer team and a task that recurs every week, then explain why. Week two: train on that task only. Week three: let the team use it and note what gets in the way. Week four: measure the result and decide to continue, adjust or stop.
+
+At the end of the month, the leader has something the budget alone never provided: proof, inside their own organisation, of what the tool brings or does not bring.
 
 💬 And you, how do you measure the gap
 
@@ -1791,6 +1875,24 @@ Porque una herramienta nunca cambia sola a una organización. Son los equipos qu
 
 La resistencia casi nunca viene de la tecnología. Viene de los hábitos que se le pide reemplazar.
 
+## ¿Qué revela la brecha entre inversión y ganas de usar la herramienta?
+
+Dos relojes giran en paralelo. El primero es el de la decisión: un presupuesto se aprueba en unas semanas, una herramienta se despliega en unos meses. El segundo es el de los hábitos: cambian al ritmo de los equipos, no de la agenda del comité de dirección.
+
+Cuando estos dos relojes no están sincronizados, la organización gasta en un uso que todavía no existe. El panel de control indica que la herramienta está desplegada. La realidad del terreno indica que se abre de vez en cuando y luego se olvida.
+
+### ¿Por qué el presupuesto gastado es un mal indicador?
+
+Porque mide una intención, no un cambio. Un presupuesto gastado demuestra que se tomó una decisión. No dice nada de lo que los equipos hacen de forma distinta el lunes por la mañana respecto a ayer.
+
+El buen indicador es el uso regular: cuántas personas usan la herramienta cada semana, para qué tarea concreta y qué han dejado de hacer a mano.
+
+### ¿Cómo medir la adhesión, en concreto?
+
+Tres preguntas bastan para empezar. ¿Quién la usa cada semana y para qué? ¿Quién la probó y la abandonó, y por qué? ¿Qué tarea ha desaparecido o se ha acortado realmente?
+
+Estas respuestas se obtienen con una conversación de veinte minutos con algunos miembros del equipo, no con un formulario de satisfacción. Dan una imagen más fiel que cualquier estadística de conexión.
+
 ### 🎯 ¿Qué palancas marcan de verdad la diferencia?
 
 Tres palancas, de la más sencilla a la más exigente: explicar antes de equipar, formar en los usos y demostrar pronto.
@@ -1806,6 +1908,30 @@ Partiendo de los usos del día a día, no de la lista de funcionalidades. Una ho
 ### ¿Cuándo ampliar la herramienta a toda la organización?
 
 Después de haber demostrado un resultado concreto, pronto, en un ámbito reducido. Ese resultado se convierte en el argumento, en lugar de la promesa. La ampliación llega entonces a equipos que ya han visto lo que aporta la herramienta.
+
+### ¿Qué hacer cuando un equipo rodea la herramienta?
+
+Empezar por comprender, antes de recordar la regla. Rodear una herramienta casi nunca es mala voluntad. Revela una necesidad que la herramienta no cubre, un paso demasiado pesado o un hábito que nadie ayudó a transformar.
+
+Un equipo que rodea una herramienta dice, sin formularlo, lo que espera de ella. Es una información valiosa, siempre que se recoja sin buscar culpables.
+
+### ¿Qué papel tiene el directivo en la adhesión?
+
+Un papel de demostración más que de decisión. Un directivo que usa él mismo la herramienta, que cuenta para qué le sirve y dónde le decepcionó, da a los equipos permiso para probar y para decir lo que no funciona.
+
+Al contrario, una herramienta impuesta sin que la usen quienes la imponen transmite un mensaje opuesto al del discurso.
+
+### ¿Qué errores evitar en un despliegue?
+
+Cuatro errores se repiten: desplegar en todas partes a la vez, formar sobre la lista de funcionalidades, anunciar sin explicar el porqué y juzgar el éxito por el presupuesto consumido en lugar del uso real.
+
+Todos tienen el mismo origen: tratar la herramienta como una compra que hay que lograr en lugar de un cambio de práctica que hay que acompañar.
+
+### ¿Cómo lanzar un piloto de treinta días?
+
+Primera semana: elegir un equipo voluntario y una tarea que se repita cada semana, y explicar el porqué. Segunda semana: formar solo sobre esa tarea. Tercera semana: dejar que el equipo la use y anotar lo que estorba. Cuarta semana: medir el resultado y decidir si continuar, ajustar o parar.
+
+Al final del mes, el directivo dispone de algo que el presupuesto solo no le daba: una prueba, dentro de su organización, de lo que la herramienta aporta o no.
 
 💬 Y usted, la brecha entre inversión
 
@@ -1842,6 +1968,24 @@ Le sujet, ce n’est pas la discipline des équipes. C’est la gouvernance qui 
 
 Une politique IA que ses propres dirigeants ne respectent pas n’est plus une politique. C’est une fiction partagée.
 
+## Que cache concrètement le shadow IA ?
+
+Derrière l’expression, il y a des personnes qui cherchent à gagner du temps : résumer un document, reformuler un message, préparer une réunion. Rien de malveillant, mais tout cela se fait avec des outils que l’entreprise n’a pas évalués, et parfois avec des informations qui ne devraient pas quitter l’organisation.
+
+Le risque n’est donc pas l’outil en lui-même. C’est l’absence de règle claire sur ce qu’on peut lui confier, et l’absence de visibilité pour la direction.
+
+### Quelles données ne doivent jamais sortir de l’entreprise ?
+
+Les informations sur les clients, les contrats, les données personnelles, les éléments financiers non publics et tout ce qui relève du secret des affaires. Une charte utile le dit en une phrase simple, avec des exemples que chacun reconnaît dans son travail.
+
+Sur le volet réglementaire, notamment le RGPD, notre guide détaille les obligations d’une PME qui utilise l’IA.
+
+### Comment recenser les usages sans chercher de coupable ?
+
+En posant la question d’une manière qui ne sanctionne pas : quels outils vous font gagner du temps, et pour quelles tâches ? Un échange en petit groupe ou un court questionnaire anonyme donne une image plus honnête qu’un contrôle.
+
+L’objectif est de faire remonter les besoins réels, puis de leur répondre avec des outils approuvés.
+
 ### 🎯 Quels réflexes changent la donne ?
 
 ### Pourquoi reconnaître l’usage réel avant de l’interdire ?
@@ -1857,6 +2001,30 @@ En proposant des outils approuvés dont la prise en main est aussi rapide que ce
 Parce que la cohérence commence en haut. Un comité de direction qui regarde honnêtement ses propres usages donne à la charte une crédibilité qu’aucune note interne ne peut remplacer.
 
 Une organisation ne sécurise jamais ce qu’elle refuse de regarder en face. En matière d’IA, prévenir vaut décidément mieux que guérir.
+
+### Que doit contenir une charte IA utile ?
+
+Cinq éléments suffisent souvent : les usages autorisés, les données interdites, les outils approuvés, une personne référente à qui poser une question, et une date de révision.
+
+Une charte de deux pages que chacun a lue vaut mieux qu’un document de vingt pages que personne n’ouvre. Elle doit aussi être écrite pour ceux qui l’utilisent, avec leurs tâches et leurs mots.
+
+### À quelle fréquence la réviser ?
+
+Régulièrement, parce que les outils et les usages évoluent vite. Un rythme trimestriel, avec un point court en comité de direction, permet d’ajouter un outil approuvé, de retirer un usage devenu risqué et de vérifier que la règle correspond toujours à la pratique.
+
+Une règle figée depuis un an décrit une situation qui n’existe plus.
+
+### Comment un dirigeant donne-t-il l’exemple ?
+
+En appliquant lui-même la charte, en disant quels outils il utilise et pour quoi, et en acceptant que la question lui soit posée. Quand les cadres dirigeants font ce qu’ils demandent aux autres de faire, la règle cesse d’être une contrainte pour devenir une norme partagée.
+
+C’est la condition pour que la politique cesse d’être une fiction et redevienne un outil de pilotage.
+
+### Par où commencer cette semaine ?
+
+Par une conversation d’une demi-heure en comité de direction : quels outils IA chacun utilise-t-il réellement, et avec quelles informations ? Cette conversation, franche et sans jugement, vaut plus qu’une nouvelle version de la charte.
+
+Elle fournit la seule base solide pour décider de ce qu’on autorise, de ce qu’on propose et de ce qu’on interdit.
 
 💬 Et vous, savez-vous vraiment quels outils
 
@@ -1893,6 +2061,24 @@ The issue is not team discipline. It is the governance around it.
 
 An AI policy that its own leaders do not follow is no longer a policy. It is a shared fiction.
 
+## What does shadow AI actually hide?
+
+Behind the expression, there are people trying to save time: summarising a document, rewording a message, preparing a meeting. Nothing malicious, but all of it happens with tools the company has not assessed, and sometimes with information that should not leave the organisation.
+
+The risk is therefore not the tool itself. It is the absence of a clear rule on what can be entrusted to it, and the absence of visibility for management.
+
+### Which data should never leave the company?
+
+Customer information, contracts, personal data, non-public financials and anything covered by business secrecy. A useful policy says so in one simple sentence, with examples everyone recognises from their own work.
+
+On the regulatory side, notably GDPR, our guide sets out the obligations of an SME that uses AI.
+
+### How do you map usage without hunting for culprits?
+
+By asking in a way that does not punish: which tools save you time, and for which tasks? A small-group conversation or a short anonymous questionnaire gives a more honest picture than a control exercise.
+
+The goal is to bring real needs to the surface, then answer them with approved tools.
+
 ### 🎯 Which reflexes change the game?
 
 ### Why acknowledge real usage before banning it?
@@ -1908,6 +2094,30 @@ By providing approved tools that are as quick to pick up as personal ones. If th
 Because consistency starts at the top. An executive committee that looks honestly at its own usage gives the policy a credibility that no internal memo can replace.
 
 An organisation never secures what it refuses to look at. With AI, prevention is decidedly better than cure.
+
+### What should a useful AI policy contain?
+
+Five elements are often enough: authorised uses, forbidden data, approved tools, a named person to ask, and a review date.
+
+A two-page policy that everyone has read is worth more than a twenty-page document nobody opens. It should also be written for those who use it, with their tasks and their words.
+
+### How often should it be reviewed?
+
+Regularly, because tools and uses change fast. A quarterly rhythm, with a short item on the executive committee agenda, lets you add an approved tool, remove a use that became risky and check that the rule still matches practice.
+
+A rule frozen for a year describes a situation that no longer exists.
+
+### How does a leader set the example?
+
+By applying the policy personally, saying which tools they use and for what, and accepting that the question is put to them. When executives do what they ask others to do, the rule stops being a constraint and becomes a shared norm.
+
+That is the condition for the policy to stop being a fiction and become a steering tool again.
+
+### Where do you start this week?
+
+With a half-hour conversation in the executive committee: which AI tools does each person really use, and with what information? That frank, judgement-free conversation is worth more than a new version of the policy.
+
+It provides the only solid basis for deciding what to allow, what to offer and what to forbid.
 
 💬 And you, do you really know which AI tools
 
@@ -1944,6 +2154,24 @@ El tema no es la disciplina de los equipos. Es la gobernanza que la rodea.
 
 Una política de IA que sus propios directivos no respetan deja de ser una política. Es una ficción compartida.
 
+## ¿Qué esconde concretamente el shadow IA?
+
+Detrás de la expresión hay personas que buscan ganar tiempo: resumir un documento, reformular un mensaje, preparar una reunión. Nada malintencionado, pero todo ello se hace con herramientas que la empresa no ha evaluado y, a veces, con información que no debería salir de la organización.
+
+El riesgo no es, por tanto, la herramienta en sí. Es la falta de una regla clara sobre lo que se le puede confiar y la falta de visibilidad para la dirección.
+
+### ¿Qué datos no deben salir nunca de la empresa?
+
+La información sobre clientes, los contratos, los datos personales, los elementos financieros no públicos y todo lo que entre en el secreto empresarial. Una política útil lo dice en una frase sencilla, con ejemplos que cada persona reconoce en su trabajo.
+
+En el plano normativo, en particular el RGPD, nuestra guía detalla las obligaciones de una pyme que utiliza IA.
+
+### ¿Cómo registrar los usos sin buscar culpables?
+
+Preguntando de una forma que no sancione: ¿qué herramientas le hacen ganar tiempo y para qué tareas? Una conversación en grupo pequeño o un breve cuestionario anónimo da una imagen más honesta que un control.
+
+El objetivo es hacer emerger las necesidades reales y responder a ellas con herramientas aprobadas.
+
 ### 🎯 ¿Qué reflejos cambian el juego?
 
 ### ¿Por qué reconocer el uso real antes de prohibirlo?
@@ -1959,6 +2187,30 @@ Proponiendo herramientas aprobadas que se aprendan tan rápido como las personal
 Porque la coherencia empieza arriba. Un comité de dirección que mira con honestidad sus propios usos da a la política una credibilidad que ninguna nota interna puede sustituir.
 
 Una organización nunca protege lo que se niega a mirar de frente. En materia de IA, prevenir vale decididamente más que curar.
+
+### ¿Qué debe contener una política de IA útil?
+
+Cinco elementos suelen bastar: los usos autorizados, los datos prohibidos, las herramientas aprobadas, una persona de referencia a quien preguntar y una fecha de revisión.
+
+Una política de dos páginas que todos han leído vale más que un documento de veinte que nadie abre. También debe estar escrita para quienes la utilizan, con sus tareas y sus palabras.
+
+### ¿Con qué frecuencia revisarla?
+
+Con regularidad, porque las herramientas y los usos cambian rápido. Un ritmo trimestral, con un punto breve en el comité de dirección, permite añadir una herramienta aprobada, retirar un uso que se ha vuelto arriesgado y comprobar que la regla sigue correspondiendo a la práctica.
+
+Una regla congelada desde hace un año describe una situación que ya no existe.
+
+### ¿Cómo da ejemplo un directivo?
+
+Aplicando él mismo la política, diciendo qué herramientas usa y para qué, y aceptando que se le haga la pregunta. Cuando los directivos hacen lo que piden a los demás, la regla deja de ser una restricción y se convierte en una norma compartida.
+
+Es la condición para que la política deje de ser una ficción y vuelva a ser una herramienta de dirección.
+
+### ¿Por dónde empezar esta semana?
+
+Con una conversación de media hora en el comité de dirección: ¿qué herramientas de IA usa realmente cada uno y con qué información? Esa conversación franca y sin juicios vale más que una nueva versión de la política.
+
+Ofrece la única base sólida para decidir qué se autoriza, qué se propone y qué se prohíbe.
 
 💬 Y usted, ¿sabe de verdad qué herramientas
 
@@ -1995,6 +2247,24 @@ Ce chiffre dit quelque chose d’important : ce n’est pas l’IA qui a le plus
 
 Automatiser une demande fréquente libère du temps. Savoir répartir le reste, c’est le vrai savoir-faire.
 
+## Pourquoi la passation compte-t-elle autant que l’automatisation ?
+
+Parce que le client ne juge pas la technologie, il juge le parcours. Une automatisation réussie sur 30 % des demandes peut être annulée par une seule passation ratée, celle où le client doit tout répéter à un conseiller qui ne sait rien de l’échange précédent.
+
+Une bonne passation transmet le contexte : ce que le client a demandé, ce que l’outil a répondu, ce qui reste à résoudre. Le conseiller reprend la conversation là où elle s’est arrêtée.
+
+### Quelles demandes ne jamais automatiser de bout en bout ?
+
+Celles où l’enjeu est élevé ou l’émotion forte : un litige, une situation d’urgence, un client en difficulté, une décision qui engage l’entreprise. Le volume de ces demandes est souvent faible, mais leur effet sur la confiance est disproportionné.
+
+Pour ces cas, la meilleure automatisation est celle qui repère la situation et prévient un humain rapidement.
+
+### Que retenir de l’exemple d’Air France ?
+
+Que le résultat ne tient pas à la sophistication de l’outil, mais à la clarté de la répartition des rôles. L’assistant traite ce qui est fréquent et simple. Les personnes traitent ce qui exige du jugement, de l’écoute ou une décision.
+
+Cette répartition n’est pas définitive : elle se révise à mesure que l’outil progresse et que les équipes apprennent ce qu’il fait bien.
+
 ### Comment sentir la limite avant de la franchir ?
 
 Trois signaux permettent de la repérer.
@@ -2010,6 +2280,30 @@ Si aucune option claire n’apparaît, le client se sent enfermé. Une bonne aut
 ### Le ton s’adapte-t-il à la gravité de la demande ?
 
 Le ton ne peut pas rester identique, que la demande soit anodine ou urgente : une grève de personnel n’appelle pas le même registre qu’une question de bagage. L’IA traite le volume. Reconnaître le bon moment pour passer la main à un humain, ça reste un réflexe humain.
+
+### Qui décide de la limite entre l’outil et la personne ?
+
+Une personne identifiée, pas un réglage technique. La limite est une décision de service : quelles demandes l’assistant traite seul, lesquelles il transmet, sur quels signaux. Elle doit avoir un propriétaire, être écrite et être révisée.
+
+Sans propriétaire, la limite se déplace par défaut, au gré des mises à jour, sans que personne l’ait choisie.
+
+### Comment savoir si la limite est bien placée ?
+
+En écoutant deux sources : les clients, à travers leurs retours et leurs demandes répétées, et les conseillers, qui voient ce qui leur arrive après la passation. Si les conseillers reçoivent souvent des demandes mal comprises, l’outil garde trop longtemps la main. S’ils reçoivent des demandes simples, il la passe trop tôt.
+
+Le pourcentage de demandes traitées seul est un résultat à lire avec prudence : il compte moins que la satisfaction de ceux qui sont passés par l’outil.
+
+### Par où commencer dans votre service client ?
+
+Par les demandes les plus fréquentes et les plus simples : c’est là que l’automatisation libère le plus de temps avec le moins de risque. En parallèle, définir dès le départ les signaux qui déclenchent le passage à une personne, et vérifier que ce passage est visible et rapide.
+
+Ensuite, élargir progressivement, en gardant toujours la même règle : l’outil traite le volume, la personne traite ce qui compte.
+
+### Quelle question poser à vos équipes ?
+
+Une seule : dans quels cas votre client a-t-il eu le sentiment de parler à quelqu’un qui ne le comprenait pas ? Les réponses dessinent presque toujours la frontière que l’organisation n’a pas encore tracée.
+
+C’est à cet endroit que se joue la qualité de la relation, bien plus que dans le pourcentage de demandes traitées.
 
 💬 Dans votre service client,
 
@@ -2046,6 +2340,24 @@ The figure says something important: it is not the AI that progressed the most. 
 
 Automating a frequent request frees up time. Knowing how to route the rest is the real skill.
 
+## Why does the handover matter as much as the automation?
+
+Because customers do not judge the technology, they judge the journey. A successful automation on 30% of requests can be cancelled by a single failed handover, the one where the customer has to repeat everything to an adviser who knows nothing about the previous exchange.
+
+A good handover passes on the context: what the customer asked, what the tool replied, what remains to be solved. The adviser picks up the conversation where it stopped.
+
+### Which requests should never be automated end to end?
+
+Those where the stakes are high or the emotion strong: a dispute, an emergency, a customer in difficulty, a decision that commits the company. The volume of these requests is often low, but their effect on trust is disproportionate.
+
+For these cases, the best automation is the one that spots the situation and alerts a human quickly.
+
+### What should you take from the Air France example?
+
+That the result does not come from the sophistication of the tool, but from the clarity of how roles are shared. The assistant handles what is frequent and simple. People handle what requires judgement, listening or a decision.
+
+This split is not final: it is revised as the tool improves and teams learn what it does well.
+
 ### How do you sense the limit before crossing it?
 
 Three signals help spot it.
@@ -2061,6 +2373,30 @@ If no clear option appears, customers feel trapped. Good automation makes the wa
 ### Does the tone adapt to how serious the request is?
 
 The tone cannot stay the same whether the request is trivial or urgent: a staff strike does not call for the same register as a baggage question. AI handles the volume. Recognising the right moment to hand over to a human remains a human reflex.
+
+### Who decides the limit between the tool and the person?
+
+A named person, not a technical setting. The limit is a service decision: which requests the assistant handles alone, which it passes on, and on which signals. It needs an owner, must be written down and reviewed.
+
+Without an owner, the limit drifts by default, with each update, without anyone having chosen it.
+
+### How do you know the limit is in the right place?
+
+By listening to two sources: customers, through their feedback and repeated requests, and advisers, who see what reaches them after the handover. If advisers often receive misunderstood requests, the tool keeps control too long. If they receive simple requests, it hands over too early.
+
+The percentage of requests handled alone is a result to read with care: it matters less than the satisfaction of those who went through the tool.
+
+### Where do you start in your customer service?
+
+With the most frequent and simplest requests: that is where automation frees the most time with the least risk. In parallel, define from the outset the signals that trigger a move to a person, and check that this move is visible and quick.
+
+Then widen gradually, always keeping the same rule: the tool handles the volume, the person handles what matters.
+
+### Which question should you ask your teams?
+
+Just one: in which cases did your customer feel they were talking to someone who did not understand them? The answers almost always draw the boundary the organisation has not yet drawn.
+
+That is where the quality of the relationship is decided, far more than in the percentage of requests handled.
 
 💬 In your customer service,
 
@@ -2097,6 +2433,24 @@ La cifra dice algo importante: no es la IA la que más ha progresado. Es la fron
 
 Automatizar una consulta frecuente libera tiempo. Saber repartir el resto es el verdadero saber hacer.
 
+## ¿Por qué importa tanto el traspaso como la automatización?
+
+Porque el cliente no juzga la tecnología, juzga el recorrido. Una automatización lograda en el 30 % de las consultas puede quedar anulada por un solo traspaso fallido, aquel en el que el cliente tiene que repetirlo todo a un asesor que no sabe nada del intercambio anterior.
+
+Un buen traspaso transmite el contexto: lo que el cliente pidió, lo que respondió la herramienta y lo que queda por resolver. El asesor retoma la conversación donde se detuvo.
+
+### ¿Qué consultas no automatizar nunca de principio a fin?
+
+Aquellas en las que hay mucho en juego o la emoción es fuerte: un litigio, una urgencia, un cliente en dificultades, una decisión que compromete a la empresa. El volumen de estas consultas suele ser bajo, pero su efecto en la confianza es desproporcionado.
+
+Para estos casos, la mejor automatización es la que detecta la situación y avisa rápidamente a una persona.
+
+### ¿Qué retener del ejemplo de Air France?
+
+Que el resultado no depende de lo sofisticada que sea la herramienta, sino de la claridad en el reparto de papeles. El asistente gestiona lo frecuente y sencillo. Las personas gestionan lo que exige criterio, escucha o una decisión.
+
+Este reparto no es definitivo: se revisa a medida que la herramienta progresa y los equipos aprenden lo que hace bien.
+
 ### ¿Cómo notar el límite antes de cruzarlo?
 
 Tres señales permiten detectarlo.
@@ -2112,6 +2466,30 @@ Si no aparece ninguna opción clara, el cliente se siente atrapado. Una buena au
 ### ¿El tono se adapta a la gravedad de la consulta?
 
 El tono no puede ser el mismo si la consulta es trivial o urgente: una huelga de personal no pide el mismo registro que una pregunta sobre el equipaje. La IA gestiona el volumen. Reconocer el momento de pasar el relevo a una persona sigue siendo un reflejo humano.
+
+### ¿Quién decide el límite entre la herramienta y la persona?
+
+Una persona identificada, no un ajuste técnico. El límite es una decisión de servicio: qué consultas resuelve el asistente por sí solo, cuáles traslada y con qué señales. Debe tener un responsable, estar escrito y revisarse.
+
+Sin responsable, el límite se desplaza por defecto, con cada actualización, sin que nadie lo haya elegido.
+
+### ¿Cómo saber si el límite está bien colocado?
+
+Escuchando dos fuentes: los clientes, a través de sus comentarios y de sus consultas repetidas, y los asesores, que ven lo que les llega tras el traspaso. Si los asesores reciben a menudo consultas mal entendidas, la herramienta conserva el control demasiado tiempo. Si reciben consultas sencillas, lo cede demasiado pronto.
+
+El porcentaje de consultas resueltas en solitario es un resultado que hay que leer con prudencia: importa menos que la satisfacción de quienes han pasado por la herramienta.
+
+### ¿Por dónde empezar en su servicio de atención al cliente?
+
+Por las consultas más frecuentes y sencillas: ahí es donde la automatización libera más tiempo con menos riesgo. En paralelo, definir desde el principio las señales que activan el paso a una persona y comprobar que ese paso es visible y rápido.
+
+Después, ampliar progresivamente, manteniendo siempre la misma regla: la herramienta gestiona el volumen, la persona gestiona lo que importa.
+
+### ¿Qué pregunta hacer a sus equipos?
+
+Solo una: ¿en qué casos tuvo su cliente la sensación de hablar con alguien que no lo entendía? Las respuestas dibujan casi siempre la frontera que la organización todavía no ha trazado.
+
+Es ahí donde se decide la calidad de la relación, mucho más que en el porcentaje de consultas resueltas.
 
 💬 En su servicio de atención al cliente,
 
@@ -2154,6 +2532,30 @@ Pour les PME et ETI de 10 à 2 000 salariés, le programme IA Booster de Bpifran
 
 Le prestataire n’est donc pas librement choisi, et le diagnostic ne remplace pas l’arbitrage stratégique en amont : quel usage prioriser, et pourquoi celui-là.
 
+## Quelles grandes familles d’aides existent pour un projet IA ?
+
+Trois familles se distinguent, avec des logiques différentes. Les dispositifs de diagnostic financent une analyse, comme le Diag Data IA. Les catalogues de solutions référencent des produits prêts à l’emploi, comme le plan Osez l’IA. Enfin, des aides plus générales, nationales ou régionales, soutiennent la transformation numérique ou l’investissement.
+
+Aucune de ces familles n’est interchangeable avec les autres. Confondre un diagnostic financé avec un déploiement financé est l’une des erreurs les plus fréquentes.
+
+### Pourquoi la question du prestataire est-elle décisive ?
+
+Parce que, selon le dispositif, le prestataire est soit librement choisi, soit sélectionné parmi une liste. Dans le premier cas, vous pouvez retenir celui qui comprend votre activité. Dans le second, le choix est encadré, et il faut vérifier que le prestataire proposé répond à votre besoin.
+
+Un financement obtenu pour un prestataire qui ne correspond pas au projet coûte du temps, même quand il ne coûte pas d’argent.
+
+### Comment articuler un diagnostic financé et un projet stratégique ?
+
+En gardant chacun à sa place. Le diagnostic technique éclaire ce qui est possible avec vos données et vos outils. L’arbitrage stratégique décide de ce qui mérite d’être fait, dans quel ordre, avec quels moyens.
+
+Le second précède idéalement le premier : un diagnostic bien ciblé sur un usage déjà priorisé apporte beaucoup plus qu’un diagnostic général sans question précise.
+
+### Faut-il attendre une aide pour démarrer ?
+
+Pas nécessairement. Attendre une aide peut retarder de plusieurs mois un projet dont la valeur est déjà claire, et pendant ce temps le problème reste entier. La bonne question n’est pas « aide ou pas d’aide », mais « quel premier pas puis-je faire dès maintenant, quelle que soit l’aide ? ».
+
+Un premier usage modeste, mené sur une tâche précise, apporte des enseignements qu’aucun dossier ne remplace. Il rend aussi la suite plus facile à défendre, y compris devant un organisme financeur.
+
 ### « Osez l’IA » finance-t-il du conseil ?
 
 Non. Le plan national Osez l’IA, porté par la Direction générale des Entreprises et le Hub France IA, référence un catalogue de solutions IA pour PME et ETI : des solutions prêtes à l’emploi (assistants, automatisation, analyse de documents). C’est un catalogue de produits, pas de conseil.
@@ -2171,6 +2573,36 @@ Les conditions précises sont publiées par les organismes eux-mêmes (France Nu
 Par le problème, pas par le guichet. Formulez ce que l’IA doit changer dans votre activité, identifiez où elle crée de la valeur, priorisez un premier projet. Le financement se cherche ensuite, en fonction de ce projet.
 
 Financement et conformité s’anticipent dès le cadrage : pour cette seconde question, voir le guide AI Act et RGPD pour une PME .
+
+### Quelles erreurs éviter quand on cherche une aide ?
+
+Cinq erreurs reviennent : monter un projet pour correspondre à une aide, ignorer le reste à charge, confondre diagnostic et déploiement, oublier la conformité (AI Act, RGPD) dans le cadrage, et s’y prendre trop tard.
+
+La dernière mérite une vérification systématique : selon les dispositifs, la demande doit parfois précéder le démarrage de la prestation. Cette règle se lit dans les conditions officielles, avant tout engagement.
+
+### Que faire si votre entreprise n’est pas éligible ?
+
+Ne pas renoncer au projet. Une entreprise non éligible peut financer un premier usage sur ses propres moyens, en commençant petit : une tâche, une équipe, un résultat mesurable. C’est d’ailleurs la meilleure façon de savoir si le projet mérite un investissement plus large.
+
+L’absence d’aide n’est pas un verdict sur la valeur du projet. Elle change simplement le rythme et la taille du premier pas.
+
+### Comment garder le cap face à la multiplicité des dispositifs ?
+
+En revenant à la question de départ : quel problème voulez-vous résoudre ? Les dispositifs sont nombreux, leurs conditions évoluent et leur vocabulaire change. Le problème à résoudre, lui, reste le même, et c’est lui qui doit guider le choix.
+
+Un dirigeant qui a clarifié son problème lit un catalogue d’aides comme une liste d’options. Celui qui ne l’a pas fait le lit comme une liste de contraintes.
+
+### Que retenir avant de déposer un dossier ?
+
+Trois choses. Le projet doit exister sans l’aide, même en plus petit. Les conditions doivent être vérifiées à la source, à la date du dépôt. Et la conformité doit être pensée dès le cadrage, pas après le déploiement.
+
+Si ces trois points sont acquis, l’aide devient ce qu’elle doit être : un accélérateur d’un projet déjà choisi, et non la raison de le choisir.
+
+### Quelle place pour un accompagnement stratégique avant une aide ?
+
+Une place en amont, sur la question que les dispositifs financent le moins : où l’IA crée-t-elle de la valeur dans votre organisation, et dans quel ordre agir ? C’est le rôle d’un atelier de cadrage comme Cap IA chez EXEC’IA, qui n’est pas un produit du catalogue Osez l’IA et ne relève pas de ces dispositifs.
+
+Une fois le problème et la priorité clarifiés, le diagnostic financé, la solution retenue et les éventuelles aides s’articulent beaucoup plus simplement. Vous choisissez avec un cap, au lieu de subir un menu.
 
 💬 Avant d’investir dans un projet IA, auriez-vous
 
@@ -2213,6 +2645,30 @@ For SMEs and mid-sized companies with 10 to 2,000 employees, Bpifrance’s IA Bo
 
 The provider is therefore not freely chosen, and the diagnosis does not replace the strategic choice upstream: which use to prioritise, and why that one.
 
+## Which main families of support exist for an AI project?
+
+Three families stand out, each with its own logic. Diagnostic schemes fund an analysis, such as Diag Data IA. Solution catalogues list ready-to-use products, such as the Osez l’IA plan. Finally, more general national or regional schemes support digital transformation or investment.
+
+None of these families is interchangeable with the others. Confusing a funded diagnosis with a funded deployment is one of the most frequent mistakes.
+
+### Why is the provider question decisive?
+
+Because, depending on the scheme, the provider is either freely chosen or selected from a list. In the first case, you can pick the one who understands your business. In the second, the choice is framed, and you need to check that the proposed provider meets your need.
+
+Funding obtained for a provider who does not fit the project costs time, even when it costs no money.
+
+### How do you combine a funded diagnosis with a strategic project?
+
+By keeping each in its place. The technical diagnosis clarifies what is possible with your data and tools. The strategic choice decides what deserves to be done, in what order, with what means.
+
+The second ideally comes before the first: a diagnosis well targeted on an already prioritised use brings far more than a general diagnosis with no precise question.
+
+### Should you wait for funding before starting?
+
+Not necessarily. Waiting for support can delay by several months a project whose value is already clear, and meanwhile the problem stays whole. The right question is not “support or no support” but “what first step can I take now, whatever the support?”.
+
+A modest first use, run on a precise task, brings lessons that no application file can replace. It also makes the next step easier to defend, including in front of a funding body.
+
 ### Does “Osez l’IA” fund consulting?
 
 No. The national Osez l’IA plan, run by the French Directorate General for Enterprise and Hub France IA, lists a catalogue of AI solutions for SMEs and mid-sized companies: ready-to-use solutions (assistants, automation, document analysis). It is a product catalogue, not a consulting one.
@@ -2230,6 +2686,36 @@ Precise conditions are published by the bodies themselves (France Num, Bpifrance
 With the problem, not the counter. State what AI should change in your business, identify where it creates value, prioritise a first project. Funding comes afterwards, based on that project.
 
 Funding and compliance should both be anticipated at the scoping stage: for the second, see the AI Act and GDPR guide for an SME .
+
+### Which mistakes should you avoid when looking for support?
+
+Five mistakes come back: building a project to fit a scheme, ignoring the out-of-pocket cost, confusing diagnosis and deployment, forgetting compliance (AI Act, GDPR) at the scoping stage, and starting too late.
+
+The last deserves a systematic check: depending on the scheme, the application sometimes has to come before the service starts. That rule is found in the official conditions, before any commitment.
+
+### What if your company is not eligible?
+
+Do not give up on the project. An ineligible company can fund a first use with its own means, starting small: one task, one team, one measurable result. That is, incidentally, the best way to find out whether the project deserves a wider investment.
+
+The absence of support is not a verdict on the project’s value. It simply changes the pace and the size of the first step.
+
+### How do you keep your bearings among so many schemes?
+
+By coming back to the starting question: what problem do you want to solve? Schemes are many, their conditions change and their vocabulary shifts. The problem to solve stays the same, and it is what should guide the choice.
+
+A leader who has clarified their problem reads a catalogue of support as a list of options. One who has not reads it as a list of constraints.
+
+### What should you keep in mind before filing an application?
+
+Three things. The project must exist without the support, even if smaller. The conditions must be checked at the source, on the date of filing. And compliance must be thought through at the scoping stage, not after deployment.
+
+If these three points are in place, the support becomes what it should be: an accelerator for a project already chosen, not the reason for choosing it.
+
+### What place for strategic support before funding?
+
+A place upstream, on the question that schemes fund least: where does AI create value in your organisation, and in what order should you act? That is the role of a scoping workshop such as EXEC’IA’s Cap IA, which is not a product in the Osez l’IA catalogue and does not fall under these schemes.
+
+Once the problem and the priority are clear, the funded diagnosis, the chosen solution and any support fit together much more simply. You choose with a direction, instead of enduring a menu.
 
 💬 Before investing in an AI project, would you
 
@@ -2272,6 +2758,30 @@ Para las pymes y empresas medianas de 10 a 2000 empleados, el programa IA Booste
 
 El proveedor no se elige, por tanto, libremente, y el diagnóstico no sustituye la decisión estratégica previa: qué uso priorizar y por qué ese.
 
+## ¿Qué grandes familias de ayudas existen para un proyecto de IA?
+
+Se distinguen tres familias, con lógicas distintas. Los dispositivos de diagnóstico financian un análisis, como el Diag Data IA. Los catálogos de soluciones reúnen productos listos para usar, como el plan Osez l’IA. Por último, ayudas más generales, nacionales o regionales, apoyan la transformación digital o la inversión.
+
+Ninguna de estas familias es intercambiable con las demás. Confundir un diagnóstico financiado con un despliegue financiado es uno de los errores más frecuentes.
+
+### ¿Por qué es decisiva la cuestión del proveedor?
+
+Porque, según el dispositivo, el proveedor se elige libremente o se selecciona de una lista. En el primer caso, puede escoger al que entiende su actividad. En el segundo, la elección está acotada y hay que comprobar que el proveedor propuesto responde a su necesidad.
+
+Una financiación obtenida para un proveedor que no encaja con el proyecto cuesta tiempo, incluso cuando no cuesta dinero.
+
+### ¿Cómo combinar un diagnóstico financiado con un proyecto estratégico?
+
+Manteniendo cada uno en su lugar. El diagnóstico técnico aclara lo que es posible con sus datos y sus herramientas. La decisión estratégica determina lo que merece hacerse, en qué orden y con qué medios.
+
+Lo ideal es que la segunda preceda al primero: un diagnóstico bien enfocado en un uso ya priorizado aporta mucho más que un diagnóstico general sin una pregunta precisa.
+
+### ¿Hay que esperar una ayuda para empezar?
+
+No necesariamente. Esperar una ayuda puede retrasar varios meses un proyecto cuyo valor ya está claro, y mientras tanto el problema sigue intacto. La buena pregunta no es «ayuda o no ayuda», sino «¿qué primer paso puedo dar ahora, sea cual sea la ayuda?».
+
+Un primer uso modesto, realizado sobre una tarea precisa, aporta enseñanzas que ningún expediente sustituye. También hace más fácil defender el paso siguiente, incluso ante un organismo financiador.
+
 ### ¿«Osez l’IA» financia consultoría?
 
 No. El plan nacional Osez l’IA, impulsado por la Dirección General de Empresas y el Hub France IA, reúne un catálogo de soluciones de IA para pymes y empresas medianas: soluciones listas para usar (asistentes, automatización, análisis de documentos). Es un catálogo de productos, no de consultoría.
@@ -2289,6 +2799,36 @@ Las condiciones exactas las publican los propios organismos (France Num, Bpifran
 Por el problema, no por la ventanilla. Formule qué debe cambiar la IA en su actividad, identifique dónde crea valor y priorice un primer proyecto. La financiación se busca después, en función de ese proyecto.
 
 Financiación y cumplimiento se anticipan desde el enfoque: para lo segundo, vea la guía AI Act y RGPD para una PYME .
+
+### ¿Qué errores evitar al buscar una ayuda?
+
+Se repiten cinco errores: montar un proyecto para encajar en una ayuda, ignorar el importe a cargo de la empresa, confundir diagnóstico y despliegue, olvidar el cumplimiento normativo (AI Act, RGPD) en el enfoque y empezar demasiado tarde.
+
+El último merece una comprobación sistemática: según los dispositivos, la solicitud a veces debe preceder al inicio del servicio. Esta regla se lee en las condiciones oficiales, antes de cualquier compromiso.
+
+### ¿Qué hacer si su empresa no es elegible?
+
+No renunciar al proyecto. Una empresa no elegible puede financiar un primer uso con sus propios medios, empezando en pequeño: una tarea, un equipo, un resultado medible. Es, además, la mejor manera de saber si el proyecto merece una inversión mayor.
+
+La ausencia de ayuda no es un veredicto sobre el valor del proyecto. Cambia simplemente el ritmo y el tamaño del primer paso.
+
+### ¿Cómo mantener el rumbo ante tantos dispositivos?
+
+Volviendo a la pregunta de partida: ¿qué problema quiere resolver? Los dispositivos son numerosos, sus condiciones cambian y su vocabulario también. El problema que hay que resolver sigue siendo el mismo, y es él quien debe guiar la elección.
+
+Un directivo que ha aclarado su problema lee un catálogo de ayudas como una lista de opciones. El que no lo ha hecho lo lee como una lista de restricciones.
+
+### ¿Qué recordar antes de presentar un expediente?
+
+Tres cosas. El proyecto debe existir sin la ayuda, aunque sea más pequeño. Las condiciones deben comprobarse en la fuente, en la fecha de la solicitud. Y el cumplimiento debe pensarse desde el enfoque, no después del despliegue.
+
+Si estos tres puntos están resueltos, la ayuda se convierte en lo que debe ser: un acelerador de un proyecto ya elegido, y no la razón para elegirlo.
+
+### ¿Qué lugar tiene un acompañamiento estratégico antes de una ayuda?
+
+Un lugar previo, sobre la cuestión que los dispositivos menos financian: ¿dónde crea valor la IA en su organización y en qué orden actuar? Es el papel de un taller de enfoque como Cap IA de EXEC’IA, que no es un producto del catálogo Osez l’IA y no entra en estos dispositivos.
+
+Una vez aclarados el problema y la prioridad, el diagnóstico financiado, la solución elegida y las posibles ayudas encajan mucho más sencillamente. Usted elige con un rumbo, en lugar de soportar un menú.
 
 💬 Antes de invertir en un proyecto de IA, ¿tendría
 
