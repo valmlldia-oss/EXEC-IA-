@@ -7171,3 +7171,6 @@ body > section#perspectives.snap-page:first-of-type { padding-top: calc(var(--na
   [style*="white-space:nowrap"], [style*="white-space: nowrap"] { white-space: normal !important; }
 }
 @media (max-width: 1300px) { .pilier-sub { white-space: normal; } }
+
+/* Numéros de page des colonnes affichés par la feuille de style (hors texte de la page, donc jamais lus ni coupés dans un extrait). */
+.article-book-folio[data-n]::before { content: attr(data-n); }

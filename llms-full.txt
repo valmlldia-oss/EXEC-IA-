@@ -1496,11 +1496,19 @@ Comment mesurer l’adhésion, concrètement ? Trois questions suffisent pour co
 
 Ces réponses se recueillent par une conversation de vingt minutes avec quelques membres de l’équipe, pas par un formulaire de satisfaction. Elles donnent une image plus fidèle que n’importe quelle statistique de connexion.
 
-## 🎯 Quels leviers font vraiment la différence ?
+### Pourquoi une équipe adopte-t-elle un outil ?
 
-Trois leviers, du plus simple au plus exigeant : expliquer avant d’équiper, former sur les usages, prouver tôt.
+Une équipe adopte un outil quand elle en voit l’intérêt pour elle-même, pas seulement pour l’entreprise. Le gain doit se sentir dans le quotidien : une tâche plus courte, une erreur en moins, un dossier préparé plus vite.
+
+Quand le bénéfice n’est visible que dans un tableau de bord de direction, l’outil est vécu comme une charge supplémentaire. Le premier travail consiste donc à traduire le bénéfice attendu dans le langage de celles et ceux qui l’utiliseront.
+
+Quelles résistances rencontre-t-on le plus souvent ? Trois résistances reviennent. La peur de mal faire, surtout quand l’outil semble ne laisser aucune place à l’erreur. La crainte d’être remplacé, qui s’exprime rarement de face. Et l’impression que l’outil ajoute une étape au lieu d’en supprimer une.
+
+Chacune appelle une réponse différente : un droit à l’essai, une parole claire de la direction sur ce qui ne changera pas, et une démonstration sur une vraie tâche plutôt que sur un exemple de catalogue.
 
 ### Pourquoi expliquer avant d’équiper ?
+
+🎯 Quels leviers font vraiment la différence ? Trois leviers, du plus simple au plus exigeant : expliquer avant d’équiper, former sur les usages, prouver tôt.
 
 Le pourquoi précède toujours l’outil. Une équipe qui comprend ce que l’outil change dans son travail quotidien, et ce qu’il ne change pas, l’adopte plus facilement qu’une équipe à qui l’on annonce un déploiement.
 
@@ -1529,6 +1537,30 @@ Chacune a la même origine : traiter l’outil comme un achat à réussir plutô
 Première semaine : choisir une équipe volontaire et une tâche qui revient chaque semaine, puis expliquer pourquoi. Deuxième semaine : former sur cette tâche uniquement. Troisième semaine : laisser l’équipe l’utiliser et noter ce qui gêne. Quatrième semaine : mesurer le résultat, décider de continuer, d’ajuster ou d’arrêter.
 
 À la fin du mois, le dirigeant dispose de quelque chose que le budget seul ne lui donnait pas : une preuve, dans son organisation, de ce que l’outil apporte ou non.
+
+Quel rôle donner aux managers de proximité ? Un rôle central. Ce sont eux qui traduisent la décision en pratique quotidienne. Un manager convaincu donne l’exemple, protège le temps d’apprentissage et remonte ce qui bloque. Un manager qui n’a pas été associé devient, sans le vouloir, le premier frein.
+
+Avant de déployer, il vaut mieux consacrer une séance courte à ces relais : ce qui change pour eux, ce qu’ils diront à leurs équipes, et à qui ils s’adresseront quand une difficulté apparaît.
+
+### Comment savoir si l’adhésion progresse ?
+
+Trois signes concrets : les mêmes personnes reviennent à l’outil d’une semaine sur l’autre, elles le citent spontanément quand elles parlent de leur travail, et elles proposent elles-mêmes de nouveaux usages.
+
+À l’inverse, un usage qui reste concentré sur une ou deux personnes, ou qui disparaît dès que l’animation s’arrête, signale une adhésion de façade. Ces signaux se relèvent par l’observation et la conversation, sans outil de mesure supplémentaire.
+
+Que dire à un dirigeant qui veut aller vite ? Que la vitesse se gagne à l’adhésion, pas à la précipitation. Un déploiement rapide sur une équipe qui n’a pas adhéré coûte du temps deux fois : à l’installer, puis à le relancer. Un pilote court, avec un résultat visible, convainc plus vite qu’un plan de communication.
+
+Le bon calendrier est celui où chaque étape prouve quelque chose à l’équipe suivante.
+
+### Quel rôle jouent les premiers utilisateurs ?
+
+Les premiers utilisateurs convaincus sont les meilleurs relais. Leur retour d’expérience, dit avec leurs mots, pèse plus qu’une présentation de la direction. Identifiez-les tôt, donnez-leur un peu de temps pour approfondir, et laissez-les montrer à leurs collègues ce qui marche et ce qui ne marche pas.
+
+Veillez à ne pas en faire des experts isolés : leur rôle est de partager, pas de porter seuls l’usage pour toute l’équipe.
+
+Comment garder l’élan après le lancement ? Un usage qui n’est plus animé s’éteint. Prévoyez un rendez-vous court et régulier pour partager ce qui a fonctionné, ce qui a gêné et ce que chacun a essayé. Quinze minutes suffisent, à condition qu’elles aient lieu.
+
+Mettez en avant un résultat concret plutôt qu’un chiffre d’usage : une tâche raccourcie, un dossier livré plus tôt. C’est ce que les autres équipes retiendront.
 
 💬 Et vous, l’écart entre investissement et adhésion,
 
@@ -1580,11 +1612,19 @@ How do you measure buy-in, in practice? Three questions are enough to start. Who
 
 These answers come from a twenty-minute conversation with a few team members, not from a satisfaction form. They give a truer picture than any login statistic.
 
-## 🎯 Which levers really make the difference?
+### Why does a team adopt a tool?
 
-Three levers, from the simplest to the most demanding: explain before equipping, train on real uses, prove early.
+A team adopts a tool when it sees the benefit for itself, not only for the company. The gain must be felt in daily work: a shorter task, one less error, a file prepared faster.
+
+When the benefit is only visible on a leadership dashboard, the tool is experienced as an extra burden. The first job is therefore to translate the expected benefit into the language of the people who will use it.
+
+Which forms of resistance come up most often? Three come back. The fear of getting it wrong, especially when the tool seems to leave no room for error. The fear of being replaced, which is rarely voiced openly. And the impression that the tool adds a step instead of removing one.
+
+Each calls for a different answer: a right to try, a clear word from leadership about what will not change, and a demonstration on a real task rather than on a catalogue example.
 
 ### Why explain before equipping?
+
+🎯 Which levers really make the difference? Three levers, from the simplest to the most demanding: explain before equipping, train on real uses, prove early.
 
 The why always comes before the tool. A team that understands what the tool changes in its daily work, and what it does not change, adopts it more readily than a team told that a rollout is coming.
 
@@ -1613,6 +1653,30 @@ Each has the same origin: treating the tool as a purchase to succeed rather than
 Week one: choose a volunteer team and a task that recurs every week, then explain why. Week two: train on that task only. Week three: let the team use it and note what gets in the way. Week four: measure the result and decide to continue, adjust or stop.
 
 At the end of the month, the leader has something the budget alone never provided: proof, inside their own organisation, of what the tool brings or does not bring.
+
+What role should line managers play? A central one. They turn the decision into daily practice. A convinced manager sets the example, protects learning time and reports what gets in the way. A manager who was not involved becomes, unintentionally, the first brake.
+
+Before rolling out, it is worth holding a short session for these relays: what changes for them, what they will tell their teams, and whom they will turn to when a difficulty appears.
+
+### How do you know whether buy-in is growing?
+
+Three concrete signs: the same people come back to the tool from one week to the next, they mention it unprompted when they talk about their work, and they suggest new uses themselves.
+
+Conversely, use concentrated on one or two people, or vanishing as soon as the coaching stops, signals surface-level buy-in. These signals are picked up by observation and conversation, with no extra measurement tool.
+
+What should you tell a leader who wants to go fast? That speed is won through buy-in, not haste. A fast rollout to a team that has not bought in costs time twice: to install it, then to restart it. A short pilot with a visible result convinces faster than a communication plan.
+
+The right timetable is one where each step proves something to the next team.
+
+### What role do the first users play?
+
+The first convinced users are the best relays. Their feedback, in their own words, carries more weight than a presentation from leadership. Identify them early, give them a little time to go deeper, and let them show colleagues what works and what does not.
+
+Take care not to turn them into isolated experts: their role is to share, not to carry the use alone for the whole team.
+
+How do you keep momentum after launch? A use that is no longer animated fades. Plan a short, regular meeting to share what worked, what got in the way and what each person tried. Fifteen minutes is enough, provided it actually happens.
+
+Highlight a concrete result rather than a usage figure: a task shortened, a file delivered earlier. That is what other teams will remember.
 
 💬 And you, how do you measure
 
@@ -1664,11 +1728,19 @@ El buen indicador es el uso regular: cuántas personas usan la herramienta cada 
 
 Estas respuestas se obtienen con una conversación de veinte minutos con algunos miembros del equipo, no con un formulario de satisfacción. Dan una imagen más fiel que cualquier estadística de conexión.
 
-## 🎯 ¿Qué palancas marcan de verdad la diferencia?
+### ¿Por qué adopta un equipo una herramienta?
 
-Tres palancas, de la más sencilla a la más exigente: explicar antes de equipar, formar en los usos y demostrar pronto.
+Un equipo adopta una herramienta cuando ve su utilidad para sí mismo, no solo para la empresa. La ventaja debe notarse en el día a día: una tarea más corta, un error menos, un expediente preparado más deprisa.
+
+Cuando el beneficio solo se ve en un panel de dirección, la herramienta se vive como una carga adicional. El primer trabajo consiste, por tanto, en traducir el beneficio esperado al lenguaje de quienes van a usarla.
+
+¿Qué resistencias aparecen con más frecuencia? Se repiten tres. El miedo a equivocarse, sobre todo cuando la herramienta parece no dejar margen al error. El temor a ser sustituido, que rara vez se expresa de frente. Y la impresión de que la herramienta añade un paso en lugar de suprimir uno.
+
+Cada una requiere una respuesta distinta: un derecho a probar, una palabra clara de la dirección sobre lo que no cambiará y una demostración sobre una tarea real, no sobre un ejemplo de catálogo.
 
 ### ¿Por qué explicar antes de equipar?
+
+🎯 ¿Qué palancas marcan de verdad la diferencia? Tres palancas, de la más sencilla a la más exigente: explicar antes de equipar, formar en los usos y demostrar pronto.
 
 El porqué precede siempre a la herramienta. Un equipo que entiende qué cambia la herramienta en su trabajo diario, y qué no cambia, la adopta con más facilidad que un equipo al que se le anuncia un despliegue.
 
@@ -1697,6 +1769,30 @@ Todos tienen el mismo origen: tratar la herramienta como una compra que hay que 
 Primera semana: elegir un equipo voluntario y una tarea que se repita cada semana, y explicar el porqué. Segunda semana: formar solo sobre esa tarea. Tercera semana: dejar que el equipo la use y anotar lo que estorba. Cuarta semana: medir el resultado y decidir si continuar, ajustar o parar.
 
 Al final del mes, el directivo dispone de algo que el presupuesto solo no le daba: una prueba, dentro de su organización, de lo que la herramienta aporta o no.
+
+¿Qué papel dar a los mandos intermedios? Un papel central. Son ellos quienes traducen la decisión en práctica diaria. Un mando convencido da ejemplo, protege el tiempo de aprendizaje y comunica lo que bloquea. Un mando que no ha participado se convierte, sin querer, en el primer freno.
+
+Antes de desplegar, conviene dedicar una sesión breve a estos relevos: qué cambia para ellos, qué dirán a sus equipos y a quién acudirán cuando surja una dificultad.
+
+### ¿Cómo saber si la adhesión avanza?
+
+Tres señales concretas: las mismas personas vuelven a la herramienta de una semana a otra, la mencionan espontáneamente cuando hablan de su trabajo y proponen ellas mismas nuevos usos.
+
+Al contrario, un uso concentrado en una o dos personas, o que desaparece en cuanto cesa la animación, indica una adhesión de fachada. Estas señales se recogen observando y conversando, sin herramienta de medición adicional.
+
+¿Qué decir a un directivo que quiere ir deprisa? Que la velocidad se gana con adhesión, no con precipitación. Un despliegue rápido en un equipo que no ha adherido cuesta tiempo dos veces: para instalarlo y para relanzarlo. Un piloto corto, con un resultado visible, convence antes que un plan de comunicación.
+
+El buen calendario es aquel en el que cada etapa demuestra algo al equipo siguiente.
+
+### ¿Qué papel tienen los primeros usuarios?
+
+Los primeros usuarios convencidos son los mejores relevos. Su experiencia, contada con sus palabras, pesa más que una presentación de la dirección. Identifíquelos pronto, deles un poco de tiempo para profundizar y déjelos mostrar a sus compañeros lo que funciona y lo que no.
+
+Procure no convertirlos en expertos aislados: su papel es compartir, no cargar solos con el uso de todo el equipo.
+
+¿Cómo mantener el impulso tras el lanzamiento? Un uso que ya no se anima se apaga. Prevea una cita breve y regular para compartir lo que funcionó, lo que estorbó y lo que cada uno ha probado. Bastan quince minutos, siempre que se celebren.
+
+Destaque un resultado concreto en lugar de una cifra de uso: una tarea acortada, un expediente entregado antes. Es lo que recordarán los demás equipos.
 
 💬 Y usted, ¿cómo mide la brecha
 
@@ -1748,11 +1844,19 @@ Comment recenser les usages sans chercher de coupable ? En posant la question d�
 
 L’objectif est de faire remonter les besoins réels, puis de leur répondre avec des outils approuvés.
 
-## 🎯 Quels réflexes changent la donne ?
+### Quels sont les risques concrets du shadow IA ?
 
-Trois réflexes suffisent pour commencer : reconnaître l’usage réel, offrir des outils sûrs et simples, montrer l’exemple au sommet.
+Trois familles de risques. Une fuite d’informations, quand un document confidentiel est collé dans un outil non maîtrisé. Une décision fondée sur une réponse fausse, non relue, qui circule ensuite comme un fait. Et un risque de conformité, lorsque des données personnelles sont traitées sans cadre.
+
+Aucun de ces risques n’exige une intention malveillante : ils naissent d’un geste ordinaire, fait pour gagner du temps.
+
+Pourquoi les interdictions échouent-elles souvent ? Parce qu’elles laissent le besoin intact. Une personne à qui l’on interdit un outil qui l’aide continue de chercher le même gain ailleurs, en dehors de tout regard. L’interdiction déplace l’usage dans l’ombre au lieu de le supprimer.
+
+Une règle qui propose une alternative, simple et sûre, a bien plus de chances d’être suivie qu’une règle qui se contente d’interdire.
 
 ### Pourquoi reconnaître l’usage réel avant de l’interdire ?
+
+🎯 Quels réflexes changent la donne ? Trois réflexes suffisent pour commencer : reconnaître l’usage réel, offrir des outils sûrs et simples, montrer l’exemple au sommet.
 
 Parce qu’il existe déjà, qu’on le veuille ou non. Interdire un usage que l’on ne connaît pas le fait passer dans l’ombre. Le recenser, sans chercher de coupable, donne enfin une image fidèle de ce que font les équipes.
 
@@ -1783,6 +1887,36 @@ C’est la condition pour que la politique cesse d’être une fiction et redevi
 Par une conversation d’une demi-heure en comité de direction : quels outils IA chacun utilise-t-il réellement, et avec quelles informations ? Cette conversation, franche et sans jugement, vaut plus qu’une nouvelle version de la charte.
 
 Elle fournit la seule base solide pour décider de ce qu’on autorise, de ce qu’on propose et de ce qu’on interdit.
+
+Comment choisir les outils à approuver ? En partant des usages réels relevés dans l’organisation, pas d’un catalogue de fonctionnalités. Trois questions aident : que devient l’information saisie, qui y a accès, et l’outil se prend-il en main en quelques minutes ?
+
+Il vaut mieux approuver peu d’outils, bien expliqués, que dresser une longue liste que personne ne consulte.
+
+### Quel rôle donner à la fonction juridique ou au dirigeant délégué ?
+
+Un rôle d’appui, pas de blocage. La personne référente répond vite aux questions, tient à jour la liste des outils approuvés et alerte le comité de direction quand un usage nouveau apparaît. Sans réponse rapide, les équipes se passent de l’avis.
+
+Dans une petite structure, ce référent peut être le dirigeant lui-même, à condition que sa disponibilité soit connue de tous.
+
+Comment sensibiliser sans culpabiliser ? En parlant de cas plausibles plutôt que de fautes. Un exemple simple, comme un compte rendu de réunion confidentiel collé dans un outil grand public, suffit à faire comprendre l’enjeu sans désigner personne.
+
+La sensibilisation fonctionne mieux quand elle vient du comité de direction lui-même, qui reconnaît ses propres usages avant de demander aux autres de changer les leurs.
+
+### Que faire face à un usage déjà installé ?
+
+Le recenser d’abord, sans jugement, puis décider : le conserver s’il est sûr, le remplacer par un outil approuvé s’il ne l’est pas, ou l’encadrer par une règle claire. Prévoyez une période de transition, pour que les équipes ne perdent pas ce qui leur fait gagner du temps.
+
+Annoncez le changement avec ses raisons. Un usage retiré sans explication réapparaît presque toujours ailleurs.
+
+Que faire des informations déjà partagées avec un outil non validé ? Évaluer calmement ce qui a pu être partagé, sans chercher de responsable. Selon la nature des informations, notamment si elles contiennent des données personnelles, demandez un avis juridique avant de décider de la suite.
+
+Notez ce qui a été appris et intégrez-le à la charte : c’est la meilleure façon d’éviter que la situation se reproduise.
+
+### Qui doit porter ce sujet dans l’organisation ?
+
+Un membre du comité de direction, désigné clairement, avec un relais opérationnel. Le sujet touche à la fois aux outils, aux données, aux ressources humaines et à la conformité : sans propriétaire, il est traité par morceaux, et personne n’a la vue d’ensemble.
+
+Ce porteur n’a pas besoin d’être un spécialiste de l’IA. Il doit savoir poser les bonnes questions et arbitrer quand deux besoins s’opposent.
 
 💬 Et vous, savez-vous vraiment
 
@@ -1834,11 +1968,19 @@ How do you map usage without hunting for culprits? By asking in a way that does 
 
 The goal is to bring real needs to the surface, then answer them with approved tools.
 
-## 🎯 Which reflexes change the game?
+### What are the concrete risks of shadow AI?
 
-Three reflexes are enough to start: acknowledge real usage, offer safe and simple tools, set the example at the top.
+Three families of risk. A leak of information, when a confidential document is pasted into an uncontrolled tool. A decision based on a wrong, unchecked answer that then circulates as fact. And a compliance risk, when personal data is processed without a framework.
+
+None of these risks requires malicious intent: they arise from an ordinary gesture, made to save time.
+
+Why do bans so often fail? Because they leave the need intact. A person banned from a tool that helps them keeps looking for the same gain elsewhere, out of sight. A ban moves usage into the shadows instead of removing it.
+
+A rule that offers a simple, safe alternative has a far better chance of being followed than one that merely forbids.
 
 ### Why acknowledge real usage before banning it?
+
+🎯 Which reflexes change the game? Three reflexes are enough to start: acknowledge real usage, offer safe and simple tools, set the example at the top.
 
 Because it already exists, whether we like it or not. Banning a use you do not know about pushes it into the shadows. Mapping it, without hunting for culprits, finally gives an accurate picture of what teams actually do.
 
@@ -1869,6 +2011,36 @@ That is the condition for the policy to stop being a fiction and become a steeri
 With a half-hour conversation in the executive committee: which AI tools does each person really use, and with what information? That frank, judgement-free conversation is worth more than a new version of the policy.
 
 It provides the only solid basis for deciding what to allow, what to offer and what to forbid.
+
+How do you choose which tools to approve? By starting from the real uses found in the organisation, not from a feature catalogue. Three questions help: what happens to the information entered, who has access to it, and can the tool be picked up in a few minutes?
+
+It is better to approve a few well-explained tools than to draw up a long list nobody consults.
+
+### What role for the legal function or the delegated executive?
+
+A supporting role, not a blocking one. The named contact answers questions quickly, keeps the list of approved tools up to date and alerts the executive committee when a new use appears. Without a fast answer, teams do without the opinion.
+
+In a small organisation, this contact can be the leader personally, provided their availability is known to everyone.
+
+How do you raise awareness without blaming anyone? By talking about plausible cases rather than faults. A simple example, such as confidential meeting minutes pasted into a consumer tool, is enough to convey the stakes without singling anyone out.
+
+Awareness works better when it comes from the executive committee itself, which acknowledges its own uses before asking others to change theirs.
+
+### What should you do about a use that is already in place?
+
+Map it first, without judgement, then decide: keep it if it is safe, replace it with an approved tool if it is not, or frame it with a clear rule. Plan a transition period so teams do not lose what saves them time.
+
+Announce the change with its reasons. A use withdrawn without explanation almost always reappears elsewhere.
+
+What should you do about information already shared with an unapproved tool? Assess calmly what may have been shared, without looking for someone to blame. Depending on the nature of the information, notably if it contains personal data, seek legal advice before deciding what to do next.
+
+Note what was learned and build it into the policy: it is the best way to prevent the situation from recurring.
+
+### Who should own this topic in the organisation?
+
+A clearly named member of the executive committee, with an operational relay. The subject touches tools, data, human resources and compliance all at once: without an owner, it is handled piecemeal and nobody has the full picture.
+
+This owner does not need to be an AI specialist. They must know how to ask the right questions and arbitrate when two needs collide.
 
 💬 And you, do you really know
 
@@ -1920,11 +2092,19 @@ En el plano normativo, en particular el RGPD, la guía AI Act y RGPD para una PY
 
 El objetivo es hacer emerger las necesidades reales y responder a ellas con herramientas aprobadas.
 
-## 🎯 ¿Qué reflejos cambian el juego?
+### ¿Cuáles son los riesgos concretos del shadow IA?
 
-Tres reflejos bastan para empezar: reconocer el uso real, ofrecer herramientas seguras y sencillas, dar ejemplo desde arriba.
+Tres familias de riesgos. Una fuga de información, cuando un documento confidencial se pega en una herramienta no controlada. Una decisión basada en una respuesta falsa, sin revisar, que luego circula como un hecho. Y un riesgo de cumplimiento, cuando se tratan datos personales sin un marco.
+
+Ninguno de estos riesgos exige mala intención: nacen de un gesto ordinario, hecho para ganar tiempo.
+
+¿Por qué fracasan a menudo las prohibiciones? Porque dejan intacta la necesidad. Una persona a la que se prohíbe una herramienta que le ayuda sigue buscando la misma ventaja en otra parte, fuera de toda mirada. La prohibición desplaza el uso a la sombra en lugar de suprimirlo.
+
+Una regla que ofrece una alternativa sencilla y segura tiene muchas más posibilidades de cumplirse que una que solo prohíbe.
 
 ### ¿Por qué reconocer el uso real antes de prohibirlo?
+
+🎯 ¿Qué reflejos cambian el juego? Tres reflejos bastan para empezar: reconocer el uso real, ofrecer herramientas seguras y sencillas, dar ejemplo desde arriba.
 
 Porque ya existe, se quiera o no. Prohibir un uso que no se conoce lo empuja a la sombra. Registrarlo, sin buscar culpables, ofrece por fin una imagen fiel de lo que hacen los equipos.
 
@@ -1955,6 +2135,36 @@ Es la condición para que la política deje de ser una ficción y vuelva a ser u
 Con una conversación de media hora en el comité de dirección: ¿qué herramientas de IA usa realmente cada uno y con qué información? Esa conversación franca y sin juicios vale más que una nueva versión de la política.
 
 Ofrece la única base sólida para decidir qué se autoriza, qué se propone y qué se prohíbe.
+
+¿Cómo elegir las herramientas que aprobar? Partiendo de los usos reales detectados en la organización, no de un catálogo de funcionalidades. Tres preguntas ayudan: qué ocurre con la información introducida, quién accede a ella y si la herramienta se aprende en unos minutos.
+
+Es mejor aprobar pocas herramientas, bien explicadas, que elaborar una lista larga que nadie consulta.
+
+### ¿Qué papel dar a la función jurídica o al directivo delegado?
+
+Un papel de apoyo, no de bloqueo. La persona de referencia responde rápido a las preguntas, mantiene al día la lista de herramientas aprobadas y avisa al comité de dirección cuando aparece un uso nuevo. Sin una respuesta rápida, los equipos prescinden de la opinión.
+
+En una estructura pequeña, esa persona de referencia puede ser el propio directivo, siempre que todos conozcan su disponibilidad.
+
+¿Cómo sensibilizar sin culpabilizar? Hablando de casos verosímiles en lugar de faltas. Un ejemplo sencillo, como un acta de reunión confidencial pegada en una herramienta de consumo, basta para hacer comprender lo que está en juego sin señalar a nadie.
+
+La sensibilización funciona mejor cuando viene del propio comité de dirección, que reconoce sus propios usos antes de pedir a los demás que cambien los suyos.
+
+### ¿Qué hacer ante un uso ya instalado?
+
+Registrarlo primero, sin juicio, y después decidir: conservarlo si es seguro, sustituirlo por una herramienta aprobada si no lo es o acotarlo con una regla clara. Prevea un periodo de transición para que los equipos no pierdan lo que les hace ganar tiempo.
+
+Anuncie el cambio con sus razones. Un uso retirado sin explicación reaparece casi siempre en otro sitio.
+
+¿Qué hacer con la información ya compartida con una herramienta no validada? Evaluar con calma lo que ha podido compartirse, sin buscar un responsable. Según la naturaleza de la información, en particular si contiene datos personales, pida asesoramiento jurídico antes de decidir el siguiente paso.
+
+Anote lo aprendido e intégrelo en la política: es la mejor manera de evitar que la situación se repita.
+
+### ¿Quién debe encargarse de este tema en la organización?
+
+Un miembro del comité de dirección, designado con claridad, con un relevo operativo. El tema afecta a la vez a las herramientas, los datos, los recursos humanos y el cumplimiento: sin responsable, se trata por partes y nadie tiene la visión de conjunto.
+
+Este responsable no necesita ser un especialista en IA. Debe saber hacer las preguntas adecuadas y arbitrar cuando dos necesidades chocan.
 
 💬 Y usted, ¿sabe de verdad
 
@@ -2004,11 +2214,19 @@ Que retenir de l’exemple d’Air France ? Que le résultat ne tient pas à la 
 
 Cette répartition n’est pas définitive : elle se révise à mesure que l’outil progresse et que les équipes apprennent ce qu’il fait bien.
 
-## Comment sentir la limite avant de la franchir ?
+### Que peut-on automatiser sans risque ?
 
-Trois signaux permettent de la repérer.
+Les demandes fréquentes, factuelles et à réponse stable : l’état d’une commande, un horaire, une règle connue, un document à retrouver. Ce sont des questions dont la bonne réponse ne dépend ni de l’humeur du client ni d’un arbitrage.
+
+C’est là que l’automatisation libère le plus de temps aux équipes, et c’est aussi là que l’erreur coûte le moins.
+
+Comment un client vit-il une passation ratée ? Comme un aveu : l’entreprise ne s’est pas organisée pour lui. Il répète son problème, attend, change de canal, puis conserve de l’épisode un souvenir plus fort que celui de toutes les réponses réussies.
+
+La confiance se perd rarement sur une erreur isolée. Elle se perd sur la sensation de ne pas être écouté, surtout quand la demande est urgente.
 
 ### Le client répète-t-il sa question avant d’obtenir une réponse utile ?
+
+Comment sentir la limite avant de la franchir ? Trois signaux permettent de la repérer.
 
 Quand la même question revient plusieurs fois, l’outil ne répond pas au besoin réel. C’est le premier signal que la conversation doit changer de main.
 
@@ -2037,6 +2255,40 @@ Ensuite, élargir progressivement, en gardant toujours la même règle : l’out
 Une seule : dans quels cas votre client a-t-il eu le sentiment de parler à quelqu’un qui ne le comprenait pas ? Les réponses dessinent presque toujours la frontière que l’organisation n’a pas encore tracée.
 
 C’est à cet endroit que se joue la qualité de la relation, bien plus que dans le pourcentage de demandes traitées.
+
+Que doit-on transmettre à la personne qui reprend la conversation ? Le contexte complet : la demande initiale, les réponses déjà données, les informations déjà fournies par le client et le point exact où l’échange a buté. La personne doit pouvoir répondre sans poser une seule question déjà posée.
+
+Ce résumé se prépare à l’avance, avec les équipes qui reçoivent les demandes, et se teste régulièrement sur des cas réels.
+
+### Comment associer les équipes de terrain ?
+
+En leur donnant la parole sur la frontière. Les conseillers savent quelles demandes reviennent, lesquelles se compliquent et lesquelles gagnent à être traitées de vive voix. Leur avis évite de déplacer la limite à l’aveugle.
+
+Une revue régulière de quelques échanges réels, avec eux, suffit à repérer les ajustements utiles.
+
+Quel indicateur suivre en priorité ? Moins la part de demandes traitées seul que la satisfaction de celles et ceux qui sont passés par l’outil, et le temps qu’il faut pour joindre une personne quand on le souhaite. Un taux d’automatisation élevé peut cacher une frustration réelle.
+
+Le bon objectif n’est pas de faire disparaître les échanges humains, mais de les réserver aux moments où ils comptent le plus.
+
+### Comment tester le dispositif avant de le généraliser ?
+
+En rejouant des demandes réelles, y compris les plus délicates : une réclamation, une urgence, une question mal formulée. Observez à quel moment l’outil aurait dû passer la main, et ce que la personne reçoit à ce moment.
+
+Un test de quelques dizaines d’échanges, relus par les conseillers, apprend plus qu’une démonstration réussie sur trois cas soigneusement choisis.
+
+Que dire au client pour qu’il fasse confiance à l’outil ? La vérité, simplement : il échange avec un assistant, voici ce qu’il sait faire, et voici comment joindre une personne. Un client informé accepte mieux les limites de l’outil qu’un client qui découvre, au milieu de l’échange, qu’il n’a pas affaire à un humain.
+
+La transparence est aussi une politesse : elle montre que l’entreprise assume ce qu’elle a mis en place.
+
+### Comment préparer les conseillers à reprendre la main ?
+
+En leur apprenant à reprendre sans reposer les questions déjà posées, et à reconnaître le ton d’un client déjà fatigué. Reprendre la conversation est un geste professionnel à part entière, qui mérite une courte formation.
+
+Les conseillers doivent aussi savoir quand signaler à l’équipe qu’un motif de passation revient, pour que la frontière soit ajustée.
+
+Comment garder la maîtrise quand l’outil évolue ? En considérant chaque évolution comme un changement de frontière à décider, pas comme une mise à jour technique. Avant d’élargir le périmètre de l’assistant, la question à poser est simple : quelles demandes nouvelles va-t-il traiter seul, et qui vérifie que cela reste acceptable pour le client ?
+
+Une relecture régulière de quelques échanges réels, à chaque évolution, protège la qualité de la relation.
 
 💬 Dans votre service client,
 
@@ -2086,11 +2338,19 @@ What should you take from the Air France example? That the result does not come 
 
 This split is not final: it is revised as the tool improves and teams learn what it does well.
 
-## How do you sense the limit before crossing it?
+### What can be automated without risk?
 
-Three signals help spot it.
+Frequent, factual requests with a stable answer: the status of an order, a timetable, a known rule, a document to find. These are questions whose right answer depends neither on the customer’s mood nor on a judgement call.
+
+That is where automation frees the most time for teams, and also where a mistake costs the least.
+
+How does a customer experience a failed handover? As an admission: the company did not organise itself for them. They repeat their problem, wait, switch channel, then keep a memory of the episode stronger than that of all the successful answers.
+
+Trust is rarely lost on an isolated mistake. It is lost on the feeling of not being heard, especially when the request is urgent.
 
 ### Does the customer repeat the question before getting a useful answer?
+
+How do you sense the limit before crossing it? Three signals help spot it.
 
 When the same question keeps coming back, the tool is not meeting the real need. It is the first signal that the conversation should change hands.
 
@@ -2119,6 +2379,40 @@ Then widen gradually, always keeping the same rule: the tool handles the volume,
 Just one: in which cases did your customer feel they were talking to someone who did not understand them? The answers almost always draw the boundary the organisation has not yet drawn.
 
 That is where the quality of the relationship is decided, far more than in the percentage of requests handled.
+
+What should be passed on to the person taking over? The full context: the initial request, the answers already given, the information the customer has already provided and the exact point where the exchange stalled. The person should be able to reply without asking a single question already asked.
+
+This summary is prepared in advance, with the teams who receive the requests, and tested regularly on real cases.
+
+### How do you involve frontline teams?
+
+By giving them a voice on the boundary. Advisers know which requests recur, which get complicated and which are better handled in person. Their view avoids moving the limit blindly.
+
+A regular review of a few real exchanges, with them, is enough to spot useful adjustments.
+
+Which indicator should you follow first? Less the share of requests handled alone than the satisfaction of those who went through the tool, and the time it takes to reach a person when they want one. A high automation rate can hide real frustration.
+
+The right goal is not to make human exchanges disappear but to reserve them for the moments where they matter most.
+
+### How do you test the set-up before rolling it out?
+
+By replaying real requests, including the most delicate: a complaint, an emergency, a badly worded question. Observe at what point the tool should have handed over, and what the person receives at that moment.
+
+A test of a few dozen exchanges, reviewed by advisers, teaches more than a successful demonstration on three carefully chosen cases.
+
+What should you tell the customer so they trust the tool? The truth, simply: they are talking to an assistant, here is what it can do, and here is how to reach a person. An informed customer accepts the tool’s limits better than one who discovers, halfway through, that they are not dealing with a human.
+
+Transparency is also a courtesy: it shows the company stands behind what it has put in place.
+
+### How do you prepare advisers to take over?
+
+By teaching them to pick up without repeating questions already asked, and to recognise the tone of an already weary customer. Taking over a conversation is a professional skill in its own right, worth a short training.
+
+Advisers must also know when to tell the team that a reason for handover keeps coming back, so the boundary can be adjusted.
+
+How do you keep control as the tool evolves? By treating each change as a boundary to decide, not as a technical update. Before widening the assistant’s scope, the question is simple: which new requests will it handle alone, and who checks that this stays acceptable for the customer?
+
+A regular review of a few real exchanges, at each change, protects the quality of the relationship.
 
 💬 In your customer service,
 
@@ -2168,11 +2462,19 @@ Para estos casos, la mejor automatización es la que detecta la situación y avi
 
 Este reparto no es definitivo: se revisa a medida que la herramienta progresa y los equipos aprenden lo que hace bien.
 
-## ¿Cómo notar el límite antes de cruzarlo?
+### ¿Qué se puede automatizar sin riesgo?
 
-Tres señales permiten detectarlo.
+Las consultas frecuentes, factuales y de respuesta estable: el estado de un pedido, un horario, una regla conocida, un documento que localizar. Son preguntas cuya buena respuesta no depende del humor del cliente ni de un criterio.
+
+Es ahí donde la automatización libera más tiempo a los equipos y donde el error cuesta menos.
+
+¿Cómo vive un cliente un traspaso fallido? Como una confesión: la empresa no se ha organizado para él. Repite su problema, espera, cambia de canal y conserva del episodio un recuerdo más fuerte que el de todas las respuestas acertadas.
+
+La confianza rara vez se pierde por un error aislado. Se pierde por la sensación de no ser escuchado, sobre todo cuando la consulta es urgente.
 
 ### ¿El cliente repite su pregunta antes de obtener una respuesta útil?
+
+¿Cómo notar el límite antes de cruzarlo? Tres señales permiten detectarlo.
 
 Cuando la misma pregunta vuelve varias veces, la herramienta no responde a la necesidad real. Es la primera señal de que la conversación debe cambiar de manos.
 
@@ -2201,6 +2503,40 @@ Después, ampliar progresivamente, manteniendo siempre la misma regla: la herram
 Solo una: ¿en qué casos tuvo su cliente la sensación de hablar con alguien que no lo entendía? Las respuestas dibujan casi siempre la frontera que la organización todavía no ha trazado.
 
 Es ahí donde se decide la calidad de la relación, mucho más que en el porcentaje de consultas resueltas.
+
+¿Qué hay que transmitir a la persona que retoma la conversación? El contexto completo: la consulta inicial, las respuestas ya dadas, la información que el cliente ya ha facilitado y el punto exacto en que se atascó el intercambio. La persona debe poder responder sin repetir ninguna pregunta ya hecha.
+
+Este resumen se prepara de antemano, con los equipos que reciben las consultas, y se prueba con regularidad en casos reales.
+
+### ¿Cómo implicar a los equipos de primera línea?
+
+Dándoles voz sobre la frontera. Los asesores saben qué consultas se repiten, cuáles se complican y cuáles se resuelven mejor de viva voz. Su opinión evita mover el límite a ciegas.
+
+Una revisión periódica de unos pocos intercambios reales, con ellos, basta para detectar ajustes útiles.
+
+¿Qué indicador seguir en primer lugar? Menos el porcentaje de consultas resueltas en solitario que la satisfacción de quienes han pasado por la herramienta y el tiempo que se tarda en hablar con una persona cuando se desea. Una alta tasa de automatización puede ocultar una frustración real.
+
+El buen objetivo no es hacer desaparecer los intercambios humanos, sino reservarlos para los momentos en que más importan.
+
+### ¿Cómo probar el dispositivo antes de generalizarlo?
+
+Reproduciendo consultas reales, incluidas las más delicadas: una reclamación, una urgencia, una pregunta mal formulada. Observe en qué momento la herramienta debería haber cedido el relevo y qué recibe la persona en ese momento.
+
+Una prueba de unas decenas de intercambios, revisada por los asesores, enseña más que una demostración lograda con tres casos cuidadosamente elegidos.
+
+¿Qué decir al cliente para que confíe en la herramienta? La verdad, con sencillez: está hablando con un asistente, esto es lo que sabe hacer y así se llega a una persona. Un cliente informado acepta mejor los límites de la herramienta que uno que descubre, a mitad de conversación, que no trata con un humano.
+
+La transparencia es también una cortesía: muestra que la empresa asume lo que ha puesto en marcha.
+
+### ¿Cómo preparar a los asesores para retomar la conversación?
+
+Enseñándoles a retomar sin repetir las preguntas ya hechas y a reconocer el tono de un cliente ya cansado. Retomar una conversación es un gesto profesional en sí mismo, que merece una formación breve.
+
+Los asesores deben saber también cuándo avisar al equipo de que un motivo de traspaso se repite, para ajustar la frontera.
+
+¿Cómo mantener el control cuando la herramienta evoluciona? Considerando cada evolución como un cambio de frontera que hay que decidir, no como una actualización técnica. Antes de ampliar el ámbito del asistente, la pregunta es sencilla: ¿qué consultas nuevas va a resolver solo y quién comprueba que sigue siendo aceptable para el cliente?
+
+Una revisión periódica de unos pocos intercambios reales, en cada evolución, protege la calidad de la relación.
 
 💬 En su servicio de atención al cliente,
 
@@ -2304,6 +2640,16 @@ Une place en amont, sur la question que les dispositifs financent le moins : où
 
 Une fois le problème et la priorité clarifiés, le diagnostic financé, la solution retenue et les éventuelles aides s’articulent beaucoup plus simplement. Vous choisissez avec un cap, au lieu de subir un menu.
 
+Comment présenter votre projet à un organisme financeur ? Par le problème avant la solution : ce que vous voulez changer, pour qui, et comment vous saurez que c’est réussi. Un organisme finance un résultat attendu plus qu’une intention. Un dossier qui part d’un besoin clair, d’un périmètre limité et d’un critère de réussite simple se lit plus vite et se défend mieux.
+
+Préparez aussi les réponses à vos propres questions : qui portera le projet en interne, quel temps il demandera, et ce que vous ferez si le résultat est décevant. Ces éléments rassurent autant qu’un chiffre.
+
+### Que faire une fois l’aide obtenue ?
+
+L’aide finance une étape, pas la suite. Prévoyez dès le départ ce qui se passe après : qui utilise le résultat, qui le fait évoluer, et comment on décide de poursuivre. Un diagnostic rangé dans un tiroir n’a aucun effet sur l’activité.
+
+Revenez à l’ordre initial : problème, valeur, priorité. C’est lui qui dira si l’étape financée était la bonne et quelle est la suivante.
+
 💬 Avant d’investir dans un projet IA, auriez-vous
 
 le réflexe de vérifier les aides possibles ?
@@ -2406,6 +2752,16 @@ A place upstream, on the question that schemes fund least: where does AI create 
 
 Once the problem and the priority are clear, the funded diagnosis, the chosen solution and any support fit together much more simply. You choose with a direction, instead of enduring a menu.
 
+How do you present your project to a funding body? Problem before solution: what you want to change, for whom, and how you will know it worked. A funding body backs an expected result more than an intention. A file that starts from a clear need, a limited scope and a simple success criterion reads faster and is easier to defend.
+
+Also prepare answers to your own questions: who will carry the project internally, how much time it will take, and what you will do if the result disappoints. These elements reassure as much as a figure.
+
+### What do you do once the funding is granted?
+
+Funding pays for a step, not for what follows. Plan from the outset for what happens next: who uses the result, who develops it further, and how you decide whether to continue. A diagnosis left in a drawer has no effect on the business.
+
+Go back to the original order: problem, value, priority. It will tell you whether the funded step was the right one and what the next one is.
+
 💬 Before investing in an AI project, would you
 
 think to check which support you may claim?
@@ -2507,6 +2863,16 @@ Si estos tres puntos están resueltos, la ayuda se convierte en lo que debe ser:
 Un lugar previo, sobre la cuestión que los dispositivos menos financian: ¿dónde crea valor la IA en su organización y en qué orden actuar? Es el papel de un taller de enfoque como Cap IA de EXEC’IA.
 
 Una vez aclarados el problema y la prioridad, el diagnóstico financiado, la solución elegida y las posibles ayudas encajan mucho más sencillamente. Usted elige con un rumbo, en lugar de soportar un menú.
+
+¿Cómo presentar su proyecto a un organismo financiador? Por el problema antes que por la solución: qué quiere cambiar, para quién y cómo sabrá que ha funcionado. Un organismo financia un resultado esperado más que una intención. Un expediente que parte de una necesidad clara, un ámbito limitado y un criterio de éxito sencillo se lee más deprisa y se defiende mejor.
+
+Prepare también las respuestas a sus propias preguntas: quién llevará el proyecto internamente, cuánto tiempo exigirá y qué hará si el resultado decepciona. Estos elementos tranquilizan tanto como una cifra.
+
+### ¿Qué hacer una vez obtenida la ayuda?
+
+La ayuda financia una etapa, no lo que viene después. Prevea desde el principio qué ocurre a continuación: quién usa el resultado, quién lo hace evolucionar y cómo se decide continuar. Un diagnóstico guardado en un cajón no tiene ningún efecto en la actividad.
+
+Vuelva al orden inicial: problema, valor, prioridad. Ese orden le dirá si la etapa financiada era la adecuada y cuál es la siguiente.
 
 💬 Antes de invertir en un proyecto de IA, ¿tendría
 
