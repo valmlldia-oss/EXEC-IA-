@@ -11,7 +11,7 @@ URL: https://exec-ia.ai/perspective-entreprise-utilise-deja-ia.html
 
 # Adopter l’IA est une chose. En créer de la valeur en est une autre.
 
-Version étoffée d’une publication sur LinkedIn · 8 septembre 2026
+Version étoffée d’une publication sur LinkedIn · 8 septembre 2026 · mis à jour le 25 septembre 2026
 
 Adopter l’IA est une chose, en créer de la valeur en est une autre. 80 % des entreprises constatent des gains de productivité individuels, mais seules 37 % en tirent un effet mesurable sur leur résultat. Trois repères aident à trancher quels usages méritent un vrai investissement : la fréquence, la mesurabilité, et l’indépendance vis-à-vis d’un expert précis. Le cas de Klarna, contrainte de réembaucher des agents humains après avoir remplacé son service client par l’IA, illustre ce qui arrive quand un gain individuel est confondu avec un résultat réel. La vraie question n’est pas d’adopter l’IA plus vite, mais de savoir lequel de ses usages mérite d’être généralisée.
 
@@ -77,6 +77,10 @@ Source : McKinsey & Company, « The State of AI in 2026: On the road to ROI », 
 
 #IntelligenceArtificielle #StrategieIA #Transformation #Leadership #CreationDeValeur
 
+## Pour aller plus loin
+
+Quatre questions de plus pour prolonger la réflexion.
+
 ### Comment relier un usage de l’IA à un résultat de l’entreprise ?
 
 Il faut suivre le fil depuis la tâche jusqu’à la décision : quelle tâche l’outil raccourcit-il, quel temps cela libère-t-il, et à quoi ce temps est-il réellement employé ? Sans cette dernière étape, le gain reste individuel.
@@ -103,7 +107,7 @@ L’arrêt d’un usage fait aussi partie de l’arbitrage : c’est la preuve q
 
 Valérie Mailland
 
-Fondatrice d'EXEC'IA Consulting. 20+ ans auprès de dirigeants, 18 ans chez McKinsey & Company. Suivre sur LinkedIn →
+Fondatrice d’EXEC’IA Consulting. Plus de 20 ans auprès de dirigeants, 18 ans chez McKinsey & Company. Suivre sur LinkedIn →
 ---
 
 # Adopting AI is one thing. Creating value from it is another. [EN]
@@ -111,7 +115,7 @@ URL: https://exec-ia.ai/perspective-entreprise-utilise-deja-ia-en.html
 
 # Adopting AI is one thing. Creating value from it is another.
 
-Expanded version of a LinkedIn post · September 8, 2026
+Expanded version of a LinkedIn post · September 8, 2026 · updated September 25, 2026
 
 Adopting AI is one thing; creating value from it is another. Individual productivity gains are already widespread, but few companies can show a measurable effect on their bottom line. Three markers help decide which uses deserve real investment: frequency, measurability, and independence from any one expert. The Klarna case, forced to rehire human agents after replacing its customer service with AI, shows what happens when an individual gain gets mistaken for a real outcome. The real question is not adopting AI faster, but knowing which of its uses deserves to be scaled.
 
@@ -175,6 +179,10 @@ Source: McKinsey & Company, “The State of AI in 2026: On the road to ROI”, A
 
 #ArtificialIntelligence #AIStrategy #Transformation #Leadership #ValueCreation
 
+## Going further
+
+Four more questions to take the thinking further.
+
 ### How do you link an AI use to a company result?
 
 Follow the thread from the task to the decision: which task does the tool shorten, how much time does that free up, and what is that time actually used for? Without this last step, the gain remains individual.
@@ -209,7 +217,7 @@ URL: https://exec-ia.ai/perspective-entreprise-utilise-deja-ia-es.html
 
 # Adoptar la IA es una cosa. Crear valor con ella, otra muy distinta.
 
-Versión ampliada de una publicación en LinkedIn · 8 de septiembre de 2026
+Versión ampliada de una publicación en LinkedIn · 8 de septiembre de 2026 · actualizado el 25 de septiembre de 2026
 
 Adoptar la IA es una cosa; crear valor con ella, otra muy distinta. Las ganancias de productividad individual ya son generalizadas, pero pocas empresas logran demostrar un efecto medible en sus resultados. Tres referencias ayudan a decidir qué usos merecen una inversión real: la frecuencia, la capacidad de medirlo, y la independencia respecto a una persona experta concreta. El caso de Klarna, obligada a reincorporar agentes humanos después de sustituir su servicio de atención al cliente por IA, muestra lo que ocurre cuando se confunde una ganancia individual con un resultado real. La verdadera pregunta no es adoptar la IA más rápido, sino saber cuál de sus usos merece generalizarse.
 
@@ -269,9 +277,13 @@ La primera cifra medía una ganancia individual: menos llamadas, resolución má
 
 ¿el reto sigue siendo adoptar la IA… o saber ya dónde merece realmente desplegarse?
 
-Fuente: McKinsey & Company, « The State of AI in 2026: On the road to ROI », agosto de 2026 .
+Fuente: McKinsey & Company, «The State of AI in 2026: On the road to ROI», agosto de 2026 .
 
 #InteligenciaArtificial #EstrategiaIA #Transformación #Liderazgo #CreaciónDeValor
+
+## Para ir más lejos
+
+Cuatro preguntas más para prolongar la reflexión.
 
 ### ¿Cómo vincular un uso de la IA con un resultado de la empresa?
 
@@ -299,7 +311,7 @@ Detener un uso también forma parte de la decisión: prueba que la organización
 
 Valérie Mailland
 
-Fundadora de EXEC'IA Consulting. 20+ años junto a directivos, 18 años en McKinsey & Company. Seguir en LinkedIn →
+Fundadora de EXEC'IA Consulting. Más de 20 años junto a directivos, 18 años en McKinsey & Company. Seguir en LinkedIn →
 ---
 
 # Plus d'outils IA ne veut pas dire plus d'impact. [FR]
@@ -307,7 +319,7 @@ URL: https://exec-ia.ai/perspective-probleme-nest-pas-outils-mais-arbitrage.html
 
 # Plus d’outils IA ne veut pas dire plus d’impact. Ce n’est pas un problème d’outils. C’est un problème d’arbitrage.
 
-Version étoffée d’une publication sur LinkedIn · 9 septembre 2026
+Version étoffée d’une publication sur LinkedIn · 9 septembre 2026 · mis à jour le 25 septembre 2026
 
 Plus d’outils IA ne veut pas dire plus d’impact : c’est un problème d’arbitrage, pas d’outils. Trois critères permettent de trier : un vrai enjeu, un budget et un responsable nommés, une réversibilité assumée. Sans ce tri, une équipe finit par gérer cinq initiatives à moitié plutôt que deux jusqu’au bout, une étude de Gartner prévoyait que 30 % des projets d’IA générative seraient abandonnés faute de valeur métier claire. Le rituel qui évite cette dérive : une revue trimestrielle courte, où chaque outil actif doit justifier sa place, sans attendre un grand nettoyage annuel.
 
@@ -375,6 +387,10 @@ Source : Gartner, « Predicts 30% of Generative AI Projects Will Be Abandoned Af
 
 #IntelligenceArtificielle #Communication #CreationDeValeur #StrategieIA
 
+## Pour aller plus loin
+
+Quatre questions de plus pour prolonger la réflexion.
+
 ### Comment éviter l’empilement d’outils ?
 
 Par une règle simple : aucun nouvel outil sans usage nommé, sans responsable et sans date de revue. Un outil qui n’a pas de propriétaire finit par ne servir à personne, tout en continuant à coûter.
@@ -409,7 +425,7 @@ Il vaut mieux poser cette réponse par écrit : elle sert de référence la proc
 
 Valérie Mailland
 
-Fondatrice d'EXEC'IA Consulting. 20+ ans auprès de dirigeants, 18 ans chez McKinsey & Company. Suivre sur LinkedIn →
+Fondatrice d’EXEC’IA Consulting. Plus de 20 ans auprès de dirigeants, 18 ans chez McKinsey & Company. Suivre sur LinkedIn →
 ---
 
 # More AI tools do not mean more impact. [EN]
@@ -417,7 +433,7 @@ URL: https://exec-ia.ai/perspective-probleme-nest-pas-outils-mais-arbitrage-en.h
 
 # More AI tools do not mean more impact. It is not a tools problem. It is a trade-off problem.
 
-Expanded version of a LinkedIn post · September 9, 2026
+Expanded version of a LinkedIn post · September 9, 2026 · updated September 25, 2026
 
 More AI tools do not mean more impact: it is a trade-off problem, not a tools problem. Three criteria help sort them: a real challenge, a named budget and owner, an accepted reversibility. Without that sorting, a team ends up running five initiatives halfway instead of two all the way through, a Gartner study predicted that 30% of generative AI projects would be abandoned for lack of clear business value. The ritual that prevents this drift: a short quarterly review where every active tool has to justify its place, instead of waiting for one big annual clean-up.
 
@@ -483,6 +499,10 @@ Source: Gartner, “Predicts 30% of Generative AI Projects Will Be Abandoned Aft
 
 #ArtificialIntelligence #Communications #ValueCreation #AIStrategy
 
+## Going further
+
+Four more questions to take the thinking further.
+
 ### How do you avoid piling up tools?
 
 With a simple rule: no new tool without a named use, an owner and a review date. A tool with no owner ends up serving nobody while continuing to cost money.
@@ -525,7 +545,7 @@ URL: https://exec-ia.ai/perspective-probleme-nest-pas-outils-mais-arbitrage-es.h
 
 # Más herramientas de IA no significa más impacto. No es un problema de herramientas. Es un problema de elección.
 
-Versión ampliada de una publicación en LinkedIn · 9 de septiembre de 2026
+Versión ampliada de una publicación en LinkedIn · 9 de septiembre de 2026 · actualizado el 25 de septiembre de 2026
 
 Más herramientas de IA no significa más impacto: es un problema de elección, no de herramientas. Tres criterios ayudan a decidir cuáles conservar: un reto real, un presupuesto y una persona responsable con nombre, una reversibilidad asumida. Sin esa criba, un equipo acaba llevando cinco iniciativas a medias en lugar de dos hasta el final, un estudio de Gartner preveía que el 30 % de los proyectos de IA generativa se abandonarían por falta de un valor de negocio claro. El ritual que evita esta deriva: una revisión trimestral breve, donde cada herramienta activa debe justificar su lugar, en lugar de esperar a una gran limpieza anual.
 
@@ -587,9 +607,13 @@ La señal de que este ritual funciona no es el número de herramientas que elimi
 
 avanzan de verdad y cuántas dan vueltas sin terminar nunca?
 
-Fuente: Gartner, « Predicts 30% of Generative AI Projects Will Be Abandoned After Proof of Concept By End of 2025 », 2024 .
+Fuente: Gartner, «Predicts 30% of Generative AI Projects Will Be Abandoned After Proof of Concept By End of 2025», 2024 .
 
 #InteligenciaArtificial #Comunicación #CreaciónDeValor #EstrategiaIA
+
+## Para ir más lejos
+
+Cuatro preguntas más para prolongar la reflexión.
 
 ### ¿Cómo evitar la acumulación de herramientas?
 
@@ -625,7 +649,7 @@ Conviene dejar la respuesta por escrito: sirve de referencia la próxima vez que
 
 Valérie Mailland
 
-Fundadora de EXEC'IA Consulting. 20+ años junto a directivos, 18 años en McKinsey & Company. Seguir en LinkedIn →
+Fundadora de EXEC'IA Consulting. Más de 20 años junto a directivos, 18 años en McKinsey & Company. Seguir en LinkedIn →
 ---
 
 # Toutes les décisions ne se délèguent pas. Même à une IA. [FR]
@@ -633,7 +657,7 @@ URL: https://exec-ia.ai/perspective-toutes-decisions-ne-se-deleguent-pas.html
 
 # Toutes les décisions ne se délèguent pas. Même à une IA .
 
-Version étoffée d’une publication sur LinkedIn · 8 septembre 2026
+Version étoffée d’une publication sur LinkedIn · 8 septembre 2026 · mis à jour le 25 septembre 2026
 
 Toutes les décisions ne se délèguent pas à une IA, même la plus performante. Un test simple aide à trancher : si une décision est facilement réversible et ses conséquences contenues, la déléguer ne pose pas de problème. Si elle est difficile à défaire ou engage l’organisation au-delà de celui qui la prend, elle doit rester humaine. Le cas du chatbot d’Air Canada, condamné en justice à honorer une promesse inventée par son propre outil, illustre ce qui arrive quand cette frontière n’a jamais été fixée. La solution n’est pas de se méfier de l’IA, mais d’écrire, une fois pour toutes, la courte liste des décisions que l’organisation s’interdit de lui déléguer.
 
@@ -657,7 +681,7 @@ Ce chiffre ne dit pas que les dirigeants se méfient de l’IA. Il dit qu’ils 
 
 L’IA peut analyser, comparer, simuler, challenger une intuition et faire émerger des options.
 
-### Comment savoir si une décision peut être déléguée ?
+## Comment savoir si une décision peut être déléguée ?
 
 Un test simple permet souvent de trancher : si la décision est facilement réversible et que ses conséquences restent contenues, la déléguer ne pose pas de problème particulier. Si elle est difficile à défaire, ou si ses effets dépassent largement celui qui l’a prise, la garder entre des mains humaines n’est pas de la prudence excessive : c’est simplement proportionné au risque.
 
@@ -711,6 +735,10 @@ Source : Morgan Stanley, « AI Governance Survey », 2026 .
 
 #IntelligenceArtificielle #Leadership #Gouvernance #Decision #StrategieIA
 
+## Pour aller plus loin
+
+Quatre questions de plus pour prolonger la réflexion.
+
 ### Comment documenter une décision prise avec l’aide d’une IA ?
 
 En gardant trace de trois éléments : la question posée, les options examinées et la raison du choix final. Ce court récit permet de relire la décision plus tard et de comprendre ce qui a compté.
@@ -739,7 +767,7 @@ Il n’y a rien de plus inutile que de faire efficacement ce qui ne devrait pas 
 
 Valérie Mailland
 
-Fondatrice d'EXEC'IA Consulting. 20+ ans auprès de dirigeants, 18 ans chez McKinsey & Company. Suivre sur LinkedIn →
+Fondatrice d’EXEC’IA Consulting. Plus de 20 ans auprès de dirigeants, 18 ans chez McKinsey & Company. Suivre sur LinkedIn →
 ---
 
 # Not every decision can be delegated. Not even to an AI. [EN]
@@ -747,7 +775,7 @@ URL: https://exec-ia.ai/perspective-toutes-decisions-ne-se-deleguent-pas-en.html
 
 # Not every decision can be delegated. Not even to an AI .
 
-Expanded version of a LinkedIn post · September 8, 2026
+Expanded version of a LinkedIn post · September 8, 2026 · updated September 25, 2026
 
 Not every decision can be delegated to an AI, however capable. A simple test helps decide: if a decision is easily reversible and its consequences stay contained, delegating it is not a problem. If it is hard to undo, or it commits the organisation beyond the person who made it, it should stay human. The Air Canada chatbot case, where a tribunal ordered the airline to honour a promise its own tool had invented, shows what happens when that line was never drawn. The answer is not to distrust AI. It is to write down, once, the short list of decisions the organisation refuses to hand over to it.
 
@@ -769,7 +797,7 @@ That figure, to me, points to the real question: how far should you delegate?
 
 AI can analyse, compare, simulate, challenge an intuition and bring options to the surface.
 
-### How do you know if a decision can be delegated?
+## How do you know if a decision can be delegated?
 
 A simple test often settles it: if a decision is easily reversible and its consequences stay contained, delegating it is not a problem. If it is hard to undo, or its effects reach well beyond the person who made it, keeping it in human hands is not excessive caution; it is simply proportionate to the risk.
 
@@ -821,6 +849,10 @@ Source: Morgan Stanley, “AI Governance Survey”, 2026 .
 
 #ArtificialIntelligence #Leadership #Governance #Decision #AIStrategy
 
+## Going further
+
+Four more questions to take the thinking further.
+
 ### How do you document a decision made with the help of an AI?
 
 By keeping a record of three things: the question asked, the options examined and the reason for the final choice. This short account lets you reread the decision later and understand what mattered.
@@ -857,7 +889,7 @@ URL: https://exec-ia.ai/perspective-toutes-decisions-ne-se-deleguent-pas-es.html
 
 # No todas las decisiones se delegan. Ni siquiera en una IA .
 
-Versión ampliada de una publicación en LinkedIn · 8 de septiembre de 2026
+Versión ampliada de una publicación en LinkedIn · 8 de septiembre de 2026 · actualizado el 25 de septiembre de 2026
 
 No todas las decisiones se delegan en una IA, por muy avanzada que sea. Una prueba sencilla ayuda a decidir: si una decisión es fácilmente reversible y sus consecuencias quedan contenidas, delegarla no plantea ningún problema. Si es difícil de deshacer, o compromete a la organización más allá de quien la toma, debe seguir siendo humana. El caso del chatbot de Air Canada, condenado por un tribunal a cumplir una promesa que su propia herramienta había inventado, muestra lo que ocurre cuando esa frontera nunca se trazó. La respuesta no es desconfiar de la IA, sino escribir, de una vez, la lista breve de decisiones que la organización se niega a delegarle.
 
@@ -879,7 +911,7 @@ Esa cifra me parece plantear la verdadera pregunta: ¿hasta dónde delegar?
 
 La IA puede analizar, comparar, simular, poner a prueba una intuición y hacer aflorar opciones.
 
-### ¿Cómo saber si una decisión puede delegarse?
+## ¿Cómo saber si una decisión puede delegarse?
 
 Una prueba sencilla suele resolverlo: si una decisión es fácilmente reversible y sus consecuencias quedan contenidas, delegarla no plantea ningún problema. Si es difícil de deshacer, o sus efectos superan ampliamente a quien la tomó, mantenerla en manos humanas no es prudencia excesiva: es simplemente proporcional al riesgo.
 
@@ -927,9 +959,13 @@ La respuesta no necesita ser complicada. Solo necesita estar escrita, ser conoci
 
 no delegaría nunca en una IA?
 
-Fuente: Morgan Stanley, « AI Governance Survey », 2026 .
+Fuente: Morgan Stanley, «AI Governance Survey», 2026 .
 
 #InteligenciaArtificial #Liderazgo #Gobernanza #Decisión #EstrategiaIA
+
+## Para ir más lejos
+
+Cuatro preguntas más para prolongar la reflexión.
 
 ### ¿Cómo documentar una decisión tomada con ayuda de una IA?
 
@@ -959,7 +995,7 @@ No hay nada tan inútil como hacer con eficiencia lo que no debería hacerse en 
 
 Valérie Mailland
 
-Fundadora de EXEC'IA Consulting. 20+ años junto a directivos, 18 años en McKinsey & Company. Seguir en LinkedIn →
+Fundadora de EXEC'IA Consulting. Más de 20 años junto a directivos, 18 años en McKinsey & Company. Seguir en LinkedIn →
 ---
 
 # La transformation IA échoue rarement à cause de la technologie. [FR]
@@ -967,7 +1003,7 @@ URL: https://exec-ia.ai/perspective-transformation-echoue-rarement-technologie.h
 
 # La transformation IA échoue rarement à cause de la technologie. Elle échoue quand l’organisation n’a pas changé, seulement l’outil.
 
-Version étoffée d’une publication sur LinkedIn · 9 septembre 2026
+Version étoffée d’une publication sur LinkedIn · 9 septembre 2026 · mis à jour le 25 septembre 2026
 
 La transformation IA échoue rarement à cause de la technologie. Un rapport de RAND Corporation reprend une estimation selon laquelle plus de 80 % des projets échouent, faute d’alignement avec l’organisation, pas par manque d’outil. Une vraie transformation touche trois choses, dans cet ordre : qui décide, quels processus sont revus, quels rôles évoluent réellement. Le signe qu’une transformation n’a pas eu lieu : le nombre de réunions de validation n’a pas changé. Le point de départ tient sur une page : cartographier qui devra décider différemment une fois l’outil en place. Si la réponse est « personne », le projet automatise un existant ; il ne transforme rien.
 
@@ -1035,6 +1071,10 @@ Source : RAND Corporation, « The Root Causes of Failure for Artificial Intellig
 
 #IntelligenceArtificielle #Transformation #Leadership #Organisation #StrategieIA
 
+## Pour aller plus loin
+
+Quatre questions de plus pour prolonger la réflexion.
+
 ### Comment associer les équipes dès le départ ?
 
 En les faisant participer à la description du problème avant d’évoquer la solution. Les personnes qui font le travail connaissent les vrais points de blocage, ceux qu’aucun schéma d’organisation ne montre.
@@ -1069,7 +1109,7 @@ Ce point vaut aussi comme signal : il montre que le sujet reste une priorité de
 
 Valérie Mailland
 
-Fondatrice d'EXEC'IA Consulting. 20+ ans auprès de dirigeants, 18 ans chez McKinsey & Company. Suivre sur LinkedIn →
+Fondatrice d’EXEC’IA Consulting. Plus de 20 ans auprès de dirigeants, 18 ans chez McKinsey & Company. Suivre sur LinkedIn →
 ---
 
 # AI transformation rarely fails because of the technology. [EN]
@@ -1077,7 +1117,7 @@ URL: https://exec-ia.ai/perspective-transformation-echoue-rarement-technologie-e
 
 # AI transformation rarely fails because of the technology. It fails when the organisation has not changed, only the tool.
 
-Expanded version of a LinkedIn post · September 9, 2026
+Expanded version of a LinkedIn post · September 9, 2026 · updated September 25, 2026
 
 AI transformation rarely fails because of the technology. A RAND Corporation report cites an estimate that more than 80% of projects fail for lack of alignment with the organisation, not for lack of a tool. A real transformation touches three things, in this order: who decides, which processes get redesigned, which roles genuinely evolve. The sign that a transformation has not happened: the number of approval meetings has not changed. The starting point fits on a single page: map who will need to decide differently once the tool is in place. If the answer is "no one," the project automates what already exists; it transforms nothing.
 
@@ -1115,7 +1155,7 @@ A simple check, six months after rollout, tells you whether that transformation 
 
 ### 🎯 What three things does a real AI transformation have to touch?
 
-Who decides, and when, is a bottleneck question: if a decision still waits on the same three approvals it always did, the tool has not changed anything upstream of it. Redesigning a process is different from automating it — automating a broken step just makes the mistake happen faster. And a role genuinely evolves when the time a tool frees up gets redirected toward judgment calls a person makes, not simply absorbed back into more of the same. Each of these three can fail on its own — automating without deciding differently, or deciding differently without any role changing — and either gap alone is enough to stop it counting as a transformation.
+Who decides, and when, is a bottleneck question: if a decision still waits on the same three approvals it always did, the tool has not changed anything upstream of it. Redesigning a process is different from automating it: automating a broken step just makes the mistake happen faster. And a role genuinely evolves when the time a tool frees up gets redirected toward judgment calls a person makes, not simply absorbed back into more of the same. Each of these three can fail on its own: automating without deciding differently, or deciding differently without any role changing — and either gap alone is enough to stop it counting as a transformation.
 
 Without that, the organisation quickly slips back into its old habits, with one more tool. A tool changes what is possible. Only the organisation decides what becomes real.
 
@@ -1142,6 +1182,10 @@ what should change before the tool, not after?
 Source: RAND Corporation, “The Root Causes of Failure for Artificial Intelligence Projects and How They Can Succeed”, 2024 .
 
 #ArtificialIntelligence #Transformation #Leadership #Organisation #AIStrategy
+
+## Going further
+
+Four more questions to take the thinking further.
 
 ### How do you involve teams from the start?
 
@@ -1185,9 +1229,9 @@ URL: https://exec-ia.ai/perspective-transformation-echoue-rarement-technologie-e
 
 # La transformación con IA rara vez fracasa por la tecnología. Fracasa cuando la organización no ha cambiado, solo la herramienta.
 
-Versión ampliada de una publicación en LinkedIn · 9 de septiembre de 2026
+Versión ampliada de una publicación en LinkedIn · 9 de septiembre de 2026 · actualizado el 25 de septiembre de 2026
 
-La transformación con IA rara vez fracasa por la tecnología. Un informe de RAND Corporation recoge una estimación según la cual más del 80 % de los proyectos fracasa por falta de alineación con la organización, no por falta de herramienta. Una verdadera transformación toca tres cosas, en este orden: quién decide, qué procesos se rediseñan, qué roles evolucionan de verdad. La señal de que una transformación no ha ocurrido: el número de reuniones de validación no ha cambiado. El punto de partida cabe en una página: cartografiar quién deberá decidir de otra manera una vez implantada la herramienta. Si la respuesta es « nadie », el proyecto automatiza lo existente; no transforma nada.
+La transformación con IA rara vez fracasa por la tecnología. Un informe de RAND Corporation recoge una estimación según la cual más del 80 % de los proyectos fracasa por falta de alineación con la organización, no por falta de herramienta. Una verdadera transformación toca tres cosas, en este orden: quién decide, qué procesos se rediseñan, qué roles evolucionan de verdad. La señal de que una transformación no ha ocurrido: el número de reuniones de validación no ha cambiado. El punto de partida cabe en una página: cartografiar quién deberá decidir de otra manera una vez implantada la herramienta. Si la respuesta es «nadie», el proyecto automatiza lo existente; no transforma nada.
 
 Durante mis años junto a directivos, vi desfilar muchas herramientas y planes de transformación. La IA todavía no existía bajo esta forma. Pero el guion no ha cambiado.
 
@@ -1247,9 +1291,13 @@ Esta prueba no sustituye a un diagnóstico completo. Tiene la ventaja de hacerse
 
 ¿qué debería cambiar antes de la herramienta, y no después?
 
-Fuente: RAND Corporation, « The Root Causes of Failure for Artificial Intelligence Projects and How They Can Succeed », 2024 .
+Fuente: RAND Corporation, «The Root Causes of Failure for Artificial Intelligence Projects and How They Can Succeed», 2024 .
 
 #InteligenciaArtificial #Transformación #Liderazgo #Organización #EstrategiaIA
+
+## Para ir más lejos
+
+Cuatro preguntas más para prolongar la reflexión.
 
 ### ¿Cómo implicar a los equipos desde el principio?
 
@@ -1285,7 +1333,7 @@ Este punto sirve también de señal: muestra que el tema sigue siendo una priori
 
 Valérie Mailland
 
-Fundadora de EXEC'IA Consulting. 20+ años junto a directivos, 18 años en McKinsey & Company. Seguir en LinkedIn →
+Fundadora de EXEC'IA Consulting. Más de 20 años junto a directivos, 18 años en McKinsey & Company. Seguir en LinkedIn →
 ---
 
 # AI Act et RGPD : les obligations réelles d'une PME qui utilise l'IA [FR]

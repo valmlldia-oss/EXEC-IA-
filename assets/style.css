@@ -7174,3 +7174,7 @@ body > section#perspectives.snap-page:first-of-type { padding-top: calc(var(--na
 
 /* Numéros de page des colonnes affichés par la feuille de style (hors texte de la page, donc jamais lus ni coupés dans un extrait). */
 .article-book-folio[data-n]::before { content: attr(data-n); }
+
+/* Bande « pour aller plus loin » des quatre premiers articles */
+.article-more-title { margin: 44px 0 0; }
+.article-more-lead { font-family: var(--sans); font-size: .98rem; color: var(--plum-muted); margin: 8px 0 22px 24px; }

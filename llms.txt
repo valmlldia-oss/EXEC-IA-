@@ -2,7 +2,7 @@
 
 > Cabinet de conseil stratégique en Intelligence Artificielle pour dirigeants. Priorisation des initiatives IA, automatisation intelligente, transformation digitale. Fondé par Valérie Mailland (18 ans chez McKinsey & Company, en coordination exécutive et communication du réseau Alumni).
 
-Contenu intégral des 4 articles Perspectives et du guide AI Act/RGPD pour PME (FR/EN/ES, sans HTML) : [llms-full.txt](https://exec-ia.ai/llms-full.txt)
+Contenu intégral des 8 articles Perspectives et du guide AI Act/RGPD pour PME (FR/EN/ES, sans HTML) : [llms-full.txt](https://exec-ia.ai/llms-full.txt)
 
 ## Pages principales
 
