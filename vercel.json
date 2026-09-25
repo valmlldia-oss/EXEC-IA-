@@ -1,9 +1,20 @@
 {
   "rewrites": [
-    { "source": "/", "destination": "/accueil.html" }
+    {
+      "source": "/",
+      "destination": "/accueil.html"
+    },
+    {
+      "source": "/5-essentiels",
+      "destination": "/assets/Les%205%20Essentiels_The%205%20Essentials_Los%205%20Esenciales.html"
+    }
   ],
   "redirects": [
-    { "source": "/index.html", "destination": "/", "permanent": true }
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    }
   ],
   "headers": [
     {
