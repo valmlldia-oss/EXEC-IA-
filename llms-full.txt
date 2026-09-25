@@ -2992,7 +2992,7 @@ Un premier usage modeste, mené sur une tâche précise, apporte des enseignemen
 
 « Osez l’IA » finance-t-il n’importe quel conseil ? Non. Le plan national Osez l’IA comporte deux volets. Le premier est un catalogue de solutions IA prêtes à l’emploi pour PME et ETI (assistants, automatisation, analyse de documents) : ce sont des produits. Le second regroupe des accompagnements portés par Bpifrance, comme le Diag Data IA et l’Accélérateur IA, menés par des experts agréés.
 
-Dans les deux cas, le prestataire n’est pas librement choisi. Un atelier de cadrage stratégique comme Cap IA n’est ni un produit du catalogue ni une prestation d’expert agréé : il ne relève pas de ces dispositifs et ne doit pas être présenté comme finançable par eux. Les Agents IA d’EXEC’IA, eux, sont des solutions produit : elles pourraient relever d’un catalogue de ce type, à condition d’y être retenues.
+Dans les deux cas, le prestataire n’est pas librement choisi. Un atelier de cadrage stratégique comme Cap IA n’est ni un produit du catalogue ni une prestation d’expert agréé : il ne relève pas de ces dispositifs et ne doit pas être présenté comme finançable par eux. Les Agents IA d’EXEC’IA, eux, sont des solutions produit : VIGIE, ÉCHO ou RELAIS pourraient relever d’un catalogue de ce type, à condition d’y être retenus.
 
 ### Quelles questions poser avant de déposer un dossier ?
 
@@ -3104,7 +3104,7 @@ A modest first use, run on a precise task, brings lessons that no application fi
 
 Does “Osez l’IA” fund any kind of consulting? No. The national Osez l’IA plan has two strands. The first is a catalogue of ready-to-use AI solutions for SMEs and mid-sized companies (assistants, automation, document analysis): these are products. The second groups support delivered through Bpifrance, such as Diag Data IA and the AI Accelerator, carried out by approved experts.
 
-In both cases, the provider is not freely chosen. A strategic scoping workshop such as Cap IA is neither a catalogue product nor an approved expert’s service: it falls outside these schemes and should not be presented as fundable by them. EXEC’IA’s AI Agents, by contrast, are product solutions: they could fall under a catalogue of this kind, provided they are selected.
+In both cases, the provider is not freely chosen. A strategic scoping workshop such as Cap IA is neither a catalogue product nor an approved expert’s service: it falls outside these schemes and should not be presented as fundable by them. EXEC’IA’s AI Agents, by contrast, are product solutions: VIGIE, ÉCHO or RELAIS could fall under a catalogue of this kind, provided they are selected.
 
 ### Which questions should you ask before filing an application?
 
@@ -3216,7 +3216,7 @@ Un primer uso modesto, realizado sobre una tarea precisa, aporta enseñanzas que
 
 ¿«Osez l’IA» financia cualquier tipo de consultoría? No. El plan nacional Osez l’IA tiene dos vertientes. La primera es un catálogo de soluciones de IA listas para usar para pymes y empresas medianas (asistentes, automatización, análisis de documentos): son productos. La segunda reúne acompañamientos impulsados por Bpifrance, como el Diag Data IA y el Acelerador de IA, realizados por expertos homologados.
 
-En ambos casos, el proveedor no se elige libremente. Un taller de enfoque estratégico como Cap IA no es ni un producto del catálogo ni un servicio de experto homologado: queda fuera de estos dispositivos y no debe presentarse como financiable con ellos. Los Agentes IA de EXEC’IA, en cambio, son soluciones de producto: podrían entrar en un catálogo de este tipo, siempre que sean seleccionadas.
+En ambos casos, el proveedor no se elige libremente. Un taller de enfoque estratégico como Cap IA no es ni un producto del catálogo ni un servicio de experto homologado: queda fuera de estos dispositivos y no debe presentarse como financiable con ellos. Los Agentes IA de EXEC’IA, en cambio, son soluciones de producto: VIGIE, ÉCHO o RELAIS podrían entrar en un catálogo de este tipo, siempre que sean seleccionados.
 
 ### ¿Qué preguntas hacer antes de presentar un expediente?
 
