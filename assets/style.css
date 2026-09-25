@@ -7178,3 +7178,6 @@ body > section#perspectives.snap-page:first-of-type { padding-top: calc(var(--na
 /* Bande « pour aller plus loin » des quatre premiers articles */
 .article-more-title { margin: 44px 0 0; }
 .article-more-lead { font-family: var(--sans); font-size: .98rem; color: var(--plum-muted); margin: 8px 0 22px 24px; }
+
+/* Pastilles des mots et chiffres clés dans les articles (même traitement que « Digital Omnibus ») */
+.art-chip { font-family: var(--sans); font-weight: 600; font-style: normal; font-size: .92em; color: var(--plum); background: rgba(217,201,195,.38); padding: .04em .38em; border-radius: 4px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
