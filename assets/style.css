@@ -7113,3 +7113,13 @@ body { overflow-wrap: break-word; overflow-x: clip; }
 body > section#perspectives.snap-page:first-of-type { padding-top: calc(var(--nav-h) + var(--snap-breath)); }
 /* Bandeau gros chiffres : la précision sous McKinsey passe en majuscules, comme les autres légendes */
 .ss-subnote { text-transform: uppercase; font-size: .72em; letter-spacing: .06em; line-height: 1.55; }
+
+/* Pied de page : seconde colonne d'articles Perspectives (5 à 8), calée sur le bord gauche des boutons de langue.
+   Les liens descendent au bas de la colonne pour tomber sur les mêmes lignes que les quatre premiers. */
+.footer-col--langs { justify-content: flex-start; }
+.footer-col a.footer-persp-link--c2 { padding-left: 0; margin-top: -7px; }
+.footer-col a.footer-persp-link--first { margin-top: auto; }
+@media (max-width: 900px) {
+  .footer-col a.footer-persp-link { white-space: normal; }
+  .footer-col a.footer-persp-link--first { margin-top: 6px; }
+}
