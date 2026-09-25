@@ -3,6 +3,8 @@ Allow: /
 
 # Pages utilitaires non destinées à l'indexation
 Disallow: /brevo-en-cours.html
+# Points d'entrée techniques des formulaires (réponse 405 à une simple visite) : à ne pas explorer
+Disallow: /api/
 
 # Robots d'entraînement de modèles IA (pas de citation) : bloqués au niveau Cloudflare.
 # Déclaré ici pour que robots.txt reflète honnêtement la politique appliquée.
