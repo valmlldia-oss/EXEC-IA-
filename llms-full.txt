@@ -2970,7 +2970,7 @@ Le prestataire n’est donc pas librement choisi, et le diagnostic ne remplace p
 
 ## Quelles grandes familles d’aides existent pour un projet IA ?
 
-Trois familles se distinguent, avec des logiques différentes. Les dispositifs de diagnostic financent une analyse, comme le Diag Data IA. Les catalogues de solutions référencent des produits prêts à l’emploi, comme l’un des deux volets du plan Osez l’IA. Enfin, des aides plus générales, nationales ou régionales, soutiennent la transformation numérique ou l’investissement.
+Trois familles se distinguent, avec des logiques différentes. Les dispositifs de diagnostic financent une analyse, comme le Diag Data IA. Les catalogues de solutions référencent des produits prêts à l’emploi, comme l’un des deux volets du plan Osez l’IA. Des aides plus générales, nationales ou régionales, soutiennent la transformation numérique ou l’investissement.
 
 Aucune de ces familles n’est interchangeable avec les autres. Confondre un diagnostic financé avec un déploiement financé est l’une des erreurs les plus fréquentes.
 
@@ -3020,7 +3020,7 @@ En revenant à la question de départ : quel problème voulez-vous résoudre ? L
 
 Un dirigeant qui a clarifié son problème lit un catalogue d’aides comme une liste d’options. Celui qui ne l’a pas fait le lit comme une liste de contraintes.
 
-Quelles trois choses garder en tête ? Trois choses. Le projet doit exister sans l’aide, même en plus petit. Les conditions doivent être vérifiées à la source, à la date du dépôt. Et la conformité doit être pensée dès le cadrage, pas après le déploiement.
+Quelles trois choses garder en tête ? Trois choses. Le projet doit exister sans l’aide, même en plus petit. Les conditions doivent être vérifiées à la source, à la date du dépôt. La conformité doit être pensée dès le cadrage, pas après le déploiement.
 
 Si ces trois points sont acquis, l’aide devient ce qu’elle doit être : un accélérateur d’un projet déjà choisi, et non la raison de le choisir.
 
@@ -3082,7 +3082,7 @@ The provider is therefore not freely chosen, and the diagnosis does not replace 
 
 ## Which main families of support exist for an AI project?
 
-Three families stand out, each with its own logic. Diagnostic schemes fund an analysis, such as Diag Data IA. Solution catalogues list ready-to-use products, such as one of the two strands of the Osez l’IA plan. Finally, more general national or regional schemes support digital transformation or investment.
+Three families stand out, each with its own logic. Diagnostic schemes fund an analysis, such as Diag Data IA. Solution catalogues list ready-to-use products, such as one of the two strands of the Osez l’IA plan. More general national or regional schemes support digital transformation or investment.
 
 None of these families is interchangeable with the others. Confusing a funded diagnosis with a funded deployment is one of the most frequent mistakes.
 
@@ -3132,7 +3132,7 @@ By coming back to the starting question: what problem do you want to solve? Sche
 
 A leader who has clarified their problem reads a catalogue of support as a list of options. One who has not reads it as a list of constraints.
 
-Which three things should you keep in mind? Three things. The project must exist without the support, even if smaller. The conditions must be checked at the source, on the date of filing. And compliance must be thought through at the scoping stage, not after deployment.
+Which three things should you keep in mind? Three things. The project must exist without the support, even if smaller. The conditions must be checked at the source, on the date of filing. Compliance must be thought through at the scoping stage, not after deployment.
 
 If these three points are in place, the support becomes what it should be: an accelerator for a project already chosen, not the reason for choosing it.
 
@@ -3194,7 +3194,7 @@ El proveedor no se elige, por tanto, libremente, y el diagnóstico no sustituye 
 
 ## ¿Qué grandes familias de ayudas existen para un proyecto de IA?
 
-Se distinguen tres familias, con lógicas distintas. Los dispositivos de diagnóstico financian un análisis, como el Diag Data IA. Los catálogos de soluciones reúnen productos listos para usar, como una de las dos vertientes del plan Osez l’IA. Por último, ayudas más generales, nacionales o regionales, apoyan la transformación digital o la inversión.
+Se distinguen tres familias, con lógicas distintas. Los dispositivos de diagnóstico financian un análisis, como el Diag Data IA. Los catálogos de soluciones reúnen productos listos para usar, como una de las dos vertientes del plan Osez l’IA. Ayudas más generales, nacionales o regionales, apoyan la transformación digital o la inversión.
 
 Ninguna de estas familias es intercambiable con las demás. Confundir un diagnóstico financiado con un despliegue financiado es uno de los errores más frecuentes.
 
@@ -3244,7 +3244,7 @@ Volviendo a la pregunta de partida: ¿qué problema quiere resolver? Los disposi
 
 Un directivo que ha aclarado su problema lee un catálogo de ayudas como una lista de opciones. El que no lo ha hecho lo lee como una lista de restricciones.
 
-¿Qué tres cosas tener presentes? Tres cosas. El proyecto debe existir sin la ayuda, aunque sea más pequeño. Las condiciones deben comprobarse en la fuente, en la fecha de la solicitud. Y el cumplimiento debe pensarse desde el enfoque, no después del despliegue.
+¿Qué tres cosas tener presentes? Tres cosas. El proyecto debe existir sin la ayuda, aunque sea más pequeño. Las condiciones deben comprobarse en la fuente, en la fecha de la solicitud. El cumplimiento debe pensarse desde el enfoque, no después del despliegue.
 
 Si estos tres puntos están resueltos, la ayuda se convierte en lo que debe ser: un acelerador de un proyecto ya elegido, y no la razón para elegirlo.
 

@@ -7187,3 +7187,11 @@ body > section#perspectives.snap-page:first-of-type { padding-top: calc(var(--na
 
 /* Pastilles des mots et chiffres clés dans les articles (même traitement que « Digital Omnibus ») */
 .art-chip { font-family: var(--sans); font-weight: 600; font-style: normal; font-size: .92em; color: var(--plum); background: rgba(217,201,195,.38); padding: .04em .38em; border-radius: 4px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+
+/* Intertitres terracotta des articles : plus d'air au-dessus qu'en dessous, pour qu'ils se rattachent au texte qui suit (somme des espaces inchangée : 44 px) */
+.article-book h3.article-meta { margin-top: 32px; margin-bottom: 12px; }
+.article-book h3.article-meta:first-child { margin-top: 0; }
+.article-book h3.article-meta + .article-intro { margin-top: 0; }
+/* Énumérations de trois éléments : numéros terracotta ajoutés par le style, le texte lu par les moteurs reste inchangé */
+.art-num::before { content: attr(data-n) "."; color: var(--rose); font-family: var(--sans); font-weight: 600; margin-right: .45em; }
+.article-title br { display: block; }
