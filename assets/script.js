@@ -659,17 +659,42 @@ window.addEventListener('load', () => {
         return kids.length ? kids[kids.length - 1].getBoundingClientRect().bottom : 0;
       }
       const d = contentBottom(cols[0]) - contentBottom(cols[1]);
-      if (Math.abs(d) < 2 || Math.abs(d) > 160) return;
+      if (Math.abs(d) < 2 || Math.abs(d) > 240) return;
       const shorter = d > 0 ? cols[1] : cols[0];
       const kids = Array.from(shorter.children).filter(function (k) { return !k.classList.contains('article-book-folio'); });
       if (kids.length < 2) return;
-      const each = Math.abs(d) / (kids.length - 1);
+      const need = Math.abs(d);
+      const other = d > 0 ? cols[0] : cols[1];
+      const slots = kids.length - 1;
+      const base = contentBottom(shorter);
+      const all = [];
       for (let i = 1; i < kids.length; i++) {
+        /* jamais de cale entre un intertitre et le texte qui le suit */
+        if (/^H[23]$/.test(kids[i - 1].tagName)) continue;
         const sp = document.createElement('div');
         sp.className = 'bal-spacer';
         sp.setAttribute('aria-hidden', 'true');
-        sp.style.cssText = 'flex:none;height:' + each.toFixed(2) + 'px';
+        sp.style.cssText = 'flex:none;height:0px';
         shorter.insertBefore(sp, kids[i]);
+        all.push(sp);
+      }
+      /* espace que chaque cale ajoute déjà à hauteur nulle (marges de la colonne) : on n'en garde que ce qu'il faut */
+      const nSlots = Math.max(1, all.length);
+      const perSlot = Math.max(0, (contentBottom(shorter) - base) / nSlots);
+      const count = perSlot > 0 ? Math.max(1, Math.min(nSlots, Math.floor(need / (perSlot + 1.5)))) : nSlots;
+      const keep = new Set();
+      for (let k = 0; k < count; k++) keep.add(Math.floor((k + 0.5) * nSlots / count));
+      const made = [];
+      all.forEach(function (sp, idx) { if (keep.has(idx)) made.push(sp); else sp.remove(); });
+      made.forEach(function (sp) { sp.style.height = Math.max(0, need / made.length - perSlot).toFixed(2) + 'px'; });
+      /* correction d'après la mesure réelle : trois passes au plus */
+      for (let pass = 0; pass < 3; pass++) {
+        const r = contentBottom(other) - contentBottom(shorter);
+        if (Math.abs(r) < 0.6) break;
+        made.forEach(function (sp) {
+          const h = Math.max(0, parseFloat(sp.style.height) + r / made.length);
+          sp.style.height = h.toFixed(2) + 'px';
+        });
       }
     });
   }

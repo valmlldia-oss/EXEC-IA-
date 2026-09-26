@@ -2674,7 +2674,7 @@ En leur apprenant à reprendre sans reposer les questions déjà posées, et à 
 
 Les conseillers doivent aussi savoir quand signaler à l’équipe qu’un motif de passation revient, pour que la frontière soit ajustée.
 
-Comment garder la maîtrise quand l’outil évolue ? En considérant chaque évolution comme un changement de frontière à décider, pas comme une mise à jour technique. Avant d’élargir le périmètre de l’assistant, la question à poser est simple : quelles demandes nouvelles va-t-il traiter seul, et qui vérifie que cela reste acceptable pour le client ?
+Comment garder la maîtrise quand l’outil évolue ? En considérant chaque évolution comme un changement de frontière à décider, pas comme une mise à jour technique. Avant d’élargir le périmètre de l’assistant, la question à poser est simple : quelles nouvelles demandes l’assistant va-t-il traiter seul, et qui vérifie que cela reste acceptable pour le client ?
 
 Une relecture régulière de quelques échanges réels, à chaque évolution, protège la qualité de la relation.
 
@@ -2798,11 +2798,9 @@ By teaching them to pick up without repeating questions already asked, and to re
 
 Advisers must also know when to tell the team that a reason for handover keeps coming back, so the boundary can be adjusted.
 
-How do you keep control as the tool evolves? By treating each change as a boundary to decide, not as a technical update. Before widening the assistant’s scope, the question is simple: which new requests will it handle alone, and who checks that this stays acceptable for the customer?
+How do you keep control as the tool evolves? By treating each change as a boundary to decide, not as a technical update. Before widening the assistant’s scope, the question is simple: which new requests will the assistant handle alone, and who checks that this stays acceptable for the customer?
 
 A regular review of a few real exchanges, at each change, protects the quality of the relationship.
-
-In the end, the customer only remembers how the exchange felt. A good boundary is one the customer barely notices: the simple request is handled at once, the delicate one reaches a person without friction, and nobody has to explain the problem twice. That smoothness is a design choice, made in advance, and it can be reviewed like any other.
 
 💬 In your customer service,
 
@@ -2924,7 +2922,7 @@ Enseñándoles a retomar sin repetir las preguntas ya hechas y a reconocer el to
 
 Los asesores deben saber también cuándo avisar al equipo de que un motivo de traspaso se repite, para ajustar la frontera.
 
-¿Cómo mantener el control cuando la herramienta evoluciona? Considerando cada evolución como un cambio de frontera que hay que decidir, no como una actualización técnica. Antes de ampliar el ámbito del asistente, la pregunta es sencilla: ¿qué consultas nuevas va a resolver solo y quién comprueba que sigue siendo aceptable para el cliente?
+¿Cómo mantener el control cuando la herramienta evoluciona? Considerando cada evolución como un cambio de frontera que hay que decidir, no como una actualización técnica. Antes de ampliar el ámbito del asistente, la pregunta es sencilla: ¿qué consultas nuevas va a resolver el asistente por sí solo y quién comprueba que sigue siendo aceptable para el cliente?
 
 Una revisión periódica de unos pocos intercambios reales, en cada evolución, protege la calidad de la relación.
 

@@ -1363,7 +1363,7 @@ section { padding: var(--section-gap) 0; }
 .article-title {
   font-family: var(--serif); font-weight: 500; letter-spacing: -.01em;
   font-size: clamp(1.8rem, 3.2vw, 2.6rem); line-height: 1.22; color: var(--plum);
-  max-width: 560px; margin: 0;
+  max-width: 660px; margin: 0;
 }
 .article-subtitle {
   font-family: var(--serif); font-style: italic; font-weight: 500;
@@ -7213,3 +7213,65 @@ body > section#perspectives.snap-page:first-of-type { padding-top: calc(var(--na
 .article-book a.art-guide-link { font-family: var(--sans); font-weight: 600; font-style: normal; font-size: .95em; color: var(--plum); text-decoration: none; background: rgba(199,95,98,.13); box-shadow: inset 0 0 0 1px rgba(199,95,98,.4); border-radius: 6px; padding: .12em .55em; -webkit-box-decoration-break: clone; box-decoration-break: clone; transition: background .2s; }
 .article-book a.art-guide-link::after { content: " →"; color: var(--rose); }
 .article-book a.art-guide-link:hover { background: rgba(199,95,98,.24); }
+
+/* Bouton Instagram du pied de page : logo Instagram officiel (image) */
+
+/* Article justifié à gauche et à droite (essai sur l'article 7) : césure activée, dernière ligne de chaque paragraphe alignée à gauche */
+body.art-justify .article-book .article-intro p, body.art-justify .article-book .article-close p, body.art-justify .article-book .art-list li { text-align: justify; text-align-last: left; text-justify: inter-word; }
+/* Les pastilles ne se coupent jamais en fin de ligne */
+.art-chip { hyphens: none; -webkit-hyphens: none; white-space: nowrap; }
+
+/* Pied de page : boutons LinkedIn et Instagram plus rapprochés, bas du pied de page resserré */
+.footer-col a.footer-instagram-btn { margin-top: -6px; }
+.footer-bottom { padding-top: 2px; padding-bottom: 4px; }
+.footer-legal a { padding-top: 4px; padding-bottom: 4px; }
+
+/* Articles : groupes insécables, mot IA en terracotta, expressions clés en semi-bold, exergue entre deux filets */
+.nw { white-space: nowrap; }
+.art-ia { color: var(--rose); }
+.art-em { font-weight: 600; }
+.article-book .article-qlist.article-qlist--filets { border-left: none; padding: 12px 0; margin: 26px 0 8px; border-top: 1px solid rgba(217,201,195,1); border-bottom: 1px solid rgba(217,201,195,1); text-align: center; }
+.article-qlist--filets p { text-align: center !important; text-align-last: center !important; }
+.art-qlist-accent { color: var(--rose); font-weight: 600; }
+.article-hashtags { hyphens: none; -webkit-hyphens: none; overflow-wrap: normal; word-break: keep-all; }
+/* Justification aux deux bords des articles 7 et 8 : la dernière ligne d'un paragraphe reste à gauche */
+body.art-justify .article-book .article-intro ul.art-list li { text-align: justify; text-align-last: left; }
+
+/* Articles justifiés : césure plus fine pour resserrer les espaces entre les mots */
+body.art-justify .article-book .article-intro p, body.art-justify .article-book .article-intro ul.art-list li { hyphens: auto; -webkit-hyphens: auto; hyphenate-limit-chars: 5 2 2; text-wrap: pretty; }
+
+/* Citation d'ouverture sur une seule ligne (ordinateur) : boîte élargie à la largeur de l'article, texte sans retour à la ligne */
+@media (min-width: 1100px) {
+  .article-epigraph.article-epigraph--line { max-width: none; width: fit-content; }
+  .article-epigraph.article-epigraph--line p { white-space: nowrap; text-wrap: nowrap; font-size: clamp(1.28rem, 1.86vw, 1.6rem); }
+}
+
+/* Citation d'ouverture : +7 % de taille sur tous les écrans (les trois langues de l'article) */
+.article-epigraph.article-epigraph--line p { font-size: clamp(1.44rem, 2.67vw, 1.87rem); }
+@media (min-width: 1100px) { .article-epigraph.article-epigraph--line p { font-size: clamp(1.28rem, 1.86vw, 1.6rem); } }
+
+/* Pied de page : ordre Le site · Coordonnées · Langues ; les huit articles Perspectives forment deux colonnes alignées sous « Le site » */
+.footer-col--site { position: relative; }
+.footer-col--site .footer-persp-c2 { position: absolute; left: 21rem; bottom: 0; }
+.footer-grid > .footer-col--contact { margin-right: 0; }
+.footer-grid > .footer-col--contact a, .footer-grid > .footer-col--contact .footer-loc { color: rgba(99,59,74,.88); }
+.footer-grid > .footer-col--contact .footer-loc { color: rgba(99,59,74,.55); }
+.footer-grid > .footer-col--langs { margin-right: 0; }
+.footer-grid > .footer-col--langs a { color: rgba(99,59,74,.92); }
+.footer-bottom .footer-copy { grid-column: 3; justify-self: start; }
+@media (max-width: 1250px) {
+  .footer-col--site .footer-persp-c2 { position: static; margin-top: 6px; }
+  .footer-col .footer-persp-c2 a.footer-persp-link { white-space: normal; }
+}
+
+/* Pied de page, colonne du logo : le bord haut du cadre du logo est sur la ligne des titres (LE SITE…), son bord gauche sur le « U » de « Une expérience dirigeante » ;
+   le cadre visible du logo commence à 30 px / 46 px (sur 450 x 212) dans l'image : on compense ces marges transparentes. */
+@media (min-width: 901px) {
+  .footer-brand { margin-top: 0; }
+  .footer-brand .footer-logo-main { margin-left: calc(225px * -30 / 450); margin-top: calc(225px * -46 / 450 + 3px); }
+  .footer-tag-lead { white-space: nowrap; }
+}
+
+/* Mention IA sous le filet du pied de page */
+.footer-mention-row { padding-top: 10px; padding-bottom: 0; }
+.footer-mention-row .footer-mention-ia { margin: 0; font-size: .9rem; text-align: left; color: rgba(99,59,74,.6); white-space: normal; }
