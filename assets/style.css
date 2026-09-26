@@ -7309,3 +7309,6 @@ body.art-justify .article-book .article-intro p, body.art-justify .article-book 
 @media (min-width: 1251px) {
   .footer-col--site a.footer-persp-link:not(.footer-persp-link--c2) { margin-right: -190px; }
 }
+
+/* Mention IA du pied de page retirée */
+.footer-mention-row, .footer-mention-ia { display: none; }
