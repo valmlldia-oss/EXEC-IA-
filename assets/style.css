@@ -7252,7 +7252,7 @@ body.art-justify .article-book .article-intro p, body.art-justify .article-book 
 
 /* Pied de page : ordre Le site · Coordonnées · Langues ; les huit articles Perspectives forment deux colonnes alignées sous « Le site » */
 .footer-col--site { position: relative; }
-.footer-col--site .footer-persp-c2 { position: absolute; left: 21rem; bottom: 0; }
+.footer-col--site .footer-persp-c2 { position: absolute; left: 18.75rem; bottom: 0; }
 .footer-grid > .footer-col--contact { margin-right: 0; }
 .footer-grid > .footer-col--contact a, .footer-grid > .footer-col--contact .footer-loc { color: rgba(99,59,74,.88); }
 .footer-grid > .footer-col--contact .footer-loc { color: rgba(99,59,74,.55); }
@@ -7303,3 +7303,9 @@ body.art-justify .article-book .article-intro p, body.art-justify .article-book 
 /* Boutons LinkedIn et Instagram du pied de page : toujours sur une seule ligne */
 .footer-col a.footer-linkedin-btn { white-space: nowrap; }
 @media (max-width: 560px) { .footer-col a.footer-linkedin-btn { font-size: .92rem; padding-left: 12px; padding-right: 12px; } }
+
+/* Pied de page : la colonne « Le site » ne s'élargit plus à cause des titres d'articles (ils débordent, sans rien chevaucher : ils sont sous le contenu des Coordonnées) ;
+   Coordonnées se rapproche ainsi de « Le site ». */
+@media (min-width: 1251px) {
+  .footer-col--site a.footer-persp-link:not(.footer-persp-link--c2) { margin-right: -190px; }
+}
