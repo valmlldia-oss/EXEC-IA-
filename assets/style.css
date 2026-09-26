@@ -7275,3 +7275,17 @@ body.art-justify .article-book .article-intro p, body.art-justify .article-book 
 /* Mention IA sous le filet du pied de page */
 .footer-mention-row { padding-top: 10px; padding-bottom: 0; }
 .footer-mention-row .footer-mention-ia { margin: 0; font-size: .9rem; text-align: left; color: rgba(99,59,74,.6); white-space: normal; }
+
+/* Pied de page sur téléphone et tablette : le cadre du logo, « Une expérience dirigeante » et les lignes suivantes partagent le même bord gauche ;
+   la première ligne de la signature tient sur une seule ligne (taille adaptée à la largeur de l'écran). */
+@media (max-width: 900px) {
+  .footer-brand .footer-logo-main { margin-left: calc(190px * -30 / 450); }
+  .footer-tag-lead { white-space: nowrap; font-size: clamp(1.5rem, calc((100vw - 44px) / 9.6), 2.09rem); }
+  .footer-tag-rest { font-size: clamp(1.1rem, calc((100vw - 44px) / 15.8), 1.87rem); }
+}
+@media (max-width: 560px) {
+  .footer-brand .footer-logo-main { margin-left: calc(170px * -30 / 450); }
+}
+
+/* Les deux groupes d'articles du pied de page partagent le même retrait quand ils sont empilés */
+@media (max-width: 1250px) { .footer-col .footer-persp-c2 a.footer-persp-link { padding-left: 6px; } }
