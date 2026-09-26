@@ -7280,8 +7280,8 @@ body.art-justify .article-book .article-intro p, body.art-justify .article-book 
    la première ligne de la signature tient sur une seule ligne (taille adaptée à la largeur de l'écran). */
 @media (max-width: 900px) {
   .footer-brand .footer-logo-main { margin-left: calc(190px * -30 / 450); }
-  .footer-tag-lead { white-space: nowrap; font-size: clamp(1.5rem, calc((100vw - 44px) / 9.6), 2.09rem); }
-  .footer-tag-rest { font-size: clamp(1.1rem, calc((100vw - 44px) / 15.8), 1.87rem); }
+  .footer-tag-lead { white-space: nowrap; font-size: clamp(1.5rem, calc((100vw - 44px) / 12.4), 2.09rem); }
+  .footer-tag-rest { font-size: clamp(1.1rem, calc((100vw - 44px) / 17.6), 1.87rem); }
 }
 @media (max-width: 560px) {
   .footer-brand .footer-logo-main { margin-left: calc(170px * -30 / 450); }
@@ -7292,3 +7292,14 @@ body.art-justify .article-book .article-intro p, body.art-justify .article-book 
 
 /* La mention IA se place sous « Mentions légales · Tous droits réservés · © 2026 » */
 .footer-mention-row { padding-top: 0; padding-bottom: 12px; }
+
+/* Signature du pied de page : « au service de votre transformation IA » reste sur une seule ligne à toutes les largeurs */
+.footer-tag-rest { white-space: nowrap; }
+
+/* Numéros de pages des articles : plus d'air entre la dernière ligne et le numéro */
+.article-book-col { padding-bottom: 48px; }
+.article-book-folio { bottom: 12px; }
+
+/* Boutons LinkedIn et Instagram du pied de page : toujours sur une seule ligne */
+.footer-col a.footer-linkedin-btn { white-space: nowrap; }
+@media (max-width: 560px) { .footer-col a.footer-linkedin-btn { font-size: .92rem; padding-left: 12px; padding-right: 12px; } }
