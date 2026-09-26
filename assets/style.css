@@ -7289,3 +7289,6 @@ body.art-justify .article-book .article-intro p, body.art-justify .article-book 
 
 /* Les deux groupes d'articles du pied de page partagent le même retrait quand ils sont empilés */
 @media (max-width: 1250px) { .footer-col .footer-persp-c2 a.footer-persp-link { padding-left: 6px; } }
+
+/* La mention IA se place sous « Mentions légales · Tous droits réservés · © 2026 » */
+.footer-mention-row { padding-top: 0; padding-bottom: 12px; }
