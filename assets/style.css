@@ -7217,7 +7217,8 @@ body > section#perspectives.snap-page:first-of-type { padding-top: calc(var(--na
 /* Bouton Instagram du pied de page : logo Instagram officiel (image) */
 
 /* Article justifié à gauche et à droite (essai sur l'article 7) : césure activée, dernière ligne de chaque paragraphe alignée à gauche */
-body.art-justify .article-book .article-intro p, body.art-justify .article-book .article-close p, body.art-justify .article-book .art-list li { text-align: justify; text-align-last: left; text-justify: inter-word; }
+body.art-justify .article-book .article-intro p { text-align: justify; text-align-last: left; text-justify: inter-word; }
+body.art-justify .article-book .article-intro p.art-enum { text-align: left; }
 /* Les pastilles ne se coupent jamais en fin de ligne */
 .art-chip { hyphens: none; -webkit-hyphens: none; white-space: nowrap; }
 
@@ -7235,7 +7236,7 @@ body.art-justify .article-book .article-intro p, body.art-justify .article-book 
 .art-qlist-accent { color: var(--rose); font-weight: 600; }
 .article-hashtags { hyphens: none; -webkit-hyphens: none; overflow-wrap: normal; word-break: keep-all; }
 /* Justification aux deux bords des articles 7 et 8 : la dernière ligne d'un paragraphe reste à gauche */
-body.art-justify .article-book .article-intro ul.art-list li { text-align: justify; text-align-last: left; }
+
 
 /* Articles justifiés : césure plus fine pour resserrer les espaces entre les mots */
 body.art-justify .article-book .article-intro p, body.art-justify .article-book .article-intro ul.art-list li { hyphens: auto; -webkit-hyphens: auto; hyphenate-limit-chars: 5 2 2; text-wrap: pretty; }

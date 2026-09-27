@@ -2232,7 +2232,7 @@ L’objectif est de faire remonter les besoins réels, puis de leur répondre av
 
 ### Quels sont les risques concrets du shadow IA ?
 
-Trois familles de risques. Une fuite d’informations, quand un document confidentiel est collé dans un outil non maîtrisé. Une décision fondée sur une réponse fausse, non relue, qui circule ensuite comme un fait. Et un risque de conformité, lorsque des données personnelles sont traitées sans cadre.
+Trois familles de risques. Une fuite d’informations, quand un document confidentiel est collé dans un outil non maîtrisé. Une décision fondée sur une réponse fausse, non relue, qui circule ensuite comme un fait. Un risque de conformité, lorsque des données personnelles sont traitées sans cadre.
 
 Aucun de ces risques n’exige une intention malveillante : ils naissent d’un geste ordinaire, fait pour gagner du temps.
 
@@ -2356,7 +2356,7 @@ The goal is to bring real needs to the surface, then answer them with approved t
 
 ### What are the concrete risks of shadow AI?
 
-Three families of risk. A leak of information, when a confidential document is pasted into an uncontrolled tool. A decision based on a wrong, unchecked answer that then circulates as fact. And a compliance risk, when personal data is processed without a framework.
+Three families of risk. A leak of information, when a confidential document is pasted into an uncontrolled tool. A decision based on a wrong, unchecked answer that then circulates as fact. A compliance risk, when personal data is processed without a framework.
 
 None of these risks requires malicious intent: they arise from an ordinary gesture, made to save time.
 
@@ -2482,7 +2482,7 @@ El objetivo es hacer emerger las necesidades reales y responder a ellas con herr
 
 ### ¿Cuáles son los riesgos concretos del shadow IA?
 
-Tres familias de riesgos. Una fuga de información, cuando un documento confidencial se pega en una herramienta no controlada. Una decisión basada en una respuesta falsa, sin revisar, que luego circula como un hecho. Y un riesgo de cumplimiento, cuando se tratan datos personales sin un marco.
+Tres familias de riesgos. Una fuga de información, cuando un documento confidencial se pega en una herramienta no controlada. Una decisión basada en una respuesta falsa, sin revisar, que luego circula como un hecho. Un riesgo de cumplimiento, cuando se tratan datos personales sin un marco.
 
 Ninguno de estos riesgos exige mala intención: nacen de un gesto ordinario, hecho para ganar tiempo.
 
