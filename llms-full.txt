@@ -2204,7 +2204,7 @@ Une étude WalkMe de juillet 2025 indique que 78 % des salariés utilisent des o
 
 On rédige une charte IA en comité de direction. Dans l’ascenseur, chacun retourne pourtant à son outil IA personnel.
 
-Une étude WalkMe menée en juillet 2025 le confirme à grande échelle : 78 % des salariés utilisent des outils IA que leur entreprise n’a jamais validés. Plus surprenant encore, une enquête Cybernews de 2025 montre que 93 % des dirigeants et cadres supérieurs interrogés font exactement la même chose.
+Une étude WalkMe menée en juillet 2025 le confirme à grande échelle : 78 % des salariés utilisent des outils IA que leur entreprise n’a jamais validés. Plus surprenant encore, une enquête Cybernews de 2025 montre que 93 % des dirigeants et cadres supérieurs interrogés font exactement la même chose. Côté organisations, Gartner arrive à un constat proche : 69 % des entreprises soupçonnent ou ont déjà constaté un usage d'IA générative non autorisée par leurs équipes.
 
 ## 🔍 Pourquoi le shadow IA n’est-il pas une question de discipline ?
 
@@ -2328,7 +2328,7 @@ A WalkMe study from July 2025 finds that 78% of employees use AI tools their com
 
 An AI policy is drafted in the executive committee. In the lift afterwards, everyone goes back to their personal AI tool.
 
-A WalkMe study run in July 2025 confirms it at scale: 78% of employees use AI tools their company has never approved. Even more surprising, a 2025 Cybernews survey shows that 93% of the executives and senior managers surveyed do exactly the same.
+A WalkMe study run in July 2025 confirms it at scale: 78% of employees use AI tools their company has never approved. Even more surprising, a 2025 Cybernews survey shows that 93% of the executives and senior managers surveyed do exactly the same. On the organisational side, Gartner reaches a similar conclusion: 69% of organisations suspect or have evidence that their teams use unauthorised generative AI.
 
 ## 🔍 Why is shadow AI not a question of discipline?
 
@@ -2454,7 +2454,7 @@ Un estudio de WalkMe de julio de 2025 indica que el 78 % de los empleados usa he
 
 Se redacta una política de uso de la IA en el comité de dirección. En el ascensor, cada uno vuelve sin embargo a su herramienta de IA personal.
 
-Un estudio de WalkMe realizado en julio de 2025 lo confirma a gran escala: el 78 % de los empleados usa herramientas de IA que su empresa nunca ha validado. Más sorprendente aún, una encuesta de Cybernews de 2025 muestra que el 93 % de los directivos y mandos superiores encuestados hace exactamente lo mismo.
+Un estudio de WalkMe realizado en julio de 2025 lo confirma a gran escala: el 78 % de los empleados usa herramientas de IA que su empresa nunca ha validado. Más sorprendente aún, una encuesta de Cybernews de 2025 muestra que el 93 % de los directivos y mandos superiores encuestados hace exactamente lo mismo. Del lado de las organizaciones, Gartner llega a una conclusión parecida: el 69 % de las empresas sospecha o ha constatado ya un uso de IA generativa no autorizado por sus equipos.
 
 ## 🔍 ¿Por qué el shadow IA no es una cuestión de disciplina?
 
@@ -2582,7 +2582,7 @@ Louis, l’assistant IA d’Air France, a fusionné plusieurs générations de c
 
 Aujourd’hui, Louis traite 30 % des demandes clients en totale autonomie. Le reste bascule vers un humain, sans que le client ait besoin de tout redemander.
 
-Ce chiffre dit quelque chose d’important : ce n’est pas l’IA qui a le plus progressé. C’est la frontière qu’Air France a appris à tracer.
+Ce chiffre dit quelque chose d’important : ce n’est pas l’IA qui a le plus progressé. C’est la frontière qu’Air France a appris à tracer. Ce n’est pas un cas isolé : Salesforce évalue qu’en 2025, les équipes de service client confient déjà en moyenne 30 % de leurs dossiers à l’IA, une part qu’elles anticipent à 50 % d’ici 2027.
 
 Automatiser une demande fréquente libère du temps. Savoir répartir le reste, c’est le vrai savoir-faire.
 
@@ -2706,7 +2706,7 @@ Louis, Air France’s AI assistant, merged several generations of specialised ch
 
 Today, Louis handles 30% of customer requests fully autonomously. The rest goes to a human, without the customer having to ask everything again.
 
-The figure says something important: it is not the AI that progressed the most. It is the boundary Air France learned to draw.
+The figure says something important: it is not the AI that progressed the most. It is the boundary Air France learned to draw. This is not an isolated case: Salesforce estimates that in 2025, service teams already hand over an average of 30% of cases to AI, a share they expect to reach 50% by 2027.
 
 Automating a frequent request frees up time. Knowing how to route the rest is the real skill.
 
@@ -2830,7 +2830,7 @@ Louis, el asistente de IA de Air France, fusionó varias generaciones de chatbot
 
 Hoy, Louis resuelve con total autonomía el 30 % de las consultas. El resto pasa a una persona, sin que el cliente tenga que volver a explicarlo todo.
 
-La cifra dice algo importante: no es la IA la que más ha progresado. Es la frontera que Air France ha aprendido a trazar.
+La cifra dice algo importante: no es la IA la que más ha progresado. Es la frontera que Air France ha aprendido a trazar. No es un caso aislado: Salesforce calcula que en 2025 los equipos de atención al cliente ya confían de media el 30 % de los casos a la IA, una proporción que esperan alcanzar el 50 % en 2027.
 
 Automatizar una consulta frecuente libera tiempo. Saber repartir el resto es el verdadero saber hacer.
 
