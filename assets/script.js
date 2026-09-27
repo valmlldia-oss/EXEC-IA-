@@ -659,7 +659,7 @@ window.addEventListener('load', () => {
         return kids.length ? kids[kids.length - 1].getBoundingClientRect().bottom : 0;
       }
       const d = contentBottom(cols[0]) - contentBottom(cols[1]);
-      if (Math.abs(d) < 2 || Math.abs(d) > 240) return;
+      if (Math.abs(d) < 2 || Math.abs(d) > 300) return;
       const shorter = d > 0 ? cols[1] : cols[0];
       const kids = Array.from(shorter.children).filter(function (k) { return !k.classList.contains('article-book-folio'); });
       if (kids.length < 2) return;
