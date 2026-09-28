@@ -2402,6 +2402,14 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   .footer-brand .footer-logo-main { margin-bottom: 6px; }
   .footer-brand .footer-mention-ia { margin-top: 33px; }
 }
+/* Les 3 colonnes (Le site, Coordonnées, Langues) suivent directement le logo :
+   l'espace libre passe à droite, l'escalier ressort sans texte dessus.
+   La ligne du bas suit (subgrid). En dessous de 1200px, la place manque :
+   on garde la grille d'origine. */
+@media (min-width: 1200px) {
+  .site-footer { grid-template-columns: auto auto auto auto 1fr; }
+  .footer-brand { margin-right: 40px; }
+}
 @media (max-width: 1024px) {
   .footer-brand .footer-tag, .footer-brand .footer-mention-ia { white-space: normal; }
 }
@@ -7313,3 +7321,8 @@ body.art-justify .article-book .article-intro p, body.art-justify .article-book 
 
 /* Mention IA du pied de page retirée */
 .footer-mention-row, .footer-mention-ia { display: none; }
+
+/* Versions courtes justifiées (même règle que le corps des articles) */
+body.art-justify .article-tldr-body p { text-align: justify; text-align-last: left; text-justify: inter-word; hyphens: auto; -webkit-hyphens: auto; }
+/* Étoile or : articles les plus lus (statistiques LinkedIn) */
+.art-star { color: #C9A227; font-style: normal; margin-right: .35em; text-shadow: 0 0 1px rgba(160,120,20,.35); }
