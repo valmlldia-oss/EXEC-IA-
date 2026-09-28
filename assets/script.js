@@ -647,7 +647,41 @@ window.addEventListener('load', () => {
 
 /* ── Articles Perspectives : bas des deux pages alignés (espace réparti dans la colonne la plus courte) ── */
 (function () {
+  /* Mot orphelin en fin de paragraphe justifié : on resserre très légèrement
+     l'espacement du paragraphe pour le faire remonter sur la ligne précédente */
+  function lineTops(p) {
+    const r = document.createRange(); r.selectNodeContents(p);
+    const tops = [];
+    Array.from(r.getClientRects()).forEach(function (x) {
+      if (x.width > 1 && !tops.some(function (t) { return Math.abs(t - x.top) < 4; })) tops.push(x.top);
+    });
+    return tops.length;
+  }
+  function lastLineRatio(p) {
+    const r = document.createRange(); r.selectNodeContents(p);
+    const rects = Array.from(r.getClientRects()).filter(function (x) { return x.width > 1; });
+    if (!rects.length) return 1;
+    const lastTop = Math.max.apply(null, rects.map(function (x) { return x.top; }));
+    const last = rects.filter(function (x) { return Math.abs(x.top - lastTop) < 4; });
+    const w = Math.max.apply(null, last.map(function (x) { return x.right; })) - Math.min.apply(null, last.map(function (x) { return x.left; }));
+    return w / p.getBoundingClientRect().width;
+  }
+  function pullOrphans() {
+    document.querySelectorAll('body.art-justify .article-book .article-intro p, body.art-justify .article-tldr-body p').forEach(function (p) {
+      p.style.wordSpacing = ''; p.style.letterSpacing = '';
+      if (!p.getBoundingClientRect().width) return;
+      const n = lineTops(p);
+      if (n < 2 || lastLineRatio(p) > 0.16) return;
+      for (let k = 1; k <= 6; k++) {
+        p.style.wordSpacing = (-0.35 * k).toFixed(2) + 'px';
+        p.style.letterSpacing = (-0.002 * k).toFixed(3) + 'em';
+        if (lineTops(p) < n) return;
+      }
+      p.style.wordSpacing = ''; p.style.letterSpacing = '';
+    });
+  }
   function balanceBooks() {
+    pullOrphans();
     document.querySelectorAll('.article-book').forEach(function (book) {
       const cols = book.querySelectorAll('.article-book-col');
       if (cols.length < 2) return;
@@ -700,6 +734,7 @@ window.addEventListener('load', () => {
   }
   window.addEventListener('load', balanceBooks);
   window.addEventListener('resize', balanceBooks);
+  document.querySelectorAll('details.article-tldr, details.article-more-item').forEach(function (d) { d.addEventListener('toggle', pullOrphans); });
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(balanceBooks);
   balanceBooks();
 })();

@@ -7326,3 +7326,21 @@ body.art-justify .article-book .article-intro p, body.art-justify .article-book 
 body.art-justify .article-tldr-body p { text-align: justify; text-align-last: left; text-justify: inter-word; hyphens: auto; -webkit-hyphens: auto; }
 /* Étoile or : articles les plus lus (statistiques LinkedIn) */
 .art-star { color: #C9A227; font-style: normal; margin-right: .35em; text-shadow: 0 0 1px rgba(160,120,20,.35); }
+/* « Pour aller plus loin » : les 4 questions l'une sous l'autre (1. 2. 3. 4.),
+   une seule colonne de lecture confortable, sans pliure centrale */
+.article-book.article-book--more { grid-template-columns: minmax(0, 760px); }
+.article-book.article-book--more::before { display: none; }
+/* « Pour aller plus loin » : chaque question en accordéon (flèche, comme la version courte) */
+.article-more-item { border-bottom: 1px solid rgba(99,59,74,.14); }
+.article-more-item:first-child { border-top: 1px solid rgba(99,59,74,.14); }
+.article-more-item summary { cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 4px; user-select: none; }
+.article-more-item summary::-webkit-details-marker, .article-more-item summary::marker { display: none; content: ''; }
+.article-book .article-more-item summary h3.article-meta { margin: 0; }
+.article-more-item[open] .article-tldr-arrow { transform: rotate(90deg); }
+.article-more-item summary:hover h3, .article-more-item summary:focus-visible h3 { color: var(--rose); }
+.article-more-item summary:focus-visible { outline: 2px solid var(--rose); outline-offset: 2px; }
+.article-book .article-more-item > .article-intro { margin: 0 4px 20px; }
+/* Question en gras suivie de sa réponse : la question sur sa propre ligne,
+   jamais étirée par la justification */
+body.art-justify .article-book .article-intro p > strong:first-child:not(.art-em):has(+ br) { display: block; text-align: left; }
+body.art-justify .article-book .article-intro p > strong:first-child:not(.art-em):has(+ br) + br { display: none; }
