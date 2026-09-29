@@ -2413,6 +2413,18 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
 @media (max-width: 1024px) {
   .footer-brand .footer-tag, .footer-brand .footer-mention-ia { white-space: normal; }
 }
+/* Écrans de 901 à 1199 px : les quatre colonnes tiennent dans la largeur
+   (plus de colonne « Langues » coupée à droite) */
+@media (min-width: 901px) and (max-width: 1199px) {
+  .site-footer { column-gap: 18px; }
+  .footer-brand { max-width: 290px; }
+  .footer-brand .footer-logo-main { width: 190px; }
+  .footer-tag-lead { font-size: 1.88rem; }
+  .footer-tag-rest { font-size: 1.32rem; }
+  .footer-brand .footer-tag, .footer-brand .footer-mention-ia { white-space: normal; }
+  .footer-col--site, .footer-col--contact { max-width: 230px; }
+  .footer-col--site a, .footer-col--contact a, .footer-col--site li, .footer-col--contact li { white-space: normal; }
+}
 .footer-col { display: flex; flex-direction: column; align-items: flex-start; gap: 13px; }
 /* LANGUES : légèrement décalée vers la gauche */
 .footer-grid > .footer-col:nth-of-type(3) { margin-right: 12px; }
