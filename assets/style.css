@@ -89,7 +89,7 @@ body {
    (les sections suivantes n'en ont pas besoin — au feuilletage, scroll-margin-top
    les cale déjà sous la nav ; hors snap, elles s'enchaînent avec la seule
    respiration --snap-breath). */
-body > section.snap-page:first-of-type {
+body > section.snap-page:first-of-type, body > main > section.snap-page:first-of-type {
   padding-top: calc(var(--nav-h) + var(--snap-breath));
 }
 .snap-page > .wrap,
@@ -4820,7 +4820,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 }
 /* Respiration symétrique : autant d'espace visible au-dessus de « POUR CEUX
    QUI DÉCIDENT » qu'en dessous de la carte « Les 5 essentiels ». */
-body > section.newsletter-section.snap-page {
+body > section.newsletter-section.snap-page, body > main > section.newsletter-section.snap-page {
   padding-top: calc(var(--nav-h) + var(--section-gap) + 19px);
   padding-bottom: calc(var(--section-gap) + 19px);
 }
@@ -7139,7 +7139,7 @@ body { overflow-wrap: break-word; overflow-x: clip; }
 .persp-card-visual-overlay { display: none; }
 
 /* Perspectives : première section de la page (elle doit dégager la barre de navigation fixe) */
-body > section#perspectives.snap-page:first-of-type { padding-top: calc(var(--nav-h) + var(--snap-breath)); }
+body > section#perspectives.snap-page:first-of-type, body > main > section#perspectives.snap-page:first-of-type { padding-top: calc(var(--nav-h) + var(--snap-breath)); }
 /* Bandeau gros chiffres : la précision sous McKinsey passe en majuscules, comme les autres légendes */
 .ss-subnote { text-transform: uppercase; font-size: .72em; letter-spacing: .06em; line-height: 1.55; }
 
