@@ -7256,6 +7256,8 @@ body.art-justify .article-book .article-intro p.art-enum { text-align: left; }
 .art-em { font-weight: 600; }
 .article-book .article-qlist.article-qlist--filets { border-left: none; padding: 12px 0; margin: 26px 0 8px; border-top: 1px solid rgba(217,201,195,1); border-bottom: 1px solid rgba(217,201,195,1); text-align: center; }
 .article-qlist--filets p { text-align: center !important; text-align-last: center !important; }
+/* Exergue entre filets : lisibilité (romain plutôt qu'italique fin, plus grand, prune foncé) */
+.article-book .article-qlist--filets p { font-style: normal; font-weight: 500; font-size: 1.42rem; line-height: 1.42; color: #4F2F3B; letter-spacing: .005em; hyphens: none; -webkit-hyphens: none; text-wrap: balance; }
 .art-qlist-accent { color: var(--rose); font-weight: 600; }
 .article-hashtags { hyphens: none; -webkit-hyphens: none; overflow-wrap: normal; word-break: keep-all; }
 /* Justification aux deux bords des articles 7 et 8 : la dernière ligne d'un paragraphe reste à gauche */
