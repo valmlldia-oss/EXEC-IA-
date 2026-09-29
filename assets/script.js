@@ -680,12 +680,41 @@ window.addEventListener('load', () => {
       p.style.wordSpacing = ''; p.style.letterSpacing = '';
     });
   }
+  /* Article complet : on déplace des blocs entiers d'une colonne à l'autre jusqu'à l'écart le plus faible,
+     sans jamais laisser un intertitre seul en bas de colonne ; les cales ne comblent ensuite que le reste */
+  function redistribute(book, cols) {
+    function blocksOf(c) { return Array.from(c.children).filter(function (k) { return !k.classList.contains('article-book-folio') && !k.classList.contains('bal-spacer'); }); }
+    function h(c) { const k = blocksOf(c); return k.length ? k[k.length - 1].getBoundingClientRect().bottom - c.getBoundingClientRect().top : 0; }
+    for (let i = 0; i < 12; i++) {
+      const L = cols[0], R = cols[1], diff = h(L) - h(R);
+      if (Math.abs(diff) < 40) break;
+      let moved = [];
+      if (diff > 0) {
+        const k = blocksOf(L); if (k.length < 3) break;
+        moved = [k[k.length - 1]];
+        if (/^H[23]$/.test(k[k.length - 2].tagName)) moved.unshift(k[k.length - 2]);
+        const first = R.firstChild;
+        moved.forEach(function (m) { R.insertBefore(m, first); });
+      } else {
+        const k = blocksOf(R); if (k.length < 3) break;
+        moved = /^H[23]$/.test(k[0].tagName) ? [k[0], k[1]] : [k[0]];
+        const folio = L.querySelector('.article-book-folio');
+        moved.forEach(function (m) { L.insertBefore(m, folio || null); });
+      }
+      if (Math.abs(h(cols[0]) - h(cols[1])) >= Math.abs(diff)) {        /* pas mieux : on annule et on s'arrête */
+        if (diff > 0) { const folio = L.querySelector('.article-book-folio'); moved.forEach(function (m) { L.insertBefore(m, folio || null); }); }
+        else { const first = R.firstChild; moved.forEach(function (m) { R.insertBefore(m, first); }); }
+        break;
+      }
+    }
+  }
   function balanceBooks() {
     pullOrphans();
     document.querySelectorAll('.article-book').forEach(function (book) {
       const cols = book.querySelectorAll('.article-book-col');
       if (cols.length < 2) return;
       book.querySelectorAll('.bal-spacer').forEach(function (n) { n.remove(); });
+      if (book.classList.contains('article-book--long') && book.getBoundingClientRect().height) redistribute(book, cols);
       const a = cols[0].getBoundingClientRect(), b = cols[1].getBoundingClientRect();
       if (Math.abs(a.left - b.left) < 10) return; /* colonnes empilées (mobile) */
       function contentBottom(c) {
@@ -734,7 +763,9 @@ window.addEventListener('load', () => {
   }
   window.addEventListener('load', balanceBooks);
   window.addEventListener('resize', balanceBooks);
-  document.querySelectorAll('details.article-tldr, details.article-more-item, details.article-long').forEach(function (d) { d.addEventListener('toggle', pullOrphans); });
+  document.querySelectorAll('details.article-tldr, details.article-more-item').forEach(function (d) { d.addEventListener('toggle', pullOrphans); });
+  /* Article complet replié : à l'ouverture, les deux colonnes sont réalignées par le bas */
+  document.querySelectorAll('details.article-long').forEach(function (d) { d.addEventListener('toggle', function () { if (d.open) balanceBooks(); }); });
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(balanceBooks);
   balanceBooks();
 })();
