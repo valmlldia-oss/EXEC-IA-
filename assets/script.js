@@ -734,7 +734,7 @@ window.addEventListener('load', () => {
   }
   window.addEventListener('load', balanceBooks);
   window.addEventListener('resize', balanceBooks);
-  document.querySelectorAll('details.article-tldr, details.article-more-item').forEach(function (d) { d.addEventListener('toggle', pullOrphans); });
+  document.querySelectorAll('details.article-tldr, details.article-more-item, details.article-long').forEach(function (d) { d.addEventListener('toggle', pullOrphans); });
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(balanceBooks);
   balanceBooks();
 })();
