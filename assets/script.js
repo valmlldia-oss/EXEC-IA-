@@ -708,6 +708,42 @@ window.addEventListener('load', () => {
       }
     }
   }
+  /* Réglage fin : quand un bloc de texte est trop gros pour être déplacé entier, on fait passer ses paragraphes
+     un par un en tête (ou en fin) de l'autre colonne, comme une vraie coupure de colonne, jamais sous un intertitre */
+  function fineSplit(cols) {
+    function blocksOf(c) { return Array.from(c.children).filter(function (k) { return !k.classList.contains('article-book-folio') && !k.classList.contains('bal-spacer'); }); }
+    function h(c) { const k = blocksOf(c); return k.length ? k[k.length - 1].getBoundingClientRect().bottom - c.getBoundingClientRect().top : 0; }
+    const L = cols[0], R = cols[1];
+    for (let i = 0; i < 12; i++) {
+      const diff = h(L) - h(R);
+      if (Math.abs(diff) < 24) break;
+      let el, src, wrap, created = false;
+      if (diff > 0) {
+        const k = blocksOf(L); src = k[k.length - 1];
+        if (!src || !src.classList.contains('article-intro')) break;
+        const ch = Array.from(src.children); if (ch.length < 2) break;
+        el = ch[ch.length - 1];
+        if (/^H[23]$/.test(el.tagName) || /^H[23]$/.test(ch[ch.length - 2].tagName)) break;
+        wrap = blocksOf(R)[0];
+        if (!wrap || !wrap.dataset.split) { wrap = document.createElement('div'); wrap.className = src.className; wrap.dataset.split = '1'; R.insertBefore(wrap, R.firstChild); created = true; }
+        wrap.insertBefore(el, wrap.firstChild);
+      } else {
+        const k = blocksOf(R); src = k[0];
+        if (!src || !src.classList.contains('article-intro')) break;
+        const ch = Array.from(src.children); if (ch.length < 2) break;
+        el = ch[0];
+        if (/^H[23]$/.test(el.tagName)) break;
+        const kl = blocksOf(L); wrap = kl[kl.length - 1];
+        if (!wrap || !wrap.dataset.split) { wrap = document.createElement('div'); wrap.className = src.className; wrap.dataset.split = '1'; L.insertBefore(wrap, L.querySelector('.article-book-folio')); created = true; }
+        wrap.appendChild(el);
+      }
+      if (Math.abs(h(L) - h(R)) >= Math.abs(diff)) {                     /* pas mieux : on annule et on s'arrête */
+        if (diff > 0) src.appendChild(el); else src.insertBefore(el, src.firstChild);
+        if (created) wrap.remove();
+        break;
+      }
+    }
+  }
   function balanceBooks() {
     pullOrphans();
     document.querySelectorAll('.article-book').forEach(function (book) {
@@ -717,6 +753,7 @@ window.addEventListener('load', () => {
       if (book.classList.contains('article-book--long') && book.getBoundingClientRect().height) redistribute(book, cols);
       const a = cols[0].getBoundingClientRect(), b = cols[1].getBoundingClientRect();
       if (Math.abs(a.left - b.left) < 10) return; /* colonnes empilées (mobile) */
+      if (book.getBoundingClientRect().height) fineSplit(cols);
       function contentBottom(c) {
         const kids = Array.from(c.children).filter(function (k) { return !k.classList.contains('article-book-folio'); });
         return kids.length ? kids[kids.length - 1].getBoundingClientRect().bottom : 0;
