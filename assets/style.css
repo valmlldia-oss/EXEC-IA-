@@ -7444,3 +7444,15 @@ body.cookie-modal-open { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) {
   .cookie-switch-track, .cookie-switch-track::after, .cookie-cat-chev { transition: none; }
 }
+
+/* Maillage interne en cocon : « À lire aussi » en fin d'article (2 articles de la même branche + offres) */
+.article-related { max-width: 780px; margin: 36px auto 8px; padding: 22px 24px 6px; border-top: 1px solid rgba(217,201,195,1); }
+.article-related-title { font-family: var(--sans); font-size: .74rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--rose); margin: 0 0 10px; }
+.article-related ul { list-style: none; margin: 0; padding: 0; }
+.article-related li { border-bottom: 1px solid rgba(217,201,195,.6); }
+.article-related li a { display: block; padding: 11px 0; font-family: var(--serif); font-size: 1.28rem; line-height: 1.35; color: var(--plum); text-decoration: none; transition: color .2s; }
+.article-related li a::after { content: " →"; color: var(--rose); }
+.article-related li a:hover { color: var(--rose); }
+.article-related-offer { font-family: var(--sans); font-size: .98rem; color: var(--plum); margin: 16px 0 0; }
+.article-related-offer a { color: var(--rose); font-weight: 600; text-decoration: none; }
+.article-related-offer a:hover { text-decoration: underline; text-underline-offset: 3px; }
