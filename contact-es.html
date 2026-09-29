@@ -33,7 +33,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap"></noscript>
-  <link rel="stylesheet" href="assets/style.css?v=345">
+  <link rel="stylesheet" href="assets/style.css?v=346">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -476,22 +476,56 @@
   </div>
 </footer>
 
-<script src="assets/script.js?v=33"></script>
+<script src="assets/script.js?v=34"></script>
 
 <!-- ═══ COOKIE BANNER ══════════════════════════════════════════ -->
 <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Consentimiento de cookies">
   <div class="cookie-banner-inner">
     <p class="cookie-banner-text">
-      Este sitio no utiliza cookies de medición de audiencia ni de publicidad. Su elección solo se guarda en su dispositivo.
+      Su navegación le pertenece: este sitio no instala cookies publicitarias ni mide su audiencia. Solo se conserva su elección, en su propio dispositivo. Pulse «Aceptar todo» o «Rechazar todo», o ajuste sus preferencias en «Personalizar».
       <a href="mentions-legales-es.html#cookies" class="cookie-banner-link">Más información</a>
     </p>
     <div class="cookie-banner-btns">
-      <button class="cookie-btn cookie-btn--refuse" id="cookie-refuse">Rechazar</button>
-      <button class="cookie-btn cookie-btn--accept" id="cookie-accept">Aceptar</button>
+      <button type="button" class="cookie-btn cookie-btn--prefs" id="cookie-prefs">Personalizar</button>
+      <button type="button" class="cookie-btn cookie-btn--refuse" id="cookie-refuse">Rechazar todo</button>
+      <button type="button" class="cookie-btn cookie-btn--accept" id="cookie-accept">Aceptar todo</button>
     </div>
   </div>
 </div>
-<script src="assets/inline/contact-es-3.js" defer></script>
+<div id="cookie-modal" class="cookie-modal" hidden>
+  <div class="cookie-modal-box" role="dialog" aria-modal="true" aria-labelledby="cookie-modal-title">
+    <button type="button" class="cookie-modal-close" id="cookie-close" aria-label="Cerrar"></button>
+    <h2 id="cookie-modal-title" class="cookie-modal-title">Sus preferencias de privacidad</h2>
+    <p class="cookie-modal-intro">EXEC'IA solo guarda lo imprescindible para el funcionamiento del sitio. Ningún dato se comparte con terceros.</p>
+    <a href="mentions-legales-es.html#cookies" class="cookie-modal-link">Consultar la política de cookies</a>
+    <div class="cookie-cats">
+      <div class="cookie-cat">
+        <details>
+          <summary><span class="cookie-cat-chev" aria-hidden="true"></span><span class="cookie-cat-name">Imprescindibles</span></summary>
+          <p class="cookie-cat-desc">Recuerdan su elección en su navegador, para no volver a preguntársela en cada visita.</p>
+        </details>
+        <span class="cookie-cat-always">Siempre activas</span>
+      </div>
+      <div class="cookie-cat">
+        <details>
+          <summary><span class="cookie-cat-chev" aria-hidden="true"></span><span class="cookie-cat-name">Medición de audiencia</span></summary>
+          <p class="cookie-cat-desc">No hay instalada ninguna herramienta de medición de audiencia. Su ajuste se aplicará si esto cambia.</p>
+        </details>
+        <label class="cookie-switch"><span class="cookie-switch-state" data-on="Activado" data-off="Desactivado">Desactivado</span><input type="checkbox" id="cookie-audience" role="switch" aria-label="Medición de audiencia"><span class="cookie-switch-track" aria-hidden="true"></span></label>
+      </div>
+      <div class="cookie-cat">
+        <details>
+          <summary><span class="cookie-cat-chev" aria-hidden="true"></span><span class="cookie-cat-name">Publicidad</span></summary>
+          <p class="cookie-cat-desc">Este sitio no utiliza cookies publicitarias ni píxeles de seguimiento.</p>
+        </details>
+        <label class="cookie-switch"><span class="cookie-switch-state" data-on="Activado" data-off="Desactivado">Desactivado</span><input type="checkbox" id="cookie-ads" role="switch" aria-label="Publicidad"><span class="cookie-switch-track" aria-hidden="true"></span></label>
+      </div>
+    </div>
+    <div class="cookie-modal-foot">
+      <button type="button" class="cookie-btn cookie-btn--accept" id="cookie-save">Guardar mis preferencias</button>
+    </div>
+  </div>
+</div>
 <script src="assets/chat-widget.js?v=1" defer></script>
 </body>
 </html>
