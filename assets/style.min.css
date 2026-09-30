@@ -6402,3 +6402,6 @@ border-radius: 50%; background: #FAF6F2; transition: transform .2s;
 #roi .section-title { margin-bottom: 8px; }
 #roi .roi-intro { margin-top: 0; }
 .roi-sv, .roi-chip-val { font-weight: 500; }
+.roi-video { max-width: 900px; margin: 18px auto 28px; }
+.roi-video video { display: block; width: 100%; height: auto; border-radius: 16px; border: 1px solid rgba(99,59,74,.14); background: var(--ivory); box-shadow: 0 10px 30px rgba(99,59,74,.08); }
+.roi-video figcaption { margin-top: 10px; text-align: center; font-size: .9rem; font-style: italic; color: var(--plum); opacity: .85; }
