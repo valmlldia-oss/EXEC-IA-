@@ -6399,3 +6399,6 @@ border-radius: 50%; background: #FAF6F2; transition: transform .2s;
 .article-long .article-book--long { margin-top: 26px; }
 @media (max-width: 600px) { .article-long > summary { padding: 14px 16px; } .article-long-label { font-size: 1.25rem; } .article-long-arrow { width: 34px; height: 34px; } }
 @media (prefers-reduced-motion: reduce) { .article-long-arrow { transition: none; } }
+#roi .section-title { margin-bottom: 8px; }
+#roi .roi-intro { margin-top: 0; }
+.roi-sv, .roi-chip-val { font-weight: 500; }
