@@ -1410,6 +1410,30 @@ border-radius: 50%; background: #FAF6F2; transition: transform .2s;
 .cookie-modal-foot .cookie-btn{ font-size: .85rem; padding: 12px 28px; }
 @media (max-width: 600px){.cookie-modal-box{ padding: 40px 20px 24px; }.cookie-modal-title{ font-size: 1.6rem; }.cookie-cat summary{ padding: 16px 16px 8px; }.cookie-cat-always, .cookie-switch{ position: static; padding: 0 16px 14px 38px; }.cookie-cat-desc{ padding: 0 16px 16px 38px; }.cookie-modal-foot .cookie-btn{ width: 100%; }}
 @media (prefers-reduced-motion: reduce){.cookie-switch-track, .cookie-switch-track::after, .cookie-cat-chev{ transition: none; }}
+.verbes-band{
+background: var(--ivory);
+border-top: 1px solid rgba(99,59,74,.12);
+border-bottom: 1px solid rgba(99,59,74,.12);
+overflow: hidden;
+padding: 13px 0 12px;
+}
+.verbes-track{
+display: flex; width: max-content;
+animation: verbes-defile 46s linear infinite;
+}
+.verbes-band:hover .verbes-track{ animation-play-state: paused; }
+.verbes-serie{ display: flex; align-items: center; flex-shrink: 0; }
+.verbes-mot{
+font-family: var(--serif); font-style: italic; font-weight: 500;
+font-size: clamp(1.2rem, 1.9vw, 1.65rem); letter-spacing: .02em;
+color: var(--plum); white-space: nowrap; padding: 0 clamp(18px, 2.4vw, 34px);
+}
+.verbes-sep{
+width: 6px; height: 6px; border-radius: 50%;
+background: var(--rose); flex-shrink: 0;
+}
+@keyframes verbes-defile{ from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce){.verbes-track{ animation: none; width: auto; justify-content: center; }.verbes-serie + .verbes-serie{ display: none; }}
 </style>
 </head>
 <body>
@@ -1493,6 +1517,15 @@ border-radius: 50%; background: #FAF6F2; transition: transform .2s;
     </div>
   </div>
 </section>
+
+<!-- ═══ BANDEAU DES QUATRE VERBES ═══════════════════════════ -->
+<div class="verbes-band">
+  <p class="sr-only">Innovate, share, build, guide</p>
+  <div class="verbes-track" aria-hidden="true">
+    <div class="verbes-serie"><span class="verbes-mot">Innovate</span><span class="verbes-sep"></span><span class="verbes-mot">Share</span><span class="verbes-sep"></span><span class="verbes-mot">Build</span><span class="verbes-sep"></span><span class="verbes-mot">Guide</span><span class="verbes-sep"></span><span class="verbes-mot">Innovate</span><span class="verbes-sep"></span><span class="verbes-mot">Share</span><span class="verbes-sep"></span><span class="verbes-mot">Build</span><span class="verbes-sep"></span><span class="verbes-mot">Guide</span><span class="verbes-sep"></span><span class="verbes-mot">Innovate</span><span class="verbes-sep"></span><span class="verbes-mot">Share</span><span class="verbes-sep"></span><span class="verbes-mot">Build</span><span class="verbes-sep"></span><span class="verbes-mot">Guide</span><span class="verbes-sep"></span></div>
+    <div class="verbes-serie"><span class="verbes-mot">Innovate</span><span class="verbes-sep"></span><span class="verbes-mot">Share</span><span class="verbes-sep"></span><span class="verbes-mot">Build</span><span class="verbes-sep"></span><span class="verbes-mot">Guide</span><span class="verbes-sep"></span><span class="verbes-mot">Innovate</span><span class="verbes-sep"></span><span class="verbes-mot">Share</span><span class="verbes-sep"></span><span class="verbes-mot">Build</span><span class="verbes-sep"></span><span class="verbes-mot">Guide</span><span class="verbes-sep"></span><span class="verbes-mot">Innovate</span><span class="verbes-sep"></span><span class="verbes-mot">Share</span><span class="verbes-sep"></span><span class="verbes-mot">Build</span><span class="verbes-sep"></span><span class="verbes-mot">Guide</span><span class="verbes-sep"></span></div>
+  </div>
+</div>
 
 <!-- ═══ MON APPROCHE — ENTREFILET ════════════════════════════ -->
 <section class="mon-approche-section">

@@ -7511,3 +7511,34 @@ body.cookie-modal-open { overflow: hidden; }
 .roi-video { max-width: 900px; margin: 18px auto 28px; }
 .roi-video video { display: block; width: 100%; height: auto; border-radius: 16px; border: 1px solid rgba(99,59,74,.14); background: var(--ivory); box-shadow: 0 10px 30px rgba(99,59,74,.08); }
 .roi-video figcaption { margin-top: 10px; text-align: center; font-size: .9rem; font-style: italic; color: var(--plum); opacity: .85; }
+
+/* ═══ BANDEAU DÉFILANT DES QUATRE VERBES (accueil FR/EN/ES) ═══
+   Innover (5) · Transmettre (3) · Construire (22) · Accompagner (6).
+   Deux séries identiques côte à côte : la piste glisse de la moitié de sa largeur, en boucle. */
+.verbes-band {
+  background: var(--ivory);
+  border-top: 1px solid rgba(99,59,74,.12);
+  border-bottom: 1px solid rgba(99,59,74,.12);
+  overflow: hidden;
+  padding: 13px 0 12px;
+}
+.verbes-track {
+  display: flex; width: max-content;
+  animation: verbes-defile 46s linear infinite;
+}
+.verbes-band:hover .verbes-track { animation-play-state: paused; }
+.verbes-serie { display: flex; align-items: center; flex-shrink: 0; }
+.verbes-mot {
+  font-family: var(--serif); font-style: italic; font-weight: 500;
+  font-size: clamp(1.2rem, 1.9vw, 1.65rem); letter-spacing: .02em;
+  color: var(--plum); white-space: nowrap; padding: 0 clamp(18px, 2.4vw, 34px);
+}
+.verbes-sep {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--rose); flex-shrink: 0;
+}
+@keyframes verbes-defile { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) {
+  .verbes-track { animation: none; width: auto; justify-content: center; }
+  .verbes-serie + .verbes-serie { display: none; }
+}
