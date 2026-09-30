@@ -1545,6 +1545,13 @@ section { padding: var(--section-gap) 0; }
   font-style: italic;
 }
 .article-close .article-close-line2 em { color: var(--rose); font-style: italic; }
+/* Question finale dont chaque ligne est fixée à la main (<br>) : sur ordinateur,
+   la taille suit la largeur de colonne pour que chaque ligne tienne entière
+   (jamais de mot coupé ni de mot seul sur une ligne). */
+@media (min-width: 901px) {
+  .article-close .close-fit { font-size: min(1.5rem, 1.95vw) !important; white-space: nowrap; }
+  .article-close .close-fit1 { font-size: min(2.2rem, 2.6vw) !important; white-space: nowrap; }
+}
 .article-close p {
   font-family: var(--sans); font-size: 1.04rem; line-height: 1.75;
   color: var(--text); margin: 0 0 14px;
