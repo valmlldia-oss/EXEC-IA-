@@ -69,12 +69,14 @@ def parse(s,i=0,end=None):
     return items,i
 ITEMS,_=parse(CSS)
 # ---------- classes dynamiques ----------
-js=open(R+'/assets/script.js',encoding='utf8').read()
+# tous les scripts du site (script.js, assets/inline/*.js, chat-widget.js…) : les classes qu'ils posent doivent être gardées
+js=' '.join(open(f,encoding='utf8').read() for f in sorted(glob.glob(R+'/assets/*.js')+glob.glob(R+'/assets/inline/*.js')))
 inline=''
 for f in glob.glob(R+'/*.html'):
     s=open(f,encoding='utf8').read()
     inline+=' '.join(re.findall(r'<script(?![^>]*ld\+json)[^>]*>(.*?)</script>',s,re.S))
-DYN=set(re.findall(r"['\"]([a-zA-Z][\w-]*)['\"]",js+inline))
+# tout mot présent dans un script (y compris dans les gabarits HTML construits par JS : bandeau cookies, chat, simulateur…)
+DYN=set(re.findall(r"[A-Za-z][\w-]*",js+inline))
 DYN|={'open','active','visible','is-visible','scrolled','playing'}
 def split_sel(sel):
     out=[];d=0;cur=''
