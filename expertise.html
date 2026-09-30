@@ -1718,8 +1718,10 @@ box-shadow: 0 12px 32px rgba(99,59,74,.25);
 .tl-studeria-topics, .tl-studeria-quote, .agents-tasks-1l, .tl-intro--diff, .tl-one-line,
 .article-page--guide .article-title--2l,
 [style*="white-space:nowrap"], [style*="white-space: nowrap"]{ white-space: normal !important; }}
+.art-chip{ font-family: var(--sans); font-weight: 600; font-style: normal; font-size: .92em; color: var(--plum); background: rgba(217,201,195,.38); padding: .04em .38em; border-radius: 4px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 .article-book .article-intro p, .article-book .article-close p, .article-book .art-list li{ text-align: left; text-wrap: pretty; hyphens: auto; -webkit-hyphens: auto; hyphenate-limit-chars: 6 3 3; }
 body.art-justify .article-book .article-intro p{ text-align: justify; text-align-last: left; text-justify: inter-word; }
+.art-chip{ hyphens: none; -webkit-hyphens: none; white-space: nowrap; }
 .footer-col a.footer-instagram-btn{ margin-top: -6px; }
 .footer-bottom{ padding-top: 2px; padding-bottom: 4px; }
 .footer-legal a{ padding-top: 4px; padding-bottom: 4px; }
@@ -2286,17 +2288,17 @@ border-radius: 50%; background: #FAF6F2; transition: transform .2s;
   <div class="agents-track-outer" id="webTrack">
     <div class="agents-track">
 
-      <!-- 01 · Médical (placeholder — à venir) -->
+      <!-- 01 · Corsetterie (placeholder — à venir) -->
       <div class="agent-card">
         <div class="agent-img web-img">
-          <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Aperçu du site — cabinet médical">
+          <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Aperçu du site — société de corsetterie">
             <rect width="300" height="200" fill="#FBF7F2"/>
             <rect x="0" y="0" width="300" height="30" fill="#EFE6DE"/>
             <circle cx="16" cy="15" r="3.4" fill="#C75F62"/><circle cx="28" cy="15" r="3.4" fill="#D9C9C3"/><circle cx="40" cy="15" r="3.4" fill="#D9C9C3"/>
             <rect x="58" y="9.5" width="214" height="11" rx="5.5" fill="#F6F1EB"/>
             <g transform="translate(150,86)" fill="none" stroke="#C75F62" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="-22" y="-22" width="44" height="44" rx="11"/>
-              <path d="M0 -11 V 11 M -11 0 H 11"/>
+              <path d="M-15 -24 C -7 -10 -7 10 -15 24 H 15 C 7 10 7 -10 15 -24 Z"/>
+              <path d="M-5 -15 L 5 -9 M 5 -15 L -5 -9 M -5 -5 L 5 1 M 5 -5 L -5 1 M -5 5 L 5 11 M 5 5 L -5 11"/>
             </g>
             <text x="150" y="150" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" letter-spacing="1.5" fill="#9a7b82">BIENTÔT EN LIGNE</text>
             <rect x="120" y="166" width="60" height="7" rx="3.5" fill="#E9DED7"/>
@@ -2304,9 +2306,9 @@ border-radius: 50%; background: #FAF6F2; transition: transform .2s;
         </div>
         <div class="agent-body">
           <p class="agent-eyebrow-txt">Site vitrine</p>
-          <h3 class="agent-name">Cabinet <span>médical</span></h3>
+          <h3 class="agent-name">Société <span>de corsetterie</span></h3>
           <div class="agent-divider"></div>
-          <p class="agent-desc">Un site clair et rassurant permettant de présenter le cabinet, les spécialités et les informations utiles aux patients.</p>
+          <p class="agent-desc">Un site élégant pour présenter les créations, le savoir-faire de la maison et les informations utiles à la clientèle.</p>
         </div>
         <!-- Emplacement réservé : témoignage du client une fois le site en ligne (voir .web-testi, carte 03) -->
       </div>
@@ -2356,7 +2358,7 @@ border-radius: 50%; background: #FAF6F2; transition: transform .2s;
     <div class="agents-track-outer" id="testiTrack">
       <div class="agents-track">
 
-        <!-- Emplacement réservé : témoignage Cabinet médical (à ajouter au lancement) -->
+        <!-- Emplacement réservé : témoignage Corsetterie (à ajouter au lancement) -->
 
         <!-- 2 · Témoignage In Equilibrium -->
         <div class="web-testi-card">
@@ -2392,7 +2394,7 @@ border-radius: 50%; background: #FAF6F2; transition: transform .2s;
       <div class="xcard reveal delay-1">
         <div class="xcard-num">01</div>
         <h3>Accompagnement de <span style="color:var(--rose)">Directions Générales</span></h3>
-        <p>20+ ans au contact direct de PDG, Conseils d&#x2019;Administration et équipes dirigeantes dans des groupes internationaux. Coordination d&#x2019;enjeux complexes, anticipation des besoins et gestion d&#x2019;interactions à haut niveau. Intelligence relationnelle et sens du service au soutien de la performance collective.</p>
+        <ul style="list-style:none;padding:0;margin:0 0 14px;display:flex;flex-direction:column;gap:8px;font-size:.9rem;line-height:1.5;color:var(--text)"><li style="display:flex;gap:10px;align-items:baseline"><span style="color:var(--rose);flex-shrink:0">✓</span><span>20+ ans au contact direct de PDG, Conseils d&#x2019;Administration et équipes dirigeantes dans des groupes internationaux.</span></li><li style="display:flex;gap:10px;align-items:baseline"><span style="color:var(--rose);flex-shrink:0">✓</span><span>Coordination d&#x2019;enjeux complexes, anticipation des besoins et gestion d&#x2019;interactions à haut niveau.</span></li><li style="display:flex;gap:10px;align-items:baseline"><span style="color:var(--rose);flex-shrink:0">✓</span><span>Intelligence relationnelle et sens du service au soutien de la performance collective.</span></li></ul>
         <span class="xcard-tag xcard-tag--refs"><span class="tag-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/></svg></span> <strong style="font-weight:600">20+</strong> ans • McKinsey &amp; Company • J.P. Morgan • Warner Bros. Discovery</span>
       </div>
       <div class="xcard xcard--ia reveal delay-2">
@@ -2412,13 +2414,13 @@ border-radius: 50%; background: #FAF6F2; transition: transform .2s;
       <div class="xcard reveal delay-3">
         <div class="xcard-num">03</div>
         <h3><span style="color:var(--rose)">Multilinguisme</span></h3>
-        <p>8+ ans d&#x2019;immersion à l&#x2019;international (Argentine, Royaume-Uni, Espagne, Russie). Communication fluide dans des environnements multiculturels exigeants et adaptation aux réalités locales. Compréhension fine des codes, des usages et des modes de collaboration dans des contextes internationaux.</p>
+        <ul style="list-style:none;padding:0;margin:0 0 14px;display:flex;flex-direction:column;gap:8px;font-size:.9rem;line-height:1.5;color:var(--text)"><li style="display:flex;gap:10px;align-items:baseline"><span style="color:var(--rose);flex-shrink:0">✓</span><span>8+ ans d&#x2019;immersion à l&#x2019;international (Argentine, Royaume-Uni, Espagne, Russie).</span></li><li style="display:flex;gap:10px;align-items:baseline"><span style="color:var(--rose);flex-shrink:0">✓</span><span>Communication fluide dans des environnements multiculturels exigeants et adaptation aux réalités locales.</span></li><li style="display:flex;gap:10px;align-items:baseline"><span style="color:var(--rose);flex-shrink:0">✓</span><span>Compréhension fine des codes, des usages et des modes de collaboration dans des contextes internationaux.</span></li></ul>
         <span class="xcard-tag"><span class="tag-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></span> Français • English fluent • Español fluido • Deutsch B1</span>
       </div>
       <div class="xcard reveal delay-4">
         <div class="xcard-num">04</div>
         <h3>Événementiel Corporate <span style="color:var(--rose)">International</span></h3>
-        <p>Conception et coordination d&#x2019;événements stratégiques dans des environnements internationaux exigeants. Gestion de multiples parties prenantes, pilotage opérationnel et attention constante à l&#x2019;expérience participant. Capacité à orchestrer des projets complexes avec rigueur et réactivité.</p>
+        <ul style="list-style:none;padding:0;margin:0 0 14px;display:flex;flex-direction:column;gap:8px;font-size:.9rem;line-height:1.5;color:var(--text)"><li style="display:flex;gap:10px;align-items:baseline"><span style="color:var(--rose);flex-shrink:0">✓</span><span>Conception et coordination d&#x2019;événements stratégiques dans des environnements internationaux exigeants.</span></li><li style="display:flex;gap:10px;align-items:baseline"><span style="color:var(--rose);flex-shrink:0">✓</span><span>Gestion de multiples parties prenantes, pilotage opérationnel et attention constante à l&#x2019;expérience participant.</span></li><li style="display:flex;gap:10px;align-items:baseline"><span style="color:var(--rose);flex-shrink:0">✓</span><span>Capacité à orchestrer des projets complexes avec rigueur et réactivité.</span></li></ul>
         <span class="xcard-tag"><span class="tag-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0"/><path d="M12 17v5"/><path d="M8 22h8"/></svg></span> Conférences • Séminaires • Événements exécutifs • Programmes internationaux</span>
       </div>
     </div>
@@ -2460,7 +2462,7 @@ border-radius: 50%; background: #FAF6F2; transition: transform .2s;
 
     <div class="funding-note reveal">
       <p class="funding-note-title">Gouvernance &amp; conformité</p>
-      <p>Un agent IA qui touche à vos données doit intégrer le RGPD et l'AI Act européen dès la conception, pas comme une case à cocher après coup. C'est une rigueur pratiquée chez Bureau Veritas, organisme de certification, avant de l'appliquer à la conception des agents IA d'EXEC'<span style="color:#C75F62">IA</span>.</p>
+      <p>Un agent IA qui touche à vos données doit intégrer le <strong style="font-weight:600">RGPD et l'AI Act</strong> européen dès la conception, pas comme une case à cocher après coup. C'est une rigueur pratiquée chez <span class="art-chip">Bureau Veritas</span> en Argentine, groupe international de référence dans l'inspection, les essais et la certification, avant de l'appliquer à la conception des agents IA d'EXEC'<span style="color:#C75F62">IA</span>.</p>
       <p><a href="mentions-legales.html#donnees">Le traitement des données personnelles</a> détaille les bases légales, durées de conservation et transferts appliqués.</p>
       <a class="guide-link-card" href="conformite-ia-pme.html">
         <span class="guide-link-title">AI Act &amp; RGPD pour une PME</span>
