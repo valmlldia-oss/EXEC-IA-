@@ -714,6 +714,15 @@ window.addEventListener('load', () => {
     function blocksOf(c) { return Array.from(c.children).filter(function (k) { return !k.classList.contains('article-book-folio') && !k.classList.contains('bal-spacer'); }); }
     function h(c) { const k = blocksOf(c); return k.length ? k[k.length - 1].getBoundingClientRect().bottom - c.getBoundingClientRect().top : 0; }
     const L = cols[0], R = cols[1];
+    /* on repart toujours de la mise en page d'origine : les paragraphes déplacés lors d'un passage précédent
+       (avant le chargement des polices, ou à une autre largeur) reviennent d'abord à leur place */
+    L.parentElement.querySelectorAll('[data-split]').forEach(function (w) {
+      const s = w._splitSrc; if (!s) return;
+      const kids = Array.from(w.children);
+      if (w._splitFromEnd) kids.forEach(function (k) { s.appendChild(k); });
+      else kids.reverse().forEach(function (k) { s.insertBefore(k, s.firstChild); });
+      w.remove();
+    });
     for (let i = 0; i < 12; i++) {
       const diff = h(L) - h(R);
       if (Math.abs(diff) < 24) break;
@@ -725,7 +734,7 @@ window.addEventListener('load', () => {
         el = ch[ch.length - 1];
         if (/^H[23]$/.test(el.tagName) || /^H[23]$/.test(ch[ch.length - 2].tagName)) break;
         wrap = blocksOf(R)[0];
-        if (!wrap || !wrap.dataset.split) { wrap = document.createElement('div'); wrap.className = src.className; wrap.dataset.split = '1'; R.insertBefore(wrap, R.firstChild); created = true; }
+        if (!wrap || !wrap.dataset.split || wrap._splitSrc !== src) { wrap = document.createElement('div'); wrap.className = src.className; wrap.dataset.split = '1'; wrap._splitSrc = src; wrap._splitFromEnd = true; R.insertBefore(wrap, R.firstChild); created = true; }
         wrap.insertBefore(el, wrap.firstChild);
       } else {
         const k = blocksOf(R); src = k[0];
@@ -734,7 +743,7 @@ window.addEventListener('load', () => {
         el = ch[0];
         if (/^H[23]$/.test(el.tagName)) break;
         const kl = blocksOf(L); wrap = kl[kl.length - 1];
-        if (!wrap || !wrap.dataset.split) { wrap = document.createElement('div'); wrap.className = src.className; wrap.dataset.split = '1'; L.insertBefore(wrap, L.querySelector('.article-book-folio')); created = true; }
+        if (!wrap || !wrap.dataset.split || wrap._splitSrc !== src) { wrap = document.createElement('div'); wrap.className = src.className; wrap.dataset.split = '1'; wrap._splitSrc = src; wrap._splitFromEnd = false; L.insertBefore(wrap, L.querySelector('.article-book-folio')); created = true; }
         wrap.appendChild(el);
       }
       if (Math.abs(h(L) - h(R)) >= Math.abs(diff)) {                     /* pas mieux : on annule et on s'arrête */

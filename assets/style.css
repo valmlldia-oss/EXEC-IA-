@@ -7345,7 +7345,7 @@ body.art-justify .article-tldr-body p { text-align: justify; text-align-last: le
 .art-star { color: #C9A227; font-style: normal; margin-right: .35em; text-shadow: 0 0 1px rgba(160,120,20,.35); }
 /* « Pour aller plus loin » : les 4 questions l'une sous l'autre (1. 2. 3. 4.),
    une seule colonne de lecture confortable, sans pliure centrale */
-.article-book.article-book--more { grid-template-columns: minmax(0, 760px); }
+.article-book.article-book--more { grid-template-columns: minmax(0, 780px); }
 .article-book.article-book--more::before { display: none; }
 /* « Pour aller plus loin » : chaque question en accordéon (flèche, comme la version courte) */
 .article-more-item { border-bottom: 1px solid rgba(99,59,74,.14); }

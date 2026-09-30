@@ -6282,7 +6282,7 @@ body.art-justify .article-book .article-intro p, body.art-justify .article-book 
 .footer-mention-row, .footer-mention-ia { display: none; }
 body.art-justify .article-tldr-body p { text-align: justify; text-align-last: left; text-justify: inter-word; hyphens: auto; -webkit-hyphens: auto; }
 .art-star { color: #C9A227; font-style: normal; margin-right: .35em; text-shadow: 0 0 1px rgba(160,120,20,.35); }
-.article-book.article-book--more { grid-template-columns: minmax(0, 760px); }
+.article-book.article-book--more { grid-template-columns: minmax(0, 780px); }
 .article-book.article-book--more::before { display: none; }
 .article-more-item { border-bottom: 1px solid rgba(99,59,74,.14); }
 .article-more-item:first-child { border-top: 1px solid rgba(99,59,74,.14); }
