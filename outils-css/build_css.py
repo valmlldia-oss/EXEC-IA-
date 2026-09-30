@@ -3,7 +3,8 @@
 #     python3 outils-css/build_css.py
 # 1) style.css -> style.min.css (retire commentaires et blancs)
 # 2) Chrome headless relève, page par page, les sélecteurs réellement présents
-# 3) écrit assets/p/<page>.css (règles utiles seulement) et incrémente ?v= dans les HTML
+# 3) intègre dans chaque page, entre <style id="css-page"> et </style>, ses seules règles utiles
+#    (ne jamais modifier ce bloc à la main : il est réécrit à chaque passage)
 # Les classes posées par JavaScript et les états (:hover, [open]…) sont conservés.
 # Ensuite : vérifier la mise en page (1440 et 390 px), puis déployer.
 import re,json,glob,os,subprocess,time,html,sys
@@ -109,7 +110,7 @@ def collect(items):
 collect(ITEMS)
 SELS=sorted(SELS)
 
-LINK=re.compile(r'assets/(?:style\.min\.css|p/[\w-]+\.css)(?:\?v=\d+)?')
+LINK=re.compile(r'assets/(?:style\.min\.css|p/[\w-]+\.css)(?:\?v=\d+)?|<style id="css-page">')
 PAGES=[os.path.basename(f) for f in sorted(glob.glob(R+'/*.html')) if LINK.search(open(f,encoding='utf8').read())]
 TPL='''<!doctype html><body><pre id="o">RUNNING</pre><script>
 const pages=%PAGES%, sels=%SELS%;
@@ -141,14 +142,13 @@ def emit(items,used):
             if inner: out.append(it[1]+'{'+''.join(inner)+'}')
     return out
 
-os.makedirs(R+'/assets/p',exist_ok=True)
-vs=[int(m) for f in PAGES for m in re.findall(r'assets/p/[\w-]+\.css\?v=(\d+)',open(R+'/'+f,encoding='utf8').read())]
-V=(max(vs) if vs else 363)+1
+STYLE=re.compile(r'<style id="css-page">.*?</style>',re.S)
 for p in PAGES:
     css='\n'.join(emit(ITEMS,set(USED[p])))
-    css=re.sub(r'url\(\s*([\'"]?)(?!data:|https?:|/|#|\.\./)([^)\'"]+)\1\s*\)',lambda m:'url('+m.group(1)+'../'+m.group(2)+m.group(1)+')',css)
-    name=p.replace('.html','.css')
-    open(R+'/assets/p/'+name,'w',encoding='utf8').write(css)
+    # les url() de style.css sont relatives au dossier assets/ : on les rend relatives à la page
+    css=re.sub(r'url\(\s*([\'"]?)(?!data:|https?:|/|#)([^)\'"]+)\1\s*\)',lambda m:'url('+m.group(1)+'assets/'+m.group(2)+m.group(1)+')',css)
     s=open(R+'/'+p,encoding='utf8').read()
-    open(R+'/'+p,'w',encoding='utf8').write(LINK.sub(f'assets/p/{name}?v={V}',s))
-print('pages',len(PAGES),'version',V)
+    tag='<style id="css-page">\n'+css+'\n</style>'
+    s=STYLE.sub(lambda m:tag,s) if STYLE.search(s) else re.sub(r'<link rel="stylesheet" href="assets/(?:style\.min\.css|p/[\w-]+\.css)(?:\?v=\d+)?">',lambda m:tag,s)
+    open(R+'/'+p,'w',encoding='utf8').write(s)
+print('pages',len(PAGES),'feuille de style intégrée dans chaque page')
