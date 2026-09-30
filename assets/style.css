@@ -2526,6 +2526,19 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,.25) 22%, rgba(0,0,0,.7) 45%, rgba(0,0,0,.95) 68%, #000 100%);
 }
 .site-footer > * { position: relative; z-index: 1; }
+/* Desktop : escalier entier (lumière du sommet comprise), rassemblé au-dessus
+   du filet — la ligne « Mentions légales » ne le coupe plus. La boîte suit la
+   hauteur de la zone au-dessus du filet ; contain garde les proportions. */
+@media (min-width: 901px) {
+  .site-footer::after {
+    top: 0; bottom: 42px; height: auto;
+    width: clamp(240px, 21vw, 320px);
+    background-size: contain;
+    background-position: right bottom;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,.6) 25%, #000 55%);
+    mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,.6) 25%, #000 55%);
+  }
+}
 @media (max-width: 900px) {
   /* Tablette : gabarit réduit, toujours ancré en bas-droite — n'écrase
      aucune colonne quelle que soit la hauteur du footer empilé. */
