@@ -7089,6 +7089,14 @@ html { scroll-behavior: smooth; }
 /* Bio auteur : la phrase sur une ligne, le lien LinkedIn dessous */
 .article-author-bio a { display: block; margin-top: 4px; white-space: nowrap; }
 @media (min-width: 900px) { .article-author-bio { white-space: normal; } }
+/* Encadré auteur élargi (desktop) : la phrase de présentation tient sur une
+   seule ligne en FR/EN/ES, le lien LinkedIn passe dessous. */
+@media (min-width: 900px) {
+  .article-author, .article-page--guide .article-author { max-width: 860px; }
+}
+@media (min-width: 1000px) {
+  .article-author-bio { white-space: nowrap; }
+}
 
 /* Guide : texte plus aéré (interligne 1,7, respiration entre paragraphes), frise sur toute la largeur du cadre */
 .article-page--guide .article-intro p, .article-page--guide .article-tldr-body p, .article-page--guide .article-tldr-body li, .article-page--guide .aiact-relief li, .article-page--guide .aiact-roles li, .article-page--guide .acc-body p, .article-page--guide .aiact-tl-text, .article-page--guide .article-qlist--actions li p { line-height: 1.7; }

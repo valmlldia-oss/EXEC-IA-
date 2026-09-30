@@ -6117,6 +6117,12 @@ html { scroll-behavior: smooth; }
 }
 .article-author-bio a { display: block; margin-top: 4px; white-space: nowrap; }
 @media (min-width: 900px) { .article-author-bio { white-space: normal; } }
+@media (min-width: 900px) {
+.article-author, .article-page--guide .article-author { max-width: 860px; }
+}
+@media (min-width: 1000px) {
+.article-author-bio { white-space: nowrap; }
+}
 .article-page--guide .article-intro p, .article-page--guide .article-tldr-body p, .article-page--guide .article-tldr-body li, .article-page--guide .aiact-relief li, .article-page--guide .aiact-roles li, .article-page--guide .acc-body p, .article-page--guide .aiact-tl-text, .article-page--guide .article-qlist--actions li p { line-height: 1.7; }
 .article-page--guide .article-intro p { margin-bottom: 18px; }
 .article-page--guide .aiact-tl-text { max-width: none; }
