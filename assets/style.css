@@ -1333,7 +1333,9 @@ section { padding: var(--section-gap) 0; }
   display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px;
   align-items: start; margin-bottom: 8px;
 }
-.article-header-image { max-width: 340px; margin-left: auto; }
+/* Image calée en bas : son bord inférieur s'aligne sur le bas du bloc de
+   gauche (encadré « Version courte »). */
+.article-header-image { max-width: 340px; margin-left: auto; align-self: end; }
 /* Image pas encore reçue — espace réservé sobre, même format */
 .article-header-image--pending {
   aspect-ratio: 1312 / 1199; border-radius: 14px;
@@ -7285,7 +7287,7 @@ body.art-justify .article-book .article-intro p.art-enum { text-align: left; }
 .article-book .article-qlist.article-qlist--filets { border-left: none; padding: 12px 0; margin: 26px 0 8px; border-top: 1px solid rgba(217,201,195,1); border-bottom: 1px solid rgba(217,201,195,1); text-align: center; }
 .article-qlist--filets p { text-align: center !important; text-align-last: center !important; }
 /* Exergue entre filets : lisibilité (romain plutôt qu'italique fin, plus grand, prune foncé) */
-.article-book .article-qlist--filets p { font-style: normal; font-weight: 500; font-size: 1.42rem; line-height: 1.42; color: #4F2F3B; letter-spacing: .005em; hyphens: none; -webkit-hyphens: none; text-wrap: balance; }
+.article-book .article-qlist--filets p { font-style: normal; font-weight: 500; font-size: 1.42rem; line-height: 1.42; color: #4F2F3B; letter-spacing: .005em; hyphens: none; -webkit-hyphens: none; text-wrap: pretty; }
 .art-qlist-accent { color: var(--rose); font-weight: 600; }
 .article-hashtags { hyphens: none; -webkit-hyphens: none; overflow-wrap: normal; word-break: keep-all; }
 /* Justification aux deux bords des articles 7 et 8 : la dernière ligne d'un paragraphe reste à gauche */
