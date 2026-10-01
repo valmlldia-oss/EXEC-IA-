@@ -1344,6 +1344,17 @@ border-radius: 50%; background: #FAF6F2; transition: transform .2s;
 @keyframes verbes-defile{ from { transform: translateX(0); } to { transform: translateX(-50%); } }
 .testi-fold{ margin-top: auto; display: flex; flex-direction: column; }
 .testi-fold::details-content{ flex: 1; display: flex; flex-direction: column; }
+.zone-line{
+font-family: var(--sans); font-size: .95rem; line-height: 1.5;
+color: var(--text); margin: 16px 0 0; max-width: 62ch; text-align: left;
+text-wrap: pretty;
+}
+.zone-pin{ margin-right: .35em; }
+.footer-signature{
+font-family: var(--sans); font-size: .76rem; font-weight: 600;
+letter-spacing: .18em; text-transform: uppercase;
+color: var(--plum); margin: 14px 0 0;
+}
 </style>
   <script type="application/ld+json">
 {
@@ -1577,6 +1588,7 @@ border-radius: 50%; background: #FAF6F2; transition: transform .2s;
         </a>
         <p class="contact-reassurance">30 minutes. Free. No commitment.</p>
       </div>
+      <p class="zone-line"><span class="zone-pin" aria-hidden="true">📍</span>Based in Carrières-sur-Seine, I work in Paris and across Île-de-France, on site or remotely.</p>
       <div class="contact-linkedin reveal delay-4">
         <a href="https://www.linkedin.com/in/val%C3%A9rie-mailland" target="_blank" rel="noopener" class="btn btn-plum-outline btn-lg">
           <svg width="40" height="40" viewBox="0 0 24 24" fill="#0077B5"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
@@ -1743,6 +1755,7 @@ border-radius: 50%; background: #FAF6F2; transition: transform .2s;
     <div class="footer-brand">
       <img src="assets/logo-execia-bords-prune.webp" alt="EXEC'IA Consulting" class="footer-logo-main" width="450" height="212" decoding="async">
       <p class="footer-tag"><span class="footer-tag-lead">Executive-level experience</span><br><span class="footer-tag-rest">at the service of your <span style="color:var(--rose)">AI</span> transformation</span></p>
+      <p class="footer-signature">Decide before you invest.</p>
     </div>
 
     <div class="footer-col footer-col--site">
