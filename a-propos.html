@@ -823,7 +823,7 @@ margin-top: 4px;
 }
 .footer-col a.footer-linkedin-btn:hover{ border-color: var(--rose); }
 .footer-linkedin-logo{ height: 18px; width: auto; display: inline-block; }
-.persp-intro-linkedin-logo{ height: .85em; width: auto; display: inline-block; vertical-align: -.1em; margin-left: .15em; }
+.persp-intro-linkedin-logo{ height: .85em; width: auto; display: inline-block; vertical-align: -.1em; margin-left: .15em; margin-right: .1em; }
 .footer-rule{ border: none; border-top: 1px solid rgba(99,59,74,.22); margin: 0; }
 .fil-conducteur{
 display: none !important;
@@ -1432,6 +1432,14 @@ border-radius: 50%; background: #FAF6F2; transition: transform .2s;
 .article-long .article-book--long{ margin-top: 26px; }
 @media (max-width: 600px){.article-long > summary{ padding: 14px 16px; }}
 @keyframes verbes-defile{ from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.persp-compact .section-title{ margin-bottom: 14px !important; }
+.persp-compact .persp-intro{ margin-bottom: 8px !important; }
+.persp-compact .persp-card{ padding-bottom: 8px; }
+.persp-compact .persp-card-read{ padding-top: 2px; }
+.persp-compact .agents-arrows{ margin-top: -12px; }
+#perspectives.persp-compact > .about-cta-sep{ margin-bottom: calc(var(--section-gap) + 9px); }
+.testi-fold{ margin-top: auto; display: flex; flex-direction: column; }
+.testi-fold::details-content{ flex: 1; display: flex; flex-direction: column; }
 </style>
 </head>
 <body>
@@ -1500,7 +1508,7 @@ border-radius: 50%; background: #FAF6F2; transition: transform .2s;
         <p class="about-lede about-lede--voice about-lede--1l" style="margin-top:0"><em><span style="color:var(--rose)">Créer de la valeur</span> exige de rendre les technologies les plus puissantes claires, utiles et actionnables.</em></p>
         <span class="about-label about-label--principe">Un principe</span>
         <p class="about-lede about-lede--voice about-lede--1l" style="margin-top:0"><span style="color:var(--rose)">L&#8217;IA</span> éclaire la décision. <em>Le dirigeant garde l&#8217;arbitrage.</em></p>
-        <p class="about-principe-sub about-principe-sub--1l"><strong style="color:var(--plum);font-weight:600">EXEC&#8217;IA</strong> met la technologie au service des <span style="color:var(--rose)">priorités de l&#8217;entreprise</span>. Jamais l&#8217;inverse.</p>
+        <p class="about-principe-sub about-principe-sub--1l"><strong style="color:var(--plum);font-weight:600">EXEC&#8217;<span style="color:var(--rose)">IA</span></strong> met la technologie au service des <span style="color:var(--rose)">priorités de l&#8217;entreprise</span>. Jamais l&#8217;inverse.</p>
         <span class="about-label about-label--mission">Une mission</span>
         <p class="about-lede about-lede--last about-lede--voice about-lede--1l" style="margin-top:0"><em><span style="color:var(--rose)">Transformer</span> le potentiel de l&#8217;IA en <span style="color:var(--rose)">résultats concrets</span> en rendant les sujets complexes clairs, utiles et actionnables.</em></p>
       </div>
@@ -1509,12 +1517,12 @@ border-radius: 50%; background: #FAF6F2; transition: transform .2s;
 </section>
 
 <!-- ═══ PERSPECTIVES ══════════════════════════════════════════ -->
-<section id="perspectives" class="bg-ivory snap-page">
+<section id="perspectives" class="bg-ivory snap-page persp-compact">
   <span class="about-cta-sep" aria-hidden="true"></span>
   <div class="wrap">
     <span class="eyebrow reveal">Perspectives <span class="eyebrow-sub">· le <span class="eyebrow-blog">blog</span> d&#8217;EXEC&#8217;IA</span></span>
     <h2 class="section-title reveal delay-1">Un regard sur l&#8217;<span style="color:var(--rose);font-weight:500">IA</span>, façonné par des années<br>au plus près des dirigeants.</h2>
-    <p class="persp-intro reveal delay-2"><span class="persp-intro-line">Gouvernance, décision, transformation, création de valeur&nbsp;: des réflexions partagées sur <span style="color:var(--rose)">LinkedIn</span><img src="assets/linkedin-logo.png" alt="LinkedIn" class="persp-intro-linkedin-logo"></span> <span class="persp-intro-line">et approfondies ici pour prendre du recul sur ce que <span style="color:var(--rose)">l&#8217;IA</span> change réellement dans votre entreprise.</span></p>
+    <p class="persp-intro reveal delay-2"><span class="persp-intro-line">Gouvernance, décision, transformation, création de valeur&nbsp;: des réflexions partagées sur <span style="color:var(--rose)">LinkedIn</span><img src="assets/linkedin-logo.png" alt="LinkedIn" class="persp-intro-linkedin-logo"> et approfondies ici</span> <span class="persp-intro-line">pour prendre du recul sur ce que <span style="color:var(--rose)">l&#8217;IA</span> change réellement dans votre entreprise.</span></p>
 
     <div class="persp-track-outer reveal delay-2" id="perspTrack">
     <div class="persp-track">

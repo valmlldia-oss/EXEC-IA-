@@ -351,6 +351,16 @@ margin: 0 auto 20px;
 70%  { opacity: 1; transform: translateY(0) scale(1.04); }
 100% { opacity: 1; transform: translateY(0) scale(1); }
 }
+.about-cta-mark path{
+opacity: 0;
+transform-origin: center;
+}
+.about-cta-mark.is-visible path{
+animation: about-cta-mark-pop .4s cubic-bezier(.22,1,.36,1) both;
+}
+.about-cta-mark.is-visible path:nth-child(1),
+.about-cta-mark.is-visible path:nth-child(5){ animation-delay: 80ms; }
+@media (prefers-reduced-motion: reduce){.about-cta-mark path{ opacity: 1; animation: none; transform: none; }}
 .piliers{
 display: grid; grid-template-columns: repeat(3, 1fr);
 gap: 16px; margin: 0 0 34px; width: 100%;
@@ -1175,6 +1185,29 @@ border-radius: 50%; background: #FAF6F2; transition: transform .2s;
 .article-long .article-book--long{ margin-top: 26px; }
 @media (max-width: 600px){.article-long > summary{ padding: 14px 16px; }}
 @keyframes verbes-defile{ from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.testi-grid > .testi > .testi-author{ margin-top: 18px; }
+.testi-fold{ margin-top: auto; display: flex; flex-direction: column; }
+.testi-fold-toggle{
+list-style: none; cursor: pointer;
+display: flex; align-items: center; justify-content: space-between; gap: 10px;
+margin-top: 18px; padding-top: 14px;
+border-top: 1px solid rgba(199,95,98,.22);
+font-family: var(--sans); font-size: .82rem; font-weight: 500;
+letter-spacing: .06em; text-transform: uppercase;
+color: var(--rose);
+}
+.testi-fold-toggle::-webkit-details-marker{ display: none; }
+.testi-fold::details-content{ flex: 1; display: flex; flex-direction: column; }
+.testi-fold-toggle:focus-visible{ outline: 2px solid var(--rose); outline-offset: 4px; border-radius: 4px; }
+.testi-fold-arrow{ width: 24px; height: 24px; flex: none; color: var(--rose); transition: transform .3s var(--ease); }
+.testi-fold-toggle:hover .testi-fold-arrow{ transform: translateY(2px); }
+.testi-fold[open] .testi-fold-arrow{ transform: rotate(180deg); }
+.testi-fold[open] > .testi-fold-toggle{ margin-bottom: 16px; }
+.testi--dark .testi-fold-toggle{ color: rgba(250,246,242,.85); border-top-color: rgba(250,246,242,.18); }
+@media (min-width: 1025px){.testi-grid{ grid-template-rows: auto auto auto; }.testi-grid > .testi, .testi-grid > .testi--dark{ grid-row: span 3; }.testi-grid > .testi > .testi-fold{ margin-top: 0; }}
+@media (prefers-reduced-motion: reduce){.testi-fold-arrow{ transition: none; }}
+.testi-author .testi-avatar{ width: 60px; height: 60px; }
+.testi-author .testi-avatar--initials{ font-size: 1.3rem; }
 </style>
 </head>
 <body>
@@ -1218,9 +1251,6 @@ border-radius: 50%; background: #FAF6F2; transition: transform .2s;
       <!-- 01 -->
       <div class="testi reveal delay-1">
         <div class="testi-tag testi-tag--rose">Leadership international &amp;<br><span style="color:var(--rose)">interculturel</span></div>
-        <div class="testi-q">&#x201C;</div>
-        <p>Valérie est une professionnelle engagée qui évolue avec efficacité dans des environnements internationaux et multiculturels. Elle associe discernement, adaptabilité et esprit de collaboration, avec la capacité de coordonner des projets et d'aligner des parties prenantes diverses. <br>Sa capacité à tisser des relations de confiance, à connecter les personnes et à faciliter la communication entre fonctions et cultures apporte clarté et structure à des initiatives qui avancent vite. Elle est un atout précieux dans des organisations exigeantes.</p>
-        <div class="testi-q-close"><span>&#x201C;</span></div>
         <div class="testi-author">
           <div class="testi-avatar testi-avatar--initials">HH</div>
           <div>
@@ -1230,38 +1260,50 @@ border-radius: 50%; background: #FAF6F2; transition: transform .2s;
             <em class="testi-translated">Traduit de l'anglais</em>
           </div>
         </div>
+        <details class="testi-fold">
+          <summary class="testi-fold-toggle"><span>Lire le témoignage</span><svg class="testi-fold-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v13M6 12l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+          <div class="testi-q">&#x201C;</div>
+          <p>Valérie est une professionnelle engagée qui évolue avec efficacité dans des environnements internationaux et multiculturels. Elle associe discernement, adaptabilité et esprit de collaboration, avec la capacité de coordonner des projets et d'aligner des parties prenantes diverses. <br>Sa capacité à tisser des relations de confiance, à connecter les personnes et à faciliter la communication entre fonctions et cultures apporte clarté et structure à des initiatives qui avancent vite. Elle est un atout précieux dans des organisations exigeantes.</p>
+          <div class="testi-q-close"><span>&#x201C;</span></div>
+        </details>
       </div>
 
       <!-- 02 -->
       <div class="testi reveal delay-2">
         <div class="testi-tag testi-tag--rose">Communication stratégique &amp;<br><span style="color:var(--rose)">leadership international</span></div>
-        <div class="testi-q">&#x201C;</div>
-        <p>J'ai eu le plaisir de collaborer étroitement avec Valérie, alors Coordinatrice Communication de McKinsey France, sur plusieurs initiatives internationales dédiées au leadership féminin.<br>J'ai particulièrement apprécié son professionnalisme, son engagement constant et sa force de travail.<br>Sa capacité à fédérer de nombreux interlocuteurs, à contribuer activement aux réflexions menées et à conduire des projets avec rigueur et enthousiasme a été un atout véritablement précieux pour la réussite de toutes ces initiatives.</p>
-        <div class="testi-q-close"><span>&#x201C;</span></div>
         <div class="testi-author">
           <div class="testi-avatar testi-avatar--initials">SD</div>
           <div>
             <span class="testi-name">Sandrine Devillard</span>
             <strong class="testi-role">McKinsey &amp; Company</strong>
-            <span class="testi-title">Senior Partner &middot; Global Leader, Women Matter Research Program &middot; Member, McKinsey Global Institute Council</span>
+            <span class="testi-title">Senior Partner Emerita<br>Ex-Global Leader,<br>«&nbsp;Women Matter&nbsp;» Research Program<br>Ex-Member, McKinsey Global Institute Council</span>
           </div>
         </div>
+        <details class="testi-fold">
+          <summary class="testi-fold-toggle"><span>Lire le témoignage</span><svg class="testi-fold-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v13M6 12l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+          <div class="testi-q">&#x201C;</div>
+          <p>J'ai eu le plaisir de collaborer étroitement avec Valérie, alors Coordinatrice Communication de McKinsey France, sur plusieurs initiatives internationales dédiées au leadership féminin.<br>J'ai particulièrement apprécié son professionnalisme, son engagement constant et sa force de travail.<br>Sa capacité à fédérer de nombreux interlocuteurs, à contribuer activement aux réflexions menées et à conduire des projets avec rigueur et enthousiasme a été un atout véritablement précieux pour la réussite de toutes ces initiatives.<br>Je lui souhaite beaucoup de réussite dans cette nouvelle étape de son parcours, tournée vers l'intelligence artificielle, où ses qualités trouveront, j'en suis certaine, un nouveau terrain d'expression.</p>
+          <div class="testi-q-close"><span>&#x201C;</span></div>
+        </details>
       </div>
 
       <!-- 03 -->
       <div class="testi testi--dark reveal delay-3">
         <div class="testi-tag">IA appliquée, <span style="color:var(--rose)">résultats<br>concrets &amp; impact métier</span></div>
-        <div class="testi-q">&#x201C;</div>
-        <p>J'ai eu le plaisir de coacher Valérie dans sa montée en compétences sur les usages professionnels de l'intelligence artificielle, dans le cadre de sa formation «&nbsp;Consultant <span style="color:var(--rose)">IA</span>&nbsp;».<br>J'ai particulièrement apprécié son implication, sa curiosité intellectuelle et sa capacité à transformer rapidement les apprentissages en résultats concrets.<br>Sur le volet technique, elle s'est distinguée&nbsp;: installation et configuration en ligne de commande de compétences avancées d'audit SEO et GEO dans Claude, jusqu'à obtenir 100&nbsp;% à l'évaluation technique. Sur ce terrain, elle s'est montrée plus solide que bien des apprenants.<br>Valérie allie capacité de travail, détermination et esprit critique, avec une réelle aptitude à relier les outils aux enjeux métier. Sa persévérance lui permet d'aller au bout de sujets techniques exigeants, sans perdre de vue leur finalité opérationnelle.<br>Ce double regard, stratégique et technique, constitue un véritable atout pour accompagner les entreprises dans l'adoption d'une <span style="color:var(--rose)">IA</span> concrète et créatrice de valeur.</p>
-        <div class="testi-q-close"><span>&#x201C;</span></div>
         <div class="testi-author">
           <div class="testi-avatar testi-avatar--initials testi-avatar--light">WB</div>
           <div>
             <span class="testi-name">Wissam Bouakline</span>
             <strong class="testi-role">Entrepreneurs.com &middot; Studeria</strong>
-            <span class="testi-title">Coach experte en Intelligence Artificielle&nbsp;•<br>Formatrice en Automatisation No-code &amp;&nbsp;<span style="color:var(--rose)">IA</span></span>
+            <span class="testi-title">Coach experte en Intelligence Artificielle<br>Formatrice en Automatisation No-code &amp;&nbsp;<span style="color:var(--rose)">IA</span></span>
           </div>
         </div>
+        <details class="testi-fold">
+          <summary class="testi-fold-toggle"><span>Lire le témoignage</span><svg class="testi-fold-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v13M6 12l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+          <div class="testi-q">&#x201C;</div>
+          <p>J'ai eu le plaisir de coacher Valérie dans sa montée en compétences sur les usages professionnels de l'intelligence artificielle, dans le cadre de sa formation «&nbsp;Consultant <span style="color:var(--rose)">IA</span>&nbsp;».<br>J'ai particulièrement apprécié son implication, sa curiosité intellectuelle et sa capacité à transformer rapidement les apprentissages en résultats concrets.<br>Sur le volet technique, elle s'est distinguée&nbsp;: installation et configuration en ligne de commande de compétences avancées d'audit SEO et GEO dans Claude, jusqu'à obtenir 100&nbsp;% à l'évaluation technique. Sur ce terrain, elle s'est montrée plus solide que bien des apprenants.<br>Valérie allie capacité de travail, détermination et esprit critique, avec une réelle aptitude à relier les outils aux enjeux métier. Sa persévérance lui permet d'aller au bout de sujets techniques exigeants, sans perdre de vue leur finalité opérationnelle.<br>Ce double regard, stratégique et technique, constitue un véritable atout pour accompagner les entreprises dans l'adoption d'une <span style="color:var(--rose)">IA</span> concrète et créatrice de valeur.</p>
+          <div class="testi-q-close"><span>&#x201C;</span></div>
+        </details>
       </div>
 
     </div>
@@ -1324,6 +1366,7 @@ border-radius: 50%; background: #FAF6F2; transition: transform .2s;
 </footer>
 
 <script src="assets/script.js?v=39"></script>
+<script src="assets/inline/temoignages-1.js" defer></script>
 
 <!-- ═══ COOKIE BANNER ══════════════════════════════════════════ -->
 <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Consentement aux cookies">

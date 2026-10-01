@@ -598,7 +598,7 @@ margin-top: 4px;
 }
 .footer-col a.footer-linkedin-btn:hover{ border-color: var(--rose); }
 .footer-linkedin-logo{ height: 18px; width: auto; display: inline-block; }
-.persp-intro-linkedin-logo{ height: .85em; width: auto; display: inline-block; vertical-align: -.1em; margin-left: .15em; }
+.persp-intro-linkedin-logo{ height: .85em; width: auto; display: inline-block; vertical-align: -.1em; margin-left: .15em; margin-right: .1em; }
 .footer-rule{ border: none; border-top: 1px solid rgba(99,59,74,.22); margin: 0; }
 .fil-conducteur{
 display: none !important;
@@ -1143,6 +1143,8 @@ border-radius: 50%; background: #FAF6F2; transition: transform .2s;
 .article-long .article-book--long{ margin-top: 26px; }
 @media (max-width: 600px){.article-long > summary{ padding: 14px 16px; }}
 @keyframes verbes-defile{ from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.testi-fold{ margin-top: auto; display: flex; flex-direction: column; }
+.testi-fold::details-content{ flex: 1; display: flex; flex-direction: column; }
 </style>
 </head>
 <body>
@@ -1180,7 +1182,7 @@ border-radius: 50%; background: #FAF6F2; transition: transform .2s;
   <div class="wrap">
     <span class="eyebrow">Perspectives <span class="eyebrow-sub">· the EXEC&#8217;IA <span class="eyebrow-blog">blog</span></span></span>
     <h1 class="section-title">A view on <span style="color:var(--rose);font-weight:500">AI</span><br><span style="display:block;text-wrap:balance">shaped by years spent close to executives.</span></h1>
-    <p class="persp-intro"><span class="persp-intro-line">Governance, decision-making, transformation, value creation: reflections shared on <span style="color:var(--rose)">LinkedIn</span><img src="assets/linkedin-logo.png" alt="LinkedIn" class="persp-intro-linkedin-logo"></span><br><span class="persp-intro-line">and explored further here to step back and see what <span style="color:var(--rose)">AI</span> actually changes inside your company.</span></p>
+    <p class="persp-intro"><span class="persp-intro-line">Governance, decision-making, transformation, value creation: reflections shared on <span style="color:var(--rose)">LinkedIn</span><img src="assets/linkedin-logo.png" alt="LinkedIn" class="persp-intro-linkedin-logo"> and explored further here</span> <span class="persp-intro-line">to step back and see what <span style="color:var(--rose)">AI</span> actually changes inside your company.</span></p>
 
     <div class="persp-track-outer reveal delay-2" id="perspTrack">
     <div class="persp-track">

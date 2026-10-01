@@ -88,7 +88,7 @@ def split_sel(sel):
     out.append(cur); return [x.strip() for x in out if x.strip()]
 PSEUDO=r':(?:hover|focus-visible|focus-within|focus|active|visited|checked|target|placeholder-shown|disabled|enabled|autofill|-webkit-autofill|fullscreen|popover-open|user-invalid|invalid|valid|indeterminate|playing|paused)\b'
 def base(sel):
-    s=re.sub(r'::?(?:before|after|placeholder|selection|marker|backdrop|-webkit-[\w-]+|-moz-[\w-]+|first-letter|first-line|file-selector-button)\b(\([^)]*\))?','',sel)
+    s=re.sub(r'::?(?:before|after|placeholder|selection|marker|backdrop|-webkit-[\w-]+|-moz-[\w-]+|first-letter|first-line|file-selector-button|details-content)\b(\([^)]*\))?','',sel)
     s=re.sub(PSEUDO,'',s)
     s=re.sub(r'\[(?:open|aria-[\w-]+|data-theme|hidden)(?:[~|^$*]?=[^\]]*)?\]','',s)
     def dropcls(m):

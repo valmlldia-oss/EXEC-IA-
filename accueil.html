@@ -1744,6 +1744,8 @@ background: var(--rose); flex-shrink: 0;
 }
 @keyframes verbes-defile{ from { transform: translateX(0); } to { transform: translateX(-50%); } }
 @media (prefers-reduced-motion: reduce){.verbes-track{ animation: none; width: auto; justify-content: center; }.verbes-serie + .verbes-serie{ display: none; }}
+.testi-fold{ margin-top: auto; display: flex; flex-direction: column; }
+.testi-fold::details-content{ flex: 1; display: flex; flex-direction: column; }
 </style>
 </head>
 <body>

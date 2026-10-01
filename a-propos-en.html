@@ -823,7 +823,7 @@ margin-top: 4px;
 }
 .footer-col a.footer-linkedin-btn:hover{ border-color: var(--rose); }
 .footer-linkedin-logo{ height: 18px; width: auto; display: inline-block; }
-.persp-intro-linkedin-logo{ height: .85em; width: auto; display: inline-block; vertical-align: -.1em; margin-left: .15em; }
+.persp-intro-linkedin-logo{ height: .85em; width: auto; display: inline-block; vertical-align: -.1em; margin-left: .15em; margin-right: .1em; }
 .footer-rule{ border: none; border-top: 1px solid rgba(99,59,74,.22); margin: 0; }
 .fil-conducteur{
 display: none !important;
@@ -1432,6 +1432,14 @@ border-radius: 50%; background: #FAF6F2; transition: transform .2s;
 .article-long .article-book--long{ margin-top: 26px; }
 @media (max-width: 600px){.article-long > summary{ padding: 14px 16px; }}
 @keyframes verbes-defile{ from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.persp-compact .section-title{ margin-bottom: 14px !important; }
+.persp-compact .persp-intro{ margin-bottom: 8px !important; }
+.persp-compact .persp-card{ padding-bottom: 8px; }
+.persp-compact .persp-card-read{ padding-top: 2px; }
+.persp-compact .agents-arrows{ margin-top: -12px; }
+#perspectives.persp-compact > .about-cta-sep{ margin-bottom: calc(var(--section-gap) + 9px); }
+.testi-fold{ margin-top: auto; display: flex; flex-direction: column; }
+.testi-fold::details-content{ flex: 1; display: flex; flex-direction: column; }
 </style>
 </head>
 <body>
@@ -1500,7 +1508,7 @@ border-radius: 50%; background: #FAF6F2; transition: transform .2s;
         <p class="about-lede about-lede--voice about-lede--1l" style="margin-top:0"><em>Creating value means making the most powerful technologies clear, useful and actionable.</em></p>
         <span class="about-label about-label--principe">A principle</span>
         <p class="about-lede about-lede--voice about-lede--1l" style="margin-top:0">AI informs the decision. <em>The executive keeps the final call.</em></p>
-        <p class="about-principe-sub about-principe-sub--1l">EXEC&#8217;IA puts technology at the service of business priorities. Never the other way around.</p>
+        <p class="about-principe-sub about-principe-sub--1l"><strong style="color:var(--plum);font-weight:600">EXEC&#8217;<span style="color:var(--rose)">IA</span></strong> puts technology at the service of <span style="color:var(--rose)">business priorities</span>. Never the other way around.</p>
         <span class="about-label about-label--mission">A mission</span>
         <p class="about-lede about-lede--last about-lede--voice about-lede--1l" style="margin-top:0"><em><span style="color:var(--rose)">Turning</span> AI&#8217;s potential into <span style="color:var(--rose)">concrete results</span>, by making complex subjects clear, useful and actionable.</em></p>
         <p class="about-principe-sub" style="margin-top:14px">EXEC&#8217;IA combines &#8220;EXEC,&#8221; for Executive, and &#8220;IA,&#8221; the French abbreviation for Artificial Intelligence.</p>
@@ -1510,12 +1518,12 @@ border-radius: 50%; background: #FAF6F2; transition: transform .2s;
 </section>
 
 <!-- ═══ PERSPECTIVES ══════════════════════════════════════════ -->
-<section id="perspectives" class="bg-ivory snap-page">
+<section id="perspectives" class="bg-ivory snap-page persp-compact">
   <span class="about-cta-sep" aria-hidden="true"></span>
   <div class="wrap">
     <span class="eyebrow reveal">Perspectives <span class="eyebrow-sub">· the EXEC&#8217;IA <span class="eyebrow-blog">blog</span></span></span>
     <h2 class="section-title reveal delay-1">A view on <span style="color:var(--rose);font-weight:500">AI</span>, shaped by years<br>spent close to executives.</h2>
-    <p class="persp-intro reveal delay-2"><span class="persp-intro-line">Governance, decision-making, transformation, value creation: reflections shared on <span style="color:var(--rose)">LinkedIn</span><img src="assets/linkedin-logo.png" alt="" class="persp-intro-linkedin-logo"></span><br><span class="persp-intro-line">and explored further here to step back and see what <span style="color:var(--rose)">AI</span> actually changes inside your company.</span></p>
+    <p class="persp-intro reveal delay-2"><span class="persp-intro-line">Governance, decision-making, transformation, value creation: reflections shared on <span style="color:var(--rose)">LinkedIn</span><img src="assets/linkedin-logo.png" alt="" class="persp-intro-linkedin-logo"> and explored further here</span> <span class="persp-intro-line">to step back and see what <span style="color:var(--rose)">AI</span> actually changes inside your company.</span></p>
 
     <div class="persp-track-outer reveal delay-2" id="perspTrack">
     <div class="persp-track">

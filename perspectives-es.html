@@ -598,7 +598,7 @@ margin-top: 4px;
 }
 .footer-col a.footer-linkedin-btn:hover{ border-color: var(--rose); }
 .footer-linkedin-logo{ height: 18px; width: auto; display: inline-block; }
-.persp-intro-linkedin-logo{ height: .85em; width: auto; display: inline-block; vertical-align: -.1em; margin-left: .15em; }
+.persp-intro-linkedin-logo{ height: .85em; width: auto; display: inline-block; vertical-align: -.1em; margin-left: .15em; margin-right: .1em; }
 .footer-rule{ border: none; border-top: 1px solid rgba(99,59,74,.22); margin: 0; }
 .fil-conducteur{
 display: none !important;
@@ -1143,6 +1143,8 @@ border-radius: 50%; background: #FAF6F2; transition: transform .2s;
 .article-long .article-book--long{ margin-top: 26px; }
 @media (max-width: 600px){.article-long > summary{ padding: 14px 16px; }}
 @keyframes verbes-defile{ from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.testi-fold{ margin-top: auto; display: flex; flex-direction: column; }
+.testi-fold::details-content{ flex: 1; display: flex; flex-direction: column; }
 </style>
 </head>
 <body>
@@ -1180,7 +1182,7 @@ border-radius: 50%; background: #FAF6F2; transition: transform .2s;
   <div class="wrap">
     <span class="eyebrow">Perspectives <span class="eyebrow-sub">· el <span class="eyebrow-blog">blog</span> de EXEC&#8217;IA</span></span>
     <h1 class="section-title">Una mirada sobre la <span style="color:var(--rose);font-weight:500">IA</span><br><span style="display:block;text-wrap:balance">forjada por años junto a los directivos.</span></h1>
-    <p class="persp-intro"><span class="persp-intro-line">Gobernanza, decisión, transformación, creación de valor: reflexiones compartidas en <span style="color:var(--rose)">LinkedIn</span><img src="assets/linkedin-logo.png" alt="LinkedIn" class="persp-intro-linkedin-logo"></span><br><span class="persp-intro-line">y profundizadas aquí para tomar distancia y entender lo que la <span style="color:var(--rose)">IA</span> cambia realmente en su empresa.</span></p>
+    <p class="persp-intro"><span class="persp-intro-line">Gobernanza, decisión, transformación, creación de valor: reflexiones compartidas en <span style="color:var(--rose)">LinkedIn</span><img src="assets/linkedin-logo.png" alt="LinkedIn" class="persp-intro-linkedin-logo"> y profundizadas aquí</span> <span class="persp-intro-line">para tomar distancia y entender lo que la <span style="color:var(--rose)">IA</span> cambia realmente en su empresa.</span></p>
 
     <div class="persp-track-outer reveal delay-2" id="perspTrack">
     <div class="persp-track">

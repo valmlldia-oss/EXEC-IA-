@@ -2478,7 +2478,7 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
 }
 .footer-col a.footer-linkedin-btn:hover { border-color: var(--rose); }
 .footer-linkedin-logo { height: 18px; width: auto; display: inline-block; }
-.persp-intro-linkedin-logo { height: .85em; width: auto; display: inline-block; vertical-align: -.1em; margin-left: .15em; }
+.persp-intro-linkedin-logo { height: .85em; width: auto; display: inline-block; vertical-align: -.1em; margin-left: .15em; margin-right: .1em; }
 
 .footer-rule { border: none; border-top: 1px solid rgba(99,59,74,.22); margin: 0; }
 /* Fil conducteur — désactivé (ligne fine parasite sur le bord gauche). */
@@ -7546,3 +7546,42 @@ body.cookie-modal-open { overflow: hidden; }
 /* Groupe de mots gardé sur une seule ligne sur grand écran, libre sur mobile (guide AI Act, frise) */
 .nowrap-desk { white-space: nowrap; }
 @media (max-width: 700px) { .nowrap-desk { white-space: normal; } }
+
+/* À propos (FR/EN/ES) : section Perspectives resserrée pour que les flèches du carrousel restent visibles à l'écran */
+.persp-compact .section-title { margin-bottom: 14px !important; }
+.persp-compact .persp-intro { margin-bottom: 8px !important; }
+.persp-compact .persp-card { padding-bottom: 8px; }
+.persp-compact .persp-card-read { padding-top: 2px; }
+.persp-compact .agents-arrows { margin-top: -12px; }
+#perspectives.persp-compact > .about-cta-sep { margin-bottom: calc(var(--section-gap) + 9px); }
+/* Témoignages (FR/EN/ES) : pastille et auteur visibles, citation dépliable
+   (texte présent dans le HTML, lisible par les robots). */
+.testi-grid > .testi > .testi-author { margin-top: 18px; }
+.testi-fold { margin-top: auto; display: flex; flex-direction: column; }
+.testi-fold-toggle {
+  list-style: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  margin-top: 18px; padding-top: 14px;
+  border-top: 1px solid rgba(199,95,98,.22);
+  font-family: var(--sans); font-size: .82rem; font-weight: 500;
+  letter-spacing: .06em; text-transform: uppercase;
+  color: var(--rose);
+}
+.testi-fold-toggle::-webkit-details-marker { display: none; }
+.testi-fold::details-content { flex: 1; display: flex; flex-direction: column; }
+.testi-fold-toggle:focus-visible { outline: 2px solid var(--rose); outline-offset: 4px; border-radius: 4px; }
+.testi-fold-arrow { width: 24px; height: 24px; flex: none; color: var(--rose); transition: transform .3s var(--ease); }
+.testi-fold-toggle:hover .testi-fold-arrow { transform: translateY(2px); }
+.testi-fold[open] .testi-fold-arrow { transform: rotate(180deg); }
+.testi-fold[open] > .testi-fold-toggle { margin-bottom: 16px; }
+.testi--dark .testi-fold-toggle { color: rgba(250,246,242,.85); border-top-color: rgba(250,246,242,.18); }
+@media (min-width: 1025px) {
+  .testi-grid { grid-template-rows: auto auto auto; }
+  .testi-grid > .testi, .testi-grid > .testi--dark { grid-row: span 3; }
+  .testi-grid > .testi > .testi-fold { margin-top: 0; }
+}
+@media (prefers-reduced-motion: reduce) { .testi-fold-arrow { transition: none; } }
+/* Témoignages : avatar ramené à 60px pour que chaque fonction de Sandrine
+   tienne sur sa propre ligne (titres équilibrés entre les trois auteurs). */
+.testi-author .testi-avatar { width: 60px; height: 60px; }
+.testi-author .testi-avatar--initials { font-size: 1.3rem; }
