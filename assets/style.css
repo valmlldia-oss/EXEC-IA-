@@ -1748,7 +1748,7 @@ section { padding: var(--section-gap) 0; }
 .pillar { display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto auto; column-gap: 12px; align-items: center; }
 .pillar-icon { font-size: 1.15rem; color: var(--rose); grid-column: 1; grid-row: 1; margin-bottom: 0; display: flex; align-items: center; }
 .pillar-icon--arrow { display: flex; align-items: center; }
-.pillar h4 { font-family: var(--serif); font-size: 1.36rem; color: var(--plum); margin-bottom: 0; font-weight: 600; line-height: 1.3; grid-column: 2; grid-row: 1; white-space: nowrap; }
+.pillar h4, .pillar h3 { font-family: var(--serif); font-size: 1.36rem; color: var(--plum); margin-bottom: 0; font-weight: 600; line-height: 1.3; grid-column: 2; grid-row: 1; white-space: nowrap; }
 .pillar p { grid-column: 1 / -1; grid-row: 2; margin-top: 8px; }
 .pillar p { font-size: .72rem; color: var(--plum-muted); line-height: 1.62; white-space: normal; }
 .pillar-roi-link {
@@ -3009,12 +3009,12 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   background: var(--plum); border-color: var(--plum);
 }
 .offre-premium:hover { box-shadow: 0 8px 40px rgba(99,59,74,.3); }
-.offre-premium h3 { color: #FAF6F2 !important; }
+.offre-premium h3, .offre-premium .offre-titre-capsule h2 { color: #FAF6F2 !important; }
 .offre-premium .offre-accroche { color: rgba(250,246,242,.65); }
 .offre-premium .offre-format { color: var(--rose); }
 .offre-premium .offre-points li { color: rgba(250,246,242,.85); }
 .offre-premium .offre-points li::before { color: var(--rose); }
-.offre-card h3 {
+.offre-card h3, .offre-card .offre-titre-capsule h2 {
   font-family: var(--serif); font-size: clamp(1.35rem, 1.6vw, 1.65rem);
   color: var(--plum); margin: 0; font-weight: 600; line-height: 1.25;
   text-align: left;
@@ -3036,7 +3036,7 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   padding: 8px 24px;
   text-align: center;
 }
-.offre-titre-capsule h3 { margin: 0; }
+.offre-titre-capsule h3, .offre-titre-capsule h2 { margin: 0; }
 .offre-accroche {
   font-size: .97rem; color: var(--plum);
   font-style: italic; text-align: left;
@@ -4005,7 +4005,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 }
 /* Badges : une seule ligne, plus compacte */
 #expertise .pillars--expertise .pillar { padding: 0 20px; }
-#expertise .pillars--expertise .pillar h4 { font-size: 1.14rem; }
+#expertise .pillars--expertise .pillar h4, #expertise .pillars--expertise .pillar h3 { font-size: 1.14rem; }
 #expertise .pillars--expertise .pillar-icon svg { width: 28px; height: 19px; }
 #expertise .cards-grid { gap: 16px; }
 #expertise .xcard { padding: 13px 22px; }

@@ -28,7 +28,7 @@
         "name": "Rumbo IA",
         "serviceType": "Taller de priorización de IA para directivos y comités de dirección",
         "provider": { "@id": "https://exec-ia.ai/#organization" },
-        "areaServed": ["FR", "BE", "CH"],
+        "areaServed": [{"@type": "AdministrativeArea", "name": "Île-de-France"}, {"@type": "City", "name": "Paris"}, "FR", "BE", "CH"],
         "offers": [
           { "@type": "Offer", "name": "Rumbo IA — individual", "price": "910", "priceCurrency": "EUR", "priceSpecification": { "@type": "PriceSpecification", "valueAddedTaxIncluded": false } },
           { "@type": "Offer", "name": "Rumbo IA — comité de dirección (hasta 6 personas)", "price": "1490", "priceCurrency": "EUR", "priceSpecification": { "@type": "PriceSpecification", "valueAddedTaxIncluded": false } }
@@ -40,7 +40,7 @@
         "name": "Sparring Directivo",
         "serviceType": "Acompañamiento estratégico para directivos, 6 sesiones en 3 meses",
         "provider": { "@id": "https://exec-ia.ai/#organization" },
-        "areaServed": ["FR", "BE", "CH"],
+        "areaServed": [{"@type": "AdministrativeArea", "name": "Île-de-France"}, {"@type": "City", "name": "Paris"}, "FR", "BE", "CH"],
         "offers": { "@type": "Offer", "price": "3910", "priceCurrency": "EUR", "priceSpecification": { "@type": "PriceSpecification", "valueAddedTaxIncluded": false } }
       },
       {
@@ -49,7 +49,7 @@
         "name": "Transformación IA",
         "serviceType": "Proyecto acotado de transformación con IA, de 3 a 6 meses",
         "provider": { "@id": "https://exec-ia.ai/#organization" },
-        "areaServed": ["FR", "BE", "CH"],
+        "areaServed": [{"@type": "AdministrativeArea", "name": "Île-de-France"}, {"@type": "City", "name": "Paris"}, "FR", "BE", "CH"],
         "offers": { "@type": "Offer", "priceCurrency": "EUR", "priceSpecification": { "@type": "UnitPriceSpecification", "minPrice": "6910", "priceCurrency": "EUR", "valueAddedTaxIncluded": false } }
       },
       {
@@ -479,6 +479,17 @@ box-shadow: 0 14px 34px rgba(99,59,74,.05);
 0%,100% { opacity:1; text-shadow: 0 0 4px rgba(201,168,76,.5); }
 50%      { opacity:.75; text-shadow: 0 0 12px rgba(201,168,76,1), 0 0 24px rgba(201,168,76,.4); }
 }
+.pillar{
+background: var(--white); border-radius: 14px; padding: 12px 16px;
+border-left: 3px solid transparent;
+box-shadow: 0 2px 12px rgba(99,59,74,.06);
+transition: border-color .25s, box-shadow .25s;
+}
+.pillar:hover{ border-color: var(--rose); box-shadow: 0 6px 28px rgba(99,59,74,.1); }
+.pillar{ display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto auto; column-gap: 12px; align-items: center; }
+.pillar h4, .pillar h3{ font-family: var(--serif); font-size: 1.36rem; color: var(--plum); margin-bottom: 0; font-weight: 600; line-height: 1.3; grid-column: 2; grid-row: 1; white-space: nowrap; }
+.pillar p{ grid-column: 1 / -1; grid-row: 2; margin-top: 8px; }
+.pillar p{ font-size: .72rem; color: var(--plum-muted); line-height: 1.62; white-space: normal; }
 .tl-expertise-group{
 position: relative;
 margin: 4px 0 20px 34px;
@@ -867,7 +878,7 @@ transition: box-shadow .25s, transform .25s;
 background: var(--ivory); border-color: rgba(199,95,98,.22);
 }
 .offre-card--ivory:hover{ box-shadow: 0 6px 28px rgba(199,95,98,.15); border-color: rgba(199,95,98,.38); }
-.offre-card h3{
+.offre-card h3, .offre-card .offre-titre-capsule h2{
 font-family: var(--serif); font-size: clamp(1.35rem, 1.6vw, 1.65rem);
 color: var(--plum); margin: 0; font-weight: 600; line-height: 1.25;
 text-align: left;
@@ -886,7 +897,7 @@ border-radius: 20px;
 padding: 8px 24px;
 text-align: center;
 }
-.offre-titre-capsule h3{ margin: 0; }
+.offre-titre-capsule h3, .offre-titre-capsule h2{ margin: 0; }
 .offre-accroche{
 font-size: .97rem; color: var(--plum);
 font-style: italic; text-align: left;
@@ -1417,7 +1428,7 @@ line-height: 1.65;
 grid-template-columns: 1fr;
 gap: 44px;
 }.newsletter-section{ padding: 20px 0; }}
-@media (max-width: 1024px){.nav-links{ gap: 18px; }.nav-links a{ font-size: .72rem; }}
+@media (max-width: 1024px){.nav-links{ gap: 18px; }.nav-links a{ font-size: .72rem; }.pillar{ flex: 1 1 calc(50% - 8px); }}
 @media (max-width: 768px){html{ overflow-x: clip !important; }body{ overflow-x: hidden !important; max-width: 100vw; }*, *::before, *::after{ max-width: 100% !important; box-sizing: border-box; }.hero-tagline, .hero-sub, .hero-sub2, .testi-intro,
 .ia-perf-stat-label, .roi-intro, .offre-decouverte-btn,
 .agents-cta-title, .xcard-tag, .tl-date, .pillar p,
@@ -1430,8 +1441,8 @@ border-bottom: 1px solid rgba(99,59,74,.1);
 box-shadow: 0 8px 32px rgba(99,59,74,.1);
 }.nav-links.open a{ font-size: .9rem; max-width: none !important; }.nav-langs{ gap: 4px; }.nav-lang{ padding: 12px 10px; font-size: .65rem !important; min-height: 44px; display: inline-flex; align-items: center; }section{ padding: var(--section-gap) 0; overflow: hidden; }.wrap{ padding: 0 20px; }.section-title{ font-size: clamp(1.6rem, 5.5vw, 2.2rem); margin-bottom: 32px; }.offres-section-title{ font-size: clamp(1.8rem, 6vw, 2.4rem) !important; }.offres-subtitle{ font-size: 1rem; }.ia-performance-section .section-title,
 .ce-que-section .section-title,
-.parcours-header-text .section-title{ font-size: clamp(1.7rem, 6vw, 2.2rem) !important; }.ss-num{ font-size: 2.42rem; }.roi-intro{ font-size: 1rem; }.roi-card{ padding: 20px 16px; }.roi-outputs{ grid-template-columns: 1fr; }.offres-grid{ grid-template-columns: 1fr; gap: 16px; }.offre-card{ padding: 24px 18px; }.offre-decouverte{ flex-direction: column; gap: 20px; }.offre-decouverte-btn{ text-align: center; white-space: nowrap !important; }.offre-card .btn{ word-break: break-word; text-align: center !important; justify-content: center !important; display: flex !important; width: 100% !important; box-sizing: border-box !important; }.agent-card{ min-width: 82vw; }.newsletter-inner{ padding: 0; }footer{ padding: 40px 20px; }.footer-copy{ font-size: .7rem; word-break: break-word; line-height: 2; }}
-@media (min-width: 640px) and (max-width: 768px){.offres-grid{ grid-template-columns: repeat(2, 1fr) !important; }.offre-card .btn{ width: 100% !important; }}
+.parcours-header-text .section-title{ font-size: clamp(1.7rem, 6vw, 2.2rem) !important; }.ss-num{ font-size: 2.42rem; }.roi-intro{ font-size: 1rem; }.roi-card{ padding: 20px 16px; }.roi-outputs{ grid-template-columns: 1fr; }.pillar{ grid-template-columns: 36px 1fr !important; flex: 0 0 auto !important; min-height: 0 !important; }.offres-grid{ grid-template-columns: 1fr; gap: 16px; }.offre-card{ padding: 24px 18px; }.offre-decouverte{ flex-direction: column; gap: 20px; }.offre-decouverte-btn{ text-align: center; white-space: nowrap !important; }.offre-card .btn{ word-break: break-word; text-align: center !important; justify-content: center !important; display: flex !important; width: 100% !important; box-sizing: border-box !important; }.agent-card{ min-width: 82vw; }.newsletter-inner{ padding: 0; }footer{ padding: 40px 20px; }.footer-copy{ font-size: .7rem; word-break: break-word; line-height: 2; }}
+@media (min-width: 640px) and (max-width: 768px){.pillar{ flex: 1 1 calc(50% - 8px) !important; min-width: 0; }.offres-grid{ grid-template-columns: repeat(2, 1fr) !important; }.offre-card .btn{ width: 100% !important; }}
 @media (max-width: 480px){.offre-card{ padding: 22px 18px; }.section-title{ font-size: clamp(1.6rem, 5.5vw, 2.2rem); }.nav-logo-full{ height: 42px; }}
 .ce-que-section{ padding: var(--section-gap) 0 var(--section-gap) 48px; background: var(--white); }
 .accord-btn{
@@ -1875,7 +1886,7 @@ color: var(--plum); margin: 14px 0 0;
     <div class="offre-dg reveal delay-2">
       <div class="offre-dg-head">
         <span class="eyebrow offre-dg-eyebrow">Ofertas</span>
-        <h3 class="offre-dg-title">Dirección general</h3>
+        <h2 class="offre-dg-title">Dirección general</h2>
       </div>
 
       <div class="offres-grid">
@@ -1883,7 +1894,7 @@ color: var(--plum); margin: 14px 0 0;
         <!-- 01 -->
         <div class="offre-card offre-card--ivory reveal delay-1">
           <div class="offre-niveau">Nivel I &nbsp;·&nbsp; <strong>Clarifique</strong></div>
-          <div class="offre-titre-capsule"><h3>Rumbo IA</h3></div>
+          <div class="offre-titre-capsule"><h2>Rumbo IA</h2></div>
           <p class="offre-accroche">Identifique dónde la <span style="color:var(--rose)">IA</span> creará más valor y fije sus prioridades.</p>
           <ul class="offre-points">
             <li>Mapa de los usos <span style="color:var(--rose)">IA</span> prioritarios.</li>
@@ -1898,7 +1909,7 @@ color: var(--plum); margin: 14px 0 0;
         <!-- 02 -->
         <div class="offre-card offre-card--ivory reveal delay-2">
           <div class="offre-niveau">Nivel II &nbsp;·&nbsp; <strong>Decida a largo plazo</strong></div>
-          <div class="offre-titre-capsule"><h3>Sparring Directivo</h3></div>
+          <div class="offre-titre-capsule"><h2>Sparring Directivo</h2></div>
           <p class="offre-accroche">Dirija sus decisiones de <span style="color:var(--rose)">IA</span> a largo plazo con un socio de confianza.</p>
           <ul class="offre-points">
             <li>Diario de decisiones.</li>
@@ -1914,7 +1925,7 @@ color: var(--plum); margin: 14px 0 0;
         <div class="offre-card offre-card--ivory offre-card--reference reveal delay-3">
           <span class="offre-badge">Acompañamiento de referencia</span>
           <div class="offre-niveau">Nivel III &nbsp;·&nbsp; <strong>Transforme</strong></div>
-          <div class="offre-titre-capsule"><h3>Transformación IA</h3></div>
+          <div class="offre-titre-capsule"><h2>Transformación IA</h2></div>
           <p class="offre-accroche">Convierta su estrategia de <span style="color:var(--rose)">IA</span> en una hoja de ruta operativa.</p>
           <ul class="offre-points">
             <li>Hoja de ruta <span style="color:var(--rose)">IA</span>.</li>
@@ -1930,7 +1941,7 @@ color: var(--plum); margin: 14px 0 0;
       </div>
 
       <div class="offre-livrable reveal">
-        <h3 class="offre-livrable-title">Con qué se queda</h3>
+        <h2 class="offre-livrable-title">Con qué se queda</h2>
         <ul class="offre-livrable-list">
           <li>Una visión clara de las oportunidades de <span style="color:var(--rose)">IA</span> que realmente crean valor.</li>
           <li>Prioridades clarificadas: qué lanzar, aplazar o abandonar.</li>
@@ -1944,17 +1955,17 @@ color: var(--plum); margin: 14px 0 0;
         <div class="offre-approche-steps">
           <div class="offre-approche-step reveal delay-1">
             <span class="offre-approche-num">01</span>
-            <h4 class="offre-approche-step-title">Clarificar</h4>
+            <h3 class="offre-approche-step-title">Clarificar</h3>
             <p class="offre-approche-step-desc">Sus retos, sus limitaciones y sus prioridades.</p>
           </div>
           <div class="offre-approche-step reveal delay-2">
             <span class="offre-approche-num">02</span>
-            <h4 class="offre-approche-step-title">Arbitrar</h4>
+            <h3 class="offre-approche-step-title">Arbitrar</h3>
             <p class="offre-approche-step-desc">Las oportunidades según su valor real, su impacto y su viabilidad.</p>
           </div>
           <div class="offre-approche-step reveal delay-3">
             <span class="offre-approche-num">03</span>
-            <h4 class="offre-approche-step-title">Decidir</h4>
+            <h3 class="offre-approche-step-title">Decidir</h3>
             <p class="offre-approche-step-desc">Una trayectoria clara, asumida y alineada con sus objetivos.</p>
           </div>
         </div>
@@ -2053,7 +2064,7 @@ color: var(--plum); margin: 14px 0 0;
     </div>
 
     <div class="offres-orientation reveal">
-      <h3 class="offres-orientation-title">¿Por dónde empezar?</h3>
+      <h2 class="offres-orientation-title">¿Por dónde empezar?</h2>
       <div class="offres-orientation-grid">
         <button type="button" class="offres-orientation-card" data-target="dg">
           <span class="ooc-title">Estructurar mi enfoque de IA</span>
