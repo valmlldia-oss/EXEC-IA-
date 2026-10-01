@@ -6452,3 +6452,5 @@ background: var(--rose); flex-shrink: 0;
 .verbes-track { animation: none; width: auto; justify-content: center; }
 .verbes-serie + .verbes-serie { display: none; }
 }
+.nowrap-desk { white-space: nowrap; }
+@media (max-width: 700px) { .nowrap-desk { white-space: normal; } }

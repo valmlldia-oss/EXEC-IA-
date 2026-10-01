@@ -7542,3 +7542,7 @@ body.cookie-modal-open { overflow: hidden; }
   .verbes-track { animation: none; width: auto; justify-content: center; }
   .verbes-serie + .verbes-serie { display: none; }
 }
+
+/* Groupe de mots gardé sur une seule ligne sur grand écran, libre sur mobile (guide AI Act, frise) */
+.nowrap-desk { white-space: nowrap; }
+@media (max-width: 700px) { .nowrap-desk { white-space: normal; } }
