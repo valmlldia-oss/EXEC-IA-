@@ -239,6 +239,17 @@ transform: translateY(-2px);
 }
 .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 24px; }
 @media (max-width: 900px){.ce-que-section{ padding: var(--section-gap) 0; }}
+.persp-track-outer{
+overflow-x: auto; overflow-y: hidden;
+scroll-snap-type: x mandatory;
+padding: .25rem 0 .5rem;
+cursor: grab;
+scroll-padding-left: 1.5rem;
+max-width: 100vw;
+scrollbar-width: none;
+}
+.persp-track-outer:active{ cursor: grabbing; }
+.persp-track-outer::-webkit-scrollbar{ display: none; }
 .persp-track{
 display: flex; gap: 1.25rem;
 width: max-content;
@@ -261,7 +272,7 @@ transition: transform .3s, box-shadow .3s;
 gap: 16px;
 width: max-content;
 padding-right: 0;
-}.persp-card{ width: 270px; flex: 0 0 auto; min-width: 0; }}
+}.persp-track-outer{ overflow-x: auto; scroll-snap-type: x mandatory; padding-top: .6rem; container-type: inline-size; scroll-padding-left: 0; }.persp-card{ width: 270px; flex: 0 0 auto; min-width: 0; }}
 @supports (width: 1cqw){@media (min-width: 1160px){.persp-card{ width: calc((100cqw - 48px) / 4); }}}
 @media (max-width: 640px){.persp-card{ width: 82vw; }}
 .article-page{ padding-top: calc(var(--nav-h) + 32px); padding-bottom: clamp(24px, 3vw, 40px); }
@@ -433,17 +444,6 @@ box-shadow: 0 14px 34px rgba(99,59,74,.05);
 0%,100% { opacity:1; text-shadow: 0 0 4px rgba(201,168,76,.5); }
 50%      { opacity:.75; text-shadow: 0 0 12px rgba(201,168,76,1), 0 0 24px rgba(201,168,76,.4); }
 }
-.pillar{
-background: var(--white); border-radius: 14px; padding: 12px 16px;
-border-left: 3px solid transparent;
-box-shadow: 0 2px 12px rgba(99,59,74,.06);
-transition: border-color .25s, box-shadow .25s;
-}
-.pillar:hover{ border-color: var(--rose); box-shadow: 0 6px 28px rgba(99,59,74,.1); }
-.pillar{ display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto auto; column-gap: 12px; align-items: center; }
-.pillar h4, .pillar h3{ font-family: var(--serif); font-size: 1.36rem; color: var(--plum); margin-bottom: 0; font-weight: 600; line-height: 1.3; grid-column: 2; grid-row: 1; white-space: nowrap; }
-.pillar p{ grid-column: 1 / -1; grid-row: 2; margin-top: 8px; }
-.pillar p{ font-size: .72rem; color: var(--plum-muted); line-height: 1.62; white-space: normal; }
 .tl-expertise-group{
 position: relative;
 margin: 4px 0 20px 34px;
@@ -640,10 +640,6 @@ display: inline-block;
 50%       { transform: translateY(4px); }
 }
 .offre-dg{ margin-top: 8px; }
-.offre-dg-title{
-font-family: var(--serif); font-weight: 600; color: var(--plum);
-font-size: clamp(1.7rem, 3vw, 2.2rem); margin: 0;
-}
 .offres-cat-item{
 border-top: 1.5px solid rgba(99,59,74,.18);
 }
@@ -655,10 +651,6 @@ text-align: left; border-radius: 8px; transition: background .2s;
 }
 .offres-cat-btn:hover{ background: rgba(99,59,74,.04); }
 .offres-cat-body{ overflow: hidden; max-height: 0; transition: max-height .45s var(--ease); }
-.offres-orientation-title{
-font-family: var(--serif); font-size: clamp(1.9712rem, 2.9568vw, 2.5872rem); font-weight: 600;
-color: var(--plum); margin: 0 0 28px;
-}
 .offres-orientation-card{
 display: flex; flex-direction: column; align-items: flex-start; gap: 8px;
 background: var(--white); border: 1px solid rgba(99,59,74,.14);
@@ -673,28 +665,6 @@ box-shadow: 0 16px 36px rgba(199,95,98,.14);
 transform: translateY(-3px);
 }
 .offres-orientation-card:focus-visible{ outline: 2px solid var(--rose); outline-offset: 3px; }
-.offre-titre-capsule{
-align-self: center;
-background: transparent;
-border: 1.5px solid rgba(99,59,74,.35);
-border-radius: 20px;
-padding: 8px 24px;
-text-align: center;
-}
-.offre-titre-capsule h3, .offre-titre-capsule h2{ margin: 0; }
-.offre-livrable-title{
-font-family: var(--serif);
-font-size: clamp(1.9712rem, 2.9568vw, 2.5872rem);
-font-weight: 600;
-color: var(--plum);
-margin: 0 0 22px;
-}
-.offre-approche-step-title{
-font-family: var(--serif);
-font-size: clamp(1.5rem, 2vw, 1.9rem);
-font-weight: 600; color: var(--plum);
-margin: 6px 0 10px;
-}
 @keyframes fadein{
 from { opacity: 0; }
 to   { opacity: 1; }
@@ -762,6 +732,18 @@ position: relative;
 z-index: 1;
 height: auto;
 }
+.agents-track-outer{
+overflow-x: auto;
+overflow-y: hidden;
+scroll-snap-type: x mandatory;
+padding: .25rem 0 .5rem;
+cursor: grab;
+scroll-padding-left: 1.5rem;
+max-width: 100vw;
+}
+.agents-track-outer:active{ cursor: grabbing; }
+.agents-track-outer{ scrollbar-width: none; }
+.agents-track-outer::-webkit-scrollbar{ display: none; }
 .agents-track{
 display: flex;
 gap: 1.25rem;
@@ -803,7 +785,7 @@ object-position: center;
 .nl-box-form{
 display: none;
 }
-@media (max-width: 1024px){.nav-links{ gap: 18px; }.nav-links a{ font-size: .72rem; }.pillar{ flex: 1 1 calc(50% - 8px); }}
+@media (max-width: 1024px){.nav-links{ gap: 18px; }.nav-links a{ font-size: .72rem; }.agents-track-outer{ padding: .5rem 0 1rem; scroll-padding-left: 16px; }}
 @media (max-width: 768px){html{ overflow-x: clip !important; }body{ overflow-x: hidden !important; max-width: 100vw; }*, *::before, *::after{ max-width: 100% !important; box-sizing: border-box; }.hero-tagline, .hero-sub, .hero-sub2, .testi-intro,
 .ia-perf-stat-label, .roi-intro, .offre-decouverte-btn,
 .agents-cta-title, .xcard-tag, .tl-date, .pillar p,
@@ -814,8 +796,7 @@ background: rgba(252,252,250,.98); backdrop-filter: blur(20px);
 padding: 24px 24px 32px; gap: 20px; z-index: 998;
 border-bottom: 1px solid rgba(99,59,74,.1);
 box-shadow: 0 8px 32px rgba(99,59,74,.1);
-}.nav-links.open a{ font-size: .9rem; max-width: none !important; }.nav-langs{ gap: 4px; }.nav-lang{ padding: 12px 10px; font-size: .65rem !important; min-height: 44px; display: inline-flex; align-items: center; }.wrap{ padding: 0 20px; }.ss-num{ font-size: 2.42rem; }.pillar{ grid-template-columns: 36px 1fr !important; flex: 0 0 auto !important; min-height: 0 !important; }.agent-card{ min-width: 82vw; }footer{ padding: 40px 20px; }.footer-copy{ font-size: .7rem; word-break: break-word; line-height: 2; }}
-@media (min-width: 640px) and (max-width: 768px){.pillar{ flex: 1 1 calc(50% - 8px) !important; min-width: 0; }}
+}.nav-links.open a{ font-size: .9rem; max-width: none !important; }.nav-langs{ gap: 4px; }.nav-lang{ padding: 12px 10px; font-size: .65rem !important; min-height: 44px; display: inline-flex; align-items: center; }.wrap{ padding: 0 20px; }.ss-num{ font-size: 2.42rem; }.agent-card{ min-width: 82vw; }footer{ padding: 40px 20px; }.footer-copy{ font-size: .7rem; word-break: break-word; line-height: 2; }}
 @media (max-width: 480px){.nav-logo-full{ height: 42px; }}
 .ce-que-section{ padding: var(--section-gap) 0 var(--section-gap) 48px; background: var(--white); }
 .accord-btn{
@@ -936,6 +917,7 @@ box-shadow: 0 12px 32px rgba(99,59,74,.25);
 }.nav-links.open a{ color: #FAF6F2 !important; font-size: 1rem; max-width: none !important; }.nav-links.open a::after{ background: #C75F62; }}
 @media (max-width: 1260px){.footer-brand .footer-tag, .footer-brand .footer-mention-ia{ white-space: normal; }}
 @media (max-width: 1100px){.piliers{ grid-template-columns: repeat(3, minmax(0, 1fr)); }.pilier{ min-width: 0; }.pilier *, .newsletter-content *, .nl-box *{ overflow-wrap: anywhere; }}
+@media (max-width: 1100px){.persp-track-outer{ max-width: 100%; }}
 .article-book-folio[data-n]::before{ content: attr(data-n); }
 .article-more-title{ margin: 44px 0 0; }
 .article-more-lead{ font-family: var(--sans); font-size: .98rem; color: var(--plum-muted); margin: 8px 0 22px 24px; }
@@ -952,6 +934,7 @@ body.art-justify .article-book .article-intro p.art-enum{ text-align: left; }
 .footer-col a.footer-instagram-btn{ margin-top: -6px; }
 .footer-bottom{ padding-top: 2px; padding-bottom: 4px; }
 .footer-legal a{ padding-top: 4px; padding-bottom: 4px; }
+.nw{ white-space: nowrap; }
 .art-ia{ color: var(--rose); }
 .article-book .article-qlist.article-qlist--filets{ border-left: none; padding: 12px 0; margin: 26px 0 8px; border-top: 1px solid rgba(217,201,195,1); border-bottom: 1px solid rgba(217,201,195,1); text-align: center; }
 .article-qlist--filets p{ text-align: center !important; text-align-last: center !important; }
@@ -1027,6 +1010,8 @@ font-family: var(--sans); font-size: .76rem; font-weight: 600;
 letter-spacing: .18em; text-transform: uppercase;
 color: var(--plum); margin: 14px 0 0;
 }
+@media (max-width: 760px){.piliers{ grid-template-columns: 1fr; gap: 16px; }.pilier{ padding: 24px 22px; }.pilier *, .pilier-title, .pilier-sub, .pilier-btn{ overflow-wrap: normal; word-break: normal; hyphens: none; }}
+@media (max-width: 760px){.article-book-col .nw, .article-book-col .art-chip{ white-space: normal; }.article-book-col, .article-book-col > *{ min-width: 0; max-width: 100%; }}
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Comment savoir si une décision peut être déléguée ?", "acceptedAnswer": {"@type": "Answer", "text": "Posez-vous une question : si la décision est mauvaise, peut-on revenir en arrière facilement ? Si oui, et si les conséquences restent limitées, vous pouvez la confier à l’IA sans souci. Classer des demandes, proposer un créneau de rendez-vous, préparer une première synthèse : on corrige vite, et personne n’est pénalisé. Si non, parce que la décision est difficile à défaire ou que ses effets dépassent de loin celui qui l’a prise, gardez-la entre des mains humaines. Ce n’est pas de la prudence excessive. C’est proportionné au risque. Dans le doute, demandez-vous aussi combien de temps il faudrait pour s’apercevoir d’une erreur. Une erreur vue en une minute n’appelle pas la même vigilance qu’une erreur découverte six mois plus tard par un client."}}, {"@type": "Question", "name": "Quel cas réel illustre les limites de la délégation à l’IA ?", "acceptedAnswer": {"@type": "Answer", "text": "En février 2024, un tribunal canadien a tranché une affaire qui dit tout. Un client d’Air Canada avait obtenu du chatbot de la compagnie une promesse de remboursement. Problème : cette promesse ne correspondait pas à la politique de l’entreprise. Devant le tribunal, Air Canada a soutenu que son chatbot était « une entité juridique distincte, responsable de ses propres actes ». Le tribunal a balayé l’argument : une entreprise répond de ce que disent tous ses agents, humains ou automatisés. Air Canada a dû honorer la promesse. Ce qui me frappe dans cette histoire, ce n’est pas la technique. C’est que personne, dans l’entreprise, n’était chargé de vérifier ce que l’outil pouvait promettre au nom de la compagnie. La limite n’existait pas avant l’incident. Le tribunal l’a fixée à sa place, et pas dans le sens le plus favorable."}}, {"@type": "Question", "name": "Où placer la frontière entre l’IA et la décision humaine ?", "acceptedAnswer": {"@type": "Answer", "text": "L’IA éclaire la décision. Le dirigeant tranche. Cette limite ne se négocie pas au cas par cas : elle se fixe une fois, à froid, avant qu’une urgence ne vous oblige à improviser. Ce n’est pas tourner le dos à l’IA. C’est reconnaître une chose simple : un algorithme, aussi bon soit-il, ne sera jamais celui qui se tiendra devant l’entreprise pour assumer ce que la décision a produit. Plus l’IA progressera, plus savoir quoi lui confier, et quoi ne jamais lui confier, deviendra une compétence de dirigeant. J’en suis convaincue."}}, {"@type": "Question", "name": "Cette frontière est-elle fixe ?", "acceptedAnswer": {"@type": "Answer", "text": "Non, et c’est une bonne nouvelle. Une décision qui demandait hier un jugement humain peut, avec le temps et des preuves, passer du côté de ce qu’un outil fait bien tout seul : trier un premier niveau de dossiers, repérer des anomalies qui reviennent, préparer une synthèse. Ce qui ne bouge pas, c’est l’obligation de la revoir régulièrement, au lieu de la fixer une fois pour toutes et de l’oublier. Une limite que personne n’a relue depuis deux ans décrit souvent un monde qui n’existe plus. La question que je vous poserais n’est donc pas « faites-vous confiance à l’IA ? ». C’est plutôt : « qui, chez vous, a clairement le droit de dire non à ce que l’IA recommande ? » Si la réponse n’est pas claire, la limite n’existe pas encore. On la suppose, c’est tout."}}, {"@type": "Question", "name": "Comment formaliser cette frontière ?", "acceptedAnswer": {"@type": "Answer", "text": "Une liste courte suffit : les familles de décisions que l’entreprise refuse de confier à l’IA, quelle que soit la qualité de l’outil. Une liste écrite, relue une fois par an, vaut mieux qu’un grand principe que chacun interprète à sa façon. L’écrire a un autre mérite : ça oblige à trancher des désaccords qui, restés dans le flou, n’auraient éclaté qu’au pire moment. Une page suffit, avec des exemples concrets : un licenciement, un prix proposé à un client important, un engagement auprès d’un partenaire."}}, {"@type": "Question", "name": "Qui tranche quand l’organisation n’est pas d’accord ?", "acceptedAnswer": {"@type": "Answer", "text": "Une liste ne suffit pas si personne ne sait qui a le dernier mot quand deux personnes de confiance tirent des conclusions opposées. Dans une petite structure, c’est souvent réglé d’office : le dirigeant tranche, et c’est très bien comme ça. Le risque arrive quand l’entreprise grandit, qu’un comité de direction se met en place, et que personne ne redit clairement qui arbitre. La réponse n’a rien de compliqué. Elle doit juste être écrite, connue de tous, et décidée avant le désaccord. Une entreprise qui découvre en pleine crise qu’elle n’a jamais réglé la question la règle dans l’urgence, souvent mal. Parfois, c’est même un outil d’IA qui comble le vide par défaut. C’est exactement ce vide que l’affaire Air Canada a mis en lumière."}}, {"@type": "Question", "name": "Comment documenter une décision prise avec l’aide d’une IA ?", "acceptedAnswer": {"@type": "Answer", "text": "Gardez une trace de trois choses : la question posée, les options étudiées, et la raison de votre choix. Ce petit récit vous permettra de relire la décision plus tard et de comprendre ce qui a pesé. Pas besoin d’en faire un dossier. Quelques lignes écrites sur le moment valent mieux qu’une reconstitution après coup. Un paragraphe dans le compte-rendu de la réunion suffit souvent. Ajoutez une quatrième chose : ce que l’IA avait proposé et que vous n’avez pas retenu. C’est souvent là qu’on voit le vrai jugement. C’est aussi ce qu’un auditeur ou un client vous demandera en premier."}}, {"@type": "Question", "name": "En quoi consiste une supervision humaine réelle ?", "acceptedAnswer": {"@type": "Answer", "text": "Il faut quelqu’un qui relit, à un moment précis, avec le pouvoir de dire non. Relire pour la forme, sans pouvoir arrêter quoi que ce soit, ce n’est pas superviser. C’est signer. La bonne question : chez vous, qui peut refuser une recommandation de l’IA, et dans quelles conditions ? Cette personne doit aussi avoir le temps de le faire. Une validation demandée en fin de journée, sur des dizaines de dossiers, finit toujours en simple clic d’approbation. Si vous voulez une vraie supervision, prévoyez le temps qui va avec."}}, {"@type": "Question", "name": "Comment apprendre aux équipes à challenger une recommandation ?", "acceptedAnswer": {"@type": "Answer", "text": "Donnez-leur trois questions. Sur quoi repose cette recommandation ? Qu’est-ce qui pourrait la rendre fausse ? Que se passe-t-il si on se trompe ? Elles s’apprennent en cinq minutes et marchent pour tout. Avec elles, la réponse de l’IA devient le début de la réflexion, plus sa conclusion. Entraînez-vous sur des cas passés dont vous connaissez la fin. L’équipe voit alors où l’IA se serait trompée, et apprend à repérer ses angles morts sans prendre aucun risque. Au bout de quelques séances, ces questions deviennent un réflexe d’équipe, et plus une consigne."}}, {"@type": "Question", "name": "Quelle place laisser à l’intuition du dirigeant ?", "acceptedAnswer": {"@type": "Answer", "text": "Une vraie place, à condition de la dire. L’intuition, c’est souvent des années d’expérience résumées en une seconde. L’écarter au nom des données serait aussi discutable que la suivre sans regarder les chiffres. L’IA éclaire, l’intuition alerte, et c’est le dirigeant qui tranche, en assumant son choix. Une habitude que j’aime bien : notez votre intuition avant de consulter l’IA. Quelques semaines plus tard, comparez. Vous en apprendrez beaucoup sur la fiabilité de l’une et de l’autre. C’est aussi le meilleur moyen de savoir quand l’écouter."}}], "inLanguage": "fr-FR"}

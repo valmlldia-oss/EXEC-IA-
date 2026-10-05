@@ -239,6 +239,17 @@ transform: translateY(-2px);
 }
 .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 24px; }
 @media (max-width: 900px){.ce-que-section{ padding: var(--section-gap) 0; }}
+.persp-track-outer{
+overflow-x: auto; overflow-y: hidden;
+scroll-snap-type: x mandatory;
+padding: .25rem 0 .5rem;
+cursor: grab;
+scroll-padding-left: 1.5rem;
+max-width: 100vw;
+scrollbar-width: none;
+}
+.persp-track-outer:active{ cursor: grabbing; }
+.persp-track-outer::-webkit-scrollbar{ display: none; }
 .persp-track{
 display: flex; gap: 1.25rem;
 width: max-content;
@@ -261,7 +272,7 @@ transition: transform .3s, box-shadow .3s;
 gap: 16px;
 width: max-content;
 padding-right: 0;
-}.persp-card{ width: 270px; flex: 0 0 auto; min-width: 0; }}
+}.persp-track-outer{ overflow-x: auto; scroll-snap-type: x mandatory; padding-top: .6rem; container-type: inline-size; scroll-padding-left: 0; }.persp-card{ width: 270px; flex: 0 0 auto; min-width: 0; }}
 @supports (width: 1cqw){@media (min-width: 1160px){.persp-card{ width: calc((100cqw - 48px) / 4); }}}
 @media (max-width: 640px){.persp-card{ width: 82vw; }}
 .article-page{ padding-top: calc(var(--nav-h) + 32px); padding-bottom: clamp(24px, 3vw, 40px); }
@@ -427,17 +438,6 @@ box-shadow: 0 14px 34px rgba(99,59,74,.05);
 0%,100% { opacity:1; text-shadow: 0 0 4px rgba(201,168,76,.5); }
 50%      { opacity:.75; text-shadow: 0 0 12px rgba(201,168,76,1), 0 0 24px rgba(201,168,76,.4); }
 }
-.pillar{
-background: var(--white); border-radius: 14px; padding: 12px 16px;
-border-left: 3px solid transparent;
-box-shadow: 0 2px 12px rgba(99,59,74,.06);
-transition: border-color .25s, box-shadow .25s;
-}
-.pillar:hover{ border-color: var(--rose); box-shadow: 0 6px 28px rgba(99,59,74,.1); }
-.pillar{ display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto auto; column-gap: 12px; align-items: center; }
-.pillar h4, .pillar h3{ font-family: var(--serif); font-size: 1.36rem; color: var(--plum); margin-bottom: 0; font-weight: 600; line-height: 1.3; grid-column: 2; grid-row: 1; white-space: nowrap; }
-.pillar p{ grid-column: 1 / -1; grid-row: 2; margin-top: 8px; }
-.pillar p{ font-size: .72rem; color: var(--plum-muted); line-height: 1.62; white-space: normal; }
 .tl-expertise-group{
 position: relative;
 margin: 4px 0 20px 34px;
@@ -634,10 +634,6 @@ display: inline-block;
 50%       { transform: translateY(4px); }
 }
 .offre-dg{ margin-top: 8px; }
-.offre-dg-title{
-font-family: var(--serif); font-weight: 600; color: var(--plum);
-font-size: clamp(1.7rem, 3vw, 2.2rem); margin: 0;
-}
 .offres-cat-item{
 border-top: 1.5px solid rgba(99,59,74,.18);
 }
@@ -649,10 +645,6 @@ text-align: left; border-radius: 8px; transition: background .2s;
 }
 .offres-cat-btn:hover{ background: rgba(99,59,74,.04); }
 .offres-cat-body{ overflow: hidden; max-height: 0; transition: max-height .45s var(--ease); }
-.offres-orientation-title{
-font-family: var(--serif); font-size: clamp(1.9712rem, 2.9568vw, 2.5872rem); font-weight: 600;
-color: var(--plum); margin: 0 0 28px;
-}
 .offres-orientation-card{
 display: flex; flex-direction: column; align-items: flex-start; gap: 8px;
 background: var(--white); border: 1px solid rgba(99,59,74,.14);
@@ -667,28 +659,6 @@ box-shadow: 0 16px 36px rgba(199,95,98,.14);
 transform: translateY(-3px);
 }
 .offres-orientation-card:focus-visible{ outline: 2px solid var(--rose); outline-offset: 3px; }
-.offre-titre-capsule{
-align-self: center;
-background: transparent;
-border: 1.5px solid rgba(99,59,74,.35);
-border-radius: 20px;
-padding: 8px 24px;
-text-align: center;
-}
-.offre-titre-capsule h3, .offre-titre-capsule h2{ margin: 0; }
-.offre-livrable-title{
-font-family: var(--serif);
-font-size: clamp(1.9712rem, 2.9568vw, 2.5872rem);
-font-weight: 600;
-color: var(--plum);
-margin: 0 0 22px;
-}
-.offre-approche-step-title{
-font-family: var(--serif);
-font-size: clamp(1.5rem, 2vw, 1.9rem);
-font-weight: 600; color: var(--plum);
-margin: 6px 0 10px;
-}
 @keyframes fadein{
 from { opacity: 0; }
 to   { opacity: 1; }
@@ -756,6 +726,18 @@ position: relative;
 z-index: 1;
 height: auto;
 }
+.agents-track-outer{
+overflow-x: auto;
+overflow-y: hidden;
+scroll-snap-type: x mandatory;
+padding: .25rem 0 .5rem;
+cursor: grab;
+scroll-padding-left: 1.5rem;
+max-width: 100vw;
+}
+.agents-track-outer:active{ cursor: grabbing; }
+.agents-track-outer{ scrollbar-width: none; }
+.agents-track-outer::-webkit-scrollbar{ display: none; }
 .agents-track{
 display: flex;
 gap: 1.25rem;
@@ -797,7 +779,7 @@ object-position: center;
 .nl-box-form{
 display: none;
 }
-@media (max-width: 1024px){.nav-links{ gap: 18px; }.nav-links a{ font-size: .72rem; }.pillar{ flex: 1 1 calc(50% - 8px); }}
+@media (max-width: 1024px){.nav-links{ gap: 18px; }.nav-links a{ font-size: .72rem; }.agents-track-outer{ padding: .5rem 0 1rem; scroll-padding-left: 16px; }}
 @media (max-width: 768px){html{ overflow-x: clip !important; }body{ overflow-x: hidden !important; max-width: 100vw; }*, *::before, *::after{ max-width: 100% !important; box-sizing: border-box; }.hero-tagline, .hero-sub, .hero-sub2, .testi-intro,
 .ia-perf-stat-label, .roi-intro, .offre-decouverte-btn,
 .agents-cta-title, .xcard-tag, .tl-date, .pillar p,
@@ -808,8 +790,7 @@ background: rgba(252,252,250,.98); backdrop-filter: blur(20px);
 padding: 24px 24px 32px; gap: 20px; z-index: 998;
 border-bottom: 1px solid rgba(99,59,74,.1);
 box-shadow: 0 8px 32px rgba(99,59,74,.1);
-}.nav-links.open a{ font-size: .9rem; max-width: none !important; }.nav-langs{ gap: 4px; }.nav-lang{ padding: 12px 10px; font-size: .65rem !important; min-height: 44px; display: inline-flex; align-items: center; }.wrap{ padding: 0 20px; }.ss-num{ font-size: 2.42rem; }.pillar{ grid-template-columns: 36px 1fr !important; flex: 0 0 auto !important; min-height: 0 !important; }.agent-card{ min-width: 82vw; }footer{ padding: 40px 20px; }.footer-copy{ font-size: .7rem; word-break: break-word; line-height: 2; }}
-@media (min-width: 640px) and (max-width: 768px){.pillar{ flex: 1 1 calc(50% - 8px) !important; min-width: 0; }}
+}.nav-links.open a{ font-size: .9rem; max-width: none !important; }.nav-langs{ gap: 4px; }.nav-lang{ padding: 12px 10px; font-size: .65rem !important; min-height: 44px; display: inline-flex; align-items: center; }.wrap{ padding: 0 20px; }.ss-num{ font-size: 2.42rem; }.agent-card{ min-width: 82vw; }footer{ padding: 40px 20px; }.footer-copy{ font-size: .7rem; word-break: break-word; line-height: 2; }}
 @media (max-width: 480px){.nav-logo-full{ height: 42px; }}
 .ce-que-section{ padding: var(--section-gap) 0 var(--section-gap) 48px; background: var(--white); }
 .accord-btn{
@@ -930,6 +911,7 @@ box-shadow: 0 12px 32px rgba(99,59,74,.25);
 }.nav-links.open a{ color: #FAF6F2 !important; font-size: 1rem; max-width: none !important; }.nav-links.open a::after{ background: #C75F62; }}
 @media (max-width: 1260px){.footer-brand .footer-tag, .footer-brand .footer-mention-ia{ white-space: normal; }}
 @media (max-width: 1100px){.piliers{ grid-template-columns: repeat(3, minmax(0, 1fr)); }.pilier{ min-width: 0; }.pilier *, .newsletter-content *, .nl-box *{ overflow-wrap: anywhere; }}
+@media (max-width: 1100px){.persp-track-outer{ max-width: 100%; }}
 .article-book-folio[data-n]::before{ content: attr(data-n); }
 .article-more-title{ margin: 44px 0 0; }
 .article-more-lead{ font-family: var(--sans); font-size: .98rem; color: var(--plum-muted); margin: 8px 0 22px 24px; }
@@ -951,6 +933,7 @@ body.art-justify .article-book .article-intro p.art-enum{ text-align: left; }
 .footer-col a.footer-instagram-btn{ margin-top: -6px; }
 .footer-bottom{ padding-top: 2px; padding-bottom: 4px; }
 .footer-legal a{ padding-top: 4px; padding-bottom: 4px; }
+.nw{ white-space: nowrap; }
 .art-ia{ color: var(--rose); }
 .article-hashtags{ hyphens: none; -webkit-hyphens: none; overflow-wrap: normal; word-break: keep-all; }
 body.art-justify .article-book .article-intro p, body.art-justify .article-book .article-intro ul.art-list li{ hyphens: auto; -webkit-hyphens: auto; hyphenate-limit-chars: 5 2 2; text-wrap: pretty; }
@@ -1021,6 +1004,8 @@ font-family: var(--sans); font-size: .76rem; font-weight: 600;
 letter-spacing: .18em; text-transform: uppercase;
 color: var(--plum); margin: 14px 0 0;
 }
+@media (max-width: 760px){.piliers{ grid-template-columns: 1fr; gap: 16px; }.pilier{ padding: 24px 22px; }.pilier *, .pilier-title, .pilier-sub, .pilier-btn{ overflow-wrap: normal; word-break: normal; hyphens: none; }}
+@media (max-width: 760px){.article-book-col .nw, .article-book-col .art-chip{ white-space: normal; }.article-book-col, .article-book-col > *{ min-width: 0; max-width: 100%; }}
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Por qué no basta con cambiar el software?", "acceptedAnswer": {"@type": "Answer", "text": "Porque se mantienen los mismos procesos, los mismos roles, las mismas reuniones en las que nadie decide. Resultado: la IA se suma a lo que ya existe. No lo cambia. ¿La señal más segura de que no ha habido transformación? Sigue habiendo las mismas reuniones de validación. Una herramienta nueva que pasa exactamente por el mismo circuito de aprobaciones, con las mismas personas consultadas en el mismo orden, no ha transformado nada. Ha acelerado un eslabón. La cadena sigue igual de larga."}}, {"@type": "Question", "name": "¿Ya nombraron este fenómeno los economistas?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, y desde hace mucho. Ya en 1987, el economista Robert Solow observaba, a propósito de la informatización de las empresas: «se ve la era del ordenador en todas partes, salvo en las estadísticas de productividad». Los investigadores Erik Brynjolfsson y Lorin Hitt mostraron después por qué. La tecnología solo rinde si va acompañada de una inversión equivalente en la organización, a menudo invisible en los presupuestos: revisar los procesos, redistribuir las decisiones, hacer evolucionar los roles. La IA generativa hace exactamente lo mismo, pero más rápido. La herramienta se instala en unas semanas. La organización tarda meses, a veces años, en seguirla, cuando la sigue. Esa distancia es lo que muestra la estimación recogida por RAND: solo un proyecto de cada cinco la superaría con éxito."}}, {"@type": "Question", "name": "¿Qué cambia esto en concreto para el directivo de una pyme?", "acceptedAnswer": {"@type": "Answer", "text": "Una consecuencia muy directa: el presupuesto de un proyecto de IA nunca debería limitarse a la licencia y a la integración técnica. Reserve una parte para el tiempo que pasará con los equipos revisando quién decide qué, una vez que la herramienta esté en marcha. Ese tiempo no aparece en ninguna factura de proveedor. Sin embargo, es lo que decide si su proyecto se une a los cuatro de cada cinco que fracasan, o al quinto que triunfa. Seis meses después del lanzamiento, haga una prueba sencilla. Pida al equipo que describa su forma de trabajar sin mencionar la herramienta. Si la descripción es idéntica a la de antes, con un paso más, no se ha transformado nada. El software ha cambiado. El trabajo, no."}}, {"@type": "Question", "name": "¿Qué tres cosas debe tocar una verdadera transformación con IA?", "acceptedAnswer": {"@type": "Answer", "text": "Si la decisión sigue en el mismo nivel que antes, automatizar solo acelera un cuello de botella que ya existía. Hacer más rápido un paso inútil no lo vuelve útil. Si nadie cambia lo que hace con el tiempo ganado, ese tiempo se llena de otra cosa, sin ningún beneficio para la empresa. Estos tres puntos se comprueban uno a uno: se puede automatizar sin decidir de otra manera, o decidir de otra manera sin que cambie ningún rol. En ambos casos, falta uno para hablar de transformación. Sin estos tres cambios, la empresa vuelve enseguida a sus viejos reflejos, con una herramienta más."}}, {"@type": "Question", "name": "¿En qué orden abordar estos tres puntos?", "acceptedAnswer": {"@type": "Answer", "text": "El orden importa. Primero, quién decide y cuándo: mientras eso no esté claro, nadie sabe qué proceso revisar primero. Después, el proceso. Por último, los roles. Un rol no cambia porque se haya anunciado. Cambia porque el trabajo concreto ha cambiado de forma. Empezar por el final, anunciando que los roles van a cambiar sin haber revisado ni la decisión ni el proceso, rara vez da el resultado esperado. Cambia el discurso, y los resultados siguen igual."}}, {"@type": "Question", "name": "¿Por dónde empezar, en concreto?", "acceptedAnswer": {"@type": "Answer", "text": "Si la respuesta es «nadie», está automatizando lo que ya existe. No transforma nada. Antes de cualquier proyecto de IA, no se pregunte qué hará la herramienta. Pregúntese quién tendrá que decidir de otra manera cuando esté en marcha. Si la respuesta es «nadie», está automatizando lo que existe, no transformando nada. Ese mapa cabe en una página. Precisamente porque es breve, no hay forma de esquivarlo. Hágalo en una hora, con los responsables de los equipos afectados: para cada decisión que toca la herramienta, anote quién la toma hoy, quién la tomará mañana y en qué momento."}}, {"@type": "Question", "name": "¿Cómo saber rápidamente en qué punto está su organización?", "acceptedAnswer": {"@type": "Answer", "text": "Tres preguntas suelen bastar para saber en qué punto está un proyecto de IA. Respóndalas con sinceridad, con el equipo que usa la herramienta a diario, no solo con quien la eligió. La distancia entre ambas respuestas ya es, a menudo, un hallazgo. Si responde que no tres veces, el proyecto tiene muchas probabilidades de unirse a los cuatro de cada cinco que fracasan, según la estimación recogida por RAND, sea cual sea la calidad de la IA elegida. Esta prueba no sustituye a un diagnóstico completo. Pero se hace en diez minutos, sin consultor, y le dice enseguida si el tema merece profundizarse. Es la primera pregunta que yo haría ante un proyecto de IA ya lanzado: no «¿qué herramienta ha elegido?», sino «¿quién, en su empresa, decide de otra manera desde que funciona?»."}}, {"@type": "Question", "name": "¿Cómo implicar a los equipos desde el principio?", "acceptedAnswer": {"@type": "Answer", "text": "Hágales participar en la descripción del problema, antes de hablar de soluciones. Quienes hacen el trabajo conocen los verdaderos puntos de bloqueo, los que ningún organigrama muestra. Una transformación construida con ellos tiene muchas más probabilidades de aplicarse que una transformación anunciada. Invite también a un escéptico declarado. Sus objeciones, escuchadas pronto, cuestan mucho menos que una resistencia descubierta después del lanzamiento. En la práctica: un taller de una hora con cuatro o cinco personas del terreno y una sola pregunta: «¿qué le hace perder más tiempo?»"}}, {"@type": "Question", "name": "¿Cómo saber que una organización ha cambiado de verdad?", "acceptedAnswer": {"@type": "Answer", "text": "Tres señales concretas. Las decisiones las toman otras personas, o en otro momento. Los procesos han cambiado en los hechos. Los roles han evolucionado, y se han abandonado algunas tareas. Si nada de eso se ha movido, la herramienta está instalada, pero la empresa no ha cambiado. Vuelva a hacer la pregunta unos meses después. Un cambio real resiste al tiempo. Un cambio de fachada se borra en cuanto baja la atención. Una prueba sencilla: pregunte a un recién llegado cómo se trabaja aquí. Si describe la antigua manera de hacer, nada ha cambiado de verdad."}}, {"@type": "Question", "name": "¿Qué hacer cuando la transformación se estanca?", "acceptedAnswer": {"@type": "Answer", "text": "Vuelva a la pregunta de partida: ¿qué debía cambiar, y qué lo impide? La respuesta casi siempre es una decisión no tomada, un proceso no revisado o un rol no aclarado. Añadir una herramienta en ese momento agrava el problema. Primero hay que quitar el obstáculo en la organización. Escriba el obstáculo negro sobre blanco, con un responsable y una fecha. Un bloqueo que nadie asume acaba rodeado en lugar de resuelto. Un punto de control cada dos semanas basta para ver si el obstáculo se ha movido."}}, {"@type": "Question", "name": "¿Qué papel tiene el directivo a lo largo del tiempo?", "acceptedAnswer": {"@type": "Answer", "text": "Mantener el rumbo y hacer visibles las decisiones: lo que continúa, lo que se detiene, lo que no se hará. Una transformación dura meses, y la atención del directivo es uno de sus recursos más escasos. Un directivo presente, sin dirigirlo todo, da a la empresa permiso para cambiar. Unos minutos reservados al tema en cada comité de dirección bastan para mantener esa señal encendida. La señal más fuerte sigue siendo el ejemplo: un directivo que aplica él mismo la nueva manera de trabajar vale más que cualquier discurso."}}], "inLanguage": "es-ES"}

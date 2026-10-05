@@ -240,6 +240,17 @@ transform: translateY(-2px);
 }
 .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 24px; }
 @media (max-width: 900px){.ce-que-section{ padding: var(--section-gap) 0; }}
+.persp-track-outer{
+overflow-x: auto; overflow-y: hidden;
+scroll-snap-type: x mandatory;
+padding: .25rem 0 .5rem;
+cursor: grab;
+scroll-padding-left: 1.5rem;
+max-width: 100vw;
+scrollbar-width: none;
+}
+.persp-track-outer:active{ cursor: grabbing; }
+.persp-track-outer::-webkit-scrollbar{ display: none; }
 .persp-track{
 display: flex; gap: 1.25rem;
 width: max-content;
@@ -262,7 +273,7 @@ transition: transform .3s, box-shadow .3s;
 gap: 16px;
 width: max-content;
 padding-right: 0;
-}.persp-card{ width: 270px; flex: 0 0 auto; min-width: 0; }}
+}.persp-track-outer{ overflow-x: auto; scroll-snap-type: x mandatory; padding-top: .6rem; container-type: inline-size; scroll-padding-left: 0; }.persp-card{ width: 270px; flex: 0 0 auto; min-width: 0; }}
 @supports (width: 1cqw){@media (min-width: 1160px){.persp-card{ width: calc((100cqw - 48px) / 4); }}}
 @media (max-width: 640px){.persp-card{ width: 82vw; }}
 .article-page{ padding-top: calc(var(--nav-h) + 32px); padding-bottom: clamp(24px, 3vw, 40px); }
@@ -435,17 +446,6 @@ box-shadow: 0 14px 34px rgba(99,59,74,.05);
 0%,100% { opacity:1; text-shadow: 0 0 4px rgba(201,168,76,.5); }
 50%      { opacity:.75; text-shadow: 0 0 12px rgba(201,168,76,1), 0 0 24px rgba(201,168,76,.4); }
 }
-.pillar{
-background: var(--white); border-radius: 14px; padding: 12px 16px;
-border-left: 3px solid transparent;
-box-shadow: 0 2px 12px rgba(99,59,74,.06);
-transition: border-color .25s, box-shadow .25s;
-}
-.pillar:hover{ border-color: var(--rose); box-shadow: 0 6px 28px rgba(99,59,74,.1); }
-.pillar{ display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto auto; column-gap: 12px; align-items: center; }
-.pillar h4, .pillar h3{ font-family: var(--serif); font-size: 1.36rem; color: var(--plum); margin-bottom: 0; font-weight: 600; line-height: 1.3; grid-column: 2; grid-row: 1; white-space: nowrap; }
-.pillar p{ grid-column: 1 / -1; grid-row: 2; margin-top: 8px; }
-.pillar p{ font-size: .72rem; color: var(--plum-muted); line-height: 1.62; white-space: normal; }
 .tl-expertise-group{
 position: relative;
 margin: 4px 0 20px 34px;
@@ -642,10 +642,6 @@ display: inline-block;
 50%       { transform: translateY(4px); }
 }
 .offre-dg{ margin-top: 8px; }
-.offre-dg-title{
-font-family: var(--serif); font-weight: 600; color: var(--plum);
-font-size: clamp(1.7rem, 3vw, 2.2rem); margin: 0;
-}
 .offres-cat-item{
 border-top: 1.5px solid rgba(99,59,74,.18);
 }
@@ -657,10 +653,6 @@ text-align: left; border-radius: 8px; transition: background .2s;
 }
 .offres-cat-btn:hover{ background: rgba(99,59,74,.04); }
 .offres-cat-body{ overflow: hidden; max-height: 0; transition: max-height .45s var(--ease); }
-.offres-orientation-title{
-font-family: var(--serif); font-size: clamp(1.9712rem, 2.9568vw, 2.5872rem); font-weight: 600;
-color: var(--plum); margin: 0 0 28px;
-}
 .offres-orientation-card{
 display: flex; flex-direction: column; align-items: flex-start; gap: 8px;
 background: var(--white); border: 1px solid rgba(99,59,74,.14);
@@ -675,28 +667,6 @@ box-shadow: 0 16px 36px rgba(199,95,98,.14);
 transform: translateY(-3px);
 }
 .offres-orientation-card:focus-visible{ outline: 2px solid var(--rose); outline-offset: 3px; }
-.offre-titre-capsule{
-align-self: center;
-background: transparent;
-border: 1.5px solid rgba(99,59,74,.35);
-border-radius: 20px;
-padding: 8px 24px;
-text-align: center;
-}
-.offre-titre-capsule h3, .offre-titre-capsule h2{ margin: 0; }
-.offre-livrable-title{
-font-family: var(--serif);
-font-size: clamp(1.9712rem, 2.9568vw, 2.5872rem);
-font-weight: 600;
-color: var(--plum);
-margin: 0 0 22px;
-}
-.offre-approche-step-title{
-font-family: var(--serif);
-font-size: clamp(1.5rem, 2vw, 1.9rem);
-font-weight: 600; color: var(--plum);
-margin: 6px 0 10px;
-}
 @keyframes fadein{
 from { opacity: 0; }
 to   { opacity: 1; }
@@ -764,6 +734,18 @@ position: relative;
 z-index: 1;
 height: auto;
 }
+.agents-track-outer{
+overflow-x: auto;
+overflow-y: hidden;
+scroll-snap-type: x mandatory;
+padding: .25rem 0 .5rem;
+cursor: grab;
+scroll-padding-left: 1.5rem;
+max-width: 100vw;
+}
+.agents-track-outer:active{ cursor: grabbing; }
+.agents-track-outer{ scrollbar-width: none; }
+.agents-track-outer::-webkit-scrollbar{ display: none; }
 .agents-track{
 display: flex;
 gap: 1.25rem;
@@ -805,7 +787,7 @@ object-position: center;
 .nl-box-form{
 display: none;
 }
-@media (max-width: 1024px){.nav-links{ gap: 18px; }.nav-links a{ font-size: .72rem; }.pillar{ flex: 1 1 calc(50% - 8px); }}
+@media (max-width: 1024px){.nav-links{ gap: 18px; }.nav-links a{ font-size: .72rem; }.agents-track-outer{ padding: .5rem 0 1rem; scroll-padding-left: 16px; }}
 @media (max-width: 768px){html{ overflow-x: clip !important; }body{ overflow-x: hidden !important; max-width: 100vw; }*, *::before, *::after{ max-width: 100% !important; box-sizing: border-box; }.hero-tagline, .hero-sub, .hero-sub2, .testi-intro,
 .ia-perf-stat-label, .roi-intro, .offre-decouverte-btn,
 .agents-cta-title, .xcard-tag, .tl-date, .pillar p,
@@ -816,8 +798,7 @@ background: rgba(252,252,250,.98); backdrop-filter: blur(20px);
 padding: 24px 24px 32px; gap: 20px; z-index: 998;
 border-bottom: 1px solid rgba(99,59,74,.1);
 box-shadow: 0 8px 32px rgba(99,59,74,.1);
-}.nav-links.open a{ font-size: .9rem; max-width: none !important; }.nav-langs{ gap: 4px; }.nav-lang{ padding: 12px 10px; font-size: .65rem !important; min-height: 44px; display: inline-flex; align-items: center; }.wrap{ padding: 0 20px; }.ss-num{ font-size: 2.42rem; }.pillar{ grid-template-columns: 36px 1fr !important; flex: 0 0 auto !important; min-height: 0 !important; }.agent-card{ min-width: 82vw; }footer{ padding: 40px 20px; }.footer-copy{ font-size: .7rem; word-break: break-word; line-height: 2; }}
-@media (min-width: 640px) and (max-width: 768px){.pillar{ flex: 1 1 calc(50% - 8px) !important; min-width: 0; }}
+}.nav-links.open a{ font-size: .9rem; max-width: none !important; }.nav-langs{ gap: 4px; }.nav-lang{ padding: 12px 10px; font-size: .65rem !important; min-height: 44px; display: inline-flex; align-items: center; }.wrap{ padding: 0 20px; }.ss-num{ font-size: 2.42rem; }.agent-card{ min-width: 82vw; }footer{ padding: 40px 20px; }.footer-copy{ font-size: .7rem; word-break: break-word; line-height: 2; }}
 @media (max-width: 480px){.nav-logo-full{ height: 42px; }}
 .ce-que-section{ padding: var(--section-gap) 0 var(--section-gap) 48px; background: var(--white); }
 .accord-btn{
@@ -938,6 +919,7 @@ box-shadow: 0 12px 32px rgba(99,59,74,.25);
 }.nav-links.open a{ color: #FAF6F2 !important; font-size: 1rem; max-width: none !important; }.nav-links.open a::after{ background: #C75F62; }}
 @media (max-width: 1260px){.footer-brand .footer-tag, .footer-brand .footer-mention-ia{ white-space: normal; }}
 @media (max-width: 1100px){.piliers{ grid-template-columns: repeat(3, minmax(0, 1fr)); }.pilier{ min-width: 0; }.pilier *, .newsletter-content *, .nl-box *{ overflow-wrap: anywhere; }}
+@media (max-width: 1100px){.persp-track-outer{ max-width: 100%; }}
 .article-book-folio[data-n]::before{ content: attr(data-n); }
 .article-more-title{ margin: 44px 0 0; }
 .article-more-lead{ font-family: var(--sans); font-size: .98rem; color: var(--plum-muted); margin: 8px 0 22px 24px; }
@@ -954,6 +936,7 @@ body.art-justify .article-book .article-intro p.art-enum{ text-align: left; }
 .footer-col a.footer-instagram-btn{ margin-top: -6px; }
 .footer-bottom{ padding-top: 2px; padding-bottom: 4px; }
 .footer-legal a{ padding-top: 4px; padding-bottom: 4px; }
+.nw{ white-space: nowrap; }
 .art-ia{ color: var(--rose); }
 .article-book .article-qlist.article-qlist--filets{ border-left: none; padding: 12px 0; margin: 26px 0 8px; border-top: 1px solid rgba(217,201,195,1); border-bottom: 1px solid rgba(217,201,195,1); text-align: center; }
 .article-qlist--filets p{ text-align: center !important; text-align-last: center !important; }
@@ -1029,6 +1012,8 @@ font-family: var(--sans); font-size: .76rem; font-weight: 600;
 letter-spacing: .18em; text-transform: uppercase;
 color: var(--plum); margin: 14px 0 0;
 }
+@media (max-width: 760px){.piliers{ grid-template-columns: 1fr; gap: 16px; }.pilier{ padding: 24px 22px; }.pilier *, .pilier-title, .pilier-sub, .pilier-btn{ overflow-wrap: normal; word-break: normal; hyphens: none; }}
+@media (max-width: 760px){.article-book-col .nw, .article-book-col .art-chip{ white-space: normal; }.article-book-col, .article-book-col > *{ min-width: 0; max-width: 100%; }}
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why does the ability to choose become strategic as technological possibilities multiply?", "acceptedAnswer": {"@type": "Answer", "text": "Today, with AI, you can try everything. That is exactly the trap: when you test everything, nobody decides anything. To choose, I suggest three questions. 1) Does the use come up often? A tool used every week by several teams weighs more than a spectacular demo done once. 2) Can it be measured? If nobody can say, six months from now, what it changed, it was never tied to a figure leadership tracks. 3) Does it hold without an expert? A use that only works thanks to one person will stop the day that person changes jobs. These three questions come before you invest. Once the money is spent, saying no becomes much harder."}}, {"@type": "Question", "name": "What does this look like in practice?", "acceptedAnswer": {"@type": "Answer", "text": "Picture a sales team using AI to prepare its prospects before the first call. They use it every day. The result can be measured: the conversion rate of that first meeting. The tool keeps running even if the person who set it up leaves. Three questions, three yeses. Now picture an internal chatbot launched to “show the company is ahead of the curve”. Hardly anyone uses it, and no figure is tracked. Three questions, three nos. Want an even quicker test? Ask yourself whether anyone would notice it in a figure leadership already looks at, if this use vanished tomorrow."}}, {"@type": "Question", "name": "How do you put this trade-off in place without adding a new layer?", "acceptedAnswer": {"@type": "Answer", "text": "In an SME, you do not need a committee or a new job for this. One person is enough, often someone already on the team. You give them a clear mission: run every AI project through the three questions before any money goes in. They do not need to be technical. They need to know both sides: the people on the ground who use the tools, and the figures leadership follows. It is often the role a leader’s right hand already plays, without the title. One question to see where you stand: at your company, who can say no to an AI tool that fails the three questions, even if the team loves it? If no name comes to mind, your uses are settling in on their own. Nobody chose them."}}, {"@type": "Question", "name": "How do you tell an individual gain from an outcome?", "acceptedAnswer": {"@type": "Answer", "text": "I sort things into two columns. On one side, what makes a task lighter. On the other, what changes a result. Meeting notes summarised faster? That is a gain for one person. A decision made sooner, a client better prepared before the first call, an error caught before it costs money? Now we are talking about results. The first gain shows up straight away, but nobody remembers it three months later. The second has to be sought out, measured and chosen from the start. It never happens by chance. The same McKinsey report shows an interesting shift. The share of large companies deploying AI agents across the whole organisation, and no longer in a single department, rose from 27% to 40% in one year. To me, these are the companies starting to move beyond individual gains. They chose where to put their effort, instead of letting every team test things in its own corner. For an executive committee, the question becomes: “which use, once chosen and backed, will change a figure we already track?” It comes before choosing the tool. In real life, nobody is well placed to decide alone. The employee who found the clever shortcut has neither the overview nor the authority to extend it. Leadership has the authority. But it rarely has the time to test everything coming up from the field. In between, someone is often missing. Someone who knows the field well enough to spot what is worth it, and knows leadership well enough to tie it to a figure it tracks."}}, {"@type": "Question", "name": "Who should own this trade-off?", "acceptedAnswer": {"@type": "Answer", "text": "Someone whose mission it clearly is. In most companies, the tools are there. So is the goodwill. What is missing is a person in charge of deciding between what comes up from the field and leadership’s priorities. In a large company, that may be a head of transformation. In an SME, it is often the leader, their right hand or the finance director. The title does not matter. What matters is that everyone knows who decides, and that this person is allowed to say no. Without that name, every team keeps its own tools, subscriptions pile up, and nobody knows which ones are worth anything."}}, {"@type": "Question", "name": "Where should you start?", "acceptedAnswer": {"@type": "Answer", "text": "With an inventory. List the AI uses already in place at your company: there are almost always more than you think. Then run each one through the three questions. Most leadership teams then discover they are already paying, without knowing it, for tools that pass none of the tests, while one or two others deserve backing. The inventory often fits into one meeting. The hard part comes after: agreeing to stop a tool everyone got used to, because it fails the test, even if nobody has complained yet."}}, {"@type": "Question", "name": "What does a real case reveal about confusing individual gain with outcome?", "acceptedAnswer": {"@type": "Answer", "text": "The story of Klarna, the Swedish buy-now-pay-later company, says a lot. In February 2024, its chief executive announced that its AI assistant was doing the work of 700 full-time customer service agents, and answering faster. A year later, the company was rehiring human agents. It explained publicly that with AI alone, it could not keep service quality up. The first figure measured a gain: fewer calls, faster answers. It said nothing about what the company tracks day to day: how satisfied and loyal its customers stay over time. That is the whole point. A gain that shows up straight away only becomes a result once it has been checked against the figure leadership already tracks."}}, {"@type": "Question", "name": "How do you link an AI use to a company result?", "acceptedAnswer": {"@type": "Answer", "text": "Follow the thread from the task to the decision. Which task does the tool shorten? How much time does it free up? What is that time used for next? The last question is the one that counts. Without it, the gain stays individual. A simple test: try saying out loud “thanks to this use, we decide or deliver faster what matters to our customers”. If the sentence does not ring true, the use is not yet linked to a result. An example. A tool drafts meeting notes and saves a manager one hour a week. If that hour goes into calling back two waiting clients, the gain becomes a result. If it disappears into emails, nobody will ever see it."}}, {"@type": "Question", "name": "Which indicator should you choose to judge a first use?", "acceptedAnswer": {"@type": "Answer", "text": "Just one, and one everybody understands: the time saved on a precise task, the number of errors avoided, or the response time to a customer. Track five, and nobody looks at any of them. Choose it before the test, never after. Otherwise you always end up picking the figure that confirms what you hoped. Write down the starting point too. Without a figure before the trial, you cannot prove progress afterwards. One week of very simple tracking, even by hand, is enough for that baseline. It is the step most often forgotten, and it is what makes the decision indisputable in committee."}}, {"@type": "Question", "name": "How often should you review your choices?", "acceptedAnswer": {"@type": "Answer", "text": "Often, and without making a big deal of it. Once a quarter is a good rhythm. Tools change fast, so do uses, and a decision made a year ago may no longer match what is happening today. No need for a long committee. A list of uses, what each one brought, and a decision for each: keep, adjust or stop. The simplest way: hook this review onto a meeting that already exists, such as the quarterly budget review. It then no longer depends on anyone’s goodwill, and it does not get dropped when the diary fills up."}}, {"@type": "Question", "name": "What do you tell teams when a use is stopped?", "acceptedAnswer": {"@type": "Answer", "text": "The truth, simply. A team that understands why a tool is being stopped accepts the decision more easily. It will even suggest another solution more readily. Stopping a use is part of the job. It even proves the company is choosing, instead of piling up tools. Remember to thank those who tested it. Their trial taught you something, even if the answer is no. A team that is not penalised for a stopped test will want to try another. That is how a culture of trying takes root, without anyone being afraid of getting it wrong."}}], "inLanguage": "en-US"}

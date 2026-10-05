@@ -6499,3 +6499,14 @@ font-family: var(--sans); font-size: .76rem; font-weight: 600;
 letter-spacing: .18em; text-transform: uppercase;
 color: var(--plum); margin: 14px 0 0;
 }
+@media (max-width: 760px) {
+.piliers { grid-template-columns: 1fr; gap: 16px; }
+.pilier { padding: 24px 22px; }
+.pilier *, .pilier-title, .pilier-sub, .pilier-btn { overflow-wrap: normal; word-break: normal; hyphens: none; }
+.pilier-sub { white-space: normal; }
+.pilier-col { height: 110px; }
+}
+@media (max-width: 760px) {
+.article-book-col .nw, .article-book-col .art-chip { white-space: normal; }
+.article-book-col, .article-book-col > * { min-width: 0; max-width: 100%; }
+}

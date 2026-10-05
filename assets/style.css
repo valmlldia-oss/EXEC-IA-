@@ -7599,3 +7599,20 @@ body.cookie-modal-open { overflow: hidden; }
   letter-spacing: .18em; text-transform: uppercase;
   color: var(--plum); margin: 14px 0 0;
 }
+
+/* À propos (FR/EN/ES) · téléphone : les 3 piliers l'un sous l'autre, mots jamais coupés.
+   Placé en fin de fichier pour passer après la règle 1100 px (3 colonnes). */
+@media (max-width: 760px) {
+  .piliers { grid-template-columns: 1fr; gap: 16px; }
+  .pilier { padding: 24px 22px; }
+  .pilier *, .pilier-title, .pilier-sub, .pilier-btn { overflow-wrap: normal; word-break: normal; hyphens: none; }
+  .pilier-sub { white-space: normal; }
+  .pilier-col { height: 110px; }
+}
+
+/* Articles Perspectives (FR/EN/ES) · téléphone : les groupes « nw » (insécables) et les pastilles
+   longues reviennent à la ligne, sinon le texte dépasse de l'écran et se retrouve coupé. */
+@media (max-width: 760px) {
+  .article-book-col .nw, .article-book-col .art-chip { white-space: normal; }
+  .article-book-col, .article-book-col > * { min-width: 0; max-width: 100%; }
+}

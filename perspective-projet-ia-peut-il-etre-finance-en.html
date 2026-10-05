@@ -240,6 +240,17 @@ transform: translateY(-2px);
 }
 .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 24px; }
 @media (max-width: 900px){.ce-que-section{ padding: var(--section-gap) 0; }}
+.persp-track-outer{
+overflow-x: auto; overflow-y: hidden;
+scroll-snap-type: x mandatory;
+padding: .25rem 0 .5rem;
+cursor: grab;
+scroll-padding-left: 1.5rem;
+max-width: 100vw;
+scrollbar-width: none;
+}
+.persp-track-outer:active{ cursor: grabbing; }
+.persp-track-outer::-webkit-scrollbar{ display: none; }
 .persp-track{
 display: flex; gap: 1.25rem;
 width: max-content;
@@ -262,7 +273,7 @@ transition: transform .3s, box-shadow .3s;
 gap: 16px;
 width: max-content;
 padding-right: 0;
-}.persp-card{ width: 270px; flex: 0 0 auto; min-width: 0; }}
+}.persp-track-outer{ overflow-x: auto; scroll-snap-type: x mandatory; padding-top: .6rem; container-type: inline-size; scroll-padding-left: 0; }.persp-card{ width: 270px; flex: 0 0 auto; min-width: 0; }}
 @supports (width: 1cqw){@media (min-width: 1160px){.persp-card{ width: calc((100cqw - 48px) / 4); }}}
 @media (max-width: 640px){.persp-card{ width: 82vw; }}
 .article-page{ padding-top: calc(var(--nav-h) + 32px); padding-bottom: clamp(24px, 3vw, 40px); }
@@ -428,17 +439,6 @@ box-shadow: 0 14px 34px rgba(99,59,74,.05);
 0%,100% { opacity:1; text-shadow: 0 0 4px rgba(201,168,76,.5); }
 50%      { opacity:.75; text-shadow: 0 0 12px rgba(201,168,76,1), 0 0 24px rgba(201,168,76,.4); }
 }
-.pillar{
-background: var(--white); border-radius: 14px; padding: 12px 16px;
-border-left: 3px solid transparent;
-box-shadow: 0 2px 12px rgba(99,59,74,.06);
-transition: border-color .25s, box-shadow .25s;
-}
-.pillar:hover{ border-color: var(--rose); box-shadow: 0 6px 28px rgba(99,59,74,.1); }
-.pillar{ display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto auto; column-gap: 12px; align-items: center; }
-.pillar h4, .pillar h3{ font-family: var(--serif); font-size: 1.36rem; color: var(--plum); margin-bottom: 0; font-weight: 600; line-height: 1.3; grid-column: 2; grid-row: 1; white-space: nowrap; }
-.pillar p{ grid-column: 1 / -1; grid-row: 2; margin-top: 8px; }
-.pillar p{ font-size: .72rem; color: var(--plum-muted); line-height: 1.62; white-space: normal; }
 .tl-expertise-group{
 position: relative;
 margin: 4px 0 20px 34px;
@@ -635,10 +635,6 @@ display: inline-block;
 50%       { transform: translateY(4px); }
 }
 .offre-dg{ margin-top: 8px; }
-.offre-dg-title{
-font-family: var(--serif); font-weight: 600; color: var(--plum);
-font-size: clamp(1.7rem, 3vw, 2.2rem); margin: 0;
-}
 .offres-cat-item{
 border-top: 1.5px solid rgba(99,59,74,.18);
 }
@@ -650,10 +646,6 @@ text-align: left; border-radius: 8px; transition: background .2s;
 }
 .offres-cat-btn:hover{ background: rgba(99,59,74,.04); }
 .offres-cat-body{ overflow: hidden; max-height: 0; transition: max-height .45s var(--ease); }
-.offres-orientation-title{
-font-family: var(--serif); font-size: clamp(1.9712rem, 2.9568vw, 2.5872rem); font-weight: 600;
-color: var(--plum); margin: 0 0 28px;
-}
 .offres-orientation-card{
 display: flex; flex-direction: column; align-items: flex-start; gap: 8px;
 background: var(--white); border: 1px solid rgba(99,59,74,.14);
@@ -668,28 +660,6 @@ box-shadow: 0 16px 36px rgba(199,95,98,.14);
 transform: translateY(-3px);
 }
 .offres-orientation-card:focus-visible{ outline: 2px solid var(--rose); outline-offset: 3px; }
-.offre-titre-capsule{
-align-self: center;
-background: transparent;
-border: 1.5px solid rgba(99,59,74,.35);
-border-radius: 20px;
-padding: 8px 24px;
-text-align: center;
-}
-.offre-titre-capsule h3, .offre-titre-capsule h2{ margin: 0; }
-.offre-livrable-title{
-font-family: var(--serif);
-font-size: clamp(1.9712rem, 2.9568vw, 2.5872rem);
-font-weight: 600;
-color: var(--plum);
-margin: 0 0 22px;
-}
-.offre-approche-step-title{
-font-family: var(--serif);
-font-size: clamp(1.5rem, 2vw, 1.9rem);
-font-weight: 600; color: var(--plum);
-margin: 6px 0 10px;
-}
 @keyframes fadein{
 from { opacity: 0; }
 to   { opacity: 1; }
@@ -757,6 +727,18 @@ position: relative;
 z-index: 1;
 height: auto;
 }
+.agents-track-outer{
+overflow-x: auto;
+overflow-y: hidden;
+scroll-snap-type: x mandatory;
+padding: .25rem 0 .5rem;
+cursor: grab;
+scroll-padding-left: 1.5rem;
+max-width: 100vw;
+}
+.agents-track-outer:active{ cursor: grabbing; }
+.agents-track-outer{ scrollbar-width: none; }
+.agents-track-outer::-webkit-scrollbar{ display: none; }
 .agents-track{
 display: flex;
 gap: 1.25rem;
@@ -798,7 +780,7 @@ object-position: center;
 .nl-box-form{
 display: none;
 }
-@media (max-width: 1024px){.nav-links{ gap: 18px; }.nav-links a{ font-size: .72rem; }.pillar{ flex: 1 1 calc(50% - 8px); }}
+@media (max-width: 1024px){.nav-links{ gap: 18px; }.nav-links a{ font-size: .72rem; }.agents-track-outer{ padding: .5rem 0 1rem; scroll-padding-left: 16px; }}
 @media (max-width: 768px){html{ overflow-x: clip !important; }body{ overflow-x: hidden !important; max-width: 100vw; }*, *::before, *::after{ max-width: 100% !important; box-sizing: border-box; }.hero-tagline, .hero-sub, .hero-sub2, .testi-intro,
 .ia-perf-stat-label, .roi-intro, .offre-decouverte-btn,
 .agents-cta-title, .xcard-tag, .tl-date, .pillar p,
@@ -809,8 +791,7 @@ background: rgba(252,252,250,.98); backdrop-filter: blur(20px);
 padding: 24px 24px 32px; gap: 20px; z-index: 998;
 border-bottom: 1px solid rgba(99,59,74,.1);
 box-shadow: 0 8px 32px rgba(99,59,74,.1);
-}.nav-links.open a{ font-size: .9rem; max-width: none !important; }.nav-langs{ gap: 4px; }.nav-lang{ padding: 12px 10px; font-size: .65rem !important; min-height: 44px; display: inline-flex; align-items: center; }.wrap{ padding: 0 20px; }.ss-num{ font-size: 2.42rem; }.pillar{ grid-template-columns: 36px 1fr !important; flex: 0 0 auto !important; min-height: 0 !important; }.agent-card{ min-width: 82vw; }footer{ padding: 40px 20px; }.footer-copy{ font-size: .7rem; word-break: break-word; line-height: 2; }}
-@media (min-width: 640px) and (max-width: 768px){.pillar{ flex: 1 1 calc(50% - 8px) !important; min-width: 0; }}
+}.nav-links.open a{ font-size: .9rem; max-width: none !important; }.nav-langs{ gap: 4px; }.nav-lang{ padding: 12px 10px; font-size: .65rem !important; min-height: 44px; display: inline-flex; align-items: center; }.wrap{ padding: 0 20px; }.ss-num{ font-size: 2.42rem; }.agent-card{ min-width: 82vw; }footer{ padding: 40px 20px; }.footer-copy{ font-size: .7rem; word-break: break-word; line-height: 2; }}
 @media (max-width: 480px){.nav-logo-full{ height: 42px; }}
 .ce-que-section{ padding: var(--section-gap) 0 var(--section-gap) 48px; background: var(--white); }
 .accord-btn{
@@ -931,6 +912,7 @@ box-shadow: 0 12px 32px rgba(99,59,74,.25);
 }.nav-links.open a{ color: #FAF6F2 !important; font-size: 1rem; max-width: none !important; }.nav-links.open a::after{ background: #C75F62; }}
 @media (max-width: 1260px){.footer-brand .footer-tag, .footer-brand .footer-mention-ia{ white-space: normal; }}
 @media (max-width: 1100px){.piliers{ grid-template-columns: repeat(3, minmax(0, 1fr)); }.pilier{ min-width: 0; }.pilier *, .newsletter-content *, .nl-box *{ overflow-wrap: anywhere; }}
+@media (max-width: 1100px){.persp-track-outer{ max-width: 100%; }}
 .article-book-folio[data-n]::before{ content: attr(data-n); }
 .art-chip{ font-family: var(--sans); font-weight: 600; font-style: normal; font-size: .92em; color: var(--plum); background: rgba(217,201,195,.38); padding: .04em .38em; border-radius: 4px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 .article-book h3.article-meta{ margin-top: 32px; margin-bottom: 12px; }
@@ -953,6 +935,7 @@ body.art-justify .article-book .article-intro p.art-enum{ text-align: left; }
 .footer-col a.footer-instagram-btn{ margin-top: -6px; }
 .footer-bottom{ padding-top: 2px; padding-bottom: 4px; }
 .footer-legal a{ padding-top: 4px; padding-bottom: 4px; }
+.nw{ white-space: nowrap; }
 .art-ia{ color: var(--rose); }
 .article-hashtags{ hyphens: none; -webkit-hyphens: none; overflow-wrap: normal; word-break: keep-all; }
 body.art-justify .article-book .article-intro p, body.art-justify .article-book .article-intro ul.art-list li{ hyphens: auto; -webkit-hyphens: auto; hyphenate-limit-chars: 5 2 2; text-wrap: pretty; }
@@ -1021,6 +1004,8 @@ font-family: var(--sans); font-size: .76rem; font-weight: 600;
 letter-spacing: .18em; text-transform: uppercase;
 color: var(--plum); margin: 14px 0 0;
 }
+@media (max-width: 760px){.piliers{ grid-template-columns: 1fr; gap: 16px; }.pilier{ padding: 24px 22px; }.pilier *, .pilier-title, .pilier-sub, .pilier-btn{ overflow-wrap: normal; word-break: normal; hyphens: none; }}
+@media (max-width: 760px){.article-book-col .nw, .article-book-col .art-chip{ white-space: normal; }.article-book-col, .article-book-col > *{ min-width: 0; max-width: 100%; }}
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Should funding determine your AI project?", "acceptedAnswer": {"@type": "Answer", "text": "No, never. I always keep this order: what problem do you want to solve? Where can AI really create value? Which project should be prioritised? And only then: which schemes may apply? A project built to fit a scheme risks solving no real problem. You would then have spent time, and part of the money, on a result nobody was waiting for. Funding should speed up a project you have already chosen, never choose it for you."}}, {"@type": "Question", "name": "What does Diag Data IA fund?", "acceptedAnswer": {"@type": "Answer", "text": "For SMEs and mid-sized companies with 10 to 2,000 employees, Bpifrance’s IA Booster programme, part of France 2030, first offers free awareness sessions. Then a Diag Data IA co-funded at 40%: €10,000 excl. VAT, of which €6,000 excl. VAT is paid by the company. It is a technical diagnosis, carried out by a Bpifrance-approved expert. Conditions apply, including turnover of at least €1M and being an independent company. So you do not freely choose the provider. And this diagnosis does not replace the strategic thinking upstream: which use to prioritise, and why that one."}}, {"@type": "Question", "name": "Which main families of support exist for an AI project?", "acceptedAnswer": {"@type": "Answer", "text": "There are three, each with its own logic. Diagnostic schemes fund an analysis, such as the Diag Data IA. Solution catalogues list ready-to-use products, such as one of the two strands of the Osez l’IA plan. Broader support, national or regional, backs digital transformation or investment. They do not replace one another. Confusing a funded diagnosis with a funded rollout is one of the most common mistakes. Before filling in an application, check which family it belongs to: that tells you what will really be funded, and what will stay at your expense."}}, {"@type": "Question", "name": "Why is the provider question decisive?", "acceptedAnswer": {"@type": "Answer", "text": "Because, depending on the scheme, you either choose your provider freely, or they come from a list. In the first case, you pick the one who understands your business. In the second, the choice is framed: check that the proposed provider meets your need. Funding obtained for a provider who does not fit the project costs you time, even when it costs you no money. How do you combine a funded diagnosis with a strategic project? By keeping each in its place. The technical diagnosis shows what is possible with your data and your tools. The strategic thinking decides what is worth doing, in what order, with what means. Ideally, strategy comes first. A diagnosis targeted on a use already chosen brings far more than a general diagnosis with no precise question."}}, {"@type": "Question", "name": "Should you wait for funding before starting?", "acceptedAnswer": {"@type": "Answer", "text": "Not necessarily. Waiting for support can delay by several months a project whose value is already clear. Meanwhile, the problem stays untouched. The right question is not “support or no support”. It is: “what first step can I take right now, whatever the support?”. A modest first use, on a precise task, teaches you things no application file can. It also makes the next step easier to defend, including in front of a funding body. Does “Osez l’IA” fund any kind of consulting? No. The national Osez l’IA plan has two strands. The first is a catalogue of ready-to-use AI solutions for SMEs and mid-sized companies: assistants, automation, document analysis. These are products. The second groups support programmes run by Bpifrance, such as the Diag Data IA and the AI Accelerator, delivered by approved experts. In both cases, you do not freely choose the provider. A strategic scoping workshop such as Cap IA is neither a catalogue product nor an approved-expert service: it does not fall under these schemes, and I do not present it as fundable by them. EXEC’IA’s AI Agents, on the other hand, are product solutions: SENTRY, ECHO or RELAY could fit into a catalogue of this kind, provided they are selected."}}, {"@type": "Question", "name": "Which questions should you ask before filing an application?", "acceptedAnswer": {"@type": "Answer", "text": "Five checks save you from unpleasant surprises: The exact conditions are published by the bodies themselves (France Num, Bpifrance, entreprises.gouv.fr), and they change. Check them at the source, when you apply. Where do you start, in practice? With the problem, not the funding desk. Write down what AI should change in your business, find where it creates value, choose a first project. Funding comes next, based on that project. Funding and compliance should both be anticipated at the scoping stage: for the second, see the AI Act and GDPR guide for an SME."}}, {"@type": "Question", "name": "Which mistakes should you avoid when looking for support?", "acceptedAnswer": {"@type": "Answer", "text": "Five mistakes come up again and again: The last one deserves checking every time: depending on the scheme, the application sometimes has to be made before the service starts. It is written in the official conditions. Read them before committing. What if your company is not eligible? Do not give up on the project. An ineligible company can fund a first use itself, starting small: one task, one team, one measurable result. It is even the best way to find out whether the project deserves a bigger investment. Having no support is not a verdict on the project’s value. It only changes the pace and the size of the first step."}}, {"@type": "Question", "name": "How do you keep your bearings? Among so many schemes", "acceptedAnswer": {"@type": "Answer", "text": "By coming back to the starting question: what problem do you want to solve? Schemes are many, their conditions change, and so does their vocabulary. Your problem stays the same. That is what should guide the choice. A leader who knows which problem they want to solve reads a list of funding schemes as a list of options. One who does not know yet reads it as a list of constraints. Which three things should you keep in mind? 1. The project must exist without the support, even on a smaller scale. 2. Conditions are checked at the source, on the date you apply. 3. Compliance is thought through from the start, not after the rollout. If these three points are settled, the support becomes what it should be: an accelerator for a project already chosen, not the reason for choosing it."}}, {"@type": "Question", "name": "What place for strategic support before funding?", "acceptedAnswer": {"@type": "Answer", "text": "A place upstream, to answer a question funding schemes rarely address: where can AI create value in your company, and where do you start? That is the role of a scoping workshop such as Cap IA at EXEC’IA. Once the problem and the priority are clear, the funded diagnosis, the chosen solution and any support fall into place much more simply. You choose with a clear direction, instead of picking from a menu. How do you present your project to a funding body? Problem before solution: what you want to change, for whom, and how you will know it worked. A funding body pays for an expected result more than for an intention. An application built on a clear need, a limited scope and a simple success criterion is quicker to read and easier to defend. Also prepare your answers to three questions: who will carry the project internally, how much time it will take, and what you will do if the result disappoints. Those answers reassure as much as a figure."}}, {"@type": "Question", "name": "What do you do once the funding is granted?", "acceptedAnswer": {"@type": "Answer", "text": "Funding pays for a step, not for what follows. Plan from the start for what happens next: who uses the result, who develops it, and how you decide to continue. A diagnosis left in a drawer changes nothing in the business. Go back to the starting order: problem, value, priority. It will tell you whether the funded step was the right one, and what the next one is. Keep every document too: invoices, deliverables, meeting notes. A funding body may ask for them, sometimes months later."}}], "inLanguage": "en-US"}

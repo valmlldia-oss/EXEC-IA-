@@ -240,6 +240,17 @@ transform: translateY(-2px);
 }
 .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 24px; }
 @media (max-width: 900px){.ce-que-section{ padding: var(--section-gap) 0; }}
+.persp-track-outer{
+overflow-x: auto; overflow-y: hidden;
+scroll-snap-type: x mandatory;
+padding: .25rem 0 .5rem;
+cursor: grab;
+scroll-padding-left: 1.5rem;
+max-width: 100vw;
+scrollbar-width: none;
+}
+.persp-track-outer:active{ cursor: grabbing; }
+.persp-track-outer::-webkit-scrollbar{ display: none; }
 .persp-track{
 display: flex; gap: 1.25rem;
 width: max-content;
@@ -262,7 +273,7 @@ transition: transform .3s, box-shadow .3s;
 gap: 16px;
 width: max-content;
 padding-right: 0;
-}.persp-card{ width: 270px; flex: 0 0 auto; min-width: 0; }}
+}.persp-track-outer{ overflow-x: auto; scroll-snap-type: x mandatory; padding-top: .6rem; container-type: inline-size; scroll-padding-left: 0; }.persp-card{ width: 270px; flex: 0 0 auto; min-width: 0; }}
 @supports (width: 1cqw){@media (min-width: 1160px){.persp-card{ width: calc((100cqw - 48px) / 4); }}}
 @media (max-width: 640px){.persp-card{ width: 82vw; }}
 .article-page{ padding-top: calc(var(--nav-h) + 32px); padding-bottom: clamp(24px, 3vw, 40px); }
@@ -429,17 +440,6 @@ box-shadow: 0 14px 34px rgba(99,59,74,.05);
 0%,100% { opacity:1; text-shadow: 0 0 4px rgba(201,168,76,.5); }
 50%      { opacity:.75; text-shadow: 0 0 12px rgba(201,168,76,1), 0 0 24px rgba(201,168,76,.4); }
 }
-.pillar{
-background: var(--white); border-radius: 14px; padding: 12px 16px;
-border-left: 3px solid transparent;
-box-shadow: 0 2px 12px rgba(99,59,74,.06);
-transition: border-color .25s, box-shadow .25s;
-}
-.pillar:hover{ border-color: var(--rose); box-shadow: 0 6px 28px rgba(99,59,74,.1); }
-.pillar{ display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto auto; column-gap: 12px; align-items: center; }
-.pillar h4, .pillar h3{ font-family: var(--serif); font-size: 1.36rem; color: var(--plum); margin-bottom: 0; font-weight: 600; line-height: 1.3; grid-column: 2; grid-row: 1; white-space: nowrap; }
-.pillar p{ grid-column: 1 / -1; grid-row: 2; margin-top: 8px; }
-.pillar p{ font-size: .72rem; color: var(--plum-muted); line-height: 1.62; white-space: normal; }
 .tl-expertise-group{
 position: relative;
 margin: 4px 0 20px 34px;
@@ -636,10 +636,6 @@ display: inline-block;
 50%       { transform: translateY(4px); }
 }
 .offre-dg{ margin-top: 8px; }
-.offre-dg-title{
-font-family: var(--serif); font-weight: 600; color: var(--plum);
-font-size: clamp(1.7rem, 3vw, 2.2rem); margin: 0;
-}
 .offres-cat-item{
 border-top: 1.5px solid rgba(99,59,74,.18);
 }
@@ -651,10 +647,6 @@ text-align: left; border-radius: 8px; transition: background .2s;
 }
 .offres-cat-btn:hover{ background: rgba(99,59,74,.04); }
 .offres-cat-body{ overflow: hidden; max-height: 0; transition: max-height .45s var(--ease); }
-.offres-orientation-title{
-font-family: var(--serif); font-size: clamp(1.9712rem, 2.9568vw, 2.5872rem); font-weight: 600;
-color: var(--plum); margin: 0 0 28px;
-}
 .offres-orientation-card{
 display: flex; flex-direction: column; align-items: flex-start; gap: 8px;
 background: var(--white); border: 1px solid rgba(99,59,74,.14);
@@ -669,28 +661,6 @@ box-shadow: 0 16px 36px rgba(199,95,98,.14);
 transform: translateY(-3px);
 }
 .offres-orientation-card:focus-visible{ outline: 2px solid var(--rose); outline-offset: 3px; }
-.offre-titre-capsule{
-align-self: center;
-background: transparent;
-border: 1.5px solid rgba(99,59,74,.35);
-border-radius: 20px;
-padding: 8px 24px;
-text-align: center;
-}
-.offre-titre-capsule h3, .offre-titre-capsule h2{ margin: 0; }
-.offre-livrable-title{
-font-family: var(--serif);
-font-size: clamp(1.9712rem, 2.9568vw, 2.5872rem);
-font-weight: 600;
-color: var(--plum);
-margin: 0 0 22px;
-}
-.offre-approche-step-title{
-font-family: var(--serif);
-font-size: clamp(1.5rem, 2vw, 1.9rem);
-font-weight: 600; color: var(--plum);
-margin: 6px 0 10px;
-}
 @keyframes fadein{
 from { opacity: 0; }
 to   { opacity: 1; }
@@ -758,6 +728,18 @@ position: relative;
 z-index: 1;
 height: auto;
 }
+.agents-track-outer{
+overflow-x: auto;
+overflow-y: hidden;
+scroll-snap-type: x mandatory;
+padding: .25rem 0 .5rem;
+cursor: grab;
+scroll-padding-left: 1.5rem;
+max-width: 100vw;
+}
+.agents-track-outer:active{ cursor: grabbing; }
+.agents-track-outer{ scrollbar-width: none; }
+.agents-track-outer::-webkit-scrollbar{ display: none; }
 .agents-track{
 display: flex;
 gap: 1.25rem;
@@ -799,7 +781,7 @@ object-position: center;
 .nl-box-form{
 display: none;
 }
-@media (max-width: 1024px){.nav-links{ gap: 18px; }.nav-links a{ font-size: .72rem; }.pillar{ flex: 1 1 calc(50% - 8px); }}
+@media (max-width: 1024px){.nav-links{ gap: 18px; }.nav-links a{ font-size: .72rem; }.agents-track-outer{ padding: .5rem 0 1rem; scroll-padding-left: 16px; }}
 @media (max-width: 768px){html{ overflow-x: clip !important; }body{ overflow-x: hidden !important; max-width: 100vw; }*, *::before, *::after{ max-width: 100% !important; box-sizing: border-box; }.hero-tagline, .hero-sub, .hero-sub2, .testi-intro,
 .ia-perf-stat-label, .roi-intro, .offre-decouverte-btn,
 .agents-cta-title, .xcard-tag, .tl-date, .pillar p,
@@ -810,8 +792,7 @@ background: rgba(252,252,250,.98); backdrop-filter: blur(20px);
 padding: 24px 24px 32px; gap: 20px; z-index: 998;
 border-bottom: 1px solid rgba(99,59,74,.1);
 box-shadow: 0 8px 32px rgba(99,59,74,.1);
-}.nav-links.open a{ font-size: .9rem; max-width: none !important; }.nav-langs{ gap: 4px; }.nav-lang{ padding: 12px 10px; font-size: .65rem !important; min-height: 44px; display: inline-flex; align-items: center; }.wrap{ padding: 0 20px; }.ss-num{ font-size: 2.42rem; }.pillar{ grid-template-columns: 36px 1fr !important; flex: 0 0 auto !important; min-height: 0 !important; }.agent-card{ min-width: 82vw; }footer{ padding: 40px 20px; }.footer-copy{ font-size: .7rem; word-break: break-word; line-height: 2; }}
-@media (min-width: 640px) and (max-width: 768px){.pillar{ flex: 1 1 calc(50% - 8px) !important; min-width: 0; }}
+}.nav-links.open a{ font-size: .9rem; max-width: none !important; }.nav-langs{ gap: 4px; }.nav-lang{ padding: 12px 10px; font-size: .65rem !important; min-height: 44px; display: inline-flex; align-items: center; }.wrap{ padding: 0 20px; }.ss-num{ font-size: 2.42rem; }.agent-card{ min-width: 82vw; }footer{ padding: 40px 20px; }.footer-copy{ font-size: .7rem; word-break: break-word; line-height: 2; }}
 @media (max-width: 480px){.nav-logo-full{ height: 42px; }}
 .ce-que-section{ padding: var(--section-gap) 0 var(--section-gap) 48px; background: var(--white); }
 .accord-btn{
@@ -932,6 +913,7 @@ box-shadow: 0 12px 32px rgba(99,59,74,.25);
 }.nav-links.open a{ color: #FAF6F2 !important; font-size: 1rem; max-width: none !important; }.nav-links.open a::after{ background: #C75F62; }}
 @media (max-width: 1260px){.footer-brand .footer-tag, .footer-brand .footer-mention-ia{ white-space: normal; }}
 @media (max-width: 1100px){.piliers{ grid-template-columns: repeat(3, minmax(0, 1fr)); }.pilier{ min-width: 0; }.pilier *, .newsletter-content *, .nl-box *{ overflow-wrap: anywhere; }}
+@media (max-width: 1100px){.persp-track-outer{ max-width: 100%; }}
 .article-book-folio[data-n]::before{ content: attr(data-n); }
 .art-chip{ font-family: var(--sans); font-weight: 600; font-style: normal; font-size: .92em; color: var(--plum); background: rgba(217,201,195,.38); padding: .04em .38em; border-radius: 4px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 .article-book h3.article-meta{ margin-top: 32px; margin-bottom: 12px; }
@@ -1022,6 +1004,8 @@ font-family: var(--sans); font-size: .76rem; font-weight: 600;
 letter-spacing: .18em; text-transform: uppercase;
 color: var(--plum); margin: 14px 0 0;
 }
+@media (max-width: 760px){.piliers{ grid-template-columns: 1fr; gap: 16px; }.pilier{ padding: 24px 22px; }.pilier *, .pilier-title, .pilier-sub, .pilier-btn{ overflow-wrap: normal; word-break: normal; hyphens: none; }}
+@media (max-width: 760px){.article-book-col .nw, .article-book-col .art-chip{ white-space: normal; }.article-book-col, .article-book-col > *{ min-width: 0; max-width: 100%; }}
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Qué dice realmente esa cifra del 30 %?", "acceptedAnswer": {"@type": "Answer", "text": "Hoy, Louis resuelve solo el 30 % de las consultas. El resto pasa a una persona, y el cliente no tiene que volver a explicarlo todo. ¿Qué me llama la atención de esta cifra? No es la IA lo que más ha progresado. Es la frontera que Air France ha aprendido a trazar entre la herramienta y la persona. No es un caso aislado. Según Salesforce, en 2025 los equipos de atención al cliente ya confían de media el 30 % de sus casos a la IA. Esperan llegar al 50 % en 2027. Dicho de otro modo, la cuestión de la frontera va a llegar a casi todos los servicios de atención al cliente, pymes incluidas."}}, {"@type": "Question", "name": "¿Por qué importa tanto el traspaso como la automatización?", "acceptedAnswer": {"@type": "Answer", "text": "Porque su cliente no juzga la tecnología. Juzga su recorrido. Puede automatizar con éxito el 30 % de las consultas y perderlo todo en un solo traspaso fallido: aquel en el que el cliente tiene que repetirlo todo a un asesor que no sabe nada del intercambio anterior. Un buen traspaso transmite el contexto: lo que el cliente pidió, lo que respondió la herramienta y lo que queda por resolver. El asesor retoma la conversación donde se detuvo. Para la empresa, es un detalle de organización. Para el cliente, es toda la diferencia entre «se ocupan de mí» y «vuelvo a empezar de cero»."}}, {"@type": "Question", "name": "¿Qué consultas no automatizar nunca de principio a fin?", "acceptedAnswer": {"@type": "Answer", "text": "Aquellas en las que hay mucho en juego o la emoción es fuerte: un litigio, una urgencia, un cliente en dificultades, una decisión que compromete a la empresa. Suelen ser pocas. Pero su efecto en la confianza es enorme. Para estos casos, la mejor automatización detecta la situación y avisa rápido a una persona. ¿Qué retener del ejemplo de Air France? Que el resultado no viene de lo sofisticada que sea la herramienta. Viene de la claridad de los papeles. El asistente gestiona lo frecuente y sencillo. Las personas gestionan lo que exige criterio, escucha o una decisión. Este reparto se mueve: se revisa a medida que la herramienta progresa y los equipos ven lo que hace bien."}}, {"@type": "Question", "name": "¿Qué se puede automatizar sin riesgo?", "acceptedAnswer": {"@type": "Answer", "text": "Las consultas frecuentes, factuales y de respuesta estable: el estado de un pedido, un horario, una regla conocida, un documento que localizar. La buena respuesta no depende ni del humor del cliente ni de un criterio. Es ahí donde la automatización libera más tiempo a sus equipos. Y también donde el error cuesta menos. ¿Cómo vive un cliente un traspaso fallido? Como una confesión: la empresa no se ha organizado para él. Repite su problema, espera, cambia de canal. Guarda de ese momento un recuerdo más fuerte que el de todas las respuestas acertadas. La confianza rara vez se pierde por un error aislado. Se pierde cuando uno siente que no le escuchan, sobre todo si es urgente."}}, {"@type": "Question", "name": "¿El cliente repite su pregunta antes de obtener una respuesta útil?", "acceptedAnswer": {"@type": "Answer", "text": "¿Cómo notar el límite antes de cruzarlo? Para mí, bastan tres señales. 1) El cliente repite su pregunta. 2) No encuentra cómo hablar con una persona. 3) El tono no está a la altura de la gravedad de la consulta. Cuando la misma pregunta vuelve varias veces, la herramienta no responde a la necesidad real. Es la primera señal: la conversación debe cambiar de manos. ¿Existe una opción sencilla para hablar con una persona? Si no aparece ninguna opción clara, el cliente se siente atrapado. Una buena automatización hace visible e inmediata la salida hacia una persona. Un botón, una frase, un número: la forma da igual, siempre que se encuentre sin buscar."}}, {"@type": "Question", "name": "¿El tono se adapta a la gravedad de la consulta?", "acceptedAnswer": {"@type": "Answer", "text": "El tono no puede ser el mismo para una pregunta trivial y para una urgencia. Una huelga de personal no pide el mismo registro que una pregunta sobre el equipaje. La IA gestiona el volumen. Reconocer el momento de pasar el relevo sigue siendo un reflejo humano. ¿Quién decide el límite entre la herramienta y la persona? Una persona identificada, no un ajuste técnico. El límite es una decisión de servicio: qué consultas resuelve el asistente por sí solo, cuáles traslada y con qué señales. Tiene un responsable, está escrito y se revisa. Sin responsable, el límite se mueve solo, actualización tras actualización, sin que nadie lo haya elegido."}}, {"@type": "Question", "name": "¿Cómo saber si el límite está bien colocado?", "acceptedAnswer": {"@type": "Answer", "text": "Escuchando dos fuentes: los clientes, a través de sus comentarios y de sus consultas repetidas, y los asesores, que ven lo que les llega tras el traspaso. Si los asesores reciben a menudo consultas mal entendidas, la herramienta conserva el control demasiado tiempo. Si reciben consultas sencillas, lo cede demasiado pronto. El porcentaje de consultas resueltas en solitario es un resultado que hay que leer con prudencia: importa menos que la satisfacción de quienes han pasado por la herramienta. ¿Por dónde empezar en su servicio de atención al cliente? Por las consultas más frecuentes y sencillas: ahí es donde la automatización libera más tiempo, con menos riesgo. Al mismo tiempo, defina desde el principio las señales que activan el paso a una persona. Después, compruebe que ese paso es visible y rápido. Después, ampliar progresivamente, manteniendo siempre la misma regla: la herramienta gestiona el volumen, la persona gestiona lo que importa."}}, {"@type": "Question", "name": "¿Qué pregunta hacer a sus equipos?", "acceptedAnswer": {"@type": "Answer", "text": "Solo una: ¿en qué casos tuvo su cliente la sensación de hablar con alguien que no lo entendía? Las respuestas dibujan casi siempre la frontera que la empresa todavía no ha trazado. Es ahí donde se decide la calidad de la relación, mucho más que en el porcentaje de consultas resueltas. ¿Qué hay que transmitir a la persona que retoma la conversación? El contexto completo: la consulta inicial, las respuestas ya dadas, la información que el cliente ya ha facilitado y el punto exacto en que se atascó el intercambio. La persona debe poder responder sin repetir ninguna pregunta ya hecha. Este resumen se prepara de antemano, con los equipos que reciben las consultas, y se prueba con regularidad en casos reales."}}, {"@type": "Question", "name": "¿Cómo implicar a los equipos de primera línea?", "acceptedAnswer": {"@type": "Answer", "text": "Dándoles voz sobre la frontera. Los asesores saben qué consultas se repiten, cuáles se complican y cuáles se resuelven mejor de viva voz. Su opinión evita mover el límite a ciegas. Una revisión periódica de unos pocos intercambios reales, con ellos, basta para detectar ajustes útiles. ¿Qué indicador seguir en primer lugar? Menos el porcentaje de consultas resueltas en solitario que la satisfacción de quienes han pasado por la herramienta y el tiempo que se tarda en hablar con una persona cuando se desea. Una alta tasa de automatización puede ocultar una frustración real. El buen objetivo no es hacer desaparecer los intercambios humanos, sino reservarlos para los momentos en que más importan."}}, {"@type": "Question", "name": "¿Cómo probar el dispositivo antes de generalizarlo?", "acceptedAnswer": {"@type": "Answer", "text": "Reproduciendo consultas reales, incluidas las más delicadas: una reclamación, una urgencia, una pregunta mal formulada. Observe en qué momento la herramienta debería haber cedido el relevo y qué recibe la persona en ese momento. Una prueba de unas decenas de intercambios, revisada por los asesores, enseña más que una demostración lograda con tres casos cuidadosamente elegidos. ¿Qué decir al cliente para que confíe en la herramienta? La verdad: está hablando con un asistente, esto es lo que sabe hacer y así se llega a una persona. Un cliente avisado acepta mejor los límites de la herramienta que uno que descubre, a mitad de conversación, que no habla con un humano. La transparencia es también una cortesía: muestra que la empresa asume lo que ha puesto en marcha."}}, {"@type": "Question", "name": "¿Cómo preparar a los asesores para retomar la conversación?", "acceptedAnswer": {"@type": "Answer", "text": "Enseñándoles a retomar sin repetir las preguntas ya hechas y a reconocer el tono de un cliente ya cansado. Retomar una conversación es un gesto profesional en sí mismo, que merece una formación breve. Los asesores deben saber también cuándo avisar al equipo de que un motivo de traspaso se repite, para ajustar la frontera. ¿Cómo mantener el control cuando la herramienta evoluciona? Considerando cada evolución como un cambio de frontera que hay que decidir, no como una actualización técnica. Antes de ampliar el ámbito del asistente, la pregunta es sencilla: ¿qué consultas nuevas va a resolver el asistente por sí solo y quién comprueba que sigue siendo aceptable para el cliente? Una revisión periódica de unos pocos intercambios reales, en cada evolución, protege la calidad de la relación."}}], "inLanguage": "es-ES"}

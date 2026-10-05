@@ -239,6 +239,17 @@ transform: translateY(-2px);
 }
 .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 24px; }
 @media (max-width: 900px){.ce-que-section{ padding: var(--section-gap) 0; }}
+.persp-track-outer{
+overflow-x: auto; overflow-y: hidden;
+scroll-snap-type: x mandatory;
+padding: .25rem 0 .5rem;
+cursor: grab;
+scroll-padding-left: 1.5rem;
+max-width: 100vw;
+scrollbar-width: none;
+}
+.persp-track-outer:active{ cursor: grabbing; }
+.persp-track-outer::-webkit-scrollbar{ display: none; }
 .persp-track{
 display: flex; gap: 1.25rem;
 width: max-content;
@@ -261,7 +272,7 @@ transition: transform .3s, box-shadow .3s;
 gap: 16px;
 width: max-content;
 padding-right: 0;
-}.persp-card{ width: 270px; flex: 0 0 auto; min-width: 0; }}
+}.persp-track-outer{ overflow-x: auto; scroll-snap-type: x mandatory; padding-top: .6rem; container-type: inline-size; scroll-padding-left: 0; }.persp-card{ width: 270px; flex: 0 0 auto; min-width: 0; }}
 @supports (width: 1cqw){@media (min-width: 1160px){.persp-card{ width: calc((100cqw - 48px) / 4); }}}
 @media (max-width: 640px){.persp-card{ width: 82vw; }}
 .article-page{ padding-top: calc(var(--nav-h) + 32px); padding-bottom: clamp(24px, 3vw, 40px); }
@@ -433,17 +444,6 @@ box-shadow: 0 14px 34px rgba(99,59,74,.05);
 0%,100% { opacity:1; text-shadow: 0 0 4px rgba(201,168,76,.5); }
 50%      { opacity:.75; text-shadow: 0 0 12px rgba(201,168,76,1), 0 0 24px rgba(201,168,76,.4); }
 }
-.pillar{
-background: var(--white); border-radius: 14px; padding: 12px 16px;
-border-left: 3px solid transparent;
-box-shadow: 0 2px 12px rgba(99,59,74,.06);
-transition: border-color .25s, box-shadow .25s;
-}
-.pillar:hover{ border-color: var(--rose); box-shadow: 0 6px 28px rgba(99,59,74,.1); }
-.pillar{ display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto auto; column-gap: 12px; align-items: center; }
-.pillar h4, .pillar h3{ font-family: var(--serif); font-size: 1.36rem; color: var(--plum); margin-bottom: 0; font-weight: 600; line-height: 1.3; grid-column: 2; grid-row: 1; white-space: nowrap; }
-.pillar p{ grid-column: 1 / -1; grid-row: 2; margin-top: 8px; }
-.pillar p{ font-size: .72rem; color: var(--plum-muted); line-height: 1.62; white-space: normal; }
 .tl-expertise-group{
 position: relative;
 margin: 4px 0 20px 34px;
@@ -640,10 +640,6 @@ display: inline-block;
 50%       { transform: translateY(4px); }
 }
 .offre-dg{ margin-top: 8px; }
-.offre-dg-title{
-font-family: var(--serif); font-weight: 600; color: var(--plum);
-font-size: clamp(1.7rem, 3vw, 2.2rem); margin: 0;
-}
 .offres-cat-item{
 border-top: 1.5px solid rgba(99,59,74,.18);
 }
@@ -655,10 +651,6 @@ text-align: left; border-radius: 8px; transition: background .2s;
 }
 .offres-cat-btn:hover{ background: rgba(99,59,74,.04); }
 .offres-cat-body{ overflow: hidden; max-height: 0; transition: max-height .45s var(--ease); }
-.offres-orientation-title{
-font-family: var(--serif); font-size: clamp(1.9712rem, 2.9568vw, 2.5872rem); font-weight: 600;
-color: var(--plum); margin: 0 0 28px;
-}
 .offres-orientation-card{
 display: flex; flex-direction: column; align-items: flex-start; gap: 8px;
 background: var(--white); border: 1px solid rgba(99,59,74,.14);
@@ -673,28 +665,6 @@ box-shadow: 0 16px 36px rgba(199,95,98,.14);
 transform: translateY(-3px);
 }
 .offres-orientation-card:focus-visible{ outline: 2px solid var(--rose); outline-offset: 3px; }
-.offre-titre-capsule{
-align-self: center;
-background: transparent;
-border: 1.5px solid rgba(99,59,74,.35);
-border-radius: 20px;
-padding: 8px 24px;
-text-align: center;
-}
-.offre-titre-capsule h3, .offre-titre-capsule h2{ margin: 0; }
-.offre-livrable-title{
-font-family: var(--serif);
-font-size: clamp(1.9712rem, 2.9568vw, 2.5872rem);
-font-weight: 600;
-color: var(--plum);
-margin: 0 0 22px;
-}
-.offre-approche-step-title{
-font-family: var(--serif);
-font-size: clamp(1.5rem, 2vw, 1.9rem);
-font-weight: 600; color: var(--plum);
-margin: 6px 0 10px;
-}
 @keyframes fadein{
 from { opacity: 0; }
 to   { opacity: 1; }
@@ -762,6 +732,18 @@ position: relative;
 z-index: 1;
 height: auto;
 }
+.agents-track-outer{
+overflow-x: auto;
+overflow-y: hidden;
+scroll-snap-type: x mandatory;
+padding: .25rem 0 .5rem;
+cursor: grab;
+scroll-padding-left: 1.5rem;
+max-width: 100vw;
+}
+.agents-track-outer:active{ cursor: grabbing; }
+.agents-track-outer{ scrollbar-width: none; }
+.agents-track-outer::-webkit-scrollbar{ display: none; }
 .agents-track{
 display: flex;
 gap: 1.25rem;
@@ -803,7 +785,7 @@ object-position: center;
 .nl-box-form{
 display: none;
 }
-@media (max-width: 1024px){.nav-links{ gap: 18px; }.nav-links a{ font-size: .72rem; }.pillar{ flex: 1 1 calc(50% - 8px); }}
+@media (max-width: 1024px){.nav-links{ gap: 18px; }.nav-links a{ font-size: .72rem; }.agents-track-outer{ padding: .5rem 0 1rem; scroll-padding-left: 16px; }}
 @media (max-width: 768px){html{ overflow-x: clip !important; }body{ overflow-x: hidden !important; max-width: 100vw; }*, *::before, *::after{ max-width: 100% !important; box-sizing: border-box; }.hero-tagline, .hero-sub, .hero-sub2, .testi-intro,
 .ia-perf-stat-label, .roi-intro, .offre-decouverte-btn,
 .agents-cta-title, .xcard-tag, .tl-date, .pillar p,
@@ -814,8 +796,7 @@ background: rgba(252,252,250,.98); backdrop-filter: blur(20px);
 padding: 24px 24px 32px; gap: 20px; z-index: 998;
 border-bottom: 1px solid rgba(99,59,74,.1);
 box-shadow: 0 8px 32px rgba(99,59,74,.1);
-}.nav-links.open a{ font-size: .9rem; max-width: none !important; }.nav-langs{ gap: 4px; }.nav-lang{ padding: 12px 10px; font-size: .65rem !important; min-height: 44px; display: inline-flex; align-items: center; }.wrap{ padding: 0 20px; }.ss-num{ font-size: 2.42rem; }.pillar{ grid-template-columns: 36px 1fr !important; flex: 0 0 auto !important; min-height: 0 !important; }.agent-card{ min-width: 82vw; }footer{ padding: 40px 20px; }.footer-copy{ font-size: .7rem; word-break: break-word; line-height: 2; }}
-@media (min-width: 640px) and (max-width: 768px){.pillar{ flex: 1 1 calc(50% - 8px) !important; min-width: 0; }}
+}.nav-links.open a{ font-size: .9rem; max-width: none !important; }.nav-langs{ gap: 4px; }.nav-lang{ padding: 12px 10px; font-size: .65rem !important; min-height: 44px; display: inline-flex; align-items: center; }.wrap{ padding: 0 20px; }.ss-num{ font-size: 2.42rem; }.agent-card{ min-width: 82vw; }footer{ padding: 40px 20px; }.footer-copy{ font-size: .7rem; word-break: break-word; line-height: 2; }}
 @media (max-width: 480px){.nav-logo-full{ height: 42px; }}
 .ce-que-section{ padding: var(--section-gap) 0 var(--section-gap) 48px; background: var(--white); }
 .accord-btn{
@@ -936,6 +917,7 @@ box-shadow: 0 12px 32px rgba(99,59,74,.25);
 }.nav-links.open a{ color: #FAF6F2 !important; font-size: 1rem; max-width: none !important; }.nav-links.open a::after{ background: #C75F62; }}
 @media (max-width: 1260px){.footer-brand .footer-tag, .footer-brand .footer-mention-ia{ white-space: normal; }}
 @media (max-width: 1100px){.piliers{ grid-template-columns: repeat(3, minmax(0, 1fr)); }.pilier{ min-width: 0; }.pilier *, .newsletter-content *, .nl-box *{ overflow-wrap: anywhere; }}
+@media (max-width: 1100px){.persp-track-outer{ max-width: 100%; }}
 .article-book-folio[data-n]::before{ content: attr(data-n); }
 .article-more-title{ margin: 44px 0 0; }
 .article-more-lead{ font-family: var(--sans); font-size: .98rem; color: var(--plum-muted); margin: 8px 0 22px 24px; }
@@ -952,6 +934,7 @@ body.art-justify .article-book .article-intro p.art-enum{ text-align: left; }
 .footer-col a.footer-instagram-btn{ margin-top: -6px; }
 .footer-bottom{ padding-top: 2px; padding-bottom: 4px; }
 .footer-legal a{ padding-top: 4px; padding-bottom: 4px; }
+.nw{ white-space: nowrap; }
 .art-ia{ color: var(--rose); }
 .article-book .article-qlist.article-qlist--filets{ border-left: none; padding: 12px 0; margin: 26px 0 8px; border-top: 1px solid rgba(217,201,195,1); border-bottom: 1px solid rgba(217,201,195,1); text-align: center; }
 .article-qlist--filets p{ text-align: center !important; text-align-last: center !important; }
@@ -1027,6 +1010,8 @@ font-family: var(--sans); font-size: .76rem; font-weight: 600;
 letter-spacing: .18em; text-transform: uppercase;
 color: var(--plum); margin: 14px 0 0;
 }
+@media (max-width: 760px){.piliers{ grid-template-columns: 1fr; gap: 16px; }.pilier{ padding: 24px 22px; }.pilier *, .pilier-title, .pilier-sub, .pilier-btn{ overflow-wrap: normal; word-break: normal; hyphens: none; }}
+@media (max-width: 760px){.article-book-col .nw, .article-book-col .art-chip{ white-space: normal; }.article-book-col, .article-book-col > *{ min-width: 0; max-width: 100%; }}
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do you know if a decision can be delegated?", "acceptedAnswer": {"@type": "Answer", "text": "Ask yourself one question: if the decision turns out wrong, can we easily go back? If yes, and the consequences stay limited, you can hand it to AI without worry. Sorting requests, suggesting a meeting slot, preparing a first summary: mistakes get fixed fast, and nobody is harmed. If no, because the decision is hard to undo or its effects reach far beyond the person who made it, keep it in human hands. That is not excessive caution. It is in proportion to the risk. When in doubt, also ask how long it would take to spot a mistake. An error seen in a minute does not call for the same vigilance as one a customer discovers six months later."}}, {"@type": "Question", "name": "What did a real court case reveal about delegating to AI?", "acceptedAnswer": {"@type": "Answer", "text": "In February 2024, a Canadian tribunal ruled on a case that says it all. An Air Canada customer had been promised a refund by the airline’s chatbot. The problem: that promise did not match the company’s policy. Before the tribunal, Air Canada argued its chatbot was “a separate legal entity that is responsible for its own actions”. The tribunal swept the argument aside: a company answers for what all its agents say, human or automated. Air Canada had to honour the promise. What strikes me in this story is not the technology. It is that nobody in the company was in charge of checking what the tool could promise on the airline’s behalf. The limit did not exist before the incident. The tribunal set it instead, and not in the most favourable way."}}, {"@type": "Question", "name": "Where should the line sit between AI and human decision-making?", "acceptedAnswer": {"@type": "Answer", "text": "AI informs the decision. The leader decides. That limit is not negotiated case by case: it is set once, in a calm moment, before an emergency forces you to improvise. This is not turning your back on it. It is recognising a simple fact: a tool, however good, will never be the one standing in front of the company to answer for what the decision produced. The more AI advances, the more knowing what to hand over to it, and what never to hand over, will become a core leadership skill. I am convinced of it."}}, {"@type": "Question", "name": "Is this boundary fixed?", "acceptedAnswer": {"@type": "Answer", "text": "No, and that is good news. A decision that needed human judgement yesterday can, with time and evidence, move over to what a tool handles well on its own: sorting a first level of files, spotting recurring anomalies, preparing a summary. What does not change is the need to review the limit regularly, instead of setting it once and forgetting it. A limit nobody has reread in two years often describes a world that no longer exists. So the question I would ask you is not “do you trust AI?”. It is rather: “who, at your company, clearly has the right to say no to what AI recommends?” If the answer is unclear, the limit does not exist yet. It is just assumed."}}, {"@type": "Question", "name": "How do you formalise this boundary?", "acceptedAnswer": {"@type": "Answer", "text": "A short list is enough: the families of decisions the company refuses to hand over to AI, however good the tool. A written list, reread once a year, is worth more than a grand principle everyone reads their own way. Writing it down has another benefit: it forces you to settle disagreements that, left vague, would only have surfaced at the worst possible moment. One page is enough, with concrete examples: a dismissal, a price offered to a key client, a commitment to a partner."}}, {"@type": "Question", "name": "Who has the final say when the organisation disagrees?", "acceptedAnswer": {"@type": "Answer", "text": "A list is not enough if nobody knows who has the last word when two trusted people reach opposite conclusions. In a small business, it is often settled by default: the leader decides, and that is fine. The risk comes when the company grows, an executive committee takes shape, and nobody restates clearly who arbitrates. The answer is nothing complicated. It just needs to be written down, known to everyone, and decided before the disagreement. A company that discovers in the middle of a crisis that it never settled the question settles it in a rush, often badly. Sometimes an AI tool even fills the gap by default. That is exactly the gap the Air Canada case brought to light."}}, {"@type": "Question", "name": "How do you document a decision made with the help of an AI?", "acceptedAnswer": {"@type": "Answer", "text": "Keep a record of three things: the question asked, the options you looked at, and the reason for your choice. That short account lets you reread the decision later and understand what weighed. No need to turn it into a file. A few lines written on the spot are worth more than a reconstruction after the fact. A paragraph in the meeting notes is often enough. Add a fourth thing: what the AI had suggested and you did not keep. That is often where real judgement shows. It is also what an auditor or a client will ask you for first."}}, {"@type": "Question", "name": "What does real human oversight consist of?", "acceptedAnswer": {"@type": "Answer", "text": "You need someone who reviews, at a precise moment, with the power to say no. Reviewing for form’s sake, with no power to stop anything, is not oversight. It is a signature. The right question: at your company, who can turn down an AI recommendation, and under what conditions? That person also needs the time to do it. A sign-off requested at the end of the day, across dozens of files, always ends up as a simple approval click. If you want real oversight, plan the time that goes with it."}}, {"@type": "Question", "name": "How do you teach teams to challenge a recommendation?", "acceptedAnswer": {"@type": "Answer", "text": "Give them three questions. What does this recommendation rest on? What could make it wrong? What happens if we get it wrong? They take five minutes to learn and work for everything. With them, the AI’s answer becomes the start of the thinking, no longer its conclusion. Practise on past cases whose ending you know. The team then sees where the AI would have been wrong, and learns to spot its blind spots without taking any risk. After a few sessions, these questions become a team reflex rather than an instruction."}}, {"@type": "Question", "name": "What place should be left for the leader’s intuition?", "acceptedAnswer": {"@type": "Answer", "text": "A real one, as long as you say it out loud. Intuition is often years of experience summed up in a second. Setting it aside in the name of data would be as questionable as following it without looking at the figures. AI informs, intuition warns, and the leader decides, owning the choice. A habit I like: write down your intuition before consulting the AI. A few weeks later, compare. You will learn a lot about how reliable each one is. It is also the best way to learn when to listen to it."}}], "inLanguage": "en-US"}

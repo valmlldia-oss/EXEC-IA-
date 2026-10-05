@@ -240,6 +240,17 @@ transform: translateY(-2px);
 }
 .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 24px; }
 @media (max-width: 900px){.ce-que-section{ padding: var(--section-gap) 0; }}
+.persp-track-outer{
+overflow-x: auto; overflow-y: hidden;
+scroll-snap-type: x mandatory;
+padding: .25rem 0 .5rem;
+cursor: grab;
+scroll-padding-left: 1.5rem;
+max-width: 100vw;
+scrollbar-width: none;
+}
+.persp-track-outer:active{ cursor: grabbing; }
+.persp-track-outer::-webkit-scrollbar{ display: none; }
 .persp-track{
 display: flex; gap: 1.25rem;
 width: max-content;
@@ -262,7 +273,7 @@ transition: transform .3s, box-shadow .3s;
 gap: 16px;
 width: max-content;
 padding-right: 0;
-}.persp-card{ width: 270px; flex: 0 0 auto; min-width: 0; }}
+}.persp-track-outer{ overflow-x: auto; scroll-snap-type: x mandatory; padding-top: .6rem; container-type: inline-size; scroll-padding-left: 0; }.persp-card{ width: 270px; flex: 0 0 auto; min-width: 0; }}
 @supports (width: 1cqw){@media (min-width: 1160px){.persp-card{ width: calc((100cqw - 48px) / 4); }}}
 @media (max-width: 640px){.persp-card{ width: 82vw; }}
 .article-page{ padding-top: calc(var(--nav-h) + 32px); padding-bottom: clamp(24px, 3vw, 40px); }
@@ -429,17 +440,6 @@ box-shadow: 0 14px 34px rgba(99,59,74,.05);
 0%,100% { opacity:1; text-shadow: 0 0 4px rgba(201,168,76,.5); }
 50%      { opacity:.75; text-shadow: 0 0 12px rgba(201,168,76,1), 0 0 24px rgba(201,168,76,.4); }
 }
-.pillar{
-background: var(--white); border-radius: 14px; padding: 12px 16px;
-border-left: 3px solid transparent;
-box-shadow: 0 2px 12px rgba(99,59,74,.06);
-transition: border-color .25s, box-shadow .25s;
-}
-.pillar:hover{ border-color: var(--rose); box-shadow: 0 6px 28px rgba(99,59,74,.1); }
-.pillar{ display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto auto; column-gap: 12px; align-items: center; }
-.pillar h4, .pillar h3{ font-family: var(--serif); font-size: 1.36rem; color: var(--plum); margin-bottom: 0; font-weight: 600; line-height: 1.3; grid-column: 2; grid-row: 1; white-space: nowrap; }
-.pillar p{ grid-column: 1 / -1; grid-row: 2; margin-top: 8px; }
-.pillar p{ font-size: .72rem; color: var(--plum-muted); line-height: 1.62; white-space: normal; }
 .tl-expertise-group{
 position: relative;
 margin: 4px 0 20px 34px;
@@ -636,10 +636,6 @@ display: inline-block;
 50%       { transform: translateY(4px); }
 }
 .offre-dg{ margin-top: 8px; }
-.offre-dg-title{
-font-family: var(--serif); font-weight: 600; color: var(--plum);
-font-size: clamp(1.7rem, 3vw, 2.2rem); margin: 0;
-}
 .offres-cat-item{
 border-top: 1.5px solid rgba(99,59,74,.18);
 }
@@ -651,10 +647,6 @@ text-align: left; border-radius: 8px; transition: background .2s;
 }
 .offres-cat-btn:hover{ background: rgba(99,59,74,.04); }
 .offres-cat-body{ overflow: hidden; max-height: 0; transition: max-height .45s var(--ease); }
-.offres-orientation-title{
-font-family: var(--serif); font-size: clamp(1.9712rem, 2.9568vw, 2.5872rem); font-weight: 600;
-color: var(--plum); margin: 0 0 28px;
-}
 .offres-orientation-card{
 display: flex; flex-direction: column; align-items: flex-start; gap: 8px;
 background: var(--white); border: 1px solid rgba(99,59,74,.14);
@@ -669,28 +661,6 @@ box-shadow: 0 16px 36px rgba(199,95,98,.14);
 transform: translateY(-3px);
 }
 .offres-orientation-card:focus-visible{ outline: 2px solid var(--rose); outline-offset: 3px; }
-.offre-titre-capsule{
-align-self: center;
-background: transparent;
-border: 1.5px solid rgba(99,59,74,.35);
-border-radius: 20px;
-padding: 8px 24px;
-text-align: center;
-}
-.offre-titre-capsule h3, .offre-titre-capsule h2{ margin: 0; }
-.offre-livrable-title{
-font-family: var(--serif);
-font-size: clamp(1.9712rem, 2.9568vw, 2.5872rem);
-font-weight: 600;
-color: var(--plum);
-margin: 0 0 22px;
-}
-.offre-approche-step-title{
-font-family: var(--serif);
-font-size: clamp(1.5rem, 2vw, 1.9rem);
-font-weight: 600; color: var(--plum);
-margin: 6px 0 10px;
-}
 @keyframes fadein{
 from { opacity: 0; }
 to   { opacity: 1; }
@@ -758,6 +728,18 @@ position: relative;
 z-index: 1;
 height: auto;
 }
+.agents-track-outer{
+overflow-x: auto;
+overflow-y: hidden;
+scroll-snap-type: x mandatory;
+padding: .25rem 0 .5rem;
+cursor: grab;
+scroll-padding-left: 1.5rem;
+max-width: 100vw;
+}
+.agents-track-outer:active{ cursor: grabbing; }
+.agents-track-outer{ scrollbar-width: none; }
+.agents-track-outer::-webkit-scrollbar{ display: none; }
 .agents-track{
 display: flex;
 gap: 1.25rem;
@@ -799,7 +781,7 @@ object-position: center;
 .nl-box-form{
 display: none;
 }
-@media (max-width: 1024px){.nav-links{ gap: 18px; }.nav-links a{ font-size: .72rem; }.pillar{ flex: 1 1 calc(50% - 8px); }}
+@media (max-width: 1024px){.nav-links{ gap: 18px; }.nav-links a{ font-size: .72rem; }.agents-track-outer{ padding: .5rem 0 1rem; scroll-padding-left: 16px; }}
 @media (max-width: 768px){html{ overflow-x: clip !important; }body{ overflow-x: hidden !important; max-width: 100vw; }*, *::before, *::after{ max-width: 100% !important; box-sizing: border-box; }.hero-tagline, .hero-sub, .hero-sub2, .testi-intro,
 .ia-perf-stat-label, .roi-intro, .offre-decouverte-btn,
 .agents-cta-title, .xcard-tag, .tl-date, .pillar p,
@@ -810,8 +792,7 @@ background: rgba(252,252,250,.98); backdrop-filter: blur(20px);
 padding: 24px 24px 32px; gap: 20px; z-index: 998;
 border-bottom: 1px solid rgba(99,59,74,.1);
 box-shadow: 0 8px 32px rgba(99,59,74,.1);
-}.nav-links.open a{ font-size: .9rem; max-width: none !important; }.nav-langs{ gap: 4px; }.nav-lang{ padding: 12px 10px; font-size: .65rem !important; min-height: 44px; display: inline-flex; align-items: center; }.wrap{ padding: 0 20px; }.ss-num{ font-size: 2.42rem; }.pillar{ grid-template-columns: 36px 1fr !important; flex: 0 0 auto !important; min-height: 0 !important; }.agent-card{ min-width: 82vw; }footer{ padding: 40px 20px; }.footer-copy{ font-size: .7rem; word-break: break-word; line-height: 2; }}
-@media (min-width: 640px) and (max-width: 768px){.pillar{ flex: 1 1 calc(50% - 8px) !important; min-width: 0; }}
+}.nav-links.open a{ font-size: .9rem; max-width: none !important; }.nav-langs{ gap: 4px; }.nav-lang{ padding: 12px 10px; font-size: .65rem !important; min-height: 44px; display: inline-flex; align-items: center; }.wrap{ padding: 0 20px; }.ss-num{ font-size: 2.42rem; }.agent-card{ min-width: 82vw; }footer{ padding: 40px 20px; }.footer-copy{ font-size: .7rem; word-break: break-word; line-height: 2; }}
 @media (max-width: 480px){.nav-logo-full{ height: 42px; }}
 .ce-que-section{ padding: var(--section-gap) 0 var(--section-gap) 48px; background: var(--white); }
 .accord-btn{
@@ -932,6 +913,7 @@ box-shadow: 0 12px 32px rgba(99,59,74,.25);
 }.nav-links.open a{ color: #FAF6F2 !important; font-size: 1rem; max-width: none !important; }.nav-links.open a::after{ background: #C75F62; }}
 @media (max-width: 1260px){.footer-brand .footer-tag, .footer-brand .footer-mention-ia{ white-space: normal; }}
 @media (max-width: 1100px){.piliers{ grid-template-columns: repeat(3, minmax(0, 1fr)); }.pilier{ min-width: 0; }.pilier *, .newsletter-content *, .nl-box *{ overflow-wrap: anywhere; }}
+@media (max-width: 1100px){.persp-track-outer{ max-width: 100%; }}
 .article-book-folio[data-n]::before{ content: attr(data-n); }
 .art-chip{ font-family: var(--sans); font-weight: 600; font-style: normal; font-size: .92em; color: var(--plum); background: rgba(217,201,195,.38); padding: .04em .38em; border-radius: 4px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 .article-book h3.article-meta{ margin-top: 32px; margin-bottom: 12px; }
@@ -949,6 +931,7 @@ body.art-justify .article-book .article-intro p.art-enum{ text-align: left; }
 .footer-col a.footer-instagram-btn{ margin-top: -6px; }
 .footer-bottom{ padding-top: 2px; padding-bottom: 4px; }
 .footer-legal a{ padding-top: 4px; padding-bottom: 4px; }
+.nw{ white-space: nowrap; }
 .art-ia{ color: var(--rose); }
 .article-book .article-qlist.article-qlist--filets{ border-left: none; padding: 12px 0; margin: 26px 0 8px; border-top: 1px solid rgba(217,201,195,1); border-bottom: 1px solid rgba(217,201,195,1); text-align: center; }
 .article-qlist--filets p{ text-align: center !important; text-align-last: center !important; }
@@ -1020,6 +1003,8 @@ font-family: var(--sans); font-size: .76rem; font-weight: 600;
 letter-spacing: .18em; text-transform: uppercase;
 color: var(--plum); margin: 14px 0 0;
 }
+@media (max-width: 760px){.piliers{ grid-template-columns: 1fr; gap: 16px; }.pilier{ padding: 24px 22px; }.pilier *, .pilier-title, .pilier-sub, .pilier-btn{ overflow-wrap: normal; word-break: normal; hyphens: none; }}
+@media (max-width: 760px){.article-book-col .nw, .article-book-col .art-chip{ white-space: normal; }.article-book-col, .article-book-col > *{ min-width: 0; max-width: 100%; }}
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Pourquoi le shadow IA n’est-il pas une question de discipline ?", "acceptedAnswer": {"@type": "Answer", "text": "Parce que l’usage est massif, et partagé jusqu’en haut. Quand presque tout le monde contourne la règle, ce n’est plus un problème de personnes. C’est le signe que la règle ne répond pas au besoin. Punir ne changera rien. Tant que l’outil officiel est plus lent que l’outil personnel, chacun fera son choix, en silence. La bonne question devient donc : qu’est-ce que l’outil officiel ne permet pas de faire ? Le sujet, ce n’est pas la discipline des équipes. C’est la gouvernance autour."}}, {"@type": "Question", "name": "Que cache concrètement le shadow IA ?", "acceptedAnswer": {"@type": "Answer", "text": "Derrière l’expression, il y a des gens qui veulent gagner du temps : résumer un document, reformuler un message, préparer une réunion. Rien de malveillant. Mais tout ça se fait avec des outils que l’entreprise n’a pas évalués, et parfois avec des informations qui ne devraient jamais sortir de la maison. Le risque, ce n’est donc pas l’outil. C’est l’absence de règle claire sur ce qu’on peut lui confier, et l’absence de visibilité pour la direction. Tant que personne ne sait qui utilise quoi, personne ne peut ni protéger les données, ni tirer parti des bonnes idées qui circulent déjà."}}, {"@type": "Question", "name": "Quelles données ne doivent jamais sortir de l’entreprise ?", "acceptedAnswer": {"@type": "Answer", "text": "Les informations sur les clients, les contrats, les données personnelles, les éléments financiers non publics et tout ce qui relève du secret des affaires. Une charte utile le dit en une phrase simple, avec des exemples que chacun reconnaît dans son travail. Sur le volet réglementaire, notamment le RGPD, le guide AI Act et RGPD pour une PME détaille les obligations d’une PME qui utilise l’IA. Comment recenser les usages sans chercher de coupable ? En posant la question d’une manière qui ne sanctionne pas : quels outils vous font gagner du temps, et pour quelles tâches ? Un échange en petit groupe ou un court questionnaire anonyme donne une image plus honnête qu’un contrôle. L’objectif est de faire remonter les besoins réels, puis de leur répondre avec des outils approuvés."}}, {"@type": "Question", "name": "Quels sont les risques concrets du shadow IA ?", "acceptedAnswer": {"@type": "Answer", "text": "Trois familles de risques. 1) Une fuite d’informations, quand un document confidentiel est collé dans un outil non maîtrisé. 2) Une décision fondée sur une réponse fausse, non relue, qui circule ensuite comme un fait. 3) Un risque de conformité, quand des données personnelles sont traitées sans cadre. Aucun de ces risques n’exige une intention malveillante : ils naissent d’un geste ordinaire, fait pour gagner du temps. Pourquoi les interdictions échouent-elles souvent ? Parce qu’elles laissent le besoin intact. Une personne à qui l’on interdit un outil qui l’aide continue de chercher le même gain ailleurs, en dehors de tout regard. L’interdiction déplace l’usage dans l’ombre au lieu de le supprimer. Une règle qui propose une alternative, simple et sûre, a bien plus de chances d’être suivie qu’une règle qui se contente d’interdire."}}, {"@type": "Question", "name": "Pourquoi reconnaître l’usage réel avant de l’interdire ?", "acceptedAnswer": {"@type": "Answer", "text": "🎯 Quels réflexes changent la donne ? Pour commencer, trois suffisent. 1) Reconnaître l’usage réel. 2) Offrir des outils sûrs et simples. 3) Montrer l’exemple au sommet. Parce qu’il existe déjà, qu’on le veuille ou non. Interdire un usage que l’on ne connaît pas le fait passer dans l’ombre. Le recenser, sans chercher de coupable, donne enfin une image fidèle de ce que font les équipes. Comment offrir des outils sûrs plus simples que ceux qu’on cache ? En proposant des outils approuvés dont la prise en main est aussi rapide que celle des outils personnels. Si l’option sûre est plus lourde que l’option cachée, la seconde l’emportera."}}, {"@type": "Question", "name": "Pourquoi commencer par les pratiques du comité de direction ?", "acceptedAnswer": {"@type": "Answer", "text": "Parce que la cohérence commence en haut. Un comité de direction qui regarde honnêtement ses propres usages donne à la charte une crédibilité qu’aucune note interne ne peut remplacer. Une organisation ne sécurise jamais ce qu’elle refuse de regarder en face. Que doit contenir une charte IA utile ? Cinq éléments suffisent souvent. 1) Les usages autorisés. 2) Les données interdites. 3) Les outils approuvés. 4) Une personne référente à qui poser une question. 5) Une date de révision. Une charte de deux pages que chacun a lue vaut mieux qu’un document de vingt pages que personne n’ouvre. Elle doit aussi être écrite pour ceux qui l’utilisent, avec leurs tâches et leurs mots."}}, {"@type": "Question", "name": "À quelle fréquence la réviser ?", "acceptedAnswer": {"@type": "Answer", "text": "Régulièrement, parce que les outils et les usages évoluent vite. Un rythme trimestriel, avec un point court en comité de direction, permet d’ajouter un outil approuvé, de retirer un usage devenu risqué et de vérifier que la règle correspond toujours à la pratique. Une règle figée depuis un an décrit une situation qui n’existe plus. Comment un dirigeant donne-t-il l’exemple ? En appliquant lui-même la charte, en disant quels outils il utilise et pour quoi, et en acceptant que la question lui soit posée. Quand les cadres dirigeants font ce qu’ils demandent aux autres de faire, la règle cesse d’être une contrainte pour devenir une norme partagée. C’est la condition pour que la politique cesse d’être une fiction et redevienne un outil de pilotage."}}, {"@type": "Question", "name": "Par où commencer cette semaine ?", "acceptedAnswer": {"@type": "Answer", "text": "Par une conversation d’une demi-heure en comité de direction : quels outils IA chacun utilise-t-il réellement, et avec quelles informations ? Cette conversation, franche et sans jugement, vaut plus qu’une nouvelle version de la charte. Elle fournit la seule base solide pour décider de ce qu’on autorise, de ce qu’on propose et de ce qu’on interdit. Comment choisir les outils à approuver ? En partant des usages réels relevés chez vous, pas d’un catalogue de fonctionnalités. Trois questions aident. 1) Que devient l’information saisie ? 2) Qui y a accès ? 3) L’outil se prend-il en main en quelques minutes ? Il vaut mieux approuver peu d’outils, bien expliqués, que dresser une longue liste que personne ne consulte."}}, {"@type": "Question", "name": "Quel rôle donner à la fonction juridique ou au dirigeant délégué ?", "acceptedAnswer": {"@type": "Answer", "text": "Un rôle d’appui, pas de blocage. La personne référente répond vite aux questions, tient à jour la liste des outils approuvés et alerte le comité de direction quand un usage nouveau apparaît. Sans réponse rapide, les équipes se passent de l’avis. Dans une petite structure, ce référent peut être le dirigeant lui-même, à condition que sa disponibilité soit connue de tous. Comment sensibiliser sans culpabiliser ? En parlant de cas plausibles plutôt que de fautes. Un exemple simple, comme un compte rendu de réunion confidentiel collé dans un outil grand public, suffit à faire comprendre l’enjeu sans désigner personne. La sensibilisation fonctionne mieux quand elle vient du comité de direction lui-même, qui reconnaît ses propres usages avant de demander aux autres de changer les leurs."}}, {"@type": "Question", "name": "Que faire face à un usage déjà installé ?", "acceptedAnswer": {"@type": "Answer", "text": "Le recenser d’abord, sans jugement, puis décider : le conserver s’il est sûr, le remplacer par un outil approuvé s’il ne l’est pas, ou l’encadrer par une règle claire. Prévoyez une période de transition, pour que les équipes ne perdent pas ce qui leur fait gagner du temps. Annoncez le changement avec ses raisons. Un usage retiré sans explication réapparaît presque toujours ailleurs. Que faire des informations déjà partagées avec un outil non validé ? Évaluer calmement ce qui a pu être partagé, sans chercher de responsable. Selon la nature des informations, notamment si elles contiennent des données personnelles, demandez un avis juridique avant de décider de la suite. Notez ce qui a été appris et intégrez-le à la charte : c’est la meilleure façon d’éviter que la situation se reproduise."}}, {"@type": "Question", "name": "Qui doit porter ce sujet dans l’organisation ?", "acceptedAnswer": {"@type": "Answer", "text": "Un membre du comité de direction, désigné clairement, avec un relais opérationnel. Le sujet touche à la fois aux outils, aux données, aux ressources humaines et à la conformité. Sans propriétaire, il est traité par morceaux, et personne n’a la vue d’ensemble. Ce porteur n’a pas besoin d’être un spécialiste de l’IA. Il doit savoir poser les bonnes questions et trancher quand deux besoins s’opposent. Dans une PME, c’est souvent le dirigeant lui-même ou son bras droit. Ce qui compte, c’est que tout le monde sache à qui s’adresser, et que cette personne réponde vite."}}], "inLanguage": "fr-FR"}
