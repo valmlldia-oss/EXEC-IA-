@@ -1060,6 +1060,8 @@ section { padding: var(--section-gap) 0; }
 }
 .about-label--mission { margin-top: 26px; }
 .about-label--principe { margin-top: 26px; }
+/* Phrase signature EXEC'IA placée en tête, avant « Une conviction » */
+.about-principe-sub.about-principe-sub--top { margin: 0 0 26px !important; }
 /* Texte secondaire sous « Un principe » — sobre, plus petit que les lede */
 .about-principe-sub {
   font-family: var(--serif); font-size: 1.18rem; font-weight: 400;
