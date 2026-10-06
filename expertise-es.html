@@ -356,17 +356,6 @@ line-height: 1.1 !important;
 margin-bottom: 24px !important;
 font-weight: 400 !important;
 }
-.persp-track-outer{
-overflow-x: auto; overflow-y: hidden;
-scroll-snap-type: x mandatory;
-padding: .25rem 0 .5rem;
-cursor: grab;
-scroll-padding-left: 1.5rem;
-max-width: 100vw;
-scrollbar-width: none;
-}
-.persp-track-outer:active{ cursor: grabbing; }
-.persp-track-outer::-webkit-scrollbar{ display: none; }
 .persp-track{
 display: flex; gap: 1.25rem;
 width: max-content;
@@ -389,7 +378,7 @@ transition: transform .3s, box-shadow .3s;
 gap: 16px;
 width: max-content;
 padding-right: 0;
-}.persp-track-outer{ overflow-x: auto; scroll-snap-type: x mandatory; padding-top: .6rem; container-type: inline-size; scroll-padding-left: 0; }.persp-card{ width: 270px; flex: 0 0 auto; min-width: 0; }}
+}.persp-card{ width: 270px; flex: 0 0 auto; min-width: 0; }}
 @supports (width: 1cqw){@media (min-width: 1160px){.persp-card{ width: calc((100cqw - 48px) / 4); }}}
 @media (max-width: 640px){.persp-card{ width: 82vw; }}
 .article-tldr{
@@ -1750,7 +1739,6 @@ box-shadow: 0 12px 32px rgba(99,59,74,.25);
 }.nav-links.open a{ color: #FAF6F2 !important; font-size: 1rem; max-width: none !important; }.nav-links.open a::after{ background: #C75F62; }}
 @media (max-width: 1260px){.footer-brand .footer-tag, .footer-brand .footer-mention-ia{ white-space: normal; }}
 @media (max-width: 1100px){.piliers{ grid-template-columns: repeat(3, minmax(0, 1fr)); }.pilier{ min-width: 0; }.pilier *, .newsletter-content *, .nl-box *{ overflow-wrap: anywhere; }}
-@media (max-width: 1100px){.persp-track-outer{ max-width: 100%; }}
 @media (max-width: 1200px){.about-lede--1l, .about-principe-sub--1l, .tl-item--essec h3, .tl-item--essec .tl-role,
 .tl-studeria-topics, .tl-studeria-quote, .agents-tasks-1l, .tl-intro--diff, .tl-one-line,
 .article-page--guide .article-title--2l,
@@ -1762,7 +1750,6 @@ body.art-justify .article-book .article-intro p{ text-align: justify; text-align
 .footer-col a.footer-instagram-btn{ margin-top: -6px; }
 .footer-bottom{ padding-top: 2px; padding-bottom: 4px; }
 .footer-legal a{ padding-top: 4px; padding-bottom: 4px; }
-.nw{ white-space: nowrap; }
 body.art-justify .article-book .article-intro p, body.art-justify .article-book .article-intro ul.art-list li{ hyphens: auto; -webkit-hyphens: auto; hyphenate-limit-chars: 5 2 2; text-wrap: pretty; }
 .footer-col--site{ position: relative; }
 .footer-col--site .footer-persp-c2{ position: absolute; left: 18.75rem; bottom: 0; }
@@ -1880,6 +1867,29 @@ color: var(--plum); margin: 14px 0 0;
 }
 @media (max-width: 760px){.piliers{ grid-template-columns: 1fr; gap: 16px; }.pilier{ padding: 24px 22px; }.pilier *, .pilier-title, .pilier-sub, .pilier-btn{ overflow-wrap: normal; word-break: normal; hyphens: none; }}
 @media (max-width: 760px){.article-book-col .nw, .article-book-col .art-chip{ white-space: normal; }.article-book-col, .article-book-col > *{ min-width: 0; max-width: 100%; }}
+.rbd-week{ display: flex; align-items: center; gap: 14px; flex-wrap: wrap; background: var(--plum); color: var(--white); padding: 12px 16px; margin-bottom: 10px; }
+.rbd-week label{ font-weight: 500; font-size: .9rem; }
+.rbd-assigned{ flex-basis: 100%; font-size: .78rem; color: var(--pale-rose); }
+.rbd-tasks{ display: flex; flex-direction: column; gap: 10px; }
+.rbd-task{ background: var(--ivory); border: 1px solid var(--pale-rose); padding: 12px 14px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 16px; align-items: center; }
+.rbd-task-name{ font-weight: 500; font-size: .95rem; line-height: 1.35; }
+.rbd-seg{ display: flex; gap: 6px; flex-wrap: wrap; }
+.rbd-seg button, .rbd-chip{ font-family: var(--sans); cursor: pointer; border: 1px solid var(--pale-rose); background: var(--white); color: var(--plum); border-radius: 999px; white-space: nowrap; }
+.rbd-seg button{ padding: 5px 12px; font-size: .82rem; }
+.rbd-seg button:hover, .rbd-chip:hover{ border-color: var(--rose); }
+.rbd-seg button[aria-pressed="true"]{ border-color: transparent; }
+.rbd-hours{ grid-column: 1 / -1; display: flex; align-items: center; gap: 12px; }
+.rbd-chip{ font-size: .88rem; padding: 7px 14px; }
+.rbd-chip[aria-pressed="true"]{ background: var(--plum); border-color: var(--plum); color: var(--white); }
+.rbd-sb{ font-weight: 600; }
+.rbd-verdict{ white-space: pre-line; margin: 0 0 14px; font-size: 1rem; line-height: 1.55; }
+.rbd-toast{ font-size: .82rem; color: var(--rose); min-height: 1.4em; margin: 6px 0 0; }
+.rbd-copy-out{ width: 100%; min-height: 200px; margin-top: 8px; font: .78rem/1.5 var(--sans); color: var(--plum); background: var(--white); border: 1px solid var(--pale-rose); padding: 8px; }
+@media (max-width: 700px){.rbd-task{ grid-template-columns: 1fr; }}
+.risk-hl{ color: var(--rose); font-weight: 600; }
+.offres-crosslink{ margin: 14px 0 0; font-family: var(--sans); font-size: .95rem; }
+.offres-crosslink .portrait-link{ color: var(--plum); }
+.offres-crosslink .portrait-link:hover{ color: var(--rose); }
 </style>
 </head>
 <body>
@@ -2150,7 +2160,7 @@ color: var(--plum); margin: 14px 0 0;
           </div>
           <details class="agent-more">
             <summary class="agent-cta"><span>Descubrir REFERENTE</span> <span class="portrait-link-arrow">→</span></summary>
-            <p class="agent-desc-full">REFERENTE es tu agente de reclutamiento con IA, pensado para detectar los perfiles adecuados antes de que la competencia se les adelante. Preselecciona las candidaturas relevantes, facilita la incorporación de los nuevos colaboradores y sigue los plazos de recursos humanos. La preselección de candidaturas entra en los usos de «&nbsp;alto riesgo&nbsp;» del AI Act (anexo III): REFERENTE está concebido como una ayuda a la preselección, encuadrada por una revisión jurídica dedicada antes de cualquier despliegue. Tú conservas la decisión final de cada contratación: REFERENTE se encarga de la selección.</p>
+            <p class="agent-desc-full">REFERENTE es tu agente de reclutamiento con IA, pensado para detectar los perfiles adecuados antes de que la competencia se les adelante. Preselecciona las candidaturas relevantes, facilita la incorporación de los nuevos colaboradores y sigue los plazos de recursos humanos. La preselección de candidaturas entra en los usos de «&nbsp;<span class="risk-hl">alto riesgo</span>&nbsp;» del AI Act (anexo III): REFERENTE está concebido como una ayuda a la preselección, encuadrada por una revisión jurídica dedicada antes de cualquier despliegue. Tú conservas la decisión final de cada contratación: REFERENTE se encarga de la selección.</p>
           </details>
         </div>
       </div>
@@ -2491,7 +2501,7 @@ color: var(--plum); margin: 14px 0 0;
 
     <div class="funding-note reveal">
       <p class="funding-note-title">Gobernanza y cumplimiento</p>
-      <p>Un agente de IA que trata sus datos debe integrar el <strong style="font-weight:600">RGPD y la Ley de IA</strong> europea desde el diseño, no como un trámite posterior. Es un rigor practicado en <span class="art-chip">Bureau Veritas</span> en Argentina, grupo internacional de referencia en inspección, ensayos y certificación, antes de aplicarlo al diseño de los agentes de IA de EXEC'<span style="color:#C75F62">IA</span>.</p>
+      <p>Un agente de IA que trata sus datos debe integrar el <strong style="font-weight:600">RGPD y la Ley de IA</strong> europea desde el diseño, no como un trámite posterior. Es un rigor practicado en <span class="art-chip">Bureau Veritas</span>, grupo internacional de referencia en inspección, ensayos y certificación, antes de aplicarlo al diseño de los agentes de IA de EXEC'<span style="color:#C75F62">IA</span>.</p>
       <p><a href="mentions-legales-es.html#datos">El tratamiento de datos personales</a> detalla las bases legales, plazos de conservación y transferencias aplicadas.</p>
       <a class="guide-link-card" href="conformite-ia-pme-es.html">
         <span class="guide-link-title">AI Act &amp; RGPD para una PYME</span>
@@ -2511,6 +2521,7 @@ color: var(--plum); margin: 14px 0 0;
     <p class="slide-intro expertise-contact-text">Cada organización es diferente.<br>Identifiquemos juntos los usos más pertinentes para su actividad.</p>
     <div class="expertise-contact-cta">
       <a href="https://calendly.com/exec-ia" target="_blank" rel="noopener" class="btn btn-rose questions-cta-btn">Reservar una conversación <span class="btn-arrow">→</span></a>
+      <p class="offres-crosslink"><a href="offres-es.html" class="portrait-link">Ver las ofertas de EXEC&#8217;IA <span class="portrait-link-arrow">→</span></a></p>
     </div>
   </div>
 </section>
@@ -2543,6 +2554,7 @@ color: var(--plum); margin: 14px 0 0;
     <a href="perspective-chatbot-savoir-passer-la-main-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Cuándo debe un chatbot pasar el relevo?</a>
     <a href="perspective-budget-ia-adhesion-equipes-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Por qué pesa más la adhesión que el presupuesto?</a>
     <a href="perspective-shadow-ia-charte-comite-direction-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Qué herramientas de <span style="color:var(--rose)">IA</span> usan sus equipos?</a>
+    <a href="perspective-robots-humanoides-token-tax-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Qué tareas confiaría a un robot humanoide?</a>
     </div>
     </div>
 

@@ -240,17 +240,6 @@ transform: translateY(-2px);
 }
 .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 24px; }
 @media (max-width: 900px){.ce-que-section{ padding: var(--section-gap) 0; }}
-.persp-track-outer{
-overflow-x: auto; overflow-y: hidden;
-scroll-snap-type: x mandatory;
-padding: .25rem 0 .5rem;
-cursor: grab;
-scroll-padding-left: 1.5rem;
-max-width: 100vw;
-scrollbar-width: none;
-}
-.persp-track-outer:active{ cursor: grabbing; }
-.persp-track-outer::-webkit-scrollbar{ display: none; }
 .persp-track{
 display: flex; gap: 1.25rem;
 width: max-content;
@@ -273,7 +262,7 @@ transition: transform .3s, box-shadow .3s;
 gap: 16px;
 width: max-content;
 padding-right: 0;
-}.persp-track-outer{ overflow-x: auto; scroll-snap-type: x mandatory; padding-top: .6rem; container-type: inline-size; scroll-padding-left: 0; }.persp-card{ width: 270px; flex: 0 0 auto; min-width: 0; }}
+}.persp-card{ width: 270px; flex: 0 0 auto; min-width: 0; }}
 @supports (width: 1cqw){@media (min-width: 1160px){.persp-card{ width: calc((100cqw - 48px) / 4); }}}
 @media (max-width: 640px){.persp-card{ width: 82vw; }}
 .article-page{ padding-top: calc(var(--nav-h) + 32px); padding-bottom: clamp(24px, 3vw, 40px); }
@@ -728,18 +717,6 @@ position: relative;
 z-index: 1;
 height: auto;
 }
-.agents-track-outer{
-overflow-x: auto;
-overflow-y: hidden;
-scroll-snap-type: x mandatory;
-padding: .25rem 0 .5rem;
-cursor: grab;
-scroll-padding-left: 1.5rem;
-max-width: 100vw;
-}
-.agents-track-outer:active{ cursor: grabbing; }
-.agents-track-outer{ scrollbar-width: none; }
-.agents-track-outer::-webkit-scrollbar{ display: none; }
 .agents-track{
 display: flex;
 gap: 1.25rem;
@@ -781,7 +758,7 @@ object-position: center;
 .nl-box-form{
 display: none;
 }
-@media (max-width: 1024px){.nav-links{ gap: 18px; }.nav-links a{ font-size: .72rem; }.agents-track-outer{ padding: .5rem 0 1rem; scroll-padding-left: 16px; }}
+@media (max-width: 1024px){.nav-links{ gap: 18px; }.nav-links a{ font-size: .72rem; }}
 @media (max-width: 768px){html{ overflow-x: clip !important; }body{ overflow-x: hidden !important; max-width: 100vw; }*, *::before, *::after{ max-width: 100% !important; box-sizing: border-box; }.hero-tagline, .hero-sub, .hero-sub2, .testi-intro,
 .ia-perf-stat-label, .roi-intro, .offre-decouverte-btn,
 .agents-cta-title, .xcard-tag, .tl-date, .pillar p,
@@ -913,7 +890,6 @@ box-shadow: 0 12px 32px rgba(99,59,74,.25);
 }.nav-links.open a{ color: #FAF6F2 !important; font-size: 1rem; max-width: none !important; }.nav-links.open a::after{ background: #C75F62; }}
 @media (max-width: 1260px){.footer-brand .footer-tag, .footer-brand .footer-mention-ia{ white-space: normal; }}
 @media (max-width: 1100px){.piliers{ grid-template-columns: repeat(3, minmax(0, 1fr)); }.pilier{ min-width: 0; }.pilier *, .newsletter-content *, .nl-box *{ overflow-wrap: anywhere; }}
-@media (max-width: 1100px){.persp-track-outer{ max-width: 100%; }}
 .article-book-folio[data-n]::before{ content: attr(data-n); }
 .art-chip{ font-family: var(--sans); font-weight: 600; font-style: normal; font-size: .92em; color: var(--plum); background: rgba(217,201,195,.38); padding: .04em .38em; border-radius: 4px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 .article-book h3.article-meta{ margin-top: 32px; margin-bottom: 12px; }
@@ -931,7 +907,6 @@ body.art-justify .article-book .article-intro p.art-enum{ text-align: left; }
 .footer-col a.footer-instagram-btn{ margin-top: -6px; }
 .footer-bottom{ padding-top: 2px; padding-bottom: 4px; }
 .footer-legal a{ padding-top: 4px; padding-bottom: 4px; }
-.nw{ white-space: nowrap; }
 .art-ia{ color: var(--rose); }
 .art-em{ font-weight: 600; }
 .article-book .article-qlist.article-qlist--filets{ border-left: none; padding: 12px 0; margin: 26px 0 8px; border-top: 1px solid rgba(217,201,195,1); border-bottom: 1px solid rgba(217,201,195,1); text-align: center; }
@@ -1006,6 +981,24 @@ color: var(--plum); margin: 14px 0 0;
 }
 @media (max-width: 760px){.piliers{ grid-template-columns: 1fr; gap: 16px; }.pilier{ padding: 24px 22px; }.pilier *, .pilier-title, .pilier-sub, .pilier-btn{ overflow-wrap: normal; word-break: normal; hyphens: none; }}
 @media (max-width: 760px){.article-book-col .nw, .article-book-col .art-chip{ white-space: normal; }.article-book-col, .article-book-col > *{ min-width: 0; max-width: 100%; }}
+.rbd-week{ display: flex; align-items: center; gap: 14px; flex-wrap: wrap; background: var(--plum); color: var(--white); padding: 12px 16px; margin-bottom: 10px; }
+.rbd-assigned{ flex-basis: 100%; font-size: .78rem; color: var(--pale-rose); }
+.rbd-tasks{ display: flex; flex-direction: column; gap: 10px; }
+.rbd-task{ background: var(--ivory); border: 1px solid var(--pale-rose); padding: 12px 14px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 16px; align-items: center; }
+.rbd-task-name{ font-weight: 500; font-size: .95rem; line-height: 1.35; }
+.rbd-seg{ display: flex; gap: 6px; flex-wrap: wrap; }
+.rbd-seg button, .rbd-chip{ font-family: var(--sans); cursor: pointer; border: 1px solid var(--pale-rose); background: var(--white); color: var(--plum); border-radius: 999px; white-space: nowrap; }
+.rbd-seg button{ padding: 5px 12px; font-size: .82rem; }
+.rbd-seg button:hover, .rbd-chip:hover{ border-color: var(--rose); }
+.rbd-seg button[aria-pressed="true"]{ border-color: transparent; }
+.rbd-hours{ grid-column: 1 / -1; display: flex; align-items: center; gap: 12px; }
+.rbd-chip{ font-size: .88rem; padding: 7px 14px; }
+.rbd-chip[aria-pressed="true"]{ background: var(--plum); border-color: var(--plum); color: var(--white); }
+.rbd-sb{ font-weight: 600; }
+.rbd-verdict{ white-space: pre-line; margin: 0 0 14px; font-size: 1rem; line-height: 1.55; }
+.rbd-toast{ font-size: .82rem; color: var(--rose); min-height: 1.4em; margin: 6px 0 0; }
+.rbd-copy-out{ width: 100%; min-height: 200px; margin-top: 8px; font: .78rem/1.5 var(--sans); color: var(--plum); background: var(--white); border: 1px solid var(--pale-rose); padding: 8px; }
+@media (max-width: 700px){.rbd-task{ grid-template-columns: 1fr; }}
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Que dit vraiment ce chiffre de 30 % ?", "acceptedAnswer": {"@type": "Answer", "text": "Aujourd’hui, Louis traite seul 30 % des demandes clients. Le reste bascule vers un humain, et le client n’a pas besoin de tout redemander. Ce qui me frappe dans ce chiffre ? Ce n’est pas l’IA qui a le plus progressé. C’est la frontière qu’Air France a appris à tracer entre l’outil et la personne. Ce n’est pas un cas isolé. Selon Salesforce, en 2025, les équipes de service client confient déjà en moyenne 30 % de leurs dossiers à l’IA. Elles pensent monter à 50 % d’ici 2027. Autrement dit, la question de la frontière va se poser dans presque tous les services client, PME comprises."}}, {"@type": "Question", "name": "Pourquoi la passation compte-t-elle autant que l’automatisation ?", "acceptedAnswer": {"@type": "Answer", "text": "Parce que votre client ne juge pas la technologie. Il juge son parcours. Vous pouvez réussir 30 % des demandes en automatique et tout perdre sur une seule passation ratée : celle où le client doit tout répéter à un conseiller qui ne sait rien de l’échange précédent. Une bonne passation transmet le contexte : ce que le client a demandé, ce que l’outil a répondu, ce qui reste à résoudre. Le conseiller reprend la conversation là où elle s’est arrêtée. Pour l’entreprise, c’est un détail d’organisation. Pour le client, c’est toute la différence entre « on s’occupe de moi » et « je recommence à zéro »."}}, {"@type": "Question", "name": "Quelles demandes ne jamais automatiser de bout en bout ?", "acceptedAnswer": {"@type": "Answer", "text": "Celles où l’enjeu est élevé ou l’émotion forte : un litige, une urgence, un client en difficulté, une décision qui engage l’entreprise. Ces demandes sont souvent peu nombreuses. Mais leur effet sur la confiance est énorme. Pour ces cas-là, la meilleure automatisation repère la situation et prévient vite un humain. Que retenir de l’exemple d’Air France ? Que le résultat ne vient pas de la sophistication de l’outil. Il vient de la clarté des rôles. L’assistant traite ce qui est fréquent et simple. Les personnes traitent ce qui demande du jugement, de l’écoute ou une décision. Cette répartition bouge : on la revoit à mesure que l’outil progresse et que les équipes voient ce qu’il fait bien."}}, {"@type": "Question", "name": "Que peut-on automatiser sans risque ?", "acceptedAnswer": {"@type": "Answer", "text": "Les demandes fréquentes, factuelles, à réponse stable : l’état d’une commande, un horaire, une règle connue, un document à retrouver. La bonne réponse ne dépend ni de l’humeur du client ni d’un arbitrage. C’est là que l’automatisation libère le plus de temps à vos équipes. C’est aussi là que l’erreur coûte le moins. Comment un client vit-il une passation ratée ? Comme un aveu : l’entreprise ne s’est pas organisée pour lui. Il répète son problème, il attend, il change de canal. Il en garde un souvenir plus fort que toutes les réponses réussies. La confiance se perd rarement sur une erreur isolée. Elle se perd quand on a le sentiment de ne pas être écouté, surtout quand c’est urgent."}}, {"@type": "Question", "name": "Le client répète-t-il sa question avant d’obtenir une réponse utile ?", "acceptedAnswer": {"@type": "Answer", "text": "Comment sentir la limite avant de la franchir ? Pour moi, trois signaux suffisent. 1) Le client répète sa question. 2) Il ne trouve pas comment joindre un humain. 3) Le ton ne suit pas la gravité de la demande. Quand la même question revient plusieurs fois, l’outil ne répond pas au vrai besoin. C’est le premier signal : la conversation doit changer de main. Existe-t-il une option simple pour joindre un humain ? Si aucune option claire n’apparaît, le client se sent enfermé. Une bonne automatisation rend la sortie vers une personne visible et immédiate. Un bouton, une phrase, un numéro : peu importe la forme, pourvu qu’on le trouve sans chercher."}}, {"@type": "Question", "name": "Le ton s’adapte-t-il à la gravité de la demande ?", "acceptedAnswer": {"@type": "Answer", "text": "Le ton ne peut pas rester le même pour une question anodine et pour une urgence. Une grève du personnel n’appelle pas le même registre qu’une question de bagage. L’IA traite le volume. Reconnaître le bon moment pour passer la main, ça reste un réflexe humain. Qui décide de la limite entre l’outil et la personne ? Une personne identifiée, pas un réglage technique. La limite est une décision de service : quelles demandes l’assistant traite seul, lesquelles il transmet, sur quels signaux. Elle a un propriétaire, elle est écrite, et elle est revue. Sans propriétaire, la limite se déplace toute seule, au fil des mises à jour, sans que personne l’ait choisie."}}, {"@type": "Question", "name": "Comment savoir si la limite est bien placée ?", "acceptedAnswer": {"@type": "Answer", "text": "En écoutant deux sources : les clients, à travers leurs retours et leurs demandes répétées, et les conseillers, qui voient ce qui leur arrive après la passation. Si les conseillers reçoivent souvent des demandes mal comprises, l’outil garde trop longtemps la main. S’ils reçoivent des demandes simples, il la passe trop tôt. Le pourcentage de demandes traitées seul est un résultat à lire avec prudence : il compte moins que la satisfaction de ceux qui sont passés par l’outil. Par où commencer dans votre service client ? Par les demandes les plus fréquentes et les plus simples : c’est là que l’automatisation libère le plus de temps, avec le moins de risque. En même temps, définissez dès le départ les signaux qui déclenchent le passage à une personne. Puis vérifiez que ce passage est visible et rapide. Ensuite, élargir progressivement, en gardant toujours la même règle : l’outil traite le volume, la personne traite ce qui compte."}}, {"@type": "Question", "name": "Quelle question poser à vos équipes ?", "acceptedAnswer": {"@type": "Answer", "text": "Une seule : dans quels cas votre client a-t-il eu l’impression de parler à quelqu’un qui ne le comprenait pas ? Les réponses dessinent presque toujours la frontière que l’entreprise n’a pas encore tracée. C’est à cet endroit que se joue la qualité de la relation, bien plus que dans le pourcentage de demandes traitées. Que doit-on transmettre à la personne qui reprend la conversation ? Le contexte complet : la demande initiale, les réponses déjà données, les informations déjà fournies par le client et le point exact où l’échange a buté. La personne doit pouvoir répondre sans poser une seule question déjà posée. Ce résumé se prépare à l’avance, avec les équipes qui reçoivent les demandes, et se teste régulièrement sur des cas réels."}}, {"@type": "Question", "name": "Comment associer les équipes de terrain ?", "acceptedAnswer": {"@type": "Answer", "text": "En leur donnant la parole sur la frontière. Les conseillers savent quelles demandes reviennent, lesquelles se compliquent et lesquelles gagnent à être traitées de vive voix. Leur avis évite de déplacer la limite à l’aveugle. Une revue régulière de quelques échanges réels, avec eux, suffit à repérer les ajustements utiles. Quel indicateur suivre en priorité ? Moins la part de demandes traitées seul que la satisfaction de celles et ceux qui sont passés par l’outil, et le temps qu’il faut pour joindre une personne quand on le souhaite. Un taux d’automatisation élevé peut cacher une frustration réelle. Le bon objectif n’est pas de faire disparaître les échanges humains, mais de les réserver aux moments où ils comptent le plus."}}, {"@type": "Question", "name": "Comment tester le dispositif avant de le généraliser ?", "acceptedAnswer": {"@type": "Answer", "text": "En rejouant des demandes réelles, y compris les plus délicates : une réclamation, une urgence, une question mal formulée. Observez à quel moment l’outil aurait dû passer la main, et ce que la personne reçoit à ce moment. Un test de quelques dizaines d’échanges, relus par les conseillers, apprend plus qu’une démonstration réussie sur trois cas soigneusement choisis. Que dire au client pour qu’il fasse confiance à l’outil ? La vérité : il parle à un assistant, voici ce que cet assistant sait faire, et voici comment joindre une personne. Un client prévenu accepte mieux les limites de l’outil qu’un client qui découvre, en plein échange, qu’il ne parle pas à un humain. La transparence est aussi une politesse : elle montre que l’entreprise assume ce qu’elle a mis en place."}}, {"@type": "Question", "name": "Comment préparer les conseillers à reprendre la main ?", "acceptedAnswer": {"@type": "Answer", "text": "En leur apprenant à reprendre sans reposer les questions déjà posées, et à reconnaître le ton d’un client déjà fatigué. Reprendre la conversation est un geste professionnel à part entière, qui mérite une courte formation. Les conseillers doivent aussi savoir quand signaler à l’équipe qu’un motif de passation revient, pour que la frontière soit ajustée. Comment garder la maîtrise quand l’outil évolue ? En considérant chaque évolution comme un changement de frontière à décider, pas comme une mise à jour technique. Avant d’élargir le périmètre de l’assistant, la question à poser est simple : quelles nouvelles demandes l’assistant va-t-il traiter seul, et qui vérifie que cela reste acceptable pour le client ? Une relecture régulière de quelques échanges réels, à chaque évolution, protège la qualité de la relation."}}], "inLanguage": "fr-FR"}
@@ -1324,6 +1317,7 @@ color: var(--plum); margin: 14px 0 0;
     <a href="perspective-chatbot-savoir-passer-la-main.html" class="footer-persp-link footer-persp-link--c2">→ Où tracer la limite entre chatbot et humain&nbsp;?</a>
     <a href="perspective-budget-ia-adhesion-equipes.html" class="footer-persp-link footer-persp-link--c2">→ L’adhésion compte-t-elle plus que le budget&nbsp;?</a>
     <a href="perspective-shadow-ia-charte-comite-direction.html" class="footer-persp-link footer-persp-link--c2">→ Quels outils <span style="color:var(--rose)">IA</span> vos équipes utilisent-elles&nbsp;?</a>
+    <a href="perspective-robots-humanoides-token-tax.html" class="footer-persp-link footer-persp-link--c2">→ Quelles tâches confier à un robot humanoïde&nbsp;?</a>
     </div>
     </div>
 

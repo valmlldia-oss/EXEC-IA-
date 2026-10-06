@@ -241,17 +241,21 @@ transform: translateY(-2px);
 }
 .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 24px; }
 @media (max-width: 900px){.ce-que-section{ padding: var(--section-gap) 0; }}
-.persp-track-outer{
-overflow-x: auto; overflow-y: hidden;
-scroll-snap-type: x mandatory;
-padding: .25rem 0 .5rem;
-cursor: grab;
-scroll-padding-left: 1.5rem;
-max-width: 100vw;
-scrollbar-width: none;
+.portrait-link{
+display: inline-flex; align-items: center; gap: 8px;
+font-family: var(--sans); font-size: 1rem; font-weight: 500;
+color: var(--rose); letter-spacing: .02em;
+margin-top: 2px;
+white-space: nowrap;
+transition: opacity .2s;
 }
-.persp-track-outer:active{ cursor: grabbing; }
-.persp-track-outer::-webkit-scrollbar{ display: none; }
+@media (max-width: 480px){.portrait-link{ white-space: normal; }}
+.portrait-link:hover{ opacity: .75; }
+.portrait-link-arrow{ transition: transform .2s var(--ease); display: inline-block; }
+.portrait-link:hover .portrait-link-arrow{ transform: translateX(4px); }
+.portrait-link .portrait-link-arrow{ animation: hero-cta-nudge 5s ease-in-out infinite; }
+.portrait-link:hover .portrait-link-arrow{ animation: none; }
+@media (prefers-reduced-motion: reduce){.portrait-link .portrait-link-arrow{ animation: none; }}
 .persp-track{
 display: flex; gap: 1.25rem;
 width: max-content;
@@ -274,7 +278,7 @@ transition: transform .3s, box-shadow .3s;
 gap: 16px;
 width: max-content;
 padding-right: 0;
-}.persp-track-outer{ overflow-x: auto; scroll-snap-type: x mandatory; padding-top: .6rem; container-type: inline-size; scroll-padding-left: 0; }.persp-card{ width: 270px; flex: 0 0 auto; min-width: 0; }}
+}.persp-card{ width: 270px; flex: 0 0 auto; min-width: 0; }}
 @supports (width: 1cqw){@media (min-width: 1160px){.persp-card{ width: calc((100cqw - 48px) / 4); }}}
 @media (max-width: 640px){.persp-card{ width: 82vw; }}
 .article-page{ padding-top: calc(var(--nav-h) + 32px); padding-bottom: clamp(24px, 3vw, 40px); }
@@ -531,6 +535,11 @@ color: rgba(99,59,74,.88);
 }
 .footer-col a:hover{ color: var(--rose); }
 .footer-col .footer-loc{ color: rgba(99,59,74,.55); }
+.footer-col a.footer-persp-link{
+font-size: .78rem; padding-left: 6px; margin-top: -7px;
+line-height: 1.3; white-space: nowrap;
+color: rgba(99,59,74,.68);
+}
 .footer-col a.footer-lang-btn{
 border: 1px solid rgba(99,59,74,.3);
 border-radius: 4px;
@@ -743,18 +752,6 @@ position: relative;
 z-index: 1;
 height: auto;
 }
-.agents-track-outer{
-overflow-x: auto;
-overflow-y: hidden;
-scroll-snap-type: x mandatory;
-padding: .25rem 0 .5rem;
-cursor: grab;
-scroll-padding-left: 1.5rem;
-max-width: 100vw;
-}
-.agents-track-outer:active{ cursor: grabbing; }
-.agents-track-outer{ scrollbar-width: none; }
-.agents-track-outer::-webkit-scrollbar{ display: none; }
 .agents-track{
 display: flex;
 gap: 1.25rem;
@@ -796,7 +793,7 @@ object-position: center;
 .nl-box-form{
 display: none;
 }
-@media (max-width: 1024px){.nav-links{ gap: 18px; }.nav-links a{ font-size: .72rem; }.agents-track-outer{ padding: .5rem 0 1rem; scroll-padding-left: 16px; }}
+@media (max-width: 1024px){.nav-links{ gap: 18px; }.nav-links a{ font-size: .72rem; }}
 @media (max-width: 768px){html{ overflow-x: clip !important; }body{ overflow-x: hidden !important; max-width: 100vw; }*, *::before, *::after{ max-width: 100% !important; box-sizing: border-box; }.hero-tagline, .hero-sub, .hero-sub2, .testi-intro,
 .ia-perf-stat-label, .roi-intro, .offre-decouverte-btn,
 .agents-cta-title, .xcard-tag, .tl-date, .pillar p,
@@ -1042,6 +1039,9 @@ html{ scroll-behavior: smooth; }
 body{ overflow-wrap: break-word; overflow-x: clip; }
 @media (max-width: 640px){.aiact-ref, .aiact-key, .article-page p, .article-page li{ overflow-wrap: anywhere; }img, svg, video, iframe{ max-width: 100%; }}
 @media (max-width: 640px){.aiact-ref{ white-space: normal; }.offres-grid > *, .offres-grid-4 > *, .pilier, .acc-title{ min-width: 0; }.acc-icon{ flex-shrink: 0; }.offre-card *, .newsletter-content *, .pilier *, .acc-item *{ overflow-wrap: anywhere; }}
+.footer-persp-c2{ position: absolute; left: 0; bottom: 0; display: flex; flex-direction: column; gap: 6px; }
+.footer-col .footer-persp-c2 a.footer-persp-link{ margin-top: 0; padding-left: 0; white-space: nowrap; }
+@media (max-width: 900px){.footer-persp-c2{ position: static; margin-top: 14px; }.footer-col .footer-persp-c2 a.footer-persp-link{ white-space: normal; }}
 @media (max-width: 1180px){.nav-links{ display: none; }.nav-burger{ display: flex; }#nav{ overflow: visible; }.nav-links.open{
 display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start;
 position: fixed; top: var(--nav-h); left: 0; right: 0; bottom: auto; width: 100vw; height: auto;
@@ -1050,7 +1050,6 @@ box-shadow: 0 12px 32px rgba(99,59,74,.25);
 }.nav-links.open a{ color: #FAF6F2 !important; font-size: 1rem; max-width: none !important; }.nav-links.open a::after{ background: #C75F62; }}
 @media (max-width: 1260px){.footer-brand .footer-tag, .footer-brand .footer-mention-ia{ white-space: normal; }}
 @media (max-width: 1100px){.piliers{ grid-template-columns: repeat(3, minmax(0, 1fr)); }.pilier{ min-width: 0; }.pilier *, .newsletter-content *, .nl-box *{ overflow-wrap: anywhere; }}
-@media (max-width: 1100px){.persp-track-outer{ max-width: 100%; }}
 @media (max-width: 1200px){.about-lede--1l, .about-principe-sub--1l, .tl-item--essec h3, .tl-item--essec .tl-role,
 .tl-studeria-topics, .tl-studeria-quote, .agents-tasks-1l, .tl-intro--diff, .tl-one-line,
 .article-page--guide .article-title--2l,
@@ -1061,15 +1060,16 @@ body.art-justify .article-book .article-intro p{ text-align: justify; text-align
 .footer-col a.footer-instagram-btn{ margin-top: -6px; }
 .footer-bottom{ padding-top: 2px; padding-bottom: 4px; }
 .footer-legal a{ padding-top: 4px; padding-bottom: 4px; }
-.nw{ white-space: nowrap; }
 body.art-justify .article-book .article-intro p, body.art-justify .article-book .article-intro ul.art-list li{ hyphens: auto; -webkit-hyphens: auto; hyphenate-limit-chars: 5 2 2; text-wrap: pretty; }
 .footer-grid > .footer-col--contact{ margin-right: 0; }
 .footer-grid > .footer-col--contact a, .footer-grid > .footer-col--contact .footer-loc{ color: rgba(99,59,74,.88); }
 .footer-grid > .footer-col--contact .footer-loc{ color: rgba(99,59,74,.55); }
 .footer-bottom .footer-copy{ grid-column: 3; justify-self: start; }
+@media (max-width: 1250px){.footer-col .footer-persp-c2 a.footer-persp-link{ white-space: normal; }}
 @media (min-width: 901px){.footer-brand{ margin-top: 0; }.footer-brand .footer-logo-main{ margin-left: calc(225px * -30 / 450); margin-top: calc(225px * -46 / 450 + 3px); }.footer-tag-lead{ white-space: nowrap; }}
 @media (max-width: 900px){.footer-brand .footer-logo-main{ margin-left: calc(190px * -30 / 450); }.footer-tag-lead{ white-space: nowrap; font-size: clamp(1.5rem, calc((100vw - 44px) / 12.4), 2.09rem); }.footer-tag-rest{ font-size: clamp(1.1rem, calc((100vw - 44px) / 17.6), 1.87rem); }}
 @media (max-width: 560px){.footer-brand .footer-logo-main{ margin-left: calc(170px * -30 / 450); }}
+@media (max-width: 1250px){.footer-col .footer-persp-c2 a.footer-persp-link{ padding-left: 6px; }}
 .footer-tag-rest{ white-space: nowrap; }
 .article-book-col{ padding-bottom: 48px; }
 .article-book-folio{ bottom: 12px; }
@@ -1174,7 +1174,30 @@ letter-spacing: .18em; text-transform: uppercase;
 color: var(--plum); margin: 14px 0 0;
 }
 @media (max-width: 760px){.piliers{ grid-template-columns: 1fr; gap: 16px; }.pilier{ padding: 24px 22px; }.pilier *, .pilier-title, .pilier-sub, .pilier-btn{ overflow-wrap: normal; word-break: normal; hyphens: none; }}
-@media (max-width: 760px){.article-book-col .nw, .article-book-col .art-chip{ white-space: normal; }.article-book-col, .article-book-col > *{ min-width: 0; max-width: 100%; }}
+@media (max-width: 760px){.article-book-col, .article-book-col > *{ min-width: 0; max-width: 100%; }}
+.rbd-week{ display: flex; align-items: center; gap: 14px; flex-wrap: wrap; background: var(--plum); color: var(--white); padding: 12px 16px; margin-bottom: 10px; }
+.rbd-week label{ font-weight: 500; font-size: .9rem; }
+.rbd-assigned{ flex-basis: 100%; font-size: .78rem; color: var(--pale-rose); }
+.rbd-tasks{ display: flex; flex-direction: column; gap: 10px; }
+.rbd-task{ background: var(--ivory); border: 1px solid var(--pale-rose); padding: 12px 14px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 16px; align-items: center; }
+.rbd-task-name{ font-weight: 500; font-size: .95rem; line-height: 1.35; }
+.rbd-seg{ display: flex; gap: 6px; flex-wrap: wrap; }
+.rbd-seg button, .rbd-chip{ font-family: var(--sans); cursor: pointer; border: 1px solid var(--pale-rose); background: var(--white); color: var(--plum); border-radius: 999px; white-space: nowrap; }
+.rbd-seg button{ padding: 5px 12px; font-size: .82rem; }
+.rbd-seg button:hover, .rbd-chip:hover{ border-color: var(--rose); }
+.rbd-seg button[aria-pressed="true"]{ border-color: transparent; }
+.rbd-hours{ grid-column: 1 / -1; display: flex; align-items: center; gap: 12px; }
+.rbd-chip{ font-size: .88rem; padding: 7px 14px; }
+.rbd-chip[aria-pressed="true"]{ background: var(--plum); border-color: var(--plum); color: var(--white); }
+.rbd-sb{ font-weight: 600; }
+.rbd-verdict{ white-space: pre-line; margin: 0 0 14px; font-size: 1rem; line-height: 1.55; }
+.rbd-toast{ font-size: .82rem; color: var(--rose); min-height: 1.4em; margin: 6px 0 0; }
+.rbd-copy-out{ width: 100%; min-height: 200px; margin-top: 8px; font: .78rem/1.5 var(--sans); color: var(--plum); background: var(--white); border: 1px solid var(--pale-rose); padding: 8px; }
+@media (max-width: 700px){.rbd-task{ grid-template-columns: 1fr; }}
+.risk-hl{ color: var(--rose); font-weight: 600; }
+.offres-crosslink{ margin: 14px 0 0; font-family: var(--sans); font-size: .95rem; }
+.offres-crosslink .portrait-link{ color: var(--plum); }
+.offres-crosslink .portrait-link:hover{ color: var(--rose); }
 </style>
 </head>
 <body>
@@ -1223,7 +1246,7 @@ color: var(--plum); margin: 14px 0 0;
             <li>governance and general-purpose model obligations since&nbsp;August&nbsp;2025;</li>
             <li>transparency for systems that interact with people since&nbsp;August&nbsp;2026.</li>
           </ul>
-          <p>The bulk of&nbsp;the <span style="color:var(--rose)">high-risk</span> obligations has been postponed <span class="aiact-key">to&nbsp;2&nbsp;December&nbsp;2027</span> by&nbsp;the <span class="aiact-ref">Digital&nbsp;Omnibus</span> (in&nbsp;plain terms: an&nbsp;EU&nbsp;simplification text).</p>
+          <p>The bulk of&nbsp;the <span class="risk-hl">high-risk</span> obligations has been postponed <span class="aiact-key">to&nbsp;2&nbsp;December&nbsp;2027</span> by&nbsp;the <span class="aiact-ref">Digital&nbsp;Omnibus</span> (in&nbsp;plain terms: an&nbsp;EU&nbsp;simplification text).</p>
           <p>The GDPR applies in&nbsp;parallel whenever personal&nbsp;data is&nbsp;processed.</p>
           <p class="aiact-note">This content is&nbsp;informational: it&nbsp;does not replace legal&nbsp;advice.</p>
         </div>
@@ -1232,7 +1255,7 @@ color: var(--plum); margin: 14px 0 0;
     </div>
 
     <div class="article-intro">
-      <p>Most SMEs first encounter the <span class="aiact-ref">AI&nbsp;Act</span> through articles about multi-million-euro fines and "<span style="color:var(--rose)">high-risk</span>" systems, without ever spelling out what actually applies to&nbsp;a&nbsp;ten-, thirty- or&nbsp;hundred-person company. This piece sorts that out: what is&nbsp;mandatory today, what has been postponed, and what an&nbsp;SME should actually check, with the official source behind each&nbsp;point.</p>
+      <p>Most SMEs first encounter the <span class="aiact-ref">AI&nbsp;Act</span> through articles about multi-million-euro fines and "<span class="risk-hl">high-risk</span>" systems, without ever spelling out what actually applies to&nbsp;a&nbsp;ten-, thirty- or&nbsp;hundred-person company. This piece sorts that out: what is&nbsp;mandatory today, what has been postponed, and what an&nbsp;SME should actually check, with the official source behind each&nbsp;point.</p>
       <p>This content is&nbsp;informational and educational. It&nbsp;does not constitute legal&nbsp;advice: every company's&nbsp;situation deserves review by&nbsp;a&nbsp;specialised lawyer, particularly for any use touching recruitment, credit or&nbsp;sensitive&nbsp;data.</p>
     </div>
 
@@ -1244,13 +1267,13 @@ color: var(--plum); margin: 14px 0 0;
         <li>Are you a <strong>provider</strong> (you develop, or have developed, an&nbsp;<span class="aiact-ia">AI</span> system placed on&nbsp;the&nbsp;market)?</li>
         <li>Are you a <strong>deployer</strong> (you use, in&nbsp;your business, a&nbsp;system supplied by&nbsp;a&nbsp;third&nbsp;party)?</li>
       </ol>
-      <p><span class="aiact-key">Almost every SME is&nbsp;a&nbsp;deployer</span>: it&nbsp;uses an&nbsp;existing <span class="aiact-ia">AI</span>&nbsp;tool rather than building one. Deployer obligations are markedly lighter than provider obligations, except when the use case falls into the <span style="color:var(--rose)">high-risk</span>&nbsp;category.</p>
+      <p><span class="aiact-key">Almost every SME is&nbsp;a&nbsp;deployer</span>: it&nbsp;uses an&nbsp;existing <span class="aiact-ia">AI</span>&nbsp;tool rather than building one. Deployer obligations are markedly lighter than provider obligations, except when the use case falls into the <span class="risk-hl">high-risk</span>&nbsp;category.</p>
     </div>
 
     <h2 id="g2" class="article-question">The current timeline, updated on&nbsp;1&nbsp;October&nbsp;2026</h2>
     <div class="article-intro">
       <p class="aiact-oneline">The&nbsp;timeline moved this year: the <span class="aiact-ref">Digital&nbsp;Omnibus</span> postponed a&nbsp;large share of&nbsp;the&nbsp;obligations.</p>
-      <p class="aiact-def"><strong><span class="aiact-ref">Digital&nbsp;Omnibus</span>, in&nbsp;plain terms:</strong> an&nbsp;EU&nbsp;text that simplifies several digital rules and pushed back the <span class="aiact-ref">AI&nbsp;Act</span>'s&nbsp;<span style="color:var(--rose)">high-risk</span> obligations.<br>It&nbsp;is <span class="aiact-ref">Regulation&nbsp;(EU)&nbsp;2026/1744</span> of&nbsp;8&nbsp;July&nbsp;2026, in&nbsp;force since&nbsp;27&nbsp;July&nbsp;2026.</p>
+      <p class="aiact-def"><strong><span class="aiact-ref">Digital&nbsp;Omnibus</span>, in&nbsp;plain terms:</strong> an&nbsp;EU&nbsp;text that simplifies several digital rules and pushed back the <span class="aiact-ref">AI&nbsp;Act</span>'s&nbsp;<span class="risk-hl">high-risk</span> obligations.<br>It&nbsp;is <span class="aiact-ref">Regulation&nbsp;(EU)&nbsp;2026/1744</span> of&nbsp;8&nbsp;July&nbsp;2026, in&nbsp;force since&nbsp;27&nbsp;July&nbsp;2026.</p>
       <p>Here are&nbsp;the main <span class="aiact-ref">AI&nbsp;Act</span> deadlines and when they apply, with the official source for&nbsp;each.</p>
     </div>
     <div class="aiact-frame">
@@ -1283,11 +1306,11 @@ color: var(--plum); margin: 14px 0 0;
           </li>
           <li class="aiact-tl-item aiact-tl-item--pending">
             <div class="aiact-tl-head"><time class="aiact-tl-date">2&nbsp;December 2027</time></div>
-            <p class="aiact-tl-text">Full Annex III <span style="color:var(--rose)">high-risk</span> obligations (recruitment, credit, biometrics, critical infrastructure, education…), postponed from&nbsp;2&nbsp;August&nbsp;2026</p>
+            <p class="aiact-tl-text">Full Annex III <span class="risk-hl">high-risk</span> obligations (recruitment, credit, biometrics, critical infrastructure, education…), postponed from&nbsp;2&nbsp;August&nbsp;2026</p>
           </li>
           <li class="aiact-tl-item aiact-tl-item--pending">
             <div class="aiact-tl-head"><time class="aiact-tl-date">2&nbsp;August 2028</time></div>
-            <p class="aiact-tl-text"><span style="color:var(--rose)">High-risk</span> systems embedded in&nbsp;already-regulated products <span class="nowrap-desk">(Annex&nbsp;I: medical devices,</span> machinery…)</p>
+            <p class="aiact-tl-text"><span style="color:var(--rose)"><span class="risk-hl">High-risk</span></span> systems embedded in&nbsp;already-regulated products <span class="nowrap-desk">(Annex&nbsp;I: medical devices,</span> machinery…)</p>
           </li>
         </ol>
       </div>
@@ -1300,15 +1323,15 @@ color: var(--plum); margin: 14px 0 0;
       <li><p><strong>Check that no&nbsp;use case falls under a&nbsp;prohibited practice</strong>: including generalised social scoring, subliminal manipulation exploiting a&nbsp;vulnerability, biometric categorisation inferring political or&nbsp;religious opinions, emotion recognition at&nbsp;work outside medical or&nbsp;safety exceptions, and, from 2&nbsp;December&nbsp;2026, non-consensual intimate deepfakes and <span class="aiact-ia">AI</span>-generated child sexual abuse material. No&nbsp;size-based relief applies&nbsp;here.</p></li>
       <li><p><strong>Take measures to&nbsp;develop <span class="aiact-ia">AI</span>&nbsp;literacy</strong> (understanding what an&nbsp;<span class="aiact-ia">AI</span>&nbsp;tool can and cannot do, and using it&nbsp;wisely) among the people who use <span class="aiact-ia">AI</span>&nbsp;or&nbsp;decide on&nbsp;<span class="aiact-ia">AI</span>&nbsp;use cases within the company, an&nbsp;obligation in&nbsp;force since February&nbsp;2025, but <span class="aiact-key">an&nbsp;obligation of&nbsp;means</span>: the text explicitly states it&nbsp;does not require guaranteeing any specific level. Documented internal awareness can be&nbsp;enough for an&nbsp;SME, depending on&nbsp;the use&nbsp;case.</p></li>
       <li><p><strong>Clearly inform anyone interacting with an&nbsp;<span class="aiact-ia">AI</span>&nbsp;system</strong> (a&nbsp;conversational agent, generated content, a&nbsp;synthetic image) that they are dealing with <span class="aiact-ia">AI</span>, whenever this is&nbsp;not already obvious from&nbsp;context.</p></li>
-      <li><p><strong>Identify whether a&nbsp;use case falls into the <span style="color:var(--rose)">high-risk</span> category</strong> (recruitment, credit scoring, staff assessment…). Full deployer obligations apply from 2&nbsp;December&nbsp;2027, but the inventory of&nbsp;affected use cases is&nbsp;worth building now, not the day before the&nbsp;deadline.</p></li>
+      <li><p><strong>Identify whether a&nbsp;use case falls into the <span class="risk-hl">high-risk</span> category</strong> (recruitment, credit scoring, staff assessment…). Full deployer obligations apply from 2&nbsp;December&nbsp;2027, but the inventory of&nbsp;affected use cases is&nbsp;worth building now, not the day before the&nbsp;deadline.</p></li>
     </ol>
 
     <h2 id="g4" class="article-question">GDPR and <span class="aiact-ia">AI</span>: the reflexes that apply in&nbsp;parallel</h2>
     <div class="article-intro">
-      <p><span class="aiact-ref">The AI&nbsp;Act</span> governs the <span class="aiact-ia">AI</span>&nbsp;system itself.<br><span class="aiact-ref">The GDPR</span> governs the personal&nbsp;data it&nbsp;processes.<br>A&nbsp;tool <span class="aiact-ref">the AI&nbsp;Act</span> treats as&nbsp;low-risk can still trigger a&nbsp;<span class="aiact-ref">GDPR</span> obligation if&nbsp;the data it&nbsp;handles is&nbsp;sensitive.</p>
+      <p><span class="aiact-ref">The AI&nbsp;Act</span> governs the <span class="aiact-ia">AI</span>&nbsp;system itself.<br>The GDPR governs the personal&nbsp;data it&nbsp;processes.<br>A&nbsp;tool <span class="aiact-ref">the AI&nbsp;Act</span> treats as&nbsp;low-risk can still trigger a&nbsp;GDPR obligation if&nbsp;the data it&nbsp;handles is&nbsp;sensitive.</p>
       <p style="margin-top:18px">Four reflexes apply as&nbsp;soon as&nbsp;an&nbsp;<span class="aiact-ia">AI</span>&nbsp;system touches personal&nbsp;data:</p>
-      <ol class="aiact-reflexes" style="list-style:none;margin:8px 0 18px;padding:0;display:grid;gap:8px"><li style="display:grid;grid-template-columns:26px 1fr;align-items:baseline"><span style="font-family:var(--serif);font-weight:600;font-size:1.2em;line-height:1;color:var(--rose)">1</span><span>An&nbsp;identified lawful basis before any processing (<span class="aiact-ref">Article&nbsp;6</span> <span class="aiact-ref">GDPR</span>).</span></li><li style="display:grid;grid-template-columns:26px 1fr;align-items:baseline"><span style="font-family:var(--serif);font-weight:600;font-size:1.2em;line-height:1;color:var(--rose)">2</span><span>Clear information for the people concerned.</span></li><li style="display:grid;grid-template-columns:26px 1fr;align-items:baseline"><span style="font-family:var(--serif);font-weight:600;font-size:1.2em;line-height:1;color:var(--rose)">3</span><span>Minimisation of&nbsp;the data used to&nbsp;configure or&nbsp;fine-tune the tool.</span></li><li style="display:grid;grid-template-columns:26px 1fr;align-items:baseline"><span style="font-family:var(--serif);font-weight:600;font-size:1.2em;line-height:1;color:var(--rose)">4</span><span>A&nbsp;data protection impact assessment as&nbsp;soon as&nbsp;the processing is&nbsp;likely to&nbsp;result in&nbsp;a&nbsp;<span style="color:var(--rose)">high&nbsp;risk</span>.</span></li></ol>
-      <p><span class="aiact-ref">The CNIL</span>, the French data protection authority, <a href="https://www.cnil.fr/fr/developpement-des-systemes-dia-les-recommandations-de-la-cnil-pour-respecter-le-rgpd" target="_blank" rel="noopener">has published dedicated <span class="aiact-ia">AI</span>&nbsp;guidance</a> on&nbsp;this exact point.</p>
+      <ol class="aiact-reflexes" style="list-style:none;margin:8px 0 18px;padding:0;display:grid;gap:8px"><li style="display:grid;grid-template-columns:26px 1fr;align-items:baseline"><span style="font-family:var(--serif);font-weight:600;font-size:1.2em;line-height:1;color:var(--rose)">1</span><span>An&nbsp;identified lawful basis before any processing (<span class="aiact-ref">Article&nbsp;6</span> GDPR).</span></li><li style="display:grid;grid-template-columns:26px 1fr;align-items:baseline"><span style="font-family:var(--serif);font-weight:600;font-size:1.2em;line-height:1;color:var(--rose)">2</span><span>Clear information for the people concerned.</span></li><li style="display:grid;grid-template-columns:26px 1fr;align-items:baseline"><span style="font-family:var(--serif);font-weight:600;font-size:1.2em;line-height:1;color:var(--rose)">3</span><span>Minimisation of&nbsp;the data used to&nbsp;configure or&nbsp;fine-tune the tool.</span></li><li style="display:grid;grid-template-columns:26px 1fr;align-items:baseline"><span style="font-family:var(--serif);font-weight:600;font-size:1.2em;line-height:1;color:var(--rose)">4</span><span>A&nbsp;data protection impact assessment as&nbsp;soon as&nbsp;the processing is&nbsp;likely to&nbsp;result in&nbsp;a&nbsp;<span style="color:var(--rose)">high&nbsp;risk</span>.</span></li></ol>
+      <p>The <span class="aiact-ref">CNIL</span>, the French data protection authority, <a href="https://www.cnil.fr/fr/developpement-des-systemes-dia-les-recommandations-de-la-cnil-pour-respecter-le-rgpd" target="_blank" rel="noopener">has published dedicated <span class="aiact-ia">AI</span>&nbsp;guidance</a> on&nbsp;this exact point.</p>
       <p>If&nbsp;the <span class="aiact-ia">AI</span>&nbsp;provider is&nbsp;established outside the <strong style="font-weight:600">European Union</strong>, transfer safeguards (standard contractual clauses) come on&nbsp;top of&nbsp;these four&nbsp;points.</p>
     </div>
 
@@ -1319,7 +1342,7 @@ color: var(--plum); margin: 14px 0 0;
         <li><a href="https://artificialintelligenceact.eu/article/11/" target="_blank" rel="noopener"><span class="aiact-ref">Article&nbsp;11</span></a> opens simplified technical documentation, accepted by&nbsp;authorities, to&nbsp;every SME (and to&nbsp;small mid-cap companies), not only to&nbsp;microenterprises.</li>
         <li><a href="https://artificialintelligenceact.eu/article/62/" target="_blank" rel="noopener"><span class="aiact-ref">Article&nbsp;62</span></a> sets out priority access to&nbsp;national regulatory&nbsp;sandboxes to&nbsp;test a&nbsp;system under supervised conditions, certification fees reduced in&nbsp;proportion to&nbsp;company size, and dedicated awareness and communication channels.</li>
         <li><a href="https://artificialintelligenceact.eu/article/99/" target="_blank" rel="noopener"><span class="aiact-ref">Article&nbsp;99</span></a> caps an&nbsp;SME's&nbsp;fine at&nbsp;whichever is&nbsp;lower between the fixed amount and the percentage of&nbsp;turnover: for a&nbsp;prohibited practice, the general ceiling is&nbsp;35&nbsp;million euros or&nbsp;7&nbsp;% of&nbsp;global turnover.<br>An&nbsp;SME is&nbsp;charged <span class="aiact-key">whichever of&nbsp;the two is&nbsp;lower</span>, never the higher one.</li>
-        <li>SMEs and microenterprises without partner or&nbsp;linked enterprises also benefit, under <a href="https://artificialintelligenceact.eu/article/63/" target="_blank" rel="noopener"><span class="aiact-ref">Article&nbsp;63</span></a>, from simplified compliance with certain elements of&nbsp;the quality management system required for <span style="color:var(--rose)">high-risk</span> systems.</li>
+        <li>SMEs and microenterprises without partner or&nbsp;linked enterprises also benefit, under <a href="https://artificialintelligenceact.eu/article/63/" target="_blank" rel="noopener"><span class="aiact-ref">Article&nbsp;63</span></a>, from simplified compliance with certain elements of&nbsp;the quality management system required for <span class="risk-hl">high-risk</span> systems.</li>
       </ul>
       <p>None of&nbsp;this relief removes a&nbsp;substantive obligation; it&nbsp;reduces the documentation burden and the cost of&nbsp;reaching&nbsp;compliance.</p>
     </div>
@@ -1334,13 +1357,13 @@ color: var(--plum); margin: 14px 0 0;
       <details class="acc-item">
         <summary><span class="acc-num">02</span><span class="acc-title">What is&nbsp;the difference between a&nbsp;<strong style="font-weight:600">provider</strong> and a&nbsp;<strong style="font-weight:600">deployer</strong>?</span><span class="acc-icon">+</span></summary>
         <div class="acc-body">
-          <p>A&nbsp;<strong style="font-weight:600">provider</strong> develops an&nbsp;<span class="aiact-ia">AI</span>&nbsp;system, or&nbsp;has one developed, and places it&nbsp;on&nbsp;the market under its own name; a&nbsp;<strong style="font-weight:600">deployer</strong> uses that system in&nbsp;the course of&nbsp;its professional activity.<br>Almost every SME is&nbsp;a&nbsp;<strong style="font-weight:600">deployer</strong>: it&nbsp;buys or&nbsp;subscribes to&nbsp;an&nbsp;existing <span class="aiact-ia">AI</span>&nbsp;tool rather than building one. <strong style="font-weight:600">Deployer</strong> obligations are markedly lighter than <strong style="font-weight:600">provider</strong> obligations, except when the system used falls into the <span style="color:var(--rose)">high-risk</span> category (recruitment, credit scoring, biometrics...).<br>Knowing which side of&nbsp;that line you sit on&nbsp;stops you from imposing <strong style="font-weight:600">provider</strong>-level obligations on&nbsp;yourself out of&nbsp;excess caution, and equally from underestimating a&nbsp;real <strong style="font-weight:600">deployer</strong>&nbsp;obligation.</p>
+          <p>A&nbsp;<strong style="font-weight:600">provider</strong> develops an&nbsp;<span class="aiact-ia">AI</span>&nbsp;system, or&nbsp;has one developed, and places it&nbsp;on&nbsp;the market under its own name; a&nbsp;<strong style="font-weight:600">deployer</strong> uses that system in&nbsp;the course of&nbsp;its professional activity.<br>Almost every SME is&nbsp;a&nbsp;<strong style="font-weight:600">deployer</strong>: it&nbsp;buys or&nbsp;subscribes to&nbsp;an&nbsp;existing <span class="aiact-ia">AI</span>&nbsp;tool rather than building one. <strong style="font-weight:600">Deployer</strong> obligations are markedly lighter than <strong style="font-weight:600">provider</strong> obligations, except when the system used falls into the <span class="risk-hl">high-risk</span> category (recruitment, credit scoring, biometrics...).<br>Knowing which side of&nbsp;that line you sit on&nbsp;stops you from imposing <strong style="font-weight:600">provider</strong>-level obligations on&nbsp;yourself out of&nbsp;excess caution, and equally from underestimating a&nbsp;real <strong style="font-weight:600">deployer</strong>&nbsp;obligation.</p>
         </div>
       </details>
       <details class="acc-item">
         <summary><span class="acc-num">03</span><span class="acc-title">What is&nbsp;mandatory today, and what has been postponed?</span><span class="acc-icon">+</span></summary>
         <div class="acc-body">
-          <p>Three blocks are already in&nbsp;force:<br>1) since February&nbsp;2025, prohibited <span class="aiact-ia">AI</span>&nbsp;practices and the <span class="aiact-ia">AI</span>&nbsp;literacy obligation;<br>2) since August&nbsp;2025, governance rules and obligations for providers of&nbsp;general-purpose <span class="aiact-ia">AI</span>&nbsp;models;<br>3) since August&nbsp;2026, transparency obligations for systems that interact with people (conversational agents, synthetic content).<br>On&nbsp;2&nbsp;December&nbsp;2026, two new prohibited practices are added (non-consensual intimate deepfakes, <span class="aiact-ia">AI</span>-generated child sexual abuse material), introduced by&nbsp;amending <span class="aiact-ref">Regulation&nbsp;(EU)&nbsp;2026/1744</span>.<br>The bulk of&nbsp;the Annex III <span style="color:var(--rose)">high-risk</span> obligations, originally due in&nbsp;August&nbsp;2026, has been pushed back to&nbsp;2&nbsp;December&nbsp;2027 by&nbsp;that same regulation.<br><span style="color:var(--rose)">High-risk</span> systems embedded in&nbsp;already-regulated products (medical devices, machinery) now have until 2&nbsp;August&nbsp;2028.<br>The timeline genuinely moved this year, this is&nbsp;not a&nbsp;rumour.</p>
+          <p>Three blocks are already in&nbsp;force:<br>1) since February&nbsp;2025, prohibited <span class="aiact-ia">AI</span>&nbsp;practices and the <span class="aiact-ia">AI</span>&nbsp;literacy obligation;<br>2) since August&nbsp;2025, governance rules and obligations for providers of&nbsp;general-purpose <span class="aiact-ia">AI</span>&nbsp;models;<br>3) since August&nbsp;2026, transparency obligations for systems that interact with people (conversational agents, synthetic content).<br>On&nbsp;2&nbsp;December&nbsp;2026, two new prohibited practices are added (non-consensual intimate deepfakes, <span class="aiact-ia">AI</span>-generated child sexual abuse material), introduced by&nbsp;amending <span class="aiact-ref">Regulation&nbsp;(EU)&nbsp;2026/1744</span>.<br>The bulk of&nbsp;the Annex III <span class="risk-hl">high-risk</span> obligations, originally due in&nbsp;August&nbsp;2026, has been pushed back to&nbsp;2&nbsp;December&nbsp;2027 by&nbsp;that same regulation.<br><span style="color:var(--rose)"><span class="risk-hl">High-risk</span></span> systems embedded in&nbsp;already-regulated products (medical devices, machinery) now have until 2&nbsp;August&nbsp;2028.<br>The timeline genuinely moved this year, this is&nbsp;not a&nbsp;rumour.</p>
         </div>
       </details>
       <details class="acc-item">
@@ -1358,7 +1381,7 @@ color: var(--plum); margin: 14px 0 0;
       <details class="acc-item">
         <summary><span class="acc-num">06</span><span class="acc-title">What relief does the AI&nbsp;Act provide for SMEs and microenterprises?</span><span class="acc-icon">+</span></summary>
         <div class="acc-body">
-          <p>Four separate articles ease the burden for SMEs.<br><span class="aiact-ref">Article&nbsp;11</span> opens simplified technical documentation, accepted by&nbsp;authorities, to&nbsp;every SME, not only to&nbsp;microenterprises.<br><span class="aiact-ref">Article&nbsp;62</span> sets out priority access to&nbsp;national regulatory&nbsp;sandboxes, certification fees reduced in&nbsp;proportion to&nbsp;company size, and dedicated awareness measures.<br><span class="aiact-ref">Article&nbsp;99</span> caps an&nbsp;SME's&nbsp;fine at&nbsp;whichever is&nbsp;lower between the fixed amount and the percentage of&nbsp;turnover, never the higher one.<br>SMEs and microenterprises without partner or&nbsp;linked enterprises also benefit, under <span class="aiact-ref">Article&nbsp;63</span>, from simplified compliance with certain elements of&nbsp;the quality management system required for <span style="color:var(--rose)">high-risk</span> systems.<br>This is&nbsp;not limited to&nbsp;microenterprises alone.<br>None of&nbsp;this relief removes a&nbsp;substantive obligation; it&nbsp;reduces the documentation burden and the cost of&nbsp;reaching&nbsp;compliance.</p>
+          <p>Four separate articles ease the burden for SMEs.<br><span class="aiact-ref">Article&nbsp;11</span> opens simplified technical documentation, accepted by&nbsp;authorities, to&nbsp;every SME, not only to&nbsp;microenterprises.<br><span class="aiact-ref">Article&nbsp;62</span> sets out priority access to&nbsp;national regulatory&nbsp;sandboxes, certification fees reduced in&nbsp;proportion to&nbsp;company size, and dedicated awareness measures.<br><span class="aiact-ref">Article&nbsp;99</span> caps an&nbsp;SME's&nbsp;fine at&nbsp;whichever is&nbsp;lower between the fixed amount and the percentage of&nbsp;turnover, never the higher one.<br>SMEs and microenterprises without partner or&nbsp;linked enterprises also benefit, under <span class="aiact-ref">Article&nbsp;63</span>, from simplified compliance with certain elements of&nbsp;the quality management system required for <span class="risk-hl">high-risk</span> systems.<br>This is&nbsp;not limited to&nbsp;microenterprises alone.<br>None of&nbsp;this relief removes a&nbsp;substantive obligation; it&nbsp;reduces the documentation burden and the cost of&nbsp;reaching&nbsp;compliance.</p>
         </div>
       </details>
     </div>
@@ -1385,6 +1408,7 @@ color: var(--plum); margin: 14px 0 0;
       <p>A&nbsp;free 30-minute call, no&nbsp;commitment, to&nbsp;see where your current <span class="aiact-ia">AI</span>&nbsp;use cases stand, before the question becomes&nbsp;urgent.</p>
       <div class="article-cta-wrap article-cta-btn">
         <a href="https://calendly.com/exec-ia" target="_blank" rel="noopener" class="btn btn-rose">Book my&nbsp;<span class="aiact-ref">AI&nbsp;Act</span> and GDPR check-in&nbsp;→</a>
+      <p class="offres-crosslink"><a href="offres-en.html" class="portrait-link">See the EXEC&#8217;IA offers <span class="portrait-link-arrow">→</span></a></p>
       </div>
     </div>
   </div>
@@ -1408,6 +1432,17 @@ color: var(--plum); margin: 14px 0 0;
       <a href="temoignages-en.html">Testimonials</a>
       <a href="contact-en.html">Contact</a>
       <a href="perspectives-en.html">Perspectives</a>
+    <a href="perspective-entreprise-utilise-deja-ia-en.html" class="footer-persp-link">→ Adopting <span style="color:var(--rose)">AI</span> vs. creating value</a>
+    <a href="perspective-toutes-decisions-ne-se-deleguent-pas-en.html" class="footer-persp-link">→ Not every decision can be delegated</a>
+    <a href="perspective-transformation-echoue-rarement-technologie-en.html" class="footer-persp-link">→ <span style="color:var(--rose)">AI</span> transformation rarely fails</a>
+    <a href="perspective-probleme-nest-pas-outils-mais-arbitrage-en.html" class="footer-persp-link">→ More <span style="color:var(--rose)">AI</span> tools, not more impact</a>
+    <div class="footer-persp-c2">
+    <a href="perspective-projet-ia-peut-il-etre-finance-en.html" class="footer-persp-link footer-persp-link--c2">→ Can your <span style="color:var(--rose)">AI</span> project be funded?</a>
+    <a href="perspective-chatbot-savoir-passer-la-main-en.html" class="footer-persp-link footer-persp-link--c2">→ Where should a chatbot hand over to a human?</a>
+    <a href="perspective-budget-ia-adhesion-equipes-en.html" class="footer-persp-link footer-persp-link--c2">→ Why does buy-in matter more than budget?</a>
+    <a href="perspective-shadow-ia-charte-comite-direction-en.html" class="footer-persp-link footer-persp-link--c2">→ Which <span style="color:var(--rose)">AI</span> tools do your teams really use?</a>
+    <a href="perspective-robots-humanoides-token-tax-en.html" class="footer-persp-link footer-persp-link--c2">→ Which tasks would you hand to a humanoid robot?</a>
+    </div>
     </div>
 
     <div class="footer-col">

@@ -239,17 +239,6 @@ transform: translateY(-2px);
 }
 .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 24px; }
 @media (max-width: 900px){.ce-que-section{ padding: var(--section-gap) 0; }}
-.persp-track-outer{
-overflow-x: auto; overflow-y: hidden;
-scroll-snap-type: x mandatory;
-padding: .25rem 0 .5rem;
-cursor: grab;
-scroll-padding-left: 1.5rem;
-max-width: 100vw;
-scrollbar-width: none;
-}
-.persp-track-outer:active{ cursor: grabbing; }
-.persp-track-outer::-webkit-scrollbar{ display: none; }
 .persp-track{
 display: flex; gap: 1.25rem;
 width: max-content;
@@ -272,7 +261,7 @@ transition: transform .3s, box-shadow .3s;
 gap: 16px;
 width: max-content;
 padding-right: 0;
-}.persp-track-outer{ overflow-x: auto; scroll-snap-type: x mandatory; padding-top: .6rem; container-type: inline-size; scroll-padding-left: 0; }.persp-card{ width: 270px; flex: 0 0 auto; min-width: 0; }}
+}.persp-card{ width: 270px; flex: 0 0 auto; min-width: 0; }}
 @supports (width: 1cqw){@media (min-width: 1160px){.persp-card{ width: calc((100cqw - 48px) / 4); }}}
 @media (max-width: 640px){.persp-card{ width: 82vw; }}
 .article-page{ padding-top: calc(var(--nav-h) + 32px); padding-bottom: clamp(24px, 3vw, 40px); }
@@ -726,18 +715,6 @@ position: relative;
 z-index: 1;
 height: auto;
 }
-.agents-track-outer{
-overflow-x: auto;
-overflow-y: hidden;
-scroll-snap-type: x mandatory;
-padding: .25rem 0 .5rem;
-cursor: grab;
-scroll-padding-left: 1.5rem;
-max-width: 100vw;
-}
-.agents-track-outer:active{ cursor: grabbing; }
-.agents-track-outer{ scrollbar-width: none; }
-.agents-track-outer::-webkit-scrollbar{ display: none; }
 .agents-track{
 display: flex;
 gap: 1.25rem;
@@ -779,7 +756,7 @@ object-position: center;
 .nl-box-form{
 display: none;
 }
-@media (max-width: 1024px){.nav-links{ gap: 18px; }.nav-links a{ font-size: .72rem; }.agents-track-outer{ padding: .5rem 0 1rem; scroll-padding-left: 16px; }}
+@media (max-width: 1024px){.nav-links{ gap: 18px; }.nav-links a{ font-size: .72rem; }}
 @media (max-width: 768px){html{ overflow-x: clip !important; }body{ overflow-x: hidden !important; max-width: 100vw; }*, *::before, *::after{ max-width: 100% !important; box-sizing: border-box; }.hero-tagline, .hero-sub, .hero-sub2, .testi-intro,
 .ia-perf-stat-label, .roi-intro, .offre-decouverte-btn,
 .agents-cta-title, .xcard-tag, .tl-date, .pillar p,
@@ -911,7 +888,6 @@ box-shadow: 0 12px 32px rgba(99,59,74,.25);
 }.nav-links.open a{ color: #FAF6F2 !important; font-size: 1rem; max-width: none !important; }.nav-links.open a::after{ background: #C75F62; }}
 @media (max-width: 1260px){.footer-brand .footer-tag, .footer-brand .footer-mention-ia{ white-space: normal; }}
 @media (max-width: 1100px){.piliers{ grid-template-columns: repeat(3, minmax(0, 1fr)); }.pilier{ min-width: 0; }.pilier *, .newsletter-content *, .nl-box *{ overflow-wrap: anywhere; }}
-@media (max-width: 1100px){.persp-track-outer{ max-width: 100%; }}
 .article-book-folio[data-n]::before{ content: attr(data-n); }
 .article-more-title{ margin: 44px 0 0; }
 .article-more-lead{ font-family: var(--sans); font-size: .98rem; color: var(--plum-muted); margin: 8px 0 22px 24px; }
@@ -933,7 +909,6 @@ body.art-justify .article-book .article-intro p.art-enum{ text-align: left; }
 .footer-col a.footer-instagram-btn{ margin-top: -6px; }
 .footer-bottom{ padding-top: 2px; padding-bottom: 4px; }
 .footer-legal a{ padding-top: 4px; padding-bottom: 4px; }
-.nw{ white-space: nowrap; }
 .art-ia{ color: var(--rose); }
 .article-hashtags{ hyphens: none; -webkit-hyphens: none; overflow-wrap: normal; word-break: keep-all; }
 body.art-justify .article-book .article-intro p, body.art-justify .article-book .article-intro ul.art-list li{ hyphens: auto; -webkit-hyphens: auto; hyphenate-limit-chars: 5 2 2; text-wrap: pretty; }
@@ -1006,6 +981,24 @@ color: var(--plum); margin: 14px 0 0;
 }
 @media (max-width: 760px){.piliers{ grid-template-columns: 1fr; gap: 16px; }.pilier{ padding: 24px 22px; }.pilier *, .pilier-title, .pilier-sub, .pilier-btn{ overflow-wrap: normal; word-break: normal; hyphens: none; }}
 @media (max-width: 760px){.article-book-col .nw, .article-book-col .art-chip{ white-space: normal; }.article-book-col, .article-book-col > *{ min-width: 0; max-width: 100%; }}
+.rbd-week{ display: flex; align-items: center; gap: 14px; flex-wrap: wrap; background: var(--plum); color: var(--white); padding: 12px 16px; margin-bottom: 10px; }
+.rbd-assigned{ flex-basis: 100%; font-size: .78rem; color: var(--pale-rose); }
+.rbd-tasks{ display: flex; flex-direction: column; gap: 10px; }
+.rbd-task{ background: var(--ivory); border: 1px solid var(--pale-rose); padding: 12px 14px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 16px; align-items: center; }
+.rbd-task-name{ font-weight: 500; font-size: .95rem; line-height: 1.35; }
+.rbd-seg{ display: flex; gap: 6px; flex-wrap: wrap; }
+.rbd-seg button, .rbd-chip{ font-family: var(--sans); cursor: pointer; border: 1px solid var(--pale-rose); background: var(--white); color: var(--plum); border-radius: 999px; white-space: nowrap; }
+.rbd-seg button{ padding: 5px 12px; font-size: .82rem; }
+.rbd-seg button:hover, .rbd-chip:hover{ border-color: var(--rose); }
+.rbd-seg button[aria-pressed="true"]{ border-color: transparent; }
+.rbd-hours{ grid-column: 1 / -1; display: flex; align-items: center; gap: 12px; }
+.rbd-chip{ font-size: .88rem; padding: 7px 14px; }
+.rbd-chip[aria-pressed="true"]{ background: var(--plum); border-color: var(--plum); color: var(--white); }
+.rbd-sb{ font-weight: 600; }
+.rbd-verdict{ white-space: pre-line; margin: 0 0 14px; font-size: 1rem; line-height: 1.55; }
+.rbd-toast{ font-size: .82rem; color: var(--rose); min-height: 1.4em; margin: 6px 0 0; }
+.rbd-copy-out{ width: 100%; min-height: 200px; margin-top: 8px; font: .78rem/1.5 var(--sans); color: var(--plum); background: var(--white); border: 1px solid var(--pale-rose); padding: 8px; }
+@media (max-width: 700px){.rbd-task{ grid-template-columns: 1fr; }}
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why these three criteria specifically?", "acceptedAnswer": {"@type": "Answer", "text": "Because each one removes a trap. The first rules out passing fads: testing a tool because a competitor uses it is not a challenge, it is a comparison. The second forces a decision: without a budget or a named owner, a tool stays a trial, never a choice. The third protects you from money already spent: a tool you no longer dare to stop, because of the time it took to set up, ends up costing more than the one you never launched."}}, {"@type": "Question", "name": "What happens when no one decides?", "acceptedAnswer": {"@type": "Answer", "text": "In practice, one obstacle keeps coming up: nobody is clearly tasked with sorting. Everyone keeps the tool they tested, because they put time into it and do not want to see it dropped. Without someone whose role it is, and who is attached to no tool in particular, the list only grows. Nobody decides not to decide. The list simply grows while everyone waits for someone else to deal with it. Deciding also means accepting that a dropped tool is not a failure. It is proof the sorting worked. A team that never drops anything has probably never sorted."}}, {"@type": "Question", "name": "How do you apply this sorting day to day?", "acceptedAnswer": {"@type": "Answer", "text": "Sorting works better as a ritual than as a big decision: a short review every quarter, where each active tool has to justify its place against the three criteria. Whatever no longer passes is stopped, without a long debate. That rhythm avoids the most common trap: waiting for the big annual clean-up, by which time the list has already doubled. A short, regular ritual takes less energy. Above all, it stops the list from ever getting long enough to need a big clean-up."}}, {"@type": "Question", "name": "How do you introduce this ritual without adding a new burden?", "acceptedAnswer": {"@type": "Answer", "text": "By keeping it short. Fifteen minutes are enough if each tool goes through the same three criteria, always in the same order. What makes it heavy is not how often it happens. It is the temptation to add new criteria each time. Three stable criteria, applied without exception, beat ten criteria adjusted case by case. The sign it works? Not the number of tools removed. It is that the list of active tools stops growing on its own between two reviews."}}, {"@type": "Question", "name": "How do you avoid piling up tools?", "acceptedAnswer": {"@type": "Answer", "text": "With a simple rule: no new tool without a named use, an owner and a review date. A tool with no owner ends up serving nobody, while it keeps costing money. When a new tool arrives, ask the right question: which tool does it replace, or which use does it make unnecessary? Once a year, list the tools you pay for against how they are actually used. You will often find two teams paying for the same need. The right reflex: every new subscription goes through the same person, who checks it does not duplicate an existing one."}}, {"@type": "Question", "name": "How do you properly retire a tool that is no longer used?", "acceptedAnswer": {"@type": "Answer", "text": "Set a date, warn the people who use it, and recover what needs recovering: data, templates, good habits. Stopping a tool is prepared like a launch, only shorter. A team that knows how to stop dares to test more, because it knows a trial does not commit it forever. Write down why you stopped it. It will stop the same tool coming back in a year, under another name or through another team. Think about the vendor too: many subscriptions renew automatically, often for a full year. Put the cancellation date in the diary."}}, {"@type": "Question", "name": "What does the choosing itself cost?", "acceptedAnswer": {"@type": "Answer", "text": "Very little money, a little time. A monthly review of a few uses is often enough, with someone who has the power to say yes or no. What is expensive is not doing it: scattered projects that never land. Sorting is an investment of attention, not an extra budget. For an SME, one hour a month around a shared table of current uses is usually enough to get started. The real cost is the courage to say no to a tool someone likes. That is why you need a person who clearly has that power."}}, {"@type": "Question", "name": "How do you help a team say no to a good tool?", "acceptedAnswer": {"@type": "Answer", "text": "By reminding them the question is not how good the tool is. It is how useful it is for a specific challenge, right now. An excellent tool that serves no priority need waits its turn, and the team is allowed to like it. Saying no at that moment is what lets you say a stronger yes to what matters. Also suggest adding the tool to a waiting list, with the condition that would make it a priority. The no becomes a “not now”, which is far easier to accept."}}], "inLanguage": "en-US"}
@@ -1279,6 +1272,7 @@ color: var(--plum); margin: 14px 0 0;
     <a href="perspective-chatbot-savoir-passer-la-main-en.html" class="footer-persp-link footer-persp-link--c2">→ Where should a chatbot hand over to a human?</a>
     <a href="perspective-budget-ia-adhesion-equipes-en.html" class="footer-persp-link footer-persp-link--c2">→ Why does buy-in matter more than budget?</a>
     <a href="perspective-shadow-ia-charte-comite-direction-en.html" class="footer-persp-link footer-persp-link--c2">→ Which <span style="color:var(--rose)">AI</span> tools do your teams really use?</a>
+    <a href="perspective-robots-humanoides-token-tax-en.html" class="footer-persp-link footer-persp-link--c2">→ Which tasks would you hand to a humanoid robot?</a>
     </div>
     </div>
 

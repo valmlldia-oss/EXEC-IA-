@@ -239,17 +239,6 @@ transform: translateY(-2px);
 }
 .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 24px; }
 @media (max-width: 900px){.ce-que-section{ padding: var(--section-gap) 0; }}
-.persp-track-outer{
-overflow-x: auto; overflow-y: hidden;
-scroll-snap-type: x mandatory;
-padding: .25rem 0 .5rem;
-cursor: grab;
-scroll-padding-left: 1.5rem;
-max-width: 100vw;
-scrollbar-width: none;
-}
-.persp-track-outer:active{ cursor: grabbing; }
-.persp-track-outer::-webkit-scrollbar{ display: none; }
 .persp-track{
 display: flex; gap: 1.25rem;
 width: max-content;
@@ -272,7 +261,7 @@ transition: transform .3s, box-shadow .3s;
 gap: 16px;
 width: max-content;
 padding-right: 0;
-}.persp-track-outer{ overflow-x: auto; scroll-snap-type: x mandatory; padding-top: .6rem; container-type: inline-size; scroll-padding-left: 0; }.persp-card{ width: 270px; flex: 0 0 auto; min-width: 0; }}
+}.persp-card{ width: 270px; flex: 0 0 auto; min-width: 0; }}
 @supports (width: 1cqw){@media (min-width: 1160px){.persp-card{ width: calc((100cqw - 48px) / 4); }}}
 @media (max-width: 640px){.persp-card{ width: 82vw; }}
 .article-page{ padding-top: calc(var(--nav-h) + 32px); padding-bottom: clamp(24px, 3vw, 40px); }
@@ -732,18 +721,6 @@ position: relative;
 z-index: 1;
 height: auto;
 }
-.agents-track-outer{
-overflow-x: auto;
-overflow-y: hidden;
-scroll-snap-type: x mandatory;
-padding: .25rem 0 .5rem;
-cursor: grab;
-scroll-padding-left: 1.5rem;
-max-width: 100vw;
-}
-.agents-track-outer:active{ cursor: grabbing; }
-.agents-track-outer{ scrollbar-width: none; }
-.agents-track-outer::-webkit-scrollbar{ display: none; }
 .agents-track{
 display: flex;
 gap: 1.25rem;
@@ -785,7 +762,7 @@ object-position: center;
 .nl-box-form{
 display: none;
 }
-@media (max-width: 1024px){.nav-links{ gap: 18px; }.nav-links a{ font-size: .72rem; }.agents-track-outer{ padding: .5rem 0 1rem; scroll-padding-left: 16px; }}
+@media (max-width: 1024px){.nav-links{ gap: 18px; }.nav-links a{ font-size: .72rem; }}
 @media (max-width: 768px){html{ overflow-x: clip !important; }body{ overflow-x: hidden !important; max-width: 100vw; }*, *::before, *::after{ max-width: 100% !important; box-sizing: border-box; }.hero-tagline, .hero-sub, .hero-sub2, .testi-intro,
 .ia-perf-stat-label, .roi-intro, .offre-decouverte-btn,
 .agents-cta-title, .xcard-tag, .tl-date, .pillar p,
@@ -917,7 +894,6 @@ box-shadow: 0 12px 32px rgba(99,59,74,.25);
 }.nav-links.open a{ color: #FAF6F2 !important; font-size: 1rem; max-width: none !important; }.nav-links.open a::after{ background: #C75F62; }}
 @media (max-width: 1260px){.footer-brand .footer-tag, .footer-brand .footer-mention-ia{ white-space: normal; }}
 @media (max-width: 1100px){.piliers{ grid-template-columns: repeat(3, minmax(0, 1fr)); }.pilier{ min-width: 0; }.pilier *, .newsletter-content *, .nl-box *{ overflow-wrap: anywhere; }}
-@media (max-width: 1100px){.persp-track-outer{ max-width: 100%; }}
 .article-book-folio[data-n]::before{ content: attr(data-n); }
 .article-more-title{ margin: 44px 0 0; }
 .article-more-lead{ font-family: var(--sans); font-size: .98rem; color: var(--plum-muted); margin: 8px 0 22px 24px; }
@@ -934,7 +910,6 @@ body.art-justify .article-book .article-intro p.art-enum{ text-align: left; }
 .footer-col a.footer-instagram-btn{ margin-top: -6px; }
 .footer-bottom{ padding-top: 2px; padding-bottom: 4px; }
 .footer-legal a{ padding-top: 4px; padding-bottom: 4px; }
-.nw{ white-space: nowrap; }
 .art-ia{ color: var(--rose); }
 .article-book .article-qlist.article-qlist--filets{ border-left: none; padding: 12px 0; margin: 26px 0 8px; border-top: 1px solid rgba(217,201,195,1); border-bottom: 1px solid rgba(217,201,195,1); text-align: center; }
 .article-qlist--filets p{ text-align: center !important; text-align-last: center !important; }
@@ -1012,6 +987,25 @@ color: var(--plum); margin: 14px 0 0;
 }
 @media (max-width: 760px){.piliers{ grid-template-columns: 1fr; gap: 16px; }.pilier{ padding: 24px 22px; }.pilier *, .pilier-title, .pilier-sub, .pilier-btn{ overflow-wrap: normal; word-break: normal; hyphens: none; }}
 @media (max-width: 760px){.article-book-col .nw, .article-book-col .art-chip{ white-space: normal; }.article-book-col, .article-book-col > *{ min-width: 0; max-width: 100%; }}
+.rbd-week{ display: flex; align-items: center; gap: 14px; flex-wrap: wrap; background: var(--plum); color: var(--white); padding: 12px 16px; margin-bottom: 10px; }
+.rbd-assigned{ flex-basis: 100%; font-size: .78rem; color: var(--pale-rose); }
+.rbd-tasks{ display: flex; flex-direction: column; gap: 10px; }
+.rbd-task{ background: var(--ivory); border: 1px solid var(--pale-rose); padding: 12px 14px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 16px; align-items: center; }
+.rbd-task-name{ font-weight: 500; font-size: .95rem; line-height: 1.35; }
+.rbd-seg{ display: flex; gap: 6px; flex-wrap: wrap; }
+.rbd-seg button, .rbd-chip{ font-family: var(--sans); cursor: pointer; border: 1px solid var(--pale-rose); background: var(--white); color: var(--plum); border-radius: 999px; white-space: nowrap; }
+.rbd-seg button{ padding: 5px 12px; font-size: .82rem; }
+.rbd-seg button:hover, .rbd-chip:hover{ border-color: var(--rose); }
+.rbd-seg button[aria-pressed="true"]{ border-color: transparent; }
+.rbd-hours{ grid-column: 1 / -1; display: flex; align-items: center; gap: 12px; }
+.rbd-chip{ font-size: .88rem; padding: 7px 14px; }
+.rbd-chip[aria-pressed="true"]{ background: var(--plum); border-color: var(--plum); color: var(--white); }
+.rbd-sb{ font-weight: 600; }
+.rbd-verdict{ white-space: pre-line; margin: 0 0 14px; font-size: 1rem; line-height: 1.55; }
+.rbd-toast{ font-size: .82rem; color: var(--rose); min-height: 1.4em; margin: 6px 0 0; }
+.rbd-copy-out{ width: 100%; min-height: 200px; margin-top: 8px; font: .78rem/1.5 var(--sans); color: var(--plum); background: var(--white); border: 1px solid var(--pale-rose); padding: 8px; }
+@media (max-width: 700px){.rbd-task{ grid-template-columns: 1fr; }}
+.risk-hl{ color: var(--rose); font-weight: 600; }
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Cómo saber si una decisión puede delegarse?", "acceptedAnswer": {"@type": "Answer", "text": "Hágase una pregunta: si la decisión sale mal, ¿se puede dar marcha atrás con facilidad? Si la respuesta es sí, y las consecuencias son limitadas, puede confiarla a la IA sin problema. Clasificar solicitudes, proponer una hora de cita, preparar una primera síntesis: se corrige rápido y nadie sale perjudicado. Si es no, porque la decisión es difícil de deshacer o sus efectos van mucho más allá de quien la tomó, manténgala en manos humanas. No es prudencia excesiva. Es proporcional al riesgo. En caso de duda, pregúntese también cuánto tiempo tardaría en detectarse un error. Un error visto en un minuto no exige la misma vigilancia que uno que un cliente descubre seis meses después."}}, {"@type": "Question", "name": "¿Qué reveló un caso judicial real sobre delegar en la IA?", "acceptedAnswer": {"@type": "Answer", "text": "En febrero de 2024, un tribunal canadiense resolvió un caso que lo dice todo. Un cliente de Air Canada había obtenido del chatbot de la compañía una promesa de reembolso. El problema: esa promesa no correspondía a la política de la empresa. Ante el tribunal, Air Canada sostuvo que su chatbot era «una entidad jurídica distinta, responsable de sus propios actos». El tribunal descartó el argumento: una empresa responde de lo que dicen todos sus agentes, humanos o automatizados. Air Canada tuvo que cumplir la promesa. Lo que me llama la atención de esta historia no es la tecnología. Es que nadie en la empresa estaba encargado de comprobar lo que la herramienta podía prometer en nombre de la compañía. El límite no existía antes del incidente. Lo fijó el tribunal en su lugar, y no en el sentido más favorable."}}, {"@type": "Question", "name": "¿Dónde trazar la frontera entre la IA y la decisión humana?", "acceptedAnswer": {"@type": "Answer", "text": "La IA ilumina la decisión. El directivo decide. Ese límite no se negocia caso por caso: se fija una vez, con calma, antes de que una urgencia le obligue a improvisar. No es dar la espalda a la herramienta. Es reconocer algo sencillo: un algoritmo, por bueno que sea, nunca será quien dé la cara ante la empresa por lo que la decisión haya producido. Cuanto más avance la IA, más se convertirá en una competencia de directivo saber qué confiarle, y qué no confiarle nunca. Estoy convencida de ello."}}, {"@type": "Question", "name": "¿Es fija esta frontera?", "acceptedAnswer": {"@type": "Answer", "text": "No, y es una buena noticia. Una decisión que ayer exigía criterio humano puede, con el tiempo y con pruebas, pasar al lado de lo que una herramienta hace bien sola: clasificar un primer nivel de expedientes, detectar anomalías que se repiten, preparar una síntesis. Lo que no cambia es la obligación de revisarla con regularidad, en lugar de fijarla una vez y olvidarla. Un límite que nadie ha releído en dos años describe a menudo un mundo que ya no existe. La pregunta que yo le haría no es entonces «¿confía en la IA?». Es más bien: «¿quién, en su empresa, tiene claramente derecho a decir que no a lo que recomienda la IA?» Si la respuesta no está clara, el límite todavía no existe. Se supone, nada más."}}, {"@type": "Question", "name": "¿Cómo formalizar esta frontera?", "acceptedAnswer": {"@type": "Answer", "text": "Basta una lista corta: las familias de decisiones que la empresa se niega a confiar a la IA, sea cual sea la calidad de la herramienta. Una lista escrita, releída una vez al año, vale más que un gran principio que cada uno interpreta a su manera. Escribirla tiene otra ventaja: obliga a resolver desacuerdos que, dejados en la vaguedad, solo habrían estallado en el peor momento. Basta una página, con ejemplos concretos: un despido, un precio propuesto a un cliente importante, un compromiso con un socio."}}, {"@type": "Question", "name": "¿Quién decide cuando la organización no está de acuerdo?", "acceptedAnswer": {"@type": "Answer", "text": "Una lista no basta si nadie sabe quién tiene la última palabra cuando dos personas de confianza llegan a conclusiones opuestas. En una estructura pequeña, suele estar resuelto de oficio: decide el directivo, y está muy bien así. El riesgo aparece cuando la empresa crece, se forma un comité de dirección y nadie vuelve a decir claramente quién arbitra. La respuesta no tiene nada de complicado. Solo tiene que estar escrita, ser conocida por todos y decidirse antes del desacuerdo. Una empresa que descubre en plena crisis que nunca resolvió la cuestión la resuelve con prisas, a menudo mal. A veces es incluso una herramienta de IA la que llena el vacío por defecto. Es exactamente ese vacío el que el caso de Air Canada sacó a la luz."}}, {"@type": "Question", "name": "¿Cómo documentar una decisión tomada con ayuda de una IA?", "acceptedAnswer": {"@type": "Answer", "text": "Guarde constancia de tres cosas: la pregunta planteada, las opciones estudiadas y la razón de su elección. Ese breve relato le permitirá releer la decisión más adelante y entender qué pesó. No hace falta convertirlo en un expediente. Unas líneas escritas en el momento valen más que una reconstrucción a posteriori. A menudo basta un párrafo en el acta de la reunión. Añada una cuarta cosa: lo que la IA había propuesto y usted no retuvo. Ahí suele verse el verdadero criterio. Es también lo primero que le pedirá un auditor o un cliente."}}, {"@type": "Question", "name": "¿En qué consiste una supervisión humana real?", "acceptedAnswer": {"@type": "Answer", "text": "Hace falta alguien que revise, en un momento preciso, con poder para decir que no. Revisar por cumplir, sin poder detener nada, no es supervisar. Es firmar. La buena pregunta: en su empresa, ¿quién puede rechazar una recomendación de la IA, y en qué condiciones? Esa persona también necesita tiempo para hacerlo. Una validación pedida al final del día, sobre decenas de expedientes, siempre acaba en un simple clic de aprobación. Si quiere una supervisión de verdad, prevea el tiempo que la acompaña."}}, {"@type": "Question", "name": "¿Cómo enseñar a los equipos a cuestionar una recomendación?", "acceptedAnswer": {"@type": "Answer", "text": "Deles tres preguntas. ¿En qué se basa esta recomendación? ¿Qué podría hacerla falsa? ¿Qué pasa si nos equivocamos? Se aprenden en cinco minutos y sirven para todo. Con ellas, la respuesta de la IA se convierte en el inicio de la reflexión, y ya no en su conclusión. Practique con casos pasados cuyo final conoce. El equipo ve entonces dónde se habría equivocado la IA, y aprende a detectar sus puntos ciegos sin correr ningún riesgo. Tras unas pocas sesiones, estas preguntas se convierten en un reflejo del equipo, y no en una consigna."}}, {"@type": "Question", "name": "¿Qué lugar dejar a la intuición del directivo?", "acceptedAnswer": {"@type": "Answer", "text": "Un lugar de verdad, siempre que se diga en voz alta. La intuición suele ser años de experiencia resumidos en un segundo. Apartarla en nombre de los datos sería tan discutible como seguirla sin mirar las cifras. La IA ilumina, la intuición alerta, y es el directivo quien decide, asumiendo su elección. Un hábito que me gusta: anote su intuición antes de consultar la IA. Unas semanas después, compare. Aprenderá mucho sobre la fiabilidad de una y otra. Es también la mejor manera de saber cuándo escucharla."}}], "inLanguage": "es-ES"}
@@ -1083,7 +1077,7 @@ color: var(--plum); margin: 14px 0 0;
           <p>Sobre el papel, estas cuatro situaciones no tienen nada que ver. Sin embargo, comparten algo: sus consecuencias van mucho más allá de quien decide, y se notan meses, a veces años después.</p>
         </div>
         <div class="article-intro">
-          <p>Un estudio reciente de Morgan Stanley sobre la gobernanza de la <span class="art-ia">IA</span> me llamó la atención: el <span class="art-chip">41&nbsp;%</span> de los directivos encuestados sitúa la supervisión humana de las situaciones de alto riesgo a la cabeza de sus reglas de gobernanza.</p>
+          <p>Un estudio reciente de Morgan Stanley sobre la gobernanza de la <span class="art-ia">IA</span> me llamó la atención: el <span class="art-chip">41&nbsp;%</span> de los directivos encuestados sitúa la supervisión humana de las situaciones de <span class="risk-hl">alto riesgo</span> a la cabeza de sus reglas de gobernanza.</p>
           <p>Para mí, esa cifra no refleja desconfianza. Muestra que los directivos ya distinguen, por instinto, entre lo que se puede delegar y lo que no se delega nunca.</p>
           <p>La <span class="art-ia">IA</span> puede analizar, comparar, simular, sacudir una intuición, hacer aparecer opciones. Eso ya es muchísimo.</p>
           <h2 class="article-meta">¿Cómo saber si una decisión puede delegarse?</h2>
@@ -1149,11 +1143,11 @@ color: var(--plum); margin: 14px 0 0;
         <div class="article-intro"><p>Cuanto más pesadas son las respuestas, más sube la decisión hacia una persona. Un error que se ve enseguida y se corrige en un minuto no tiene nada que ver con uno que un cliente descubre seis meses después.</p></div>
         <h3 class="article-meta">¿Quién es responsable cuando una <span class="art-ia">IA</span> se equivoca?</h3>
         <div class="article-intro"><p>La empresa. Es lo que recordó el caso de Air Canada, y es la lógica del derecho: una herramienta no es responsable de nada. Quien la usa para actuar en su nombre responde de lo que produce.</p></div>
-        <div class="article-intro"><p>El reglamento europeo de <span class="art-ia">IA</span> va más lejos para ciertos usos clasificados de alto riesgo, como la selección de personal o el acceso a ciertos servicios esenciales. Allí impone, entre otras cosas, un control humano real y la información a las personas afectadas.</p></div>
+        <div class="article-intro"><p>El reglamento europeo de <span class="art-ia">IA</span> va más lejos para ciertos usos clasificados de <span class="risk-hl">alto riesgo</span>, como la selección de personal o el acceso a ciertos servicios esenciales. Allí impone, entre otras cosas, un control humano real y la información a las personas afectadas.</p></div>
         <div class="article-intro"><p>Para un directivo, la consecuencia es sencilla: en cuanto una herramienta puede comprometer a la empresa, tiene que haber alguien designado para responder de lo que hace.</p></div>
         <h3 class="article-meta">¿Y las decisiones que afectan a las personas?</h3>
         <div class="article-intro"><p>Ahí yo tendría un cuidado especial. Evaluar a un empleado, negar un ascenso, sancionar, elegir entre dos candidatos: estas decisiones tocan la dignidad y la trayectoria de alguien.</p></div>
-        <div class="article-intro"><p>El <span class="art-chip">RGPD</span> es claro al respecto: una persona tiene derecho a no ser objeto de una decisión basada únicamente en un tratamiento automatizado, cuando esa decisión produce efectos jurídicos sobre ella o la afecta de forma significativa. La <span class="art-ia">IA</span> puede ayudar a preparar, a comparar, a detectar un olvido. La decisión, en cambio, sigue siendo humana, y la persona afectada tiene que poder hablarlo con alguien.</p></div>
+        <div class="article-intro"><p>El RGPD es claro al respecto: una persona tiene derecho a no ser objeto de una decisión basada únicamente en un tratamiento automatizado, cuando esa decisión produce efectos jurídicos sobre ella o la afecta de forma significativa. La <span class="art-ia">IA</span> puede ayudar a preparar, a comparar, a detectar un olvido. La decisión, en cambio, sigue siendo humana, y la persona afectada tiene que poder hablarlo con alguien.</p></div>
         <h3 class="article-meta">¿Cómo es una lista, en la práctica?</h3>
         <div class="article-intro"><p class="art-enum">Un ejemplo para una pyme de servicios de unas cuarenta personas:<br><span class="art-num" data-n="1"></span>toda contratación, toda extinción de contrato y toda sanción;<br><span class="art-num" data-n="2"></span>todo compromiso contractual por encima de un importe fijado por la dirección;<br><span class="art-num" data-n="3"></span>toda respuesta a una reclamación que reconozca una falta o prometa un gesto comercial;<br><span class="art-num" data-n="4"></span>toda comunicación pública en nombre de la empresa;<br><span class="art-num" data-n="5"></span>todo cambio de precios o de condiciones comerciales;<br><span class="art-num" data-n="6"></span>toda elección estratégica debatida en el comité de dirección.</p></div>
         <div class="article-intro"><p>Seis líneas bastan. Cada una abarca una familia de decisiones, no un caso concreto: la lista sigue valiendo aunque cambien las herramientas.</p></div>
@@ -1276,6 +1270,7 @@ color: var(--plum); margin: 14px 0 0;
     <a href="perspective-chatbot-savoir-passer-la-main-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Cuándo debe un chatbot pasar el relevo?</a>
     <a href="perspective-budget-ia-adhesion-equipes-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Por qué pesa más la adhesión que el presupuesto?</a>
     <a href="perspective-shadow-ia-charte-comite-direction-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Qué herramientas de <span style="color:var(--rose)">IA</span> usan sus equipos?</a>
+    <a href="perspective-robots-humanoides-token-tax-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Qué tareas confiaría a un robot humanoide?</a>
     </div>
     </div>
 

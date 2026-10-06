@@ -240,17 +240,6 @@ transform: translateY(-2px);
 }
 .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 24px; }
 @media (max-width: 900px){.ce-que-section{ padding: var(--section-gap) 0; }}
-.persp-track-outer{
-overflow-x: auto; overflow-y: hidden;
-scroll-snap-type: x mandatory;
-padding: .25rem 0 .5rem;
-cursor: grab;
-scroll-padding-left: 1.5rem;
-max-width: 100vw;
-scrollbar-width: none;
-}
-.persp-track-outer:active{ cursor: grabbing; }
-.persp-track-outer::-webkit-scrollbar{ display: none; }
 .persp-track{
 display: flex; gap: 1.25rem;
 width: max-content;
@@ -273,7 +262,7 @@ transition: transform .3s, box-shadow .3s;
 gap: 16px;
 width: max-content;
 padding-right: 0;
-}.persp-track-outer{ overflow-x: auto; scroll-snap-type: x mandatory; padding-top: .6rem; container-type: inline-size; scroll-padding-left: 0; }.persp-card{ width: 270px; flex: 0 0 auto; min-width: 0; }}
+}.persp-card{ width: 270px; flex: 0 0 auto; min-width: 0; }}
 @supports (width: 1cqw){@media (min-width: 1160px){.persp-card{ width: calc((100cqw - 48px) / 4); }}}
 @media (max-width: 640px){.persp-card{ width: 82vw; }}
 .article-page{ padding-top: calc(var(--nav-h) + 32px); padding-bottom: clamp(24px, 3vw, 40px); }
@@ -722,18 +711,6 @@ position: relative;
 z-index: 1;
 height: auto;
 }
-.agents-track-outer{
-overflow-x: auto;
-overflow-y: hidden;
-scroll-snap-type: x mandatory;
-padding: .25rem 0 .5rem;
-cursor: grab;
-scroll-padding-left: 1.5rem;
-max-width: 100vw;
-}
-.agents-track-outer:active{ cursor: grabbing; }
-.agents-track-outer{ scrollbar-width: none; }
-.agents-track-outer::-webkit-scrollbar{ display: none; }
 .agents-track{
 display: flex;
 gap: 1.25rem;
@@ -775,7 +752,7 @@ object-position: center;
 .nl-box-form{
 display: none;
 }
-@media (max-width: 1024px){.nav-links{ gap: 18px; }.nav-links a{ font-size: .72rem; }.agents-track-outer{ padding: .5rem 0 1rem; scroll-padding-left: 16px; }}
+@media (max-width: 1024px){.nav-links{ gap: 18px; }.nav-links a{ font-size: .72rem; }}
 @media (max-width: 768px){html{ overflow-x: clip !important; }body{ overflow-x: hidden !important; max-width: 100vw; }*, *::before, *::after{ max-width: 100% !important; box-sizing: border-box; }.hero-tagline, .hero-sub, .hero-sub2, .testi-intro,
 .ia-perf-stat-label, .roi-intro, .offre-decouverte-btn,
 .agents-cta-title, .xcard-tag, .tl-date, .pillar p,
@@ -907,7 +884,6 @@ box-shadow: 0 12px 32px rgba(99,59,74,.25);
 }.nav-links.open a{ color: #FAF6F2 !important; font-size: 1rem; max-width: none !important; }.nav-links.open a::after{ background: #C75F62; }}
 @media (max-width: 1260px){.footer-brand .footer-tag, .footer-brand .footer-mention-ia{ white-space: normal; }}
 @media (max-width: 1100px){.piliers{ grid-template-columns: repeat(3, minmax(0, 1fr)); }.pilier{ min-width: 0; }.pilier *, .newsletter-content *, .nl-box *{ overflow-wrap: anywhere; }}
-@media (max-width: 1100px){.persp-track-outer{ max-width: 100%; }}
 .article-book-folio[data-n]::before{ content: attr(data-n); }
 .art-chip{ font-family: var(--sans); font-weight: 600; font-style: normal; font-size: .92em; color: var(--plum); background: rgba(217,201,195,.38); padding: .04em .38em; border-radius: 4px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 .article-book h3.article-meta{ margin-top: 32px; margin-bottom: 12px; }
@@ -927,7 +903,6 @@ body.art-justify .article-book .article-intro p.art-enum{ text-align: left; }
 .footer-col a.footer-instagram-btn{ margin-top: -6px; }
 .footer-bottom{ padding-top: 2px; padding-bottom: 4px; }
 .footer-legal a{ padding-top: 4px; padding-bottom: 4px; }
-.nw{ white-space: nowrap; }
 .art-ia{ color: var(--rose); }
 .article-hashtags{ hyphens: none; -webkit-hyphens: none; overflow-wrap: normal; word-break: keep-all; }
 body.art-justify .article-book .article-intro p, body.art-justify .article-book .article-intro ul.art-list li{ hyphens: auto; -webkit-hyphens: auto; hyphenate-limit-chars: 5 2 2; text-wrap: pretty; }
@@ -998,6 +973,24 @@ color: var(--plum); margin: 14px 0 0;
 }
 @media (max-width: 760px){.piliers{ grid-template-columns: 1fr; gap: 16px; }.pilier{ padding: 24px 22px; }.pilier *, .pilier-title, .pilier-sub, .pilier-btn{ overflow-wrap: normal; word-break: normal; hyphens: none; }}
 @media (max-width: 760px){.article-book-col .nw, .article-book-col .art-chip{ white-space: normal; }.article-book-col, .article-book-col > *{ min-width: 0; max-width: 100%; }}
+.rbd-week{ display: flex; align-items: center; gap: 14px; flex-wrap: wrap; background: var(--plum); color: var(--white); padding: 12px 16px; margin-bottom: 10px; }
+.rbd-assigned{ flex-basis: 100%; font-size: .78rem; color: var(--pale-rose); }
+.rbd-tasks{ display: flex; flex-direction: column; gap: 10px; }
+.rbd-task{ background: var(--ivory); border: 1px solid var(--pale-rose); padding: 12px 14px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 16px; align-items: center; }
+.rbd-task-name{ font-weight: 500; font-size: .95rem; line-height: 1.35; }
+.rbd-seg{ display: flex; gap: 6px; flex-wrap: wrap; }
+.rbd-seg button, .rbd-chip{ font-family: var(--sans); cursor: pointer; border: 1px solid var(--pale-rose); background: var(--white); color: var(--plum); border-radius: 999px; white-space: nowrap; }
+.rbd-seg button{ padding: 5px 12px; font-size: .82rem; }
+.rbd-seg button:hover, .rbd-chip:hover{ border-color: var(--rose); }
+.rbd-seg button[aria-pressed="true"]{ border-color: transparent; }
+.rbd-hours{ grid-column: 1 / -1; display: flex; align-items: center; gap: 12px; }
+.rbd-chip{ font-size: .88rem; padding: 7px 14px; }
+.rbd-chip[aria-pressed="true"]{ background: var(--plum); border-color: var(--plum); color: var(--white); }
+.rbd-sb{ font-weight: 600; }
+.rbd-verdict{ white-space: pre-line; margin: 0 0 14px; font-size: 1rem; line-height: 1.55; }
+.rbd-toast{ font-size: .82rem; color: var(--rose); min-height: 1.4em; margin: 6px 0 0; }
+.rbd-copy-out{ width: 100%; min-height: 200px; margin-top: 8px; font: .78rem/1.5 var(--sans); color: var(--plum); background: var(--white); border: 1px solid var(--pale-rose); padding: 8px; }
+@media (max-width: 700px){.rbd-task{ grid-template-columns: 1fr; }}
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Por qué pesa más la adhesión que el presupuesto?", "acceptedAnswer": {"@type": "Answer", "text": "Porque una herramienta nunca cambia sola a una organización. Son sus equipos quienes deciden cada día si la usan o la rodean. Puede firmar el mejor contrato del mercado: si nadie abre la herramienta el lunes por la mañana, ha comprado una licencia, no un cambio. La resistencia casi nunca viene de la tecnología. Viene de los hábitos que se le pide reemplazar. Un hábito son años de gestos que funcionan. No se reemplaza con un anuncio. Se reemplaza con una manera mejor de hacer las cosas, que el equipo ha probado por sí mismo."}}, {"@type": "Question", "name": "¿Qué revela la brecha entre inversión y ganas de usar la herramienta?", "acceptedAnswer": {"@type": "Answer", "text": "Dos relojes giran en paralelo. El primero es el de la decisión: un presupuesto se aprueba en unas semanas, una herramienta se despliega en unos meses. El segundo es el de los hábitos: cambian al ritmo de los equipos, no al de la agenda del comité de dirección. Cuando estos dos relojes no van acompasados, la empresa paga por un uso que todavía no existe. El panel de control dice que la herramienta está desplegada. El terreno dice que se abre de vez en cuando y luego se olvida. Mi consejo: antes de hablar de presupuesto, pregunte cuánto tiempo necesitarán sus equipos para cambiar sus hábitos. Suele ser más que el despliegue."}}, {"@type": "Question", "name": "¿Por qué el presupuesto gastado es un mal indicador?", "acceptedAnswer": {"@type": "Answer", "text": "Porque mide una intención, no un cambio. Un presupuesto gastado demuestra que se tomó una decisión. No dice nada de lo que los equipos hacen de forma distinta el lunes por la mañana respecto a ayer. El buen indicador es el uso regular: cuántas personas usan la herramienta cada semana, para qué tarea concreta y qué han dejado de hacer a mano. ¿Cómo medir la adhesión, en concreto? Tres preguntas bastan para empezar. ¿Quién la usa cada semana y para qué? ¿Quién la probó y la abandonó, y por qué? ¿Qué tarea ha desaparecido o se ha acortado realmente? Estas respuestas se obtienen con una conversación de veinte minutos con algunos miembros del equipo, no con un formulario de satisfacción. Dan una imagen más fiel que cualquier estadística de conexión."}}, {"@type": "Question", "name": "¿Por qué adopta un equipo una herramienta?", "acceptedAnswer": {"@type": "Answer", "text": "Un equipo adopta una herramienta cuando ve su utilidad para sí mismo, no solo para la empresa. La ventaja debe notarse en el día a día: una tarea más corta, un error menos, un expediente preparado más deprisa. Cuando el beneficio solo se ve en un panel de dirección, la herramienta se vive como una carga adicional. El primer trabajo consiste, por tanto, en traducir el beneficio esperado al lenguaje de quienes van a usarla. ¿Qué resistencias aparecen con más frecuencia? Se repiten tres. 1) El miedo a equivocarse, sobre todo cuando la herramienta parece no dejar margen al error. 2) El temor a ser sustituido, que rara vez se dice de frente. 3) La impresión de que la herramienta añade un paso en lugar de quitar uno. Cada una pide su respuesta: un derecho a probar, una palabra clara de la dirección sobre lo que no cambiará y una demostración sobre una tarea real, no sobre un ejemplo de catálogo."}}, {"@type": "Question", "name": "¿Por qué explicar antes de equipar?", "acceptedAnswer": {"@type": "Answer", "text": "🎯 ¿Qué palancas marcan de verdad la diferencia? Tres, de la más sencilla a la más exigente. 1) Explicar antes de equipar. 2) Formar en los usos. 3) Demostrar pronto. El porqué va siempre antes que la herramienta. Un equipo que entiende qué cambia la herramienta en su trabajo diario, y qué no, la adopta con más facilidad que un equipo al que se le anuncia un despliegue. Explicar lleva una reunión. No explicar cuesta meses de resistencia silenciosa. ¿Cómo formar sin abrumar a los equipos? Partiendo de los usos del día a día, no de la lista de funcionalidades. Una hora sobre una tarea que la persona hace cada semana vale más que un día entero de demostración general."}}, {"@type": "Question", "name": "¿Cuándo ampliar la herramienta a toda la organización?", "acceptedAnswer": {"@type": "Answer", "text": "Después de haber demostrado un resultado concreto, pronto, en un ámbito reducido. Ese resultado se convierte en el argumento, en lugar de la promesa. La ampliación llega entonces a equipos que ya han visto lo que aporta la herramienta. ¿Qué hacer cuando un equipo rodea la herramienta? Empezar por comprender, antes de recordar la regla. Rodear una herramienta casi nunca es mala voluntad. Revela una necesidad que la herramienta no cubre, un paso demasiado pesado o un hábito que nadie ayudó a transformar. Un equipo que rodea una herramienta dice, sin formularlo, lo que espera de ella. Es una información valiosa, siempre que se recoja sin buscar culpables."}}, {"@type": "Question", "name": "¿Qué papel tiene el directivo en la adhesión?", "acceptedAnswer": {"@type": "Answer", "text": "Un papel de demostración más que de decisión. Un directivo que usa él mismo la herramienta, que cuenta para qué le sirve y dónde le decepcionó, da a los equipos permiso para probar y para decir lo que no funciona. Al contrario, una herramienta impuesta sin que la usen quienes la imponen transmite un mensaje opuesto al del discurso. ¿Qué errores evitar en un despliegue? Se repiten cuatro. 1) Desplegar en todas partes a la vez. 2) Formar sobre la lista de funcionalidades. 3) Anunciar sin explicar el porqué. 4) Juzgar el éxito por el presupuesto gastado y no por el uso real. Todos tienen el mismo origen: tratar la herramienta como una compra que hay que lograr en lugar de un cambio de práctica que hay que acompañar."}}, {"@type": "Question", "name": "¿Cómo lanzar un piloto de treinta días?", "acceptedAnswer": {"@type": "Answer", "text": "Primera semana: elegir un equipo voluntario y una tarea que se repita cada semana, y explicar el porqué. Segunda semana: formar solo sobre esa tarea. Tercera semana: dejar que el equipo la use y anotar lo que estorba. Cuarta semana: medir el resultado y decidir si continuar, ajustar o parar. Al final del mes, el directivo dispone de algo que el presupuesto solo no le daba: una prueba, dentro de su organización, de lo que la herramienta aporta o no. ¿Qué papel dar a los mandos intermedios? Un papel central. Son ellos quienes traducen la decisión en práctica diaria. Un mando convencido da ejemplo, protege el tiempo de aprendizaje y comunica lo que bloquea. Un mando que no ha participado se convierte, sin querer, en el primer freno. Antes de desplegar, conviene dedicar una sesión breve a estos relevos: qué cambia para ellos, qué dirán a sus equipos y a quién acudirán cuando surja una dificultad."}}, {"@type": "Question", "name": "¿Cómo saber si la adhesión avanza?", "acceptedAnswer": {"@type": "Answer", "text": "Tres señales concretas. 1) Las mismas personas vuelven a la herramienta de una semana a otra. 2) La mencionan espontáneamente cuando describen su trabajo. 3) Proponen ellas mismas nuevos usos. Al contrario, un uso concentrado en una o dos personas, o que desaparece en cuanto cesa la animación, indica una adhesión de fachada. Estas señales se recogen observando y conversando, sin herramienta de medición adicional. ¿Qué decir a un directivo que quiere ir deprisa? Que la velocidad se gana con la adhesión, no con la precipitación. Un despliegue rápido en un equipo que no se ha sumado cuesta tiempo dos veces: para instalarlo y para relanzarlo. Un piloto corto, con un resultado visible, convence más rápido que un plan de comunicación. El buen calendario es aquel en el que cada etapa demuestra algo al equipo siguiente."}}, {"@type": "Question", "name": "¿Qué papel tienen los primeros usuarios?", "acceptedAnswer": {"@type": "Answer", "text": "Los primeros usuarios convencidos son los mejores relevos. Su experiencia, contada con sus palabras, pesa más que una presentación de la dirección. Identifíquelos pronto, deles un poco de tiempo para profundizar y déjelos mostrar a sus compañeros lo que funciona y lo que no. Procure no convertirlos en expertos aislados: su papel es compartir, no cargar solos con el uso de todo el equipo. ¿Cómo mantener el impulso tras el lanzamiento? Un uso que ya no se anima se apaga. Prevea una cita breve y regular para compartir lo que funcionó, lo que estorbó y lo que cada uno ha probado. Bastan quince minutos, siempre que se celebren. Destaque un resultado concreto en lugar de una cifra de uso: una tarea acortada, un expediente entregado antes. Es lo que recordarán los demás equipos."}}], "inLanguage": "es-ES"}
@@ -1302,6 +1295,7 @@ color: var(--plum); margin: 14px 0 0;
     <a href="perspective-chatbot-savoir-passer-la-main-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Cuándo debe un chatbot pasar el relevo?</a>
     <a href="perspective-budget-ia-adhesion-equipes-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Por qué pesa más la adhesión que el presupuesto?</a>
     <a href="perspective-shadow-ia-charte-comite-direction-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Qué herramientas de <span style="color:var(--rose)">IA</span> usan sus equipos?</a>
+    <a href="perspective-robots-humanoides-token-tax-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Qué tareas confiaría a un robot humanoide?</a>
     </div>
     </div>
 

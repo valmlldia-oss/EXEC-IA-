@@ -240,17 +240,6 @@ transform: translateY(-2px);
 }
 .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 24px; }
 @media (max-width: 900px){.ce-que-section{ padding: var(--section-gap) 0; }}
-.persp-track-outer{
-overflow-x: auto; overflow-y: hidden;
-scroll-snap-type: x mandatory;
-padding: .25rem 0 .5rem;
-cursor: grab;
-scroll-padding-left: 1.5rem;
-max-width: 100vw;
-scrollbar-width: none;
-}
-.persp-track-outer:active{ cursor: grabbing; }
-.persp-track-outer::-webkit-scrollbar{ display: none; }
 .persp-track{
 display: flex; gap: 1.25rem;
 width: max-content;
@@ -273,7 +262,7 @@ transition: transform .3s, box-shadow .3s;
 gap: 16px;
 width: max-content;
 padding-right: 0;
-}.persp-track-outer{ overflow-x: auto; scroll-snap-type: x mandatory; padding-top: .6rem; container-type: inline-size; scroll-padding-left: 0; }.persp-card{ width: 270px; flex: 0 0 auto; min-width: 0; }}
+}.persp-card{ width: 270px; flex: 0 0 auto; min-width: 0; }}
 @supports (width: 1cqw){@media (min-width: 1160px){.persp-card{ width: calc((100cqw - 48px) / 4); }}}
 @media (max-width: 640px){.persp-card{ width: 82vw; }}
 .article-page{ padding-top: calc(var(--nav-h) + 32px); padding-bottom: clamp(24px, 3vw, 40px); }
@@ -727,18 +716,6 @@ position: relative;
 z-index: 1;
 height: auto;
 }
-.agents-track-outer{
-overflow-x: auto;
-overflow-y: hidden;
-scroll-snap-type: x mandatory;
-padding: .25rem 0 .5rem;
-cursor: grab;
-scroll-padding-left: 1.5rem;
-max-width: 100vw;
-}
-.agents-track-outer:active{ cursor: grabbing; }
-.agents-track-outer{ scrollbar-width: none; }
-.agents-track-outer::-webkit-scrollbar{ display: none; }
 .agents-track{
 display: flex;
 gap: 1.25rem;
@@ -780,7 +757,7 @@ object-position: center;
 .nl-box-form{
 display: none;
 }
-@media (max-width: 1024px){.nav-links{ gap: 18px; }.nav-links a{ font-size: .72rem; }.agents-track-outer{ padding: .5rem 0 1rem; scroll-padding-left: 16px; }}
+@media (max-width: 1024px){.nav-links{ gap: 18px; }.nav-links a{ font-size: .72rem; }}
 @media (max-width: 768px){html{ overflow-x: clip !important; }body{ overflow-x: hidden !important; max-width: 100vw; }*, *::before, *::after{ max-width: 100% !important; box-sizing: border-box; }.hero-tagline, .hero-sub, .hero-sub2, .testi-intro,
 .ia-perf-stat-label, .roi-intro, .offre-decouverte-btn,
 .agents-cta-title, .xcard-tag, .tl-date, .pillar p,
@@ -912,7 +889,6 @@ box-shadow: 0 12px 32px rgba(99,59,74,.25);
 }.nav-links.open a{ color: #FAF6F2 !important; font-size: 1rem; max-width: none !important; }.nav-links.open a::after{ background: #C75F62; }}
 @media (max-width: 1260px){.footer-brand .footer-tag, .footer-brand .footer-mention-ia{ white-space: normal; }}
 @media (max-width: 1100px){.piliers{ grid-template-columns: repeat(3, minmax(0, 1fr)); }.pilier{ min-width: 0; }.pilier *, .newsletter-content *, .nl-box *{ overflow-wrap: anywhere; }}
-@media (max-width: 1100px){.persp-track-outer{ max-width: 100%; }}
 .article-book-folio[data-n]::before{ content: attr(data-n); }
 .art-chip{ font-family: var(--sans); font-weight: 600; font-style: normal; font-size: .92em; color: var(--plum); background: rgba(217,201,195,.38); padding: .04em .38em; border-radius: 4px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 .article-book h3.article-meta{ margin-top: 32px; margin-bottom: 12px; }
@@ -935,7 +911,6 @@ body.art-justify .article-book .article-intro p.art-enum{ text-align: left; }
 .footer-col a.footer-instagram-btn{ margin-top: -6px; }
 .footer-bottom{ padding-top: 2px; padding-bottom: 4px; }
 .footer-legal a{ padding-top: 4px; padding-bottom: 4px; }
-.nw{ white-space: nowrap; }
 .art-ia{ color: var(--rose); }
 .article-hashtags{ hyphens: none; -webkit-hyphens: none; overflow-wrap: normal; word-break: keep-all; }
 body.art-justify .article-book .article-intro p, body.art-justify .article-book .article-intro ul.art-list li{ hyphens: auto; -webkit-hyphens: auto; hyphenate-limit-chars: 5 2 2; text-wrap: pretty; }
@@ -1006,6 +981,24 @@ color: var(--plum); margin: 14px 0 0;
 }
 @media (max-width: 760px){.piliers{ grid-template-columns: 1fr; gap: 16px; }.pilier{ padding: 24px 22px; }.pilier *, .pilier-title, .pilier-sub, .pilier-btn{ overflow-wrap: normal; word-break: normal; hyphens: none; }}
 @media (max-width: 760px){.article-book-col .nw, .article-book-col .art-chip{ white-space: normal; }.article-book-col, .article-book-col > *{ min-width: 0; max-width: 100%; }}
+.rbd-week{ display: flex; align-items: center; gap: 14px; flex-wrap: wrap; background: var(--plum); color: var(--white); padding: 12px 16px; margin-bottom: 10px; }
+.rbd-assigned{ flex-basis: 100%; font-size: .78rem; color: var(--pale-rose); }
+.rbd-tasks{ display: flex; flex-direction: column; gap: 10px; }
+.rbd-task{ background: var(--ivory); border: 1px solid var(--pale-rose); padding: 12px 14px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 16px; align-items: center; }
+.rbd-task-name{ font-weight: 500; font-size: .95rem; line-height: 1.35; }
+.rbd-seg{ display: flex; gap: 6px; flex-wrap: wrap; }
+.rbd-seg button, .rbd-chip{ font-family: var(--sans); cursor: pointer; border: 1px solid var(--pale-rose); background: var(--white); color: var(--plum); border-radius: 999px; white-space: nowrap; }
+.rbd-seg button{ padding: 5px 12px; font-size: .82rem; }
+.rbd-seg button:hover, .rbd-chip:hover{ border-color: var(--rose); }
+.rbd-seg button[aria-pressed="true"]{ border-color: transparent; }
+.rbd-hours{ grid-column: 1 / -1; display: flex; align-items: center; gap: 12px; }
+.rbd-chip{ font-size: .88rem; padding: 7px 14px; }
+.rbd-chip[aria-pressed="true"]{ background: var(--plum); border-color: var(--plum); color: var(--white); }
+.rbd-sb{ font-weight: 600; }
+.rbd-verdict{ white-space: pre-line; margin: 0 0 14px; font-size: 1rem; line-height: 1.55; }
+.rbd-toast{ font-size: .82rem; color: var(--rose); min-height: 1.4em; margin: 6px 0 0; }
+.rbd-copy-out{ width: 100%; min-height: 200px; margin-top: 8px; font: .78rem/1.5 var(--sans); color: var(--plum); background: var(--white); border: 1px solid var(--pale-rose); padding: 8px; }
+@media (max-width: 700px){.rbd-task{ grid-template-columns: 1fr; }}
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Debe una ayuda determinar su proyecto de IA?", "acceptedAnswer": {"@type": "Answer", "text": "No, nunca. Yo siempre mantengo este orden: ¿qué problema quiere resolver? ¿Dónde puede la IA crear valor de verdad? ¿Qué proyecto conviene priorizar? Y solo después: ¿qué ayudas pueden aplicarse? Un proyecto montado para encajar en una ayuda corre el riesgo de no resolver ningún problema real. Habría gastado entonces tiempo, y parte del dinero, en un resultado que nadie esperaba. La ayuda debe acelerar un proyecto ya elegido, nunca elegirlo por usted."}}, {"@type": "Question", "name": "¿Qué financia el Diag Data IA?", "acceptedAnswer": {"@type": "Answer", "text": "Para las pymes y empresas medianas de 10 a 2000 empleados, el programa IA Booster de Bpifrance, dentro de France 2030, ofrece primero una sensibilización gratuita. Después, un Diag Data IA cofinanciado al 40 %: 10.000 € sin IVA, de los cuales 6.000 € sin IVA corren a cargo de la empresa. Es un diagnóstico técnico, realizado por un experto acreditado por Bpifrance. Hay que cumplir condiciones, en particular una facturación de al menos 1 M€ y ser una empresa independiente. Por tanto, no elige libremente al proveedor. Y ese diagnóstico no sustituye la reflexión estratégica previa: qué uso priorizar, y por qué ese."}}, {"@type": "Question", "name": "¿Qué grandes familias de ayudas existen para un proyecto de IA?", "acceptedAnswer": {"@type": "Answer", "text": "Hay tres, con lógicas distintas. Las ayudas al diagnóstico financian un análisis, como el Diag Data IA. Los catálogos de soluciones reúnen productos listos para usar, como una de las dos vertientes del plan Osez l’IA. Las ayudas más generales, nacionales o regionales, apoyan la transformación digital o la inversión. No se sustituyen entre sí. Confundir un diagnóstico financiado con un despliegue financiado es uno de los errores más frecuentes. Antes de rellenar un expediente, compruebe a qué familia pertenece: eso le dice qué se financiará de verdad y qué quedará a su cargo."}}, {"@type": "Question", "name": "¿Por qué es decisiva la cuestión del proveedor?", "acceptedAnswer": {"@type": "Answer", "text": "Porque, según el dispositivo, usted elige libremente a su proveedor, o este sale de una lista. En el primer caso, elige al que entiende su actividad. En el segundo, la elección está encuadrada: compruebe que el proveedor propuesto responde a su necesidad. Una financiación obtenida para un proveedor que no encaja con el proyecto le cuesta tiempo, aunque no le cueste dinero. ¿Cómo combinar un diagnóstico financiado con un proyecto estratégico? Manteniendo cada uno en su sitio. El diagnóstico técnico muestra lo que es posible con sus datos y sus herramientas. La reflexión estratégica decide lo que merece hacerse, en qué orden y con qué medios. Lo ideal es la estrategia primero. Un diagnóstico centrado en un uso ya elegido aporta mucho más que un diagnóstico general, sin una pregunta precisa."}}, {"@type": "Question", "name": "¿Hay que esperar una ayuda para empezar?", "acceptedAnswer": {"@type": "Answer", "text": "No necesariamente. Esperar una ayuda puede retrasar varios meses un proyecto cuyo valor ya está claro. Mientras tanto, el problema sigue intacto. La buena pregunta no es «ayuda o no ayuda». Es: «¿qué primer paso puedo dar ahora mismo, haya o no ayuda?». Un primer uso modesto, sobre una tarea precisa, le enseña cosas que ningún expediente sustituye. También hace más fácil defender lo que viene después, incluso ante un organismo financiador. ¿«Osez l’IA» financia cualquier tipo de consultoría? No. El plan nacional Osez l’IA tiene dos vertientes. La primera es un catálogo de soluciones de IA listas para usar para pymes y empresas medianas: asistentes, automatización, análisis de documentos. Son productos. La segunda reúne acompañamientos de Bpifrance, como el Diag Data IA y el Acelerador IA, realizados por expertos acreditados. En ambos casos, no elige libremente al proveedor. Un taller de enfoque estratégico como Cap IA no es ni un producto del catálogo ni un servicio de experto acreditado: no entra en estos dispositivos, y no lo presento como financiable por ellos. Los Agentes IA de EXEC’IA, en cambio, son soluciones de producto: VIGÍA, ECO o RELEVO podrían entrar en un catálogo de este tipo, siempre que sean seleccionados."}}, {"@type": "Question", "name": "¿Qué preguntas hacer antes de presentar un expediente?", "acceptedAnswer": {"@type": "Answer", "text": "Cinco comprobaciones le evitan malas sorpresas: Las condiciones exactas las publican los propios organismos (France Num, Bpifrance, entreprises.gouv.fr), y cambian. Compruébelas en la fuente, en el momento de presentar la solicitud. ¿Por dónde empezar, en concreto? Por el problema, no por la ventanilla. Escriba lo que la IA debe cambiar en su actividad, identifique dónde crea valor, elija un primer proyecto. La financiación se busca después, en función de ese proyecto. Financiación y cumplimiento se anticipan desde el enfoque: para lo segundo, vea la guía AI Act y RGPD para una PYME."}}, {"@type": "Question", "name": "¿Qué errores evitar al buscar una ayuda?", "acceptedAnswer": {"@type": "Answer", "text": "Cinco errores se repiten a menudo: El último merece comprobarse siempre: según los dispositivos, a veces la solicitud debe hacerse antes de que empiece el servicio. Está escrito en las condiciones oficiales. Léalas antes de comprometerse. ¿Qué hacer si su empresa no es elegible? No renunciar al proyecto. Una empresa no elegible puede financiar por sí misma un primer uso, empezando en pequeño: una tarea, un equipo, un resultado medible. Es incluso la mejor forma de saber si el proyecto merece una inversión mayor. No tener ayuda no es un veredicto sobre el valor del proyecto. Solo cambia el ritmo y el tamaño del primer paso."}}, {"@type": "Question", "name": "¿Cómo mantener el rumbo? Ante tantos dispositivos", "acceptedAnswer": {"@type": "Answer", "text": "Volviendo a la pregunta de partida: ¿qué problema quiere resolver? Los dispositivos son muchos, sus condiciones cambian y su vocabulario también. Su problema, en cambio, sigue siendo el mismo. Es él quien debe guiar la elección. Un directivo que sabe qué problema quiere resolver lee un catálogo de ayudas como una lista de opciones. Quien todavía no lo sabe lo lee como una lista de restricciones. ¿Qué tres cosas tener presentes? 1. El proyecto debe existir sin la ayuda, aunque sea más pequeño. 2. Las condiciones se comprueban en la fuente, en la fecha de la solicitud. 3. El cumplimiento se piensa desde el principio, no después del despliegue. Si estos tres puntos están resueltos, la ayuda se convierte en lo que debe ser: un acelerador de un proyecto ya elegido, y no la razón para elegirlo."}}, {"@type": "Question", "name": "¿Qué lugar tiene un acompañamiento estratégico antes de una ayuda?", "acceptedAnswer": {"@type": "Answer", "text": "Un lugar previo, para responder a una pregunta que las ayudas rara vez tratan: ¿dónde puede la IA crear valor en su empresa, y por dónde empezar? Es el papel de un taller de enfoque como Cap IA en EXEC’IA. Una vez claros el problema y la prioridad, el diagnóstico financiado, la solución elegida y las posibles ayudas encajan con mucha más sencillez. Elige con un rumbo, en lugar de sufrir un menú. ¿Cómo presentar su proyecto a un organismo financiador? El problema antes que la solución: lo que quiere cambiar, para quién, y cómo sabrá que ha funcionado. Un organismo financia un resultado esperado más que una intención. Un expediente que parte de una necesidad clara, un alcance limitado y un criterio de éxito sencillo se lee más rápido y se defiende mejor. Prepare también sus respuestas a tres preguntas: quién llevará el proyecto internamente, cuánto tiempo exigirá y qué hará si el resultado decepciona. Esas respuestas tranquilizan tanto como una cifra."}}, {"@type": "Question", "name": "¿Qué hacer una vez obtenida la ayuda?", "acceptedAnswer": {"@type": "Answer", "text": "La ayuda financia una etapa, no lo que viene después. Prevea desde el principio lo que pasa después: quién usa el resultado, quién lo hace evolucionar y cómo se decide continuar. Un diagnóstico guardado en un cajón no cambia nada en la actividad. Vuelva al orden de partida: problema, valor, prioridad. Ese orden le dirá si la etapa financiada era la buena, y cuál es la siguiente. Guarde también todos los documentos: facturas, entregables, actas. Un organismo financiador puede pedirlos, a veces meses después."}}], "inLanguage": "es-ES"}
@@ -1318,6 +1311,7 @@ color: var(--plum); margin: 14px 0 0;
     <a href="perspective-chatbot-savoir-passer-la-main-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Cuándo debe un chatbot pasar el relevo?</a>
     <a href="perspective-budget-ia-adhesion-equipes-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Por qué pesa más la adhesión que el presupuesto?</a>
     <a href="perspective-shadow-ia-charte-comite-direction-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Qué herramientas de <span style="color:var(--rose)">IA</span> usan sus equipos?</a>
+    <a href="perspective-robots-humanoides-token-tax-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Qué tareas confiaría a un robot humanoide?</a>
     </div>
     </div>
 

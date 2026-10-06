@@ -240,17 +240,6 @@ transform: translateY(-2px);
 }
 .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 24px; }
 @media (max-width: 900px){.ce-que-section{ padding: var(--section-gap) 0; }}
-.persp-track-outer{
-overflow-x: auto; overflow-y: hidden;
-scroll-snap-type: x mandatory;
-padding: .25rem 0 .5rem;
-cursor: grab;
-scroll-padding-left: 1.5rem;
-max-width: 100vw;
-scrollbar-width: none;
-}
-.persp-track-outer:active{ cursor: grabbing; }
-.persp-track-outer::-webkit-scrollbar{ display: none; }
 .persp-track{
 display: flex; gap: 1.25rem;
 width: max-content;
@@ -273,7 +262,7 @@ transition: transform .3s, box-shadow .3s;
 gap: 16px;
 width: max-content;
 padding-right: 0;
-}.persp-track-outer{ overflow-x: auto; scroll-snap-type: x mandatory; padding-top: .6rem; container-type: inline-size; scroll-padding-left: 0; }.persp-card{ width: 270px; flex: 0 0 auto; min-width: 0; }}
+}.persp-card{ width: 270px; flex: 0 0 auto; min-width: 0; }}
 @supports (width: 1cqw){@media (min-width: 1160px){.persp-card{ width: calc((100cqw - 48px) / 4); }}}
 @media (max-width: 640px){.persp-card{ width: 82vw; }}
 .article-page{ padding-top: calc(var(--nav-h) + 32px); padding-bottom: clamp(24px, 3vw, 40px); }
@@ -728,18 +717,6 @@ position: relative;
 z-index: 1;
 height: auto;
 }
-.agents-track-outer{
-overflow-x: auto;
-overflow-y: hidden;
-scroll-snap-type: x mandatory;
-padding: .25rem 0 .5rem;
-cursor: grab;
-scroll-padding-left: 1.5rem;
-max-width: 100vw;
-}
-.agents-track-outer:active{ cursor: grabbing; }
-.agents-track-outer{ scrollbar-width: none; }
-.agents-track-outer::-webkit-scrollbar{ display: none; }
 .agents-track{
 display: flex;
 gap: 1.25rem;
@@ -781,7 +758,7 @@ object-position: center;
 .nl-box-form{
 display: none;
 }
-@media (max-width: 1024px){.nav-links{ gap: 18px; }.nav-links a{ font-size: .72rem; }.agents-track-outer{ padding: .5rem 0 1rem; scroll-padding-left: 16px; }}
+@media (max-width: 1024px){.nav-links{ gap: 18px; }.nav-links a{ font-size: .72rem; }}
 @media (max-width: 768px){html{ overflow-x: clip !important; }body{ overflow-x: hidden !important; max-width: 100vw; }*, *::before, *::after{ max-width: 100% !important; box-sizing: border-box; }.hero-tagline, .hero-sub, .hero-sub2, .testi-intro,
 .ia-perf-stat-label, .roi-intro, .offre-decouverte-btn,
 .agents-cta-title, .xcard-tag, .tl-date, .pillar p,
@@ -913,7 +890,6 @@ box-shadow: 0 12px 32px rgba(99,59,74,.25);
 }.nav-links.open a{ color: #FAF6F2 !important; font-size: 1rem; max-width: none !important; }.nav-links.open a::after{ background: #C75F62; }}
 @media (max-width: 1260px){.footer-brand .footer-tag, .footer-brand .footer-mention-ia{ white-space: normal; }}
 @media (max-width: 1100px){.piliers{ grid-template-columns: repeat(3, minmax(0, 1fr)); }.pilier{ min-width: 0; }.pilier *, .newsletter-content *, .nl-box *{ overflow-wrap: anywhere; }}
-@media (max-width: 1100px){.persp-track-outer{ max-width: 100%; }}
 .article-book-folio[data-n]::before{ content: attr(data-n); }
 .art-chip{ font-family: var(--sans); font-weight: 600; font-style: normal; font-size: .92em; color: var(--plum); background: rgba(217,201,195,.38); padding: .04em .38em; border-radius: 4px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 .article-book h3.article-meta{ margin-top: 32px; margin-bottom: 12px; }
@@ -1006,6 +982,24 @@ color: var(--plum); margin: 14px 0 0;
 }
 @media (max-width: 760px){.piliers{ grid-template-columns: 1fr; gap: 16px; }.pilier{ padding: 24px 22px; }.pilier *, .pilier-title, .pilier-sub, .pilier-btn{ overflow-wrap: normal; word-break: normal; hyphens: none; }}
 @media (max-width: 760px){.article-book-col .nw, .article-book-col .art-chip{ white-space: normal; }.article-book-col, .article-book-col > *{ min-width: 0; max-width: 100%; }}
+.rbd-week{ display: flex; align-items: center; gap: 14px; flex-wrap: wrap; background: var(--plum); color: var(--white); padding: 12px 16px; margin-bottom: 10px; }
+.rbd-assigned{ flex-basis: 100%; font-size: .78rem; color: var(--pale-rose); }
+.rbd-tasks{ display: flex; flex-direction: column; gap: 10px; }
+.rbd-task{ background: var(--ivory); border: 1px solid var(--pale-rose); padding: 12px 14px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 16px; align-items: center; }
+.rbd-task-name{ font-weight: 500; font-size: .95rem; line-height: 1.35; }
+.rbd-seg{ display: flex; gap: 6px; flex-wrap: wrap; }
+.rbd-seg button, .rbd-chip{ font-family: var(--sans); cursor: pointer; border: 1px solid var(--pale-rose); background: var(--white); color: var(--plum); border-radius: 999px; white-space: nowrap; }
+.rbd-seg button{ padding: 5px 12px; font-size: .82rem; }
+.rbd-seg button:hover, .rbd-chip:hover{ border-color: var(--rose); }
+.rbd-seg button[aria-pressed="true"]{ border-color: transparent; }
+.rbd-hours{ grid-column: 1 / -1; display: flex; align-items: center; gap: 12px; }
+.rbd-chip{ font-size: .88rem; padding: 7px 14px; }
+.rbd-chip[aria-pressed="true"]{ background: var(--plum); border-color: var(--plum); color: var(--white); }
+.rbd-sb{ font-weight: 600; }
+.rbd-verdict{ white-space: pre-line; margin: 0 0 14px; font-size: 1rem; line-height: 1.55; }
+.rbd-toast{ font-size: .82rem; color: var(--rose); min-height: 1.4em; margin: 6px 0 0; }
+.rbd-copy-out{ width: 100%; min-height: 200px; margin-top: 8px; font: .78rem/1.5 var(--sans); color: var(--plum); background: var(--white); border: 1px solid var(--pale-rose); padding: 8px; }
+@media (max-width: 700px){.rbd-task{ grid-template-columns: 1fr; }}
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does that 30% figure really say?", "acceptedAnswer": {"@type": "Answer", "text": "Today, Louis handles 30% of customer requests on its own. The rest goes to a human, and the customer does not need to ask everything again. What strikes me about this figure? It is not the AI that has progressed the most. It is the boundary Air France has learned to draw between the tool and the person. This is not an isolated case. According to Salesforce, in 2025 customer service teams already hand an average of 30% of their cases to AI. They expect to reach 50% by 2027. In other words, the boundary question is coming to almost every customer service team, SMEs included."}}, {"@type": "Question", "name": "Why does the handover matter as much as the automation?", "acceptedAnswer": {"@type": "Answer", "text": "Because your customers do not judge the technology. They judge their journey. You can automate 30% of requests successfully and lose it all on a single failed handover: the one where the customer has to repeat everything to an adviser who knows nothing about the previous exchange. A good handover passes on the context: what the customer asked, what the tool replied, what is left to solve. The adviser picks up the conversation where it stopped. For the company, it is an organisational detail. For the customer, it is the whole difference between “someone is looking after me” and “I am starting from scratch”."}}, {"@type": "Question", "name": "Which requests should never be automated end to end?", "acceptedAnswer": {"@type": "Answer", "text": "Those where the stakes are high or emotions run strong: a dispute, an emergency, a customer in difficulty, a decision that commits the company. These requests are often few. But their effect on trust is huge. For these cases, the best automation spots the situation and alerts a human fast. What should you take from the Air France example? That the result does not come from how sophisticated the tool is. It comes from how clear the roles are. The assistant handles what is frequent and simple. People handle what calls for judgement, listening or a decision. This split moves: you revisit it as the tool improves and teams see what it does well."}}, {"@type": "Question", "name": "What can be automated without risk?", "acceptedAnswer": {"@type": "Answer", "text": "Frequent, factual requests with a stable answer: the status of an order, a timetable, a known rule, a document to find. The right answer depends neither on the customer’s mood nor on a judgement call. That is where automation frees up the most time for your teams. It is also where a mistake costs the least. How does a customer experience a failed handover? As an admission: the company did not organise itself for them. They repeat their problem, they wait, they switch channels. They remember that moment more vividly than all the answers that worked. Trust is rarely lost over a single mistake. It is lost when people feel they are not being heard, especially when it is urgent."}}, {"@type": "Question", "name": "Does the customer repeat the question before getting a useful answer?", "acceptedAnswer": {"@type": "Answer", "text": "How do you sense the limit before crossing it? To me, three signals are enough. 1) The customer repeats the question. 2) They cannot find a way to reach a human. 3) The tone does not match how serious the request is. When the same question keeps coming back, the tool is not meeting the real need. That is the first signal: the conversation needs to change hands. Is there a simple option to reach a human? If no clear option appears, customers feel trapped. Good automation makes the way out to a person visible and immediate. A button, a sentence, a phone number: the form does not matter, as long as nobody has to hunt for it."}}, {"@type": "Question", "name": "Does the tone adapt to how serious the request is?", "acceptedAnswer": {"@type": "Answer", "text": "The tone cannot stay the same for a trivial question and for an emergency. A staff strike does not call for the same register as a baggage question. AI handles the volume. Recognising the right moment to hand over is still a human reflex. Who decides the limit between the tool and the person? A named person, not a technical setting. The limit is a service decision: which requests the assistant handles alone, which it passes on, and on which signals. It has an owner, it is written down, and it is reviewed. Without an owner, the limit moves on its own, update after update, without anyone having chosen it."}}, {"@type": "Question", "name": "How do you know the limit is in the right place?", "acceptedAnswer": {"@type": "Answer", "text": "By listening to two sources: customers, through their feedback and repeated requests, and advisers, who see what reaches them after the handover. If advisers often receive misunderstood requests, the tool keeps control too long. If they receive simple requests, it hands over too early. The percentage of requests handled alone is a result to read with care: it matters less than the satisfaction of those who went through the tool. Where do you start in your customer service? With the most frequent and simplest requests: that is where automation frees up the most time, with the least risk. At the same time, define from day one the signals that trigger a handover to a person. Then check that this handover is visible and quick. Then widen gradually, always keeping the same rule: the tool handles the volume, the person handles what matters."}}, {"@type": "Question", "name": "Which question should you ask your teams?", "acceptedAnswer": {"@type": "Answer", "text": "Just one: in which cases did your customer feel they were talking to someone who did not understand them? The answers almost always draw the boundary the company has not drawn yet. That is where the quality of the relationship is decided, far more than in the percentage of requests handled. What should be passed on to the person taking over? The full context: the initial request, the answers already given, the information the customer has already provided and the exact point where the exchange stalled. The person should be able to reply without asking a single question already asked. This summary is prepared in advance, with the teams who receive the requests, and tested regularly on real cases."}}, {"@type": "Question", "name": "How do you involve frontline teams?", "acceptedAnswer": {"@type": "Answer", "text": "By giving them a voice on the boundary. Advisers know which requests recur, which get complicated and which are better handled in person. Their view avoids moving the limit blindly. A regular review of a few real exchanges, with them, is enough to spot useful adjustments. Which indicator should you follow first? Less the share of requests handled alone than the satisfaction of those who went through the tool, and the time it takes to reach a person when they want one. A high automation rate can hide real frustration. The right goal is not to make human exchanges disappear but to reserve them for the moments where they matter most."}}, {"@type": "Question", "name": "How do you test the set-up before rolling it out?", "acceptedAnswer": {"@type": "Answer", "text": "By replaying real requests, including the most delicate: a complaint, an emergency, a badly worded question. Observe at what point the tool should have handed over, and what the person receives at that moment. A test of a few dozen exchanges, reviewed by advisers, teaches more than a successful demonstration on three carefully chosen cases. What should you tell the customer so they trust the tool? The truth: they are talking to an assistant, here is what it can do, and here is how to reach a person. A customer who has been told accepts the tool’s limits better than one who finds out, mid-conversation, that they are not talking to a human. Transparency is also a courtesy: it shows the company stands behind what it has put in place."}}, {"@type": "Question", "name": "How do you prepare advisers to take over?", "acceptedAnswer": {"@type": "Answer", "text": "By teaching them to pick up without repeating questions already asked, and to recognise the tone of an already weary customer. Taking over a conversation is a professional skill in its own right, worth a short training. Advisers must also know when to tell the team that a reason for handover keeps coming back, so the boundary can be adjusted. How do you keep control as the tool evolves? By treating each change as a boundary to decide, not as a technical update. Before widening the assistant’s scope, the question is simple: which new requests will the assistant handle alone, and who checks that this stays acceptable for the customer? A regular review of a few real exchanges, at each change, protects the quality of the relationship."}}], "inLanguage": "en-US"}
@@ -1324,6 +1318,7 @@ color: var(--plum); margin: 14px 0 0;
     <a href="perspective-chatbot-savoir-passer-la-main-en.html" class="footer-persp-link footer-persp-link--c2">→ Where should a chatbot hand over to a human?</a>
     <a href="perspective-budget-ia-adhesion-equipes-en.html" class="footer-persp-link footer-persp-link--c2">→ Why does buy-in matter more than budget?</a>
     <a href="perspective-shadow-ia-charte-comite-direction-en.html" class="footer-persp-link footer-persp-link--c2">→ Which <span style="color:var(--rose)">AI</span> tools do your teams really use?</a>
+    <a href="perspective-robots-humanoides-token-tax-en.html" class="footer-persp-link footer-persp-link--c2">→ Which tasks would you hand to a humanoid robot?</a>
     </div>
     </div>
 

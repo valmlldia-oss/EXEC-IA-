@@ -23,6 +23,7 @@ Contenu intégral des 8 articles Perspectives et du guide AI Act/RGPD pour PME (
 - [La transformation échoue rarement à cause de la technologie](https://exec-ia.ai/perspective-transformation-echoue-rarement-technologie.html): Sur les vrais facteurs d'échec des projets de transformation IA.
 - [Le budget IA n’est pas le sujet. L’adhésion, si.](https://exec-ia.ai/perspective-budget-ia-adhesion-equipes.html): Sur l'écart entre budget IA et adhésion des équipes.
 - [Une politique IA que ses dirigeants ne respectent pas n’est plus une politique.](https://exec-ia.ai/perspective-shadow-ia-charte-comite-direction.html): Sur l'usage non validé d'outils IA et la gouvernance.
+- [Robots humanoïdes : quelles tâches partiront en premier ?](https://exec-ia.ai/perspective-robots-humanoides-token-tax.html): Sur les robots humanoïdes, les métiers en tension, la souveraineté et la « token tax », avec un mini-diagnostic interactif.
 - [Le chatbot d’Air France répond seul à 30 % des demandes. Le reste, il sait passer la main.](https://exec-ia.ai/perspective-chatbot-savoir-passer-la-main.html): Sur la frontière entre automatisation et relation humaine.
 - [Votre projet IA peut-il être financé ? Oui, mais pas forcément celui que vous pensez.](https://exec-ia.ai/perspective-projet-ia-peut-il-etre-finance.html): Sur les aides publiques au financement d'un projet IA.
 
@@ -34,6 +35,7 @@ Ces articles existent aussi en anglais et en espagnol :
 - [AI transformation rarely fails because of the technology](https://exec-ia.ai/perspective-transformation-echoue-rarement-technologie-en.html) · [La transformación con IA rara vez fracasa por la tecnología](https://exec-ia.ai/perspective-transformation-echoue-rarement-technologie-es.html)
 - [The AI budget is not the issue. Buy-in is.](https://exec-ia.ai/perspective-budget-ia-adhesion-equipes-en.html) · [El presupuesto de IA no es el tema. La adhesión, sí.](https://exec-ia.ai/perspective-budget-ia-adhesion-equipes-es.html)
 - [An AI policy that its own leaders do not follow is no longer a policy.](https://exec-ia.ai/perspective-shadow-ia-charte-comite-direction-en.html) · [Una política de IA que sus directivos no respetan deja de ser una política.](https://exec-ia.ai/perspective-shadow-ia-charte-comite-direction-es.html)
+- [Humanoid robots: which tasks will go first?](https://exec-ia.ai/perspective-robots-humanoides-token-tax-en.html) · [Robots humanoides: ¿qué tareas se irán primero?](https://exec-ia.ai/perspective-robots-humanoides-token-tax-es.html)
 - [Air France’s chatbot answers 30% of requests alone. For the rest, it knows when to hand over.](https://exec-ia.ai/perspective-chatbot-savoir-passer-la-main-en.html) · [El chatbot de Air France responde solo al 30 % de las consultas. El resto, sabe pasarlo a una persona.](https://exec-ia.ai/perspective-chatbot-savoir-passer-la-main-es.html)
 - [Can your AI project be funded? Yes, but not necessarily the one you have in mind.](https://exec-ia.ai/perspective-projet-ia-peut-il-etre-finance-en.html) · [¿Se puede financiar su proyecto de IA? Sí, pero no necesariamente el que usted imagina.](https://exec-ia.ai/perspective-projet-ia-peut-il-etre-finance-es.html)
 

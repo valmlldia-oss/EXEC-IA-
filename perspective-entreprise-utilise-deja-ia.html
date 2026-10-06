@@ -240,17 +240,6 @@ transform: translateY(-2px);
 }
 .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 24px; }
 @media (max-width: 900px){.ce-que-section{ padding: var(--section-gap) 0; }}
-.persp-track-outer{
-overflow-x: auto; overflow-y: hidden;
-scroll-snap-type: x mandatory;
-padding: .25rem 0 .5rem;
-cursor: grab;
-scroll-padding-left: 1.5rem;
-max-width: 100vw;
-scrollbar-width: none;
-}
-.persp-track-outer:active{ cursor: grabbing; }
-.persp-track-outer::-webkit-scrollbar{ display: none; }
 .persp-track{
 display: flex; gap: 1.25rem;
 width: max-content;
@@ -273,7 +262,7 @@ transition: transform .3s, box-shadow .3s;
 gap: 16px;
 width: max-content;
 padding-right: 0;
-}.persp-track-outer{ overflow-x: auto; scroll-snap-type: x mandatory; padding-top: .6rem; container-type: inline-size; scroll-padding-left: 0; }.persp-card{ width: 270px; flex: 0 0 auto; min-width: 0; }}
+}.persp-card{ width: 270px; flex: 0 0 auto; min-width: 0; }}
 @supports (width: 1cqw){@media (min-width: 1160px){.persp-card{ width: calc((100cqw - 48px) / 4); }}}
 @media (max-width: 640px){.persp-card{ width: 82vw; }}
 .article-page{ padding-top: calc(var(--nav-h) + 32px); padding-bottom: clamp(24px, 3vw, 40px); }
@@ -734,18 +723,6 @@ position: relative;
 z-index: 1;
 height: auto;
 }
-.agents-track-outer{
-overflow-x: auto;
-overflow-y: hidden;
-scroll-snap-type: x mandatory;
-padding: .25rem 0 .5rem;
-cursor: grab;
-scroll-padding-left: 1.5rem;
-max-width: 100vw;
-}
-.agents-track-outer:active{ cursor: grabbing; }
-.agents-track-outer{ scrollbar-width: none; }
-.agents-track-outer::-webkit-scrollbar{ display: none; }
 .agents-track{
 display: flex;
 gap: 1.25rem;
@@ -787,7 +764,7 @@ object-position: center;
 .nl-box-form{
 display: none;
 }
-@media (max-width: 1024px){.nav-links{ gap: 18px; }.nav-links a{ font-size: .72rem; }.agents-track-outer{ padding: .5rem 0 1rem; scroll-padding-left: 16px; }}
+@media (max-width: 1024px){.nav-links{ gap: 18px; }.nav-links a{ font-size: .72rem; }}
 @media (max-width: 768px){html{ overflow-x: clip !important; }body{ overflow-x: hidden !important; max-width: 100vw; }*, *::before, *::after{ max-width: 100% !important; box-sizing: border-box; }.hero-tagline, .hero-sub, .hero-sub2, .testi-intro,
 .ia-perf-stat-label, .roi-intro, .offre-decouverte-btn,
 .agents-cta-title, .xcard-tag, .tl-date, .pillar p,
@@ -919,7 +896,6 @@ box-shadow: 0 12px 32px rgba(99,59,74,.25);
 }.nav-links.open a{ color: #FAF6F2 !important; font-size: 1rem; max-width: none !important; }.nav-links.open a::after{ background: #C75F62; }}
 @media (max-width: 1260px){.footer-brand .footer-tag, .footer-brand .footer-mention-ia{ white-space: normal; }}
 @media (max-width: 1100px){.piliers{ grid-template-columns: repeat(3, minmax(0, 1fr)); }.pilier{ min-width: 0; }.pilier *, .newsletter-content *, .nl-box *{ overflow-wrap: anywhere; }}
-@media (max-width: 1100px){.persp-track-outer{ max-width: 100%; }}
 @media (max-width: 1200px){.about-lede--1l, .about-principe-sub--1l, .tl-item--essec h3, .tl-item--essec .tl-role,
 .tl-studeria-topics, .tl-studeria-quote, .agents-tasks-1l, .tl-intro--diff, .tl-one-line,
 .article-page--guide .article-title--2l,
@@ -940,7 +916,6 @@ body.art-justify .article-book .article-intro p.art-enum{ text-align: left; }
 .footer-col a.footer-instagram-btn{ margin-top: -6px; }
 .footer-bottom{ padding-top: 2px; padding-bottom: 4px; }
 .footer-legal a{ padding-top: 4px; padding-bottom: 4px; }
-.nw{ white-space: nowrap; }
 .art-ia{ color: var(--rose); }
 .article-book .article-qlist.article-qlist--filets{ border-left: none; padding: 12px 0; margin: 26px 0 8px; border-top: 1px solid rgba(217,201,195,1); border-bottom: 1px solid rgba(217,201,195,1); text-align: center; }
 .article-qlist--filets p{ text-align: center !important; text-align-last: center !important; }
@@ -1018,6 +993,24 @@ color: var(--plum); margin: 14px 0 0;
 }
 @media (max-width: 760px){.piliers{ grid-template-columns: 1fr; gap: 16px; }.pilier{ padding: 24px 22px; }.pilier *, .pilier-title, .pilier-sub, .pilier-btn{ overflow-wrap: normal; word-break: normal; hyphens: none; }}
 @media (max-width: 760px){.article-book-col .nw, .article-book-col .art-chip{ white-space: normal; }.article-book-col, .article-book-col > *{ min-width: 0; max-width: 100%; }}
+.rbd-week{ display: flex; align-items: center; gap: 14px; flex-wrap: wrap; background: var(--plum); color: var(--white); padding: 12px 16px; margin-bottom: 10px; }
+.rbd-assigned{ flex-basis: 100%; font-size: .78rem; color: var(--pale-rose); }
+.rbd-tasks{ display: flex; flex-direction: column; gap: 10px; }
+.rbd-task{ background: var(--ivory); border: 1px solid var(--pale-rose); padding: 12px 14px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 16px; align-items: center; }
+.rbd-task-name{ font-weight: 500; font-size: .95rem; line-height: 1.35; }
+.rbd-seg{ display: flex; gap: 6px; flex-wrap: wrap; }
+.rbd-seg button, .rbd-chip{ font-family: var(--sans); cursor: pointer; border: 1px solid var(--pale-rose); background: var(--white); color: var(--plum); border-radius: 999px; white-space: nowrap; }
+.rbd-seg button{ padding: 5px 12px; font-size: .82rem; }
+.rbd-seg button:hover, .rbd-chip:hover{ border-color: var(--rose); }
+.rbd-seg button[aria-pressed="true"]{ border-color: transparent; }
+.rbd-hours{ grid-column: 1 / -1; display: flex; align-items: center; gap: 12px; }
+.rbd-chip{ font-size: .88rem; padding: 7px 14px; }
+.rbd-chip[aria-pressed="true"]{ background: var(--plum); border-color: var(--plum); color: var(--white); }
+.rbd-sb{ font-weight: 600; }
+.rbd-verdict{ white-space: pre-line; margin: 0 0 14px; font-size: 1rem; line-height: 1.55; }
+.rbd-toast{ font-size: .82rem; color: var(--rose); min-height: 1.4em; margin: 6px 0 0; }
+.rbd-copy-out{ width: 100%; min-height: 200px; margin-top: 8px; font: .78rem/1.5 var(--sans); color: var(--plum); background: var(--white); border: 1px solid var(--pale-rose); padding: 8px; }
+@media (max-width: 700px){.rbd-task{ grid-template-columns: 1fr; }}
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Pourquoi plus de possibilités technologiques rend-il la capacité à choisir plus stratégique ?", "acceptedAnswer": {"@type": "Answer", "text": "Aujourd’hui, avec l’IA, on peut tout essayer. C’est justement le piège : à force de tout tester, plus personne ne décide. Pour trancher, je propose trois questions. 1) Est-ce que l’usage revient souvent ? Un outil utilisé chaque semaine par plusieurs équipes pèse plus lourd qu’une démonstration spectaculaire faite une seule fois. 2) Est-ce qu’on peut le mesurer ? Si personne n’est capable de dire, dans six mois, ce qu’il a changé, c’est qu’il n’a jamais été relié à un chiffre suivi par la direction. 3) Est-ce qu’il tient sans un expert ? Un usage qui ne marche que grâce à une personne s’arrêtera le jour où elle changera de poste. Ces trois questions se posent avant d’investir. Une fois l’argent dépensé, il est beaucoup plus difficile de dire non."}}, {"@type": "Question", "name": "Ça ressemble à quoi, concrètement ?", "acceptedAnswer": {"@type": "Answer", "text": "Prenez une équipe commerciale qui utilise l’IA pour préparer ses prospects avant le premier appel. Elle s’en sert tous les jours. Le résultat se mesure : c’est le taux de conversion du premier rendez-vous. L’outil continue de tourner même si la personne qui l’a installé s’en va. Trois questions, trois oui. Maintenant, imaginez un chatbot interne lancé pour « montrer que l’entreprise est à la pointe ». Presque personne ne s’en sert, et aucun chiffre n’est suivi. Trois questions, trois non. Vous voulez un test encore plus rapide ? Demandez-vous si cet usage disparaissait demain, est-ce que quelqu’un s’en apercevrait dans un chiffre que la direction regarde déjà ?"}}, {"@type": "Question", "name": "Comment mettre en place cet arbitrage sans créer une nouvelle strate ?", "acceptedAnswer": {"@type": "Answer", "text": "Dans une PME, pas besoin de créer un comité ni un poste pour ça. Une personne suffit. Souvent, elle est déjà dans la maison. On lui confie clairement une mission : passer chaque projet d’IA au crible des trois questions avant d’y mettre de l’argent. Elle n’a pas besoin d’être technicienne. Elle doit connaître les deux côtés : le terrain qui se sert des outils, et les chiffres que la direction suit. C’est souvent le rôle que tient, sans le titre, le bras droit d’un dirigeant. Une question pour savoir où vous en êtes : chez vous, qui peut dire non à un outil d’IA qui ne passe pas les trois questions, même si l’équipe l’adore ? Si aucun nom ne vous vient, vos usages s’installent tout seuls. Personne ne les a choisis."}}, {"@type": "Question", "name": "Comment distinguer un gain individuel d’un résultat ?", "acceptedAnswer": {"@type": "Answer", "text": "Moi, je trie en deux colonnes. D’un côté, ce qui allège une tâche. De l’autre, ce qui change un résultat. Un compte-rendu résumé plus vite ? C’est un gain pour une personne. Une décision prise plus tôt, un client mieux préparé avant le premier appel, une erreur rattrapée avant qu’elle ne coûte cher ? Là, on parle de résultats. Le premier gain se voit tout de suite, mais personne ne s’en souvient trois mois plus tard. Le second, il faut aller le chercher, le mesurer et le choisir dès le départ. Il n’arrive jamais par hasard. Le même rapport McKinsey montre d’ailleurs un mouvement intéressant. La part des grandes entreprises qui déploient des agents IA dans toute l’organisation, et plus seulement dans un service, est passée de 27 % à 40 % en un an. Pour moi, ce sont elles qui commencent à dépasser le gain individuel. Elles ont choisi où mettre leurs efforts, au lieu de laisser chaque équipe tester dans son coin. Pour une direction générale, la question devient donc : « quel usage, une fois choisi et soutenu, changera un chiffre que nous suivons déjà ? » Elle se pose avant de choisir l’outil. Dans les faits, personne n’est bien placé pour trancher seul. Le collaborateur qui a trouvé la bonne astuce n’a ni la vue d’ensemble, ni le pouvoir de l’étendre. La direction, elle, a le pouvoir. Mais elle a rarement le temps de tester tout ce qui remonte du terrain. Entre les deux, il manque souvent quelqu’un. Quelqu’un qui connaît assez le terrain pour repérer ce qui vaut la peine, et assez la direction pour le relier à un chiffre qu’elle suit."}}, {"@type": "Question", "name": "Qui devrait trancher entre ces usages ?", "acceptedAnswer": {"@type": "Answer", "text": "Quelqu’un dont c’est clairement la mission. Dans la plupart des entreprises, les outils sont là. La bonne volonté aussi. Ce qui manque, c’est une personne chargée de trancher entre ce qui remonte du terrain et les priorités de la direction. Dans une grande entreprise, ce peut être un responsable de la transformation. Dans une PME, c’est souvent le dirigeant lui-même, son bras droit ou le directeur financier. Peu importe le titre. Ce qui compte, c’est que tout le monde sache qui décide, et que cette personne ait le droit de dire non. Sans ce nom-là, chaque équipe garde ses outils, les abonnements s’accumulent, et personne ne sait lesquels servent à quelque chose."}}, {"@type": "Question", "name": "Par où commencer ?", "acceptedAnswer": {"@type": "Answer", "text": "Par un inventaire. Faites la liste des usages de l’IA déjà en place chez vous : il y en a presque toujours plus qu’on ne le pense. Passez ensuite chacun d’eux au crible des trois questions. La plupart des directions découvrent alors qu’elles paient déjà, sans le savoir, des outils qui ne passent aucun test, alors qu’un ou deux autres mériteraient d’être soutenus. L’inventaire tient souvent en une réunion. Le plus dur vient après : accepter d’arrêter un outil auquel on s’est habitué, parce qu’il ne passe pas le test, même si personne ne s’en plaint encore."}}, {"@type": "Question", "name": "Quel cas illustre la confusion entre gain individuel et résultat ?", "acceptedAnswer": {"@type": "Answer", "text": "L’histoire de Klarna, l’entreprise suédoise de paiement fractionné, est parlante. En février 2024, son dirigeant annonce que son assistant IA fait le travail de 700 agents du service client à temps plein, et répond plus vite. Un an plus tard, l’entreprise réembauche des agents humains. Elle explique publiquement qu’avec l’IA seule, elle n’arrive pas à maintenir la qualité de service. Le premier chiffre mesurait un gain : moins d’appels, des réponses plus rapides. Il ne disait rien de ce que l’entreprise suit au quotidien : la satisfaction et la fidélité de ses clients dans la durée. Tout est là. Un gain qui se voit tout de suite ne devient un résultat qu’une fois vérifié sur le chiffre que la direction suit déjà."}}, {"@type": "Question", "name": "Comment relier un usage de l’IA à un résultat de l’entreprise ?", "acceptedAnswer": {"@type": "Answer", "text": "Suivez le fil, de la tâche jusqu’à la décision. Quelle tâche l’outil raccourcit-il ? Quel temps libère-t-il ? À quoi ce temps sert-il ensuite ? C’est la dernière question qui compte. Sans elle, le gain reste individuel. Un test simple : essayez de dire à voix haute « grâce à cet usage, nous décidons ou livrons plus vite ce qui compte pour nos clients ». Si la phrase ne passe pas, l’usage n’est pas encore relié à un résultat. Un exemple. Un outil prépare les comptes rendus et fait gagner une heure par semaine à un manager. Si cette heure lui sert à rappeler deux clients qui attendent, le gain devient un résultat. Si elle disparaît dans les courriels, personne ne la verra jamais."}}, {"@type": "Question", "name": "Quel indicateur choisir pour juger un premier usage ?", "acceptedAnswer": {"@type": "Answer", "text": "Un seul, et que tout le monde comprend : le temps gagné sur une tâche précise, le nombre d’erreurs évitées, ou le délai de réponse à un client. Si vous en suivez cinq, plus personne n’en regarde aucun. Choisissez-le avant le test, jamais après. Sinon, on finit toujours par choisir le chiffre qui confirme ce qu’on espérait. Notez aussi le point de départ. Sans chiffre avant l’essai, impossible de prouver un progrès après. Une semaine de relevés tout simples, même notés à la main, suffit pour avoir cette base. C’est le geste le plus souvent oublié, et c’est lui qui rend la décision indiscutable en comité."}}, {"@type": "Question", "name": "À quelle fréquence revoir ses arbitrages ?", "acceptedAnswer": {"@type": "Answer", "text": "Souvent, et sans en faire une montagne. Une fois par trimestre, c’est un bon rythme. Les outils changent vite, les usages aussi, et une décision prise il y a un an ne correspond plus forcément à ce qui se passe aujourd’hui. Pas besoin d’un long comité. Une liste des usages, ce que chacun a apporté, et une décision pour chacun : on garde, on ajuste ou on arrête. Le plus simple : accrochez cette revue à un rendez-vous qui existe déjà, comme le point budgétaire du trimestre. Elle ne dépend plus alors de la bonne volonté de chacun, et elle ne saute pas quand l’agenda se remplit."}}, {"@type": "Question", "name": "Que dire aux équipes quand un usage est arrêté ?", "acceptedAnswer": {"@type": "Answer", "text": "La vérité, tout simplement. Une équipe qui comprend pourquoi un outil s’arrête accepte mieux la décision. Elle proposera même plus facilement une autre solution. Arrêter un usage fait partie du travail. C’est même la preuve que l’entreprise choisit, au lieu d’empiler les outils. Pensez aussi à remercier ceux qui ont testé. Leur essai vous a appris quelque chose, même si la réponse est non. Une équipe qu’on ne sanctionne pas pour un test arrêté aura envie d’en tenter un autre. C’est comme ça qu’une culture de l’essai s’installe, sans que personne ait peur de se tromper."}}], "inLanguage": "fr-FR"}
@@ -1277,6 +1270,7 @@ color: var(--plum); margin: 14px 0 0;
     <a href="perspective-chatbot-savoir-passer-la-main.html" class="footer-persp-link footer-persp-link--c2">→ Où tracer la limite entre chatbot et humain&nbsp;?</a>
     <a href="perspective-budget-ia-adhesion-equipes.html" class="footer-persp-link footer-persp-link--c2">→ L’adhésion compte-t-elle plus que le budget&nbsp;?</a>
     <a href="perspective-shadow-ia-charte-comite-direction.html" class="footer-persp-link footer-persp-link--c2">→ Quels outils <span style="color:var(--rose)">IA</span> vos équipes utilisent-elles&nbsp;?</a>
+    <a href="perspective-robots-humanoides-token-tax.html" class="footer-persp-link footer-persp-link--c2">→ Quelles tâches confier à un robot humanoïde&nbsp;?</a>
     </div>
     </div>
 

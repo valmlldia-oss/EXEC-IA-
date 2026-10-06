@@ -275,7 +275,21 @@ color: #633B4A;
 font-weight: 400;
 }
 @media (max-width: 900px){.ce-que-section{ padding: var(--section-gap) 0; }}
+.portrait-link{
+display: inline-flex; align-items: center; gap: 8px;
+font-family: var(--sans); font-size: 1rem; font-weight: 500;
+color: var(--rose); letter-spacing: .02em;
+margin-top: 2px;
+white-space: nowrap;
+transition: opacity .2s;
+}
+@media (max-width: 480px){.portrait-link{ white-space: normal; }}
+.portrait-link:hover{ opacity: .75; }
 .portrait-link-arrow{ transition: transform .2s var(--ease); display: inline-block; }
+.portrait-link:hover .portrait-link-arrow{ transform: translateX(4px); }
+.portrait-link .portrait-link-arrow{ animation: hero-cta-nudge 5s ease-in-out infinite; }
+.portrait-link:hover .portrait-link-arrow{ animation: none; }
+@media (prefers-reduced-motion: reduce){.portrait-link .portrait-link-arrow{ animation: none; }}
 .about-grid{
 display: grid; grid-template-columns: 1fr;
 max-width: 980px;
@@ -1020,18 +1034,6 @@ position: relative;
 z-index: 1;
 height: auto;
 }
-.agents-track-outer{
-overflow-x: auto;
-overflow-y: hidden;
-scroll-snap-type: x mandatory;
-padding: .25rem 0 .5rem;
-cursor: grab;
-scroll-padding-left: 1.5rem;
-max-width: 100vw;
-}
-.agents-track-outer:active{ cursor: grabbing; }
-.agents-track-outer{ scrollbar-width: none; }
-.agents-track-outer::-webkit-scrollbar{ display: none; }
 .agents-track{
 display: flex;
 gap: 1.25rem;
@@ -1122,7 +1124,7 @@ cursor: default;
 .nl-box-form{
 display: none;
 }
-@media (max-width: 1024px){.nav-links{ gap: 18px; }.nav-links a{ font-size: .72rem; }.about-grid{ grid-template-columns: 1fr; gap: 40px; }.timeline{ padding-left: 120px; }.agents-track-outer{ padding: .5rem 0 1rem; scroll-padding-left: 16px; }}
+@media (max-width: 1024px){.nav-links{ gap: 18px; }.nav-links a{ font-size: .72rem; }.about-grid{ grid-template-columns: 1fr; gap: 40px; }.timeline{ padding-left: 120px; }}
 @media (max-width: 768px){html{ overflow-x: clip !important; }body{ overflow-x: hidden !important; max-width: 100vw; }*, *::before, *::after{ max-width: 100% !important; box-sizing: border-box; }.hero-tagline, .hero-sub, .hero-sub2, .testi-intro,
 .ia-perf-stat-label, .roi-intro, .offre-decouverte-btn,
 .agents-cta-title, .xcard-tag, .tl-date, .pillar p,
@@ -1334,7 +1336,6 @@ body.art-justify .article-book .article-intro p{ text-align: justify; text-align
 .footer-col a.footer-instagram-btn{ margin-top: -6px; }
 .footer-bottom{ padding-top: 2px; padding-bottom: 4px; }
 .footer-legal a{ padding-top: 4px; padding-bottom: 4px; }
-.nw{ white-space: nowrap; }
 .art-ia{ color: var(--rose); }
 body.art-justify .article-book .article-intro p, body.art-justify .article-book .article-intro ul.art-list li{ hyphens: auto; -webkit-hyphens: auto; hyphenate-limit-chars: 5 2 2; text-wrap: pretty; }
 .footer-col--site{ position: relative; }
@@ -1466,7 +1467,29 @@ letter-spacing: .18em; text-transform: uppercase;
 color: var(--plum); margin: 14px 0 0;
 }
 @media (max-width: 760px){.piliers{ grid-template-columns: 1fr; gap: 16px; }.pilier{ padding: 24px 22px; }.pilier *, .pilier-title, .pilier-sub, .pilier-btn{ overflow-wrap: normal; word-break: normal; hyphens: none; }.pilier-sub{ white-space: normal; }.pilier-col{ height: 110px; }}
-@media (max-width: 760px){.article-book-col .nw, .article-book-col .art-chip{ white-space: normal; }.article-book-col, .article-book-col > *{ min-width: 0; max-width: 100%; }}
+@media (max-width: 760px){.article-book-col, .article-book-col > *{ min-width: 0; max-width: 100%; }}
+.rbd-week{ display: flex; align-items: center; gap: 14px; flex-wrap: wrap; background: var(--plum); color: var(--white); padding: 12px 16px; margin-bottom: 10px; }
+.rbd-week label{ font-weight: 500; font-size: .9rem; }
+.rbd-assigned{ flex-basis: 100%; font-size: .78rem; color: var(--pale-rose); }
+.rbd-tasks{ display: flex; flex-direction: column; gap: 10px; }
+.rbd-task{ background: var(--ivory); border: 1px solid var(--pale-rose); padding: 12px 14px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 16px; align-items: center; }
+.rbd-task-name{ font-weight: 500; font-size: .95rem; line-height: 1.35; }
+.rbd-seg{ display: flex; gap: 6px; flex-wrap: wrap; }
+.rbd-seg button, .rbd-chip{ font-family: var(--sans); cursor: pointer; border: 1px solid var(--pale-rose); background: var(--white); color: var(--plum); border-radius: 999px; white-space: nowrap; }
+.rbd-seg button{ padding: 5px 12px; font-size: .82rem; }
+.rbd-seg button:hover, .rbd-chip:hover{ border-color: var(--rose); }
+.rbd-seg button[aria-pressed="true"]{ border-color: transparent; }
+.rbd-hours{ grid-column: 1 / -1; display: flex; align-items: center; gap: 12px; }
+.rbd-chip{ font-size: .88rem; padding: 7px 14px; }
+.rbd-chip[aria-pressed="true"]{ background: var(--plum); border-color: var(--plum); color: var(--white); }
+.rbd-sb{ font-weight: 600; }
+.rbd-verdict{ white-space: pre-line; margin: 0 0 14px; font-size: 1rem; line-height: 1.55; }
+.rbd-toast{ font-size: .82rem; color: var(--rose); min-height: 1.4em; margin: 6px 0 0; }
+.rbd-copy-out{ width: 100%; min-height: 200px; margin-top: 8px; font: .78rem/1.5 var(--sans); color: var(--plum); background: var(--white); border: 1px solid var(--pale-rose); padding: 8px; }
+@media (max-width: 700px){.rbd-task{ grid-template-columns: 1fr; }}
+.offres-crosslink{ margin: 14px 0 0; font-family: var(--sans); font-size: .95rem; }
+.offres-crosslink .portrait-link{ color: var(--plum); }
+.offres-crosslink .portrait-link:hover{ color: var(--rose); }
 </style>
 </head>
 <body>
@@ -1556,48 +1579,99 @@ color: var(--plum); margin: 14px 0 0;
     <div class="persp-track">
       <a href="perspective-entreprise-utilise-deja-ia-en.html" class="persp-card persp-card--link">
         <div class="persp-card-visual persp-card-visual--img persp-card-visual--gouvernance" aria-hidden="true">
-          <img src="assets/perspectives/gouvernance-linkedin-cover-en.webp" alt="Choosing becomes strategic — LinkedIn post by Valérie Mailland" loading="lazy" decoding="async">
+          <img src="assets/perspectives/gouvernance-linkedin-cover-en.webp" alt="" loading="lazy" decoding="async">
           <span class="persp-card-visual-overlay">Governance</span>
         </div>
-        <span class="persp-card-meta"><span class="art-star" aria-label="Most-read article">★</span>Governance · 4 min</span>
-        <h3 class="persp-card-title">Your company is already using <span class="art-ia">AI</span>.</h3>
+        <span class="persp-card-meta"><span class="art-star" aria-label="Most-read article">★</span>Governance · 7 min</span>
+        <h2 class="persp-card-title">Your company is already using <span class="art-ia">AI</span>.</h2>
         <p class="persp-card-subtitle">Even if you have not decided anything yet.</p>
         <p class="persp-card-desc"><span class="art-ia">AI</span> is already summarising, analysing and prioritising inside your organisation, without any strategy having decided it should.</p>
         <span class="persp-card-read">Read the article <span class="portrait-link-arrow">→</span></span>
       </a>
       <a href="perspective-toutes-decisions-ne-se-deleguent-pas-en.html" class="persp-card persp-card--link">
         <div class="persp-card-visual persp-card-visual--img persp-card-visual--decision" aria-hidden="true">
-          <img src="assets/perspectives/decision-jusquou-deleguer-en.webp" alt="How far should you delegate? A LinkedIn post by Valérie Mailland" loading="lazy" decoding="async">
+          <img src="assets/perspectives/decision-jusquou-deleguer-en.webp" alt="" loading="lazy" decoding="async">
           <span class="persp-card-visual-overlay">Decision</span>
         </div>
-        <span class="persp-card-meta"><span class="art-star" aria-label="Most-read article">★</span>Decision · 3 min</span>
-        <h3 class="persp-card-title">Which decisions should a leader never hand over to <span class="art-ia">AI</span>?</h3>
+        <span class="persp-card-meta"><span class="art-star" aria-label="Most-read article">★</span>Decision · 7 min</span>
+        <h2 class="persp-card-title">Which decisions should a leader never hand over to <span class="art-ia">AI</span>?</h2>
         <p class="persp-card-subtitle">Delegating and abdicating are not as far apart as they seem.</p>
         <p class="persp-card-desc">Some decisions genuinely benefit from <span class="art-ia">AI</span> input. Others carry a responsibility the company must keep owning itself.</p>
         <span class="persp-card-read">Read the article <span class="portrait-link-arrow">→</span></span>
       </a>
       <a href="perspective-transformation-echoue-rarement-technologie-en.html" class="persp-card persp-card--link">
         <div class="persp-card-visual persp-card-visual--img persp-card-visual--transformation" aria-hidden="true">
-          <img src="assets/perspectives/transformation-outil-organisation-en.webp" alt="The technology changes. The organisation does not: LinkedIn post by Valérie Mailland" loading="lazy" decoding="async">
+          <img src="assets/perspectives/transformation-outil-organisation-en.webp" alt="" loading="lazy" decoding="async">
           <span class="persp-card-visual-overlay">Transformation</span>
         </div>
-        <span class="persp-card-meta">Transformation · 3 min</span>
-        <h3 class="persp-card-title"><span style="color:var(--rose)">AI</span> transformations rarely fail because of the technology.</h3>
+        <span class="persp-card-meta">Transformation · 7 min</span>
+        <h2 class="persp-card-title"><span style="color:var(--rose)">AI</span> transformations rarely fail because of the technology.</h2>
         <p class="persp-card-subtitle">They fail when the organisation has not changed, only the tool has.</p>
         <p class="persp-card-desc">A tool transforms nothing as long as the processes, roles and decisions around it stay the same.</p>
         <span class="persp-card-read">Read the article <span class="portrait-link-arrow">→</span></span>
       </a>
       <a href="perspective-probleme-nest-pas-outils-mais-arbitrage-en.html" class="persp-card persp-card--link">
         <div class="persp-card-visual persp-card-visual--img persp-card-visual--creation" aria-hidden="true">
-          <img src="assets/perspectives/creation-valeur-arbitrage-outils-en.webp" alt="It is not a tools problem. It is a trade-off problem. — LinkedIn post by Valérie Mailland" loading="lazy" decoding="async">
+          <img src="assets/perspectives/creation-valeur-arbitrage-outils-en.webp" alt="" loading="lazy" decoding="async">
           <span class="persp-card-visual-overlay">Value creation</span>
         </div>
-        <span class="persp-card-meta">Value creation · 3 min</span>
-        <h3 class="persp-card-title">More <span style="color:var(--rose)">AI</span> tools do not mean more impact.</h3>
+        <span class="persp-card-meta">Value creation · 7 min</span>
+        <h2 class="persp-card-title">More <span style="color:var(--rose)">AI</span> tools do not mean more impact.</h2>
         <p class="persp-card-subtitle">It is not a tooling problem. It is an alignment problem.</p>
         <p class="persp-card-desc">Piling up initiatives without arbitrating them dilutes effort more than it creates results. Three simple criteria to know which ones go the distance.</p>
         <span class="persp-card-read">Read the article <span class="portrait-link-arrow">→</span></span>
       </a>
+      <a href="perspective-projet-ia-peut-il-etre-finance-en.html" class="persp-card persp-card--link">
+        <div class="persp-card-visual persp-card-visual--img" aria-hidden="true">
+          <img src="assets/perspectives/projet-ia-financement-carte-v2-en.webp" alt="" loading="lazy" decoding="async">
+        </div>
+        <span class="persp-card-meta">Funding · 7 min</span>
+        <h2 class="persp-card-title">Can your <span style="color:var(--rose)">AI</span> project be funded? Yes, but not necessarily the one you have in mind.</h2>
+        <p class="persp-card-subtitle">Three families of support, three different logics.</p>
+        <p class="persp-card-desc">Osez l’IA, Diag Data IA, France 2030: what can be funded, for whom and on what conditions.</p>
+        <span class="persp-card-read">Read the article <span class="portrait-link-arrow">→</span></span>
+      </a>
+      <a href="perspective-chatbot-savoir-passer-la-main-en.html" class="persp-card persp-card--link">
+        <div class="persp-card-visual persp-card-visual--img" aria-hidden="true">
+          <img src="assets/perspectives/chatbot-passer-la-main-en.webp" alt="" loading="lazy" decoding="async">
+        </div>
+        <span class="persp-card-meta">Customer relations · 7 min</span>
+        <h2 class="persp-card-title">Air France’s chatbot answers 30% of requests alone. For the rest, it knows when to hand over.</h2>
+        <p class="persp-card-subtitle">It is not the <span class="art-ia">AI</span> that progressed most. It is the boundary drawn.</p>
+        <p class="persp-card-desc">Louis handles 30% of requests alone and hands over the rest. Three signals to sense the limit.</p>
+        <span class="persp-card-read">Read the article <span class="portrait-link-arrow">→</span></span>
+      </a>
+      <a href="perspective-budget-ia-adhesion-equipes-en.html" class="persp-card persp-card--link">
+        <div class="persp-card-visual persp-card-visual--img" aria-hidden="true">
+          <img src="assets/perspectives/budget-adhesion-en.webp" alt="" loading="lazy" decoding="async">
+        </div>
+        <span class="persp-card-meta">Buy-in · 7 min</span>
+        <h2 class="persp-card-title">The <span style="color:var(--rose)">AI</span> budget is not the issue. Buy-in is.</h2>
+        <p class="persp-card-subtitle">A tool never changes an organisation on its own.</p>
+        <p class="persp-card-desc">A validated <span class="art-ia">AI</span> budget is not enough. Three concrete levers to make teams want to use it.</p>
+        <span class="persp-card-read">Read the article <span class="portrait-link-arrow">→</span></span>
+      </a>
+      <a href="perspective-shadow-ia-charte-comite-direction-en.html" class="persp-card persp-card--link">
+        <div class="persp-card-visual persp-card-visual--img" aria-hidden="true">
+          <img src="assets/perspectives/shadow-ia-charte-en.webp" alt="" loading="lazy" decoding="async">
+        </div>
+        <span class="persp-card-meta">Shadow <span class="art-ia">AI</span> · 7 min</span>
+        <h2 class="persp-card-title">An <span style="color:var(--rose)">AI</span> policy that its own leaders do not follow is no longer a policy.</h2>
+        <p class="persp-card-subtitle">The issue is not team discipline. It is governance.</p>
+        <p class="persp-card-desc">78% of employees use unapproved <span class="art-ia">AI</span> tools, and so do executives. Three reflexes to take back control.</p>
+        <span class="persp-card-read">Read the article <span class="portrait-link-arrow">→</span></span>
+      </a>
+      <a href="perspective-robots-humanoides-token-tax-en.html" class="persp-card persp-card--link">
+        <div class="persp-card-visual persp-card-visual--img" aria-hidden="true">
+          <img src="assets/perspectives/robots-humanoides-token-tax-en.webp" alt="" loading="lazy" decoding="async">
+        </div>
+        <span class="persp-card-meta">Humanoid robots · 8 min</span>
+        <h2 class="persp-card-title">Humanoid robots: which tasks will go first?</h2>
+        <p class="persp-card-subtitle">A robot takes over tasks, rarely a whole job.</p>
+        <p class="persp-card-desc">Labour shortages, China, the “token tax”: the real questions, and a 2-minute mini-diagnostic.</p>
+        <span class="persp-card-read">Read the article <span class="portrait-link-arrow">→</span></span>
+      </a>
+
     </div>
     </div>
     <div class="agents-nav">
@@ -1605,6 +1679,8 @@ color: var(--plum); margin: 14px 0 0;
       <button class="agents-dot" data-idx="1"></button>
       <button class="agents-dot" data-idx="2"></button>
       <button class="agents-dot" data-idx="3"></button>
+      <button class="agents-dot" data-idx="4"></button>
+      <button class="agents-dot" data-idx="5"></button>
     </div>
     <div class="agents-arrows">
       <button class="agents-arrow" id="perspPrev">&#8592;</button>
@@ -1683,7 +1759,7 @@ color: var(--plum); margin: 14px 0 0;
       </div>
 
       <div class="tl-item reveal delay-1">
-        <h3>Bureau Veritas · Argentina</h3>
+        <h3>Bureau Veritas</h3>
         <p>International experience · Buenos Aires</p>
       </div>
 
@@ -1707,6 +1783,7 @@ color: var(--plum); margin: 14px 0 0;
     <h2 class="about-cta-title">Your company has its own<br class="about-cta-break"> <span style="color:#C75F62">starting point.</span></h2>
     <p class="about-cta-sub">Let us identify the <span style="color:var(--rose)">AI</span> decisions that truly deserve your attention.</p>
     <a href="https://calendly.com/exec-ia" target="_blank" rel="noopener" class="btn btn-rose">Your AI diagnostic</a>
+      <p class="offres-crosslink"><a href="offres-en.html" class="portrait-link">See the EXEC&#8217;IA offers <span class="portrait-link-arrow">→</span></a></p>
     <p class="zone-line"><span class="zone-pin" aria-hidden="true">📍</span>Based in Carrières-sur-Seine, I work in Paris and across Île-de-France, on site or remotely.</p>
   </div>
 </section>
@@ -1739,6 +1816,7 @@ color: var(--plum); margin: 14px 0 0;
     <a href="perspective-chatbot-savoir-passer-la-main-en.html" class="footer-persp-link footer-persp-link--c2">→ Where should a chatbot hand over to a human?</a>
     <a href="perspective-budget-ia-adhesion-equipes-en.html" class="footer-persp-link footer-persp-link--c2">→ Why does buy-in matter more than budget?</a>
     <a href="perspective-shadow-ia-charte-comite-direction-en.html" class="footer-persp-link footer-persp-link--c2">→ Which <span style="color:var(--rose)">AI</span> tools do your teams really use?</a>
+    <a href="perspective-robots-humanoides-token-tax-en.html" class="footer-persp-link footer-persp-link--c2">→ Which tasks would you hand to a humanoid robot?</a>
     </div>
     </div>
 
