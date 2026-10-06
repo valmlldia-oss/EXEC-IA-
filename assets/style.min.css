@@ -6593,3 +6593,4 @@ color: var(--plum); margin: 14px 0 0;
 .offres-crosslink{ margin: 14px 0 0; font-family: var(--sans); font-size: .95rem; }
 .offres-crosslink .portrait-link{ color: var(--plum); }
 .offres-crosslink .portrait-link:hover{ color: var(--rose); }
+.rgpd-b, .date-b{ font-weight: 600; }

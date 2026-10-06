@@ -1767,6 +1767,7 @@ color: var(--plum); margin: 14px 0 0;
 .rbd-toast{ font-size: .82rem; color: var(--rose); min-height: 1.4em; margin: 6px 0 0; }
 .rbd-copy-out{ width: 100%; min-height: 200px; margin-top: 8px; font: .78rem/1.5 var(--sans); color: var(--plum); background: var(--white); border: 1px solid var(--pale-rose); padding: 8px; }
 @media (max-width: 700px){.rbd-task{ grid-template-columns: 1fr; }}
+.rgpd-b, .date-b{ font-weight: 600; }
 </style>
 <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "VideoObject", "name": "Combien l'IA peut-elle faire gagner à vos équipes ? Le simulateur EXEC'IA", "description": "Démonstration du simulateur de gains EXEC'IA pour dirigeants de PME : nombre de personnes, heures gagnées par semaine, coût horaire. Commentée par Valérie Mailland.", "thumbnailUrl": "https://exec-ia.ai/assets/video/simulateur-roi-poster.webp", "uploadDate": "2026-09-30", "duration": "PT30S", "contentUrl": "https://exec-ia.ai/assets/video/simulateur-roi.mp4?v=2", "inLanguage": "fr-FR", "publisher": {"@id": "https://exec-ia.ai/#organization"}}
@@ -1834,7 +1835,7 @@ color: var(--plum); margin: 14px 0 0;
             <p>5 questions que tout comité de direction devrait se poser.</p>
           </div>
           <button class="btn btn-rose nl-box-cta" id="nl-reveal-btn" type="button">Voir les questions <span class="btn-arrow">→</span></button>
-          <p class="nl-box-trust">🔒 Sans spam<br>Désinscription en un clic<br>Conforme RGPD</p>
+          <p class="nl-box-trust">🔒 Sans spam<br>Désinscription en un clic<br>Conforme <span class="rgpd-b">RGPD</span></p>
         </div>
 
         <!-- Formulaire affiché après clic uniquement -->
@@ -1860,7 +1861,7 @@ color: var(--plum); margin: 14px 0 0;
             <p id="nl-global-err" style="display:none;color:#C75F62;font-size:.82rem;margin:0 0 6px;padding-left:2px;"></p>
             <button type="submit" class="btn btn-rose nl-submit" id="nl-submit-btn">Recevoir la ressource</button>
           </form>
-          <p class="newsletter-trust">🔒 Pas de spam &nbsp;•&nbsp; Désinscription en un clic &nbsp;•&nbsp; Conforme RGPD</p>
+          <p class="newsletter-trust">🔒 Pas de spam &nbsp;•&nbsp; Désinscription en un clic &nbsp;•&nbsp; Conforme <span class="rgpd-b">RGPD</span></p>
         </div>
 
         <!-- Message de confirmation -->
@@ -1868,7 +1869,7 @@ color: var(--plum); margin: 14px 0 0;
           <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.6rem;color:var(--plum);font-weight:400;margin:0 0 12px;line-height:1.3;">Merci <span id="nl-success-name"></span>.</p>
           <p style="font-size:.95rem;color:var(--plum-muted);margin:0 0 20px;line-height:1.6;">Un email est en route vers votre boîte professionnelle.<br>Vous pouvez aussi accéder directement au document&nbsp;:</p>
           <a id="nl-doc-link" href="#" target="_blank" rel="noopener" style="display:inline-block;margin-bottom:20px;background:#C75F62;color:#FAF6F2;font-family:'Inter',sans-serif;font-size:.88rem;font-weight:500;letter-spacing:.1em;text-decoration:none;padding:13px 28px;border-radius:2px;">Voir le document</a>
-          <p style="font-size:.78rem;color:var(--plum-muted);">🔒 Conforme RGPD &nbsp;•&nbsp; Désinscription en un clic</p>
+          <p style="font-size:.78rem;color:var(--plum-muted);">🔒 Conforme <span class="rgpd-b">RGPD</span> &nbsp;•&nbsp; Désinscription en un clic</p>
           <button type="button" id="nl-new-signup" style="margin-top:16px;display:block;width:100%;background:transparent;border:1px solid rgba(99,59,74,.28);color:var(--plum-muted);font-family:'Inter',sans-serif;font-size:.78rem;letter-spacing:.08em;padding:9px 20px;cursor:pointer;border-radius:2px;">Inscrire un autre participant</button>
         </div>
 
@@ -2147,7 +2148,7 @@ color: var(--plum); margin: 14px 0 0;
     <div class="funding-note reveal">
       <p class="funding-note-title">Aides publiques</p>
       <p>Pour les PME et ETI de 10 à 2&nbsp;000 salariés, plusieurs dispositifs pilotés par Bpifrance dans le cadre de France&nbsp;2030 peuvent réduire le coût d'un premier projet IA&nbsp;: le programme <a href="https://www.francenum.gouv.fr/aides-financieres/guides-et-conseils-financiers/ia-booster-finance-et-accompagne-le-passage" target="_blank" rel="noopener">IA Booster</a> propose une sensibilisation gratuite, puis un <a href="https://www.francenum.gouv.fr/aides-financieres/diag-data-ia" target="_blank" rel="noopener">Diag Data IA</a> cofinancé à 40&nbsp;% (10&nbsp;000&nbsp;€ HT, 6&nbsp;000&nbsp;€ HT à charge). Le portail <a href="https://www.francenum.gouv.fr" target="_blank" rel="noopener">France Num</a> référence ces aides.</p>
-      <p>Ces dispositifs financent un diagnostic technique mené par un expert agréé Bpifrance, pas l'arbitrage stratégique en amont (quel usage prioriser, sur lequel porte une séance Cap IA), ni le déploiement des cas d'usage identifiés (le rôle des Agents IA EXEC'IA). Le cadre réglementaire (AI Act, RGPD) est détaillé dans le <a href="conformite-ia-pme.html">guide AI Act et RGPD pour une PME</a>.</p>
+      <p>Ces dispositifs financent un diagnostic technique mené par un expert agréé Bpifrance, pas l'arbitrage stratégique en amont (quel usage prioriser, sur lequel porte une séance Cap IA), ni le déploiement des cas d'usage identifiés (le rôle des Agents IA EXEC'IA). Le cadre réglementaire (AI Act, <span class="rgpd-b">RGPD</span>) est détaillé dans le <a href="conformite-ia-pme.html">guide AI Act et <span class="rgpd-b">RGPD</span> pour une PME</a>.</p>
     </div>
   </div>
 </section>
