@@ -70,7 +70,7 @@
       cTitle: "Minidiagnóstico ROBOT · EXEC'IA", cWeek: "Semana de trabajo: {w} h",
       cRobot: "Tiempo potencialmente robotizable: {h} h/semana ({p} %)", cMixte: "Tiempo en modo compartido: {h} h/semana", cHumain: "Tiempo que sigue siendo humano: {h} h/semana",
       cTasks: "Mis tareas:", cFirst: "Confiar primero:", cFutur: "El tiempo liberado iría a: ", cVacant: "Puesto difícil de cubrir que un robot podría ocupar: ",
-      cLink: "Hacer el minidiagnóstico: ", cSign: "exec-ia.ai · Decidir antes de invertir",
+      cLink: "Hacer el minidiagnóstico: ", cSign: "exec-ia.ai · Decida antes de invertir",
       url: "https://exec-ia.ai/perspective-robots-humanoides-token-tax-es.html#mini-diagnostic"
     }
   };
