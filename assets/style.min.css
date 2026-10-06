@@ -898,6 +898,7 @@ line-height: 1;
 }
 .about-label--mission { margin-top: 26px; }
 .about-label--principe { margin-top: 26px; }
+.about-principe-sub.about-principe-sub--top { margin: 0 0 26px !important; }
 .about-principe-sub {
 font-family: var(--serif); font-size: 1.18rem; font-weight: 400;
 color: var(--plum); opacity: .82; line-height: 1.45;
@@ -1124,7 +1125,7 @@ color: var(--text); opacity: .85; margin: 2px 0 0; max-width: 560px;
 .article-page .wrap { max-width: 1180px; }
 .article-page .wrap { padding-left: 92px; }
 @media (max-width: 640px) {
-.article-page .wrap { padding-left: 82px; }
+.article-page .wrap { padding-left: 20px; padding-right: 20px; }
 }
 .article-header-grid {
 display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px;
@@ -1956,6 +1957,9 @@ color: var(--ivory);
 font-size: 1rem;
 font-weight: 600;
 }
+.testi-author span.testi-name { font-size: 1.05rem; font-weight: 600; }
+.testi--dark .testi-author span.testi-title { font-size: .78rem; }
+.testi--dark .testi-author .testi-title span { font-size: inherit; }
 .testi--dark strong.testi-role {
 color: rgba(255,255,255,.65);
 font-size: 1rem;
@@ -6462,6 +6466,7 @@ background: var(--rose); flex-shrink: 0;
 #perspectives.persp-compact > .about-cta-sep { margin-bottom: calc(var(--section-gap) + 9px); }
 .testi-grid > .testi > .testi-author { margin-top: 18px; }
 .testi-fold { margin-top: auto; display: flex; flex-direction: column; }
+.testi-grid > .testi[id] { scroll-margin-top: 96px; }
 .testi-fold-toggle {
 list-style: none; cursor: pointer;
 display: flex; align-items: center; justify-content: space-between; gap: 10px;
