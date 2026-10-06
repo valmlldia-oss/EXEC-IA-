@@ -1325,8 +1325,10 @@ section { padding: var(--section-gap) 0; }
    logo « EXEC'IA Consulting » dans la nav — et non avec le bord du
    logo rond qui le précède (62px = largeur du rond + gap). */
 .article-page .wrap { padding-left: 92px; }
+/* Mobile : marges symétriques (20px) — l'alignement sur le cadre du logo
+   coûtait 62px de largeur de lecture et creusait des trous dans le texte justifié. */
 @media (max-width: 640px) {
-  .article-page .wrap { padding-left: 82px; }
+  .article-page .wrap { padding-left: 20px; padding-right: 20px; }
 }
 /* En-tête : texte à gauche, image de couverture complète (non recadrée) à
    droite — sur la petite vignette (carte Perspectives) l'image et son
@@ -2282,6 +2284,11 @@ section { padding: var(--section-gap) 0; }
   font-size: 1rem;
   font-weight: 600;
 }
+/* Harmonisation des 3 cartes : même nom (Inter 1.05rem, semi-gras), même
+   fonction (.78rem) sur fond clair comme sur fond prune. */
+.testi-author span.testi-name { font-size: 1.05rem; font-weight: 600; }
+.testi--dark .testi-author span.testi-title { font-size: .78rem; }
+.testi--dark .testi-author .testi-title span { font-size: inherit; }
 .testi--dark strong.testi-role {
   color: rgba(255,255,255,.65);
   font-size: 1rem;
@@ -7560,6 +7567,8 @@ body.cookie-modal-open { overflow: hidden; }
    (texte présent dans le HTML, lisible par les robots). */
 .testi-grid > .testi > .testi-author { margin-top: 18px; }
 .testi-fold { margin-top: auto; display: flex; flex-direction: column; }
+/* Lien direct vers un témoignage (#holger…) : le haut de la carte ne passe pas sous la barre de navigation */
+.testi-grid > .testi[id] { scroll-margin-top: 96px; }
 .testi-fold-toggle {
   list-style: none; cursor: pointer;
   display: flex; align-items: center; justify-content: space-between; gap: 10px;

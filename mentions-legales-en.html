@@ -253,6 +253,40 @@ background: var(--rose);
 border-radius: 10px;
 transition: width 1.4s var(--ease);
 }
+.testi-grid{
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 14px;
+margin-top: 10px;
+align-items: stretch;
+}
+@media (min-width: 1025px){.testi-grid{ grid-template-rows: auto auto 1fr auto auto auto; row-gap: 0; }.testi-grid > .testi{
+display: grid;
+grid-template-rows: subgrid;
+grid-row: span 5;
+}.testi-grid{ grid-template-columns: repeat(3, 1fr); }}
+.testi{
+background: #F4EDE7;
+border: 1.5px solid rgba(199,95,98,.22);
+border-top: 3px solid #C75F62;
+border-radius: 16px;
+padding: 24px 24px;
+box-shadow: 0 4px 24px rgba(99,59,74,.07);
+transition: box-shadow .25s, transform .25s;
+display: flex; flex-direction: column;
+position: relative;
+min-width: 0;
+overflow: hidden;
+}
+.testi:hover{
+box-shadow: 0 10px 40px rgba(99,59,74,.13);
+transform: translateY(-3px);
+}
+.testi p{
+font-size: .9rem; line-height: 1.78;
+color: #3D1E2A; font-style: italic;
+margin-bottom: 10px; flex: 1;
+}
 footer{ background: #633B4A; padding: 0 36px 22px; text-align: center; }
 .footer-logo-main{ height: 84px; width: auto; }
 .footer-tag{ font-family: var(--serif); font-style: italic; font-size: clamp(2.1rem, 3vw, 2.8rem); color: var(--rose); margin: 0 0 18px; }
@@ -469,7 +503,8 @@ to   { transform: translateX(-25%); }
 width: 100%; height: 6px; border-radius: 10px;
 background: rgba(246,241,235,.2); cursor: pointer; overflow: hidden;
 }
-@media (max-width: 1024px){.lt-wrap{ grid-template-columns: 1fr; gap: 48px; }}
+@media (max-width: 1024px){.testi-grid{ grid-template-columns: repeat(2, 1fr); gap: 16px; }.lt-wrap{ grid-template-columns: 1fr; gap: 48px; }}
+@media (max-width: 600px){.testi-grid{ grid-template-columns: 1fr; }}
 @media (max-width: 768px){.nav-links{ display: none; }.nav-burger{ display: flex; }.nav-links.open{
 display: flex; flex-direction: column;
 position: fixed; inset: var(--nav-h) 0 0 0;
@@ -550,7 +585,7 @@ object-position: center;
 .nl-box-form{
 display: none;
 }
-@media (max-width: 1024px){.nav-links{ gap: 18px; }.nav-links a{ font-size: .72rem; }}
+@media (max-width: 1024px){.nav-links{ gap: 18px; }.nav-links a{ font-size: .72rem; }.testi-grid{ grid-template-columns: 1fr 1fr; gap: 20px; }.testi{ padding: 32px 28px; }}
 @media (max-width: 768px){html{ overflow-x: clip !important; }body{ overflow-x: hidden !important; max-width: 100vw; }*, *::before, *::after{ max-width: 100% !important; box-sizing: border-box; }.hero-tagline, .hero-sub, .hero-sub2, .testi-intro,
 .ia-perf-stat-label, .roi-intro, .offre-decouverte-btn,
 .agents-cta-title, .xcard-tag, .tl-date, .pillar p,
@@ -561,7 +596,8 @@ background: rgba(252,252,250,.98); backdrop-filter: blur(20px);
 padding: 24px 24px 32px; gap: 20px; z-index: 998;
 border-bottom: 1px solid rgba(99,59,74,.1);
 box-shadow: 0 8px 32px rgba(99,59,74,.1);
-}.nav-links.open a{ font-size: .9rem; max-width: none !important; }.wrap{ padding: 0 20px; }.ss-num{ font-size: 2.42rem; }.agent-card{ min-width: 82vw; }footer{ padding: 40px 20px; }.footer-copy{ font-size: .7rem; word-break: break-word; line-height: 2; }}
+}.nav-links.open a{ font-size: .9rem; max-width: none !important; }.wrap{ padding: 0 20px; }.ss-num{ font-size: 2.42rem; }.testi-grid{ grid-template-columns: 1fr; gap: 16px; }.testi{ padding: 24px 16px; overflow: hidden; }.agent-card{ min-width: 82vw; }footer{ padding: 40px 20px; }.footer-copy{ font-size: .7rem; word-break: break-word; line-height: 2; }}
+@media (max-width: 480px){.testi{ padding: 22px 18px; }}
 .ce-que-section{ padding: var(--section-gap) 0 var(--section-gap) 48px; background: var(--white); }
 .accord-btn{
 width: 100%; display: flex; justify-content: space-between; align-items: center;
@@ -716,7 +752,9 @@ body.cookie-modal-open{ overflow: hidden; }
 .article-long .article-book--long{ margin-top: 26px; }
 @keyframes verbes-defile{ from { transform: translateX(0); } to { transform: translateX(-50%); } }
 .testi-fold{ margin-top: auto; display: flex; flex-direction: column; }
+.testi-grid > .testi[id]{ scroll-margin-top: 96px; }
 .testi-fold::details-content{ flex: 1; display: flex; flex-direction: column; }
+@media (min-width: 1025px){.testi-grid{ grid-template-rows: auto auto auto; }.testi-grid > .testi, .testi-grid > .testi--dark{ grid-row: span 3; }.testi-grid > .testi > .testi-fold{ margin-top: 0; }}
 .footer-signature{
 font-family: var(--sans); font-size: .76rem; font-weight: 600;
 letter-spacing: .18em; text-transform: uppercase;

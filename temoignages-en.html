@@ -598,6 +598,9 @@ color: var(--ivory);
 font-size: 1rem;
 font-weight: 600;
 }
+.testi-author span.testi-name{ font-size: 1.05rem; font-weight: 600; }
+.testi--dark .testi-author span.testi-title{ font-size: .78rem; }
+.testi--dark .testi-author .testi-title span{ font-size: inherit; }
 .testi--dark strong.testi-role{
 color: rgba(255,255,255,.65);
 font-size: 1rem;
@@ -1201,6 +1204,7 @@ border-radius: 50%; background: #FAF6F2; transition: transform .2s;
 @keyframes verbes-defile{ from { transform: translateX(0); } to { transform: translateX(-50%); } }
 .testi-grid > .testi > .testi-author{ margin-top: 18px; }
 .testi-fold{ margin-top: auto; display: flex; flex-direction: column; }
+.testi-grid > .testi[id]{ scroll-margin-top: 96px; }
 .testi-fold-toggle{
 list-style: none; cursor: pointer;
 display: flex; align-items: center; justify-content: space-between; gap: 10px;
@@ -1292,7 +1296,7 @@ color: var(--plum); margin: 14px 0 0;
     <div class="testi-grid">
 
       <!-- 01 -->
-      <div class="testi reveal delay-1">
+      <div id="holger" class="testi reveal delay-1">
         <div class="testi-tag testi-tag--rose">International &amp;<br><span style="color:var(--rose)">intercultural</span> leadership</div>
         <div class="testi-author">
           <div class="testi-avatar testi-avatar--initials">HH</div>
@@ -1312,7 +1316,7 @@ color: var(--plum); margin: 14px 0 0;
       </div>
 
       <!-- 02 -->
-      <div class="testi reveal delay-2">
+      <div id="sandrine" class="testi reveal delay-2">
         <div class="testi-tag testi-tag--rose">Strategic communication &amp;<br><span style="color:var(--rose)">international leadership</span></div>
         <div class="testi-author">
           <div class="testi-avatar testi-avatar--initials">SD</div>
@@ -1332,7 +1336,7 @@ color: var(--plum); margin: 14px 0 0;
       </div>
 
       <!-- 03 -->
-      <div class="testi testi--dark reveal delay-3">
+      <div id="wissam" class="testi testi--dark reveal delay-3">
         <div class="testi-tag">Applied AI, <span style="color:var(--rose)">concrete<br>results &amp; business impact</span></div>
         <div class="testi-author">
           <div class="testi-avatar testi-avatar--initials testi-avatar--light">WB</div>
@@ -1413,7 +1417,7 @@ color: var(--plum); margin: 14px 0 0;
 </footer>
 
 <script src="assets/script.js?v=39"></script>
-<script src="assets/inline/temoignages-1.js" defer></script>
+<script src="assets/inline/temoignages-1.js?v=2" defer></script>
 
 <!-- ═══ COOKIE BANNER ══════════════════════════════════════════ -->
 <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Cookie consent">
