@@ -38,10 +38,10 @@ FONTS  = os.path.join(ASSETS, 'fonts_pdf')
 
 def reg():
     fmap = {
-        'CGB':  'CormorantGaramond-Bold.ttf',
-        'CGR':  'CormorantGaramond-Regular.ttf',
-        'CGI':  'CormorantGaramond-Italic.ttf',
-        'CGSB': 'CormorantGaramond-SemiBold.ttf',
+        # Variantes « LF » : chiffres alignés (comme lnum sur le site), aucun gras 700
+        'CGR':  'CormorantGaramond-Regular-LF.ttf',
+        'CGI':  'CormorantGaramond-Italic-LF.ttf',
+        'CGSB': 'CormorantGaramond-SemiBold-LF.ttf',
         'IR':   'Inter-Regular.ttf',
         'IM':   'Inter-Medium.ttf',
         'ISB':  'Inter-SemiBold.ttf',
@@ -55,7 +55,6 @@ def reg():
     return r
 
 _r = reg()
-CGB  = 'CGB'  if 'CGB'  in _r else 'Times-Bold'
 CGR  = 'CGR'  if 'CGR'  in _r else 'Times-Roman'
 CGI  = 'CGI'  if 'CGI'  in _r else 'Times-Italic'
 CGSB = 'CGSB' if 'CGSB' in _r else 'Times-Bold'
@@ -88,35 +87,24 @@ def text_h(c, txt, font, size, maxw, lead=None):
     return len(wrap(c, txt, font, size, maxw)) * lead
 
 
-# ── Barre verticale fine terracotta — identique site web ─────────────────────
-def thin_bar(c, x, y_top, height, color=TERRA):
-    """Ligne verticale fine (2pt) — exactement comme le site."""
-    c.setStrokeColor(color)
-    c.setLineWidth(2)
-    c.line(x, y_top - height, x, y_top)
+# ── MISE EN PAGE ÉDITORIALE (refonte du 07/10/2026) ───────────────────────────
+# Mêmes polices que le site : Cormorant Garamond (400 / 600, italique) et Inter
+# (400 / 500 / 600). Aucun gras 700. Logo encadré en haut à droite de chaque page.
+import re
 
+MIST    = HexColor('#D9C9C3')          # rose minéral pâle : bordures, texte sur prune
+LOGO    = os.path.join(ASSETS, 'logo-execia-bords-prune.png')
+LOGO_W  = 34*mm
+LOGO_H  = LOGO_W * 212 / 450
+BAND_H  = 24*mm                         # bandeau prune : couverture et page finale
+FOOT_H  = 14*mm                         # pied de page fin : pages intérieures
 
-# ── FOOTER — identique site web ───────────────────────────────────────────────
-# ── FOOTER — empilement strict de bas en haut, aucun overlap ─────────────────
-#
-#  [BAND_H=50mm]
-#  top:    logo centré (fond blanc) 12mm         y=35..47mm
-#          tagline Cormorant Italic terracotta    y=30mm
-#          mention IA Inter Regular gris          y=24mm
-#          boutons langue pill                    y=15..21mm
-#          copyright Inter 6.5pt                 y=4mm
-#  bottom: 0
-
-BAND_H = 30*mm
 LANG_URLS = {
     'fr': SITE_URL,
     'en': 'https://www.exec-ia.ai/index-en.html',
     'es': 'https://www.exec-ia.ai/index-es.html',
 }
 LANG_LABELS = {'fr': 'Français', 'en': 'English', 'es': 'Español'}
-
-LOGO_FOOTER = os.path.join(ASSETS, 'logo-execia-bords-prune.png')
-
 FOOTER_TXT = {
     'fr': ('Une expérience dirigeante au service de votre transformation IA',
            'Conception, contenus et automatisations assistés par IA · Validation humaine systématique',
@@ -129,184 +117,176 @@ FOOTER_TXT = {
            'Todos los derechos reservados'),
 }
 
-def footer(c, lang, pg=None):
-    """Pied de page compact, fond prune : logo à gauche, accroche au centre, langues à droite."""
+_HL = re.compile(r"^(.*?)(IA|AI)([.,;:!?»)]*)$")
+
+def draw_hl(c, x, y, line, font, size, col, hl_col=TERRA, center=False):
+    """Écrit une ligne en mettant « IA » / « AI » en terracotta, comme sur le site."""
+    if center:
+        x -= c.stringWidth(line, font, size) / 2
+    c.setFont(font, size)
+    sp = c.stringWidth(' ', font, size)
+    for i, w in enumerate(line.split(' ')):
+        m = _HL.match(w)
+        if m and (m.group(1) == '' or m.group(1)[-1] in "'’(«"):
+            parts = [(m.group(1), col), (m.group(2), hl_col), (m.group(3), col)]
+        else:
+            parts = [(w, col)]
+        for txt, cc in parts:
+            if not txt:
+                continue
+            c.setFillColor(cc)
+            c.drawString(x, y, txt)
+            x += c.stringWidth(txt, font, size)
+        x += sp
+
+def eyebrow(c, x, y, txt, col, size=7.2, center=False):
+    """Libellé en petites capitales espacées (style des surtitres du site)."""
+    txt = txt.upper()
+    c.setFont(ISB, size); c.setFillColor(col)
+    if center:
+        x -= (c.stringWidth(txt, ISB, size) + 1.1 * (len(txt) - 1)) / 2
+    c.drawString(x, y, txt, charSpace=1.1)
+
+def thin_bar(c, x, y_top, height, color=TERRA, width=1.6):
+    c.setStrokeColor(color); c.setLineWidth(width)
+    c.line(x, y_top - height, x, y_top)
+
+def logo_tr(c, on_dark=False):
+    """Logo encadré, coin supérieur droit, cliquable vers le site."""
+    x = W - M - LOGO_W
+    y = H - 9*mm - LOGO_H
+    if on_dark:
+        c.setFillColor(IVORY2)
+        c.roundRect(x - 1.5*mm, y + 1.5*mm, LOGO_W + 3*mm, LOGO_H - 3*mm, 1.5*mm, fill=1, stroke=0)
+    if os.path.exists(LOGO):
+        c.drawImage(LOGO, x, y, width=LOGO_W, height=LOGO_H, preserveAspectRatio=True, mask='auto')
+    c.linkURL(SITE_URL, (x, y, x + LOGO_W, y + LOGO_H), thickness=0)
+
+def footer_band(c, lang):
+    """Bandeau prune (couverture et page finale) : accroche, langues, mentions."""
     tagline, mention, rights = FOOTER_TXT[lang]
     c.setFillColor(PLUM)
     c.rect(0, 0, W, BAND_H, fill=1, stroke=0)
-    c.setStrokeColor(TERRA); c.setLineWidth(0.8)
-    c.line(0, BAND_H, W, BAND_H)
-
-    # Ligne haute : logo (cartouche ivoire), accroche, boutons de langue
-    row_y = 17*mm
-    logo_h = 9*mm; logo_w = 34*mm
-    if os.path.exists(LOGO_FOOTER):
-        c.setFillColor(IVORY2)
-        c.roundRect(M - 2*mm, row_y - 2*mm, logo_w + 4*mm, logo_h + 2*mm, 1.5*mm, fill=1, stroke=0)
-        c.drawImage(LOGO_FOOTER, M, row_y - 1*mm, width=logo_w, height=logo_h,
-                    preserveAspectRatio=True, mask='auto')
-    else:
-        c.setFont(CGB, 13); c.setFillColor(IVORY2)
-        c.drawString(M, row_y + 1*mm, "EXEC'IA")
-    c.linkURL(SITE_URL, (M - 2*mm, row_y - 2*mm, M + logo_w + 2*mm, row_y + logo_h), thickness=0)
-
-    c.setFont(CGI, 12.5); c.setFillColor(IVORY2)
-    c.drawCentredString(W / 2, row_y + 2.2*mm, tagline)
-
-    BH_BTN = 6.5*mm
-    langs_to_show = [(lc, LANG_LABELS[lc]) for lc in ['fr', 'en', 'es'] if lc != lang]
-    btn_w_list = [c.stringWidth(lbl, IM, 8) + 9*mm for _, lbl in langs_to_show]
-    bx = W - M - sum(btn_w_list) - 3*mm * (len(langs_to_show) - 1)
-    for (lc, lbl), bw in zip(langs_to_show, btn_w_list):
-        c.setStrokeColor(GREY_PALE); c.setLineWidth(0.6)
-        c.roundRect(bx, row_y - 0.5*mm, bw, BH_BTN, BH_BTN / 2, fill=0, stroke=1)
-        c.setFont(IM, 8); c.setFillColor(IVORY2)
-        c.drawCentredString(bx + bw / 2, row_y + 1.6*mm, lbl)
-        c.linkURL(LANG_URLS[lc], (bx, row_y - 0.5*mm, bx + bw, row_y + BH_BTN), thickness=0)
+    row_y = 14*mm
+    c.setFont(ISB, 8); c.setFillColor(IVORY2)
+    c.drawString(M, row_y + 0.6*mm, 'exec-ia.ai', charSpace=0.6)
+    c.linkURL(SITE_URL, (M, row_y - 1*mm, M + 25*mm, row_y + 5*mm), thickness=0)
+    draw_hl(c, W / 2, row_y + 0.3*mm, tagline, CGI, 13, IVORY2, center=True)
+    BH = 6.2*mm
+    langs = [(lc, LANG_LABELS[lc]) for lc in ['fr', 'en', 'es'] if lc != lang]
+    widths = [c.stringWidth(lbl, IM, 7.8) + 9*mm for _, lbl in langs]
+    bx = W - M - sum(widths) - 3*mm * (len(langs) - 1)
+    for (lc, lbl), bw in zip(langs, widths):
+        c.setStrokeColor(MIST); c.setLineWidth(0.6)
+        c.roundRect(bx, row_y - 1.2*mm, bw, BH, BH / 2, fill=0, stroke=1)
+        c.setFont(IM, 7.8); c.setFillColor(IVORY2)
+        c.drawCentredString(bx + bw / 2, row_y + 0.9*mm, lbl)
+        c.linkURL(LANG_URLS[lc], (bx, row_y - 1.2*mm, bx + bw, row_y + BH), thickness=0)
         bx += bw + 3*mm
+    c.setFont(IR, 6.8); c.setFillColor(MIST)
+    c.drawCentredString(W / 2, 7*mm, mention)
+    c.setFont(IR, 6.3)
+    c.drawCentredString(W / 2, 3.4*mm, "© 2026 Valérie Mailland · EXEC'IA · " + MAIL + ' · ' + rights)
 
-    # Mention IA puis copyright
-    c.setFont(IR, 7); c.setFillColor(GREY_PALE)
-    c.drawCentredString(W / 2, 9*mm, mention)
-    copy = "© 2026 Valérie Mailland · EXEC'IA · " + MAIL + " · " + rights
-    c.setFont(IR, 6.5); c.setFillColor(GREY_PALE)
-    c.drawCentredString(W / 2, 4*mm, copy)
-    c.linkURL('mailto:' + MAIL, (W / 2 - 22*mm, 3*mm, W / 2 + 22*mm, 7*mm), thickness=0)
-    if pg:
-        c.setFont(IM, 7); c.setFillColor(GREY_PALE)
-        c.drawRightString(W - M, 4*mm, f'{pg}/7')
+def footer_slim(c, lang, pg):
+    """Pied de page discret des pages intérieures : site, mention IA, pagination."""
+    _, mention, rights = FOOTER_TXT[lang]
+    y = 8*mm
+    c.setFont(ISB, 7); c.setFillColor(PLUM)
+    c.drawString(M, y, "EXEC'IA CONSULTING  ·  EXEC-IA.AI", charSpace=0.8)
+    c.linkURL(SITE_URL, (M, y - 1.5*mm, M + 60*mm, y + 4*mm), thickness=0)
+    c.setFont(IR, 6.5); c.setFillColor(PRUNE_LIGHT)
+    c.drawCentredString(W / 2, y, mention)
+    c.drawCentredString(W / 2, 4*mm, "© 2026 Valérie Mailland · EXEC'IA · " + rights)
+    c.setFont(ISB, 7.5); c.setFillColor(TERRA)
+    c.drawRightString(W - M, y, f'{pg:02d}  /  07')
 
 
-# ── COVER ─────────────────────────────────────────────────────────────────────
+# ── COUVERTURE ────────────────────────────────────────────────────────────────
 def cover(c, lang, content):
-    c.setFillColor(IVORY)
-    c.rect(0, 0, W, H, fill=1, stroke=0)
+    c.setFillColor(IVORY); c.rect(0, 0, W, H, fill=1, stroke=0)
+    logo_tr(c)
 
-    TOP = H - 12*mm
-    BOT = BAND_H + 7*mm
-    y   = TOP
+    GUT = 14*mm
+    LW  = CW * 0.55
+    RX  = M + LW + GUT
+    RW  = W - M - RX
+    BOT = BAND_H + 11*mm
 
-    # Pill Q4 2026 — haut droite
-    tag = 'Q4 2026'
-    tw  = c.stringWidth(tag, ISB, 7) + 5*mm
+    # Colonne gauche : surtitre, titre, accroche
+    y = H - 17*mm
+    eyebrow(c, M, y, content['cover_pretitle'], TERRA)
+    y -= 21*mm
+    size = 40
+    while size > 28 and any(c.stringWidth(p, CGR, size) > LW - 6*mm for p in content['cover_title_mc']):
+        size -= 1
+    lead = size * 1.1
+    lines = []
+    for part in content['cover_title_mc']:
+        lines += wrap(c, part, CGR, size, LW - 6*mm)
+    thin_bar(c, M, y + size * 0.78, len(lines) * lead - lead + size * 0.95)
+    for ln in lines:
+        draw_hl(c, M + 6*mm, y, ln, CGR, size, PLUM_DARK); y -= lead
+    y -= 5*mm
+    for ln in wrap(c, content['cover_subtitle'], CGI, 17, LW):
+        c.setFont(CGI, 17); c.setFillColor(PLUM)
+        c.drawString(M, y, ln); y -= 17 * 1.25
+    y -= 1*mm
+    for ln in wrap(c, content['cover_caption'], IR, 9.5, LW):
+        draw_hl(c, M, y, ln, IR, 9.5, PRUNE_LIGHT); y -= 9.5 * 1.5
+
+    # Encadré de prise de rendez-vous, en bas à gauche
+    CTA_H = 30*mm
+    cy0 = BOT
+    c.setFillColor(IVORY2)
+    c.roundRect(M, cy0, LW, CTA_H, 4*mm, fill=1, stroke=0)
+    c.setStrokeColor(MIST); c.setLineWidth(0.7)
+    c.roundRect(M, cy0, LW, CTA_H, 4*mm, fill=0, stroke=1)
+    tx = M + 7*mm
+    c.setFont(CGSB, 15); c.setFillColor(PLUM_DARK)
+    c.drawString(tx, cy0 + CTA_H - 9.5*mm, content['cta_title'])
+    btn = content['cta_btn']
+    bw = c.stringWidth(btn, ISB, 8.5) + 12*mm; bh = 10*mm
+    ly = cy0 + CTA_H - 15.5*mm
+    for ln in wrap(c, content['cta_line1'] + ' ' + content['cta_line2'], IR, 8.6, LW - bw - 21*mm):
+        c.setFont(IR, 8.6); c.setFillColor(TEXT)
+        c.drawString(tx, ly, ln); ly -= 8.6 * 1.45
+    eyebrow(c, tx, cy0 + 4.5*mm, content['cta_tags'], TERRA, 6.6)
+    bx = M + LW - bw - 7*mm; by = cy0 + (CTA_H - bh) / 2
     c.setFillColor(TERRA)
-    c.roundRect(W - M - tw, y - 9*mm, tw, 7.5*mm, 2*mm, fill=1, stroke=0)
-    c.setFont(ISB, 7); c.setFillColor(IVORY2)
-    c.drawCentredString(W - M - tw / 2, y - 5.5*mm, tag)
-    y -= 12*mm
-
-    # Pré-titre — Inter SemiBold terracotta, style "LE VÉRITABLE ENJEU" du site
-    c.setFont(ISB, 7.5); c.setFillColor(TERRA)
-    c.drawString(M, y, content['cover_pretitle'], charSpace=0.9)
-    y -= 10*mm
-
-    # Titre — Cormorant Garamond Bold + barre verticale fine terracotta gauche
-    title_lines = wrap(c, content['cover_title'][0], CGB, 28, CW)
-    title_lines += wrap(c, content['cover_title'][1], CGB, 28, CW)
-    t_lead = 28 * 1.2
-    title_h = len(title_lines) * t_lead
-    thin_bar(c, M, y + 2*mm, title_h + 2*mm)
-    c.setFont(CGB, 28); c.setFillColor(PLUM_DARK)
-    for ln in title_lines:
-        c.drawString(M + 5*mm, y, ln); y -= t_lead
-    y -= 4*mm
-
-    # Sous-titre — Cormorant Garamond Italic gris, comme site
-    c.setFont(CGI, 14); c.setFillColor(PLUM)
-    c.drawString(M, y, content['cover_subtitle'])
-    y -= 7*mm
-    c.setFont(IR, 8); c.setFillColor(PRUNE_LIGHT)
-    c.drawString(M, y, content['cover_caption'])
-    y -= 10*mm
-
-    # ── 5 BOUTONS — pills avec cercle terracotta + numéro ────────────────────
-    NUM_R  = 4*mm
-    TXT_X  = M + NUM_R * 2 + 5*mm
-    TXT_W  = W - M - TXT_X - 5*mm
-    GAP    = 2.5*mm
-    L_LEAD = 9.5 * 1.35
-    PAD_V  = 3.5*mm
-
-    def btn_h(txt):
-        return len(wrap(c, txt, IM, 9.5, TXT_W)) * L_LEAD + PAD_V * 2
-
-    CTA_H   = 26*mm
-    CTA_GAP = 4*mm
-
-    btn_heights = [btn_h(q['btn']) for q in content['questions']]
-    total = sum(btn_heights) + GAP * 4 + CTA_H + CTA_GAP
-    if total > y - BOT:
-        ratio = max(0.8, (y - BOT - CTA_H - CTA_GAP - GAP * 4) / sum(btn_heights))
-        PAD_V = PAD_V * ratio
-        btn_heights = [btn_h(q['btn']) for q in content['questions']]
-
-    for i, (q, bh) in enumerate(zip(content['questions'], btn_heights)):
-        r = bh / 2
-        # Fond ivoire, bord prune foncé fin
-        c.setFillColor(IVORY2)
-        c.roundRect(M, y - bh, CW, bh, r, fill=1, stroke=0)
-        c.setStrokeColor(PLUM_DARK); c.setLineWidth(0.7)
-        c.roundRect(M, y - bh, CW, bh, r, fill=0, stroke=1)
-        # Cercle terracotta + numéro
-        cx = M + r; cy = y - bh / 2
-        c.setFillColor(TERRA)
-        c.circle(cx, cy, NUM_R, fill=1, stroke=0)
-        c.setFont(ISB, 7); c.setFillColor(IVORY2)
-        c.drawCentredString(cx, cy - 0.9*mm, f'0{i+1}')
-        # Texte Inter Medium prune
-        lines = wrap(c, q['btn'], IM, 9.5, TXT_W)
-        th_txt = len(lines) * L_LEAD
-        ty = cy + (len(lines) - 1) * L_LEAD / 2 - 9.5 * 0.35
-        c.setFont(IM, 9.5); c.setFillColor(PLUM)
-        for ln in lines:
-            c.drawString(TXT_X, ty, ln); ty -= L_LEAD
-        c.linkAbsolute("", f"question_{i+1}", (M, y - bh, W - M, y), thickness=0)
-        y -= bh + GAP
-
-    y -= CTA_GAP
-
-    # ── CTA — identique site : "Entretien préliminaire — offert" ─────────────
-    # Box fond terracotta pâle + bord terracotta + bouton PLUM_DARK à droite
-    c.setFillColor(TERRA_PALE)
-    c.roundRect(M, y - CTA_H, CW, CTA_H, 5*mm, fill=1, stroke=0)
-    c.setStrokeColor(TERRA); c.setLineWidth(0.8)
-    c.roundRect(M, y - CTA_H, CW, CTA_H, 5*mm, fill=0, stroke=1)
-
-    # Texte gauche
-    c.setFont(CGB, 13); c.setFillColor(PLUM_DARK)
-    c.drawString(M + 6*mm, y - 7.5*mm, content['cta_title'])
-    c.setFont(IR, 8.5); c.setFillColor(TEXT)
-    c.drawString(M + 6*mm, y - 13*mm, content['cta_line1'])
-    c.drawString(M + 6*mm, y - 17.5*mm, content['cta_line2'])
-    c.setFont(ISB, 7.5); c.setFillColor(TERRA)
-    c.drawString(M + 6*mm, y - 22.5*mm, content['cta_tags'])
-
-    # Bouton Terracotta à droite — "Prendre rendez-vous"
-    btn_txt = content['cta_btn']
-    bw = c.stringWidth(btn_txt, ISB, 8.5) + 10*mm
-    bx = W - M - bw - 4*mm
-    by = y - CTA_H / 2 - 6*mm
-    bh2 = 12*mm
-    c.setFillColor(TERRA)
-    c.roundRect(bx, by, bw, bh2, bh2 / 2, fill=1, stroke=0)
+    c.roundRect(bx, by, bw, bh, bh / 2, fill=1, stroke=0)
     c.setFont(ISB, 8.5); c.setFillColor(IVORY2)
-    c.drawCentredString(bx + bw / 2, by + bh2 / 2 - 1.1*mm, btn_txt)
-    assert y - CTA_H >= BAND_H + 3*mm, ('cover overflow', (y - CTA_H) / mm)
-    c.linkURL(OFFER_URL, (bx, by, bx + bw, by + bh2), thickness=0)
-    c.linkURL(OFFER_URL, (M, y - CTA_H, W - M, y), thickness=0)
+    c.drawCentredString(bx + bw / 2, by + bh / 2 - 1.1*mm, btn)
+    c.linkURL(OFFER_URL, (M, cy0, M + LW, cy0 + CTA_H), thickness=0)
+    assert y > cy0 + CTA_H + 4*mm, ('cover: titre trop long', lang, (y - cy0 - CTA_H) / mm)
 
-    footer(c, lang)
+    # Colonne droite : sommaire des 5 questions, cliquable
+    top = H - 9*mm - LOGO_H - 9*mm
+    c.setFillColor(IVORY2)
+    c.roundRect(RX, BOT, RW, top - BOT, 4*mm, fill=1, stroke=0)
+    c.setStrokeColor(MIST); c.setLineWidth(0.7)
+    c.roundRect(RX, BOT, RW, top - BOT, 4*mm, fill=0, stroke=1)
+    eyebrow(c, RX + 8*mm, top - 9*mm, content['index_label'], PLUM)
+    qs = content['questions']
+    zone_top = top - 15*mm
+    step = (zone_top - BOT - 4*mm) / len(qs)
+    TW = RW - 30*mm
+    for i, q in enumerate(qs):
+        ty = zone_top - i * step
+        c.setFont(CGR, 26); c.setFillColor(TERRA)
+        c.drawString(RX + 8*mm, ty - 9*mm, f'0{i+1}')
+        lns = wrap(c, q['btn'], IM, 9.6, TW)
+        ly = ty - 9*mm + (len(lns) - 1) * 9.6 * 1.4 / 2 + 1.2*mm
+        for ln in lns:
+            draw_hl(c, RX + 22*mm, ly, ln, IM, 9.6, PLUM); ly -= 9.6 * 1.4
+        c.linkAbsolute('', f'question_{i+1}', (RX, ty - step, RX + RW, ty), thickness=0)
+
+    footer_band(c, lang)
     c.showPage()
 
 
-# ── PAGE INTÉRIEURE ───────────────────────────────────────────────────────────
-def label(c, x, y, txt, col, size=7.5):
-    """Libellé en capitales espacées (style « LE VÉRITABLE ENJEU » du site)."""
-    c.setFont(ISB, size); c.setFillColor(col)
-    c.drawString(x, y, txt.upper(), charSpace=0.9)
-
+# ── PAGES INTÉRIEURES ─────────────────────────────────────────────────────────
 def paragraphs(lines):
-    """Les lignes coupées à la main deviennent des paragraphes pleine largeur."""
     out, cur = [], []
     for l in lines:
         if l: cur.append(l)
@@ -315,184 +295,186 @@ def paragraphs(lines):
     return out
 
 def inner(c, lang, qnum, q, pg):
-    c.bookmarkPage(f"question_{qnum}")
-    c.setFillColor(IVORY)
-    c.rect(0, 0, W, H, fill=1, stroke=0)
+    c.bookmarkPage(f'question_{qnum}')
+    c.setFillColor(IVORY); c.rect(0, 0, W, H, fill=1, stroke=0)
+    logo_tr(c)
+    eyebrow(c, M, H - 15*mm, content_of[lang]['run_head'], PRUNE_LIGHT, 6.8)
 
-    TOP = H - 13*mm
-    BOT = BAND_H + 9*mm
-    y   = TOP
-    IW  = CW - 12*mm
-    GAP = 5*mm
+    GUT = 16*mm
+    LW  = 86*mm
+    RX  = M + LW + GUT
+    RW  = W - M - RX
+    BOT = FOOT_H + 6*mm
 
-    label(c, M, y, f'0{qnum}  ·  {q["cat"]}', TERRA)
+    # Colonne gauche : grand numéro, catégorie, titre, niveau d'offre
+    c.setFont(CGR, 112); c.setFillColor(TERRA)
+    c.drawString(M - 2*mm, H - 62*mm, f'0{qnum}')
+    y = H - 75*mm
+    eyebrow(c, M, y, q['cat'], TERRA)
     y -= 11*mm
+    for ln in wrap(c, q['title'], CGR, 26, LW):
+        draw_hl(c, M, y, ln, CGR, 26, PLUM_DARK); y -= 26 * 1.14
 
-    title_lines = wrap(c, q['title'], CGSB, 25, CW - 6*mm)
-    t_lead = 25 * 1.2
-    thin_bar(c, M, y + 2.5*mm, len(title_lines) * t_lead + 2*mm)
-    c.setFont(CGSB, 25); c.setFillColor(PLUM_DARK)
-    for ln in title_lines:
-        c.drawString(M + 5*mm, y, ln); y -= t_lead
-    y -= 6*mm
+    lvl, _, rest = q['offer_link'].partition(' · ')
+    name, _, price = rest.partition(' · ')
+    price = price.split(' › ')[0]
+    oy = BOT + 13*mm
+    thin_bar(c, M, oy + 4*mm, 15*mm)
+    eyebrow(c, M + 5*mm, oy, f'{lvl} · {name}', TERRA, 6.8)
+    c.setFont(IR, 8.6); c.setFillColor(PLUM)
+    c.drawString(M + 5*mm, oy - 5.2*mm, price)
+    c.setFont(ISB, 8); c.setFillColor(TERRA)
+    c.drawString(M + 5*mm, oy - 10.2*mm, content_of[lang]['offer_cta'])
+    c.linkURL(OFFER_URL, (M, oy - 12*mm, M + LW, oy + 5*mm), thickness=0)
+    assert y > oy + 10*mm, ('inner: titre trop long', lang, qnum, (y - oy) / mm)
 
+    # Colonne droite : idée clé, question de CODIR, conviction
     idea = paragraphs(q['idea'])
-    offer_h = 8*mm
+    top = H - 9*mm - LOGO_H - 9*mm
+    GAP = 6*mm
+    IW = RW - 16*mm
 
     def layout(k):
-        f_i, f_q, f_c = 10.5 * k, 14 * k, 15.5 * k
-        pad = 5.5*mm * k
-        h1 = sum(text_h(c, t, IR, f_i, IW, f_i * 1.5) for t in idea) + 2.5*mm * (len(idea) - 1) + 8*mm + pad * 2
-        h2 = text_h(c, q['codir'], CGSB, f_q, IW, f_q * 1.3) + 8*mm + pad * 2
-        h3 = sum(text_h(c, t, CGI, f_c, IW, f_c * 1.3) + 1.5*mm for t in q['conviction']) + 8*mm + pad * 2
-        return (f_i, f_q, f_c, pad, h1, h2, h3)
+        f_l, f_i, f_q, f_c = 15 * k, 10.2 * k, 15.5 * k, 16.5 * k
+        pad = 6.5*mm * k
+        lead_h = text_h(c, idea[0], CGI, f_l, RW, f_l * 1.3)
+        body_h = sum(text_h(c, t, IR, f_i, RW, f_i * 1.6) for t in idea[1:]) + 2.5*mm * max(0, len(idea) - 2)
+        h1 = 9*mm + lead_h + (3*mm + body_h if len(idea) > 1 else 0)
+        h2 = text_h(c, q['codir'], CGSB, f_q, IW, f_q * 1.3) + 9*mm + pad * 2
+        h3 = sum(text_h(c, t, CGI, f_c, IW, f_c * 1.3) for t in q['conviction']) + 9*mm + pad * 2
+        return f_l, f_i, f_q, f_c, pad, h1, h2, h3
 
-    k = 1.22                                   # on remplit la page, puis on réduit si besoin
+    k = 1.15
     while True:
-        f_i, f_q, f_c, pad, h1, h2, h3 = layout(k)
-        if h1 + h2 + h3 + GAP * 2 + offer_h <= y - BOT or k <= 0.8: break
+        f_l, f_i, f_q, f_c, pad, h1, h2, h3 = layout(k)
+        if h1 + h2 + h3 + GAP * 2 <= top - BOT or k <= 0.78:
+            break
         k -= 0.02
+    spare = (top - BOT) - (h1 + h2 + h3 + GAP * 2)
+    GAP += max(0, min(spare / 2, 6*mm))
 
-    # Idée clé : fond ivoire clair, filet prune
-    c.setFillColor(IVORY2)
-    c.roundRect(M, y - h1, CW, h1, 3*mm, fill=1, stroke=0)
-    thin_bar(c, M + 1*mm, y - 1*mm, h1 - 2*mm, PLUM)
-    label(c, M + 6*mm, y - pad - 1*mm, q['idea_label'], PLUM)
-    iy = y - pad - 9*mm
-    for t in idea:
-        iy = draw_text(c, M + 6*mm, iy, t, IR, f_i, TEXT, IW, f_i * 1.5) - 2.5*mm
+    y = top
+    eyebrow(c, RX, y - 4*mm, q['idea_label'], PLUM)
+    iy = y - 12*mm
+    for ln in wrap(c, idea[0], CGI, f_l, RW):
+        draw_hl(c, RX, iy, ln, CGI, f_l, PLUM_DARK); iy -= f_l * 1.3
+    iy -= 3*mm
+    for t in idea[1:]:
+        for ln in wrap(c, t, IR, f_i, RW):
+            draw_hl(c, RX, iy, ln, IR, f_i, TEXT); iy -= f_i * 1.6
+        iy -= 2.5*mm
     y -= h1 + GAP
 
-    # Question de CODIR : fond terracotta pâle, filet terracotta
-    c.setFillColor(TERRA_PALE)
-    c.roundRect(M, y - h2, CW, h2, 3*mm, fill=1, stroke=0)
-    thin_bar(c, M + 1*mm, y - 1*mm, h2 - 2*mm, TERRA)
-    label(c, M + 6*mm, y - pad - 1*mm, q['codir_label'], TERRA)
-    draw_text(c, M + 6*mm, y - pad - 10*mm, q['codir'], CGSB, f_q, PLUM_DARK, IW, f_q * 1.3)
+    c.setFillColor(IVORY2)
+    c.roundRect(RX, y - h2, RW, h2, 3.5*mm, fill=1, stroke=0)
+    c.setStrokeColor(MIST); c.setLineWidth(0.6)
+    c.roundRect(RX, y - h2, RW, h2, 3.5*mm, fill=0, stroke=1)
+    thin_bar(c, RX + 0.8*mm, y - 4*mm, h2 - 8*mm, TERRA, 2)
+    eyebrow(c, RX + 8*mm, y - pad - 2*mm, q['codir_label'], TERRA)
+    qy = y - pad - 11*mm
+    for ln in wrap(c, q['codir'], CGSB, f_q, IW):
+        draw_hl(c, RX + 8*mm, qy, ln, CGSB, f_q, PLUM_DARK); qy -= f_q * 1.3
     y -= h2 + GAP
 
-    # Conviction : aplat prune, filet terracotta, texte ivoire
     c.setFillColor(PLUM)
-    c.roundRect(M, y - h3, CW, h3, 3*mm, fill=1, stroke=0)
-    thin_bar(c, M + 1*mm, y - 1*mm, h3 - 2*mm, TERRA)
-    label(c, M + 6*mm, y - pad - 1*mm, q['conviction_label'], GREY_PALE)
-    cy = y - pad - 10.5*mm
+    c.roundRect(RX, y - h3, RW, h3, 3.5*mm, fill=1, stroke=0)
+    eyebrow(c, RX + 8*mm, y - pad - 2*mm, q['conviction_label'], MIST)
+    cy = y - pad - 11.5*mm
     for t in q['conviction']:
-        cy = draw_text(c, M + 6*mm, cy, t, CGI, f_c, IVORY2, IW, f_c * 1.3) - 1.5*mm
-    y -= h3 + 6*mm
+        for ln in wrap(c, t, CGI, f_c, IW):
+            draw_hl(c, RX + 8*mm, cy, ln, CGI, f_c, IVORY2); cy -= f_c * 1.3
+    assert y - h3 >= BOT - 1, ('inner overflow', lang, qnum)
 
-    off_y = max(y, BOT - 2*mm)
-    c.setFont(ISB, 8); c.setFillColor(TERRA)
-    c.drawString(M, off_y, q.get('offer_link', 'exec-ia.ai'), charSpace=0.3)
-    c.linkURL(OFFER_URL, (M, off_y - 2*mm, W - M, off_y + 7*mm), thickness=0)
-    assert off_y >= BAND_H + 4*mm, ('inner overflow', qnum, off_y / mm)
-
-    footer(c, lang, pg)
+    footer_slim(c, lang, pg)
     c.showPage()
 
 
 # ── PAGE FINALE ───────────────────────────────────────────────────────────────
 def final(c, lang, content):
-    """Page finale sur deux colonnes : conviction à gauche, 5 domaines et prise de rendez-vous à droite."""
-    c.setFillColor(PLUM_DARK)
-    c.rect(0, 0, W, H, fill=1, stroke=0)
+    c.setFillColor(PLUM_DARK); c.rect(0, 0, W, H, fill=1, stroke=0)
+    logo_tr(c, on_dark=True)
 
-    GUT = 12*mm
-    LW  = CW * 0.52                      # colonne gauche
-    RX  = M + LW + GUT                   # colonne droite
+    GUT = 14*mm
+    LW  = CW * 0.52
+    RX  = M + LW + GUT
     RW  = W - M - RX
-    TOP = H - 14*mm
+    BOT = BAND_H + 10*mm
 
-    # ── Colonne gauche ──────────────────────────────────────────────────────
-    y = TOP
-    c.setFont(ISB, 7.5); c.setFillColor(GREY_PALE)
-    c.drawString(M, y, content['final_pretitle'])
-    y -= 13*mm
-    for i, line in enumerate(content['final_title']):
-        size = 25
+    # Colonne gauche : titre mémorable, encart, conviction
+    y = H - 17*mm
+    eyebrow(c, M, y, content['final_pretitle'], MIST, 6.8)
+    y -= 17*mm
+    for i, part in enumerate(content['final_title']):
         col = TERRA if i == 1 else IVORY2
-        for ln in wrap(c, line, CGB, size, LW):
-            c.setFont(CGB, size); c.setFillColor(col)
-            c.drawString(M, y, ln); y -= size * 1.15
-        y -= 2*mm
-    y -= 2*mm
-    c.setStrokeColor(TERRA); c.setLineWidth(0.8)
-    c.line(M, y, M + 18*mm, y)
-    y -= 9*mm
+        for ln in wrap(c, part, CGR, 27, LW):
+            c.setFont(CGR, 27); c.setFillColor(col)
+            c.drawString(M, y, ln); y -= 27 * 1.12
+        y -= 2.5*mm
+    y -= 5*mm
 
-    lines = content['final_body']
-    BW = LW - 12*mm
-    ih = sum(text_h(c, l, CGI, 12, BW, 12 * 1.35) for l in lines) + 9*mm
-    c.setFillColor(PLUM_BOX)
-    c.roundRect(M, y - ih, LW, ih, 3*mm, fill=1, stroke=0)
-    thin_bar(c, M + 1*mm, y - 1*mm, ih - 2*mm, TERRA)
-    iy = y - 7.5*mm
-    for line in lines:
-        iy = draw_text(c, M + 6*mm, iy, line, CGI, 12, IVORY2, BW, 12 * 1.35)
+    body = content['final_body']
+    BW = LW - 14*mm
+    ih = sum(text_h(c, l, CGI, 12.5, BW, 12.5 * 1.35) for l in body) + 11*mm
+    c.setFillColor(PLUM)
+    c.roundRect(M, y - ih, LW, ih, 3.5*mm, fill=1, stroke=0)
+    thin_bar(c, M + 0.8*mm, y - 3.5*mm, ih - 7*mm, TERRA, 2)
+    iy = y - 8.5*mm
+    for line in body:
+        iy = draw_text(c, M + 8*mm, iy, line, CGI, 12.5, IVORY2, BW, 12.5 * 1.35)
     y -= ih + 8*mm
-
-    # Conviction : paragraphes recomposés pour la largeur de colonne
-    paras, cur = [], []
-    for line in content.get('final_body2', []):
-        if line: cur.append(line)
-        elif cur: paras.append(' '.join(cur)); cur = []
-    if cur: paras.append(' '.join(cur))
-    for k, para in enumerate(paras):
-        col = IVORY2 if k == len(paras) - 1 else GREY_PALE
-        y = draw_text(c, M, y, para, IR, 10, col, LW, 10 * 1.5)
+    for k, para in enumerate(paragraphs(content.get('final_body2', []))):
+        col = IVORY2 if k == len(paragraphs(content['final_body2'])) - 1 else MIST
+        for ln in wrap(c, para, IR, 9.8, LW):
+            draw_hl(c, M, y, ln, IR, 9.8, col); y -= 9.8 * 1.55
         y -= 3*mm
+    assert y > BOT - 4*mm, ('final: colonne gauche trop longue', lang, (y - BOT) / mm)
 
-    # ── Colonne droite ──────────────────────────────────────────────────────
-    y = TOP
-    c.setFont(ISB, 7.5); c.setFillColor(GREY_PALE)
-    c.drawString(RX, y, content['final_domains_label'].upper())
-    y -= 6*mm
-    ROW = 10*mm
+    # Colonne droite : les 5 domaines, puis la prise de rendez-vous
+    y = H - 9*mm - LOGO_H - 9*mm
+    eyebrow(c, RX, y, content['final_domains_label'], MIST, 6.8)
+    y -= 5*mm
+    ROW = 9.6*mm
     for i, d in enumerate(content['final_domains']):
-        c.setFillColor(PLUM_BOX)
+        c.setFillColor(PLUM)
         c.roundRect(RX, y - ROW, RW, ROW, 2.5*mm, fill=1, stroke=0)
-        cx = RX + 6*mm; cy = y - ROW / 2
-        c.setFillColor(TERRA)
-        c.circle(cx, cy, 3.4*mm, fill=1, stroke=0)
-        c.setFont(ISB, 7.5); c.setFillColor(IVORY2)
-        c.drawCentredString(cx, cy - 1.3*mm, f'0{i+1}')
-        c.setFont(IM, 10); c.setFillColor(IVORY2)
-        c.drawString(RX + 13*mm, cy - 1.7*mm, d)
-        y -= ROW + 2.5*mm
-    y -= 6*mm
+        c.setFont(CGR, 15); c.setFillColor(TERRA)
+        c.drawString(RX + 5*mm, y - ROW / 2 - 1.8*mm, f'0{i+1}')
+        draw_hl(c, RX + 16*mm, y - ROW / 2 - 1.3*mm, d, IM, 9.6, IVORY2)
+        y -= ROW + 2.2*mm
+    y -= 5*mm
 
-    # Encadré de prise de rendez-vous
-    tl = wrap(c, content['final_cta_title'], CGB, 15, RW - 12*mm)
-    cta_h = len(tl) * 15 * 1.2 + 26*mm
+    tl = wrap(c, content['final_cta_title'], CGSB, 16, RW - 14*mm)
+    cta_h = len(tl) * 16 * 1.2 + 27*mm
     c.setFillColor(TERRA)
     c.roundRect(RX, y - cta_h, RW, cta_h, 4*mm, fill=1, stroke=0)
-    ty = y - 9*mm
-    c.setFont(CGB, 15); c.setFillColor(IVORY2)
+    ty = y - 10*mm
+    c.setFont(CGSB, 16); c.setFillColor(IVORY2)
     for ln in tl:
-        c.drawCentredString(RX + RW / 2, ty, ln); ty -= 15 * 1.2
-    ty -= 1.5*mm
-    c.setFont(IM, 8.5); c.setFillColor(IVORY2)
+        c.drawCentredString(RX + RW / 2, ty, ln); ty -= 16 * 1.2
+    ty -= 1*mm
+    c.setFont(IM, 8.4); c.setFillColor(IVORY2)
     c.drawCentredString(RX + RW / 2, ty, content['final_cta_sub'])
-    ty -= 8*mm
+    ty -= 9*mm
     btn = content['cta_btn']
-    bw = c.stringWidth(btn, ISB, 9) + 12*mm; bh = 8.5*mm
+    bw = c.stringWidth(btn, ISB, 9) + 14*mm; bh = 9*mm
     bx = RX + (RW - bw) / 2
     c.setFillColor(IVORY2)
-    c.roundRect(bx, ty - 2.5*mm, bw, bh, bh / 2, fill=1, stroke=0)
+    c.roundRect(bx, ty - 2.6*mm, bw, bh, bh / 2, fill=1, stroke=0)
     c.setFont(ISB, 9); c.setFillColor(PLUM_DARK)
-    c.drawCentredString(RX + RW / 2, ty + 0.3*mm, btn)
+    c.drawCentredString(RX + RW / 2, ty + 0.4*mm, btn)
     c.linkURL(OFFER_URL, (RX, y - cta_h, RX + RW, y), thickness=0)
-    y -= cta_h + 8*mm
+    y -= cta_h + 7*mm
+    c.setFont(ISB, 8.4); c.setFillColor(IVORY2)
+    c.drawCentredString(RX + RW / 2, y, content['final_signature'])
+    y -= 5*mm
+    c.setFont(IR, 8); c.setFillColor(MIST)
+    c.drawCentredString(RX + RW / 2, y, MAIL + '  ·  exec-ia.ai')
+    c.linkURL(SITE_URL, (RX, y - 2*mm, RX + RW, y + 4*mm), thickness=0)
+    assert y > BAND_H + 3*mm, ('final: colonne droite trop longue', lang, (y - BAND_H) / mm)
 
-    c.setFont(ISB, 8.5); c.setFillColor(IVORY2)
-    c.drawCentredString(RX + RW / 2, y, "Valérie Mailland · Fondatrice · EXEC\'IA Consulting")
-    y -= 5.5*mm
-    c.setFont(IR, 8); c.setFillColor(GREY_PALE)
-    c.drawCentredString(RX + RW / 2, y, content.get('final_cta_email', MAIL) + '  ·  exec-ia.ai')
-    c.linkURL(SITE_URL, (RX, y - 2*mm, RX + RW, y + 5*mm), thickness=0)
-
-    footer(c, lang)
+    footer_band(c, lang)
     c.showPage()
+
 
 
 # ── CONTENUS — FRANÇAIS (accents complets) ────────────────────────────────────
@@ -884,7 +866,7 @@ CONTENT = {
                 'Los clientes casi nunca se van de golpe.',
                 '',
                 'Acumulan micro-decepciones y luego toman una decisión silenciosa.',
-                'La mayoría de las empresas detectan esta decisión varias semanas tarde',
+                'La mayoría de las empresas detectan esta decisión varias semanas tarde,'
                 'mucho después de que el cliente perdido haya tomado su decisión.',
                 '',
                 'Un cliente perdido no representa solo un volumen de negocio perdido.',
@@ -950,6 +932,25 @@ CONTENT = {
 },
 }
 
+
+
+# ── Compléments de la refonte du 07/10/2026 ───────────────────────────────────
+EXTRA = {
+    'fr': {'cover_title_mc': ['5 questions qui valent', "plus qu'un nouveau projet IA"],
+           'index_label': 'Les 5 questions', 'run_head': 'Les 5 Essentiels  ·  Q4 2026',
+           'offer_cta': "Découvrir l'offre  ›", 'final_signature': "Valérie Mailland · Fondatrice · EXEC'IA Consulting"},
+    'en': {'cover_title_mc': ['5 questions worth more', 'than a new AI project'],
+           'index_label': 'The 5 questions', 'run_head': 'The 5 Essentials  ·  Q4 2026',
+           'offer_cta': 'Discover the offer  ›', 'final_signature': "Valérie Mailland · Founder · EXEC'IA Consulting"},
+    'es': {'cover_title_mc': ['5 preguntas que valen más', 'que un nuevo proyecto de IA'],
+           'index_label': 'Las 5 preguntas', 'run_head': 'Los 5 Esenciales  ·  Q4 2026',
+           'offer_cta': 'Descubrir la oferta  ›', 'final_signature': "Valérie Mailland · Fundadora · EXEC'IA Consulting"},
+}
+for _l, _d in EXTRA.items():
+    CONTENT[_l].update(_d)
+CONTENT['es']['questions'][2]['title'] = '¿Qué parte de su empresa se jubilaría mañana?'
+content_of = CONTENT
+
 OUTPUTS = {
     'fr': os.path.join(ASSETS, 'EXECIA_5 Essentiels_Q4_2026_FR.pdf'),
     'en': os.path.join(ASSETS, 'EXECIA_The 5 Essentials_Q4_2026_EN.pdf'),
@@ -959,7 +960,7 @@ OUTPUTS = {
 def generate(lang):
     content = CONTENT[lang]
     out = OUTPUTS[lang]
-    c = pdfcanvas.Canvas(out, pagesize=landscape(A4))
+    c = pdfcanvas.Canvas(out, pagesize=landscape(A4), initialFontName=IR)
     c.setTitle(content['cover_title'][0] + ' ' + content['cover_title'][1])
     c.setAuthor("Valérie Mailland · Fondatrice · EXEC\'IA Consulting")
     c.setSubject('Lead Magnet Q4 2026 · ' + lang.upper())
@@ -976,3 +977,4 @@ if __name__ == '__main__':
     for lang in langs:
         generate(lang)
     print('Done.')
+
