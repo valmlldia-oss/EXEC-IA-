@@ -981,6 +981,7 @@ border-bottom: 1px solid rgba(99,59,74,.1);
 .persp-card-visual--transformation img { object-position: 50% 6%; }
 .persp-card-visual--creation img { object-position: 50% 32%; }
 .persp-card-visual--gouvernance img { transform: scale(0.96); object-position: 55% 0%; }
+.persp-card-visual--top img { object-position: 50% 0%; }
 .persp-card-visual-overlay {
 position: absolute; left: 16px; bottom: 10px;
 font-family: var(--sans); font-weight: 600; font-size: .82rem;
