@@ -699,18 +699,6 @@ text-align: left; border-radius: 8px; transition: background .2s;
 }
 .offres-cat-btn:hover{ background: rgba(99,59,74,.04); }
 .offres-cat-body{ overflow: hidden; max-height: 0; transition: max-height .45s var(--ease); }
-.offre-web{
-margin-top: 0;
-background: rgba(99,59,74,.045);
-border: 1.5px solid rgba(99,59,74,.22);
-border-radius: 16px;
-padding: 28px 28px 24px;
-text-align: center;
-}
-.offre-web-tier-name{
-font-family: var(--sans); font-size: .86rem; font-weight: 600;
-letter-spacing: .04em; text-transform: uppercase; color: var(--plum);
-}
 .offres-orientation-card{
 display: flex; flex-direction: column; align-items: flex-start; gap: 8px;
 background: var(--white); border: 1px solid rgba(99,59,74,.14);
@@ -754,7 +742,7 @@ from { transform: translateX(0); }
 to   { transform: translateX(-50%); }
 }
 .funding-note{ max-width: 760px; margin: 40px auto 0; padding: 26px 30px; background: var(--white); border: 1px solid rgba(93,47,55,.24); border-radius: 14px; }
-.funding-note-title{ font-family: var(--sans); font-size: .82rem; font-weight: 700; letter-spacing: .04em; color: var(--rose); text-transform: uppercase; margin: 0 0 10px; }
+.funding-note-title{ font-family: var(--sans); font-size: .82rem; font-weight: 600; letter-spacing: .04em; color: var(--rose); text-transform: uppercase; margin: 0 0 10px; }
 .funding-note p{ font-size: .95rem; color: var(--plum); line-height: 1.6; margin: 0 0 10px; }
 .funding-note p:last-child{ margin-bottom: 0; }
 .funding-note a{ color: var(--rose); text-decoration: underline; }
@@ -766,7 +754,7 @@ background: var(--surface, var(--rose-pale)); background: rgba(217,201,195,.28);
 border-top: 1px solid rgba(93,47,55,.18);
 }
 .article-author-photo{ width: 52px; height: 52px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
-.article-author-name{ font-family: var(--serif); font-size: 1.05rem; color: var(--plum); margin: 0 0 2px; font-weight: 600; }
+.article-author-name{ font-family: var(--serif); font-size: 1.05rem; color: var(--plum); margin: 0 0 2px; font-weight: 500; }
 .article-author-bio{ font-size: .88rem; color: rgba(99,59,74,.75); margin: 0; line-height: 1.5; }
 .article-author-bio a{ color: var(--rose); text-decoration: underline; white-space: nowrap; }
 @media (max-width: 560px){.article-author{ flex-direction: column; align-items: flex-start; text-align: left; }}
@@ -977,7 +965,7 @@ box-shadow: 0 12px 32px rgba(99,59,74,.25);
 .aiact-timeline::before{ content: ""; position: absolute; left: 9px; top: 8px; bottom: 8px; width: 2px; background: rgba(99,59,74,.22); }
 .aiact-tl-item{ position: relative; padding: 0 0 26px 0; }
 .aiact-tl-item:last-child{ padding-bottom: 0; }
-.aiact-tl-item::before{ content: "\2713"; position: absolute; left: -32px; top: 2px; width: 20px; height: 20px; border-radius: 50%; background: var(--plum); border: 2px solid var(--white); box-shadow: 0 0 0 2px var(--plum); display: flex; align-items: center; justify-content: center; font-family: var(--sans); font-size: 11px; font-weight: 700; line-height: 1; color: var(--white); }
+.aiact-tl-item::before{ content: "\2713"; position: absolute; left: -32px; top: 2px; width: 20px; height: 20px; border-radius: 50%; background: var(--plum); border: 2px solid var(--white); box-shadow: 0 0 0 2px var(--plum); display: flex; align-items: center; justify-content: center; font-family: var(--sans); font-size: 11px; font-weight: 600; line-height: 1; color: var(--white); }
 .aiact-tl-item--pending::before{ content: ""; background: var(--white); box-shadow: 0 0 0 2px var(--rose); border-color: var(--white); }
 .aiact-tl-head{ display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 4px; }
 .aiact-tl-date{ font-family: var(--serif); font-size: 1.45rem; line-height: 1.2; color: var(--plum); font-weight: 400; }
@@ -991,7 +979,7 @@ box-shadow: 0 12px 32px rgba(99,59,74,.25);
 @media (max-width: 600px){.aiact-frame{ padding: 26px 16px 20px 14px; }.aiact-frame-tag{ left: 14px; }}
 .aiact-roles{ max-width: 760px; margin: 6px 0 14px 1.4em; padding: 0; }
 .aiact-roles li{ font-family: var(--sans); font-size: 1rem; line-height: 1.6; color: var(--plum); margin-bottom: 8px; padding-left: 4px; }
-.aiact-roles li::marker{ color: var(--rose); font-weight: 700; }
+.aiact-roles li::marker{ color: var(--rose); font-weight: 600; }
 .aiact-key{ color: var(--rose); font-weight: 600; }
 .article-qlist--actions{ border-left: none; padding-left: 0; max-width: 760px; }
 .article-qlist--actions li{ position: relative; padding-left: 38px; margin-bottom: 18px; font-style: normal; font-family: var(--sans); font-size: 1rem; font-weight: 400; line-height: 1.6; }
