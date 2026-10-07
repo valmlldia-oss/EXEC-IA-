@@ -1046,6 +1046,7 @@ max-width: 860px;
 .persp-guide-eyebrow { display: block; font-family: var(--sans); font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 600; color: var(--rose); margin-bottom: 8px; }
 .persp-guide-title { display: block; font-family: var(--serif); font-weight: 400; font-size: clamp(1.5rem, 2.6vw, 2rem); line-height: 1.15; color: var(--plum); margin-bottom: 10px; }
 .persp-guide-desc { display: block; font-family: var(--sans); font-size: .95rem; line-height: 1.6; color: var(--plum-muted); margin-bottom: 14px; max-width: 62ch; }
+@media (min-width: 1000px) { .persp-guide-desc { max-width: none; } .persp-guide-1l { white-space: nowrap; } }
 .persp-guide-cta { font-family: var(--sans); font-size: .95rem; font-weight: 600; color: var(--rose); display: inline-flex; align-items: center; gap: 6px; }
 .persp-guide:hover .portrait-link-arrow { transform: translateX(4px); }
 @media (max-width: 600px) { .persp-guide { padding: 24px 20px; } }
@@ -6489,6 +6490,10 @@ color: var(--rose);
 .testi-grid { grid-template-rows: auto auto auto; }
 .testi-grid > .testi, .testi-grid > .testi--dark { grid-row: span 3; }
 .testi-grid > .testi > .testi-fold { margin-top: 0; }
+.testi-grid > .testi > .testi-author { align-self: end; }
+}
+@media (min-width: 1200px) {
+.testi-author .testi-title .testi-1l { white-space: nowrap; font-size: min(.78rem, .95vw); }
 }
 @media (prefers-reduced-motion: reduce) { .testi-fold-arrow { transition: none; } }
 .testi-author .testi-avatar { width: 60px; height: 60px; }

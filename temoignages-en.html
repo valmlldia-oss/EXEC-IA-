@@ -1222,7 +1222,8 @@ color: var(--rose);
 .testi-fold[open] .testi-fold-arrow{ transform: rotate(180deg); }
 .testi-fold[open] > .testi-fold-toggle{ margin-bottom: 16px; }
 .testi--dark .testi-fold-toggle{ color: rgba(250,246,242,.85); border-top-color: rgba(250,246,242,.18); }
-@media (min-width: 1025px){.testi-grid{ grid-template-rows: auto auto auto; }.testi-grid > .testi, .testi-grid > .testi--dark{ grid-row: span 3; }.testi-grid > .testi > .testi-fold{ margin-top: 0; }}
+@media (min-width: 1025px){.testi-grid{ grid-template-rows: auto auto auto; }.testi-grid > .testi, .testi-grid > .testi--dark{ grid-row: span 3; }.testi-grid > .testi > .testi-fold{ margin-top: 0; }.testi-grid > .testi > .testi-author{ align-self: end; }}
+@media (min-width: 1200px){.testi-author .testi-title .testi-1l{ white-space: nowrap; font-size: min(.78rem, .95vw); }}
 @media (prefers-reduced-motion: reduce){.testi-fold-arrow{ transition: none; }}
 .testi-author .testi-avatar{ width: 60px; height: 60px; }
 .testi-author .testi-avatar--initials{ font-size: 1.3rem; }
@@ -1344,7 +1345,7 @@ color: var(--plum); margin: 14px 0 0;
           <div>
             <span class="testi-name">Sandrine Devillard</span>
             <strong class="testi-role">McKinsey &amp; Company</strong>
-            <span class="testi-title">Senior Partner Emerita<br>Former Global Leader,<br>“Women Matter” Research Program<br>Former Member, McKinsey Global Institute Council</span>
+            <span class="testi-title">Senior Partner Emerita<br><span class="testi-1l">Former Global Leader, “Women Matter” Research Program</span><br><span class="testi-1l">Former Member, McKinsey Global Institute Council</span></span>
             <em class="testi-translated">Translated from French</em>
           </div>
         </div>

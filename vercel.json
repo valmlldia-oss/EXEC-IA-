@@ -36,6 +36,21 @@
       "source": "/index.html",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/robot",
+      "destination": "/perspective-robots-humanoides-token-tax.html#mini-diagnostic",
+      "permanent": false
+    },
+    {
+      "source": "/robot-en",
+      "destination": "/perspective-robots-humanoides-token-tax-en.html#mini-diagnostic",
+      "permanent": false
+    },
+    {
+      "source": "/robot-es",
+      "destination": "/perspective-robots-humanoides-token-tax-es.html#mini-diagnostic",
+      "permanent": false
     }
   ],
   "headers": [

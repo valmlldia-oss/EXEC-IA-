@@ -30,7 +30,7 @@
       cRobot: "Temps potentiellement robotisable : {h} h/semaine ({p} %)", cMixte: "Temps en mode partagé : {h} h/semaine", cHumain: "Temps qui reste humain : {h} h/semaine",
       cTasks: "Mes tâches :", cFirst: "À confier en premier :", cFutur: "Le temps libéré irait vers : ", cVacant: "Poste difficile à pourvoir qu'un robot pourrait tenir : ",
       cLink: "Faire le mini-diagnostic : ", cSign: "exec-ia.ai · Décidez avant d'investir",
-      url: "https://exec-ia.ai/perspective-robots-humanoides-token-tax.html#mini-diagnostic"
+      url: "https://exec-ia.ai/robot"
     },
     en: {
      sendTitle: "Get personal feedback", sendLead: "Leave your email: Valérie will reply herself within two working days.", emailLabel: "Your work email", consentLabel: "I agree that EXEC'IA may contact me about this diagnostic.", sendLabel: "Get my feedback", sending: "Sending…", sentOk: "Thank you! Your diagnostic has arrived. Valérie will reply personally within two working days.", errEmail: "Please enter a valid email address.", errConsent: "Please tick the box so we can get back to you.", errSend: "Sending failed. Please try again in a moment, or write to contact@exec-ia.ai.", legal: "Your email and diagnostic are used only to reply to you. They are never sold or handed to an AI.", legalLink: "mentions-legales-en.html#donnees",
@@ -53,7 +53,7 @@
       cRobot: "Time that could go to a robot: {h} h/week ({p} %)", cMixte: "Shared time: {h} h/week", cHumain: "Time that stays human: {h} h/week",
       cTasks: "My tasks:", cFirst: "Hand over first:", cFutur: "Freed-up time would go to: ", cVacant: "Hard-to-fill role a robot could cover: ",
       cLink: "Take the mini-diagnostic: ", cSign: "exec-ia.ai · Decide before you invest",
-      url: "https://exec-ia.ai/perspective-robots-humanoides-token-tax-en.html#mini-diagnostic"
+      url: "https://exec-ia.ai/robot-en"
     },
     es: {
      sendTitle: "Recibir una opinión personalizada", sendLead: "Deje su correo: Valérie le responderá personalmente en un plazo de dos días hábiles.", emailLabel: "Su correo profesional", consentLabel: "Acepto que EXEC'IA me contacte en relación con este diagnóstico.", sendLabel: "Recibir mi opinión", sending: "Enviando…", sentOk: "¡Gracias! Su diagnóstico ha llegado. Valérie le responderá personalmente en un plazo de dos días hábiles.", errEmail: "Indique una dirección de correo válida.", errConsent: "Marque la casilla para que podamos contactarle.", errSend: "El envío no se ha completado. Inténtelo de nuevo en un momento o escriba a contact@exec-ia.ai.", legal: "Su correo y su diagnóstico solo sirven para responderle. Nunca se venden ni se confían a una IA.", legalLink: "mentions-legales-es.html#datos",
@@ -76,7 +76,7 @@
       cRobot: "Tiempo potencialmente robotizable: {h} h/semana ({p} %)", cMixte: "Tiempo en modo compartido: {h} h/semana", cHumain: "Tiempo que sigue siendo humano: {h} h/semana",
       cTasks: "Mis tareas:", cFirst: "Confiar primero:", cFutur: "El tiempo liberado iría a: ", cVacant: "Puesto difícil de cubrir que un robot podría ocupar: ",
       cLink: "Hacer el minidiagnóstico: ", cSign: "exec-ia.ai · Decida antes de invertir",
-      url: "https://exec-ia.ai/perspective-robots-humanoides-token-tax-es.html#mini-diagnostic"
+      url: "https://exec-ia.ai/robot-es"
     }
   };
   var T = I18N[lang] || I18N.fr;
