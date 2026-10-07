@@ -7092,6 +7092,11 @@ html { scroll-behavior: smooth; }
 .offre-web-tiers--agents { gap: 10px; }
 .offre-web-tiers--agents .offre-web-tier { padding: 16px 10px; }
 .offre-web-tiers--agents .offre-web-tier-price { font-size: 1.1rem; white-space: nowrap; }
+/* Prix affinés : Cormorant regular, chiffres alignés (sans les jambages des chiffres elzéviriens), mention allégée */
+.offre-web-tier-price { font-weight: 400; font-variant-numeric: lining-nums; font-feature-settings: "lnum" 1; letter-spacing: .01em; }
+.offre-web-tiers--agents .offre-web-tier-price { font-size: 1.3rem; }
+.offre-price-lead { font-weight: 500; }
+.offre-price-ht { font-weight: 500; }
 .offre-web-tiers--agents .offre-agent-pastille { white-space: nowrap; font-size: .86rem; padding: 6px 10px; gap: 6px; }
 .offre-web-tiers--agents .offre-agent-inclus { font-size: .88rem; }
 @media (max-width: 1100px) { .offre-web-tiers--agents .offre-agent-pastille, .offre-web-tiers--agents .offre-web-tier-price { white-space: normal; } }
