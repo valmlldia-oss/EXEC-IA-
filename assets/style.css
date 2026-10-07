@@ -4145,7 +4145,8 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   line-height: 1.6;
   color: rgba(99, 59, 74, .72);
 }
-.expertise-contact-cta { display: flex; justify-content: center; }
+.expertise-contact-cta { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 16px 40px; }
+.expertise-contact-cta .offres-crosslink { margin: 0; }
 .ia-perf-rule { border: none; border-top: 1.5px solid rgba(99,59,74,.2); margin: 10px 0; }
 .ia-perf-body { display: flex; flex-direction: column; gap: 32px; }
 .ia-perf-title { font-family: var(--serif); font-size: clamp(1rem, 1.2vw, 1.1rem); font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: #C75F62; margin-bottom: 8px; }
