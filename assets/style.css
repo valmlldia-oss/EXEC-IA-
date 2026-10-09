@@ -7122,9 +7122,10 @@ html { scroll-behavior: smooth; }
 @media (min-width: 900px) {
   .article-author, .article-page--guide .article-author { max-width: 860px; }
 }
-@media (min-width: 1000px) {
-  .article-author-bio { white-space: nowrap; }
-}
+/* 09/10/2026 : plus jamais de texte hors du cadre. La présentation revient à la
+   ligne normalement (le nowrap débordait de l'encadré en FR/EN/ES). */
+.article-author > div { min-width: 0; flex: 1 1 auto; }
+.article-author-bio { white-space: normal; overflow-wrap: break-word; text-wrap: pretty; }
 
 /* Guide : texte plus aéré (interligne 1,7, respiration entre paragraphes), frise sur toute la largeur du cadre */
 .article-page--guide .article-intro p, .article-page--guide .article-tldr-body p, .article-page--guide .article-tldr-body li, .article-page--guide .aiact-relief li, .article-page--guide .aiact-roles li, .article-page--guide .acc-body p, .article-page--guide .aiact-tl-text, .article-page--guide .article-qlist--actions li p { line-height: 1.7; }
@@ -7285,6 +7286,8 @@ body > section#perspectives.snap-page:first-of-type, body > main > section#persp
 .article-book a.art-guide-link { font-family: var(--sans); font-weight: 600; font-style: normal; font-size: .95em; color: var(--plum); text-decoration: none; background: rgba(199,95,98,.13); box-shadow: inset 0 0 0 1px rgba(199,95,98,.4); border-radius: 6px; padding: .12em .55em; -webkit-box-decoration-break: clone; box-decoration-break: clone; transition: background .2s; }
 .article-book a.art-guide-link::after { content: " →"; color: var(--rose); }
 .article-book a.art-guide-link:hover { background: rgba(199,95,98,.24); }
+/* 09/10/2026 : le lien vers le guide ne déborde jamais de la colonne (bloc insécable qui passe à la ligne entier) */
+.article-book a.art-guide-link { display: inline-block; max-width: 100%; line-height: 1.45; }
 
 /* Bouton Instagram du pied de page : logo Instagram officiel (image) */
 

@@ -1064,7 +1064,8 @@ html{ scroll-behavior: smooth; }
 .article-author-bio a{ display: block; margin-top: 4px; white-space: nowrap; }
 @media (min-width: 900px){.article-author-bio{ white-space: normal; }}
 @media (min-width: 900px){.article-author, .article-page--guide .article-author{ max-width: 860px; }}
-@media (min-width: 1000px){.article-author-bio{ white-space: nowrap; }}
+.article-author > div{ min-width: 0; flex: 1 1 auto; }
+.article-author-bio{ white-space: normal; overflow-wrap: break-word; text-wrap: pretty; }
 .article-page--guide .article-intro p, .article-page--guide .article-tldr-body p, .article-page--guide .article-tldr-body li, .article-page--guide .aiact-relief li, .article-page--guide .aiact-roles li, .article-page--guide .acc-body p, .article-page--guide .aiact-tl-text, .article-page--guide .article-qlist--actions li p{ line-height: 1.7; }
 .article-page--guide .article-intro p{ margin-bottom: 18px; }
 .article-page--guide .aiact-tl-text{ max-width: none; }
@@ -1192,6 +1193,12 @@ border-radius: 50%; background: #FAF6F2; transition: transform .2s;
 .cookie-modal-foot .cookie-btn{ font-size: .85rem; padding: 12px 28px; }
 @media (max-width: 600px){.cookie-modal-box{ padding: 40px 20px 24px; }.cookie-modal-title{ font-size: 1.6rem; }.cookie-cat summary{ padding: 16px 16px 8px; }.cookie-cat-always, .cookie-switch{ position: static; padding: 0 16px 14px 38px; }.cookie-cat-desc{ padding: 0 16px 16px 38px; }.cookie-modal-foot .cookie-btn{ width: 100%; }}
 @media (prefers-reduced-motion: reduce){.cookie-switch-track, .cookie-switch-track::after, .cookie-cat-chev{ transition: none; }}
+.article-related{ max-width: 780px; margin: 36px auto 8px; padding: 22px 24px 6px; border-top: 1px solid rgba(217,201,195,1); }
+.article-related ul{ list-style: none; margin: 0; padding: 0; }
+.article-related li{ border-bottom: 1px solid rgba(217,201,195,.6); }
+.article-related li a{ display: block; padding: 11px 0; font-family: var(--serif); font-size: 1.28rem; line-height: 1.35; color: var(--plum); text-decoration: none; transition: color .2s; }
+.article-related li a::after{ content: " →"; color: var(--rose); }
+.article-related li a:hover{ color: var(--rose); }
 .article-long{ max-width: 1100px; margin: 34px auto 0; }
 .article-long > summary{ list-style: none; cursor: pointer; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; max-width: 760px; margin: 0 auto; padding: 18px 24px; border: 1.5px solid var(--rose); border-radius: 14px; background: rgba(199,95,98,.06); transition: background .2s; }
 .article-long > summary::-webkit-details-marker, .article-long > summary::marker{ display: none; content: ''; }

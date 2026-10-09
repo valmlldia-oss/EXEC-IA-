@@ -903,7 +903,8 @@ html{ scroll-behavior: smooth; }
 .article-author-bio a{ display: block; margin-top: 4px; white-space: nowrap; }
 @media (min-width: 900px){.article-author-bio{ white-space: normal; }}
 @media (min-width: 900px){.article-author, .article-page--guide .article-author{ max-width: 860px; }}
-@media (min-width: 1000px){.article-author-bio{ white-space: nowrap; }}
+.article-author > div{ min-width: 0; flex: 1 1 auto; }
+.article-author-bio{ white-space: normal; overflow-wrap: break-word; text-wrap: pretty; }
 body{ overflow-wrap: break-word; overflow-x: clip; }
 @media (max-width: 640px){.aiact-ref, .aiact-key, .article-page p, .article-page li{ overflow-wrap: anywhere; }img, svg, video, iframe{ max-width: 100%; }}
 @media (max-width: 640px){.offres-grid > *, .offres-grid-4 > *, .pilier, .acc-title{ min-width: 0; }.offre-card *, .newsletter-content *, .pilier *, .acc-item *{ overflow-wrap: anywhere; }}
