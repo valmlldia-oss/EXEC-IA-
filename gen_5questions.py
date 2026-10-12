@@ -199,7 +199,7 @@ def footer_slim(c, lang, pg):
     c.drawCentredString(W / 2, y, mention)
     c.drawCentredString(W / 2, 4*mm, "© 2026 Valérie Mailland · EXEC'IA · " + rights)
     c.setFont(ISB, 7.5); c.setFillColor(TERRA)
-    c.drawRightString(W - M, y, f'{pg:02d}  /  07')
+    c.drawRightString(W - M, y, f'{pg:02d}  /  08')
 
 
 # ── COUVERTURE ────────────────────────────────────────────────────────────────
@@ -235,8 +235,21 @@ def cover(c, lang, content):
     for ln in wrap(c, content['cover_caption'], IR, 9.5, LW):
         draw_hl(c, M, y, ln, IR, 9.5, PRUNE_LIGHT); y -= 9.5 * 1.5
 
-    # Encadré de prise de rendez-vous, en bas à gauche
+    # Mode d'emploi en trois temps, entre l'accroche et l'encadré de rendez-vous
     CTA_H = 30*mm
+    if content.get('guide_steps'):
+        y -= 7*mm
+        eyebrow(c, M, y, content['guide_label'], PLUM, 6.8)
+        y -= 7.5*mm
+        for n, step in enumerate(content['guide_steps'], 1):
+            c.setFont(CGR, 15); c.setFillColor(TERRA)
+            c.drawString(M, y - 0.6*mm, str(n))
+            for ln in wrap(c, step, IR, 9.2, LW - 8*mm):
+                draw_hl(c, M + 7*mm, y, ln, IR, 9.2, TEXT); y -= 9.2 * 1.5
+            y -= 2.2*mm
+        c.linkAbsolute('', 'autodiagnostic', (M, y, M + LW, y + 30*mm), thickness=0)
+
+    # Encadré de prise de rendez-vous, en bas à gauche
     cy0 = BOT
     c.setFillColor(IVORY2)
     c.roundRect(M, cy0, LW, CTA_H, 4*mm, fill=1, stroke=0)
@@ -307,18 +320,29 @@ def inner(c, lang, qnum, q, pg):
     BOT = FOOT_H + 6*mm
 
     # Colonne gauche : grand numéro, catégorie, titre, niveau d'offre
-    c.setFont(CGR, 112); c.setFillColor(TERRA)
-    c.drawString(M - 2*mm, H - 62*mm, f'0{qnum}')
-    y = H - 75*mm
+    c.setFont(CGR, 100); c.setFillColor(TERRA)
+    c.drawString(M - 2*mm, H - 57*mm, f'0{qnum}')
+    y = H - 69*mm
     eyebrow(c, M, y, q['cat'], TERRA)
     y -= 11*mm
     for ln in wrap(c, q['title'], CGR, 26, LW):
         draw_hl(c, M, y, ln, CGR, 26, PLUM_DARK); y -= 26 * 1.14
 
+    if q.get('practice'):
+        y -= 8*mm
+        eyebrow(c, M, y, content_of[lang]['practice_label'], PLUM, 6.8)
+        y -= 7.5*mm
+        for n, step in enumerate(q['practice'], 1):
+            c.setFont(CGR, 15); c.setFillColor(TERRA)
+            c.drawString(M, y - 0.6*mm, str(n))
+            for ln in wrap(c, step, IR, 8.8, LW - 8*mm):
+                draw_hl(c, M + 7*mm, y, ln, IR, 8.8, TEXT); y -= 8.8 * 1.5
+            y -= 2.6*mm
+
     lvl, _, rest = q['offer_link'].partition(' · ')
     name, _, price = rest.partition(' · ')
     price = price.split(' › ')[0]
-    oy = BOT + 13*mm
+    oy = BOT + 11*mm
     thin_bar(c, M, oy + 4*mm, 15*mm)
     eyebrow(c, M + 5*mm, oy, f'{lvl} · {name}', TERRA, 6.8)
     c.setFont(IR, 8.6); c.setFillColor(PLUM)
@@ -386,6 +410,112 @@ def inner(c, lang, qnum, q, pg):
     assert y - h3 >= BOT - 1, ('inner overflow', lang, qnum)
 
     footer_slim(c, lang, pg)
+    c.showPage()
+
+
+# ── AUTODIAGNOSTIC (page 2) ───────────────────────────────────────────────────
+def diagnostic(c, lang, content):
+    """Grille 0 à 3 pour les cinq questions, cases cliquables, lecture du score reliée aux trois niveaux d'offre."""
+    c.bookmarkPage('autodiagnostic')
+    c.setFillColor(IVORY); c.rect(0, 0, W, H, fill=1, stroke=0)
+    logo_tr(c)
+    eyebrow(c, M, H - 15*mm, content['run_head'], PRUNE_LIGHT, 6.8)
+
+    GUT = 14*mm
+    LW  = 92*mm
+    RX  = M + LW + GUT
+    RW  = W - M - RX
+    BOT = FOOT_H + 6*mm
+    top = H - 9*mm - LOGO_H - 9*mm
+
+    # Colonne gauche : titre, consigne, barème
+    y = H - 34*mm
+    eyebrow(c, M, y, content['diag_eyebrow'], TERRA)
+    y -= 12*mm
+    for ln in wrap(c, content['diag_title'], CGR, 28, LW):
+        draw_hl(c, M, y, ln, CGR, 28, PLUM_DARK); y -= 28 * 1.12
+    y -= 3*mm
+    for ln in wrap(c, content['diag_intro'], CGI, 14, LW):
+        c.setFont(CGI, 14); c.setFillColor(PLUM); c.drawString(M, y, ln); y -= 14 * 1.3
+    y -= 6*mm
+    eyebrow(c, M, y, content['diag_scale_label'], PLUM, 6.8)
+    y -= 7.5*mm
+    for n, lbl in enumerate(content['diag_scale']):
+        c.setFont(CGR, 15); c.setFillColor(TERRA)
+        c.drawString(M, y - 0.6*mm, str(n))
+        c.setFont(IR, 9.2); c.setFillColor(TEXT)
+        c.drawString(M + 7*mm, y, lbl)
+        y -= 7*mm
+
+    # Lecture du score : trois paliers reliés aux trois niveaux d'offre
+    levels = [content['questions'][i]['offer_link'].split(' · ')[:2] for i in (0, 2, 4)]
+    RH = 13.5*mm
+    ry = BOT + 3 * RH + 9*mm
+    assert y > ry + 6*mm, ('diagnostic: colonne gauche trop longue', lang, (y - ry) / mm)
+    eyebrow(c, M, ry - 2*mm, content['diag_results_label'], PLUM, 6.8)
+    ry -= 7*mm
+    for (rng, txt), (lvl, name) in zip(content['diag_results'], levels):
+        thin_bar(c, M, ry + 1.5*mm, RH - 4*mm)
+        c.setFont(CGSB, 13); c.setFillColor(TERRA)
+        c.drawString(M + 4.5*mm, ry - 2.6*mm, rng)
+        tx = M + 27*mm
+        eyebrow(c, tx, ry - 0.2*mm, f'{lvl} · {name}', PLUM, 6.2)
+        ly = ry - 4.8*mm
+        for ln in wrap(c, txt, IR, 8.4, LW - 27*mm):
+            draw_hl(c, tx, ly, ln, IR, 8.4, TEXT); ly -= 8.4 * 1.4
+        ry -= RH
+
+    # Colonne droite : la grille
+    c.setFillColor(IVORY2)
+    c.roundRect(RX, BOT, RW, top - BOT, 4*mm, fill=1, stroke=0)
+    c.setStrokeColor(MIST); c.setLineWidth(0.7)
+    c.roundRect(RX, BOT, RW, top - BOT, 4*mm, fill=0, stroke=1)
+    BOXW = 7*mm; BGAP = 3.2*mm
+    gx0 = RX + RW - 8*mm - 4 * BOXW - 3 * BGAP
+    hy = top - 9*mm
+    eyebrow(c, RX + 8*mm, hy, content['index_label'], PLUM)
+    for n in range(4):
+        c.setFont(ISB, 7.5); c.setFillColor(PRUNE_LIGHT)
+        c.drawCentredString(gx0 + n * (BOXW + BGAP) + BOXW / 2, hy, str(n))
+    TOT_H = 16*mm
+    zone_top = hy - 5*mm
+    step = (zone_top - BOT - TOT_H) / 5
+    TW = gx0 - (RX + 22*mm) - 6*mm
+    form = c.acroForm
+    for i, q in enumerate(content['questions']):
+        ty = zone_top - i * step
+        if i:
+            c.setStrokeColor(MIST); c.setLineWidth(0.5)
+            c.line(RX + 8*mm, ty, RX + RW - 8*mm, ty)
+        mid = ty - step / 2
+        c.setFont(CGR, 22); c.setFillColor(TERRA)
+        c.drawString(RX + 8*mm, mid - 3*mm, f'0{i+1}')
+        lns = wrap(c, q['title'], IM, 8.8, TW)
+        blk = 3.6*mm + len(lns) * 8.8 * 1.35
+        ly = mid + blk / 2 - 2.2*mm
+        eyebrow(c, RX + 22*mm, ly, q['cat'], TERRA, 6)
+        ly -= 4.6*mm
+        for ln in lns:
+            draw_hl(c, RX + 22*mm, ly, ln, IM, 8.8, PLUM_DARK); ly -= 8.8 * 1.35
+        for n in range(4):
+            bx = gx0 + n * (BOXW + BGAP)
+            form.radio(name=f'q{i+1}', value=str(n), selected=False, x=bx, y=mid - BOXW / 2,
+                       size=BOXW, buttonStyle='circle', shape='circle',
+                       borderColor=TERRA, fillColor=IVORY2, textColor=TERRA,
+                       borderWidth=0.9, forceBorder=True, tooltip=f'{n}')
+    # Total
+    c.setStrokeColor(TERRA); c.setLineWidth(0.8)
+    c.line(RX + 8*mm, BOT + TOT_H - 2*mm, RX + RW - 8*mm, BOT + TOT_H - 2*mm)
+    c.setFont(CGSB, 15); c.setFillColor(PLUM_DARK)
+    c.drawString(RX + 8*mm, BOT + 6*mm, content['diag_total'])
+    fx = gx0 + 2 * (BOXW + BGAP)
+    form.textfield(name='total', x=fx - 14*mm, y=BOT + 4*mm, width=16*mm, height=8*mm,
+                   fontName='Helvetica', fontSize=12, borderColor=MIST, fillColor=IVORY,
+                   textColor=PLUM_DARK, borderWidth=0.6, maxlen=2, tooltip=content['diag_total'])
+    c.setFont(CGR, 15); c.setFillColor(PLUM_DARK)
+    c.drawString(fx + 4*mm, BOT + 6*mm, '/ 15')
+
+    footer_slim(c, lang, 2)
     c.showPage()
 
 
@@ -581,7 +711,7 @@ CONTENT = {
             'offer_link': 'NIVEAU II · DÉCIDEZ DANS LA DURÉE · 3 910 € HT le programme › exec-ia.ai',
         },
         {
-            'btn': '50 outils, 0 gouvernance : et si l\'IA décidait déjà à votre place ?',
+            'btn': 'Des outils IA sans gouvernance : et si l\'IA décidait déjà à votre place ?',
             'title': 'Qui prend réellement les décisions dans votre organisation ?',
             'cat': 'Gouvernance de l\'IA',
             'idea_label': 'Idée clé',
@@ -590,7 +720,7 @@ CONTENT = {
                 'D\'autres par des habitudes. D\'autres encore par des experts',
                 'que personne ne remet en question.',
                 '',
-                '10 projets en parallèle. 2 réellement stratégiques.',
+                'Beaucoup de projets en parallèle, peu réellement stratégiques.',
                 'Le sujet n\'est pas l\'IA. Le sujet est le contrôle.',
             ],
             'codir_label': 'Question de CODIR',
@@ -732,7 +862,7 @@ CONTENT = {
             'offer_link': 'LEVEL II · DECIDE OVER TIME · €3,910 excl. VAT for the programme › exec-ia.ai',
         },
         {
-            'btn': '50 tools, 0 governance: what if AI were already deciding for you?',
+            'btn': 'AI tools without governance: what if AI were already deciding for you?',
             'title': 'Who is really making the decisions in your organisation?',
             'cat': 'AI governance',
             'idea_label': 'Key insight',
@@ -740,7 +870,7 @@ CONTENT = {
                 'Some decisions are made by tools.',
                 'Others by habits. Others still by experts no one questions.',
                 '',
-                '10 projects running in parallel. 2 truly strategic.',
+                'Many projects running in parallel, few truly strategic.',
                 'The issue is not AI. The issue is control.',
             ],
             'codir_label': 'Board question',
@@ -882,7 +1012,7 @@ CONTENT = {
             'offer_link': 'NIVEL II · DECIDA A LARGO PLAZO · 3.910 € +IVA el programa › exec-ia.ai',
         },
         {
-            'btn': '50 herramientas, 0 gobernanza: ¿y si la IA ya decidiera por usted?',
+            'btn': 'Herramientas de IA sin gobernanza: ¿y si la IA ya decidiera por usted?',
             'title': '¿Quién toma realmente las decisiones en su organización?',
             'cat': 'Gobernanza de la IA',
             'idea_label': 'Idea clave',
@@ -890,7 +1020,7 @@ CONTENT = {
                 'Algunas decisiones las toman las herramientas.',
                 'Otras los hábitos. Otras más, expertos que nadie cuestiona.',
                 '',
-                '10 proyectos en paralelo. 2 realmente estratégicos.',
+                'Muchos proyectos en paralelo, pocos realmente estratégicos.',
                 'El problema no es la IA. El problema es el control.',
             ],
             'codir_label': 'Pregunta de Comité de Dirección',
@@ -949,6 +1079,115 @@ EXTRA = {
 for _l, _d in EXTRA.items():
     CONTENT[_l].update(_d)
 CONTENT['es']['questions'][2]['title'] = '¿Qué parte de su empresa se jubilaría mañana?'
+
+CONTENT['fr']['practice_label'] = 'En pratique, dès lundi'
+CONTENT['fr']['cover_subtitle'] = 'Cinq questions à poser en comité de direction avant tout investissement IA.'
+_PRACTICE_FR = [
+    ["Lister les décisions IA en attente depuis plus d'un trimestre.",
+     "Pour chacune, nommer un responsable et une date de décision.",
+     "Estimer, même grossièrement, ce que coûte chaque mois d'attente."],
+    ["Faire noter à 5 managers, pendant une semaine, leurs tâches répétitives.",
+     "Repérer les trois qui pourraient être assistées par l'IA.",
+     "Décider à l'avance à quoi servira le temps libéré."],
+    ["Identifier les 3 personnes dont le départ bloquerait des décisions.",
+     "Faire documenter leurs arbitrages clés, en plus de leurs procédures.",
+     "Tester un assistant IA alimenté par ces notes, sous leur contrôle."],
+    ["Cartographier les 3 moments où un client décide de rester ou de partir.",
+     "Définir pour chacun un signal faible à surveiller.",
+     "Confier la détection à l'IA, et la réponse à un humain."],
+    ["Recenser les outils IA déjà utilisés, officiellement ou non.",
+     "Classer les décisions : à automatiser, à assister, jamais déléguées.",
+     "Désigner qui valide chaque usage, et selon quels critères."],
+]
+_PRACTICE_EN = [
+    ["List the AI decisions that have been pending for more than a quarter.",
+     "For each one, name an owner and a decision date.",
+     "Estimate, even roughly, what each month of waiting costs."],
+    ["Ask 5 managers to log their repetitive tasks for one week.",
+     "Pick the three that AI could assist.",
+     "Decide in advance what the time saved will be used for."],
+    ["Identify the 3 people whose departure would block decisions.",
+     "Have them document their key trade-offs, not just their procedures.",
+     "Test an AI assistant built on these notes, under their control."],
+    ["Map the 3 moments when a client decides to stay or leave.",
+     "Define one weak signal to watch for each of them.",
+     "Let AI do the detecting, and a person do the responding."],
+    ["List the AI tools already in use, official or not.",
+     "Sort decisions: automate, assist, never delegate.",
+     "Name who approves each use, and against which criteria."],
+]
+_PRACTICE_ES = [
+    ["Enumerar las decisiones sobre IA pendientes desde hace más de un trimestre.",
+     "Para cada una, nombrar a un responsable y fijar una fecha de decisión.",
+     "Estimar, aunque sea a grandes rasgos, lo que cuesta cada mes de espera."],
+    ["Pedir a 5 directivos que anoten sus tareas repetitivas durante una semana.",
+     "Identificar las tres que la IA podría asistir.",
+     "Decidir de antemano a qué se dedicará el tiempo liberado."],
+    ["Identificar a las 3 personas cuya marcha bloquearía decisiones.",
+     "Pedirles que documenten sus arbitrajes clave, además de sus procedimientos.",
+     "Probar un asistente de IA alimentado con esas notas, bajo su control."],
+    ["Trazar los 3 momentos en que un cliente decide quedarse o irse.",
+     "Definir para cada uno una señal débil que vigilar.",
+     "Confiar la detección a la IA, y la respuesta a una persona."],
+    ["Inventariar las herramientas de IA ya en uso, oficiales o no.",
+     "Clasificar las decisiones: automatizar, asistir, nunca delegar.",
+     "Designar quién valida cada uso, y con qué criterios."],
+]
+CONTENT['en']['practice_label'] = 'In practice, from Monday'
+CONTENT['es']['practice_label'] = 'En la práctica, desde el lunes'
+CONTENT['en']['cover_subtitle'] = 'Five questions to put to your leadership team before any AI investment.'
+CONTENT['es']['cover_subtitle'] = 'Cinco preguntas para su comité de dirección antes de cualquier inversión en IA.'
+for _l, _pr in (('fr', _PRACTICE_FR), ('en', _PRACTICE_EN), ('es', _PRACTICE_ES)):
+    for _q, _p in zip(CONTENT[_l]['questions'], _pr):
+        _q['practice'] = _p
+
+# ── Montée en gamme du 12/10/2026 : mode d'emploi et autodiagnostic ─────────
+GUIDE = {
+    'fr': {'guide_label': "Mode d'emploi",
+           'guide_steps': ["Notez-vous en cinq minutes : autodiagnostic en page 2.",
+                           "Posez une question par semaine en comité de direction.",
+                           "Lancez les trois actions « dès lundi » de chaque question."],
+           'diag_eyebrow': 'Autodiagnostic',
+           'diag_title': 'Où en est votre comité de direction ?',
+           'diag_intro': 'Notez chaque question de 0 à 3. Cinq minutes suffisent, seul ou en CODIR.',
+           'diag_scale': ['Jamais abordé', 'Évoqué, sans décision', 'Décidé, pas encore piloté', 'Piloté et mesuré'],
+           'diag_scale_label': 'Barème',
+           'diag_total': 'Votre total',
+           'diag_results_label': 'Lecture de votre score',
+           'diag_results': [('0 à 5', 'Les décisions IA vous attendent. Commencez par clarifier les priorités.'),
+                            ('6 à 10', 'Les bases sont posées. Tenez maintenant les décisions dans la durée.'),
+                            ('11 à 15', 'Votre CODIR pilote déjà. Passez à la transformation.')]},
+    'en': {'guide_label': 'How to use this guide',
+           'guide_steps': ["Score yourself in five minutes: self-assessment on page 2.",
+                           "Raise one question a week with your leadership team.",
+                           "Launch the three “from Monday” actions for each question."],
+           'diag_eyebrow': 'Self-assessment',
+           'diag_title': 'Where does your leadership team stand?',
+           'diag_intro': 'Score each question from 0 to 3. Five minutes is enough, alone or with your leadership team.',
+           'diag_scale': ['Never discussed', 'Discussed, no decision', 'Decided, not yet managed', 'Managed and measured'],
+           'diag_scale_label': 'Scale',
+           'diag_total': 'Your total',
+           'diag_results_label': 'Reading your score',
+           'diag_results': [('0 to 5', 'Your AI decisions are waiting. Start by clarifying priorities.'),
+                            ('6 to 10', 'The foundations are there. Now make the decisions last.'),
+                            ('11 to 15', 'Your leadership team is already in control. Time to transform.')]},
+    'es': {'guide_label': 'Cómo usar esta guía',
+           'guide_steps': ["Evalúese en cinco minutos: autodiagnóstico en la página 2.",
+                           "Plantee una pregunta por semana en el comité de dirección.",
+                           "Ponga en marcha las tres acciones «desde el lunes» de cada pregunta."],
+           'diag_eyebrow': 'Autodiagnóstico',
+           'diag_title': '¿En qué punto está su comité de dirección?',
+           'diag_intro': 'Puntúe cada pregunta de 0 a 3. Bastan cinco minutos, solo o en comité.',
+           'diag_scale': ['Nunca abordado', 'Mencionado, sin decisión', 'Decidido, aún sin seguimiento', 'Con seguimiento y medido'],
+           'diag_scale_label': 'Baremo',
+           'diag_total': 'Su total',
+           'diag_results_label': 'Cómo leer su puntuación',
+           'diag_results': [('0 a 5', 'Sus decisiones sobre IA le esperan. Empiece por aclarar las prioridades.'),
+                            ('6 a 10', 'Las bases están puestas. Ahora, sostenga las decisiones en el tiempo.'),
+                            ('11 a 15', 'Su comité ya pilota. Es el momento de transformar.')]},
+}
+for _l, _d in GUIDE.items():
+    CONTENT[_l].update(_d)
 content_of = CONTENT
 
 OUTPUTS = {
@@ -965,8 +1204,9 @@ def generate(lang):
     c.setAuthor("Valérie Mailland · Fondatrice · EXEC\'IA Consulting")
     c.setSubject('Lead Magnet Q4 2026 · ' + lang.upper())
     cover(c, lang, content)
+    diagnostic(c, lang, content)
     for i, q in enumerate(content['questions']):
-        inner(c, lang, i + 1, q, i + 2)
+        inner(c, lang, i + 1, q, i + 3)
     final(c, lang, content)
     c.save()
     print(f'[{lang.upper()}] {out}')
