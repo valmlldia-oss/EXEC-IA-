@@ -7772,3 +7772,18 @@ body.cookie-modal-open { overflow: hidden; }
   .offre-dg .offres-grid .offre-pour-qui { min-height: 0; padding-top: 8px; line-height: 1.45; }
   .offre-dg .offre-card .btn { padding: 12px 24px; margin-top: auto; }
 }
+
+/* Étoile or (articles les plus lus) : plus visible sur les cartes, les articles et le pied de page */
+.art-star { font-size: 1.25em; line-height: 1; vertical-align: -0.06em; }
+.persp-card-meta .art-star { font-size: 1.5em; margin-right: .3em; }
+.footer-col a.footer-persp-link { position: relative; }
+/* dans le pied de page, l'étoile se place en marge, devant la flèche : les flèches restent alignées et les lignes ne s'allongent pas */
+.footer-persp-link .art-star { position: absolute; right: 100%; top: 50%; transform: translateY(-52%); margin-right: .35em; font-size: 1.1em; }
+
+/* Pied de page (écrans larges) : 2e colonne d'articles décalée vers la gauche (≈1 mm), hors de l'escalier ;
+   le © s'aligne sous les flèches de cette 2e colonne */
+@media (min-width: 1251px) {
+  .footer-col--site .footer-persp-c2 { left: calc(18.75rem - 5px); }
+  .footer-bottom .footer-rights { grid-row: 1; }
+  .footer-bottom .footer-copy { grid-column: 2 / 4; grid-row: 1; margin-left: calc(18.75rem - 5px); }
+}

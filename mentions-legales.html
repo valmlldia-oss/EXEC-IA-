@@ -750,6 +750,7 @@ body.art-justify .article-book .article-intro p, body.art-justify .article-book 
 @media (max-width: 560px){.footer-col a.footer-linkedin-btn{ font-size: .92rem; padding-left: 12px; padding-right: 12px; }}
 @media (min-width: 1251px){.footer-col--site a.footer-persp-link:not(.footer-persp-link--c2){ margin-right: -190px; }}
 body.art-justify .article-tldr-body p{ text-align: justify; text-align-last: left; text-justify: inter-word; hyphens: auto; -webkit-hyphens: auto; }
+.art-star{ color: #C9A227; font-style: normal; margin-right: .35em; text-shadow: 0 0 1px rgba(160,120,20,.35); }
 .article-more-item{ border-bottom: 1px solid rgba(99,59,74,.14); }
 .article-more-item:first-child{ border-top: 1px solid rgba(99,59,74,.14); }
 .article-book .article-more-item > .article-intro{ margin: 0 4px 20px; }
@@ -815,6 +816,10 @@ color: var(--plum); margin: 14px 0 0;
 @media (max-width: 700px){.rbd-copy-col{ border-left: 0; padding-left: 0; border-top: 1px solid var(--pale-rose); padding-top: 18px; }.rbd-task{ grid-template-columns: 1fr; }}
 @media (prefers-reduced-motion: reduce){.rbd-btn, .rbd-btn svg{ transition: none; }}
 .rgpd-b, .date-b{ font-weight: 600; }
+.art-star{ font-size: 1.25em; line-height: 1; vertical-align: -0.06em; }
+.footer-col a.footer-persp-link{ position: relative; }
+.footer-persp-link .art-star{ position: absolute; right: 100%; top: 50%; transform: translateY(-52%); margin-right: .35em; font-size: 1.1em; }
+@media (min-width: 1251px){.footer-col--site .footer-persp-c2{ left: calc(18.75rem - 5px); }.footer-bottom .footer-rights{ grid-row: 1; }.footer-bottom .footer-copy{ grid-column: 2 / 4; grid-row: 1; margin-left: calc(18.75rem - 5px); }}
 </style>
   <style>
     .ml-page { max-width: 760px; margin: 0 auto; padding: 80px 24px clamp(60px, 8vw, 100px); }
@@ -967,8 +972,8 @@ color: var(--plum); margin: 14px 0 0;
         <a href="temoignages.html">Témoignages</a>
         <a href="contact.html">Contact</a>
         <a href="perspectives.html">Perspectives</a>
-      <a href="perspective-entreprise-utilise-deja-ia.html" class="footer-persp-link">→ Votre entreprise utilise déjà l’<span style="color:var(--rose)">IA</span></a>
-      <a href="perspective-toutes-decisions-ne-se-deleguent-pas.html" class="footer-persp-link">→ Toutes les décisions ne se délèguent pas</a>
+      <a href="perspective-entreprise-utilise-deja-ia.html" class="footer-persp-link">→ <span class="art-star" aria-label="Article le plus lu">★</span>Votre entreprise utilise déjà l’<span style="color:var(--rose)">IA</span></a>
+      <a href="perspective-toutes-decisions-ne-se-deleguent-pas.html" class="footer-persp-link">→ <span class="art-star" aria-label="Article le plus lu">★</span>Toutes les décisions ne se délèguent pas</a>
       <a href="perspective-transformation-echoue-rarement-technologie.html" class="footer-persp-link">→ La transformation <span style="color:var(--rose)">IA</span> échoue rarement</a>
       <a href="perspective-probleme-nest-pas-outils-mais-arbitrage.html" class="footer-persp-link">→ Plus d’outils <span style="color:var(--rose)">IA</span>, pas plus d’impact</a>
     <a href="perspective-projet-ia-peut-il-etre-finance.html" class="footer-persp-link">→ Votre projet <span style="color:var(--rose)">IA</span> peut-il être financé&nbsp;?</a>
@@ -977,8 +982,9 @@ color: var(--plum); margin: 14px 0 0;
     <a href="perspective-budget-ia-adhesion-equipes.html" class="footer-persp-link footer-persp-link--c2">→ L’adhésion compte-t-elle plus que le budget&nbsp;?</a>
     <a href="perspective-shadow-ia-charte-comite-direction.html" class="footer-persp-link footer-persp-link--c2">→ Quels outils <span style="color:var(--rose)">IA</span> vos équipes utilisent-elles&nbsp;?</a>
     <a href="perspective-robots-humanoides-token-tax.html" class="footer-persp-link footer-persp-link--c2">→ Quelles tâches confier à un robot humanoïde&nbsp;?</a>
-    <a href="perspective-affaire-orelien-preuve-travail.html" class="footer-persp-link footer-persp-link--c2">→ Demain, vos équipes devront-elles prouver leur travail&nbsp;?</a>
+    <a href="perspective-affaire-orelien-preuve-travail.html" class="footer-persp-link footer-persp-link--c2">→ <span class="art-star" aria-label="Article le plus lu">★</span>Demain, vos équipes devront-elles prouver leur travail&nbsp;?</a>
     <a href="perspective-tri-cv-ia-candidatures-ecartees.html" class="footer-persp-link footer-persp-link--c2">→ Qui relit les CV que l’<span style="color:var(--rose)">IA</span> écarte&nbsp;?</a>
+    <a href="perspective-agents-ia-recruter-comme-salarie.html" class="footer-persp-link footer-persp-link--c2">→ Un agent <span style="color:var(--rose)">IA</span> se recrute-t-il comme un salarié&nbsp;?</a>
     </div>
       </div>
 

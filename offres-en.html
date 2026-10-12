@@ -1699,6 +1699,7 @@ body.art-justify .article-book .article-intro p, body.art-justify .article-book 
 @media (max-width: 560px){.footer-col a.footer-linkedin-btn{ font-size: .92rem; padding-left: 12px; padding-right: 12px; }}
 @media (min-width: 1251px){.footer-col--site a.footer-persp-link:not(.footer-persp-link--c2){ margin-right: -190px; }}
 body.art-justify .article-tldr-body p{ text-align: justify; text-align-last: left; text-justify: inter-word; hyphens: auto; -webkit-hyphens: auto; }
+.art-star{ color: #C9A227; font-style: normal; margin-right: .35em; text-shadow: 0 0 1px rgba(160,120,20,.35); }
 .article-more-item{ border-bottom: 1px solid rgba(99,59,74,.14); }
 .article-more-item:first-child{ border-top: 1px solid rgba(99,59,74,.14); }
 .article-more-item summary{ cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 4px; user-select: none; }
@@ -1846,6 +1847,10 @@ color: var(--plum); margin: 14px 0 0;
 @media (prefers-reduced-motion: reduce){.rbd-btn, .rbd-btn svg{ transition: none; }}
 .rgpd-b, .date-b{ font-weight: 600; }
 @media (min-width: 1025px){.offre-dg-head{ margin-bottom: 6px; }.offre-dg-eyebrow{ margin-bottom: 2px; }.offre-dg .offres-grid{ padding-top: 16px; }.offre-dg .offre-card{ padding: 14px 20px 16px; gap: 7px; }.offre-dg .offre-titre-capsule{ padding: 4px 22px; }.offre-dg .offre-accroche{ line-height: 1.5; }.offre-dg .offre-points{ gap: 2px; min-height: 0; }.offre-dg .offre-points li{ line-height: 1.42; }.offre-dg .offres-grid .offre-points{ min-height: 104px; }.offre-dg .offres-grid .offre-format{ min-height: 0; padding-top: 8px; line-height: 1.45; }.offre-dg .offres-grid .offre-format .offre-format-sub{ margin-top: 3px; line-height: 1.4; }.offre-dg .offres-grid .offre-pour-qui{ min-height: 0; padding-top: 8px; line-height: 1.45; }.offre-dg .offre-card .btn{ padding: 12px 24px; margin-top: auto; }}
+.art-star{ font-size: 1.25em; line-height: 1; vertical-align: -0.06em; }
+.footer-col a.footer-persp-link{ position: relative; }
+.footer-persp-link .art-star{ position: absolute; right: 100%; top: 50%; transform: translateY(-52%); margin-right: .35em; font-size: 1.1em; }
+@media (min-width: 1251px){.footer-col--site .footer-persp-c2{ left: calc(18.75rem - 5px); }.footer-bottom .footer-rights{ grid-row: 1; }.footer-bottom .footer-copy{ grid-column: 2 / 4; grid-row: 1; margin-left: calc(18.75rem - 5px); }}
 </style>
 </head>
 <body>
@@ -2241,8 +2246,8 @@ color: var(--plum); margin: 14px 0 0;
       <a href="temoignages-en.html">Testimonials</a>
       <a href="contact-en.html">Contact</a>
       <a href="perspectives-en.html">Perspectives</a>
-    <a href="perspective-entreprise-utilise-deja-ia-en.html" class="footer-persp-link">→ Adopting <span style="color:var(--rose)">AI</span> vs. creating value</a>
-    <a href="perspective-toutes-decisions-ne-se-deleguent-pas-en.html" class="footer-persp-link">→ Not every decision can be delegated</a>
+    <a href="perspective-entreprise-utilise-deja-ia-en.html" class="footer-persp-link">→ <span class="art-star" aria-label="Most-read article">★</span>Adopting <span style="color:var(--rose)">AI</span> vs. creating value</a>
+    <a href="perspective-toutes-decisions-ne-se-deleguent-pas-en.html" class="footer-persp-link">→ <span class="art-star" aria-label="Most-read article">★</span>Not every decision can be delegated</a>
     <a href="perspective-transformation-echoue-rarement-technologie-en.html" class="footer-persp-link">→ <span style="color:var(--rose)">AI</span> transformation rarely fails</a>
     <a href="perspective-probleme-nest-pas-outils-mais-arbitrage-en.html" class="footer-persp-link">→ More <span style="color:var(--rose)">AI</span> tools, not more impact</a>
     <a href="perspective-projet-ia-peut-il-etre-finance-en.html" class="footer-persp-link">→ Can your <span style="color:var(--rose)">AI</span> project be funded?</a>
@@ -2251,8 +2256,9 @@ color: var(--plum); margin: 14px 0 0;
     <a href="perspective-budget-ia-adhesion-equipes-en.html" class="footer-persp-link footer-persp-link--c2">→ Why does buy-in matter more than budget?</a>
     <a href="perspective-shadow-ia-charte-comite-direction-en.html" class="footer-persp-link footer-persp-link--c2">→ Which <span style="color:var(--rose)">AI</span> tools do your teams really use?</a>
     <a href="perspective-robots-humanoides-token-tax-en.html" class="footer-persp-link footer-persp-link--c2">→ Which tasks would you hand to a humanoid robot?</a>
-    <a href="perspective-affaire-orelien-preuve-travail-en.html" class="footer-persp-link footer-persp-link--c2">→ Will your teams have to prove their work?</a>
+    <a href="perspective-affaire-orelien-preuve-travail-en.html" class="footer-persp-link footer-persp-link--c2">→ <span class="art-star" aria-label="Most-read article">★</span>Will your teams have to prove their work?</a>
     <a href="perspective-tri-cv-ia-candidatures-ecartees-en.html" class="footer-persp-link footer-persp-link--c2">→ Who rereads the CVs that <span style="color:var(--rose)">AI</span> rejects?</a>
+    <a href="perspective-agents-ia-recruter-comme-salarie-en.html" class="footer-persp-link footer-persp-link--c2">→ Should you hire an <span style="color:var(--rose)">AI</span> agent like an employee?</a>
     </div>
     </div>
 

@@ -974,6 +974,7 @@ body.art-justify .article-book .article-intro p, body.art-justify .article-book 
 @media (max-width: 560px){.footer-col a.footer-linkedin-btn{ font-size: .92rem; padding-left: 12px; padding-right: 12px; }}
 @media (min-width: 1251px){.footer-col--site a.footer-persp-link:not(.footer-persp-link--c2){ margin-right: -190px; }}
 body.art-justify .article-tldr-body p{ text-align: justify; text-align-last: left; text-justify: inter-word; hyphens: auto; -webkit-hyphens: auto; }
+.art-star{ color: #C9A227; font-style: normal; margin-right: .35em; text-shadow: 0 0 1px rgba(160,120,20,.35); }
 .article-more-item{ border-bottom: 1px solid rgba(99,59,74,.14); }
 .article-more-item:first-child{ border-top: 1px solid rgba(99,59,74,.14); }
 .article-more-item summary{ cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 4px; user-select: none; }
@@ -1118,6 +1119,10 @@ color: var(--plum); margin: 14px 0 0;
 @media (prefers-reduced-motion: reduce){.rbd-btn, .rbd-btn svg{ transition: none; }}
 .risk-hl{ color: var(--rose); font-weight: 600; }
 .rgpd-b, .date-b{ font-weight: 600; }
+.art-star{ font-size: 1.25em; line-height: 1; vertical-align: -0.06em; }
+.footer-col a.footer-persp-link{ position: relative; }
+.footer-persp-link .art-star{ position: absolute; right: 100%; top: 50%; transform: translateY(-52%); margin-right: .35em; font-size: 1.1em; }
+@media (min-width: 1251px){.footer-col--site .footer-persp-c2{ left: calc(18.75rem - 5px); }.footer-bottom .footer-rights{ grid-row: 1; }.footer-bottom .footer-copy{ grid-column: 2 / 4; grid-row: 1; margin-left: calc(18.75rem - 5px); }}
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Por qué pensar en tareas y no en oficios?", "acceptedAnswer": {"@type": "Answer", "text": "Porque un oficio es un conjunto de tareas. Un robot humanoide puede asumir las tareas físicas y repetitivas, como mover cajas. El criterio, la relación y la responsabilidad siguen siendo humanos. Pensar en tareas evita dos errores opuestos: creer que nada cambiará, o creer que todo desaparecerá."}}, {"@type": "Question", "name": "¿A qué oficios apuntarán primero los robots humanoides?", "acceptedAnswer": {"@type": "Answer", "text": "A los oficios con tareas físicas, repetitivas o penosas en lugares pensados para personas: logística, industria, comercio, construcción, agricultura y sanidad para el transporte de material. Suelen ser puestos difíciles de cubrir: la Dares francesa contabiliza 457.500 empleos vacantes en el sector privado en el segundo trimestre de 2026 (cifra revisada del 15 de septiembre de 2026)."}}, {"@type": "Question", "name": "¿Llegan ya los robots humanoides a las empresas?", "acceptedAnswer": {"@type": "Answer", "text": "No. Siguen siendo caros, lentos en gestos sencillos para una persona y frágiles ante lo imprevisto. Según el analista Ming-Chi Kuo, Apple no fabricaría sus robots en serie antes de 2028. Ese plazo sirve para prepararse: cartografiar las tareas y decidir qué debe seguir siendo humano."}}, {"@type": "Question", "name": "¿Quién fabrica los robots humanoides?", "acceptedAnswer": {"@type": "Answer", "text": "En el primer semestre de 2026, el 97 % de los robots humanoides entregados en el mundo procedía de China, con AgiBot y Unitree a la cabeza. Para Francia y Europa, la cuestión es diseñar y explotar sus propios robots, o comprarlos llave en mano, junto con los datos que recogen."}}, {"@type": "Question", "name": "¿Qué es la «token tax»?", "acceptedAnswer": {"@type": "Answer", "text": "Un impuesto sobre el uso de la IA, aplicado a los tokens, la unidad que los modelos de IA procesan y facturan. Bill Gates defiende gravar los tokens y los robots. En Estados Unidos, un proyecto de ley presentado en el Congreso en agosto de 2026, el AI Tax and Work Protection Act, propone un tipo del 2 % sobre el valor de los tokens cuando el paro está en el 5 % o menos, que sube con el paro. Lo recaudado financiaría empleos y reconversión; algunos ven en ello la base de una renta universal."}}, {"@type": "Question", "name": "¿Qué puede hacer una pyme desde ya?", "acceptedAnswer": {"@type": "Answer", "text": "Tres gestos, sin invertir: enumerar las tareas de cada puesto y su duración; detectar los puestos difíciles de cubrir y qué los hace penosos; decidir qué debe seguir siendo humano. Solo después, calcular el coste de una hora de tarea robotizada y, si las cuentas salen, lanzar un piloto de 90 días sobre una sola tarea."}}], "inLanguage": "es-ES"}
@@ -1422,8 +1427,8 @@ color: var(--plum); margin: 14px 0 0;
       <a href="temoignages-es.html">Testimonios</a>
       <a href="contact-es.html">Contacto</a>
       <a href="perspectives-es.html">Perspectives</a>
-    <a href="perspective-entreprise-utilise-deja-ia-es.html" class="footer-persp-link">→ Adoptar la <span style="color:var(--rose)">IA</span> no es crear valor</a>
-    <a href="perspective-toutes-decisions-ne-se-deleguent-pas-es.html" class="footer-persp-link">→ No todas las decisiones se delegan</a>
+    <a href="perspective-entreprise-utilise-deja-ia-es.html" class="footer-persp-link">→ <span class="art-star" aria-label="Artículo más leído">★</span>Adoptar la <span style="color:var(--rose)">IA</span> no es crear valor</a>
+    <a href="perspective-toutes-decisions-ne-se-deleguent-pas-es.html" class="footer-persp-link">→ <span class="art-star" aria-label="Artículo más leído">★</span>No todas las decisiones se delegan</a>
     <a href="perspective-transformation-echoue-rarement-technologie-es.html" class="footer-persp-link">→ La transformación con <span style="color:var(--rose)">IA</span> rara vez fracasa</a>
     <a href="perspective-probleme-nest-pas-outils-mais-arbitrage-es.html" class="footer-persp-link">→ Más herramientas de <span style="color:var(--rose)">IA</span>, no más impacto</a>
     <a href="perspective-projet-ia-peut-il-etre-finance-es.html" class="footer-persp-link">→ ¿Se puede financiar su proyecto de <span style="color:var(--rose)">IA</span>?</a>
@@ -1432,8 +1437,9 @@ color: var(--plum); margin: 14px 0 0;
     <a href="perspective-budget-ia-adhesion-equipes-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Por qué pesa más la adhesión que el presupuesto?</a>
     <a href="perspective-shadow-ia-charte-comite-direction-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Qué herramientas de <span style="color:var(--rose)">IA</span> usan sus equipos?</a>
     <a href="perspective-robots-humanoides-token-tax-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Qué tareas confiaría a un robot humanoide?</a>
-    <a href="perspective-affaire-orelien-preuve-travail-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Tendrán sus equipos que demostrar su trabajo?</a>
+    <a href="perspective-affaire-orelien-preuve-travail-es.html" class="footer-persp-link footer-persp-link--c2">→ <span class="art-star" aria-label="Artículo más leído">★</span>¿Tendrán sus equipos que demostrar su trabajo?</a>
     <a href="perspective-tri-cv-ia-candidatures-ecartees-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Quién relee los CV que la <span style="color:var(--rose)">IA</span> descarta?</a>
+    <a href="perspective-agents-ia-recruter-comme-salarie-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Se contrata un agente de <span style="color:var(--rose)">IA</span> como a un empleado?</a>
     </div>
     </div>
 
