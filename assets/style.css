@@ -2668,7 +2668,7 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   /* Statique : les compteurs 20+ et 18+ portent déjà l'animation du bandeau */
 }
 /* Halo plus marqué, respiration continue plutôt que 2 pulses puis silence */
-.ss-num--ia.ss-ia-pulse { animation: ss-ia-glow 3s ease-in-out infinite; }
+.ss-num--ia.ss-ia-pulse { animation: none; } /* 14/10/2026 : plus de halo, « IA » en #C75F62 strict */
 @keyframes ss-ia-glow {
   0%   { text-shadow: 0 0 0 rgba(199,95,98,0); transform: scale(1); }
   50%  { text-shadow: 0 0 40px rgba(199,95,98,1), 0 0 70px rgba(199,95,98,.7), 0 0 6px rgba(199,95,98,.95); transform: scale(1.15); }
@@ -2682,7 +2682,6 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
   font-size: 1.35rem; font-weight: 600; color: var(--rose);
   align-self: flex-start;
   margin-top: 4px;
-  text-shadow: 0 0 18px rgba(199,95,98,.45);
 }
 .ss-count { font-variant-numeric: tabular-nums; }
 .ss-label {
@@ -2702,7 +2701,7 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
 /* petit trait terracotta sous chaque label du bandeau chiffres */
 .ss-label::after {
   content: ""; display: block; width: 26px; height: 2px;
-  background: var(--rose); border-radius: 2px; margin: 8px auto 0; opacity: .75;
+  background: #C75F62; border-radius: 2px; margin: 8px auto 0; opacity: 1;
 }
 /* Bloc "France · International" (pas de ss-cert-tag au-dessus, contrairement
    aux 3 autres blocs) : son trait remonte de fait plus haut que les 3 autres
