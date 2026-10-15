@@ -9,10 +9,11 @@
   }[lang];
 
   var css = [
-    '#phare-bubble{position:fixed;bottom:24px;left:24px;z-index:900;width:56px;height:56px;border-radius:50%;border:none;cursor:pointer;background:#633B4A;color:#FAF6F2;font-family:"Cormorant Garamond",Georgia,serif;font-size:1.35rem;font-weight:600;letter-spacing:.02em;box-shadow:0 6px 20px rgba(99,59,74,.25);transition:transform .2s}',
+    '#phare-bubble{position:fixed;bottom:92px;right:24px;z-index:900;width:56px;height:56px;border-radius:50%;border:none;cursor:pointer;background:#633B4A;color:#FAF6F2;font-family:"Cormorant Garamond",Georgia,serif;font-size:1.4rem;font-weight:500;letter-spacing:.03em;box-shadow:0 6px 20px rgba(99,59,74,.25);transition:transform .2s}',
+    'body.qw-open #phare-bubble{display:none}',
     '#phare-bubble:hover{transform:scale(1.06)}',
     '#phare-bubble:focus-visible,#phare-send:focus-visible,#phare-close:focus-visible{outline:2px solid #C75F62;outline-offset:2px}',
-    '#phare-panel{position:fixed;bottom:92px;left:24px;z-index:900;width:340px;max-width:calc(100vw - 32px);max-height:min(480px,calc(100vh - 120px));display:none;flex-direction:column;background:#F4EDE7;border:1px solid #D9C9C3;border-radius:14px;box-shadow:0 12px 40px rgba(99,59,74,.22);font-family:Inter,system-ui,sans-serif;color:#633B4A;overflow:hidden}',
+    '#phare-panel{position:fixed;bottom:160px;right:24px;z-index:900;width:340px;max-width:calc(100vw - 32px);max-height:min(480px,calc(100vh - 180px));display:none;flex-direction:column;background:#F4EDE7;border:1px solid #D9C9C3;border-radius:14px;box-shadow:0 12px 40px rgba(99,59,74,.22);font-family:Inter,system-ui,sans-serif;color:#633B4A;overflow:hidden}',
     '#phare-panel.open{display:flex}',
     '#phare-head{display:flex;justify-content:space-between;align-items:center;background:#633B4A;color:#FAF6F2;padding:14px 16px;font-size:.95rem;font-weight:600}',
     '#phare-close{background:none;border:none;color:#FAF6F2;font-size:1.3rem;cursor:pointer;line-height:1}',
@@ -26,6 +27,8 @@
     '#phare-input:focus{box-shadow:inset 0 0 0 2px #C75F62}',
     '#phare-send{border:none;background:#C75F62;color:#FAF6F2;padding:0 16px;font:inherit;font-size:.88rem;font-weight:600;cursor:pointer}',
     '#phare-send[disabled]{opacity:.6;cursor:default}'
+,
+    'body:has(.cookie-banner.visible) #phare-bubble,body:has(.cookie-banner.visible) #phare-panel{display:none}'
   ].join('');
   var st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);
 
@@ -62,8 +65,10 @@
   function toggle(open) {
     panel.classList.toggle('open', open);
     bubble.setAttribute('aria-expanded', String(open));
-    if (open) input.focus(); else bubble.focus();
+    if (open) { document.dispatchEvent(new Event('phare:open')); input.focus(); } else bubble.focus();
   }
+  // Une seule fenêtre ouverte à la fois : « Une question ? » ferme celle-ci
+  document.addEventListener('qw:open', function () { if (panel.classList.contains('open')) toggle(false); });
   bubble.addEventListener('click', function () { toggle(!panel.classList.contains('open')); });
   panel.querySelector('#phare-close').addEventListener('click', function () { toggle(false); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && panel.classList.contains('open')) toggle(false); });

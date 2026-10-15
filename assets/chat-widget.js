@@ -26,6 +26,8 @@
     '#qw-legal{font-size:.74rem;opacity:.8}#qw-legal a{color:#C75F62}',
     '#qw-status{font-size:.85rem;line-height:1.5}',
     '.qw-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}'
+,
+    'body:has(.cookie-banner.visible) #qw-bubble,body:has(.cookie-banner.visible) #qw-panel{display:none}'
   ].join('');
   var st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);
 
@@ -47,9 +49,12 @@
 
   function toggle(open) {
     panel.classList.toggle('open', open);
+    document.body.classList.toggle('qw-open', open);
     bubble.setAttribute('aria-expanded', String(open));
-    if (open) panel.querySelector('#qw-msg').focus(); else bubble.focus();
+    if (open) { document.dispatchEvent(new Event('qw:open')); panel.querySelector('#qw-msg').focus(); } else bubble.focus();
   }
+  // Une seule fenêtre ouverte à la fois : l'assistant IA ferme celle-ci
+  document.addEventListener('phare:open', function () { if (panel.classList.contains('open')) toggle(false); });
   bubble.addEventListener('click', function () { toggle(!panel.classList.contains('open')); });
   panel.querySelector('#qw-close').addEventListener('click', function () { toggle(false); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && panel.classList.contains('open')) toggle(false); });
