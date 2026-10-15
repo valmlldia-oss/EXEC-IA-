@@ -32,7 +32,7 @@ module.exports = async function handler(req, res) {
       sender: { name: "Site EXEC'IA", email: 'valerie@exec-ia.ai' },
       to: [TO],
       replyTo: { email: mail },
-      subject: `Question du site (${lang}) — ${mail}`,
+      subject: `Question du site (${lang}) · ${mail} · ${new Date().toLocaleString('fr-FR', { timeZone: 'Europe/Paris', day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' })}`,
       htmlContent: html,
     }),
   });
