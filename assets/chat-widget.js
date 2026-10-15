@@ -3,9 +3,9 @@
   if (['fr', 'en', 'es'].indexOf(lang) < 0) lang = 'fr';
 
   var T = {
-    fr: { open: 'Poser une question', title: 'Une question&nbsp;?', intro: 'Écrivez-moi, je réponds personnellement par e-mail.', msg: 'Votre question', email: 'Votre e-mail professionnel', send: 'Envoyer', sending: 'Envoi…', ok: 'Merci, votre question est bien arrivée. Je vous réponds personnellement par e-mail.', err: 'L’envoi a échoué. Écrivez-nous à contact@exec-ia.ai.', close: 'Fermer', legal: 'Vos données servent uniquement à vous répondre. <a href="mentions-legales.html#donnees">En savoir plus</a>' },
-    en: { open: 'Ask a question', title: 'A question?', intro: 'Write to me, I reply personally by email.', msg: 'Your question', email: 'Your business email', send: 'Send', sending: 'Sending…', ok: 'Thank you, your question has arrived. I will reply personally by email.', err: 'Sending failed. Please write to contact@exec-ia.ai.', close: 'Close', legal: 'Your data is used only to reply to you. <a href="mentions-legales-en.html#donnees">Learn more</a>' },
-    es: { open: 'Hacer una pregunta', title: '¿Una pregunta?', intro: 'Escríbame, respondo personalmente por correo electrónico.', msg: 'Su pregunta', email: 'Su correo profesional', send: 'Enviar', sending: 'Enviando…', ok: 'Gracias, su pregunta ha llegado. Le responderé personalmente por correo electrónico.', err: 'El envío ha fallado. Escríbanos a contact@exec-ia.ai.', close: 'Cerrar', legal: 'Sus datos se utilizan únicamente para responderle. <a href="mentions-legales-es.html#datos">Más información</a>' }
+    fr: { lbl: 'Une question ? Réponse par e-mail', open: 'Poser une question', title: 'Une question&nbsp;?', intro: 'Écrivez-moi, je réponds personnellement par e-mail.', msg: 'Votre question', email: 'Votre e-mail professionnel', send: 'Envoyer', sending: 'Envoi…', ok: 'Merci, votre question est bien arrivée. Je vous réponds personnellement par e-mail.', err: 'L’envoi a échoué. Écrivez-nous à contact@exec-ia.ai.', close: 'Fermer', legal: 'Vos données servent uniquement à vous répondre. <a href="mentions-legales.html#donnees">En savoir plus</a>' },
+    en: { lbl: 'A question? Reply by email', open: 'Ask a question', title: 'A question?', intro: 'Write to me, I reply personally by email.', msg: 'Your question', email: 'Your business email', send: 'Send', sending: 'Sending…', ok: 'Thank you, your question has arrived. I will reply personally by email.', err: 'Sending failed. Please write to contact@exec-ia.ai.', close: 'Close', legal: 'Your data is used only to reply to you. <a href="mentions-legales-en.html#donnees">Learn more</a>' },
+    es: { lbl: '¿Una pregunta? Respuesta por e-mail', open: 'Hacer una pregunta', title: '¿Una pregunta?', intro: 'Escríbame, respondo personalmente por correo electrónico.', msg: 'Su pregunta', email: 'Su correo profesional', send: 'Enviar', sending: 'Enviando…', ok: 'Gracias, su pregunta ha llegado. Le responderé personalmente por correo electrónico.', err: 'El envío ha fallado. Escríbanos a contact@exec-ia.ai.', close: 'Cerrar', legal: 'Sus datos se utilizan únicamente para responderle. <a href="mentions-legales-es.html#datos">Más información</a>' }
   }[lang];
 
   var css = [
@@ -28,6 +28,11 @@
     '.qw-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}'
 ,
     'body:has(.cookie-banner.visible) #qw-bubble,body:has(.cookie-banner.visible) #qw-panel{display:none}'
+,
+    '#qw-label{position:fixed;bottom:36px;right:92px;z-index:900;border:1px solid #D9C9C3;border-radius:999px;background:#FAF6F2;color:#633B4A;font-family:Inter,system-ui,sans-serif;font-size:.8rem;font-weight:500;padding:7px 14px;cursor:pointer;box-shadow:0 4px 14px rgba(99,59,74,.15);white-space:nowrap}',
+    '#qw-label:hover{border-color:#C75F62;color:#C75F62}',
+    'body.qw-open #qw-label,body.phare-open #qw-label,body:has(.cookie-banner.visible) #qw-label{display:none}',
+    '@media (max-width:600px){#qw-label{display:none}}'
   ].join('');
   var st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);
 
@@ -45,7 +50,10 @@
     '<button id="qw-send" type="submit">' + T.send + '</button>' +
     '<p id="qw-legal">' + T.legal + '</p><p id="qw-status" role="status" aria-live="polite"></p></form>';
 
-  document.body.appendChild(bubble); document.body.appendChild(panel);
+  var label = document.createElement('button');
+  label.id = 'qw-label'; label.type = 'button'; label.textContent = T.lbl; label.setAttribute('aria-hidden', 'true'); label.tabIndex = -1;
+
+  document.body.appendChild(label); document.body.appendChild(bubble); document.body.appendChild(panel);
 
   function toggle(open) {
     panel.classList.toggle('open', open);
@@ -56,6 +64,7 @@
   // Une seule fenêtre ouverte à la fois : l'assistant IA ferme celle-ci
   document.addEventListener('phare:open', function () { if (panel.classList.contains('open')) toggle(false); });
   bubble.addEventListener('click', function () { toggle(!panel.classList.contains('open')); });
+  label.addEventListener('click', function () { toggle(true); });
   panel.querySelector('#qw-close').addEventListener('click', function () { toggle(false); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && panel.classList.contains('open')) toggle(false); });
 
