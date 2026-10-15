@@ -21,6 +21,7 @@
     '.phare-msg{max-width:85%;padding:9px 12px;border-radius:10px;font-size:.86rem;line-height:1.45;overflow-wrap:anywhere}',
     '.phare-msg.visitor{align-self:flex-end;background:#C75F62;color:#FAF6F2}',
     '.phare-msg.bot{align-self:flex-start;background:#FAF6F2;color:#633B4A;border:1px solid #D9C9C3}',
+    '.phare-msg.bot a{color:#C75F62;font-weight:500;text-decoration:underline;text-underline-offset:2px}',
     '#phare-note{margin:0;padding:0 14px 10px;font-size:.74rem;line-height:1.45;opacity:.8}#phare-note a{color:#C75F62}',
     '#phare-form{display:flex;border-top:1px solid #D9C9C3}',
     '#phare-input{flex:1;min-width:0;border:none;padding:12px;font:inherit;font-size:.88rem;color:#633B4A;background:#FAF6F2;outline:none}',
@@ -68,6 +69,30 @@
     log.scrollTop = log.scrollHeight;
     return div;
   }
+  // Mise en forme des réponses : une idée par ligne, lien seul sur sa ligne et cliquable
+  var URL_RE = /(?:https?:\/\/)?(?:www\.)?(?:calendly\.com\/exec-ia|exec-ia\.ai)(?:[^\s,;)«»"]*[^\s,;)«»".!?:])?/g;
+  function renderReply(el, text) {
+    var t = String(text)
+      .replace(/\s*((?:https?:\/\/)?(?:www\.)?(?:calendly\.com\/exec-ia|exec-ia\.ai))/g, '\n→ $1')
+      .replace(/([.!?…])\s+(?=[A-ZÀ-ÖØ-Þ«¿¡])/g, '$1\n')
+      .replace(/\n→ \n/g, '\n→ ').replace(/^\n+/, '');
+    el.textContent = '';
+    t.split('\n').forEach(function (line, i) {
+      if (i) el.appendChild(document.createElement('br'));
+      var last = 0, m;
+      URL_RE.lastIndex = 0;
+      while ((m = URL_RE.exec(line))) {
+        el.appendChild(document.createTextNode(line.slice(last, m.index)));
+        var a = document.createElement('a');
+        a.href = /^https?:/.test(m[0]) ? m[0] : 'https://' + m[0];
+        a.textContent = m[0].replace(/^https?:\/\//, '');
+        a.target = '_blank'; a.rel = 'noopener';
+        el.appendChild(a);
+        last = m.index + m[0].length;
+      }
+      el.appendChild(document.createTextNode(line.slice(last)));
+    });
+  }
   addMsg(T.hello, 'bot');
 
   function toggle(open) {
@@ -102,7 +127,7 @@
       signal: ctrl ? ctrl.signal : undefined
     })
       .then(function (r) { return r.json(); })
-      .then(function (data) { typing.textContent = (data && data.reply) ? data.reply : T.fallback; })
+      .then(function (data) { renderReply(typing, (data && data.reply) ? data.reply : T.fallback); })
       .catch(function () { typing.textContent = T.fallback; })
       .then(function () { if (timer) clearTimeout(timer); send.disabled = false; log.scrollTop = log.scrollHeight; });
   });
