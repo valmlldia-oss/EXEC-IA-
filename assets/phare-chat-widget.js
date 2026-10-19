@@ -61,10 +61,18 @@
   var input = panel.querySelector('#phare-input');
   var send = panel.querySelector('#phare-send');
 
+  // « IA » en terracotta dans les réponses du bot (charte : IA toujours en terracotta)
+  function appendText(el, s) {
+    s.split(/(\bIA\b)/).forEach(function (part) {
+      if (!part) return;
+      if (part === 'IA') { var ia = document.createElement('span'); ia.style.color = 'var(--rose)'; ia.textContent = 'IA'; el.appendChild(ia); }
+      else el.appendChild(document.createTextNode(part));
+    });
+  }
   function addMsg(text, who) {
     var div = document.createElement('div');
     div.className = 'phare-msg ' + who;
-    div.textContent = text;
+    if (who === 'bot') appendText(div, text); else div.textContent = text;
     log.appendChild(div);
     log.scrollTop = log.scrollHeight;
     return div;
@@ -82,7 +90,7 @@
       var last = 0, m;
       URL_RE.lastIndex = 0;
       while ((m = URL_RE.exec(line))) {
-        el.appendChild(document.createTextNode(line.slice(last, m.index)));
+        appendText(el, line.slice(last, m.index));
         var a = document.createElement('a');
         a.href = /^https?:/.test(m[0]) ? m[0] : 'https://' + m[0];
         a.textContent = m[0].replace(/^https?:\/\//, '');
@@ -90,7 +98,7 @@
         el.appendChild(a);
         last = m.index + m[0].length;
       }
-      el.appendChild(document.createTextNode(line.slice(last)));
+      appendText(el, line.slice(last));
     });
   }
   addMsg(T.hello, 'bot');
