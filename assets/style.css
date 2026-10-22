@@ -8000,3 +8000,7 @@ h1 .hero-sub-focal, h1 .hero-sub-focal.s3 { font-size: inherit !important; }
   .footer-persp-grid a.footer-persp-link { white-space: normal !important; font-size: .92em; }
   .footer-col--site { min-width: 0; }
 }
+/* Titres d'articles : 2 lignes maximum (pied de page et cartes du Blog) */
+.footer-persp-grid a.footer-persp-link, .persp-card-title {
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
