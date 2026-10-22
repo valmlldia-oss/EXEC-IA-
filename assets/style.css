@@ -7811,3 +7811,9 @@ body.cookie-modal-open { overflow: hidden; }
   .expertise-hero { min-height: 0; padding-top: calc(var(--nav-h) + 28px); padding-bottom: 40px; }
   .expertise-hero > .expertise-hero-inner { margin-top: 0 !important; }
 }
+
+/* Impression : les sections « révélées au défilement » doivent apparaître entièrement sur papier */
+@media print {
+  .reveal, .reveal.visible { opacity: 1 !important; transform: none !important; }
+  .nav, .cookie-banner, .phare-bubble, #phare-bubble, .qw-bubble { display: none !important; }
+}
