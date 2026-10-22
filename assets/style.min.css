@@ -6781,3 +6781,12 @@ section:has(+ .verbes-band) .mon-approche-content .portrait-link { margin-bottom
 .testi--dark .testi-tag { color: #FAF6F2 !important; }
 .xcard--ia p.s14 { color: #FAF6F2 !important; }
 .roi-chip--hero .roi-chip-lbl { color: #FAF6F2 !important; }
+.s-11150 { margin-top:14px !important; }
+.s-12061 { color:#C75F62;font-weight:500 !important; }
+.s-83094 { color:#C75F62;font-size:clamp(1.1rem, 1.265vw, 1.254rem) !important; }
+.s-77606 { font-size:1.4336rem;font-weight:600 !important; }
+.s-69401 { font-family:'Cormorant Garamond',Georgia,serif;font-size:1.6rem;color:var(--plum);font-weight:400;margin:0 0 12px;line-height:1.3 !important; }
+.s-10309 { display:inline-block;margin-bottom:20px;background:#C75F62;color:#FAF6F2;font-family:'Inter',sans-serif;font-size:.88rem;font-weight:500;letter-spacing:.1em;text-decoration:none;padding:13px 28px;border-radius:2px !important; }
+.s-98336 { margin-top:16px;display:block;width:100%;background:transparent;border:1px solid rgba(99,59,74,.28);color:var(--plum-muted);font-family:'Inter',sans-serif;font-size:.78rem;letter-spacing:.08em;padding:9px 20px;cursor:pointer;border-radius:2px !important; }
+.s-17209 { white-space:nowrap;hyphens:none !important; }
+.s-98725 { margin-top:8px;margin-bottom:7px !important; }
