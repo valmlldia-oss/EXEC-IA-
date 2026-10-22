@@ -7804,3 +7804,10 @@ body.cookie-modal-open { overflow: hidden; }
 /* Bouton secondaire : plus d'air autour du contour et du texte */
 .hero-cta-link { padding: 18px 38px; }
 @media (max-width: 760px){ .hero-cta-link { padding: 16px 22px; } }
+
+/* Expertise sur téléphone : la hauteur minimale de l'écran créait un vide au-dessus du titre.
+   La section s'arrête désormais à son contenu. */
+@media (max-width: 760px){
+  .expertise-hero { min-height: 0; padding-top: calc(var(--nav-h) + 28px); padding-bottom: 40px; }
+  .expertise-hero > .expertise-hero-inner { margin-top: 0 !important; }
+}
