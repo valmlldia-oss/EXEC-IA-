@@ -6778,3 +6778,6 @@ section:has(+ .verbes-band) .mon-approche-content .portrait-link { margin-bottom
 .stats-strip--hero .ss-num { font-size: 2.3rem; }
 .stats-strip--hero .ss-label, .stats-strip--hero .ss-cert-tag, .stats-strip--hero .ss-label strong { font-weight: 400 !important; }
 .stats-strip--hero .ss-firm { font-weight: 500 !important; }
+.testi--dark .testi-tag { color: #FAF6F2 !important; }
+.xcard--ia p.s14 { color: #FAF6F2 !important; }
+.roi-chip--hero .roi-chip-lbl { color: #FAF6F2 !important; }
