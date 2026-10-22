@@ -915,9 +915,6 @@ body{ overflow-wrap: break-word; overflow-x: clip; }
 @media (max-width: 640px){.aiact-ref, .aiact-key, .article-page p, .article-page li{ overflow-wrap: anywhere; }img, svg, video, iframe{ max-width: 100%; }}
 @media (max-width: 640px){.aiact-ref{ white-space: normal; }.offres-grid > *, .offres-grid-4 > *, .pilier, .acc-title{ min-width: 0; }.offre-card *, .newsletter-content *, .pilier *, .acc-item *{ overflow-wrap: anywhere; }}
 .footer-col--langs{ position: relative; }
-.footer-persp-c2{ position: absolute; left: 0; bottom: 0; display: flex; flex-direction: column; gap: 6px; }
-.footer-col .footer-persp-c2 a.footer-persp-link{ margin-top: 0; padding-left: 0; white-space: nowrap; }
-@media (max-width: 900px){.footer-persp-c2{ position: static; margin-top: 14px; }.footer-col .footer-persp-c2 a.footer-persp-link{ white-space: normal; }}
 @media (max-width: 1180px){.nav-links{ display: none; }.nav-burger{ display: flex; }#nav{ overflow: visible; }.nav-links.open{
 display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start;
 position: fixed; top: var(--nav-h); left: 0; right: 0; bottom: auto; width: 100vw; height: auto;
@@ -944,18 +941,15 @@ body.art-justify .article-book .article-intro p.art-enum{ text-align: left; }
 .article-hashtags{ hyphens: none; -webkit-hyphens: none; overflow-wrap: normal; word-break: keep-all; }
 body.art-justify .article-book .article-intro p, body.art-justify .article-book .article-intro ul.art-list li{ hyphens: auto; -webkit-hyphens: auto; hyphenate-limit-chars: 5 2 2; text-wrap: pretty; }
 .footer-col--site{ position: relative; }
-.footer-col--site .footer-persp-c2{ position: absolute; left: 18.75rem; bottom: 0; }
 .footer-grid > .footer-col--contact{ margin-right: 0; }
 .footer-grid > .footer-col--contact a, .footer-grid > .footer-col--contact .footer-loc{ color: rgba(99,59,74,.88); }
 .footer-grid > .footer-col--contact .footer-loc{ color: rgba(99,59,74,.55); }
 .footer-grid > .footer-col--langs{ margin-right: 0; }
 .footer-grid > .footer-col--langs a{ color: rgba(99,59,74,.92); }
 .footer-bottom .footer-copy{ grid-column: 3; justify-self: start; }
-@media (max-width: 1250px){.footer-col--site .footer-persp-c2{ position: static; margin-top: 6px; }.footer-col .footer-persp-c2 a.footer-persp-link{ white-space: normal; }}
 @media (min-width: 901px){.footer-brand{ margin-top: 0; }.footer-brand .footer-logo-main{ margin-left: calc(225px * -30 / 450); margin-top: calc(225px * -46 / 450 + 3px); }.footer-tag-lead{ white-space: nowrap; }}
 @media (max-width: 900px){.footer-brand .footer-logo-main{ margin-left: calc(190px * -30 / 450); }.footer-tag-lead{ white-space: nowrap; font-size: clamp(1.5rem, calc((100vw - 44px) / 12.4), 2.09rem); }.footer-tag-rest{ font-size: clamp(1.1rem, calc((100vw - 44px) / 17.6), 1.87rem); }}
 @media (max-width: 560px){.footer-brand .footer-logo-main{ margin-left: calc(170px * -30 / 450); }}
-@media (max-width: 1250px){.footer-col .footer-persp-c2 a.footer-persp-link{ padding-left: 6px; }}
 .footer-tag-rest{ white-space: nowrap; }
 .article-book-col{ padding-bottom: 48px; }
 .article-book-folio{ bottom: 12px; }
@@ -1054,7 +1048,7 @@ color: var(--plum); margin: 14px 0 0;
 .art-star{ font-size: 1.25em; line-height: 1; vertical-align: -0.06em; }
 .footer-col a.footer-persp-link{ position: relative; }
 .footer-persp-link .art-star{ position: absolute; right: 100%; top: 50%; transform: translateY(-52%); margin-right: .35em; font-size: 1.1em; }
-@media (min-width: 1251px){.footer-col--site .footer-persp-c2{ left: calc(18.75rem - 5px); }.footer-bottom .footer-rights{ grid-row: 1; }.footer-bottom .footer-copy{ grid-column: 2 / 4; grid-row: 1; margin-left: calc(18.75rem - 5px); }}
+@media (min-width: 1251px){.footer-bottom .footer-rights{ grid-row: 1; }.footer-bottom .footer-copy{ grid-column: 2 / 4; grid-row: 1; margin-left: calc(18.75rem - 5px); }}
 :focus-visible{ outline: 2px solid var(--rose); outline-offset: 3px; border-radius: 4px; }
 @media print{.reveal, .reveal.visible{ opacity: 1 !important; transform: none !important; }.nav, .cookie-banner, .phare-bubble, #phare-bubble, .qw-bubble{ display: none !important; }}
 .art-ia, .aiact-ia, .aiact-key, .risk-hl, .article-meta, .persp-card-read, .persp-card-subtitle,
@@ -1063,13 +1057,13 @@ color: var(--plum); margin: 14px 0 0;
 .cookie-cat-always, .agents-arrow{ color: #C75F62; }
 p .art-ia, li .art-ia, p .aiact-ia, li .aiact-ia, p .risk-hl, li .risk-hl{ font-weight: 600; }
 .article-meta, .persp-card-read, .persp-card-subtitle, .article-related-title, .article-tldr-arrow, .portrait-link-arrow{ font-weight: 600; }
-@media (max-width: 1250px){.footer-col--site{ display: block; columns: 2; column-gap: 24px; width: 100%; max-width: 100%; min-width: 0; box-sizing: border-box; }.footer-col--site > *{ break-inside: avoid; }.footer-col--site .footer-persp-c2{ position: static; margin-top: 0; }}
+@media (max-width: 1250px){.footer-col--site{ display: block; columns: 2; column-gap: 24px; width: 100%; max-width: 100%; min-width: 0; box-sizing: border-box; }.footer-col--site > *{ break-inside: avoid; }}
 .ink-accent{ color: #C75F62 !important; }
-.gap-3{ gap: 3px !important; }
 .mt-28{ margin-top: 28px !important; }
 .persp-card-read, a.persp-all-link, .article-tldr-arrow{ font-weight: 600 !important; }
 .article-meta, .article-related-title, .portrait-link-arrow, .article-tldr-arrow{ color: #633B4A !important; }
 .footer-persp-link, a.footer-persp-link, a.nav-lang{ color: #633B4A !important; opacity: 1 !important; }
+@media (min-width: 761px){.footer-col--site{ columns: auto !important; }.footer-persp-grid{ display: grid !important; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(8, auto); grid-auto-flow: column; column-gap: 24px; row-gap: 6px; align-items: start; }.footer-persp-grid a.footer-persp-link{ margin: 0 !important; position: relative; }}
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Qu'est-ce qu'un jumeau numérique du dirigeant ?", "acceptedAnswer": {"@type": "Answer", "text": "C'est un assistant IA qui répond aux questions à partir de ce que le dirigeant a dit, écrit et décidé, en citant à chaque fois sa source. Il se construit avec des entretiens enregistrés, transcrits puis validés par le dirigeant. Il garde la trace de son raisonnement pour le successeur et l'équipe de direction : pourquoi tel client reste, pourquoi tel fournisseur, ce qui a déjà échoué. Il ne décide jamais à la place de quiconque et dit qu'il ne sait pas quand la question sort de ce qu'on lui a confié."}}, {"@type": "Question", "name": "Qu'est-ce que Fred24 ?", "acceptedAnswer": {"@type": "Answer", "text": "Fred24 est l'assistant IA lancé en juillet 2026 par Frédéric Mazzella, fondateur de BlaBlaCar. Il est nourri de vingt ans de ses conférences, interviews et écrits, et répond aux questions des entrepreneurs à partir de ce que Frédéric Mazzella a déjà dit. C'est un exemple public de jumeau numérique d'un dirigeant. La même idée peut servir à l'intérieur d'une PME, pour un cercle restreint : le successeur, le comité de direction et les cadres clés, avec un accès protégé et des contenus validés."}}, {"@type": "Question", "name": "Combien de dirigeants partiront à la retraite en France ?", "acceptedAnswer": {"@type": "Answer", "text": "Selon le ministère de l'Économie, environ 550 000 chefs d'entreprise partiront à la retraite dans les dix ans, avec 3 millions d'emplois en jeu. Le plan « Objectif Reprises », présenté le 23 avril 2026, vise à faciliter ces transmissions, et le « pacte Papin » inscrit au projet de loi de finances 2027 doit encore être voté. Ces dispositifs portent sur le prix, la fiscalité et le financement. Aucun ne traite le savoir du dirigeant : c'est à l'entreprise de l'organiser, plusieurs années avant le départ."}}, {"@type": "Question", "name": "Comment constituer le jumeau numérique d'un dirigeant ?", "acceptedAnswer": {"@type": "Answer", "text": "En quatre temps, tant que le dirigeant est là. Enregistrer des entretiens d'une heure sur ses grandes décisions, ses clients historiques, ses fournisseurs et les règles non écrites de la maison. Les faire transcrire et classer par thème. Donner au successeur un assistant IA qui répond uniquement à partir de ces notes, en citant ses sources. Faire relire, corriger et valider le tout par le dirigeant. Dix entretiens et quelques semaines de mise en place suffisent pour une première version."}}, {"@type": "Question", "name": "Le RGPD s'applique-t-il aux entretiens enregistrés ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. La voix du dirigeant et ses opinions sont des données personnelles, comme les noms de clients ou de salariés cités pendant les entretiens. Il faut informer le dirigeant, recueillir son accord, limiter la durée de conservation et protéger l'accès avec des comptes nominatifs. La règle la plus simple consiste à anonymiser les clients et salariés cités avant d'alimenter l'assistant. Côté IA Act, un assistant interne de ce type n'est pas à haut risque tant qu'il ne sert pas à évaluer ou gérer des salariés."}}, {"@type": "Question", "name": "Quand commencer à transmettre le savoir d'un dirigeant ?", "acceptedAnswer": {"@type": "Answer", "text": "Plusieurs années avant le départ. À ce moment, le dirigeant a encore la disponibilité et le recul pour raconter, corriger et compléter ses entretiens. À quelques mois de la cession, l'urgence prend toute la place : négociation, audits, annonce aux équipes, et le savoir passe au second plan. Commencer trois mois avant la vente est l'erreur la plus fréquente. Une heure par semaine bloquée dans l'agenda du dirigeant suffit, à condition de la tenir jusqu'au départ."}}, {"@type": "Question", "name": "Le jumeau numérique remplace-t-il la passation ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Il ne remplace ni la passation entre deux personnes, ni les rencontres avec les clients clés, ni le temps qu'il faut à un successeur pour gagner la confiance des équipes. Il ne capte pas non plus l'intuition : un dirigeant peut expliquer pourquoi il a dit non à un partenaire, il ne transmet pas la sensation qui l'a alerté. Le jumeau numérique complète la passation. Il garde les explications et les sources, pour que le successeur les retrouve quand il en a besoin, bien après le départ."}}, {"@type": "Question", "name": "Où conserver la mémoire d'un dirigeant ?", "acceptedAnswer": {"@type": "Answer", "text": "Dans un outil professionnel qui exclut par contrat l'usage de vos données pour entraîner ses modèles, hébergé de préférence en Europe, avec des accès nominatifs et une liste claire des personnes autorisées. Jamais dans un outil grand public. Prévoyez aussi qui tient la mémoire à jour après le départ et combien de temps elle est conservée. En cas de cession, précisez dans le protocole si le jumeau numérique fait partie de ce qui est vendu, plutôt que de le découvrir après la signature."}}], "inLanguage": "fr-FR"}
@@ -1287,15 +1281,15 @@ p .art-ia, li .art-ia, p .aiact-ia, li .aiact-ia, p .risk-hl, li .risk-hl{ font-
       <a href="temoignages.html">Témoignages</a>
       <a href="contact.html">Contact</a>
       <a href="perspectives.html">Blog</a>
+    <div class="footer-persp-grid">
     <a href="perspective-entreprise-utilise-deja-ia.html" class="footer-persp-link">→ <span class="art-star" aria-label="Article le plus lu">★</span>Votre entreprise utilise déjà l’<span class="ink-accent">IA</span></a>
     <a href="perspective-toutes-decisions-ne-se-deleguent-pas.html" class="footer-persp-link">→ <span class="art-star" aria-label="Article le plus lu">★</span>Toutes les décisions ne se délèguent pas</a>
     <a href="perspective-transformation-echoue-rarement-technologie.html" class="footer-persp-link">→ La transformation <span class="ink-accent">IA</span> échoue rarement</a>
     <a href="perspective-probleme-nest-pas-outils-mais-arbitrage.html" class="footer-persp-link">→ Plus d’outils <span class="ink-accent">IA</span>, pas plus d’impact</a>
     <a href="perspective-projet-ia-peut-il-etre-finance.html" class="footer-persp-link">→ Votre projet <span class="ink-accent">IA</span> peut-il être financé&nbsp;?</a>
     <a href="perspective-chatbot-savoir-passer-la-main.html" class="footer-persp-link">→ Où tracer la limite entre chatbot et humain&nbsp;?</a>
-    <div class="footer-persp-c2 gap-3">
-    <a href="perspective-budget-ia-adhesion-equipes.html" class="footer-persp-link footer-persp-link--c2">→ L’adhésion compte-t-elle plus que le budget&nbsp;?</a>
-    <a href="perspective-shadow-ia-charte-comite-direction.html" class="footer-persp-link footer-persp-link--c2">→ Quels outils <span class="ink-accent">IA</span> vos équipes utilisent-elles&nbsp;?</a>
+    <a href="perspective-budget-ia-adhesion-equipes.html" class="footer-persp-link">→ L’adhésion compte-t-elle plus que le budget&nbsp;?</a>
+    <a href="perspective-shadow-ia-charte-comite-direction.html" class="footer-persp-link">→ Quels outils <span class="ink-accent">IA</span> vos équipes utilisent-elles&nbsp;?</a>
     <a href="perspective-robots-humanoides-token-tax.html" class="footer-persp-link footer-persp-link--c2">→ Quelles tâches confier à un robot humanoïde&nbsp;?</a>
     <a href="perspective-affaire-orelien-preuve-travail.html" class="footer-persp-link footer-persp-link--c2">→ <span class="art-star" aria-label="Article le plus lu">★</span>Demain, vos équipes devront-elles prouver leur travail&nbsp;?</a>
     <a href="perspective-tri-cv-ia-candidatures-ecartees.html" class="footer-persp-link footer-persp-link--c2">→ Qui relit les CV que l’<span class="ink-accent">IA</span> écarte&nbsp;?</a>

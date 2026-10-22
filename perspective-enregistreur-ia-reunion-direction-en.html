@@ -910,9 +910,6 @@ body{ overflow-wrap: break-word; overflow-x: clip; }
 @media (max-width: 640px){.aiact-ref, .aiact-key, .article-page p, .article-page li{ overflow-wrap: anywhere; }img, svg, video, iframe{ max-width: 100%; }}
 @media (max-width: 640px){.aiact-ref{ white-space: normal; }.offres-grid > *, .offres-grid-4 > *, .pilier, .acc-title{ min-width: 0; }.offre-card *, .newsletter-content *, .pilier *, .acc-item *{ overflow-wrap: anywhere; }}
 .footer-col--langs{ position: relative; }
-.footer-persp-c2{ position: absolute; left: 0; bottom: 0; display: flex; flex-direction: column; gap: 6px; }
-.footer-col .footer-persp-c2 a.footer-persp-link{ margin-top: 0; padding-left: 0; white-space: nowrap; }
-@media (max-width: 900px){.footer-persp-c2{ position: static; margin-top: 14px; }.footer-col .footer-persp-c2 a.footer-persp-link{ white-space: normal; }}
 @media (max-width: 1180px){.nav-links{ display: none; }.nav-burger{ display: flex; }#nav{ overflow: visible; }.nav-links.open{
 display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start;
 position: fixed; top: var(--nav-h); left: 0; right: 0; bottom: auto; width: 100vw; height: auto;
@@ -938,18 +935,15 @@ body.art-justify .article-book .article-intro p.art-enum{ text-align: left; }
 .article-hashtags{ hyphens: none; -webkit-hyphens: none; overflow-wrap: normal; word-break: keep-all; }
 body.art-justify .article-book .article-intro p, body.art-justify .article-book .article-intro ul.art-list li{ hyphens: auto; -webkit-hyphens: auto; hyphenate-limit-chars: 5 2 2; text-wrap: pretty; }
 .footer-col--site{ position: relative; }
-.footer-col--site .footer-persp-c2{ position: absolute; left: 18.75rem; bottom: 0; }
 .footer-grid > .footer-col--contact{ margin-right: 0; }
 .footer-grid > .footer-col--contact a, .footer-grid > .footer-col--contact .footer-loc{ color: rgba(99,59,74,.88); }
 .footer-grid > .footer-col--contact .footer-loc{ color: rgba(99,59,74,.55); }
 .footer-grid > .footer-col--langs{ margin-right: 0; }
 .footer-grid > .footer-col--langs a{ color: rgba(99,59,74,.92); }
 .footer-bottom .footer-copy{ grid-column: 3; justify-self: start; }
-@media (max-width: 1250px){.footer-col--site .footer-persp-c2{ position: static; margin-top: 6px; }.footer-col .footer-persp-c2 a.footer-persp-link{ white-space: normal; }}
 @media (min-width: 901px){.footer-brand{ margin-top: 0; }.footer-brand .footer-logo-main{ margin-left: calc(225px * -30 / 450); margin-top: calc(225px * -46 / 450 + 3px); }.footer-tag-lead{ white-space: nowrap; }}
 @media (max-width: 900px){.footer-brand .footer-logo-main{ margin-left: calc(190px * -30 / 450); }.footer-tag-lead{ white-space: nowrap; font-size: clamp(1.5rem, calc((100vw - 44px) / 12.4), 2.09rem); }.footer-tag-rest{ font-size: clamp(1.1rem, calc((100vw - 44px) / 17.6), 1.87rem); }}
 @media (max-width: 560px){.footer-brand .footer-logo-main{ margin-left: calc(170px * -30 / 450); }}
-@media (max-width: 1250px){.footer-col .footer-persp-c2 a.footer-persp-link{ padding-left: 6px; }}
 .footer-tag-rest{ white-space: nowrap; }
 .article-book-col{ padding-bottom: 48px; }
 .article-book-folio{ bottom: 12px; }
@@ -1047,7 +1041,7 @@ color: var(--plum); margin: 14px 0 0;
 .art-star{ font-size: 1.25em; line-height: 1; vertical-align: -0.06em; }
 .footer-col a.footer-persp-link{ position: relative; }
 .footer-persp-link .art-star{ position: absolute; right: 100%; top: 50%; transform: translateY(-52%); margin-right: .35em; font-size: 1.1em; }
-@media (min-width: 1251px){.footer-col--site .footer-persp-c2{ left: calc(18.75rem - 5px); }.footer-bottom .footer-rights{ grid-row: 1; }.footer-bottom .footer-copy{ grid-column: 2 / 4; grid-row: 1; margin-left: calc(18.75rem - 5px); }}
+@media (min-width: 1251px){.footer-bottom .footer-rights{ grid-row: 1; }.footer-bottom .footer-copy{ grid-column: 2 / 4; grid-row: 1; margin-left: calc(18.75rem - 5px); }}
 :focus-visible{ outline: 2px solid var(--rose); outline-offset: 3px; border-radius: 4px; }
 @media print{.reveal, .reveal.visible{ opacity: 1 !important; transform: none !important; }.nav, .cookie-banner, .phare-bubble, #phare-bubble, .qw-bubble{ display: none !important; }}
 .art-ia, .aiact-ia, .aiact-key, .risk-hl, .article-meta, .persp-card-read, .persp-card-subtitle,
@@ -1058,13 +1052,13 @@ h1 .art-ia{ color: #C75F62; }
 h2 .art-ia{ color: #C75F62; }
 p .art-ia, li .art-ia, p .aiact-ia, li .aiact-ia, p .risk-hl, li .risk-hl{ font-weight: 600; }
 .article-meta, .persp-card-read, .persp-card-subtitle, .article-related-title, .article-tldr-arrow, .portrait-link-arrow{ font-weight: 600; }
-@media (max-width: 1250px){.footer-col--site{ display: block; columns: 2; column-gap: 24px; width: 100%; max-width: 100%; min-width: 0; box-sizing: border-box; }.footer-col--site > *{ break-inside: avoid; }.footer-col--site .footer-persp-c2{ position: static; margin-top: 0; }}
+@media (max-width: 1250px){.footer-col--site{ display: block; columns: 2; column-gap: 24px; width: 100%; max-width: 100%; min-width: 0; box-sizing: border-box; }.footer-col--site > *{ break-inside: avoid; }}
 .ink-accent{ color: #C75F62 !important; }
-.gap-3{ gap: 3px !important; }
 .mt-28{ margin-top: 28px !important; }
 .persp-card-read, a.persp-all-link, .article-tldr-arrow{ font-weight: 600 !important; }
 .article-meta, .article-related-title, .portrait-link-arrow, .article-tldr-arrow{ color: #633B4A !important; }
 .footer-persp-link, a.footer-persp-link, a.nav-lang{ color: #633B4A !important; opacity: 1 !important; }
+@media (min-width: 761px){.footer-col--site{ columns: auto !important; }.footer-persp-grid{ display: grid !important; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(8, auto); grid-auto-flow: column; column-gap: 24px; row-gap: 6px; align-items: start; }.footer-persp-grid a.footer-persp-link{ margin: 0 !important; position: relative; }}
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does an AI recorder do in a meeting?", "acceptedAnswer": {"@type": "Answer", "text": "It records the meeting, transcribes it, then draws out a summary, the decisions taken and the list of actions. It comes as a small device on the table or as an assistant that joins video calls automatically. The gain is real: nobody takes notes, everyone listens and takes part, and the minutes can go out the same day. The risk lies in where the conversations go."}}, {"@type": "Question", "name": "Why is Otter.ai the subject of a lawsuit?", "acceptedAnswer": {"@type": "Answer", "text": "In August 2025, a class action was filed in California against Otter.ai, one of the most widely used meeting assistants. The complaint says its assistant recorded participants without their consent, with only the meeting host giving theirs, and that the recordings were used to train the vendor’s models. In August 2026, a California court let several claims go forward without ruling on the merits: nobody has been found liable at this stage. It shows why a tool’s contract should be read before it is adopted."}}, {"@type": "Question", "name": "Can you record a management meeting without telling people?", "acceptedAnswer": {"@type": "Answer", "text": "No. A recorded meeting contains personal data: voices, words and opinions. The GDPR requires a precise purpose, clear information, a limited retention period and rights of access and erasure. Article L1222-4 of the French Labour Code also forbids collecting personal information about an employee through a device they were not told about in advance. Every participant must therefore be told, at every meeting."}}, {"@type": "Question", "name": "What rules should you set before recording a management meeting?", "acceptedAnswer": {"@type": "Answer", "text": "Four rules are enough. Inform every participant at the start of every meeting. Obtain their consent and offer traditional note-taking to anyone who declines. Protect the data with a business-grade tool that does not train its models on your conversations. Decide who keeps the recording and the summary, and for how long. These rules fit on one page, attached to the company’s AI policy."}}, {"@type": "Question", "name": "Which meetings should never be recorded?", "acceptedAnswer": {"@type": "Answer", "text": "Some meetings have no place in a recorder, whatever the tool: one-to-one interviews with an employee, discussions about acquisitions, disposals or fundraising, exchanges with a lawyer protected by professional privilege, health or personal-situation topics, and pay decisions. For these meetings, traditional note-taking, reviewed by the participants, remains the right method."}}, {"@type": "Question", "name": "What does the AI Act say about meeting recorders?", "acceptedAnswer": {"@type": "Answer", "text": "Two rules matter. In the workplace, emotion recognition by AI has been banned since 2 February 2025, except for medical or safety reasons: functions that claim to analyse participants’ tone or mood should be turned off. And the transparency rule in force since 2 August 2026 requires everyone to know when a piece of content, such as a meeting summary, is produced by an AI."}}, {"@type": "Question", "name": "How do you choose an AI recorder for a company?", "acceptedAnswer": {"@type": "Answer", "text": "Five criteria help sort the offers: a contract that excludes training models on your recordings, hosting in Europe or equivalent guarantees, deletion of the audio once the text is obtained, named access reserved for committee members, and a simple export so as not to depend on the vendor. The right tool is the one whose workings you can explain to an anxious participant."}}, {"@type": "Question", "name": "Who should review the summary produced by the AI?", "acceptedAnswer": {"@type": "Answer", "text": "A designated person, often the executive assistant, who knows the files and the committee’s sensitivities. The tool does not know what was really decided, or what must not circulate. That person reviews the summary, corrects errors, removes anything confidential, then has it validated by the chair. The official minutes thus remain a human document."}}, {"@type": "Question", "name": "How long should a meeting recording be kept?", "acceptedAnswer": {"@type": "Answer", "text": "As briefly as possible. Once the minutes are validated, they become the only reference record and the audio no longer has a reason to be kept: deleting it limits the risk in case of a leak or an access request. The retention period for the text and the summary is set in the recording policy, according to use, and checked each quarter against the list of recordings that still exist."}}], "inLanguage": "en-GB"}
@@ -1295,15 +1289,15 @@ p .art-ia, li .art-ia, p .aiact-ia, li .aiact-ia, p .risk-hl, li .risk-hl{ font-
       <a href="temoignages-en.html">Testimonials</a>
       <a href="contact-en.html">Contact</a>
       <a href="perspectives-en.html">Blog</a>
+    <div class="footer-persp-grid">
     <a href="perspective-entreprise-utilise-deja-ia-en.html" class="footer-persp-link">→ <span class="art-star" aria-label="Most-read article">★</span>Adopting <span class="ink-accent">AI</span> vs. creating value</a>
     <a href="perspective-toutes-decisions-ne-se-deleguent-pas-en.html" class="footer-persp-link">→ <span class="art-star" aria-label="Most-read article">★</span>Not every decision can be delegated</a>
     <a href="perspective-transformation-echoue-rarement-technologie-en.html" class="footer-persp-link">→ <span class="ink-accent">AI</span> transformation rarely fails</a>
     <a href="perspective-probleme-nest-pas-outils-mais-arbitrage-en.html" class="footer-persp-link">→ More <span class="ink-accent">AI</span> tools, not more impact</a>
     <a href="perspective-projet-ia-peut-il-etre-finance-en.html" class="footer-persp-link">→ Can your <span class="ink-accent">AI</span> project be funded?</a>
     <a href="perspective-chatbot-savoir-passer-la-main-en.html" class="footer-persp-link">→ When should a chatbot hand over?</a>
-    <div class="footer-persp-c2 gap-3">
-    <a href="perspective-budget-ia-adhesion-equipes-en.html" class="footer-persp-link footer-persp-link--c2">→ Why does buy-in matter more than budget?</a>
-    <a href="perspective-shadow-ia-charte-comite-direction-en.html" class="footer-persp-link footer-persp-link--c2">→ Which <span class="ink-accent">AI</span> tools do your teams really use?</a>
+    <a href="perspective-budget-ia-adhesion-equipes-en.html" class="footer-persp-link">→ Why does buy-in matter more than budget?</a>
+    <a href="perspective-shadow-ia-charte-comite-direction-en.html" class="footer-persp-link">→ Which <span class="ink-accent">AI</span> tools do your teams really use?</a>
     <a href="perspective-robots-humanoides-token-tax-en.html" class="footer-persp-link footer-persp-link--c2">→ Which tasks would you hand to a humanoid robot?</a>
     <a href="perspective-affaire-orelien-preuve-travail-en.html" class="footer-persp-link footer-persp-link--c2">→ <span class="art-star" aria-label="Most-read article">★</span>Will your teams have to prove their work?</a>
     <a href="perspective-tri-cv-ia-candidatures-ecartees-en.html" class="footer-persp-link footer-persp-link--c2">→ Who rereads the CVs that <span class="ink-accent">AI</span> rejects?</a>

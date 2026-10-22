@@ -6775,3 +6775,8 @@ section:has(+ .verbes-band) .mon-approche-content .portrait-link { margin-bottom
 .s32 { white-space:nowrap !important; }
 .s33 { font-size:1.9rem;text-wrap:wrap;hyphens:manual;-webkit-hyphens:manual !important; }
 .s34 { text-wrap:wrap !important; }
+@media (min-width: 761px) {
+.footer-col--site { columns: auto !important; }
+.footer-persp-grid { display: grid !important; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(8, auto); grid-auto-flow: column; column-gap: 24px; row-gap: 6px; align-items: start; }
+.footer-persp-grid a.footer-persp-link { margin: 0 !important; position: relative; }
+}

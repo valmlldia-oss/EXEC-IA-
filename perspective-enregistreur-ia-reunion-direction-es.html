@@ -910,9 +910,6 @@ body{ overflow-wrap: break-word; overflow-x: clip; }
 @media (max-width: 640px){.aiact-ref, .aiact-key, .article-page p, .article-page li{ overflow-wrap: anywhere; }img, svg, video, iframe{ max-width: 100%; }}
 @media (max-width: 640px){.aiact-ref{ white-space: normal; }.offres-grid > *, .offres-grid-4 > *, .pilier, .acc-title{ min-width: 0; }.offre-card *, .newsletter-content *, .pilier *, .acc-item *{ overflow-wrap: anywhere; }}
 .footer-col--langs{ position: relative; }
-.footer-persp-c2{ position: absolute; left: 0; bottom: 0; display: flex; flex-direction: column; gap: 6px; }
-.footer-col .footer-persp-c2 a.footer-persp-link{ margin-top: 0; padding-left: 0; white-space: nowrap; }
-@media (max-width: 900px){.footer-persp-c2{ position: static; margin-top: 14px; }.footer-col .footer-persp-c2 a.footer-persp-link{ white-space: normal; }}
 @media (max-width: 1180px){.nav-links{ display: none; }.nav-burger{ display: flex; }#nav{ overflow: visible; }.nav-links.open{
 display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start;
 position: fixed; top: var(--nav-h); left: 0; right: 0; bottom: auto; width: 100vw; height: auto;
@@ -938,18 +935,15 @@ body.art-justify .article-book .article-intro p.art-enum{ text-align: left; }
 .article-hashtags{ hyphens: none; -webkit-hyphens: none; overflow-wrap: normal; word-break: keep-all; }
 body.art-justify .article-book .article-intro p, body.art-justify .article-book .article-intro ul.art-list li{ hyphens: auto; -webkit-hyphens: auto; hyphenate-limit-chars: 5 2 2; text-wrap: pretty; }
 .footer-col--site{ position: relative; }
-.footer-col--site .footer-persp-c2{ position: absolute; left: 18.75rem; bottom: 0; }
 .footer-grid > .footer-col--contact{ margin-right: 0; }
 .footer-grid > .footer-col--contact a, .footer-grid > .footer-col--contact .footer-loc{ color: rgba(99,59,74,.88); }
 .footer-grid > .footer-col--contact .footer-loc{ color: rgba(99,59,74,.55); }
 .footer-grid > .footer-col--langs{ margin-right: 0; }
 .footer-grid > .footer-col--langs a{ color: rgba(99,59,74,.92); }
 .footer-bottom .footer-copy{ grid-column: 3; justify-self: start; }
-@media (max-width: 1250px){.footer-col--site .footer-persp-c2{ position: static; margin-top: 6px; }.footer-col .footer-persp-c2 a.footer-persp-link{ white-space: normal; }}
 @media (min-width: 901px){.footer-brand{ margin-top: 0; }.footer-brand .footer-logo-main{ margin-left: calc(225px * -30 / 450); margin-top: calc(225px * -46 / 450 + 3px); }.footer-tag-lead{ white-space: nowrap; }}
 @media (max-width: 900px){.footer-brand .footer-logo-main{ margin-left: calc(190px * -30 / 450); }.footer-tag-lead{ white-space: nowrap; font-size: clamp(1.5rem, calc((100vw - 44px) / 12.4), 2.09rem); }.footer-tag-rest{ font-size: clamp(1.1rem, calc((100vw - 44px) / 17.6), 1.87rem); }}
 @media (max-width: 560px){.footer-brand .footer-logo-main{ margin-left: calc(170px * -30 / 450); }}
-@media (max-width: 1250px){.footer-col .footer-persp-c2 a.footer-persp-link{ padding-left: 6px; }}
 .footer-tag-rest{ white-space: nowrap; }
 .article-book-col{ padding-bottom: 48px; }
 .article-book-folio{ bottom: 12px; }
@@ -1047,7 +1041,7 @@ color: var(--plum); margin: 14px 0 0;
 .art-star{ font-size: 1.25em; line-height: 1; vertical-align: -0.06em; }
 .footer-col a.footer-persp-link{ position: relative; }
 .footer-persp-link .art-star{ position: absolute; right: 100%; top: 50%; transform: translateY(-52%); margin-right: .35em; font-size: 1.1em; }
-@media (min-width: 1251px){.footer-col--site .footer-persp-c2{ left: calc(18.75rem - 5px); }.footer-bottom .footer-rights{ grid-row: 1; }.footer-bottom .footer-copy{ grid-column: 2 / 4; grid-row: 1; margin-left: calc(18.75rem - 5px); }}
+@media (min-width: 1251px){.footer-bottom .footer-rights{ grid-row: 1; }.footer-bottom .footer-copy{ grid-column: 2 / 4; grid-row: 1; margin-left: calc(18.75rem - 5px); }}
 :focus-visible{ outline: 2px solid var(--rose); outline-offset: 3px; border-radius: 4px; }
 @media print{.reveal, .reveal.visible{ opacity: 1 !important; transform: none !important; }.nav, .cookie-banner, .phare-bubble, #phare-bubble, .qw-bubble{ display: none !important; }}
 .art-ia, .aiact-ia, .aiact-key, .risk-hl, .article-meta, .persp-card-read, .persp-card-subtitle,
@@ -1058,13 +1052,13 @@ h1 .art-ia{ color: #C75F62; }
 h2 .art-ia{ color: #C75F62; }
 p .art-ia, li .art-ia, p .aiact-ia, li .aiact-ia, p .risk-hl, li .risk-hl{ font-weight: 600; }
 .article-meta, .persp-card-read, .persp-card-subtitle, .article-related-title, .article-tldr-arrow, .portrait-link-arrow{ font-weight: 600; }
-@media (max-width: 1250px){.footer-col--site{ display: block; columns: 2; column-gap: 24px; width: 100%; max-width: 100%; min-width: 0; box-sizing: border-box; }.footer-col--site > *{ break-inside: avoid; }.footer-col--site .footer-persp-c2{ position: static; margin-top: 0; }}
+@media (max-width: 1250px){.footer-col--site{ display: block; columns: 2; column-gap: 24px; width: 100%; max-width: 100%; min-width: 0; box-sizing: border-box; }.footer-col--site > *{ break-inside: avoid; }}
 .ink-accent{ color: #C75F62 !important; }
-.gap-3{ gap: 3px !important; }
 .mt-28{ margin-top: 28px !important; }
 .persp-card-read, a.persp-all-link, .article-tldr-arrow{ font-weight: 600 !important; }
 .article-meta, .article-related-title, .portrait-link-arrow, .article-tldr-arrow{ color: #633B4A !important; }
 .footer-persp-link, a.footer-persp-link, a.nav-lang{ color: #633B4A !important; opacity: 1 !important; }
+@media (min-width: 761px){.footer-col--site{ columns: auto !important; }.footer-persp-grid{ display: grid !important; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(8, auto); grid-auto-flow: column; column-gap: 24px; row-gap: 6px; align-items: start; }.footer-persp-grid a.footer-persp-link{ margin: 0 !important; position: relative; }}
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Qué hace una grabadora de IA en una reunión?", "acceptedAnswer": {"@type": "Answer", "text": "Graba la reunión, la transcribe y extrae un resumen, las decisiones tomadas y la lista de acciones. Adopta la forma de un pequeño dispositivo sobre la mesa o de un asistente que se une automáticamente a las videollamadas. La ganancia es real: nadie toma notas, todos escuchan y participan, y el acta puede enviarse el mismo día. El riesgo está en el destino de las conversaciones."}}, {"@type": "Question", "name": "¿Por qué se ha presentado una demanda contra Otter.ai?", "acceptedAnswer": {"@type": "Answer", "text": "En agosto de 2025 se presentó en California una demanda colectiva contra Otter.ai, uno de los asistentes de reunión más utilizados. La demanda afirma que su asistente grababa a participantes sin su consentimiento, siendo solo el organizador quien lo daba, y que esas grabaciones servían para entrenar los modelos del proveedor. En agosto de 2026, un tribunal californiano dejó seguir adelante varias reclamaciones, sin juzgar el fondo: a día de hoy nadie está condenado. Muestra por qué conviene leer el contrato de una herramienta antes de adoptarla."}}, {"@type": "Question", "name": "¿Se puede grabar un comité de dirección sin avisar?", "acceptedAnswer": {"@type": "Answer", "text": "No. Una reunión grabada contiene datos personales: la voz, las palabras y las opiniones de los participantes. El RGPD exige una finalidad precisa, información clara, un plazo de conservación limitado y derechos de acceso y supresión. El artículo L1222-4 del Código del Trabajo francés prohíbe además recoger información personal de un trabajador mediante un dispositivo que no conoce de antemano. Hay que avisar, pues, a cada participante, en cada reunión."}}, {"@type": "Question", "name": "¿Qué reglas fijar antes de grabar una reunión de dirección?", "acceptedAnswer": {"@type": "Answer", "text": "Bastan cuatro reglas. Informar a cada participante al comienzo de cada reunión. Obtener su consentimiento y ofrecer una toma de notas tradicional a quien se niegue. Proteger los datos con una herramienta profesional que no entrene sus modelos con sus conversaciones. Decidir quién conserva la grabación y el resumen, y durante cuánto tiempo. Estas reglas caben en una página, unida a la carta de uso de la IA de la empresa."}}, {"@type": "Question", "name": "¿Qué reuniones no hay que grabar nunca?", "acceptedAnswer": {"@type": "Answer", "text": "Algunas reuniones no tienen cabida en una grabadora, sea cual sea la herramienta: las entrevistas individuales con un trabajador, las conversaciones sobre compras, ventas o captación de fondos, los intercambios con un abogado protegidos por el secreto profesional, los temas de salud o de situación personal y las decisiones sobre remuneraciones. Para estas reuniones, la toma de notas tradicional, revisada por los participantes, sigue siendo el método adecuado."}}, {"@type": "Question", "name": "¿Qué dice el Reglamento de IA sobre las grabadoras de reuniones?", "acceptedAnswer": {"@type": "Answer", "text": "Cuentan dos reglas. En el lugar de trabajo, el reconocimiento de emociones por IA está prohibido desde el 2 de febrero de 2025, salvo por razones médicas o de seguridad: hay que desactivar las funciones que pretenden analizar el tono o el estado de ánimo de los participantes. Y la regla de transparencia vigente desde el 2 de agosto de 2026 exige que cada persona sepa cuándo un contenido, como el resumen de una reunión, lo produce una IA."}}, {"@type": "Question", "name": "¿Cómo elegir una grabadora de IA para una empresa?", "acceptedAnswer": {"@type": "Answer", "text": "Cinco criterios permiten ordenar las ofertas: un contrato que excluya el entrenamiento de modelos con sus grabaciones, un alojamiento en Europa o garantías equivalentes, la supresión del audio una vez obtenido el texto, accesos nominativos reservados a los miembros del comité y una exportación sencilla para no depender del proveedor. La buena herramienta es aquella cuyo funcionamiento puede explicar a un participante inquieto."}}, {"@type": "Question", "name": "¿Quién debe revisar el resumen producido por la IA?", "acceptedAnswer": {"@type": "Answer", "text": "Una persona designada, a menudo la asistente o el asistente de dirección, que conoce los expedientes y las sensibilidades del comité. La herramienta no sabe lo que realmente se decidió, ni lo que no debe circular. Esa persona revisa el resumen, corrige los errores, retira lo confidencial y lo hace validar por el presidente de la sesión. El acta oficial sigue siendo así un documento humano."}}, {"@type": "Question", "name": "¿Cuánto tiempo conservar la grabación de una reunión?", "acceptedAnswer": {"@type": "Answer", "text": "El menor tiempo posible. Una vez validada el acta, pasa a ser el único registro de referencia y el audio ya no tiene razón de conservarse: eliminarlo limita el riesgo en caso de fuga o de solicitud de acceso. El plazo de conservación del texto y del resumen se fija en la carta de grabación, según el uso, y se comprueba cada trimestre con la lista de las grabaciones que aún existen."}}], "inLanguage": "es-ES"}
@@ -1295,15 +1289,15 @@ p .art-ia, li .art-ia, p .aiact-ia, li .aiact-ia, p .risk-hl, li .risk-hl{ font-
       <a href="temoignages-es.html">Testimonios</a>
       <a href="contact-es.html">Contacto</a>
       <a href="perspectives-es.html">Blog</a>
+    <div class="footer-persp-grid">
     <a href="perspective-entreprise-utilise-deja-ia-es.html" class="footer-persp-link">→ <span class="art-star" aria-label="Artículo más leído">★</span>Adoptar la <span class="ink-accent">IA</span> no es crear valor</a>
     <a href="perspective-toutes-decisions-ne-se-deleguent-pas-es.html" class="footer-persp-link">→ <span class="art-star" aria-label="Artículo más leído">★</span>No todas las decisiones se delegan</a>
     <a href="perspective-transformation-echoue-rarement-technologie-es.html" class="footer-persp-link">→ La transformación con <span class="ink-accent">IA</span> rara vez fracasa</a>
     <a href="perspective-probleme-nest-pas-outils-mais-arbitrage-es.html" class="footer-persp-link">→ Más herramientas de <span class="ink-accent">IA</span>, no más impacto</a>
     <a href="perspective-projet-ia-peut-il-etre-finance-es.html" class="footer-persp-link">→ ¿Se puede financiar su proyecto de <span class="ink-accent">IA</span>?</a>
     <a href="perspective-chatbot-savoir-passer-la-main-es.html" class="footer-persp-link">→ ¿Cuándo debe un chatbot pasar el relevo?</a>
-    <div class="footer-persp-c2 gap-3">
-    <a href="perspective-budget-ia-adhesion-equipes-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Por qué pesa más la adhesión que el presupuesto?</a>
-    <a href="perspective-shadow-ia-charte-comite-direction-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Qué herramientas de <span class="ink-accent">IA</span> usan sus equipos?</a>
+    <a href="perspective-budget-ia-adhesion-equipes-es.html" class="footer-persp-link">→ ¿Por qué pesa más la adhesión que el presupuesto?</a>
+    <a href="perspective-shadow-ia-charte-comite-direction-es.html" class="footer-persp-link">→ ¿Qué herramientas de <span class="ink-accent">IA</span> usan sus equipos?</a>
     <a href="perspective-robots-humanoides-token-tax-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Qué tareas confiaría a un robot humanoide?</a>
     <a href="perspective-affaire-orelien-preuve-travail-es.html" class="footer-persp-link footer-persp-link--c2">→ <span class="art-star" aria-label="Artículo más leído">★</span>¿Tendrán sus equipos que demostrar su trabajo?</a>
     <a href="perspective-tri-cv-ia-candidatures-ecartees-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Quién relee los CV que la <span class="ink-accent">IA</span> descarta?</a>

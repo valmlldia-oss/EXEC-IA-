@@ -1075,9 +1075,6 @@ html{ scroll-behavior: smooth; }
 body{ overflow-wrap: break-word; overflow-x: clip; }
 @media (max-width: 640px){.aiact-ref, .aiact-key, .article-page p, .article-page li{ overflow-wrap: anywhere; }img, svg, video, iframe{ max-width: 100%; }}
 @media (max-width: 640px){.aiact-ref{ white-space: normal; }.offres-grid > *, .offres-grid-4 > *, .pilier, .acc-title{ min-width: 0; }.acc-icon{ flex-shrink: 0; }.offre-card *, .newsletter-content *, .pilier *, .acc-item *{ overflow-wrap: anywhere; }}
-.footer-persp-c2{ position: absolute; left: 0; bottom: 0; display: flex; flex-direction: column; gap: 6px; }
-.footer-col .footer-persp-c2 a.footer-persp-link{ margin-top: 0; padding-left: 0; white-space: nowrap; }
-@media (max-width: 900px){.footer-persp-c2{ position: static; margin-top: 14px; }.footer-col .footer-persp-c2 a.footer-persp-link{ white-space: normal; }}
 @media (max-width: 1180px){.nav-links{ display: none; }.nav-burger{ display: flex; }#nav{ overflow: visible; }.nav-links.open{
 display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start;
 position: fixed; top: var(--nav-h); left: 0; right: 0; bottom: auto; width: 100vw; height: auto;
@@ -1101,11 +1098,9 @@ body.art-justify .article-book .article-intro p, body.art-justify .article-book 
 .footer-grid > .footer-col--contact a, .footer-grid > .footer-col--contact .footer-loc{ color: rgba(99,59,74,.88); }
 .footer-grid > .footer-col--contact .footer-loc{ color: rgba(99,59,74,.55); }
 .footer-bottom .footer-copy{ grid-column: 3; justify-self: start; }
-@media (max-width: 1250px){.footer-col .footer-persp-c2 a.footer-persp-link{ white-space: normal; }}
 @media (min-width: 901px){.footer-brand{ margin-top: 0; }.footer-brand .footer-logo-main{ margin-left: calc(225px * -30 / 450); margin-top: calc(225px * -46 / 450 + 3px); }.footer-tag-lead{ white-space: nowrap; }}
 @media (max-width: 900px){.footer-brand .footer-logo-main{ margin-left: calc(190px * -30 / 450); }.footer-tag-lead{ white-space: nowrap; font-size: clamp(1.5rem, calc((100vw - 44px) / 12.4), 2.09rem); }.footer-tag-rest{ font-size: clamp(1.1rem, calc((100vw - 44px) / 17.6), 1.87rem); }}
 @media (max-width: 560px){.footer-brand .footer-logo-main{ margin-left: calc(170px * -30 / 450); }}
-@media (max-width: 1250px){.footer-col .footer-persp-c2 a.footer-persp-link{ padding-left: 6px; }}
 .footer-tag-rest{ white-space: nowrap; }
 .article-book-col{ padding-bottom: 48px; }
 .article-book-folio{ bottom: 12px; }
@@ -1274,7 +1269,6 @@ p .art-ia, li .art-ia, p .aiact-ia, li .aiact-ia, p .risk-hl, li .risk-hl{ font-
 .article-meta, .persp-card-read, .persp-card-subtitle, .article-related-title, .article-tldr-arrow, .portrait-link-arrow{ font-weight: 600; }
 .ink-accent{ color: #C75F62 !important; }
 .fw-600{ font-weight: 600 !important; }
-.gap-3{ gap: 3px !important; }
 .grid-26-1{ display: grid !important; grid-template-columns: 26px 1fr !important; align-items: baseline !important; }
 .persp-card-read, a.persp-all-link, .article-tldr-arrow{ font-weight: 600 !important; }
 .num-accent{ font-family: var(--serif) !important; font-weight: 600 !important; font-size: 1.2em !important; line-height: 1 !important; color: #C75F62 !important; }
@@ -1282,6 +1276,7 @@ p .art-ia, li .art-ia, p .aiact-ia, li .aiact-ia, p .risk-hl, li .risk-hl{ font-
 .footer-persp-link, a.footer-persp-link, a.nav-lang{ color: #633B4A !important; opacity: 1 !important; }
 .s17{ margin-top:18px !important; }
 .s18{ list-style:none;margin:8px 0 18px;padding:0;display:grid;gap:8px !important; }
+@media (min-width: 761px){.footer-persp-grid{ display: grid !important; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(8, auto); grid-auto-flow: column; column-gap: 24px; row-gap: 6px; align-items: start; }.footer-persp-grid a.footer-persp-link{ margin: 0 !important; position: relative; }}
 </style>
 </head>
 <body>
@@ -1516,15 +1511,15 @@ p .art-ia, li .art-ia, p .aiact-ia, li .aiact-ia, p .risk-hl, li .risk-hl{ font-
       <a href="temoignages-es.html">Testimonios</a>
       <a href="contact-es.html">Contacto</a>
       <a href="perspectives-es.html">Blog</a>
+    <div class="footer-persp-grid">
     <a href="perspective-entreprise-utilise-deja-ia-es.html" class="footer-persp-link">→ <span class="art-star" aria-label="Artículo más leído">★</span>Adoptar la <span class="ink-accent">IA</span> no es crear valor</a>
     <a href="perspective-toutes-decisions-ne-se-deleguent-pas-es.html" class="footer-persp-link">→ <span class="art-star" aria-label="Artículo más leído">★</span>No todas las decisiones se delegan</a>
     <a href="perspective-transformation-echoue-rarement-technologie-es.html" class="footer-persp-link">→ La transformación con <span class="ink-accent">IA</span> rara vez fracasa</a>
     <a href="perspective-probleme-nest-pas-outils-mais-arbitrage-es.html" class="footer-persp-link">→ Más herramientas de <span class="ink-accent">IA</span>, no más impacto</a>
     <a href="perspective-projet-ia-peut-il-etre-finance-es.html" class="footer-persp-link">→ ¿Se puede financiar su proyecto de <span class="ink-accent">IA</span>?</a>
     <a href="perspective-chatbot-savoir-passer-la-main-es.html" class="footer-persp-link">→ ¿Cuándo debe un chatbot pasar el relevo?</a>
-    <div class="footer-persp-c2 gap-3">
-    <a href="perspective-budget-ia-adhesion-equipes-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Por qué pesa más la adhesión que el presupuesto?</a>
-    <a href="perspective-shadow-ia-charte-comite-direction-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Qué herramientas de <span class="ink-accent">IA</span> usan sus equipos?</a>
+    <a href="perspective-budget-ia-adhesion-equipes-es.html" class="footer-persp-link">→ ¿Por qué pesa más la adhesión que el presupuesto?</a>
+    <a href="perspective-shadow-ia-charte-comite-direction-es.html" class="footer-persp-link">→ ¿Qué herramientas de <span class="ink-accent">IA</span> usan sus equipos?</a>
     <a href="perspective-robots-humanoides-token-tax-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Qué tareas confiaría a un robot humanoide?</a>
     <a href="perspective-affaire-orelien-preuve-travail-es.html" class="footer-persp-link footer-persp-link--c2">→ <span class="art-star" aria-label="Artículo más leído">★</span>¿Tendrán sus equipos que demostrar su trabajo?</a>
     <a href="perspective-tri-cv-ia-candidatures-ecartees-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Quién relee los CV que la <span class="ink-accent">IA</span> descarta?</a>

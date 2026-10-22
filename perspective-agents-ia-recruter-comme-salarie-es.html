@@ -915,9 +915,6 @@ body{ overflow-wrap: break-word; overflow-x: clip; }
 @media (max-width: 640px){.aiact-ref, .aiact-key, .article-page p, .article-page li{ overflow-wrap: anywhere; }img, svg, video, iframe{ max-width: 100%; }}
 @media (max-width: 640px){.aiact-ref{ white-space: normal; }.offres-grid > *, .offres-grid-4 > *, .pilier, .acc-title{ min-width: 0; }.offre-card *, .newsletter-content *, .pilier *, .acc-item *{ overflow-wrap: anywhere; }}
 .footer-col--langs{ position: relative; }
-.footer-persp-c2{ position: absolute; left: 0; bottom: 0; display: flex; flex-direction: column; gap: 6px; }
-.footer-col .footer-persp-c2 a.footer-persp-link{ margin-top: 0; padding-left: 0; white-space: nowrap; }
-@media (max-width: 900px){.footer-persp-c2{ position: static; margin-top: 14px; }.footer-col .footer-persp-c2 a.footer-persp-link{ white-space: normal; }}
 @media (max-width: 1180px){.nav-links{ display: none; }.nav-burger{ display: flex; }#nav{ overflow: visible; }.nav-links.open{
 display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start;
 position: fixed; top: var(--nav-h); left: 0; right: 0; bottom: auto; width: 100vw; height: auto;
@@ -944,18 +941,15 @@ body.art-justify .article-book .article-intro p.art-enum{ text-align: left; }
 .article-hashtags{ hyphens: none; -webkit-hyphens: none; overflow-wrap: normal; word-break: keep-all; }
 body.art-justify .article-book .article-intro p, body.art-justify .article-book .article-intro ul.art-list li{ hyphens: auto; -webkit-hyphens: auto; hyphenate-limit-chars: 5 2 2; text-wrap: pretty; }
 .footer-col--site{ position: relative; }
-.footer-col--site .footer-persp-c2{ position: absolute; left: 18.75rem; bottom: 0; }
 .footer-grid > .footer-col--contact{ margin-right: 0; }
 .footer-grid > .footer-col--contact a, .footer-grid > .footer-col--contact .footer-loc{ color: rgba(99,59,74,.88); }
 .footer-grid > .footer-col--contact .footer-loc{ color: rgba(99,59,74,.55); }
 .footer-grid > .footer-col--langs{ margin-right: 0; }
 .footer-grid > .footer-col--langs a{ color: rgba(99,59,74,.92); }
 .footer-bottom .footer-copy{ grid-column: 3; justify-self: start; }
-@media (max-width: 1250px){.footer-col--site .footer-persp-c2{ position: static; margin-top: 6px; }.footer-col .footer-persp-c2 a.footer-persp-link{ white-space: normal; }}
 @media (min-width: 901px){.footer-brand{ margin-top: 0; }.footer-brand .footer-logo-main{ margin-left: calc(225px * -30 / 450); margin-top: calc(225px * -46 / 450 + 3px); }.footer-tag-lead{ white-space: nowrap; }}
 @media (max-width: 900px){.footer-brand .footer-logo-main{ margin-left: calc(190px * -30 / 450); }.footer-tag-lead{ white-space: nowrap; font-size: clamp(1.5rem, calc((100vw - 44px) / 12.4), 2.09rem); }.footer-tag-rest{ font-size: clamp(1.1rem, calc((100vw - 44px) / 17.6), 1.87rem); }}
 @media (max-width: 560px){.footer-brand .footer-logo-main{ margin-left: calc(170px * -30 / 450); }}
-@media (max-width: 1250px){.footer-col .footer-persp-c2 a.footer-persp-link{ padding-left: 6px; }}
 .footer-tag-rest{ white-space: nowrap; }
 .article-book-col{ padding-bottom: 48px; }
 .article-book-folio{ bottom: 12px; }
@@ -1054,7 +1048,7 @@ color: var(--plum); margin: 14px 0 0;
 .art-star{ font-size: 1.25em; line-height: 1; vertical-align: -0.06em; }
 .footer-col a.footer-persp-link{ position: relative; }
 .footer-persp-link .art-star{ position: absolute; right: 100%; top: 50%; transform: translateY(-52%); margin-right: .35em; font-size: 1.1em; }
-@media (min-width: 1251px){.footer-col--site .footer-persp-c2{ left: calc(18.75rem - 5px); }.footer-bottom .footer-rights{ grid-row: 1; }.footer-bottom .footer-copy{ grid-column: 2 / 4; grid-row: 1; margin-left: calc(18.75rem - 5px); }}
+@media (min-width: 1251px){.footer-bottom .footer-rights{ grid-row: 1; }.footer-bottom .footer-copy{ grid-column: 2 / 4; grid-row: 1; margin-left: calc(18.75rem - 5px); }}
 :focus-visible{ outline: 2px solid var(--rose); outline-offset: 3px; border-radius: 4px; }
 @media print{.reveal, .reveal.visible{ opacity: 1 !important; transform: none !important; }.nav, .cookie-banner, .phare-bubble, #phare-bubble, .qw-bubble{ display: none !important; }}
 .art-ia, .aiact-ia, .aiact-key, .risk-hl, .article-meta, .persp-card-read, .persp-card-subtitle,
@@ -1065,13 +1059,13 @@ h1 .art-ia{ color: #C75F62; }
 h2 .art-ia{ color: #C75F62; }
 p .art-ia, li .art-ia, p .aiact-ia, li .aiact-ia, p .risk-hl, li .risk-hl{ font-weight: 600; }
 .article-meta, .persp-card-read, .persp-card-subtitle, .article-related-title, .article-tldr-arrow, .portrait-link-arrow{ font-weight: 600; }
-@media (max-width: 1250px){.footer-col--site{ display: block; columns: 2; column-gap: 24px; width: 100%; max-width: 100%; min-width: 0; box-sizing: border-box; }.footer-col--site > *{ break-inside: avoid; }.footer-col--site .footer-persp-c2{ position: static; margin-top: 0; }}
+@media (max-width: 1250px){.footer-col--site{ display: block; columns: 2; column-gap: 24px; width: 100%; max-width: 100%; min-width: 0; box-sizing: border-box; }.footer-col--site > *{ break-inside: avoid; }}
 .ink-accent{ color: #C75F62 !important; }
-.gap-3{ gap: 3px !important; }
 .mt-28{ margin-top: 28px !important; }
 .persp-card-read, a.persp-all-link, .article-tldr-arrow{ font-weight: 600 !important; }
 .article-meta, .article-related-title, .portrait-link-arrow, .article-tldr-arrow{ color: #633B4A !important; }
 .footer-persp-link, a.footer-persp-link, a.nav-lang{ color: #633B4A !important; opacity: 1 !important; }
+@media (min-width: 761px){.footer-col--site{ columns: auto !important; }.footer-persp-grid{ display: grid !important; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(8, auto); grid-auto-flow: column; column-gap: 24px; row-gap: 6px; align-items: start; }.footer-persp-grid a.footer-persp-link{ margin: 0 !important; position: relative; }}
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Qué es un agente de IA?", "acceptedAnswer": {"@type": "Answer", "text": "Un programa que no se limita a responder: actúa. Recibe un objetivo, utiliza herramientas, encadena varios pasos y produce un resultado, como reclamar una factura o clasificar solicitudes. Esa autonomía lo distingue de un chatbot, que solo responde, y de una automatización, que sigue siempre el mismo guion. Un agente elige sus propios pasos y puede, por tanto, equivocarse actuando. Por eso necesita un marco claro, un ámbito limitado y un responsable humano."}}, {"@type": "Question", "name": "¿Qué es Agentalent.ai?", "acceptedAnswer": {"@type": "Answer", "text": "Una plataforma lanzada por monday.com el 23 de marzo de 2026 para «contratar» agentes de IA: descripción del puesto, presentación de un agente, instalación en una semana aproximadamente, dos semanas de prueba con reembolso íntegro. El modelo toma el de una agencia de selección y lo aplica a los agentes. Un detalle importa más que el precio: una persona real del equipo de la plataforma es responsable de cada agente que propone, con nombre y dirección de correo. Incluso en una empresa que vende agentes, ningún agente trabaja sin responsable humano."}}, {"@type": "Question", "name": "¿Cuánto cuesta un agente de IA en Agentalent.ai?", "acceptedAnswer": {"@type": "Answer", "text": "Un mes de «salario» pagado una vez, o ese «salario» cada mes con un 15 % de comisión. Constellation Research estimaba los primeros agentes en torno a 2.000 dólares al mes en el lanzamiento. El precio anunciado es solo una parte del coste real. Hay que sumar el tiempo del equipo para preparar los datos, redactar la descripción del puesto del agente, revisar su trabajo durante la prueba y supervisarlo después. Un agente que ahorra diez horas a la semana pero exige cinco de verificación solo cumple la mitad de su promesa."}}, {"@type": "Question", "name": "¿Quién es responsable de un agente de IA en la empresa?", "acceptedAnswer": {"@type": "Answer", "text": "La empresa que lo utiliza. Un agente no asume responsabilidad propia: hay que nombrar a una persona que lo supervise, con tiempo y autoridad para detenerlo. En una pyme, ese responsable suele ser quien dirige la actividad en cuestión: contabilidad para un agente de reclamación de pagos, atención al cliente para un agente de respuesta. No necesita ser técnico. Necesita conocer el oficio, revisar con regularidad el trabajo del agente y ajustar sus instrucciones."}}, {"@type": "Question", "name": "¿Qué dice el AI Act sobre los agentes de IA?", "acceptedAnswer": {"@type": "Answer", "text": "Desde el 2 de agosto de 2026, una persona debe saber que trata con una IA (artículo 50). Los usos ligados a la selección o la gestión de empleados son de alto riesgo, con obligaciones a partir del 2 de diciembre de 2027. El RGPD, en su artículo 22, ya protege a cada persona frente a una decisión basada únicamente en un tratamiento automatizado cuando le afecta de forma significativa. Un agente que escribe a sus clientes debe presentarse como una IA, y un agente que rechaza por sí solo un reembolso o una candidatura expone a la empresa."}}, {"@type": "Question", "name": "¿Qué decisiones no hay que confiar a un agente de IA?", "acceptedAnswer": {"@type": "Answer", "text": "Contratar, rechazar o despedir a una persona, conceder gestos comerciales fuera de norma, responder a un cliente en litigio. El agente puede prepararlas; las toma una persona. Estas decisiones afectan a una persona y comprometen a la empresa: alguien debe poder explicarlas. Las mejores tareas para un agente son concretas, repetitivas y fáciles de verificar, como reclamar una factura impagada con un mensaje validado de antemano o preparar un dosier antes de una reunión."}}], "inLanguage": "es-ES"}
@@ -1266,15 +1260,15 @@ p .art-ia, li .art-ia, p .aiact-ia, li .aiact-ia, p .risk-hl, li .risk-hl{ font-
       <a href="temoignages-es.html">Testimonios</a>
       <a href="contact-es.html">Contacto</a>
       <a href="perspectives-es.html">Blog</a>
+    <div class="footer-persp-grid">
     <a href="perspective-entreprise-utilise-deja-ia-es.html" class="footer-persp-link">→ <span class="art-star" aria-label="Artículo más leído">★</span>Adoptar la <span class="ink-accent">IA</span> no es crear valor</a>
     <a href="perspective-toutes-decisions-ne-se-deleguent-pas-es.html" class="footer-persp-link">→ <span class="art-star" aria-label="Artículo más leído">★</span>No todas las decisiones se delegan</a>
     <a href="perspective-transformation-echoue-rarement-technologie-es.html" class="footer-persp-link">→ La transformación con <span class="ink-accent">IA</span> rara vez fracasa</a>
     <a href="perspective-probleme-nest-pas-outils-mais-arbitrage-es.html" class="footer-persp-link">→ Más herramientas de <span class="ink-accent">IA</span>, no más impacto</a>
     <a href="perspective-projet-ia-peut-il-etre-finance-es.html" class="footer-persp-link">→ ¿Se puede financiar su proyecto de <span class="ink-accent">IA</span>?</a>
     <a href="perspective-chatbot-savoir-passer-la-main-es.html" class="footer-persp-link">→ ¿Cuándo debe un chatbot pasar el relevo?</a>
-    <div class="footer-persp-c2 gap-3">
-    <a href="perspective-budget-ia-adhesion-equipes-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Por qué pesa más la adhesión que el presupuesto?</a>
-    <a href="perspective-shadow-ia-charte-comite-direction-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Qué herramientas de <span class="ink-accent">IA</span> usan sus equipos?</a>
+    <a href="perspective-budget-ia-adhesion-equipes-es.html" class="footer-persp-link">→ ¿Por qué pesa más la adhesión que el presupuesto?</a>
+    <a href="perspective-shadow-ia-charte-comite-direction-es.html" class="footer-persp-link">→ ¿Qué herramientas de <span class="ink-accent">IA</span> usan sus equipos?</a>
     <a href="perspective-robots-humanoides-token-tax-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Qué tareas confiaría a un robot humanoide?</a>
     <a href="perspective-affaire-orelien-preuve-travail-es.html" class="footer-persp-link footer-persp-link--c2">→ <span class="art-star" aria-label="Artículo más leído">★</span>¿Tendrán sus equipos que demostrar su trabajo?</a>
     <a href="perspective-tri-cv-ia-candidatures-ecartees-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Quién relee los CV que la <span class="ink-accent">IA</span> descarta?</a>

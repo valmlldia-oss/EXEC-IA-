@@ -921,9 +921,6 @@ body{ overflow-wrap: break-word; overflow-x: clip; }
 @media (max-width: 640px){.aiact-ref, .aiact-key, .article-page p, .article-page li{ overflow-wrap: anywhere; }img, svg, video, iframe{ max-width: 100%; }}
 @media (max-width: 640px){.offres-grid > *, .offres-grid-4 > *, .pilier, .acc-title{ min-width: 0; }.offre-card *, .newsletter-content *, .pilier *, .acc-item *{ overflow-wrap: anywhere; }}
 .footer-col--langs{ position: relative; }
-.footer-persp-c2{ position: absolute; left: 0; bottom: 0; display: flex; flex-direction: column; gap: 6px; }
-.footer-col .footer-persp-c2 a.footer-persp-link{ margin-top: 0; padding-left: 0; white-space: nowrap; }
-@media (max-width: 900px){.footer-persp-c2{ position: static; margin-top: 14px; }.footer-col .footer-persp-c2 a.footer-persp-link{ white-space: normal; }}
 @media (max-width: 1180px){.nav-links{ display: none; }.nav-burger{ display: flex; }#nav{ overflow: visible; }.nav-links.open{
 display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start;
 position: fixed; top: var(--nav-h); left: 0; right: 0; bottom: auto; width: 100vw; height: auto;
@@ -955,18 +952,15 @@ body.art-justify .article-book .article-intro p.art-enum{ text-align: left; }
 .article-hashtags{ hyphens: none; -webkit-hyphens: none; overflow-wrap: normal; word-break: keep-all; }
 body.art-justify .article-book .article-intro p, body.art-justify .article-book .article-intro ul.art-list li{ hyphens: auto; -webkit-hyphens: auto; hyphenate-limit-chars: 5 2 2; text-wrap: pretty; }
 .footer-col--site{ position: relative; }
-.footer-col--site .footer-persp-c2{ position: absolute; left: 18.75rem; bottom: 0; }
 .footer-grid > .footer-col--contact{ margin-right: 0; }
 .footer-grid > .footer-col--contact a, .footer-grid > .footer-col--contact .footer-loc{ color: rgba(99,59,74,.88); }
 .footer-grid > .footer-col--contact .footer-loc{ color: rgba(99,59,74,.55); }
 .footer-grid > .footer-col--langs{ margin-right: 0; }
 .footer-grid > .footer-col--langs a{ color: rgba(99,59,74,.92); }
 .footer-bottom .footer-copy{ grid-column: 3; justify-self: start; }
-@media (max-width: 1250px){.footer-col--site .footer-persp-c2{ position: static; margin-top: 6px; }.footer-col .footer-persp-c2 a.footer-persp-link{ white-space: normal; }}
 @media (min-width: 901px){.footer-brand{ margin-top: 0; }.footer-brand .footer-logo-main{ margin-left: calc(225px * -30 / 450); margin-top: calc(225px * -46 / 450 + 3px); }.footer-tag-lead{ white-space: nowrap; }}
 @media (max-width: 900px){.footer-brand .footer-logo-main{ margin-left: calc(190px * -30 / 450); }.footer-tag-lead{ white-space: nowrap; font-size: clamp(1.5rem, calc((100vw - 44px) / 12.4), 2.09rem); }.footer-tag-rest{ font-size: clamp(1.1rem, calc((100vw - 44px) / 17.6), 1.87rem); }}
 @media (max-width: 560px){.footer-brand .footer-logo-main{ margin-left: calc(170px * -30 / 450); }}
-@media (max-width: 1250px){.footer-col .footer-persp-c2 a.footer-persp-link{ padding-left: 6px; }}
 .footer-tag-rest{ white-space: nowrap; }
 .article-book-col{ padding-bottom: 48px; }
 .article-book-folio{ bottom: 12px; }
@@ -1122,7 +1116,7 @@ color: var(--plum); margin: 14px 0 0;
 .art-star{ font-size: 1.25em; line-height: 1; vertical-align: -0.06em; }
 .footer-col a.footer-persp-link{ position: relative; }
 .footer-persp-link .art-star{ position: absolute; right: 100%; top: 50%; transform: translateY(-52%); margin-right: .35em; font-size: 1.1em; }
-@media (min-width: 1251px){.footer-col--site .footer-persp-c2{ left: calc(18.75rem - 5px); }.footer-bottom .footer-rights{ grid-row: 1; }.footer-bottom .footer-copy{ grid-column: 2 / 4; grid-row: 1; margin-left: calc(18.75rem - 5px); }}
+@media (min-width: 1251px){.footer-bottom .footer-rights{ grid-row: 1; }.footer-bottom .footer-copy{ grid-column: 2 / 4; grid-row: 1; margin-left: calc(18.75rem - 5px); }}
 :focus-visible{ outline: 2px solid var(--rose); outline-offset: 3px; border-radius: 4px; }
 @media print{.reveal, .reveal.visible{ opacity: 1 !important; transform: none !important; }.nav, .cookie-banner, .phare-bubble, #phare-bubble, .qw-bubble{ display: none !important; }}
 .art-ia, .aiact-ia, .aiact-key, .risk-hl, .article-meta, .persp-card-read, .persp-card-subtitle,
@@ -1131,14 +1125,14 @@ color: var(--plum); margin: 14px 0 0;
 .cookie-cat-always, .agents-arrow{ color: #C75F62; }
 p .art-ia, li .art-ia, p .aiact-ia, li .aiact-ia, p .risk-hl, li .risk-hl{ font-weight: 600; }
 .article-meta, .persp-card-read, .persp-card-subtitle, .article-related-title, .article-tldr-arrow, .portrait-link-arrow{ font-weight: 600; }
-@media (max-width: 1250px){.footer-col--site{ display: block; columns: 2; column-gap: 24px; width: 100%; max-width: 100%; min-width: 0; box-sizing: border-box; }.footer-col--site > *{ break-inside: avoid; }.footer-col--site .footer-persp-c2{ position: static; margin-top: 0; }}
+@media (max-width: 1250px){.footer-col--site{ display: block; columns: 2; column-gap: 24px; width: 100%; max-width: 100%; min-width: 0; box-sizing: border-box; }.footer-col--site > *{ break-inside: avoid; }}
 .ink-accent{ color: #C75F62 !important; }
-.gap-3{ gap: 3px !important; }
 .pb-half{ padding-bottom: 0.5px !important; }
 .mt-28{ margin-top: 28px !important; }
 .persp-card-read, a.persp-all-link, .article-tldr-arrow{ font-weight: 600 !important; }
 .article-meta, .article-related-title, .portrait-link-arrow, .article-tldr-arrow{ color: #633B4A !important; }
 .footer-persp-link, a.footer-persp-link, a.nav-lang{ color: #633B4A !important; opacity: 1 !important; }
+@media (min-width: 761px){.footer-col--site{ columns: auto !important; }.footer-persp-grid{ display: grid !important; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(8, auto); grid-auto-flow: column; column-gap: 24px; row-gap: 6px; align-items: start; }.footer-persp-grid a.footer-persp-link{ margin: 0 !important; position: relative; }}
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Por qué pensar en tareas y no en oficios?", "acceptedAnswer": {"@type": "Answer", "text": "Porque un oficio es un conjunto de tareas. Un robot humanoide puede asumir las tareas físicas y repetitivas, como mover cajas. El criterio, la relación y la responsabilidad siguen siendo humanos. Pensar en tareas evita dos errores opuestos: creer que nada cambiará, o creer que todo desaparecerá. En la práctica, basta con enumerar las tareas de un puesto, estimar su duración semanal y detectar las que una máquina podría asumir. El oficio se transforma entonces tarea a tarea, y la empresa puede anticipar la formación de las personas afectadas."}}, {"@type": "Question", "name": "¿A qué oficios apuntarán primero los robots humanoides?", "acceptedAnswer": {"@type": "Answer", "text": "A los oficios con tareas físicas, repetitivas o penosas en lugares pensados para personas: logística, industria, comercio, construcción, agricultura y sanidad para el transporte de material. Suelen ser puestos difíciles de cubrir: la Dares francesa contabiliza 457.500 empleos vacantes en el sector privado en el segundo trimestre de 2026 (cifra revisada del 15 de septiembre de 2026). Para una pyme, estos puestos vacantes son un punto de entrada lógico: un robot que asume una tarea penosa puede hacer un puesto más atractivo, sin sustituir a la persona que lo ocupa."}}, {"@type": "Question", "name": "¿Llegan ya los robots humanoides a las empresas?", "acceptedAnswer": {"@type": "Answer", "text": "No. Siguen siendo caros, lentos en gestos sencillos para una persona y frágiles ante lo imprevisto. Según el analista Ming-Chi Kuo, Apple no fabricaría sus robots en serie antes de 2028. Ese plazo sirve para prepararse: cartografiar las tareas y decidir qué debe seguir siendo humano. Una pyme no tiene, por tanto, ningún interés en precipitarse. Le conviene aprovechar estos años para entender sus propias tareas, seguir los primeros pilotos de su sector y preparar a sus equipos, en lugar de comprar una tecnología aún inmadura."}}, {"@type": "Question", "name": "¿Quién fabrica los robots humanoides?", "acceptedAnswer": {"@type": "Answer", "text": "En el primer semestre de 2026, el 97 % de los robots humanoides entregados en el mundo procedía de China, con AgiBot y Unitree a la cabeza. Para Francia y Europa, la cuestión es diseñar y explotar sus propios robots, o comprarlos llave en mano, junto con los datos que recogen. Este dominio pesa sobre la soberanía: un robot conectado recoge datos sobre los centros, los gestos y los ritmos de trabajo. Saber adónde van esos datos y quién puede acceder a ellos forma parte de la elección de un proveedor, igual que el precio."}}, {"@type": "Question", "name": "¿Qué es la «token tax»?", "acceptedAnswer": {"@type": "Answer", "text": "Un impuesto sobre el uso de la IA, aplicado a los tokens, la unidad que los modelos de IA procesan y facturan. Bill Gates defiende gravar los tokens y los robots. En Estados Unidos, un proyecto de ley presentado en el Congreso en agosto de 2026, el AI Tax and Work Protection Act, propone un tipo del 2 % sobre el valor de los tokens cuando el paro está en el 5 % o menos, que sube con el paro. Lo recaudado financiaría empleos y reconversión; algunos ven en ello la base de una renta universal."}}, {"@type": "Question", "name": "¿Qué puede hacer una pyme desde ya?", "acceptedAnswer": {"@type": "Answer", "text": "Tres gestos, sin invertir: enumerar las tareas de cada puesto y su duración; detectar los puestos difíciles de cubrir y qué los hace penosos; decidir qué debe seguir siendo humano. Solo después, calcular el coste de una hora de tarea robotizada y, si las cuentas salen, lanzar un piloto de 90 días sobre una sola tarea. El piloto necesita un responsable designado, indicadores fijados antes de empezar y una decisión prevista al final: continuar, ajustar o parar."}}], "inLanguage": "es-ES"}
@@ -1443,15 +1437,15 @@ p .art-ia, li .art-ia, p .aiact-ia, li .aiact-ia, p .risk-hl, li .risk-hl{ font-
       <a href="temoignages-es.html">Testimonios</a>
       <a href="contact-es.html">Contacto</a>
       <a href="perspectives-es.html">Blog</a>
+    <div class="footer-persp-grid">
     <a href="perspective-entreprise-utilise-deja-ia-es.html" class="footer-persp-link">→ <span class="art-star" aria-label="Artículo más leído">★</span>Adoptar la <span class="ink-accent">IA</span> no es crear valor</a>
     <a href="perspective-toutes-decisions-ne-se-deleguent-pas-es.html" class="footer-persp-link">→ <span class="art-star" aria-label="Artículo más leído">★</span>No todas las decisiones se delegan</a>
     <a href="perspective-transformation-echoue-rarement-technologie-es.html" class="footer-persp-link">→ La transformación con <span class="ink-accent">IA</span> rara vez fracasa</a>
     <a href="perspective-probleme-nest-pas-outils-mais-arbitrage-es.html" class="footer-persp-link">→ Más herramientas de <span class="ink-accent">IA</span>, no más impacto</a>
     <a href="perspective-projet-ia-peut-il-etre-finance-es.html" class="footer-persp-link">→ ¿Se puede financiar su proyecto de <span class="ink-accent">IA</span>?</a>
     <a href="perspective-chatbot-savoir-passer-la-main-es.html" class="footer-persp-link">→ ¿Cuándo debe un chatbot pasar el relevo?</a>
-    <div class="footer-persp-c2 gap-3">
-    <a href="perspective-budget-ia-adhesion-equipes-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Por qué pesa más la adhesión que el presupuesto?</a>
-    <a href="perspective-shadow-ia-charte-comite-direction-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Qué herramientas de <span class="ink-accent">IA</span> usan sus equipos?</a>
+    <a href="perspective-budget-ia-adhesion-equipes-es.html" class="footer-persp-link">→ ¿Por qué pesa más la adhesión que el presupuesto?</a>
+    <a href="perspective-shadow-ia-charte-comite-direction-es.html" class="footer-persp-link">→ ¿Qué herramientas de <span class="ink-accent">IA</span> usan sus equipos?</a>
     <a href="perspective-robots-humanoides-token-tax-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Qué tareas confiaría a un robot humanoide?</a>
     <a href="perspective-affaire-orelien-preuve-travail-es.html" class="footer-persp-link footer-persp-link--c2">→ <span class="art-star" aria-label="Artículo más leído">★</span>¿Tendrán sus equipos que demostrar su trabajo?</a>
     <a href="perspective-tri-cv-ia-candidatures-ecartees-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Quién relee los CV que la <span class="ink-accent">IA</span> descarta?</a>

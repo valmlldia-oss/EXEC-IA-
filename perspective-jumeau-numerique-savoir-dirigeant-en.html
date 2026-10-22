@@ -915,9 +915,6 @@ body{ overflow-wrap: break-word; overflow-x: clip; }
 @media (max-width: 640px){.aiact-ref, .aiact-key, .article-page p, .article-page li{ overflow-wrap: anywhere; }img, svg, video, iframe{ max-width: 100%; }}
 @media (max-width: 640px){.aiact-ref{ white-space: normal; }.offres-grid > *, .offres-grid-4 > *, .pilier, .acc-title{ min-width: 0; }.offre-card *, .newsletter-content *, .pilier *, .acc-item *{ overflow-wrap: anywhere; }}
 .footer-col--langs{ position: relative; }
-.footer-persp-c2{ position: absolute; left: 0; bottom: 0; display: flex; flex-direction: column; gap: 6px; }
-.footer-col .footer-persp-c2 a.footer-persp-link{ margin-top: 0; padding-left: 0; white-space: nowrap; }
-@media (max-width: 900px){.footer-persp-c2{ position: static; margin-top: 14px; }.footer-col .footer-persp-c2 a.footer-persp-link{ white-space: normal; }}
 @media (max-width: 1180px){.nav-links{ display: none; }.nav-burger{ display: flex; }#nav{ overflow: visible; }.nav-links.open{
 display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start;
 position: fixed; top: var(--nav-h); left: 0; right: 0; bottom: auto; width: 100vw; height: auto;
@@ -944,18 +941,15 @@ body.art-justify .article-book .article-intro p.art-enum{ text-align: left; }
 .article-hashtags{ hyphens: none; -webkit-hyphens: none; overflow-wrap: normal; word-break: keep-all; }
 body.art-justify .article-book .article-intro p, body.art-justify .article-book .article-intro ul.art-list li{ hyphens: auto; -webkit-hyphens: auto; hyphenate-limit-chars: 5 2 2; text-wrap: pretty; }
 .footer-col--site{ position: relative; }
-.footer-col--site .footer-persp-c2{ position: absolute; left: 18.75rem; bottom: 0; }
 .footer-grid > .footer-col--contact{ margin-right: 0; }
 .footer-grid > .footer-col--contact a, .footer-grid > .footer-col--contact .footer-loc{ color: rgba(99,59,74,.88); }
 .footer-grid > .footer-col--contact .footer-loc{ color: rgba(99,59,74,.55); }
 .footer-grid > .footer-col--langs{ margin-right: 0; }
 .footer-grid > .footer-col--langs a{ color: rgba(99,59,74,.92); }
 .footer-bottom .footer-copy{ grid-column: 3; justify-self: start; }
-@media (max-width: 1250px){.footer-col--site .footer-persp-c2{ position: static; margin-top: 6px; }.footer-col .footer-persp-c2 a.footer-persp-link{ white-space: normal; }}
 @media (min-width: 901px){.footer-brand{ margin-top: 0; }.footer-brand .footer-logo-main{ margin-left: calc(225px * -30 / 450); margin-top: calc(225px * -46 / 450 + 3px); }.footer-tag-lead{ white-space: nowrap; }}
 @media (max-width: 900px){.footer-brand .footer-logo-main{ margin-left: calc(190px * -30 / 450); }.footer-tag-lead{ white-space: nowrap; font-size: clamp(1.5rem, calc((100vw - 44px) / 12.4), 2.09rem); }.footer-tag-rest{ font-size: clamp(1.1rem, calc((100vw - 44px) / 17.6), 1.87rem); }}
 @media (max-width: 560px){.footer-brand .footer-logo-main{ margin-left: calc(170px * -30 / 450); }}
-@media (max-width: 1250px){.footer-col .footer-persp-c2 a.footer-persp-link{ padding-left: 6px; }}
 .footer-tag-rest{ white-space: nowrap; }
 .article-book-col{ padding-bottom: 48px; }
 .article-book-folio{ bottom: 12px; }
@@ -1054,7 +1048,7 @@ color: var(--plum); margin: 14px 0 0;
 .art-star{ font-size: 1.25em; line-height: 1; vertical-align: -0.06em; }
 .footer-col a.footer-persp-link{ position: relative; }
 .footer-persp-link .art-star{ position: absolute; right: 100%; top: 50%; transform: translateY(-52%); margin-right: .35em; font-size: 1.1em; }
-@media (min-width: 1251px){.footer-col--site .footer-persp-c2{ left: calc(18.75rem - 5px); }.footer-bottom .footer-rights{ grid-row: 1; }.footer-bottom .footer-copy{ grid-column: 2 / 4; grid-row: 1; margin-left: calc(18.75rem - 5px); }}
+@media (min-width: 1251px){.footer-bottom .footer-rights{ grid-row: 1; }.footer-bottom .footer-copy{ grid-column: 2 / 4; grid-row: 1; margin-left: calc(18.75rem - 5px); }}
 :focus-visible{ outline: 2px solid var(--rose); outline-offset: 3px; border-radius: 4px; }
 @media print{.reveal, .reveal.visible{ opacity: 1 !important; transform: none !important; }.nav, .cookie-banner, .phare-bubble, #phare-bubble, .qw-bubble{ display: none !important; }}
 .art-ia, .aiact-ia, .aiact-key, .risk-hl, .article-meta, .persp-card-read, .persp-card-subtitle,
@@ -1063,13 +1057,13 @@ color: var(--plum); margin: 14px 0 0;
 .cookie-cat-always, .agents-arrow{ color: #C75F62; }
 p .art-ia, li .art-ia, p .aiact-ia, li .aiact-ia, p .risk-hl, li .risk-hl{ font-weight: 600; }
 .article-meta, .persp-card-read, .persp-card-subtitle, .article-related-title, .article-tldr-arrow, .portrait-link-arrow{ font-weight: 600; }
-@media (max-width: 1250px){.footer-col--site{ display: block; columns: 2; column-gap: 24px; width: 100%; max-width: 100%; min-width: 0; box-sizing: border-box; }.footer-col--site > *{ break-inside: avoid; }.footer-col--site .footer-persp-c2{ position: static; margin-top: 0; }}
+@media (max-width: 1250px){.footer-col--site{ display: block; columns: 2; column-gap: 24px; width: 100%; max-width: 100%; min-width: 0; box-sizing: border-box; }.footer-col--site > *{ break-inside: avoid; }}
 .ink-accent{ color: #C75F62 !important; }
-.gap-3{ gap: 3px !important; }
 .mt-28{ margin-top: 28px !important; }
 .persp-card-read, a.persp-all-link, .article-tldr-arrow{ font-weight: 600 !important; }
 .article-meta, .article-related-title, .portrait-link-arrow, .article-tldr-arrow{ color: #633B4A !important; }
 .footer-persp-link, a.footer-persp-link, a.nav-lang{ color: #633B4A !important; opacity: 1 !important; }
+@media (min-width: 761px){.footer-col--site{ columns: auto !important; }.footer-persp-grid{ display: grid !important; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(8, auto); grid-auto-flow: column; column-gap: 24px; row-gap: 6px; align-items: start; }.footer-persp-grid a.footer-persp-link{ margin: 0 !important; position: relative; }}
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a leader's digital twin?", "acceptedAnswer": {"@type": "Answer", "text": "It is an AI assistant that answers questions from what the leader has said, written and decided, citing its source every time. It is built from recorded interviews, transcribed and then approved by the leader. It keeps a record of their reasoning for the successor and leadership team: why a client stays, why a supplier was chosen, what has already failed. It never decides for anyone, and it says it doesn't know when a question goes beyond what it was given."}}, {"@type": "Question", "name": "What is Fred24?", "acceptedAnswer": {"@type": "Answer", "text": "Fred24 is the AI assistant launched in July 2026 by Frédéric Mazzella, founder of BlaBlaCar. It is built on twenty years of his talks, interviews and writing, and answers entrepreneurs' questions from what he has already said. It is a public example of a leader's digital twin. The same idea can work inside an SME for a small circle: the successor, the leadership team and key managers, with protected access and approved content."}}, {"@type": "Question", "name": "How many business owners will retire in France?", "acceptedAnswer": {"@type": "Answer", "text": "According to the French Ministry of the Economy, around 550,000 business owners will retire within ten years, with 3 million jobs at stake. The “Objectif Reprises” plan, presented on 23 April 2026, aims to ease these handovers, and the proposed “Papin pact” in the 2027 draft budget has yet to be voted. These measures deal with price, tax and financing. None of them covers the leader's knowledge: the company has to organise that itself, several years before the departure."}}, {"@type": "Question", "name": "How do you build a leader's digital twin?", "acceptedAnswer": {"@type": "Answer", "text": "In four steps, while the leader is still there. Record one-hour interviews about their key decisions, long-standing clients, suppliers and the company's unwritten rules. Have them transcribed and sorted by theme. Give the successor an AI assistant that answers only from these notes and cites its sources. Have the leader review, correct and approve everything. Ten interviews and a few weeks of set-up are enough for a first version, provided the leader keeps one hour a week free for it."}}, {"@type": "Question", "name": "Does the GDPR apply to recorded interviews?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The leader's voice and opinions are personal data, as are the names of clients or employees mentioned in the interviews. You need to inform the leader, obtain their consent, limit retention and protect access with named accounts. The simplest rule is to anonymise the clients and employees mentioned before feeding the assistant. Under the EU AI Act, an internal assistant of this kind is not high-risk as long as it isn't used to assess or manage employees."}}, {"@type": "Question", "name": "When should a leader start passing on their knowledge?", "acceptedAnswer": {"@type": "Answer", "text": "Several years before leaving. At that point the leader still has the time and the distance to tell, correct and complete their interviews. A few months before a sale, urgency takes over: negotiation, audits, announcing it to the team, and knowledge slips down the list. Starting three months before the sale is the most common mistake. One hour a week blocked in the leader's diary is enough, as long as it is kept until departure."}}, {"@type": "Question", "name": "Does a digital twin replace the handover?", "acceptedAnswer": {"@type": "Answer", "text": "No. It replaces neither the handover between two people, nor meetings with key clients, nor the time a successor needs to earn the team's trust. Nor does it capture intuition: a leader can explain why they turned a partner down, but they can't pass on the feeling that warned them. The digital twin complements the handover. It keeps the explanations and their sources, so the successor can find them when needed, long after the leader has gone."}}, {"@type": "Question", "name": "Where should a leader's memory be kept?", "acceptedAnswer": {"@type": "Answer", "text": "In a business tool that excludes, by contract, the use of your data to train its models, ideally hosted in Europe, with named user access and a clear list of authorised people. Never in a consumer tool. Also decide who keeps the memory up to date after the leader leaves and how long it is kept. If the company is sold, state in the sale agreement whether the digital twin is part of the sale, rather than finding out after signing."}}], "inLanguage": "en-GB"}
@@ -1287,15 +1281,15 @@ p .art-ia, li .art-ia, p .aiact-ia, li .aiact-ia, p .risk-hl, li .risk-hl{ font-
       <a href="temoignages-en.html">Testimonials</a>
       <a href="contact-en.html">Contact</a>
       <a href="perspectives-en.html">Blog</a>
+    <div class="footer-persp-grid">
     <a href="perspective-entreprise-utilise-deja-ia-en.html" class="footer-persp-link">→ <span class="art-star" aria-label="Most-read article">★</span>Adopting <span class="ink-accent">AI</span> vs. creating value</a>
     <a href="perspective-toutes-decisions-ne-se-deleguent-pas-en.html" class="footer-persp-link">→ <span class="art-star" aria-label="Most-read article">★</span>Not every decision can be delegated</a>
     <a href="perspective-transformation-echoue-rarement-technologie-en.html" class="footer-persp-link">→ <span class="ink-accent">AI</span> transformation rarely fails</a>
     <a href="perspective-probleme-nest-pas-outils-mais-arbitrage-en.html" class="footer-persp-link">→ More <span class="ink-accent">AI</span> tools, not more impact</a>
     <a href="perspective-projet-ia-peut-il-etre-finance-en.html" class="footer-persp-link">→ Can your <span class="ink-accent">AI</span> project be funded?</a>
     <a href="perspective-chatbot-savoir-passer-la-main-en.html" class="footer-persp-link">→ When should a chatbot hand over?</a>
-    <div class="footer-persp-c2 gap-3">
-    <a href="perspective-budget-ia-adhesion-equipes-en.html" class="footer-persp-link footer-persp-link--c2">→ Why does buy-in matter more than budget?</a>
-    <a href="perspective-shadow-ia-charte-comite-direction-en.html" class="footer-persp-link footer-persp-link--c2">→ Which <span class="ink-accent">AI</span> tools do your teams really use?</a>
+    <a href="perspective-budget-ia-adhesion-equipes-en.html" class="footer-persp-link">→ Why does buy-in matter more than budget?</a>
+    <a href="perspective-shadow-ia-charte-comite-direction-en.html" class="footer-persp-link">→ Which <span class="ink-accent">AI</span> tools do your teams really use?</a>
     <a href="perspective-robots-humanoides-token-tax-en.html" class="footer-persp-link footer-persp-link--c2">→ Which tasks would you hand to a humanoid robot?</a>
     <a href="perspective-affaire-orelien-preuve-travail-en.html" class="footer-persp-link footer-persp-link--c2">→ <span class="art-star" aria-label="Most-read article">★</span>Will your teams have to prove their work?</a>
     <a href="perspective-tri-cv-ia-candidatures-ecartees-en.html" class="footer-persp-link footer-persp-link--c2">→ Who rereads the CVs that <span class="ink-accent">AI</span> rejects?</a>
