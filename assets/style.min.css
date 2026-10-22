@@ -6678,9 +6678,6 @@ section:has(+ .verbes-band) .mon-approche-content .portrait-link { margin-bottom
 @media (max-width: 640px) {
 .persp-track-outer.blog-2col .persp-card { width: 82vw; }
 }
-@media (min-width: 761px) {
-.stats-strip--hero .ss-item:first-child { align-items: flex-start; text-align: left; padding-left: 38px; }
-}
 .art-ia, .aiact-ia, .aiact-key, .risk-hl, .article-meta, .persp-card-read, .persp-card-subtitle,
 .article-related-title, .article-tldr-arrow, .portrait-link-arrow, .acc-num, .acc-icon, .pilier-title,
 .offre-niveau, .offre-web-tier-price, .nl-req, .agent-eyebrow-txt, .ve-col-num, .constat-flip-cue-txt,
@@ -6699,9 +6696,6 @@ h2 [style*="--rose"] { color: #C75F62 !important; }
 [style*="--rose"]:not(h1 *):not(h2 *):not(h3 *):not(.testi--dark *):not(.stats-strip *):not(footer *):not(.cookie-banner *):not(.cookie-modal *) { color: #C75F62 !important; }
 [style*="C75F62"]:not(h1 *):not(h2 *):not(h3 *):not(.testi--dark *):not(.stats-strip *):not(footer *):not(.cookie-banner *):not(.cookie-modal *):not(.verbes-band *) { color: #C75F62 !important; }
 .cookie-banner-link { color: #FAF6F2 !important; }
-@media (min-width: 761px) and (max-width: 1024px) {
-.stats-strip--hero .ss-item:first-child { padding-left: calc(62px - clamp(32px, 6vw, 96px)); }
-}
 .verbes-band { padding-top: 6px; padding-bottom: 6px; }
 .verbes-mot { font-size: clamp(1.32rem, 2.09vw, 1.815rem); }
 @media (min-width: 1025px) { #perspectives h1.blog-h1 { white-space: nowrap; font-size: clamp(1.8rem, 2.7vw, 2.4rem); } }
@@ -6780,3 +6774,7 @@ section:has(+ .verbes-band) .mon-approche-content .portrait-link { margin-bottom
 .footer-persp-grid { display: grid !important; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(8, auto); grid-auto-flow: column; column-gap: 24px; row-gap: 6px; align-items: start; }
 .footer-persp-grid a.footer-persp-link { margin: 0 !important; position: relative; }
 }
+.stats-strip--hero .ss-grid { max-width: 1000px; margin: 0 auto; }
+.stats-strip--hero .ss-num { font-size: 2.3rem; }
+.stats-strip--hero .ss-label, .stats-strip--hero .ss-cert-tag, .stats-strip--hero .ss-label strong { font-weight: 400 !important; }
+.stats-strip--hero .ss-firm { font-weight: 500 !important; }

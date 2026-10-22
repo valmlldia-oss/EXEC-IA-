@@ -7837,10 +7837,6 @@ section:has(+ .verbes-band) .mon-approche-content .portrait-link { margin-bottom
   .persp-track-outer.blog-2col .persp-card { width: 82vw; }
 }
 
-/* Accueil, bandeau des chiffres : le « 20 » s'aligne sous le « V » de « Votre diagnostic IA » (le bouton a 38 px de marge intérieure) */
-@media (min-width: 761px) {
-  .stats-strip--hero .ss-item:first-child { align-items: flex-start; text-align: left; padding-left: 38px; }
-}
 
 /* Accessibilité (revue UX-UI) : le terracotta des petits textes sur fond clair passe en #C75F62 (4,9:1 sur ivoire ; #C75F62 n'atteint que 3,6:1).
    Les titres h1 et h2 gardent la charte #C75F62. Les fonds sombres sont repris plus bas. */
@@ -7868,11 +7864,6 @@ h2 [style*="--rose"] { color: #C75F62 !important; }
 [style*="C75F62"]:not(h1 *):not(h2 *):not(h3 *):not(.testi--dark *):not(.stats-strip *):not(footer *):not(.cookie-banner *):not(.cookie-modal *):not(.verbes-band *) { color: #C75F62 !important; }
 /* Lien « En savoir plus » de la bannière cookies, sur fond prune : ivoire clair (charte), plus de terracotta sombre */
 .cookie-banner-link { color: #FAF6F2 !important; }
-/* Bandeau des chiffres : le « 2 » de « 20+ » reste sous le V de « Votre diagnostic IA » à toutes les largeurs.
-   Entre 761 et 1024 px, le hero a une marge de 24 px ; le bandeau, une marge fluide : on compense la différence. */
-@media (min-width: 761px) and (max-width: 1024px) {
-  .stats-strip--hero .ss-item:first-child { padding-left: calc(62px - clamp(32px, 6vw, 96px)); }
-}
 /* Bandeau des quatre verbes : texte centré entre le trait haut et le trait bas */
 .verbes-band { padding-top: 6px; padding-bottom: 6px; }
 /* Bandeau des quatre verbes : mots 10 % plus gros */
@@ -7969,3 +7960,8 @@ section:has(+ .verbes-band) .mon-approche-content .portrait-link { margin-bottom
   .footer-persp-grid { display: grid !important; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(8, auto); grid-auto-flow: column; column-gap: 24px; row-gap: 6px; align-items: start; }
   .footer-persp-grid a.footer-persp-link { margin: 0 !important; position: relative; }
 }
+/* Bandeau des chiffres : juste milieu (grille centrée) et typographie plus sobre (chiffres moins gros, libellés moins gras) */
+.stats-strip--hero .ss-grid { max-width: 1000px; margin: 0 auto; }
+.stats-strip--hero .ss-num { font-size: 2.3rem; }
+.stats-strip--hero .ss-label, .stats-strip--hero .ss-cert-tag, .stats-strip--hero .ss-label strong { font-weight: 400 !important; }
+.stats-strip--hero .ss-firm { font-weight: 500 !important; }
