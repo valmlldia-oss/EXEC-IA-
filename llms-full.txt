@@ -436,21 +436,21 @@ URL : https://exec-ia.ai/perspective-chatbot-savoir-passer-la-main.html
 ← Toutes les Perspectives
 Perspectives • Relation client
 Le chatbot d’Air France
-répond seul à 30 % des demandes.
+répond seul à une partie des demandes.
 Le reste, il sait passer la main.
 25 septembre 2026
 Version courte →
-Dirigeants, responsables du service client : Louis, l’assistant IA d’Air France, traite seul 30 % des demandes clients, selon la presse. Le reste, il le passe à un humain, sans que le client ait à tout répéter.
+Dirigeants, responsables du service client : Louis, l’assistant IA d’Air France, traite seul une partie des demandes clients, selon la presse. Le reste, il le passe à un humain, sans que le client ait à tout répéter.
 Pour moi, ce chiffre ne montre pas un progrès de l’ IA . Il montre la frontière qu’Air France a appris à tracer.
 Trois signaux aident à sentir la limite avant de la franchir. Et savoir quand passer la main, ça reste un réflexe humain.
 Vous dirigez une entreprise et vous vous demandez jusqu’où confier votre service client à un chatbot ?
 Cet article est pour vous.
 Prenons Louis, l’assistant IA d’Air France. Il a fusionné plusieurs générations de chatbots spécialisés (bagages, inspiration voyage, grèves et retards) en un seul assistant, actif sur WhatsApp et Messenger.
-🤝 Que dit vraiment ce chiffre de 30 % ?
-Aujourd’hui, Louis traite seul 30 % des demandes clients, selon la presse. Le reste bascule vers un humain, et le client n’a pas besoin de tout redemander.
+🤝 Que dit vraiment ce chiffre ?
+Aujourd’hui, Louis traite seul une partie des demandes clients, selon la presse. Le reste bascule vers un humain, et le client n’a pas besoin de tout redemander.
 Ce qui me frappe dans ce chiffre ?
 Ce n’est pas l’ IA qui a le plus progressé. C’est la frontière qu’Air France a appris à tracer entre l’outil et la personne.
-Ce n’est pas un cas isolé. Selon Salesforce , en 2025, les équipes de service client confient déjà en moyenne 30 % de leurs dossiers à l’ IA . Elles pensent monter à 50 % d’ici 2027.
+Ce n’est pas un cas isolé. Selon Salesforce , en 2025, les équipes de service client confient déjà en moyenne une partie de leurs dossiers à l’ IA . Elles pensent monter à 50 % d’ici 2027.
 Autrement dit, la question de la frontière va se poser dans presque tous les services client, PME comprises.
 Automatiser une demande fréquente, ça libère du temps.
 Savoir répartir le reste, c’est ça, le vrai savoir-faire.
@@ -2204,7 +2204,7 @@ Valérie Mailland
 Fondatrice d’EXEC’IA Consulting. Plus de 20 ans auprès de dirigeants, dont 18 en coordination exécutive chez McKinsey & Company. Me suivre sur LinkedIn →
 À lire aussi
 Adopter l’ IA est une chose. En créer de la valeur en est une autre.
-Le chatbot d’Air France répond seul à 30 % des demandes.
+Le chatbot d’Air France répond seul à une partie des demandes.
 Passer de la réflexion à l’action : découvrir les offres EXEC’IA →
 Échanger sur votre situation →
 
@@ -2570,9 +2570,9 @@ Trois familles d’aides, trois logiques différentes.
 Osez l’IA, Diag Data IA , France 2030 : ce qui peut être financé, pour qui et à quelles conditions.
 Lire l’article →
 Relation client · 7 min
-Le chatbot d’Air France répond seul à 30 % des demandes. Le reste, il sait passer la main.
+Le chatbot d’Air France répond seul à une partie des demandes. Le reste, il sait passer la main.
 Ce n’est pas l’IA qui a le plus progressé. C’est la frontière tracée.
-Louis traite 30 % des demandes seul et passe la main pour le reste. Trois signaux pour sentir la limite.
+Louis traite une partie des demandes seul et passe la main pour le reste. Trois signaux pour sentir la limite.
 Lire l’article →
 Adhésion · 7 min
 Le budget IA n’est pas le sujet. L’adhésion, si.
@@ -3069,22 +3069,22 @@ URL : https://exec-ia.ai/perspective-chatbot-savoir-passer-la-main-en.html
 ← All Perspectives
 Perspectives • Customer relations
 Air France’s chatbot answers
-30% of requests alone.
+a share of requests alone.
 For the rest, it knows
 when to hand over.
 September 25, 2026
 Short version →
-Business leaders, heads of customer service: Louis, Air France’s AI assistant, handles 30% of customer requests on its own (according to the press). The rest it passes to a human, and the customer does not have to repeat everything.
+Business leaders, heads of customer service: Louis, Air France’s AI assistant, handles a share of customer requests on its own (according to the press). The rest it passes to a human, and the customer does not have to repeat everything.
 To me, this figure does not show progress in AI . It shows the boundary Air France has learned to draw.
 Three signals help you sense the limit before you cross it. Knowing when to hand over is still a human reflex.
 You run a company and you wonder how far to trust a chatbot with your customer service?
 This piece is for you.
 Take Louis, Air France’s AI assistant. It merged several generations of specialised chatbots (baggage, travel inspiration, strikes and delays) into a single assistant, active on WhatsApp and Messenger.
-🤝 What does that 30% figure really say?
-Today, according to the press, Louis handles 30% of customer requests on its own. The rest goes to a human, and the customer does not need to ask everything again.
+🤝 What does that figure really say?
+Today, according to the press, Louis handles a share of customer requests on its own. The rest goes to a human, and the customer does not need to ask everything again.
 What strikes me about this figure?
 It is not the AI that has progressed the most. It is the boundary Air France has learned to draw between the tool and the person.
-This is not an isolated case. According to Salesforce , in 2025 customer service teams already hand an average of 30% of their cases to AI . They expect to reach 50% by 2027.
+This is not an isolated case. According to Salesforce , in 2025 customer service teams already hand an average of a share of their cases to AI . They expect to reach 50% by 2027.
 In other words, the boundary question is coming to almost every customer service team, SMEs included.
 Automating a frequent request frees up time.
 Knowing how to route the rest: that is the real skill.
@@ -4838,7 +4838,7 @@ Valérie Mailland
 Founder of EXEC'IA Consulting. 20+ years alongside executives, including 18 in executive coordination at McKinsey & Company. Follow me on LinkedIn →
 Read next
 Adopting AI is one thing. Creating value from it is another.
-Air France’s chatbot answers 30% of requests alone.
+Air France’s chatbot answers a share of requests alone.
 From reflection to action: explore EXEC’IA services →
 Discuss your situation →
 
@@ -5202,9 +5202,9 @@ Three families of support, three different logics.
 Osez l’IA, Diag Data IA, France 2030: what can be funded, for whom and on what conditions.
 Read the article →
 Customer relations · 7 min
-Air France’s chatbot answers 30% of requests alone. For the rest, it knows when to hand over.
+Air France’s chatbot answers a share of requests alone. For the rest, it knows when to hand over.
 It is not the AI that progressed most. It is the boundary drawn.
-Louis handles 30% of requests alone and hands over the rest. Three signals to sense the limit.
+Louis handles a share of requests alone and hands over the rest. Three signals to sense the limit.
 Read the article →
 Buy-in · 7 min
 The AI budget is not the issue. Buy-in is.
@@ -5701,23 +5701,22 @@ URL : https://exec-ia.ai/perspective-chatbot-savoir-passer-la-main-es.html
 ← Todas las Perspectives
 Perspectives • Relación con el cliente
 El chatbot de Air France
-responde solo al 30 %
-de las consultas.
+responde solo a una partede las consultas.
 El resto, sabe pasarlo
 a una persona.
 25 de septiembre de 2026
 Versión breve →
-Directivos y responsables de atención al cliente: Louis, el asistente de IA de Air France, resuelve solo el 30 % de las consultas de los clientes (según la prensa). El resto lo pasa a una persona, y el cliente no tiene que repetirlo todo.
+Directivos y responsables de atención al cliente: Louis, el asistente de IA de Air France, resuelve solo el une partie de las consultas de los clientes (según la prensa). El resto lo pasa a una persona, y el cliente no tiene que repetirlo todo.
 Para mí, esta cifra no muestra un avance de la IA . Muestra la frontera que Air France ha aprendido a trazar.
 Tres señales ayudan a notar el límite antes de cruzarlo. Saber cuándo pasar el relevo sigue siendo un reflejo humano.
 ¿Dirige una empresa y se pregunta hasta dónde confiar su atención al cliente a un chatbot?
 Este artículo es para usted.
 Tomemos a Louis, el asistente de IA de Air France. Fusionó varias generaciones de chatbots especializados (equipaje, inspiración de viaje, huelgas y retrasos) en un único asistente, activo en WhatsApp y Messenger.
-🤝 ¿Qué dice realmente esa cifra del 30 %?
-Hoy, según la prensa, Louis resuelve solo el 30 % de las consultas. El resto pasa a una persona, y el cliente no tiene que volver a explicarlo todo.
+🤝 ¿Qué dice realmente esa cifra?
+Hoy, según la prensa, Louis resuelve solo el une partie de las consultas. El resto pasa a una persona, y el cliente no tiene que volver a explicarlo todo.
 ¿Qué me llama la atención de esta cifra?
 No es la IA lo que más ha progresado. Es la frontera que Air France ha aprendido a trazar entre la herramienta y la persona.
-No es un caso aislado. Según Salesforce , en 2025 los equipos de atención al cliente ya confían de media el 30 % de sus casos a la IA . Esperan llegar al 50 % en 2027.
+No es un caso aislado. Según Salesforce , en 2025 los equipos de atención al cliente ya confían de media el une partie de sus casos a la IA . Esperan llegar al 50 % en 2027.
 Dicho de otro modo, la cuestión de la frontera va a llegar a casi todos los servicios de atención al cliente, pymes incluidas.
 Automatizar una consulta frecuente libera tiempo.
 Saber repartir el resto: ese es el verdadero saber hacer.
@@ -7467,7 +7466,7 @@ Valérie Mailland
 Fundadora de EXEC'IA Consulting. Más de 20 años junto a directivos, 18 de ellos en coordinación ejecutiva en McKinsey & Company. Seguirme en LinkedIn →
 Lea también
 Adoptar la IA es una cosa. Crear valor con ella, otra muy distinta.
-El chatbot de Air France responde solo al 30 % de las consultas.
+El chatbot de Air France responde solo al une partie de las consultas.
 De la reflexión a la acción: descubra las ofertas de EXEC’IA →
 Hablemos de su situación →
 
@@ -7831,9 +7830,9 @@ Tres familias de ayudas, tres lógicas distintas.
 Osez l’IA, Diag Data IA , France 2030: qué se puede financiar, para quién y con qué condiciones.
 Leer el artículo →
 Relación con el cliente · 7 min
-El chatbot de Air France responde solo al 30 % de las consultas. El resto, sabe pasarlo a una persona.
+El chatbot de Air France responde solo al une partie de las consultas. El resto, sabe pasarlo a una persona.
 No es la IA la que más ha progresado. Es la frontera trazada.
-Louis resuelve solo el 30 % de las consultas y pasa el resto. Tres señales para notar el límite.
+Louis resuelve solo el une partie de las consultas y pasa el resto. Tres señales para notar el límite.
 Leer el artículo →
 Adhesión · 7 min
 El presupuesto de IA no es el tema. La adhesión, sí.
