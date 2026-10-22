@@ -7994,3 +7994,9 @@ h1 .hero-sub-focal, h1 .hero-sub-focal.s3 { font-size: inherit !important; }
 /* Blog : cartes Robots humanoïdes et Affaire Orélien, zoom pour voir la tête du robot et le contenu, logo EXEC'IA hors cadre */
 .persp-card-visual--img img[src*="robots-humanoides-token-tax-card"],
 .persp-card-visual--img img[src*="affaire-orelien-preuve-card"] { transform: scale(1.35); transform-origin: 62% 78%; }
+/* Pied de page : liste Blog plus étroite entre 761 et 1400 px, pour que la colonne Coordonnées reste visible */
+@media (min-width: 761px) and (max-width: 1400px) {
+  .footer-persp-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important; column-gap: 14px !important; }
+  .footer-persp-grid a.footer-persp-link { white-space: normal !important; font-size: .92em; }
+  .footer-col--site { min-width: 0; }
+}
