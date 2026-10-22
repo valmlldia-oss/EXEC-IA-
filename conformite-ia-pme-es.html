@@ -306,6 +306,11 @@ max-width: 660px; margin: 0;
 font-family: var(--sans); font-size: .85rem; font-weight: 500;
 color: var(--plum); opacity: .85; margin: 10px 0 0;
 }
+.article-source-note a{
+color: inherit; text-decoration: underline; text-underline-offset: 2px;
+transition: opacity .2s;
+}
+.article-source-note a:hover{ opacity: .7; }
 .article-tldr{
 max-width: 640px; margin: 22px 0 0; border: 1px solid rgba(99,59,74,.18);
 border-radius: 10px; background: var(--ivory);
@@ -1285,6 +1290,8 @@ line-height: 1.1 !important;
 :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl, .ink-accent-600, .ink-accent-500, .ink-accent-fixed, .persp-card-subtitle, .article-meta):not(h1 *):not(h2 *){ color: #633B4A !important; }
 :is(h1, h2) :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl){ color: #C75F62 !important; }
 h1 .aiact-ref, h1 .rgpd-b{ font-weight: 400 !important; }
+.footer-loc, .footer-legal, .footer-copy, .footer-bottom, .article-author-bio{ color: #633B4A !important; opacity: 1 !important; }
+.art-star{ color: #8C6D1F !important; }
 </style>
 </head>
 <body>
@@ -1323,7 +1330,7 @@ h1 .aiact-ref, h1 .rgpd-b{ font-weight: 400 !important; }
       <a href="expertise-es.html" class="article-back">← Experiencia</a>
       <span class="article-meta">Guía práctica • Cumplimiento <span class="aiact-ia">IA</span></span>
       <h1 class="article-title article-title--2l"><span class="aiact-ref">AI&nbsp;Act</span>&nbsp;y&nbsp;<span class="rgpd-b">RGPD</span>: las&nbsp;obligaciones reales<br>de&nbsp;una&nbsp;PYME que&nbsp;usa&nbsp;<span class="aiact-ia">IA</span>.</h1>
-      <p class="article-source-note">Verificado el <time datetime="2026-10-22">22/10/2026</time> · Lectura: 10&nbsp;min</p>
+      <p class="article-source-note">Actualizado el <time datetime="2026-10-22">22/10/2026</time> · Lectura: 10&nbsp;min · Fuentes: <a href="https://www.europarl.europa.eu/news/es/press-room/20260611IPR45207/" target="_blank" rel="noopener">Parlamento Europeo, comunicado del 11 de junio de 2026</a>; <a href="https://eur-lex.europa.eu/eli/reg/2026/1744/oj" target="_blank" rel="noopener">Reglamento (UE) 2026/1744 (EUR-Lex)</a>.</p>
       <details class="article-tldr" open>
         <summary>Versión breve <span class="article-tldr-arrow">→</span></summary>
         <div class="article-tldr-body">

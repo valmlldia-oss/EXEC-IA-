@@ -8006,3 +8006,11 @@ h1 .hero-sub-focal, h1 .hero-sub-focal.s3 { font-size: inherit !important; }
 :is(.testi--dark, .stats-strip, .cookie-banner, .cookie-modal, .xcard--ia, .roi-chip--hero, .ticker-bar, .es-line) :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl, .ink-accent-600, .ink-accent-500, .ink-accent-fixed, .ss-sup) { color: #FAF6F2 !important; }
 /* Titre des guides : « AI Act » et « RGPD » en graisse 400, plus élégant */
 h1 .aiact-ref, h1 .rgpd-b { font-weight: 400 !important; }
+/* Titres de section : graisse 500 (comme « Plus de 80 % »), « La technologie ne crée pas la valeur. » sur une seule ligne sur ordinateur */
+.section-title, .slide-title, .conviction-title, .diag-title { font-weight: 500 !important; }
+@media (min-width: 1025px) { .conviction-title { white-space: nowrap; } }
+/* Slide « La technologie ne crée pas la valeur » : centré sur la largeur de la présentation */
+@media (min-width: 1025px) { .conviction-section .conviction-title { display: block; text-align: center; margin-left: auto; margin-right: auto; } }
+/* Contraste : mentions et coordonnées du pied de page, bio d'auteur en prune plein ; étoiles dorées plus foncées */
+.footer-loc, .footer-legal, .footer-copy, .footer-bottom, .article-author-bio { color: #633B4A !important; opacity: 1 !important; }
+.art-star { color: #8C6D1F !important; }

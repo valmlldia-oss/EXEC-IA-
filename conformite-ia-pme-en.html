@@ -306,6 +306,11 @@ max-width: 660px; margin: 0;
 font-family: var(--sans); font-size: .85rem; font-weight: 500;
 color: var(--plum); opacity: .85; margin: 10px 0 0;
 }
+.article-source-note a{
+color: inherit; text-decoration: underline; text-underline-offset: 2px;
+transition: opacity .2s;
+}
+.article-source-note a:hover{ opacity: .7; }
 .article-tldr{
 max-width: 640px; margin: 22px 0 0; border: 1px solid rgba(99,59,74,.18);
 border-radius: 10px; background: var(--ivory);
@@ -1286,6 +1291,8 @@ line-height: 1.1 !important;
 :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl, .ink-accent-600, .ink-accent-500, .ink-accent-fixed, .persp-card-subtitle, .article-meta):not(h1 *):not(h2 *){ color: #633B4A !important; }
 :is(h1, h2) :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl){ color: #C75F62 !important; }
 h1 .aiact-ref, h1 .rgpd-b{ font-weight: 400 !important; }
+.footer-loc, .footer-legal, .footer-copy, .footer-bottom, .article-author-bio{ color: #633B4A !important; opacity: 1 !important; }
+.art-star{ color: #8C6D1F !important; }
 </style>
 </head>
 <body>
@@ -1324,7 +1331,7 @@ h1 .aiact-ref, h1 .rgpd-b{ font-weight: 400 !important; }
       <a href="expertise-en.html" class="article-back">← Expertise</a>
       <span class="article-meta">Practical guide • <span class="aiact-ia">AI</span>&nbsp;compliance</span>
       <h1 class="article-title article-title--2l"><span class="aiact-ref">AI&nbsp;Act</span> and <span class="rgpd-b">GDPR</span>: what an&nbsp;SME<br>using <span class="aiact-ia">AI</span>&nbsp;actually has to&nbsp;do.</h1>
-      <p class="article-source-note">Checked on <time datetime="2026-10-22">22/10/2026</time> · Reading time: 9&nbsp;min</p>
+      <p class="article-source-note">Updated on <time datetime="2026-10-22">22/10/2026</time> · Reading time: 9&nbsp;min · Sources: <a href="https://www.europarl.europa.eu/news/en/press-room/20260611IPR45207/ai-act-ep-approves-simplification-measures-and-nudifier-app-ban" target="_blank" rel="noopener">European Parliament, press release of 11 June 2026</a>; <a href="https://eur-lex.europa.eu/eli/reg/2026/1744/oj" target="_blank" rel="noopener">Regulation (EU) 2026/1744 (EUR-Lex)</a>.</p>
       <details class="article-tldr" open>
         <summary>Short version <span class="article-tldr-arrow">→</span></summary>
         <div class="article-tldr-body">
