@@ -6797,3 +6797,5 @@ font-size: clamp(2.2rem, 3.4vw, 3.2rem) !important;
 line-height: 1.1 !important;
 }
 h1 .hero-sub-focal, h1 .hero-sub-focal.s3 { font-size: inherit !important; }
+.persp-card-visual--img img[src*="robots-humanoides-token-tax-card"],
+.persp-card-visual--img img[src*="affaire-orelien-preuve-card"] { transform: scale(1.35); transform-origin: 62% 78%; }

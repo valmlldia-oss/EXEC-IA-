@@ -7991,3 +7991,6 @@ h1, h1.article-title, h1.article-title--2l, h1.section-title, h1.hero-sub, h1.ex
   line-height: 1.1 !important;
 }
 h1 .hero-sub-focal, h1 .hero-sub-focal.s3 { font-size: inherit !important; }
+/* Blog : cartes Robots humanoïdes et Affaire Orélien, zoom pour voir la tête du robot et le contenu, logo EXEC'IA hors cadre */
+.persp-card-visual--img img[src*="robots-humanoides-token-tax-card"],
+.persp-card-visual--img img[src*="affaire-orelien-preuve-card"] { transform: scale(1.35); transform-origin: 62% 78%; }
