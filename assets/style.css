@@ -8016,3 +8016,5 @@ h1 .aiact-ref, h1 .rgpd-b { font-weight: 400 !important; }
 .art-star { color: #8C6D1F !important; }
 /* Boutons terracotta à texte ivoire : fond #A84D50 (ivoire lisible, 5:1) */
 .btn-rose, .cookie-btn--accept, #phare-bubble, #qw-bubble, #phare-send, #qw-send, .nav-lang.active, .nav-lang[aria-current="true"] { background-color: #A84D50 !important; }
+/* Liens terracotta de petite taille sur fond clair : prune plein (titres et accents « IA » gardés en terracotta) */
+.persp-card-read, .article-tldr-arrow, a.persp-all-link, .article-related-title, .portrait-link-arrow, .persp-card-meta { color: #633B4A !important; }
