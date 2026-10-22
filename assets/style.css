@@ -7981,3 +7981,7 @@ section:has(+ .verbes-band) .mon-approche-content .portrait-link { margin-bottom
 .s-98336 { margin-top:16px;display:block;width:100%;background:transparent;border:1px solid rgba(99,59,74,.28);color:var(--plum-muted);font-family:'Inter',sans-serif;font-size:.78rem;letter-spacing:.08em;padding:9px 20px;cursor:pointer;border-radius:2px !important; }
 .s-17209 { white-space:nowrap;hyphens:none !important; }
 .s-98725 { margin-top:8px;margin-bottom:7px !important; }
+/* Accueil : « Le business avant tout. » à la taille des H1 (même échelle que les titres de section) */
+.maf-lead--home { font-size: clamp(2.2rem, 3.4vw, 3.2rem) !important; line-height: 1.1; }
+/* Bandeau des verbes : mots +7 % */
+.verbes-mot { font-size: clamp(1.41rem, 2.24vw, 1.94rem) !important; }
