@@ -7817,3 +7817,7 @@ body.cookie-modal-open { overflow: hidden; }
   .reveal, .reveal.visible { opacity: 1 !important; transform: none !important; }
   .nav, .cookie-banner, .phare-bubble, #phare-bubble, .qw-bubble { display: none !important; }
 }
+
+/* Contraste : les petits libellés terracotta passent d'environ 3,6:1 à plus de 4,5:1 sur l'ivoire.
+   Les grands titres gardent la couleur de la charte. */
+.eyebrow, .maf-eyebrow, .expertise-hero-eyebrow, .hero-eyebrow, .pre, .persp-card-meta { color: #A84D50 !important; }
