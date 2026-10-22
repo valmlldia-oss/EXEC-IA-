@@ -49,7 +49,7 @@
 --serif:     'Cormorant Garamond', Georgia, serif;
 --sans:      'Inter', 'Helvetica Neue', sans-serif;
 --nav-h:     80px;
---max:       1600px;
+--max:       1240px;
 --ease:      cubic-bezier(.25,.46,.45,.94);
 --section-gap: clamp(12px, 1.7vh, 17px);
 }
@@ -241,16 +241,17 @@ border-radius: 2px; transition: all .3s;
 50%      { opacity: .5; transform: scale(.7); }
 }
 .hero-cta-link{
-display: inline-flex; align-items: center; gap: 6px;
-font-family: var(--sans); font-size: .9rem; font-weight: 500;
-color: var(--plum); text-decoration: none;
-letter-spacing: .04em;
-border-bottom: 1px solid rgba(99,59,74,.3);
-padding-bottom: 2px;
-transition: color .2s, border-color .2s;
+display: inline-flex; align-items: center; gap: 8px;
+font-family: var(--sans); font-size: 1.16rem; font-weight: 500;
+color: var(--rose); text-decoration: none;
+letter-spacing: .025em;
+background: var(--white);
+border: 1.5px solid var(--rose); border-radius: 32px;
+padding: 16px 32px;
+transition: color .2s, background .2s, border-color .2s;
 }
 .hero-cta-link strong{ font-weight: 600; }
-.hero-cta-link:hover{ color: var(--rose); border-color: var(--rose); }
+.hero-cta-link:hover{ color: var(--white); background: var(--rose); border-color: var(--rose); }
 .hero-cta-link .portrait-link-arrow{ display: inline-block; }
 .hero-cta-link:hover .portrait-link-arrow{ transform: translateX(4px); }
 .hero-cta-link .portrait-link-arrow{ animation: hero-cta-nudge 5s ease-in-out infinite; }
@@ -318,7 +319,7 @@ transform: translateY(-2px);
 }
 section{ padding: var(--section-gap) 0; }
 .bg-white{ background: var(--white); }
-.wrap{ max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+.wrap{ max-width: var(--max); margin: 0 auto; padding: 0 clamp(32px, 6vw, 96px); }
 .eyebrow{
 display: block; margin-bottom: 18px;
 font-size: clamp(.8rem, 1vw, .95rem); font-weight: 600;
@@ -418,7 +419,7 @@ rgba(99,59,74,0) 100%);
 .article-book-folio{
 position: absolute; left: 0; right: 0; bottom: 8px; text-align: center;
 font-family: var(--sans); font-size: .72rem; font-weight: 600;
-letter-spacing: .18em; color: rgba(99,59,74,.5);
+letter-spacing: .18em; color: #6F5160;
 user-select: none;
 }
 .article-book .article-intro,
@@ -690,7 +691,7 @@ padding-bottom: 32px;
 .footer-col-title{
 font-family: var(--sans); font-size: .75rem; font-weight: 600;
 letter-spacing: .16em; text-transform: uppercase;
-color: rgba(99,59,74,.5); margin-bottom: 6px;
+color: #6F5160; margin-bottom: 6px;
 }
 .footer-col a, .footer-col .footer-loc{
 font-family: var(--sans); font-size: 1.02rem; font-weight: 400;
@@ -1509,7 +1510,7 @@ background: var(--white);
 border-top: 1px solid rgba(99,59,74,.1);
 height: auto; min-height: 0;
 justify-content: flex-start;
-padding: clamp(10px, 1.4vh, 16px) 0 0;
+padding: clamp(72px, 11vh, 128px) 0 clamp(64px, 9vh, 112px);
 scroll-margin-top: var(--nav-h);
 }
 .maf-band{
@@ -1973,6 +1974,12 @@ color: var(--plum); margin: 14px 0 0;
 .footer-col a.footer-persp-link{ position: relative; }
 .footer-persp-link .art-star{ position: absolute; right: 100%; top: 50%; transform: translateY(-52%); margin-right: .35em; font-size: 1.1em; }
 @media (min-width: 1251px){.footer-col--site .footer-persp-c2{ left: calc(18.75rem - 5px); }.footer-bottom .footer-rights{ grid-row: 1; }.footer-bottom .footer-copy{ grid-column: 2 / 4; grid-row: 1; margin-left: calc(18.75rem - 5px); }}
+:focus-visible{ outline: 2px solid var(--rose); outline-offset: 3px; border-radius: 4px; }
+@media (max-width: 760px){.hero-cta-link{ font-size: .98rem; padding: 14px 18px; text-align: center; line-height: 1.3; width: 100%; justify-content: center; }}
+.mon-approche-content .portrait-link{ margin-bottom: clamp(40px, 6vh, 72px); padding-bottom: 8px; }
+.mon-approche-section{ padding-bottom: clamp(72px, 10vh, 120px) !important; }
+.hero-cta-link{ padding: 18px 38px; }
+@media (max-width: 760px){.hero-cta-link{ padding: 16px 22px; }}
 </style>
 </head>
 <body>
@@ -1991,7 +1998,7 @@ color: var(--plum); margin: 14px 0 0;
       <a href="a-propos-es.html">Perfil</a>
       <a href="temoignages-es.html">Testimonios</a>
       <a href="contact-es.html">Contacto</a>
-      <a href="perspectives-es.html">Perspectives</a>
+      <a href="perspectives-es.html">Blog</a>
     </div>
     <div class="nav-langs">
       <a href="expertise.html" class="nav-lang">FR</a>
@@ -2627,7 +2634,7 @@ color: var(--plum); margin: 14px 0 0;
       <a href="a-propos-es.html">Perfil</a>
       <a href="temoignages-es.html">Testimonios</a>
       <a href="contact-es.html">Contacto</a>
-      <a href="perspectives-es.html">Perspectives</a>
+      <a href="perspectives-es.html">Blog</a>
     <a href="perspective-entreprise-utilise-deja-ia-es.html" class="footer-persp-link">→ <span class="art-star" aria-label="Artículo más leído">★</span>Adoptar la <span style="color:var(--rose)">IA</span> no es crear valor</a>
     <a href="perspective-toutes-decisions-ne-se-deleguent-pas-es.html" class="footer-persp-link">→ <span class="art-star" aria-label="Artículo más leído">★</span>No todas las decisiones se delegan</a>
     <a href="perspective-transformation-echoue-rarement-technologie-es.html" class="footer-persp-link">→ La transformación con <span style="color:var(--rose)">IA</span> rara vez fracasa</a>

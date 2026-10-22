@@ -49,7 +49,7 @@
 --serif:     'Cormorant Garamond', Georgia, serif;
 --sans:      'Inter', 'Helvetica Neue', sans-serif;
 --nav-h:     80px;
---max:       1600px;
+--max:       1240px;
 --ease:      cubic-bezier(.25,.46,.45,.94);
 --section-gap: clamp(12px, 1.7vh, 17px);
 }
@@ -238,7 +238,7 @@ background: var(--rose); color: var(--white);
 box-shadow: 0 0 32px rgba(199,95,98,.45);
 transform: translateY(-2px);
 }
-.wrap{ max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+.wrap{ max-width: var(--max); margin: 0 auto; padding: 0 clamp(32px, 6vw, 96px); }
 @media (max-width: 900px){.ce-que-section{ padding: var(--section-gap) 0; }}
 .persp-track{
 display: flex; gap: 1.25rem;
@@ -298,7 +298,7 @@ max-width: 660px; margin: 0;
 }
 .article-source-note{
 font-family: var(--sans); font-size: .85rem; font-weight: 500;
-color: var(--plum); opacity: .55; margin: 10px 0 0;
+color: var(--plum); opacity: .85; margin: 10px 0 0;
 }
 .article-source-note a{
 color: inherit; text-decoration: underline; text-underline-offset: 2px;
@@ -354,7 +354,7 @@ rgba(99,59,74,0) 100%);
 .article-book-folio{
 position: absolute; left: 0; right: 0; bottom: 8px; text-align: center;
 font-family: var(--sans); font-size: .72rem; font-weight: 600;
-letter-spacing: .18em; color: rgba(99,59,74,.5);
+letter-spacing: .18em; color: #6F5160;
 user-select: none;
 }
 .article-book .article-intro,
@@ -526,7 +526,7 @@ padding-bottom: 32px;
 .footer-col-title{
 font-family: var(--sans); font-size: .75rem; font-weight: 600;
 letter-spacing: .16em; text-transform: uppercase;
-color: rgba(99,59,74,.5); margin-bottom: 6px;
+color: #6F5160; margin-bottom: 6px;
 }
 .footer-col a, .footer-col .footer-loc{
 font-family: var(--sans); font-size: 1.02rem; font-weight: 400;
@@ -1055,6 +1055,7 @@ color: var(--plum); margin: 14px 0 0;
 .footer-col a.footer-persp-link{ position: relative; }
 .footer-persp-link .art-star{ position: absolute; right: 100%; top: 50%; transform: translateY(-52%); margin-right: .35em; font-size: 1.1em; }
 @media (min-width: 1251px){.footer-col--site .footer-persp-c2{ left: calc(18.75rem - 5px); }.footer-bottom .footer-rights{ grid-row: 1; }.footer-bottom .footer-copy{ grid-column: 2 / 4; grid-row: 1; margin-left: calc(18.75rem - 5px); }}
+:focus-visible{ outline: 2px solid var(--rose); outline-offset: 3px; border-radius: 4px; }
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a leader's digital twin?", "acceptedAnswer": {"@type": "Answer", "text": "It is an AI assistant that answers questions from what the leader has said, written and decided, citing its source every time. It is built from recorded interviews, transcribed and then approved by the leader. It keeps a record of their reasoning for the successor and leadership team: why a client stays, why a supplier was chosen, what has already failed. It never decides for anyone, and it says it doesn't know when a question goes beyond what it was given."}}, {"@type": "Question", "name": "What is Fred24?", "acceptedAnswer": {"@type": "Answer", "text": "Fred24 is the AI assistant launched in July 2026 by Frédéric Mazzella, founder of BlaBlaCar. It is built on twenty years of his talks, interviews and writing, and answers entrepreneurs' questions from what he has already said. It is a public example of a leader's digital twin. The same idea can work inside an SME for a small circle: the successor, the leadership team and key managers, with protected access and approved content."}}, {"@type": "Question", "name": "How many business owners will retire in France?", "acceptedAnswer": {"@type": "Answer", "text": "According to the French Ministry of the Economy, around 550,000 business owners will retire within ten years, with 3 million jobs at stake. The “Objectif Reprises” plan, presented on 23 April 2026, aims to ease these handovers, and the proposed “Papin pact” in the 2027 draft budget has yet to be voted. These measures deal with price, tax and financing. None of them covers the leader's knowledge: the company has to organise that itself, several years before the departure."}}, {"@type": "Question", "name": "How do you build a leader's digital twin?", "acceptedAnswer": {"@type": "Answer", "text": "In four steps, while the leader is still there. Record one-hour interviews about their key decisions, long-standing clients, suppliers and the company's unwritten rules. Have them transcribed and sorted by theme. Give the successor an AI assistant that answers only from these notes and cites its sources. Have the leader review, correct and approve everything. Ten interviews and a few weeks of set-up are enough for a first version, provided the leader keeps one hour a week free for it."}}, {"@type": "Question", "name": "Does the GDPR apply to recorded interviews?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The leader's voice and opinions are personal data, as are the names of clients or employees mentioned in the interviews. You need to inform the leader, obtain their consent, limit retention and protect access with named accounts. The simplest rule is to anonymise the clients and employees mentioned before feeding the assistant. Under the EU AI Act, an internal assistant of this kind is not high-risk as long as it isn't used to assess or manage employees."}}, {"@type": "Question", "name": "When should a leader start passing on their knowledge?", "acceptedAnswer": {"@type": "Answer", "text": "Several years before leaving. At that point the leader still has the time and the distance to tell, correct and complete their interviews. A few months before a sale, urgency takes over: negotiation, audits, announcing it to the team, and knowledge slips down the list. Starting three months before the sale is the most common mistake. One hour a week blocked in the leader's diary is enough, as long as it is kept until departure."}}, {"@type": "Question", "name": "Does a digital twin replace the handover?", "acceptedAnswer": {"@type": "Answer", "text": "No. It replaces neither the handover between two people, nor meetings with key clients, nor the time a successor needs to earn the team's trust. Nor does it capture intuition: a leader can explain why they turned a partner down, but they can't pass on the feeling that warned them. The digital twin complements the handover. It keeps the explanations and their sources, so the successor can find them when needed, long after the leader has gone."}}, {"@type": "Question", "name": "Where should a leader's memory be kept?", "acceptedAnswer": {"@type": "Answer", "text": "In a business tool that excludes, by contract, the use of your data to train its models, ideally hosted in Europe, with named user access and a clear list of authorised people. Never in a consumer tool. Also decide who keeps the memory up to date after the leader leaves and how long it is kept. If the company is sold, state in the sale agreement whether the digital twin is part of the sale, rather than finding out after signing."}}], "inLanguage": "en-GB"}
@@ -1076,7 +1077,7 @@ color: var(--plum); margin: 14px 0 0;
       <a href="a-propos-en.html">About</a>
       <a href="temoignages-en.html">Testimonials</a>
       <a href="contact-en.html">Contact</a>
-      <a href="perspectives-en.html" class="active">Perspectives</a>
+      <a href="perspectives-en.html" class="active">Blog</a>
     </div>
     <div class="nav-langs">
       <a href="perspective-jumeau-numerique-savoir-dirigeant.html" class="nav-lang">FR</a>
@@ -1271,7 +1272,7 @@ color: var(--plum); margin: 14px 0 0;
       <a href="a-propos-en.html">About</a>
       <a href="temoignages-en.html">Testimonials</a>
       <a href="contact-en.html">Contact</a>
-      <a href="perspectives-en.html">Perspectives</a>
+      <a href="perspectives-en.html">Blog</a>
     <a href="perspective-entreprise-utilise-deja-ia-en.html" class="footer-persp-link">→ <span class="art-star" aria-label="Most-read article">★</span>Adopting <span style="color:var(--rose)">AI</span> vs. creating value</a>
     <a href="perspective-toutes-decisions-ne-se-deleguent-pas-en.html" class="footer-persp-link">→ <span class="art-star" aria-label="Most-read article">★</span>Not every decision can be delegated</a>
     <a href="perspective-transformation-echoue-rarement-technologie-en.html" class="footer-persp-link">→ <span style="color:var(--rose)">AI</span> transformation rarely fails</a>

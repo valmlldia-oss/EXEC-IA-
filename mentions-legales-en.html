@@ -29,7 +29,7 @@
 --serif:     'Cormorant Garamond', Georgia, serif;
 --sans:      'Inter', 'Helvetica Neue', sans-serif;
 --nav-h:     80px;
---max:       1600px;
+--max:       1240px;
 --ease:      cubic-bezier(.25,.46,.45,.94);
 --section-gap: clamp(12px, 1.7vh, 17px);
 }
@@ -130,7 +130,7 @@ font-weight: 500; letter-spacing: .025em;
 transition: transform .2s var(--ease), box-shadow .25s, background .2s, color .2s;
 cursor: pointer; border: none;
 }
-.wrap{ max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+.wrap{ max-width: var(--max); margin: 0 auto; padding: 0 clamp(32px, 6vw, 96px); }
 @media (max-width: 900px){.ce-que-section{ padding: var(--section-gap) 0; }}
 .persp-track{
 display: flex; gap: 1.25rem;
@@ -185,7 +185,7 @@ rgba(99,59,74,0) 100%);
 .article-book-folio{
 position: absolute; left: 0; right: 0; bottom: 8px; text-align: center;
 font-family: var(--sans); font-size: .72rem; font-weight: 600;
-letter-spacing: .18em; color: rgba(99,59,74,.5);
+letter-spacing: .18em; color: #6F5160;
 user-select: none;
 }
 .article-book .article-intro,
@@ -336,7 +336,7 @@ padding-bottom: 32px;
 .footer-col-title{
 font-family: var(--sans); font-size: .75rem; font-weight: 600;
 letter-spacing: .16em; text-transform: uppercase;
-color: rgba(99,59,74,.5); margin-bottom: 6px;
+color: #6F5160; margin-bottom: 6px;
 }
 .footer-col a, .footer-col .footer-loc{
 font-family: var(--sans); font-size: 1.02rem; font-weight: 400;
@@ -823,6 +823,7 @@ color: var(--plum); margin: 14px 0 0;
 .footer-col a.footer-persp-link{ position: relative; }
 .footer-persp-link .art-star{ position: absolute; right: 100%; top: 50%; transform: translateY(-52%); margin-right: .35em; font-size: 1.1em; }
 @media (min-width: 1251px){.footer-col--site .footer-persp-c2{ left: calc(18.75rem - 5px); }.footer-bottom .footer-rights{ grid-row: 1; }.footer-bottom .footer-copy{ grid-column: 2 / 4; grid-row: 1; margin-left: calc(18.75rem - 5px); }}
+:focus-visible{ outline: 2px solid var(--rose); outline-offset: 3px; border-radius: 4px; }
 </style>
   <style>
     .ml-page { max-width: 760px; margin: 0 auto; padding: 80px 24px clamp(60px, 8vw, 100px); }
@@ -973,7 +974,7 @@ color: var(--plum); margin: 14px 0 0;
         <a href="a-propos-en.html">About</a>
         <a href="temoignages-en.html">Testimonials</a>
         <a href="contact-en.html">Contact</a>
-        <a href="perspectives-en.html">Perspectives</a>
+        <a href="perspectives-en.html">Blog</a>
       <a href="perspective-entreprise-utilise-deja-ia-en.html" class="footer-persp-link">→ <span class="art-star" aria-label="Most-read article">★</span>Adopting <span style="color:var(--rose)">AI</span> vs. creating value</a>
       <a href="perspective-toutes-decisions-ne-se-deleguent-pas-en.html" class="footer-persp-link">→ <span class="art-star" aria-label="Most-read article">★</span>Not every decision can be delegated</a>
       <a href="perspective-transformation-echoue-rarement-technologie-en.html" class="footer-persp-link">→ <span style="color:var(--rose)">AI</span> transformation rarely fails</a>

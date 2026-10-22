@@ -49,7 +49,7 @@
 --serif:     'Cormorant Garamond', Georgia, serif;
 --sans:      'Inter', 'Helvetica Neue', sans-serif;
 --nav-h:     80px;
---max:       1600px;
+--max:       1240px;
 --ease:      cubic-bezier(.25,.46,.45,.94);
 --section-gap: clamp(12px, 1.7vh, 17px);
 }
@@ -239,7 +239,7 @@ box-shadow: 0 0 32px rgba(199,95,98,.45);
 transform: translateY(-2px);
 }
 section{ padding: var(--section-gap) 0; }
-.wrap{ max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+.wrap{ max-width: var(--max); margin: 0 auto; padding: 0 clamp(32px, 6vw, 96px); }
 @media (max-width: 900px){.ce-que-section{ padding: var(--section-gap) 0; }}
 .persp-track{
 display: flex; gap: 1.25rem;
@@ -299,7 +299,7 @@ max-width: 660px; margin: 0;
 }
 .article-source-note{
 font-family: var(--sans); font-size: .85rem; font-weight: 500;
-color: var(--plum); opacity: .55; margin: 10px 0 0;
+color: var(--plum); opacity: .85; margin: 10px 0 0;
 }
 .article-source-note a{
 color: inherit; text-decoration: underline; text-underline-offset: 2px;
@@ -350,7 +350,7 @@ rgba(99,59,74,0) 100%);
 .article-book-folio{
 position: absolute; left: 0; right: 0; bottom: 8px; text-align: center;
 font-family: var(--sans); font-size: .72rem; font-weight: 600;
-letter-spacing: .18em; color: rgba(99,59,74,.5);
+letter-spacing: .18em; color: #6F5160;
 user-select: none;
 }
 .article-book .article-intro,
@@ -533,7 +533,7 @@ padding-bottom: 32px;
 .footer-col-title{
 font-family: var(--sans); font-size: .75rem; font-weight: 600;
 letter-spacing: .16em; text-transform: uppercase;
-color: rgba(99,59,74,.5); margin-bottom: 6px;
+color: #6F5160; margin-bottom: 6px;
 }
 .footer-col a, .footer-col .footer-loc{
 font-family: var(--sans); font-size: 1.02rem; font-weight: 400;
@@ -1123,6 +1123,7 @@ color: var(--plum); margin: 14px 0 0;
 .footer-col a.footer-persp-link{ position: relative; }
 .footer-persp-link .art-star{ position: absolute; right: 100%; top: 50%; transform: translateY(-52%); margin-right: .35em; font-size: 1.1em; }
 @media (min-width: 1251px){.footer-col--site .footer-persp-c2{ left: calc(18.75rem - 5px); }.footer-bottom .footer-rights{ grid-row: 1; }.footer-bottom .footer-copy{ grid-column: 2 / 4; grid-row: 1; margin-left: calc(18.75rem - 5px); }}
+:focus-visible{ outline: 2px solid var(--rose); outline-offset: 3px; border-radius: 4px; }
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why think in tasks rather than jobs?", "acceptedAnswer": {"@type": "Answer", "text": "Because a job is a bundle of tasks. A humanoid robot can take over physical, repetitive tasks such as moving crates. Judgement, relationships and accountability stay human. Thinking in tasks avoids two opposite mistakes: believing nothing will change, or believing everything will disappear. In practice, list the tasks of a role, estimate how long each takes per week and spot those a machine could handle. The job then changes task by task, and the company can plan training for the people concerned."}}, {"@type": "Question", "name": "Which jobs will humanoid robots target first?", "acceptedAnswer": {"@type": "Answer", "text": "Jobs with physical, repetitive or strenuous tasks in places designed for people: logistics, manufacturing, retail, construction, agriculture, and healthcare for moving equipment. These are often hard-to-fill roles: France’s Dares counts 457,500 private-sector vacancies in Q2 2026 (revised figure, September 15, 2026). For an SME, these vacancies are a natural starting point: a robot that takes over a strenuous task can make a role more attractive, without replacing the person who holds it."}}, {"@type": "Question", "name": "Are humanoid robots arriving in companies right away?", "acceptedAnswer": {"@type": "Answer", "text": "No. They remain expensive, slow at movements that are simple for people, and fragile when the unexpected happens. According to analyst Ming-Chi Kuo, Apple is not expected to mass-produce its robots before 2028. That delay is time to prepare: map the tasks and decide what must stay human. An SME therefore has no reason to rush. It is better to use these years to understand its own tasks, follow the first pilots in its sector and prepare its teams, rather than buy a technology that is not yet mature."}}, {"@type": "Question", "name": "Who builds humanoid robots?", "acceptedAnswer": {"@type": "Answer", "text": "In the first half of 2026, 97% of the humanoid robots delivered worldwide came from China, led by AgiBot and Unitree. For France and Europe, the question is whether to design and run their own robots, or buy them off the shelf, together with the data they collect. This dominance affects sovereignty: a connected robot collects data on sites, movements and work rhythms. Knowing where that data goes and who can access it is part of choosing a supplier, just like the price."}}, {"@type": "Question", "name": "What is the “token tax”?", "acceptedAnswer": {"@type": "Answer", "text": "A tax on the use of AI, levied on tokens, the unit that AI models process and bill. Bill Gates argues for taxing tokens and robots. In the United States, a bill introduced in Congress in August 2026, the AI Tax and Work Protection Act, proposes a 2% rate on the value of tokens when unemployment is at 5% or below, rising with unemployment. The revenue would fund jobs and retraining; some see it as the basis for a universal income."}}, {"@type": "Question", "name": "What can an SME do right now?", "acceptedAnswer": {"@type": "Answer", "text": "Three steps, without spending anything: list the tasks in each role and how long they take; identify hard-to-fill roles and what makes them strenuous; decide what must stay human. Only then cost one hour of a robotised task and, if the numbers add up, run a 90-day pilot on a single task. The pilot needs a named owner, indicators set before it starts and a decision planned at the end: continue, adjust or stop."}}], "inLanguage": "en-GB"}
@@ -1144,7 +1145,7 @@ color: var(--plum); margin: 14px 0 0;
       <a href="a-propos-en.html">About</a>
       <a href="temoignages-en.html">Testimonials</a>
       <a href="contact-en.html">Contact</a>
-      <a href="perspectives-en.html" class="active">Perspectives</a>
+      <a href="perspectives-en.html" class="active">Blog</a>
     </div>
     <div class="nav-langs">
       <a href="perspective-robots-humanoides-token-tax.html" class="nav-lang">FR</a>
@@ -1426,7 +1427,7 @@ color: var(--plum); margin: 14px 0 0;
       <a href="a-propos-en.html">About</a>
       <a href="temoignages-en.html">Testimonials</a>
       <a href="contact-en.html">Contact</a>
-      <a href="perspectives-en.html">Perspectives</a>
+      <a href="perspectives-en.html">Blog</a>
     <a href="perspective-entreprise-utilise-deja-ia-en.html" class="footer-persp-link">→ <span class="art-star" aria-label="Most-read article">★</span>Adopting <span style="color:var(--rose)">AI</span> vs. creating value</a>
     <a href="perspective-toutes-decisions-ne-se-deleguent-pas-en.html" class="footer-persp-link">→ <span class="art-star" aria-label="Most-read article">★</span>Not every decision can be delegated</a>
     <a href="perspective-transformation-echoue-rarement-technologie-en.html" class="footer-persp-link">→ <span style="color:var(--rose)">AI</span> transformation rarely fails</a>

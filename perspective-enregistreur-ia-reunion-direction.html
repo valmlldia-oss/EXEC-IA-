@@ -49,7 +49,7 @@
 --serif:     'Cormorant Garamond', Georgia, serif;
 --sans:      'Inter', 'Helvetica Neue', sans-serif;
 --nav-h:     80px;
---max:       1600px;
+--max:       1240px;
 --ease:      cubic-bezier(.25,.46,.45,.94);
 --section-gap: clamp(12px, 1.7vh, 17px);
 }
@@ -238,7 +238,7 @@ background: var(--rose); color: var(--white);
 box-shadow: 0 0 32px rgba(199,95,98,.45);
 transform: translateY(-2px);
 }
-.wrap{ max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+.wrap{ max-width: var(--max); margin: 0 auto; padding: 0 clamp(32px, 6vw, 96px); }
 @media (max-width: 900px){.ce-que-section{ padding: var(--section-gap) 0; }}
 .persp-track{
 display: flex; gap: 1.25rem;
@@ -298,18 +298,13 @@ max-width: 660px; margin: 0;
 }
 .article-source-note{
 font-family: var(--sans); font-size: .85rem; font-weight: 500;
-color: var(--plum); opacity: .55; margin: 10px 0 0;
+color: var(--plum); opacity: .85; margin: 10px 0 0;
 }
 .article-source-note a{
 color: inherit; text-decoration: underline; text-underline-offset: 2px;
 transition: opacity .2s;
 }
 .article-source-note a:hover{ opacity: .7; }
-.article-source-note--linkedin{ opacity: .85; }
-.article-linkedin-icon{
-height: 16.5px; width: auto; display: inline-block;
-vertical-align: middle; margin-right: 6px; margin-top: -2px;
-}
 .article-tldr{
 max-width: 640px; margin: 22px 0 0; border: 1px solid rgba(99,59,74,.18);
 border-radius: 10px; background: var(--ivory);
@@ -354,7 +349,7 @@ rgba(99,59,74,0) 100%);
 .article-book-folio{
 position: absolute; left: 0; right: 0; bottom: 8px; text-align: center;
 font-family: var(--sans); font-size: .72rem; font-weight: 600;
-letter-spacing: .18em; color: rgba(99,59,74,.5);
+letter-spacing: .18em; color: #6F5160;
 user-select: none;
 }
 .article-book .article-intro,
@@ -526,7 +521,7 @@ padding-bottom: 32px;
 .footer-col-title{
 font-family: var(--sans); font-size: .75rem; font-weight: 600;
 letter-spacing: .16em; text-transform: uppercase;
-color: rgba(99,59,74,.5); margin-bottom: 6px;
+color: #6F5160; margin-bottom: 6px;
 }
 .footer-col a, .footer-col .footer-loc{
 font-family: var(--sans); font-size: 1.02rem; font-weight: 400;
@@ -1049,12 +1044,12 @@ color: var(--plum); margin: 14px 0 0;
 .rbd-send-legal a{ color: var(--rose); text-decoration: none; margin-left: 2px; }
 @media (max-width: 700px){.rbd-copy-col{ border-left: 0; padding-left: 0; border-top: 1px solid var(--pale-rose); padding-top: 18px; }.rbd-task{ grid-template-columns: 1fr; }}
 @media (prefers-reduced-motion: reduce){.rbd-btn, .rbd-btn svg{ transition: none; }}
-.risk-hl{ color: var(--rose); font-weight: 600; }
 .rgpd-b, .date-b{ font-weight: 600; }
 .art-star{ font-size: 1.25em; line-height: 1; vertical-align: -0.06em; }
 .footer-col a.footer-persp-link{ position: relative; }
 .footer-persp-link .art-star{ position: absolute; right: 100%; top: 50%; transform: translateY(-52%); margin-right: .35em; font-size: 1.1em; }
 @media (min-width: 1251px){.footer-col--site .footer-persp-c2{ left: calc(18.75rem - 5px); }.footer-bottom .footer-rights{ grid-row: 1; }.footer-bottom .footer-copy{ grid-column: 2 / 4; grid-row: 1; margin-left: calc(18.75rem - 5px); }}
+:focus-visible{ outline: 2px solid var(--rose); outline-offset: 3px; border-radius: 4px; }
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Que fait un enregistreur IA en réunion ?", "acceptedAnswer": {"@type": "Answer", "text": "Il enregistre la réunion, la transcrit, puis en tire un résumé, les décisions prises et la liste des actions. Il prend la forme d'un petit boîtier posé sur la table ou d'un assistant qui rejoint automatiquement les visioconférences. Le gain est réel : plus personne ne prend de notes, chacun écoute et participe, et le compte rendu peut partir le jour même. Le risque tient à l'endroit où partent les échanges."}}, {"@type": "Question", "name": "Pourquoi Otter.ai est-il visé par une plainte ?", "acceptedAnswer": {"@type": "Answer", "text": "En août 2025, une action collective a été déposée en Californie contre Otter.ai, l'un des assistants de réunion les plus utilisés. La plainte affirme que son assistant enregistrait des participants sans leur accord, seul l'organisateur de la réunion donnant le sien, et que ces enregistrements servaient à entraîner les modèles de l'éditeur. En août 2026, un tribunal californien a laissé plusieurs demandes se poursuivre, sans juger le fond : personne n'est condamné à ce stade. Elle montre l'importance de lire le contrat de l'outil avant de l'adopter."}}, {"@type": "Question", "name": "Peut-on enregistrer un comité de direction sans prévenir ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Une réunion enregistrée contient des données personnelles : la voix, les propos et les opinions des participants. Le RGPD impose une finalité précise, une information claire, une durée de conservation limitée et des droits d'accès et d'effacement. L'article L1222-4 du Code du travail interdit en outre de collecter une information personnelle sur un salarié par un dispositif qu'il ne connaît pas à l'avance. Il faut donc prévenir chaque participant, à chaque réunion."}}, {"@type": "Question", "name": "Quelles règles fixer avant d'enregistrer une réunion de direction ?", "acceptedAnswer": {"@type": "Answer", "text": "Quatre règles suffisent. Informer chaque participant au début de chaque réunion. Recueillir son accord et proposer une prise de notes classique à qui refuse. Protéger les données avec un outil professionnel qui n'entraîne pas ses modèles sur vos échanges. Décider qui garde l'enregistrement et le résumé, et pour combien de temps. Ces règles tiennent sur une page, rattachée à la charte d'usage de l'IA de l'entreprise."}}, {"@type": "Question", "name": "Quelles réunions ne faut-il jamais enregistrer ?", "acceptedAnswer": {"@type": "Answer", "text": "Certaines réunions n'ont rien à faire dans un enregistreur, quel que soit l'outil : les entretiens individuels avec un salarié, les discussions de rachat, de cession ou de levée de fonds, les échanges avec un avocat protégés par le secret professionnel, les sujets de santé ou de situation personnelle, et les décisions sur les rémunérations. Pour ces réunions, une prise de notes classique, relue par les participants, reste la bonne méthode."}}, {"@type": "Question", "name": "Que dit l'IA Act sur les enregistreurs de réunion ?", "acceptedAnswer": {"@type": "Answer", "text": "Deux règles comptent. Sur le lieu de travail, la reconnaissance des émotions par l'IA est interdite depuis le 2 février 2025, sauf raison médicale ou de sécurité : il faut désactiver les fonctions qui prétendent analyser le ton ou l'humeur des participants. Et la règle de transparence en vigueur depuis le 2 août 2026 impose que chacun sache quand un contenu, comme un résumé de réunion, est produit par une IA."}}, {"@type": "Question", "name": "Comment choisir un enregistreur IA pour une entreprise ?", "acceptedAnswer": {"@type": "Answer", "text": "Cinq critères permettent de trier les offres : un contrat qui exclut l'entraînement des modèles sur vos enregistrements, un hébergement en Europe ou des garanties équivalentes, la suppression de l'audio une fois le texte obtenu, des accès nominatifs réservés aux membres du comité, et un export simple pour ne pas dépendre de l'éditeur. Le bon outil est celui dont vous pouvez expliquer le fonctionnement à un participant inquiet."}}, {"@type": "Question", "name": "Qui doit relire le résumé produit par l'IA ?", "acceptedAnswer": {"@type": "Answer", "text": "Une personne désignée, souvent l'assistante ou l'assistant de direction, qui connaît les dossiers et les sensibilités du comité. L'outil ne sait pas ce qui a vraiment été décidé, ni ce qui ne doit pas circuler. Cette personne relit le résumé, corrige les erreurs, retire ce qui relève de la confidence, puis le fait valider par le président de séance. Le compte rendu officiel reste ainsi un document humain."}}, {"@type": "Question", "name": "Combien de temps garder l'enregistrement d'une réunion ?", "acceptedAnswer": {"@type": "Answer", "text": "Le moins longtemps possible. Une fois le compte rendu validé, il devient la seule trace de référence et l'audio n'a plus de raison d'être conservé : le supprimer limite le risque en cas de fuite ou de demande d'accès. La durée de conservation du texte et du résumé se fixe dans la charte d'enregistrement, selon l'usage, et se vérifie chaque trimestre avec la liste des enregistrements qui existent encore."}}], "inLanguage": "fr-FR"}
@@ -1076,7 +1071,7 @@ color: var(--plum); margin: 14px 0 0;
       <a href="a-propos.html">À propos</a>
       <a href="temoignages.html">Témoignages</a>
       <a href="contact.html">Contact</a>
-      <a href="perspectives.html" class="active">Perspectives</a>
+      <a href="perspectives.html" class="active">Blog</a>
     </div>
     <div class="nav-langs">
       <span class="nav-lang nav-lang-active">FR</span>
@@ -1284,7 +1279,7 @@ color: var(--plum); margin: 14px 0 0;
       <a href="a-propos.html">À propos</a>
       <a href="temoignages.html">Témoignages</a>
       <a href="contact.html">Contact</a>
-      <a href="perspectives.html">Perspectives</a>
+      <a href="perspectives.html">Blog</a>
     <a href="perspective-entreprise-utilise-deja-ia.html" class="footer-persp-link">→ <span class="art-star" aria-label="Article le plus lu">★</span>Votre entreprise utilise déjà l’<span style="color:var(--rose)">IA</span></a>
     <a href="perspective-toutes-decisions-ne-se-deleguent-pas.html" class="footer-persp-link">→ <span class="art-star" aria-label="Article le plus lu">★</span>Toutes les décisions ne se délèguent pas</a>
     <a href="perspective-transformation-echoue-rarement-technologie.html" class="footer-persp-link">→ La transformation <span style="color:var(--rose)">IA</span> échoue rarement</a>

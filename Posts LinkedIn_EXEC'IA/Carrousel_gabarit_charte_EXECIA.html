@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Votre site est-il lisible par les IA ?</title>
+<style>
+@page{size:1080px 1350px;margin:0}
+/* Polices réellement affichées par exec-ia.ai : titres en Georgia, textes en Helvetica Neue.
+   Couleurs du site : fond #F6F1EB, prune #633B4A, prune foncé #4F2F3B, bandeau #3D2030,
+   terracotta #C75F62 strict (sur-titres, filets, petits traits, mot crucial), rose minéral #D9C9C3 (bordures), ivoire clair #FAF6F2.
+   Jamais de gras : 500 au maximum. */
+:root{--terra:#C75F62;--prune:#633B4A;--prune2:#633B4A;--bande:#633B4A;--fond:#F6F1EB;--rose:#D9C9C3;--clair:#FAF6F2;--chiffre:#F5F1EC;
+ --titre:Georgia,'Times New Roman',serif;--texte:'Helvetica Neue',Helvetica,Arial,sans-serif}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:var(--texte);color:var(--prune);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:1080px;height:1350px;position:relative;overflow:hidden;page-break-after:always;break-after:page;background:var(--fond);padding:96px 92px 150px;display:flex;flex-direction:column;align-items:flex-start}
+.page:last-child{page-break-after:auto;break-after:auto}
+.page.bandee{padding-bottom:300px}
+.logo{position:absolute;top:66px;right:30px;width:190px;height:auto}
+.pre{font-size:22px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--terra);margin:0}
+.pre.leger{font-weight:400}
+.pre b{font-weight:500}
+h1,h2{font-family:var(--titre);font-weight:400;color:var(--prune);letter-spacing:-.01em;line-height:1.18;margin:26px 0 0;border-left:3px solid var(--terra);padding-left:24px;margin-left:-27px}
+h1{font-size:68px}
+h2{font-size:52px}
+.cle{color:var(--terra)}
+.sous{font-size:25px;line-height:1.5;margin:22px 0 0;color:var(--prune)}
+.centre{margin-top:auto;margin-bottom:auto;align-self:stretch}
+.foot{position:absolute;left:92px;right:92px;bottom:56px;display:flex;justify-content:space-between;font-size:20px;color:var(--prune)}
+.bandee .foot{bottom:262px}
+/* bandeau des chiffres, comme sur le site */
+.bandeau{position:absolute;left:0;right:0;bottom:0;height:226px;background:var(--bande);display:flex;padding:26px 0}
+.bandeau div{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:var(--chiffre)}
+.bandeau div + div{border-left:1px solid rgba(250,246,242,.18)}
+.bandeau .n{font-family:var(--titre);font-size:66px;line-height:1;color:var(--chiffre)}
+.bandeau .n sup{font-family:var(--texte);font-size:30px;color:var(--terra);vertical-align:top;margin-left:4px;position:relative;top:-6px}
+.bandeau .l1{font-size:17px;letter-spacing:.12em;text-transform:uppercase;margin-top:18px}
+.bandeau .l2{font-size:17px;letter-spacing:.12em;text-transform:uppercase;margin-top:8px;font-weight:500}
+.bandeau .l2 i{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--terra);margin:0 10px;vertical-align:2px}
+.bandeau div::after{content:"";width:36px;height:2px;background:var(--terra);margin-top:16px}
+/* couverture */
+.photo{width:250px;height:250px;border-radius:50%;object-fit:cover;border:5px solid var(--rose);margin-top:30px}
+.criteres{font-family:var(--titre);font-size:24.6px;line-height:1.6;margin:18px 0 0;color:var(--prune2);white-space:nowrap}
+.criteres i{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--terra);margin:0 12px;vertical-align:3px}
+.cta{margin-top:30px;align-self:flex-end;font-size:23px;font-weight:500;background:var(--terra);color:var(--clair);border-radius:99px;padding:14px 30px}
+/* chiffres */
+.grille{display:grid;grid-template-columns:1fr 1fr}
+.grille div{padding:34px 26px;text-align:center;display:flex;flex-direction:column;align-items:center}
+.grille div:nth-child(odd){border-right:1px solid var(--rose)}
+.grille div:nth-child(-n+2){border-bottom:1px solid var(--rose)}
+.grille .n{font-family:var(--titre);font-size:68px;line-height:1;color:var(--prune2)}
+.grille .n sup{font-family:var(--texte);font-size:30px;color:var(--terra);vertical-align:top;margin-left:4px}
+.grille p{font-size:22px;line-height:1.45;margin:16px 0 0;max-width:390px}
+.grille div::after{content:"";width:36px;height:2px;background:var(--terra);margin-top:18px}
+.src{font-size:21px;line-height:1.5;margin:30px 0 0;color:var(--prune)}
+/* le mot */
+.phrase{font-family:var(--titre);font-size:40px;line-height:1.4;color:var(--prune2);margin:0}
+.question{font-family:var(--titre);font-size:36px;color:var(--prune);margin:40px 0 0;display:flex;align-items:center;gap:18px}
+.doigt{font-family:var(--texte);font-size:36px;line-height:1;color:var(--terra)}
+.def{font-size:25px;line-height:1.55;margin:44px 0 0;border-left:3px solid var(--terra);padding-left:26px}
+/* cartes numérotées */
+.cartes{display:grid;gap:20px}
+.encadre{background:#FCF9F5;border:1px solid rgba(99,59,74,.09);border-radius:16px;box-shadow:0 20px 44px -30px rgba(99,59,74,.22);padding:34px 26px 38px;text-align:center}
+.encadre .site{font-family:var(--titre);font-size:28px;letter-spacing:.01em;text-transform:none;color:var(--prune);border:1.5px solid rgba(99,59,74,.35);border-radius:22px;padding:4px 18px;margin-left:10px;vertical-align:middle}
+.encadre .entete{font-size:21px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--terra);margin:0}
+.filet{display:block;width:52px;height:2px;background:var(--terra);margin:14px auto 0}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);margin-top:30px}
+.col{padding:6px 18px;display:flex;flex-direction:column;align-items:center}
+.col + .col{border-left:1px solid rgba(99,59,74,.14)}
+.cols.c4{grid-template-columns:repeat(4,1fr)}.cols.c4 .col{padding:6px 6px}.cols.c4 .col .nom{padding:6px 14px}
+.cols.c2{grid-template-columns:repeat(2,1fr)}
+.col .no{font-family:var(--titre);font-size:34px;color:var(--terra);line-height:1}
+.col .nom{font-size:24px;line-height:1.3;margin-top:16px;font-family:var(--titre);font-weight:400;color:var(--prune);background:transparent;border:1.5px solid rgba(99,59,74,.35);border-radius:22px;padding:6px 22px;letter-spacing:0;text-transform:none}
+.col .filet{width:30px;margin-top:14px}
+.col .val{font-family:var(--titre);font-size:64px;line-height:1;color:var(--prune);margin-top:20px}
+.col .val small{font-size:24px;margin-left:2px}
+.col .quoi{font-size:21px;line-height:1.45;margin:16px 0 0}
+.carte{background:var(--clair);border:1px solid var(--rose);border-radius:16px;padding:24px 30px;display:grid;grid-template-columns:48px 1fr auto;gap:0 22px;align-items:center}
+.carte.sans-note{grid-template-columns:48px 1fr;margin:0 -52px;padding:24px 32px}
+.carte.sans-note p{font-size:21.5px}
+.carte .num{font-family:var(--titre);font-size:44px;line-height:1;color:var(--prune2);align-self:start;margin-top:4px}
+.etiq{display:inline-block;font-size:19.3px;font-weight:500;letter-spacing:.03em;background:transparent;border:1px solid var(--terra);color:var(--prune2);border-radius:99px;padding:4px 15px;margin-bottom:10px}
+.ia{color:var(--terra)}
+.bandeau .n sup{font-size:26px}
+.carte h3{margin:0;font-size:26px;font-weight:500;color:var(--prune2);line-height:1.3}
+.carte p{margin:6px 0 0;font-size:22px;line-height:1.45}
+.note{font-family:var(--titre);font-size:66px;line-height:1;color:var(--prune2);text-align:right;min-width:130px}
+.note small{display:block;font-family:var(--texte);font-size:18px;color:var(--prune);margin-top:6px}
+.mesure{font-size:21px;margin:20px 0 0}
+/* fin */
+.puces{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+.puce{font-size:25px;font-family:var(--titre);font-weight:400;color:var(--prune);background:transparent;border:1.5px solid rgba(99,59,74,.35);border-radius:22px;padding:6px 22px;letter-spacing:0;text-transform:none}
+.pt{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--terra);margin:0 8px;vertical-align:3px}
+.bouton{display:inline-block;margin-top:34px;font-size:24px;font-weight:500;background:var(--terra);color:var(--clair);border-radius:99px;padding:14px 30px}
+.puce::before{content:"✓";color:var(--terra);margin-right:10px;font-family:var(--texte)}
+</style>
+</head>
+<body>
+
+<!-- 1 · Couverture -->
+<section class="page bandee">
+  <img class="logo" src="file:///Users/valeriemailland/Desktop/execia-v1-prune/assets/logo-execia-bords-prune.png" alt="EXEC'IA Consulting">
+  <img class="photo" src="file:///Users/valeriemailland/Desktop/execia-v1-prune/assets/photo-valerie.jpg" alt="">
+  <div class="centre">
+    <p class="pre leger">Le mot <span class="ia">IA</span> de la semaine · <b>GEO</b></p>
+    <h1>Votre site est-il lisible<br>par les <span class="ia">IA</span>&nbsp;?</h1>
+    <p class="sous">Les six critères du GEO expliqués simplement, avec mon site en exemple&nbsp;:</p>
+    <p class="criteres">Technique<i></i>Performance<i></i>Confiance<i></i>Visibilité <span class="ia">IA</span><i></i>Contenu<i></i>Citabilité</p>
+  </div>
+  <span class="cta">Faites défiler →</span>
+  <div class="foot"><span>Valérie Mailland</span><span>exec-ia.ai · 1 / 8</span></div>
+  <div class="bandeau">
+    <div><span class="n">6</span><span class="l1">critères GEO</span><span class="l2">notés /100</span></div>
+    <div><span class="n">99<sup>/100</sup></span><span class="l1">note moyenne</span><span class="l2">de mon site</span></div>
+    <div><span class="n">5</span><span class="l1">minutes</span><span class="l2">pour tester le vôtre</span></div>
+  </div>
+</section>
+
+<!-- 2 · Les chiffres -->
+<section class="page">
+  <img class="logo" src="file:///Users/valeriemailland/Desktop/execia-v1-prune/assets/logo-execia-bords-prune.png" alt="EXEC'IA Consulting">
+  <p class="pre">Ce qui a changé</p>
+  <h2>Vos clients posent leurs questions<br>aux <span class="ia">IA</span>.</h2>
+  <div class="centre">
+    <div class="grille">
+      <div><span class="n">1 sur 2</span><p>Français utilise une <span class="ia">IA</span> générative chaque semaine (ChatGPT, Claude, Gemini, Le Chat…).<br>Ils étaient 29&nbsp;% un an plus tôt.</p></div>
+      <div><span class="n">23<sup>%</sup></span><p>des Français utilisent une <span class="ia">IA</span> générative chaque jour, contre 14&nbsp;% en 2025.</p></div>
+      <div><span class="n">83<sup>%</sup></span><p>des Français connaissent les <span class="ia">IA</span> génératives&nbsp;: 17 points de plus<br>en un an.</p></div>
+      <div><span class="n">9,3<sup>%</sup></span><p>de l'audience web mondiale des <span class="ia">IA</span> va à Claude d'Anthropic, contre 1,9&nbsp;% un an plus tôt.</p></div>
+    </div>
+    <div class="src">Sources&nbsp;:<br>- étude Ipsos pour Eskimoz, agence française de référencement, mai 2026&nbsp;;<br>- Similarweb, mesure d'audience des sites, septembre 2026.</div>
+  </div>
+  <div class="foot"><span>Valérie Mailland</span><span>exec-ia.ai · 2 / 8</span></div>
+</section>
+
+<!-- 3 · Le mot à comprendre -->
+<section class="page">
+  <img class="logo" src="file:///Users/valeriemailland/Desktop/execia-v1-prune/assets/logo-execia-bords-prune.png" alt="EXEC'IA Consulting">
+  <p class="pre">Le mot à comprendre</p>
+  <h2>GEO, c'est quoi&nbsp;?</h2>
+  <div class="centre">
+    <p class="phrase">Le SEO aide Google à <span class="cle">vous trouver</span>.<br>Le GEO aide les <span class="ia">IA</span> à <span class="cle">vous citer</span>.</p>
+    <p class="def">GEO&nbsp;: «&nbsp;Generative Engine Optimization&nbsp;».<br>Rendre votre site clair, structuré et fiable aux yeux des <span class="ia">IA</span>, pour qu'elles le citent quand elles répondent à vos clients.</p>
+    <p class="question"><span class="doigt">→</span>Le vôtre en fait-il partie&nbsp;?</p>
+  </div>
+  <div class="foot"><span>Valérie Mailland</span><span>exec-ia.ai · 3 / 8</span></div>
+</section>
+
+<!-- 4 · Ce que voit Google -->
+<section class="page">
+  <img class="logo" src="file:///Users/valeriemailland/Desktop/execia-v1-prune/assets/logo-execia-bords-prune.png" alt="EXEC'IA Consulting">
+  <p class="pre">Les 6 critères · les meilleures notes</p>
+  <h2>Quatre critères au plus haut</h2>
+  <p class="sous">Les fondations, et des réponses que les <span class="ia">IA</span> peuvent reprendre telles quelles.</p>
+  <div class="centre">
+    <div class="encadre"><p class="entete">Les notes de <span class="site">exec-ia.ai</span></p><span class="filet"></span>
+      <div class="cols c4"><div class="col"><span class="no">01</span><span class="nom">Technique</span><span class="filet"></span><span class="val">100<small>/100</small></span><p class="quoi">Chaque page se lit et s'indexe&nbsp;: titres, sécurité, plan du site.</p></div><div class="col"><span class="no">02</span><span class="nom">Performance</span><span class="filet"></span><span class="val">99<small>/100</small></span><p class="quoi">Le site s'affiche vite sur mobile, mesuré avec Lighthouse, l'outil de Google.</p></div><div class="col"><span class="no">03</span><span class="nom">Confiance</span><span class="filet"></span><span class="val">100<small>/100</small></span><p class="quoi">On sait qui parle&nbsp;: auteur, mentions légales, sources, dates.</p></div><div class="col"><span class="no">04</span><span class="nom">Citabilité</span><span class="filet"></span><span class="val">100<small>/100</small></span><p class="quoi">Chaque réponse se suffit à elle-même&nbsp;: une <span class="ia">IA</span> peut la reprendre telle quelle.</p></div></div>
+    </div>
+  </div>
+  <div class="foot"><span>Valérie Mailland</span><span>exec-ia.ai · 4 / 8</span></div>
+</section>
+
+<!-- 5 · Ce que voient les IA -->
+<section class="page">
+  <img class="logo" src="file:///Users/valeriemailland/Desktop/execia-v1-prune/assets/logo-execia-bords-prune.png" alt="EXEC'IA Consulting">
+  <p class="pre">Les 6 critères · la différence</p>
+  <h2>Deux critères qui font la différence</h2>
+  <p class="sous">Le niveau d'exigence que j'apporte à mes clients.</p>
+  <div class="centre">
+    <div class="encadre"><p class="entete">Les notes de <span class="site">exec-ia.ai</span></p><span class="filet"></span>
+      <div class="cols c2"><div class="col"><span class="no">01</span><span class="nom">Visibilité <span class="ia">IA</span></span><span class="filet"></span><span class="val">98<small>/100</small></span><p class="quoi">Les <span class="ia">IA</span> comprennent qui vous êtes&nbsp;: données structurées, questions balisées.</p></div><div class="col"><span class="no">02</span><span class="nom">Contenu</span><span class="filet"></span><span class="val">97<small>/100</small></span><p class="quoi">Des articles approfondis, sources datées, en trois langues.</p></div></div>
+    </div>
+  </div>
+  <div class="foot"><span>Valérie Mailland</span><span>exec-ia.ai · 5 / 8</span></div>
+</section>
+
+<!-- 6 · À tester -->
+<section class="page">
+  <img class="logo" src="file:///Users/valeriemailland/Desktop/execia-v1-prune/assets/logo-execia-bords-prune.png" alt="EXEC'IA Consulting">
+  <p class="pre">À tester</p>
+  <h2>Votre site en 5 minutes</h2>
+  <div class="centre">
+    <div class="cartes">
+      <div class="carte sans-note"><span class="num">1</span><div><h3>Demandez à une <span class="ia">IA</span></h3><p>«&nbsp;Que sais-tu de [votre entreprise]&nbsp;?&nbsp;»<br>Sa réponse montre ce que les <span class="ia">IA</span> ont compris de vous.</p></div></div>
+      <div class="carte sans-note"><span class="num">2</span><div><h3>Mesurez la vitesse</h3><p>Passez votre page d'accueil dans «&nbsp;PageSpeed Insights&nbsp;» (l'outil gratuit de Google).<br>Visez une note d'au moins 90 sur 100 sur mobile.</p></div></div>
+      <div class="carte sans-note"><span class="num">3</span><div><h3>Relisez votre page d'accueil</h3><p>Dit-elle en une phrase qui vous êtes, ce que vous faites et pour qui&nbsp;?</p></div></div>
+    </div>
+  </div>
+  <div class="foot"><span>Valérie Mailland</span><span>exec-ia.ai · 6 / 8</span></div>
+</section>
+
+<!-- 7 · Mon avis -->
+<section class="page">
+  <img class="logo" src="file:///Users/valeriemailland/Desktop/execia-v1-prune/assets/logo-execia-bords-prune.png" alt="EXEC'IA Consulting">
+  <p class="pre">Mon avis</p>
+  <h2>Le vrai sujet</h2>
+  <div class="centre">
+    <p class="phrase">Vos clients découvrent votre entreprise à travers une <span class="ia">IA</span>, parfois avant même de visiter votre site.<br>Autant qu'elle en parle avec justesse&nbsp;!</p>
+    <p class="def">Ces notes ne mesurent pas l'audience ni les ventes.<br>Elles disent si votre site est prêt à être lu, compris et cité.<br><span style="color:var(--terra)">Valérie</span></p>
+  </div>
+  <div class="foot"><span>Valérie Mailland</span><span>exec-ia.ai · 7 / 8</span></div>
+</section>
+
+<!-- 8 · Présentation -->
+<section class="page bandee">
+  <img class="logo" src="file:///Users/valeriemailland/Desktop/execia-v1-prune/assets/logo-execia-bords-prune.png" alt="EXEC'IA Consulting">
+  <img class="photo" src="file:///Users/valeriemailland/Desktop/execia-v1-prune/assets/photo-valerie.jpg" alt="">
+  <div class="centre">
+    <p class="pre">Et maintenant&nbsp;?</p>
+    <h1>Je suis Valérie.</h1>
+    <p class="sous">J'aide les dirigeants de PME à décider avant d'investir dans l'<span class="ia">IA</span>.<br>Je conçois des sites qui passent les critères de Google et des <span class="ia">IA</span>.</p>
+    <div class="puces">
+      <span class="puce">Consultante <span class="ia">IA</span> certifiée <i class="pt"></i> Studeria</span>
+      <span class="puce">Certificat ESSEC «&nbsp;<span class="ia">IA</span>, Data et création de valeur&nbsp;» (en cours)</span>
+    </div>
+    <p class="sous">C'est ce standard d'exigence que j'applique à chaque site client.</p>
+    <span class="bouton">Suivez-moi pour le prochain mot IA de la semaine →</span>
+  </div>
+  <div class="foot"><span>Valérie Mailland</span><span>exec-ia.ai · 8 / 8</span></div>
+  <div class="bandeau">
+    <div><span class="n">20<sup>+</sup></span><span class="l1">ans auprès de</span><span class="l2">dirigeants</span></div>
+    <div><span class="n">98<sup>%</sup></span><span class="l1">certification</span><span class="l2"><span class="ia">IA</span> générative</span></div>
+    <div><span class="n">8<sup>+</sup></span><span class="l1">années à l'étranger</span><span class="l2">France<i></i>International</span></div>
+  </div>
+</section>
+
+</body>
+</html>

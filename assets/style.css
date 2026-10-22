@@ -17,7 +17,7 @@
   --serif:     'Cormorant Garamond', Georgia, serif;
   --sans:      'Inter', 'Helvetica Neue', sans-serif;
   --nav-h:     80px;
-  --max:       1600px;
+  --max:       1240px;
   --ease:      cubic-bezier(.25,.46,.45,.94);
   /* RÈGLE GLOBALE — respiration verticale entre deux sections.
      Espace visible avant un pré-titre = padding-bottom section A + padding-top
@@ -255,7 +255,7 @@ strong, b { font-weight: 600; }
 .nav-wm-sep { display: flex; align-items: center; width: 100%; gap: 0; margin: 3px 0 2px; }
 .nav-wm-line { flex: 1; height: 1px; background: var(--plum); opacity: .3; display: block; }
 .nav-wm-dot  { width: 4px; height: 4px; border-radius: 50%; background: var(--rose); flex-shrink: 0; margin: 0 4px; display: block; }
-.nav-wm-consulting { font-family: var(--sans); font-size: .52rem; font-weight: 400; letter-spacing: .2em; text-transform: uppercase; color: var(--plum); opacity: .55; width: 100%; text-align: center; }
+.nav-wm-consulting { font-family: var(--sans); font-size: .52rem; font-weight: 400; letter-spacing: .2em; text-transform: uppercase; color: var(--plum); opacity: .85; width: 100%; text-align: center; }
 .nav-brand-info { display: flex; flex-direction: column; justify-content: center; }
 .nav-brand-name {
   font-family: var(--serif); font-size: 1.7rem; font-weight: 600;
@@ -394,7 +394,7 @@ strong, b { font-weight: 600; }
 }
 
 .hero-wrap {
-  max-width: var(--max); margin: 0 auto; padding: 0 24px 4px;
+  max-width: var(--max); margin: 0 auto; padding: 0 clamp(32px, 6vw, 96px) 4px;
   display: flex; align-items: center;
   justify-content: space-between; gap: 0;
   position: relative; z-index: 2;
@@ -591,7 +591,7 @@ strong, b { font-weight: 600; }
 .stat-chip strong { color: var(--plum); font-weight: 600; }
 
 .hero-cta {
-  display: flex; flex-direction: column; gap: 10px; align-items: flex-start;
+  display: flex; flex-direction: row; flex-wrap: wrap; gap: 14px 16px; align-items: center;
   margin-top: 44px;
   animation: slideup .9s var(--ease) .4s both;
 }
@@ -601,16 +601,17 @@ strong, b { font-weight: 600; }
   white-space: normal;
 }
 .hero-cta-link {
-  display: inline-flex; align-items: center; gap: 6px;
-  font-family: var(--sans); font-size: .9rem; font-weight: 500;
-  color: var(--plum); text-decoration: none;
-  letter-spacing: .04em;
-  border-bottom: 1px solid rgba(99,59,74,.3);
-  padding-bottom: 2px;
-  transition: color .2s, border-color .2s;
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--sans); font-size: 1.16rem; font-weight: 500;
+  color: var(--rose); text-decoration: none;
+  letter-spacing: .025em;
+  background: var(--white);
+  border: 1.5px solid var(--rose); border-radius: 32px;
+  padding: 16px 32px;
+  transition: color .2s, background .2s, border-color .2s;
 }
 .hero-cta-link strong { font-weight: 600; }
-.hero-cta-link:hover { color: var(--rose); border-color: var(--rose); }
+.hero-cta-link:hover { color: var(--white); background: var(--rose); border-color: var(--rose); }
 .hero-cta-link .portrait-link-arrow { display: inline-block; }
 .hero-cta-link:hover .portrait-link-arrow { transform: translateX(4px); }
 /* Discret rappel visuel périodique — incite au téléchargement sans être criard */
@@ -842,7 +843,7 @@ section { padding: var(--section-gap) 0; }
 .bg-plum  {
   background: var(--deep);
 }
-.wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 clamp(32px, 6vw, 96px); }
 .eyebrow {
   display: block; margin-bottom: 18px;
   font-size: clamp(.8rem, 1vw, .95rem); font-weight: 600;
@@ -1033,7 +1034,7 @@ section { padding: var(--section-gap) 0; }
   font-size: clamp(1.1rem, 1.6vw, 1.4rem);
   font-weight: 400;
   font-style: italic;
-  color: rgba(99,59,74,.5);
+  color: #6F5160;
   margin-bottom: 14px;
 }
 .about-lede {
@@ -1177,7 +1178,7 @@ section { padding: var(--section-gap) 0; }
 .persp-card-visual-tag {
   font-family: var(--sans); font-weight: 600; font-size: 1.68rem;
   letter-spacing: -.02em; text-transform: uppercase;
-  color: rgba(99,59,74,.28);
+  color: #6F5160;
   white-space: nowrap;
 }
 .persp-card-meta {
@@ -1209,7 +1210,7 @@ section { padding: var(--section-gap) 0; }
 .persp-card--link:hover .persp-card-read .portrait-link-arrow { transform: translateX(4px); }
 .persp-card-soon {
   display: inline-block; font-family: var(--sans); font-size: .8rem;
-  font-weight: 600; color: var(--plum); opacity: .45; margin-top: 6px;
+  font-weight: 600; color: var(--plum); opacity: .85; margin-top: 6px;
 }
 .persp-all-link {
   display: inline-flex; align-items: center; gap: 6px;
@@ -1286,7 +1287,7 @@ section { padding: var(--section-gap) 0; }
 .home-persp-card-visual-tag {
   font-family: var(--sans); font-weight: 600; font-size: 1.32rem;
   letter-spacing: -.01em; text-transform: uppercase;
-  color: rgba(99,59,74,.28); text-align: center; padding: 0 14px;
+  color: #6F5160; text-align: center; padding: 0 14px;
 }
 /* Article publié : vraie image de couverture, à la place du mot-fantôme */
 .home-persp-card-visual--img img { width: 100%; height: 100%; object-fit: cover; object-position: 68% 32%; display: block; }
@@ -1383,7 +1384,7 @@ section { padding: var(--section-gap) 0; }
 /* Note discrète — provenance LinkedIn / source citée */
 .article-source-note {
   font-family: var(--sans); font-size: .85rem; font-weight: 500;
-  color: var(--plum); opacity: .55; margin: 10px 0 0;
+  color: var(--plum); opacity: .85; margin: 10px 0 0;
 }
 .article-source-note a {
   color: inherit; text-decoration: underline; text-underline-offset: 2px;
@@ -1462,7 +1463,7 @@ section { padding: var(--section-gap) 0; }
 .article-book-folio {
   position: absolute; left: 0; right: 0; bottom: 8px; text-align: center;
   font-family: var(--sans); font-size: .72rem; font-weight: 600;
-  letter-spacing: .18em; color: rgba(99,59,74,.5);
+  letter-spacing: .18em; color: #6F5160;
   user-select: none;
 }
 .article-book .article-intro,
@@ -1999,7 +2000,7 @@ section { padding: var(--section-gap) 0; }
   .tl-item--essec .tl-role { white-space: nowrap; }
 }
 /* Séparateurs discrets entre compétences */
-.tl-pipe { color: rgba(99,59,74,.28); margin: 0 .55em; font-weight: 400; }
+.tl-pipe { color: #6F5160; margin: 0 .55em; font-weight: 400; }
 /* Certification + réassurance (Qualiopi / ISO) sur une seule ligne */
 .tl-cert-row {
   display: flex; align-items: center; gap: 30px; flex-wrap: wrap;
@@ -2453,7 +2454,7 @@ footer { background: #633B4A; padding: 0 36px 22px; text-align: center; }
 .footer-col-title {
   font-family: var(--sans); font-size: .75rem; font-weight: 600;
   letter-spacing: .16em; text-transform: uppercase;
-  color: rgba(99,59,74,.5); margin-bottom: 6px;
+  color: #6F5160; margin-bottom: 6px;
 }
 /* Hiérarchie de lisibilité : menu 95 % — coordonnées 90 % */
 .footer-col a, .footer-col .footer-loc {
@@ -5050,12 +5051,12 @@ body > section.newsletter-section.snap-page, body > main > section.newsletter-se
 .nl-box .nl-box-trust { color: var(--plum-muted); }
 .nl-box .nl-box-lead { color: rgba(99,59,74,.7); }
 .nl-box .nl-form-back {
-  border-color: rgba(99,59,74,.28);
+  border-color: #6F5160;
   color: rgba(99,59,74,.68);
 }
 .nl-box .nl-form-back:hover {
   color: var(--plum);
-  border-color: rgba(99,59,74,.5);
+  border-color: #6F5160;
 }
 .nl-box .nl-gate-field label { color: rgba(99,59,74,.68); }
 .nl-box .nl-gate-field input {
@@ -5868,7 +5869,7 @@ body > section.newsletter-section.snap-page, body > main > section.newsletter-se
   border-top: 1px solid rgba(99,59,74,.1);
   height: auto; min-height: 0;
   justify-content: flex-start;
-  padding: clamp(10px, 1.4vh, 16px) 0 0;
+  padding: clamp(72px, 11vh, 128px) 0 clamp(64px, 9vh, 112px);
   scroll-margin-top: var(--nav-h);
 }
 .maf-band {
@@ -7791,3 +7792,15 @@ body.cookie-modal-open { overflow: hidden; }
 #perspectives h1.section-title { font-size: clamp(1.8rem, 3.2vw, 2.6rem); line-height: 1.3; white-space: normal; }
 @media (max-width: 860px) { #perspectives h1.section-title { font-size: clamp(1.3rem, 2.2vw, 1.8rem); } }
 @media (max-width: 768px) { #perspectives h1.section-title { font-size: 1.3rem; } }
+
+/* Accessibilité : focus clavier visible sur tous les liens et boutons */
+:focus-visible { outline: 2px solid var(--rose); outline-offset: 3px; border-radius: 4px; }
+@media (max-width: 760px){ .hero-cta-link { font-size: .98rem; padding: 14px 18px; text-align: center; line-height: 1.3; width: 100%; justify-content: center; } }
+
+/* Découvrir le parcours : espace sous le lien, pour que son filet ne touche plus le bandeau suivant */
+.mon-approche-content .portrait-link { margin-bottom: clamp(40px, 6vh, 72px); padding-bottom: 8px; }
+.mon-approche-section { padding-bottom: clamp(72px, 10vh, 120px) !important; }
+
+/* Bouton secondaire : plus d'air autour du contour et du texte */
+.hero-cta-link { padding: 18px 38px; }
+@media (max-width: 760px){ .hero-cta-link { padding: 16px 22px; } }

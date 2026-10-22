@@ -49,7 +49,7 @@
 --serif:     'Cormorant Garamond', Georgia, serif;
 --sans:      'Inter', 'Helvetica Neue', sans-serif;
 --nav-h:     80px;
---max:       1600px;
+--max:       1240px;
 --ease:      cubic-bezier(.25,.46,.45,.94);
 --section-gap: clamp(12px, 1.7vh, 17px);
 }
@@ -239,7 +239,7 @@ box-shadow: 0 0 32px rgba(199,95,98,.45);
 transform: translateY(-2px);
 }
 section{ padding: var(--section-gap) 0; }
-.wrap{ max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+.wrap{ max-width: var(--max); margin: 0 auto; padding: 0 clamp(32px, 6vw, 96px); }
 @media (max-width: 900px){.ce-que-section{ padding: var(--section-gap) 0; }}
 .persp-track{
 display: flex; gap: 1.25rem;
@@ -299,7 +299,7 @@ max-width: 660px; margin: 0;
 }
 .article-source-note{
 font-family: var(--sans); font-size: .85rem; font-weight: 500;
-color: var(--plum); opacity: .55; margin: 10px 0 0;
+color: var(--plum); opacity: .85; margin: 10px 0 0;
 }
 .article-source-note a{
 color: inherit; text-decoration: underline; text-underline-offset: 2px;
@@ -350,7 +350,7 @@ rgba(99,59,74,0) 100%);
 .article-book-folio{
 position: absolute; left: 0; right: 0; bottom: 8px; text-align: center;
 font-family: var(--sans); font-size: .72rem; font-weight: 600;
-letter-spacing: .18em; color: rgba(99,59,74,.5);
+letter-spacing: .18em; color: #6F5160;
 user-select: none;
 }
 .article-book .article-intro,
@@ -533,7 +533,7 @@ padding-bottom: 32px;
 .footer-col-title{
 font-family: var(--sans); font-size: .75rem; font-weight: 600;
 letter-spacing: .16em; text-transform: uppercase;
-color: rgba(99,59,74,.5); margin-bottom: 6px;
+color: #6F5160; margin-bottom: 6px;
 }
 .footer-col a, .footer-col .footer-loc{
 font-family: var(--sans); font-size: 1.02rem; font-weight: 400;
@@ -1123,6 +1123,7 @@ color: var(--plum); margin: 14px 0 0;
 .footer-col a.footer-persp-link{ position: relative; }
 .footer-persp-link .art-star{ position: absolute; right: 100%; top: 50%; transform: translateY(-52%); margin-right: .35em; font-size: 1.1em; }
 @media (min-width: 1251px){.footer-col--site .footer-persp-c2{ left: calc(18.75rem - 5px); }.footer-bottom .footer-rights{ grid-row: 1; }.footer-bottom .footer-copy{ grid-column: 2 / 4; grid-row: 1; margin-left: calc(18.75rem - 5px); }}
+:focus-visible{ outline: 2px solid var(--rose); outline-offset: 3px; border-radius: 4px; }
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Pourquoi raisonner en tâches plutôt qu’en métiers ?", "acceptedAnswer": {"@type": "Answer", "text": "Parce qu’un métier est un assemblage de tâches. Un robot humanoïde peut reprendre les tâches physiques et répétitives, comme déplacer des bacs. Le jugement, la relation et la responsabilité restent humains. Raisonner en tâches évite deux erreurs opposées : croire que rien ne changera, ou croire que tout disparaîtra. Concrètement, il suffit de lister les tâches d’un poste, d’estimer leur durée chaque semaine et de repérer celles qu’une machine pourrait assurer. Le métier se transforme alors tâche par tâche, et l’entreprise peut anticiper la formation des personnes concernées."}}, {"@type": "Question", "name": "Quels métiers les robots humanoïdes viseront-ils d’abord ?", "acceptedAnswer": {"@type": "Answer", "text": "Les métiers où les tâches sont physiques, répétitives ou pénibles, dans des lieux pensés pour des humains : logistique, industrie, commerce, BTP, agriculture, santé pour le transport de matériel. Ce sont souvent des métiers en tension : la Dares compte 457 500 emplois vacants dans le secteur privé au 2e trimestre 2026 (chiffre révisé du 15 septembre 2026). Pour une PME, ces postes vacants sont un point d'entrée logique : un robot qui prend en charge une tâche pénible peut rendre un poste plus attractif, sans remplacer la personne qui l'occupe."}}, {"@type": "Question", "name": "Les robots humanoïdes arrivent-ils tout de suite dans les entreprises ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Ils restent chers, lents sur des gestes simples pour un humain et fragiles face à l’imprévu. Selon l’analyste Ming-Chi Kuo, Apple ne produirait pas ses robots en série avant 2028. Ce délai sert à préparer : cartographier les tâches, décider ce qui doit rester humain. Une PME n’a donc aucun intérêt à se précipiter. Elle gagne à utiliser ces années pour comprendre ses propres tâches, suivre les premiers pilotes de son secteur et préparer ses équipes, plutôt que d’acheter une technologie encore immature."}}, {"@type": "Question", "name": "Qui fabrique les robots humanoïdes ?", "acceptedAnswer": {"@type": "Answer", "text": "Au premier semestre 2026, 97 % des robots humanoïdes livrés dans le monde venaient de Chine, avec AgiBot et Unitree en tête. Pour la France et l’Europe, la question est de concevoir et d’exploiter ses robots, ou de les acheter clés en main, avec les données qu’ils recueillent. Cette domination pèse sur la souveraineté : un robot connecté recueille des données sur les sites, les gestes et les rythmes de travail. Savoir où partent ces données et qui peut y accéder fait partie du choix d’un fournisseur, au même titre que le prix."}}, {"@type": "Question", "name": "Qu’est-ce que la « token tax » ?", "acceptedAnswer": {"@type": "Answer", "text": "Une taxe sur l’usage de l’IA, prélevée sur les tokens, l’unité que les modèles d’IA traitent et facturent. Bill Gates défend l’idée de taxer les tokens et les robots. Aux États-Unis, un projet de loi déposé au Congrès en août 2026, l’AI Tax and Work Protection Act, propose un taux de 2 % sur la valeur des tokens quand le chômage est à 5 % ou moins, en hausse avec le chômage. Les recettes financeraient emplois et reconversion ; certains y voient la base d’un revenu universel."}}, {"@type": "Question", "name": "Que peut faire une PME dès maintenant ?", "acceptedAnswer": {"@type": "Answer", "text": "Trois gestes, sans investir : lister les tâches de chaque poste et leur durée ; repérer les postes difficiles à pourvoir et ce qui les rend pénibles ; décider ce qui doit rester humain. Ensuite seulement, chiffrer une heure de tâche robotisée et, si le calcul tient, lancer un pilote de 90 jours sur une seule tâche. Ce pilote doit avoir un responsable nommé, des indicateurs fixés avant le démarrage et une décision prévue à la fin : continuer, ajuster ou arrêter."}}], "inLanguage": "fr-FR"}
@@ -1144,7 +1145,7 @@ color: var(--plum); margin: 14px 0 0;
       <a href="a-propos.html">À propos</a>
       <a href="temoignages.html">Témoignages</a>
       <a href="contact.html">Contact</a>
-      <a href="perspectives.html" class="active">Perspectives</a>
+      <a href="perspectives.html" class="active">Blog</a>
     </div>
     <div class="nav-langs">
       <span class="nav-lang nav-lang-active">FR</span>
@@ -1426,7 +1427,7 @@ color: var(--plum); margin: 14px 0 0;
       <a href="a-propos.html">À propos</a>
       <a href="temoignages.html">Témoignages</a>
       <a href="contact.html">Contact</a>
-      <a href="perspectives.html">Perspectives</a>
+      <a href="perspectives.html">Blog</a>
     <a href="perspective-entreprise-utilise-deja-ia.html" class="footer-persp-link">→ <span class="art-star" aria-label="Article le plus lu">★</span>Votre entreprise utilise déjà l’<span style="color:var(--rose)">IA</span></a>
     <a href="perspective-toutes-decisions-ne-se-deleguent-pas.html" class="footer-persp-link">→ <span class="art-star" aria-label="Article le plus lu">★</span>Toutes les décisions ne se délèguent pas</a>
     <a href="perspective-transformation-echoue-rarement-technologie.html" class="footer-persp-link">→ La transformation <span style="color:var(--rose)">IA</span> échoue rarement</a>

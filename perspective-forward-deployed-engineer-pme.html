@@ -49,7 +49,7 @@
 --serif:     'Cormorant Garamond', Georgia, serif;
 --sans:      'Inter', 'Helvetica Neue', sans-serif;
 --nav-h:     80px;
---max:       1600px;
+--max:       1240px;
 --ease:      cubic-bezier(.25,.46,.45,.94);
 --section-gap: clamp(12px, 1.7vh, 17px);
 }
@@ -238,7 +238,7 @@ background: var(--rose); color: var(--white);
 box-shadow: 0 0 32px rgba(199,95,98,.45);
 transform: translateY(-2px);
 }
-.wrap{ max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+.wrap{ max-width: var(--max); margin: 0 auto; padding: 0 clamp(32px, 6vw, 96px); }
 @media (max-width: 900px){.ce-que-section{ padding: var(--section-gap) 0; }}
 .persp-track{
 display: flex; gap: 1.25rem;
@@ -298,18 +298,13 @@ max-width: 660px; margin: 0;
 }
 .article-source-note{
 font-family: var(--sans); font-size: .85rem; font-weight: 500;
-color: var(--plum); opacity: .55; margin: 10px 0 0;
+color: var(--plum); opacity: .85; margin: 10px 0 0;
 }
 .article-source-note a{
 color: inherit; text-decoration: underline; text-underline-offset: 2px;
 transition: opacity .2s;
 }
 .article-source-note a:hover{ opacity: .7; }
-.article-source-note--linkedin{ opacity: .85; }
-.article-linkedin-icon{
-height: 16.5px; width: auto; display: inline-block;
-vertical-align: middle; margin-right: 6px; margin-top: -2px;
-}
 .article-tldr{
 max-width: 640px; margin: 22px 0 0; border: 1px solid rgba(99,59,74,.18);
 border-radius: 10px; background: var(--ivory);
@@ -354,7 +349,7 @@ rgba(99,59,74,0) 100%);
 .article-book-folio{
 position: absolute; left: 0; right: 0; bottom: 8px; text-align: center;
 font-family: var(--sans); font-size: .72rem; font-weight: 600;
-letter-spacing: .18em; color: rgba(99,59,74,.5);
+letter-spacing: .18em; color: #6F5160;
 user-select: none;
 }
 .article-book .article-intro,
@@ -526,7 +521,7 @@ padding-bottom: 32px;
 .footer-col-title{
 font-family: var(--sans); font-size: .75rem; font-weight: 600;
 letter-spacing: .16em; text-transform: uppercase;
-color: rgba(99,59,74,.5); margin-bottom: 6px;
+color: #6F5160; margin-bottom: 6px;
 }
 .footer-col a, .footer-col .footer-loc{
 font-family: var(--sans); font-size: 1.02rem; font-weight: 400;
@@ -1049,12 +1044,12 @@ color: var(--plum); margin: 14px 0 0;
 .rbd-send-legal a{ color: var(--rose); text-decoration: none; margin-left: 2px; }
 @media (max-width: 700px){.rbd-copy-col{ border-left: 0; padding-left: 0; border-top: 1px solid var(--pale-rose); padding-top: 18px; }.rbd-task{ grid-template-columns: 1fr; }}
 @media (prefers-reduced-motion: reduce){.rbd-btn, .rbd-btn svg{ transition: none; }}
-.risk-hl{ color: var(--rose); font-weight: 600; }
 .rgpd-b, .date-b{ font-weight: 600; }
 .art-star{ font-size: 1.25em; line-height: 1; vertical-align: -0.06em; }
 .footer-col a.footer-persp-link{ position: relative; }
 .footer-persp-link .art-star{ position: absolute; right: 100%; top: 50%; transform: translateY(-52%); margin-right: .35em; font-size: 1.1em; }
 @media (min-width: 1251px){.footer-col--site .footer-persp-c2{ left: calc(18.75rem - 5px); }.footer-bottom .footer-rights{ grid-row: 1; }.footer-bottom .footer-copy{ grid-column: 2 / 4; grid-row: 1; margin-left: calc(18.75rem - 5px); }}
+:focus-visible{ outline: 2px solid var(--rose); outline-offset: 3px; border-radius: 4px; }
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Qu'est-ce qu'un « forward deployed engineer » ?", "acceptedAnswer": {"@type": "Answer", "text": "C'est un ingénieur envoyé chez le client, parfois pendant des mois, pour faire fonctionner l'IA dans son quotidien réel. Il observe le travail des équipes, branche l'outil sur les données de l'entreprise, construit un premier prototype sur une tâche précise, le met en service, forme les utilisateurs et reste jusqu'à ce qu'ils s'en servent vraiment. En français, on parle d'ingénieur déployé chez le client. Le métier est né chez Palantir au début des années 2010."}}, {"@type": "Question", "name": "Qu'a annoncé AWS le 30 juin 2026 ?", "acceptedAnswer": {"@type": "Answer", "text": "AWS, la branche cloud d'Amazon, a annoncé 1 milliard de dollars pour créer une organisation entière d'ingénieurs déployés, installés chez ses clients par petites équipes. Ces ingénieurs construisent et mettent en production des systèmes d'IA avec les données, les règles et les processus de chaque client. L'objectif affiché est de repartir en laissant des systèmes qui tournent et des compétences en interne, plutôt qu'un rapport ou une simple licence."}}, {"@type": "Question", "name": "Pourquoi ce métier se développe-t-il si vite ?", "acceptedAnswer": {"@type": "Answer", "text": "Parce que la plupart des projets d'IA restent bloqués au stade du test. Selon un rapport du MIT publié en août 2025, 95 % des projets pilotes d'IA générative en entreprise n'ont eu aucun effet mesurable sur les résultats. Les modèles fonctionnent, mais personne ne les branche sur le travail réel. Selon Indeed, les offres d'emploi pour ce métier ont augmenté de plus de 729 % en un an, d'avril 2025 à avril 2026."}}, {"@type": "Question", "name": "Une PME a-t-elle besoin d'un ingénieur déployé ?", "acceptedAnswer": {"@type": "Answer", "text": "Pas d'un poste à plein temps. Une PME a besoin de la compétence que ce métier représente : comprendre une décision de direction, la traduire en usage concret sur une tâche précise, puis suivre cet usage jusqu'à ce qu'il tienne. Cette compétence est rarement technique. Elle repose sur la connaissance du métier, la confiance des équipes et l'accès à la direction, et elle existe souvent déjà dans l'entreprise."}}, {"@type": "Question", "name": "Qui peut jouer le rôle de traducteur entre l'IA et la direction dans une PME ?", "acceptedAnswer": {"@type": "Answer", "text": "Quatre profils reviennent souvent : le directeur général ou un associé quand le sujet est stratégique, l'assistante ou l'assistant de direction qui connaît les dossiers et les circuits de décision, un responsable opérationnel respecté par son équipe, ou un accompagnement extérieur ponctuel pour cadrer puis passer la main. Le bon profil n'est pas celui qui maîtrise le mieux l'outil, mais celui que les équipes écoutent et que la direction consulte."}}, {"@type": "Question", "name": "Comment choisir le premier usage de l'IA dans une PME ?", "acceptedAnswer": {"@type": "Answer", "text": "Le premier usage doit réussir vite pour convaincre. Il réunit quatre critères : une tâche qui revient chaque semaine, des données déjà disponibles sans grand chantier, un résultat mesurable comme du temps gagné ou des erreurs évitées, et une équipe volontaire pour essayer. Un devis préparé plus vite, une relance client mieux ciblée ou un compte rendu envoyé le jour même sont de bons exemples : modestes, visibles, faciles à mesurer."}}, {"@type": "Question", "name": "Combien de temps faut-il suivre un nouvel usage de l'IA ?", "acceptedAnswer": {"@type": "Answer", "text": "Environ trois mois. Un usage nouveau se fragilise dans les semaines qui suivent le lancement : première panne, premier résultat décevant, retour aux vieilles habitudes. Dans une PME, un suivi en trois temps suffit : à 30 jours, recueillir ce qui gêne et corriger ; à 60 jours, mesurer l'usage réel et le résultat obtenu ; à 90 jours, décider d'étendre l'usage, de l'ajuster ou de l'arrêter."}}, {"@type": "Question", "name": "Quelles erreurs éviter quand on déploie l'IA dans une PME ?", "acceptedAnswer": {"@type": "Answer", "text": "Cinq erreurs reviennent souvent : acheter l'outil avant d'avoir choisi la tâche, confier le projet au seul technicien, déployer partout en même temps, partir le jour du lancement, et juger le succès au nombre de licences ouvertes plutôt qu'à l'usage réel. Toutes ont la même origine : traiter l'IA comme un achat, alors qu'elle change une façon de travailler et demande quelqu'un pour accompagner ce changement."}}, {"@type": "Question", "name": "Combien coûte le rôle de traducteur dans une PME ?", "acceptedAnswer": {"@type": "Answer", "text": "Bien moins qu'un ingénieur à plein temps. Quelques jours répartis sur trois mois suffisent souvent : au cadrage, au lancement et aux points de suivi à 30, 60 et 90 jours. Le coût le plus lourd est ailleurs : dans les licences payées pour un outil que personne n'utilise, et dans la défiance qu'un projet raté laisse aux équipes pour le suivant. Prévoir le traducteur dès le départ protège l'investissement."}}], "inLanguage": "fr-FR"}
@@ -1076,7 +1071,7 @@ color: var(--plum); margin: 14px 0 0;
       <a href="a-propos.html">À propos</a>
       <a href="temoignages.html">Témoignages</a>
       <a href="contact.html">Contact</a>
-      <a href="perspectives.html" class="active">Perspectives</a>
+      <a href="perspectives.html" class="active">Blog</a>
     </div>
     <div class="nav-langs">
       <span class="nav-lang nav-lang-active">FR</span>
@@ -1291,7 +1286,7 @@ color: var(--plum); margin: 14px 0 0;
       <a href="a-propos.html">À propos</a>
       <a href="temoignages.html">Témoignages</a>
       <a href="contact.html">Contact</a>
-      <a href="perspectives.html">Perspectives</a>
+      <a href="perspectives.html">Blog</a>
     <a href="perspective-entreprise-utilise-deja-ia.html" class="footer-persp-link">→ <span class="art-star" aria-label="Article le plus lu">★</span>Votre entreprise utilise déjà l’<span style="color:var(--rose)">IA</span></a>
     <a href="perspective-toutes-decisions-ne-se-deleguent-pas.html" class="footer-persp-link">→ <span class="art-star" aria-label="Article le plus lu">★</span>Toutes les décisions ne se délèguent pas</a>
     <a href="perspective-transformation-echoue-rarement-technologie.html" class="footer-persp-link">→ La transformation <span style="color:var(--rose)">IA</span> échoue rarement</a>

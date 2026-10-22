@@ -49,7 +49,7 @@
 --serif:     'Cormorant Garamond', Georgia, serif;
 --sans:      'Inter', 'Helvetica Neue', sans-serif;
 --nav-h:     80px;
---max:       1600px;
+--max:       1240px;
 --ease:      cubic-bezier(.25,.46,.45,.94);
 --section-gap: clamp(12px, 1.7vh, 17px);
 }
@@ -238,7 +238,7 @@ background: var(--rose); color: var(--white);
 box-shadow: 0 0 32px rgba(199,95,98,.45);
 transform: translateY(-2px);
 }
-.wrap{ max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+.wrap{ max-width: var(--max); margin: 0 auto; padding: 0 clamp(32px, 6vw, 96px); }
 @media (max-width: 900px){.ce-que-section{ padding: var(--section-gap) 0; }}
 .persp-track{
 display: flex; gap: 1.25rem;
@@ -298,7 +298,7 @@ max-width: 660px; margin: 0;
 }
 .article-source-note{
 font-family: var(--sans); font-size: .85rem; font-weight: 500;
-color: var(--plum); opacity: .55; margin: 10px 0 0;
+color: var(--plum); opacity: .85; margin: 10px 0 0;
 }
 .article-source-note a{
 color: inherit; text-decoration: underline; text-underline-offset: 2px;
@@ -349,7 +349,7 @@ rgba(99,59,74,0) 100%);
 .article-book-folio{
 position: absolute; left: 0; right: 0; bottom: 8px; text-align: center;
 font-family: var(--sans); font-size: .72rem; font-weight: 600;
-letter-spacing: .18em; color: rgba(99,59,74,.5);
+letter-spacing: .18em; color: #6F5160;
 user-select: none;
 }
 .article-book .article-intro,
@@ -521,7 +521,7 @@ padding-bottom: 32px;
 .footer-col-title{
 font-family: var(--sans); font-size: .75rem; font-weight: 600;
 letter-spacing: .16em; text-transform: uppercase;
-color: rgba(99,59,74,.5); margin-bottom: 6px;
+color: #6F5160; margin-bottom: 6px;
 }
 .footer-col a, .footer-col .footer-loc{
 font-family: var(--sans); font-size: 1.02rem; font-weight: 400;
@@ -1049,6 +1049,7 @@ color: var(--plum); margin: 14px 0 0;
 .footer-col a.footer-persp-link{ position: relative; }
 .footer-persp-link .art-star{ position: absolute; right: 100%; top: 50%; transform: translateY(-52%); margin-right: .35em; font-size: 1.1em; }
 @media (min-width: 1251px){.footer-col--site .footer-persp-c2{ left: calc(18.75rem - 5px); }.footer-bottom .footer-rights{ grid-row: 1; }.footer-bottom .footer-copy{ grid-column: 2 / 4; grid-row: 1; margin-left: calc(18.75rem - 5px); }}
+:focus-visible{ outline: 2px solid var(--rose); outline-offset: 3px; border-radius: 4px; }
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does CV screening software do?", "acceptedAnswer": {"@type": "Answer", "text": "It extracts information from CVs, compares it with the job ad (keywords or similarity of meaning), assigns a score and ranks or rejects applications, sometimes with knock-out questions. Many applicant tracking systems (ATS) now build in AI. A candidate rejected by the machine is often never read by anyone. That is where the risk lies: a tool trained on past hiring repeats past choices, blind spots included. Without a human review of rejected applications, the company does not know which profiles it is losing and cannot explain its rejections."}}, {"@type": "Question", "name": "What is the Workday case?", "acceptedAnswer": {"@type": "Answer", "text": "Derek Mobley, an African-American candidate over 40, accuses Workday’s screening tool of rejecting him for many jobs. In May 2025, the judge granted preliminary certification of a collective action for candidates over 40; on 22 June 2026, she largely denied the motion to dismiss. In September 2026, the plaintiffs sought class certification on behalf of four groups; the hearing is set for 9 March 2027. According to a Workday witness, more than 356 million applications went through the tool in 2024."}}, {"@type": "Question", "name": "Is AI CV screening regulated in France?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The Labour Code requires candidates to be told which recruitment methods are used and bans collection through any system they have not been told about. Article 22 of the GDPR protects against decisions based solely on automated processing. The CNIL has made recruitment an inspection priority for 2026. In practice, the company must be able to tell the candidate that a tool was used and what it took into account, and let them ask for a person to review their application."}}, {"@type": "Question", "name": "What does the AI Act change for recruitment?", "acceptedAnswer": {"@type": "Answer", "text": "It classifies AI systems for recruitment, application filtering and candidate assessment as high-risk. From 2 December 2027, employers using them will notably have to ensure human oversight by competent people, keep logs for at least six months, and inform workers’ representatives and the people concerned. These obligations come on top of those of the tool’s supplier. The employer remains responsible for how it uses the tool: it is wise to document now how the tool works, the checks carried out and the people in charge of oversight."}}, {"@type": "Question", "name": "How can you control a screening tool without losing the time saved?", "acceptedAnswer": {"@type": "Answer", "text": "By rereading a sample of rejected applications every month, for example one in ten, with one simple question: would I have wanted to meet this candidate? If the answer is often yes, the settings must change. It also helps to replace automatic rejection with a simple ranking. This check takes little time. It catches a badly set criterion early, such as a degree wrongly required or a career break penalised, before it screens out hundreds of profiles."}}, {"@type": "Question", "name": "What should you ask a recruitment software vendor?", "acceptedAnswer": {"@type": "Answer", "text": "What data the model was trained on; which criteria drive the score; whether it has undergone a bias audit; whether automatic rejection can be switched off; where candidate data is stored and for how long; how it is preparing for the AI Act obligations. The answers should be written down and kept. A vendor unable to explain its score or to switch off automatic rejection passes a legal risk on to the client company, which remains responsible for its hiring decisions."}}], "inLanguage": "en-GB"}
@@ -1070,7 +1071,7 @@ color: var(--plum); margin: 14px 0 0;
       <a href="a-propos-en.html">About</a>
       <a href="temoignages-en.html">Testimonials</a>
       <a href="contact-en.html">Contact</a>
-      <a href="perspectives-en.html" class="active">Perspectives</a>
+      <a href="perspectives-en.html" class="active">Blog</a>
     </div>
     <div class="nav-langs">
       <a href="perspective-tri-cv-ia-candidatures-ecartees.html" class="nav-lang">FR</a>
@@ -1288,7 +1289,7 @@ color: var(--plum); margin: 14px 0 0;
       <a href="a-propos-en.html">About</a>
       <a href="temoignages-en.html">Testimonials</a>
       <a href="contact-en.html">Contact</a>
-      <a href="perspectives-en.html">Perspectives</a>
+      <a href="perspectives-en.html">Blog</a>
     <a href="perspective-entreprise-utilise-deja-ia-en.html" class="footer-persp-link">→ <span class="art-star" aria-label="Most-read article">★</span>Adopting <span style="color:var(--rose)">AI</span> vs. creating value</a>
     <a href="perspective-toutes-decisions-ne-se-deleguent-pas-en.html" class="footer-persp-link">→ <span class="art-star" aria-label="Most-read article">★</span>Not every decision can be delegated</a>
     <a href="perspective-transformation-echoue-rarement-technologie-en.html" class="footer-persp-link">→ <span style="color:var(--rose)">AI</span> transformation rarely fails</a>
