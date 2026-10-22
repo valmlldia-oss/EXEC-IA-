@@ -1654,10 +1654,6 @@ box-shadow: 0 12px 32px rgba(99,59,74,.25);
 }.nav-links.open a{ color: #FAF6F2 !important; font-size: 1rem; max-width: none !important; }.nav-links.open a::after{ background: #C75F62; }}
 @media (max-width: 1260px){.footer-brand .footer-tag, .footer-brand .footer-mention-ia{ white-space: normal; }}
 @media (max-width: 1100px){.piliers{ grid-template-columns: repeat(3, minmax(0, 1fr)); }.pilier{ min-width: 0; }.pilier *, .newsletter-content *, .nl-box *{ overflow-wrap: anywhere; }.newsletter-inner > *, .newsletter-content, .nl-box{ min-width: 0; max-width: 100%; }}
-@media (max-width: 1200px){.about-lede--1l, .about-principe-sub--1l, .tl-item--essec h3, .tl-item--essec .tl-role,
-.tl-studeria-topics, .tl-studeria-quote, .agents-tasks-1l, .tl-intro--diff, .tl-one-line,
-.article-page--guide .article-title--2l,
-[style*="white-space:nowrap"], [style*="white-space: nowrap"]{ white-space: normal !important; }}
 .article-book .article-intro p, .article-book .article-close p, .article-book .art-list li{ text-align: left; text-wrap: pretty; hyphens: auto; -webkit-hyphens: auto; hyphenate-limit-chars: 6 3 3; }
 body.art-justify .article-book .article-intro p{ text-align: justify; text-align-last: left; text-justify: inter-word; }
 .footer-col a.footer-instagram-btn{ margin-top: -6px; }
@@ -1835,7 +1831,25 @@ color: var(--plum); margin: 14px 0 0;
 @media (min-width: 1251px){.footer-col--site .footer-persp-c2{ left: calc(18.75rem - 5px); }.footer-bottom .footer-rights{ grid-row: 1; }.footer-bottom .footer-copy{ grid-column: 2 / 4; grid-row: 1; margin-left: calc(18.75rem - 5px); }}
 :focus-visible{ outline: 2px solid var(--rose); outline-offset: 3px; border-radius: 4px; }
 @media print{.reveal, .reveal.visible{ opacity: 1 !important; transform: none !important; }.nav, .cookie-banner, .phare-bubble, #phare-bubble, .qw-bubble{ display: none !important; }}
-.eyebrow, .maf-eyebrow, .expertise-hero-eyebrow, .hero-eyebrow, .pre, .persp-card-meta{ color: #A84D50 !important; }
+.eyebrow, .maf-eyebrow, .expertise-hero-eyebrow, .hero-eyebrow, .pre, .persp-card-meta{ color: #C75F62 !important; }
+.art-ia, .aiact-ia, .aiact-key, .risk-hl, .article-meta, .persp-card-read, .persp-card-subtitle,
+.article-related-title, .article-tldr-arrow, .portrait-link-arrow, .acc-num, .acc-icon, .pilier-title,
+.offre-niveau, .offre-web-tier-price, .nl-req, .agent-eyebrow-txt, .ve-col-num, .constat-flip-cue-txt,
+.cookie-cat-always, .agents-arrow{ color: #C75F62; }
+.cookie-banner-link{ color: #FAF6F2 !important; }
+.article-meta, .persp-card-read, .persp-card-subtitle, .article-related-title, .article-tldr-arrow, .portrait-link-arrow{ font-weight: 600; }
+@media (max-width: 1250px){.footer-col--site{ display: block; columns: 2; column-gap: 24px; width: 100%; max-width: 100%; min-width: 0; box-sizing: border-box; }.footer-col--site > *{ break-inside: avoid; }.footer-col--site .footer-persp-c2{ position: static; margin-top: 0; }}
+.ink-accent{ color: #C75F62 !important; }
+.gap-3{ gap: 3px !important; }
+.ink-accent-600{ color: #C75F62 !important; font-weight: 600 !important; }
+.article-meta, .article-related-title, .portrait-link-arrow, .article-tldr-arrow{ color: #633B4A !important; }
+.footer-persp-link, a.footer-persp-link, a.nav-lang{ color: #633B4A !important; opacity: 1 !important; }
+.s6{ display:none;color:#C75F62;font-size:.82rem;margin:0 0 6px;padding-left:2px; !important; }
+.s7{ display:none;padding:32px 24px;text-align:center; !important; }
+.s8{ font-size:.95rem;color:var(--plum-muted);margin:0 0 20px;line-height:1.6; !important; }
+.s9{ font-size:.78rem;color:var(--plum-muted); !important; }
+.s10{ margin-top:8px;font-size:1rem;color:var(--plum) !important; }
+.s11{ white-space:nowrap;font-weight:600 !important; }
 </style>
 </head>
 <body>
@@ -1923,18 +1937,18 @@ color: var(--plum); margin: 14px 0 0;
               <label for="nl-email">Work email <span class="nl-req">*</span></label>
               <input type="email" id="nl-email" name="email" autocomplete="email" required>
             </div>
-            <p id="nl-global-err" style="display:none;color:#C75F62;font-size:.82rem;margin:0 0 6px;padding-left:2px;"></p>
+            <p class="s6" id="nl-global-err"></p>
             <button type="submit" class="btn btn-rose nl-submit" id="nl-submit-btn">Get the resource</button>
           </form>
           <p class="newsletter-trust">🔒 No spam &nbsp;•&nbsp; One-click unsubscribe &nbsp;•&nbsp; <span class="rgpd-b">GDPR</span> compliant</p>
         </div>
 
         <!-- Message de confirmation -->
-        <div id="nl-box-success" style="display:none;padding:32px 24px;text-align:center;">
+        <div class="s7" id="nl-box-success">
           <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.6rem;color:var(--plum);font-weight:400;margin:0 0 12px;line-height:1.3;">Thank you <span id="nl-success-name"></span>.</p>
-          <p style="font-size:.95rem;color:var(--plum-muted);margin:0 0 20px;line-height:1.6;">An email is on its way to your work inbox.<br>You can also access the document directly:</p>
+          <p class="s8">An email is on its way to your work inbox.<br>You can also access the document directly:</p>
           <a id="nl-doc-link" href="#" target="_blank" rel="noopener" style="display:inline-block;margin-bottom:20px;background:#C75F62;color:#FAF6F2;font-family:'Inter',sans-serif;font-size:.88rem;font-weight:500;letter-spacing:.1em;text-decoration:none;padding:13px 28px;border-radius:2px;">View the document</a>
-          <p style="font-size:.78rem;color:var(--plum-muted);">🔒 <span class="rgpd-b">GDPR</span> compliant &nbsp;•&nbsp; One-click unsubscribe</p>
+          <p class="s9">🔒 <span class="rgpd-b">GDPR</span> compliant &nbsp;•&nbsp; One-click unsubscribe</p>
           <button type="button" id="nl-new-signup" style="margin-top:16px;display:block;width:100%;background:transparent;border:1px solid rgba(99,59,74,.28);color:var(--plum-muted);font-family:'Inter',sans-serif;font-size:.78rem;letter-spacing:.08em;padding:9px 20px;cursor:pointer;border-radius:2px;">Register another participant</button>
         </div>
 
@@ -1950,7 +1964,7 @@ color: var(--plum); margin: 14px 0 0;
   <div class="wrap">
 
     <span class="eyebrow reveal">Offers</span>
-    <h1 class="section-title offres-section-title reveal delay-1">Every transformation begins with a <span style="color:var(--rose)">decision</span>.</h1>
+    <h1 class="section-title offres-section-title reveal delay-1">Every transformation begins with a <span class="ink-accent">decision</span>.</h1>
     <p class="offres-subtitle reveal delay-2">Executive advisory at the core, backed by two hands-on capabilities.</p>
 
     <div class="offre-decouverte offre-decouverte--transverse reveal delay-2">
@@ -1977,9 +1991,9 @@ color: var(--plum); margin: 14px 0 0;
         <div class="offre-card offre-card--ivory reveal delay-1">
           <div class="offre-niveau">Level I &nbsp;·&nbsp; <strong>Clarify</strong></div>
           <div class="offre-titre-capsule"><h2>AI Compass</h2></div>
-          <p class="offre-accroche">Identify where <span style="color:var(--rose)">AI</span> will create the most value and set your priorities.</p>
+          <p class="offre-accroche">Identify where <span class="ink-accent">AI</span> will create the most value and set your priorities.</p>
           <ul class="offre-points">
-            <li>Mapping of priority <span style="color:var(--rose)">AI</span> use cases.</li>
+            <li>Mapping of priority <span class="ink-accent">AI</span> use cases.</li>
             <li>3 decisions to make, with the reasoning behind them.</li>
             <li>Written summary within 5 days.</li>
           </ul>
@@ -1992,7 +2006,7 @@ color: var(--plum); margin: 14px 0 0;
         <div class="offre-card offre-card--ivory reveal delay-2">
           <div class="offre-niveau">Level II &nbsp;·&nbsp; <strong>Decide over time</strong></div>
           <div class="offre-titre-capsule"><h2>Executive Sparring</h2></div>
-          <p class="offre-accroche">Steer your <span style="color:var(--rose)">AI</span> decisions over time with a trusted partner.</p>
+          <p class="offre-accroche">Steer your <span class="ink-accent">AI</span> decisions over time with a trusted partner.</p>
           <ul class="offre-points">
             <li>A running decision log.</li>
             <li>A reusable trade-off framework.</li>
@@ -2008,9 +2022,9 @@ color: var(--plum); margin: 14px 0 0;
           <span class="offre-badge">Flagship engagement</span>
           <div class="offre-niveau">Level III &nbsp;·&nbsp; <strong>Transform</strong></div>
           <div class="offre-titre-capsule"><h2>AI Transformation</h2></div>
-          <p class="offre-accroche">Turn your <span style="color:var(--rose)">AI</span> strategy into an operational roadmap.</p>
+          <p class="offre-accroche">Turn your <span class="ink-accent">AI</span> strategy into an operational roadmap.</p>
           <ul class="offre-points">
-            <li><span style="color:var(--rose)">AI</span> roadmap.</li>
+            <li><span class="ink-accent">AI</span> roadmap.</li>
             <li>Deployment plan.</li>
             <li>Tracking dashboard.</li>
             <li>Closing review.</li>
@@ -2025,7 +2039,7 @@ color: var(--plum); margin: 14px 0 0;
       <div class="offre-livrable reveal">
         <h2 class="offre-livrable-title">What you walk away with</h2>
         <ul class="offre-livrable-list">
-          <li>A clear view of the <span style="color:var(--rose)">AI</span> opportunities that truly create value.</li>
+          <li>A clear view of the <span class="ink-accent">AI</span> opportunities that truly create value.</li>
           <li>Clarified priorities: what to launch, defer or drop.</li>
           <li>A trajectory aligned with your challenges and your resources.</li>
           <li>A reusable decision framework for future trade-offs.</li>
@@ -2068,7 +2082,7 @@ color: var(--plum); margin: 14px 0 0;
         <div class="offres-cat-body">
           <div class="offres-cat-inner">
             <div class="offre-web">
-              <p class="offre-web-desc">Bespoke AI agents, connected to your tools, to automate what wastes your time.<br>Agentic AI with <span style="color:var(--rose)">human oversight</span>: it supports your teams without replacing them,<br>and stays useful every day, long after it goes live.</p>
+              <p class="offre-web-desc">Bespoke AI agents, connected to your tools, to automate what wastes your time.<br>Agentic AI with <span class="ink-accent">human oversight</span>: it supports your teams without replacing them,<br>and stays useful every day, long after it goes live.</p>
               <div class="offre-web-tiers offre-web-tiers--agents">
                 <div class="offre-web-tier">
                   <span class="offre-web-tier-name">“Essential” AI agent</span>
@@ -2086,7 +2100,7 @@ color: var(--plum); margin: 14px 0 0;
                   <span class="offre-web-tier-price"><span class="offre-price-lead">Quoted, from</span> €2,990 <span class="offre-price-ht">excl. VAT</span></span>
                   <div class="offre-agent-pastilles">
                     <span class="offre-agent-pastille"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg> 1 workflow · 3&#8211;4 tools</span>
-                    <span class="offre-agent-pastille"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg> Generative <span style="color:var(--rose)">AI</span> built in</span>
+                    <span class="offre-agent-pastille"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg> Generative <span class="ink-accent">AI</span> built in</span>
                     <span class="offre-agent-pastille"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg> E.g.: leads → CRM record</span>
                   </div>
                   <span class="offre-agent-inclus">Includes: 2h scoping · documentation · 1h training · 2&nbsp;months of&nbsp;fixes</span>
@@ -2102,7 +2116,7 @@ color: var(--plum); margin: 14px 0 0;
                   <span class="offre-agent-inclus">Includes: audit · prototype · deployment · training · 3-month&nbsp;follow-up</span>
                 </div>
               </div>
-              <p class="offre-price-note"><strong style="color:var(--rose);font-weight:600">Free 30-minute diagnostic</strong> · to scope the project and set the price</p>
+              <p class="offre-price-note"><strong class="ink-accent-600">Free 30-minute diagnostic</strong> · to scope the project and set the price</p>
               <a href="https://calendly.com/exec-ia" target="_blank" rel="noopener" class="btn btn-rose offre-web-btn">Discuss my project <span class="btn-arrow">→</span></a>
             </div>
           </div>
@@ -2164,7 +2178,7 @@ color: var(--plum); margin: 14px 0 0;
           <span class="ooc-arrow">View the offer <span class="portrait-link-arrow">→</span></span>
         </button>
       </div>
-      <p class="offre-price-note" style="margin-top:8px;font-size:1rem;color:var(--plum)"><span style="color:var(--rose);font-weight:600">AI</span> agent projects often surface bigger questions:<br>many Executive Advisory engagements start with a single agent.</p>
+      <p class="offre-price-note s10"><span class="ink-accent-600">AI</span> agent projects often surface bigger questions:<br>many Executive Advisory engagements start with a single agent.</p>
     </div>
 
   </div>
@@ -2176,7 +2190,7 @@ color: var(--plum); margin: 14px 0 0;
   <div class="roi-band" aria-hidden="true"></div>
   <div class="wrap">
     <span class="eyebrow reveal">Impact calculator</span>
-    <h2 class="section-title reveal delay-1" style="white-space:nowrap;font-weight:600">How much could AI <span style="color:var(--rose)">save you?</span></h2>
+    <h2 class="section-title reveal delay-1 s11">How much could AI <span class="ink-accent">save you?</span></h2>
     <div class="roi-card reveal delay-3">
       <div class="roi-sliders">
         <div class="roi-sg">
@@ -2218,7 +2232,7 @@ color: var(--plum); margin: 14px 0 0;
   <div class="wrap footer-grid">
     <div class="footer-brand">
       <img src="assets/logo-execia-bords-prune.webp" alt="EXEC'IA Consulting" class="footer-logo-main" width="450" height="212" decoding="async">
-      <p class="footer-tag"><span class="footer-tag-lead">Executive-level experience</span><br><span class="footer-tag-rest">at the service of your <span style="color:var(--rose)">AI</span> transformation</span></p>
+      <p class="footer-tag"><span class="footer-tag-lead">Executive-level experience</span><br><span class="footer-tag-rest">at the service of your <span class="ink-accent">AI</span> transformation</span></p>
       <p class="footer-signature">Decide before you invest.</p>
     </div>
 
@@ -2231,22 +2245,22 @@ color: var(--plum); margin: 14px 0 0;
       <a href="temoignages-en.html">Testimonials</a>
       <a href="contact-en.html">Contact</a>
       <a href="perspectives-en.html">Blog</a>
-    <a href="perspective-entreprise-utilise-deja-ia-en.html" class="footer-persp-link">→ <span class="art-star" aria-label="Most-read article">★</span>Adopting <span style="color:var(--rose)">AI</span> vs. creating value</a>
+    <a href="perspective-entreprise-utilise-deja-ia-en.html" class="footer-persp-link">→ <span class="art-star" aria-label="Most-read article">★</span>Adopting <span class="ink-accent">AI</span> vs. creating value</a>
     <a href="perspective-toutes-decisions-ne-se-deleguent-pas-en.html" class="footer-persp-link">→ <span class="art-star" aria-label="Most-read article">★</span>Not every decision can be delegated</a>
-    <a href="perspective-transformation-echoue-rarement-technologie-en.html" class="footer-persp-link">→ <span style="color:var(--rose)">AI</span> transformation rarely fails</a>
-    <a href="perspective-probleme-nest-pas-outils-mais-arbitrage-en.html" class="footer-persp-link">→ More <span style="color:var(--rose)">AI</span> tools, not more impact</a>
-    <a href="perspective-projet-ia-peut-il-etre-finance-en.html" class="footer-persp-link">→ Can your <span style="color:var(--rose)">AI</span> project be funded?</a>
+    <a href="perspective-transformation-echoue-rarement-technologie-en.html" class="footer-persp-link">→ <span class="ink-accent">AI</span> transformation rarely fails</a>
+    <a href="perspective-probleme-nest-pas-outils-mais-arbitrage-en.html" class="footer-persp-link">→ More <span class="ink-accent">AI</span> tools, not more impact</a>
+    <a href="perspective-projet-ia-peut-il-etre-finance-en.html" class="footer-persp-link">→ Can your <span class="ink-accent">AI</span> project be funded?</a>
     <a href="perspective-chatbot-savoir-passer-la-main-en.html" class="footer-persp-link">→ When should a chatbot hand over?</a>
-    <div class="footer-persp-c2" style="gap:3px">
+    <div class="footer-persp-c2 gap-3">
     <a href="perspective-budget-ia-adhesion-equipes-en.html" class="footer-persp-link footer-persp-link--c2">→ Why does buy-in matter more than budget?</a>
-    <a href="perspective-shadow-ia-charte-comite-direction-en.html" class="footer-persp-link footer-persp-link--c2">→ Which <span style="color:var(--rose)">AI</span> tools do your teams really use?</a>
+    <a href="perspective-shadow-ia-charte-comite-direction-en.html" class="footer-persp-link footer-persp-link--c2">→ Which <span class="ink-accent">AI</span> tools do your teams really use?</a>
     <a href="perspective-robots-humanoides-token-tax-en.html" class="footer-persp-link footer-persp-link--c2">→ Which tasks would you hand to a humanoid robot?</a>
     <a href="perspective-affaire-orelien-preuve-travail-en.html" class="footer-persp-link footer-persp-link--c2">→ <span class="art-star" aria-label="Most-read article">★</span>Will your teams have to prove their work?</a>
-    <a href="perspective-tri-cv-ia-candidatures-ecartees-en.html" class="footer-persp-link footer-persp-link--c2">→ Who rereads the CVs that <span style="color:var(--rose)">AI</span> rejects?</a>
-    <a href="perspective-agents-ia-recruter-comme-salarie-en.html" class="footer-persp-link footer-persp-link--c2">→ Should you hire an <span style="color:var(--rose)">AI</span> agent like an employee?</a>
+    <a href="perspective-tri-cv-ia-candidatures-ecartees-en.html" class="footer-persp-link footer-persp-link--c2">→ Who rereads the CVs that <span class="ink-accent">AI</span> rejects?</a>
+    <a href="perspective-agents-ia-recruter-comme-salarie-en.html" class="footer-persp-link footer-persp-link--c2">→ Should you hire an <span class="ink-accent">AI</span> agent like an employee?</a>
     <a href="perspective-jumeau-numerique-savoir-dirigeant-en.html" class="footer-persp-link footer-persp-link--c2">→ Digital twin: does a leader’s knowledge leave too?</a>
-    <a href="perspective-forward-deployed-engineer-pme-en.html" class="footer-persp-link footer-persp-link--c2">→ Between <span style="color:var(--rose)">AI</span> and leadership, you need a translator</a>
-    <a href="perspective-enregistreur-ia-reunion-direction-en.html" class="footer-persp-link footer-persp-link--c2">→ An <span style="color:var(--rose)">AI</span> recorder in the management meeting: who decided that?</a>
+    <a href="perspective-forward-deployed-engineer-pme-en.html" class="footer-persp-link footer-persp-link--c2">→ Between <span class="ink-accent">AI</span> and leadership, you need a translator</a>
+    <a href="perspective-enregistreur-ia-reunion-direction-en.html" class="footer-persp-link footer-persp-link--c2">→ An <span class="ink-accent">AI</span> recorder in the management meeting: who decided that?</a>
     </div>
     </div>
 
@@ -2255,7 +2269,7 @@ color: var(--plum); margin: 14px 0 0;
       <a href="mailto:contact@exec-ia.ai">✉️ contact@exec-ia.ai</a>
       <span class="footer-loc">📍 Paris, France, International</span>
       <a href="https://www.linkedin.com/in/val%C3%A9rie-mailland" target="_blank" rel="noopener" class="footer-linkedin-btn"><img src="assets/linkedin-logo.png" alt="LinkedIn" class="footer-linkedin-logo">Follow me on LinkedIn</a>
-      <a href="https://www.instagram.com/execia.consulting/" target="_blank" rel="noopener" class="footer-linkedin-btn footer-instagram-btn"><img src="assets/instagram-logo.png" alt="Instagram" class="footer-linkedin-logo" width="18" height="18"><span>Follow EXEC'<span style="color:var(--rose)">IA</span> on Instagram</span></a>
+      <a href="https://www.instagram.com/execia.consulting/" target="_blank" rel="noopener" class="footer-linkedin-btn footer-instagram-btn"><img src="assets/instagram-logo.png" alt="Instagram" class="footer-linkedin-logo" width="18" height="18"><span>Follow EXEC'<span class="ink-accent">IA</span> on Instagram</span></a>
     </div>
     <div class="footer-col footer-col--langs">
       <span class="footer-col-title">Languages</span>
@@ -2323,7 +2337,7 @@ color: var(--plum); margin: 14px 0 0;
     </div>
   </div>
 </div>
-<script src="assets/chat-widget.js?v=3" defer></script>
-<script src="assets/phare-chat-widget.js?v=5" defer></script>
+<script src="assets/chat-widget.js?v=4" defer></script>
+<script src="assets/phare-chat-widget.js?v=6" defer></script>
 </body>
 </html>

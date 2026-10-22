@@ -248,12 +248,6 @@ font-size: clamp(.8rem, 1vw, .95rem); font-weight: 600;
 letter-spacing: .22em; text-transform: uppercase;
 color: var(--rose); opacity: 1;
 }
-.eyebrow-sub{ color: var(--plum); opacity: .78; font-weight: 500; }
-.eyebrow-blog{ position: relative; display: inline-block; }
-.eyebrow-blog::after{
-content: ''; position: absolute; left: 2%; width: 62%; bottom: -3px;
-height: 2px; background: var(--rose); opacity: .85;
-}
 .section-title{
 font-family: var(--serif);
 font-size: clamp(2.2rem, 3.4vw, 3.2rem);
@@ -1259,7 +1253,30 @@ color: var(--plum); margin: 14px 0 0;
 @media (max-width: 768px){#perspectives h1.section-title{ font-size: 1.3rem; }}
 :focus-visible{ outline: 2px solid var(--rose); outline-offset: 3px; border-radius: 4px; }
 @media print{.reveal, .reveal.visible{ opacity: 1 !important; transform: none !important; }.nav, .cookie-banner, .phare-bubble, #phare-bubble, .qw-bubble{ display: none !important; }}
-.eyebrow, .maf-eyebrow, .expertise-hero-eyebrow, .hero-eyebrow, .pre, .persp-card-meta{ color: #A84D50 !important; }
+.eyebrow, .maf-eyebrow, .expertise-hero-eyebrow, .hero-eyebrow, .pre, .persp-card-meta{ color: #C75F62 !important; }
+.persp-track-outer.blog-2col{ overflow-x: auto; overflow-y: visible; scroll-snap-type: x mandatory; container-type: inline-size; padding-top: .6rem; scrollbar-width: none; }
+.persp-track-outer.blog-2col::-webkit-scrollbar{ display: none; }
+.persp-track-outer.blog-2col .persp-track{ display: flex; gap: 28px; width: max-content; }
+.persp-track-outer.blog-2col .persp-card{ width: calc((100cqw - 28px) / 2); flex: 0 0 auto; scroll-snap-align: start; }
+@media (max-width: 640px){.persp-track-outer.blog-2col .persp-card{ width: 82vw; }}
+.art-ia, .aiact-ia, .aiact-key, .risk-hl, .article-meta, .persp-card-read, .persp-card-subtitle,
+.article-related-title, .article-tldr-arrow, .portrait-link-arrow, .acc-num, .acc-icon, .pilier-title,
+.offre-niveau, .offre-web-tier-price, .nl-req, .agent-eyebrow-txt, .ve-col-num, .constat-flip-cue-txt,
+.cookie-cat-always, .agents-arrow{ color: #C75F62; }
+h2 .art-ia{ color: #C75F62; }
+.cookie-banner-link{ color: #FAF6F2 !important; }
+@media (min-width: 1025px){#perspectives h1.blog-h1{ white-space: nowrap; font-size: clamp(1.8rem, 2.7vw, 2.4rem); }}
+p .art-ia, li .art-ia, p .aiact-ia, li .aiact-ia, p .risk-hl, li .risk-hl{ font-weight: 600; }
+.article-meta, .persp-card-read, .persp-card-subtitle, .article-related-title, .article-tldr-arrow, .portrait-link-arrow{ font-weight: 600; }
+@media (max-width: 1250px){.footer-col--site{ display: block; columns: 2; column-gap: 24px; width: 100%; max-width: 100%; min-width: 0; box-sizing: border-box; }.footer-col--site > *{ break-inside: avoid; }.footer-col--site .footer-persp-c2{ position: static; margin-top: 0; }}
+.ink-accent{ color: #C75F62 !important; }
+.gap-3{ gap: 3px !important; }
+.ink-accent-500{ color: #C75F62 !important; font-weight: 500 !important; }
+.persp-card-read, a.persp-all-link, .article-tldr-arrow{ font-weight: 600 !important; }
+.article-meta, .article-related-title, .portrait-link-arrow, .article-tldr-arrow{ color: #633B4A !important; }
+.agents-arrow{ color: #633B4A !important; }
+.footer-persp-link, a.footer-persp-link, a.nav-lang{ color: #633B4A !important; opacity: 1 !important; }
+.s16{ text-wrap:balance !important; }
 </style>
 </head>
 <body>
@@ -1295,11 +1312,11 @@ color: var(--plum); margin: 14px 0 0;
 <!-- ═══ PERSPECTIVES ══════════════════════════════════════════ -->
 <section id="perspectives" class="bg-ivory snap-page">
   <div class="wrap">
-    <span class="eyebrow">Perspectives <span class="eyebrow-sub">· le <span class="eyebrow-blog">blog</span> d&#8217;EXEC&#8217;IA</span></span>
-    <h1 class="section-title">Un regard sur l&#8217;<span style="color:var(--rose);font-weight:500">IA</span><br><span style="display:block;text-wrap:balance">façonné par des années au plus près des dirigeants.</span></h1>
-    <p class="persp-intro"><span class="persp-intro-line">Gouvernance, décision, transformation, création de valeur&nbsp;: des réflexions approfondies ici</span> <span class="persp-intro-line">pour prendre du recul sur ce que <span style="color:var(--rose)">l&#8217;IA</span> change réellement dans votre entreprise.</span></p>
+    <span class="eyebrow">Perspectives </span>
+    <h1 class="section-title blog-h1">Un regard sur l&#8217;<span class="ink-accent-500">IA</span> <span class="s16">façonné par des années au plus près des dirigeants.</span></h1>
+    <p class="persp-intro"><span class="persp-intro-line">Gouvernance, décision, transformation, création de valeur&nbsp;: des réflexions approfondies ici</span> <span class="persp-intro-line">pour prendre du recul sur ce que <span class="ink-accent">l&#8217;IA</span> change réellement dans votre entreprise.</span></p>
 
-    <div class="persp-track-outer reveal delay-2" id="perspTrack">
+    <div class="persp-track-outer blog-2col reveal delay-2" id="perspTrack">
     <div class="persp-track">
       <a href="perspective-entreprise-utilise-deja-ia.html" class="persp-card persp-card--link">
         <div class="persp-card-visual persp-card-visual--img persp-card-visual--gouvernance" aria-hidden="true">
@@ -1329,7 +1346,7 @@ color: var(--plum); margin: 14px 0 0;
           <span class="persp-card-visual-overlay">Transformation</span>
         </div>
         <span class="persp-card-meta">Transformation · 7 min</span>
-        <h2 class="persp-card-title">La transformation <span style="color:var(--rose)">IA</span> échoue rarement à cause de la technologie.</h2>
+        <h2 class="persp-card-title">La transformation <span class="ink-accent">IA</span> échoue rarement à cause de la technologie.</h2>
         <p class="persp-card-subtitle">Elle échoue quand l&#8217;organisation n&#8217;a pas changé, seulement l&#8217;outil.</p>
         <p class="persp-card-desc">Un outil ne transforme rien tant que les processus, les rôles et les décisions qui l&#8217;entourent restent inchangés.</p>
         <span class="persp-card-read">Lire l&#8217;article <span class="portrait-link-arrow">→</span></span>
@@ -1340,7 +1357,7 @@ color: var(--plum); margin: 14px 0 0;
           <span class="persp-card-visual-overlay">Création de valeur</span>
         </div>
         <span class="persp-card-meta">Création de valeur · 7 min</span>
-        <h2 class="persp-card-title">Plus d&#8217;outils <span style="color:var(--rose)">IA</span> ne veut pas dire plus d&#8217;impact.</h2>
+        <h2 class="persp-card-title">Plus d&#8217;outils <span class="ink-accent">IA</span> ne veut pas dire plus d&#8217;impact.</h2>
         <p class="persp-card-subtitle">Ce n&#8217;est pas un problème d&#8217;outils. C&#8217;est un problème d&#8217;arbitrage.</p>
         <p class="persp-card-desc">Multiplier les initiatives sans les arbitrer dilue l&#8217;effort plus qu&#8217;il ne crée de résultat. Trois critères simples pour savoir lesquelles vont jusqu&#8217;au bout.</p>
         <span class="persp-card-read">Lire l&#8217;article <span class="portrait-link-arrow">→</span></span>
@@ -1350,7 +1367,7 @@ color: var(--plum); margin: 14px 0 0;
           <img src="assets/perspectives/projet-ia-financement-carte-v2.webp" alt="" loading="lazy" decoding="async">
         </div>
         <span class="persp-card-meta">Financement · 7 min</span>
-        <h2 class="persp-card-title">Votre projet <span style="color:var(--rose)">IA</span> peut-il être financé&nbsp;? Oui, mais pas forcément celui que vous pensez.</h2>
+        <h2 class="persp-card-title">Votre projet <span class="ink-accent">IA</span> peut-il être financé&nbsp;? Oui, mais pas forcément celui que vous pensez.</h2>
         <p class="persp-card-subtitle">Trois familles d’aides, trois logiques différentes.</p>
         <p class="persp-card-desc">Osez l’IA, Diag Data <span class="art-ia">IA</span>, France 2030&nbsp;: ce qui peut être financé, pour qui et à quelles conditions.</p>
         <span class="persp-card-read">Lire l&#8217;article <span class="portrait-link-arrow">→</span></span>
@@ -1370,7 +1387,7 @@ color: var(--plum); margin: 14px 0 0;
           <img src="assets/perspectives/budget-adhesion.webp" alt="" loading="lazy" decoding="async">
         </div>
         <span class="persp-card-meta">Adhésion · 7 min</span>
-        <h2 class="persp-card-title">Le budget <span style="color:var(--rose)">IA</span> n’est pas le sujet. L’adhésion, si.</h2>
+        <h2 class="persp-card-title">Le budget <span class="ink-accent">IA</span> n’est pas le sujet. L’adhésion, si.</h2>
         <p class="persp-card-subtitle">Un outil ne change jamais une organisation tout seul.</p>
         <p class="persp-card-desc">Un budget <span class="art-ia">IA</span> validé ne suffit pas. Trois leviers concrets pour que les équipes aient envie de s’en servir.</p>
         <span class="persp-card-read">Lire l&#8217;article <span class="portrait-link-arrow">→</span></span>
@@ -1380,7 +1397,7 @@ color: var(--plum); margin: 14px 0 0;
           <img src="assets/perspectives/shadow-ia-charte.webp" alt="" loading="lazy" decoding="async">
         </div>
         <span class="persp-card-meta">Shadow <span class="art-ia">IA</span> · 7 min</span>
-        <h2 class="persp-card-title">Une politique <span style="color:var(--rose)">IA</span> que ses dirigeants ne respectent pas n’est plus une politique.</h2>
+        <h2 class="persp-card-title">Une politique <span class="ink-accent">IA</span> que ses dirigeants ne respectent pas n’est plus une politique.</h2>
         <p class="persp-card-subtitle">Le sujet n’est pas la discipline des équipes. C’est la gouvernance.</p>
         <p class="persp-card-desc">78 % des salariés utilisent des outils <span class="art-ia">IA</span> non validés, et les dirigeants aussi. Trois réflexes pour reprendre la main.</p>
         <span class="persp-card-read">Lire l&#8217;article <span class="portrait-link-arrow">→</span></span>
@@ -1495,8 +1512,8 @@ color: var(--plum); margin: 14px 0 0;
       <path d="M58,53 Q63,41 68,30" stroke="#C75F62" stroke-width="6" stroke-linecap="round" fill="none"/>
       <path d="M62,49 Q69,44 75,39" stroke="#C75F62" stroke-width="6" stroke-linecap="round" fill="none"/>
     </svg>
-    <h2 class="about-cta-title">Votre entreprise a son propre<br class="about-cta-break"> <span style="color:#C75F62">point de départ.</span></h2>
-    <p class="about-cta-sub">Identifions les décisions <span style="color:var(--rose)">IA</span> qui méritent réellement votre attention.</p>
+    <h2 class="about-cta-title">Votre entreprise a son propre<br class="about-cta-break"> <span class="ink-accent">point de départ.</span></h2>
+    <p class="about-cta-sub">Identifions les décisions <span class="ink-accent">IA</span> qui méritent réellement votre attention.</p>
     <a href="https://calendly.com/exec-ia" target="_blank" rel="noopener" class="btn btn-rose">Votre diagnostic IA</a>
       <p class="offres-crosslink"><a href="offres.html" class="portrait-link">Découvrir les offres EXEC&#8217;IA <span class="portrait-link-arrow">→</span></a></p>
   </div>
@@ -1508,7 +1525,7 @@ color: var(--plum); margin: 14px 0 0;
   <div class="wrap footer-grid">
     <div class="footer-brand">
       <img src="assets/logo-execia-bords-prune.webp" alt="EXEC'IA Consulting" class="footer-logo-main" width="450" height="212" decoding="async">
-      <p class="footer-tag"><span class="footer-tag-lead">Une expérience dirigeante</span><br><span class="footer-tag-rest">au service de votre transformation <span style="color:var(--rose)">IA</span></span></p>
+      <p class="footer-tag"><span class="footer-tag-lead">Une expérience dirigeante</span><br><span class="footer-tag-rest">au service de votre transformation <span class="ink-accent">IA</span></span></p>
       <p class="footer-signature">Décidez avant d&#8217;investir.</p>
     </div>
 
@@ -1521,22 +1538,22 @@ color: var(--plum); margin: 14px 0 0;
       <a href="temoignages.html">Témoignages</a>
       <a href="contact.html">Contact</a>
       <a href="perspectives.html">Blog</a>
-    <a href="perspective-entreprise-utilise-deja-ia.html" class="footer-persp-link">→ <span class="art-star" aria-label="Article le plus lu">★</span>Votre entreprise utilise déjà l’<span style="color:var(--rose)">IA</span></a>
+    <a href="perspective-entreprise-utilise-deja-ia.html" class="footer-persp-link">→ <span class="art-star" aria-label="Article le plus lu">★</span>Votre entreprise utilise déjà l’<span class="ink-accent">IA</span></a>
     <a href="perspective-toutes-decisions-ne-se-deleguent-pas.html" class="footer-persp-link">→ <span class="art-star" aria-label="Article le plus lu">★</span>Toutes les décisions ne se délèguent pas</a>
-    <a href="perspective-transformation-echoue-rarement-technologie.html" class="footer-persp-link">→ La transformation <span style="color:var(--rose)">IA</span> échoue rarement</a>
-    <a href="perspective-probleme-nest-pas-outils-mais-arbitrage.html" class="footer-persp-link">→ Plus d’outils <span style="color:var(--rose)">IA</span>, pas plus d’impact</a>
-    <a href="perspective-projet-ia-peut-il-etre-finance.html" class="footer-persp-link">→ Votre projet <span style="color:var(--rose)">IA</span> peut-il être financé&nbsp;?</a>
+    <a href="perspective-transformation-echoue-rarement-technologie.html" class="footer-persp-link">→ La transformation <span class="ink-accent">IA</span> échoue rarement</a>
+    <a href="perspective-probleme-nest-pas-outils-mais-arbitrage.html" class="footer-persp-link">→ Plus d’outils <span class="ink-accent">IA</span>, pas plus d’impact</a>
+    <a href="perspective-projet-ia-peut-il-etre-finance.html" class="footer-persp-link">→ Votre projet <span class="ink-accent">IA</span> peut-il être financé&nbsp;?</a>
     <a href="perspective-chatbot-savoir-passer-la-main.html" class="footer-persp-link">→ Où tracer la limite entre chatbot et humain&nbsp;?</a>
-    <div class="footer-persp-c2" style="gap:3px">
+    <div class="footer-persp-c2 gap-3">
     <a href="perspective-budget-ia-adhesion-equipes.html" class="footer-persp-link footer-persp-link--c2">→ L’adhésion compte-t-elle plus que le budget&nbsp;?</a>
-    <a href="perspective-shadow-ia-charte-comite-direction.html" class="footer-persp-link footer-persp-link--c2">→ Quels outils <span style="color:var(--rose)">IA</span> vos équipes utilisent-elles&nbsp;?</a>
+    <a href="perspective-shadow-ia-charte-comite-direction.html" class="footer-persp-link footer-persp-link--c2">→ Quels outils <span class="ink-accent">IA</span> vos équipes utilisent-elles&nbsp;?</a>
     <a href="perspective-robots-humanoides-token-tax.html" class="footer-persp-link footer-persp-link--c2">→ Quelles tâches confier à un robot humanoïde&nbsp;?</a>
     <a href="perspective-affaire-orelien-preuve-travail.html" class="footer-persp-link footer-persp-link--c2">→ <span class="art-star" aria-label="Article le plus lu">★</span>Demain, vos équipes devront-elles prouver leur travail&nbsp;?</a>
-    <a href="perspective-tri-cv-ia-candidatures-ecartees.html" class="footer-persp-link footer-persp-link--c2">→ Qui relit les CV que l’<span style="color:var(--rose)">IA</span> écarte&nbsp;?</a>
-    <a href="perspective-agents-ia-recruter-comme-salarie.html" class="footer-persp-link footer-persp-link--c2">→ Un agent <span style="color:var(--rose)">IA</span> se recrute-t-il comme un salarié&nbsp;?</a>
+    <a href="perspective-tri-cv-ia-candidatures-ecartees.html" class="footer-persp-link footer-persp-link--c2">→ Qui relit les CV que l’<span class="ink-accent">IA</span> écarte&nbsp;?</a>
+    <a href="perspective-agents-ia-recruter-comme-salarie.html" class="footer-persp-link footer-persp-link--c2">→ Un agent <span class="ink-accent">IA</span> se recrute-t-il comme un salarié&nbsp;?</a>
     <a href="perspective-jumeau-numerique-savoir-dirigeant.html" class="footer-persp-link footer-persp-link--c2">→ Jumeau numérique : le savoir du dirigeant part-il&nbsp;?</a>
-    <a href="perspective-forward-deployed-engineer-pme.html" class="footer-persp-link footer-persp-link--c2">→ Entre l’<span style="color:var(--rose)">IA</span> et la Direction, il faut un traducteur</a>
-    <a href="perspective-enregistreur-ia-reunion-direction.html" class="footer-persp-link footer-persp-link--c2">→ Un enregistreur <span style="color:var(--rose)">IA</span> en comité de direction&nbsp;: qui l’a décidé&nbsp;?</a>
+    <a href="perspective-forward-deployed-engineer-pme.html" class="footer-persp-link footer-persp-link--c2">→ Entre l’<span class="ink-accent">IA</span> et la Direction, il faut un traducteur</a>
+    <a href="perspective-enregistreur-ia-reunion-direction.html" class="footer-persp-link footer-persp-link--c2">→ Un enregistreur <span class="ink-accent">IA</span> en comité de direction&nbsp;: qui l’a décidé&nbsp;?</a>
     </div>
     </div>
 
@@ -1545,7 +1562,7 @@ color: var(--plum); margin: 14px 0 0;
       <a href="mailto:contact@exec-ia.ai">✉️ contact@exec-ia.ai</a>
       <span class="footer-loc">📍 Paris, France, International</span>
       <a href="https://www.linkedin.com/in/val%C3%A9rie-mailland" target="_blank" rel="noopener" class="footer-linkedin-btn"><img src="assets/linkedin-logo.png" alt="LinkedIn" class="footer-linkedin-logo">Me suivre sur LinkedIn</a>
-      <a href="https://www.instagram.com/execia.consulting/" target="_blank" rel="noopener" class="footer-linkedin-btn footer-instagram-btn"><img src="assets/instagram-logo.png" alt="Instagram" class="footer-linkedin-logo" width="18" height="18"><span>Suivre EXEC'<span style="color:var(--rose)">IA</span> sur Instagram</span></a>
+      <a href="https://www.instagram.com/execia.consulting/" target="_blank" rel="noopener" class="footer-linkedin-btn footer-instagram-btn"><img src="assets/instagram-logo.png" alt="Instagram" class="footer-linkedin-logo" width="18" height="18"><span>Suivre EXEC'<span class="ink-accent">IA</span> sur Instagram</span></a>
     </div>
     <div class="footer-col footer-col--langs">
       <span class="footer-col-title">Langues</span>
@@ -1613,7 +1630,7 @@ color: var(--plum); margin: 14px 0 0;
     </div>
   </div>
 </div>
-<script src="assets/chat-widget.js?v=3" defer></script>
-<script src="assets/phare-chat-widget.js?v=5" defer></script>
+<script src="assets/chat-widget.js?v=4" defer></script>
+<script src="assets/phare-chat-widget.js?v=6" defer></script>
 </body>
 </html>

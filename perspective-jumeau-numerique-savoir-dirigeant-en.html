@@ -1057,6 +1057,19 @@ color: var(--plum); margin: 14px 0 0;
 @media (min-width: 1251px){.footer-col--site .footer-persp-c2{ left: calc(18.75rem - 5px); }.footer-bottom .footer-rights{ grid-row: 1; }.footer-bottom .footer-copy{ grid-column: 2 / 4; grid-row: 1; margin-left: calc(18.75rem - 5px); }}
 :focus-visible{ outline: 2px solid var(--rose); outline-offset: 3px; border-radius: 4px; }
 @media print{.reveal, .reveal.visible{ opacity: 1 !important; transform: none !important; }.nav, .cookie-banner, .phare-bubble, #phare-bubble, .qw-bubble{ display: none !important; }}
+.art-ia, .aiact-ia, .aiact-key, .risk-hl, .article-meta, .persp-card-read, .persp-card-subtitle,
+.article-related-title, .article-tldr-arrow, .portrait-link-arrow, .acc-num, .acc-icon, .pilier-title,
+.offre-niveau, .offre-web-tier-price, .nl-req, .agent-eyebrow-txt, .ve-col-num, .constat-flip-cue-txt,
+.cookie-cat-always, .agents-arrow{ color: #C75F62; }
+p .art-ia, li .art-ia, p .aiact-ia, li .aiact-ia, p .risk-hl, li .risk-hl{ font-weight: 600; }
+.article-meta, .persp-card-read, .persp-card-subtitle, .article-related-title, .article-tldr-arrow, .portrait-link-arrow{ font-weight: 600; }
+@media (max-width: 1250px){.footer-col--site{ display: block; columns: 2; column-gap: 24px; width: 100%; max-width: 100%; min-width: 0; box-sizing: border-box; }.footer-col--site > *{ break-inside: avoid; }.footer-col--site .footer-persp-c2{ position: static; margin-top: 0; }}
+.ink-accent{ color: #C75F62 !important; }
+.gap-3{ gap: 3px !important; }
+.mt-28{ margin-top: 28px !important; }
+.persp-card-read, a.persp-all-link, .article-tldr-arrow{ font-weight: 600 !important; }
+.article-meta, .article-related-title, .portrait-link-arrow, .article-tldr-arrow{ color: #633B4A !important; }
+.footer-persp-link, a.footer-persp-link, a.nav-lang{ color: #633B4A !important; opacity: 1 !important; }
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a leader's digital twin?", "acceptedAnswer": {"@type": "Answer", "text": "It is an AI assistant that answers questions from what the leader has said, written and decided, citing its source every time. It is built from recorded interviews, transcribed and then approved by the leader. It keeps a record of their reasoning for the successor and leadership team: why a client stays, why a supplier was chosen, what has already failed. It never decides for anyone, and it says it doesn't know when a question goes beyond what it was given."}}, {"@type": "Question", "name": "What is Fred24?", "acceptedAnswer": {"@type": "Answer", "text": "Fred24 is the AI assistant launched in July 2026 by Frédéric Mazzella, founder of BlaBlaCar. It is built on twenty years of his talks, interviews and writing, and answers entrepreneurs' questions from what he has already said. It is a public example of a leader's digital twin. The same idea can work inside an SME for a small circle: the successor, the leadership team and key managers, with protected access and approved content."}}, {"@type": "Question", "name": "How many business owners will retire in France?", "acceptedAnswer": {"@type": "Answer", "text": "According to the French Ministry of the Economy, around 550,000 business owners will retire within ten years, with 3 million jobs at stake. The “Objectif Reprises” plan, presented on 23 April 2026, aims to ease these handovers, and the proposed “Papin pact” in the 2027 draft budget has yet to be voted. These measures deal with price, tax and financing. None of them covers the leader's knowledge: the company has to organise that itself, several years before the departure."}}, {"@type": "Question", "name": "How do you build a leader's digital twin?", "acceptedAnswer": {"@type": "Answer", "text": "In four steps, while the leader is still there. Record one-hour interviews about their key decisions, long-standing clients, suppliers and the company's unwritten rules. Have them transcribed and sorted by theme. Give the successor an AI assistant that answers only from these notes and cites its sources. Have the leader review, correct and approve everything. Ten interviews and a few weeks of set-up are enough for a first version, provided the leader keeps one hour a week free for it."}}, {"@type": "Question", "name": "Does the GDPR apply to recorded interviews?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The leader's voice and opinions are personal data, as are the names of clients or employees mentioned in the interviews. You need to inform the leader, obtain their consent, limit retention and protect access with named accounts. The simplest rule is to anonymise the clients and employees mentioned before feeding the assistant. Under the EU AI Act, an internal assistant of this kind is not high-risk as long as it isn't used to assess or manage employees."}}, {"@type": "Question", "name": "When should a leader start passing on their knowledge?", "acceptedAnswer": {"@type": "Answer", "text": "Several years before leaving. At that point the leader still has the time and the distance to tell, correct and complete their interviews. A few months before a sale, urgency takes over: negotiation, audits, announcing it to the team, and knowledge slips down the list. Starting three months before the sale is the most common mistake. One hour a week blocked in the leader's diary is enough, as long as it is kept until departure."}}, {"@type": "Question", "name": "Does a digital twin replace the handover?", "acceptedAnswer": {"@type": "Answer", "text": "No. It replaces neither the handover between two people, nor meetings with key clients, nor the time a successor needs to earn the team's trust. Nor does it capture intuition: a leader can explain why they turned a partner down, but they can't pass on the feeling that warned them. The digital twin complements the handover. It keeps the explanations and their sources, so the successor can find them when needed, long after the leader has gone."}}, {"@type": "Question", "name": "Where should a leader's memory be kept?", "acceptedAnswer": {"@type": "Answer", "text": "In a business tool that excludes, by contract, the use of your data to train its models, ideally hosted in Europe, with named user access and a clear list of authorised people. Never in a consumer tool. Also decide who keeps the memory up to date after the leader leaves and how long it is kept. If the company is sold, state in the sale agreement whether the digital twin is part of the sale, rather than finding out after signing."}}], "inLanguage": "en-GB"}
@@ -1099,7 +1112,7 @@ color: var(--plum); margin: 14px 0 0;
         <a href="perspectives-en.html" class="article-back">← All Perspectives</a>
         <span class="article-meta">Perspectives • Succession</span>
         <h1 class="article-title">When a leader leaves,<br>how do you keep their knowledge?</h1>
-        <p class="article-source-note article-source-note--linkedin"><img src="assets/linkedin-logo.png" alt="" class="article-linkedin-icon">Article developed from my <span style="color:var(--rose)">LinkedIn</span> post (<time datetime="2026-10-13">13/10/2026</time>)</p>
+        <p class="article-source-note article-source-note--linkedin"><img src="assets/linkedin-logo.png" alt="" class="article-linkedin-icon">Article developed from my <span class="ink-accent">LinkedIn</span> post (<time datetime="2026-10-13">13/10/2026</time>)</p>
         <details class="article-tldr">
           <summary>Short version <span class="article-tldr-arrow">→</span></summary>
           <div class="article-tldr-body">
@@ -1155,7 +1168,7 @@ color: var(--plum); margin: 14px 0 0;
         <div class="article-close">
           <p class="article-close-line1">💬 In your company,</p>
           <p class="article-close-line2">who knows today what your leader knows?</p>
-          <p class="article-source-note" style="margin-top:28px">Sources: <a href="https://bigmedia.bpifrance.fr/nos-actualites/entrepreneuriat-et-ia-fred24-cest-un-associe-auquel-pose-des-questions" target="_blank" rel="noopener">Bpifrance Big Média, interview with Frédéric Mazzella on Fred24, 15 July 2026 (in French)</a>; <a href="https://www.economie.gouv.fr/node/3240319" target="_blank" rel="noopener">French Ministry of the Economy, “Objectif Reprises” plan, April 2026 (in French)</a>; <a href="https://www.lagazettefrance.fr/article/sante-mentale-ia-competences-les-nouvelles-lignes-de-tension-au-travail" target="_blank" rel="noopener">Great Place To Work and Toluna, “Great Insights 2026” survey (in French)</a>; <a href="https://www.banquedesterritoires.fr/transmission-dentreprises-le-gouvernement-veut-creer-un-pacte-papin-pour-faciliter-la-reprise-des" target="_blank" rel="noopener">Banque des Territoires, proposed “Papin pact” (in French)</a>; Regulation (EU) 2024/1689 (<span class="aiact-ref">AI&nbsp;Act</span>), Article 50; GDPR.</p>
+          <p class="article-source-note mt-28">Sources: <a href="https://bigmedia.bpifrance.fr/nos-actualites/entrepreneuriat-et-ia-fred24-cest-un-associe-auquel-pose-des-questions" target="_blank" rel="noopener">Bpifrance Big Média, interview with Frédéric Mazzella on Fred24, 15 July 2026 (in French)</a>; <a href="https://www.economie.gouv.fr/node/3240319" target="_blank" rel="noopener">French Ministry of the Economy, “Objectif Reprises” plan, April 2026 (in French)</a>; <a href="https://www.lagazettefrance.fr/article/sante-mentale-ia-competences-les-nouvelles-lignes-de-tension-au-travail" target="_blank" rel="noopener">Great Place To Work and Toluna, “Great Insights 2026” survey (in French)</a>; <a href="https://www.banquedesterritoires.fr/transmission-dentreprises-le-gouvernement-veut-creer-un-pacte-papin-pour-faciliter-la-reprise-des" target="_blank" rel="noopener">Banque des Territoires, proposed “Papin pact” (in French)</a>; Regulation (EU) 2024/1689 (<span class="aiact-ref">AI&nbsp;Act</span>), Article 50; GDPR.</p>
           <p class="article-hashtags">#EXECIA #ArtificialIntelligence #Succession #SMEs #Governance</p>
         </div>
         <span class="article-book-folio" aria-hidden="true" data-n="— 02 —"></span>
@@ -1261,7 +1274,7 @@ color: var(--plum); margin: 14px 0 0;
   <div class="wrap footer-grid">
     <div class="footer-brand">
       <img src="assets/logo-execia-bords-prune.webp" alt="EXEC'IA Consulting" class="footer-logo-main" width="450" height="212" decoding="async">
-      <p class="footer-tag"><span class="footer-tag-lead">Executive-level experience</span><br><span class="footer-tag-rest">at the service of your <span style="color:var(--rose)">AI</span> transformation</span></p>
+      <p class="footer-tag"><span class="footer-tag-lead">Executive-level experience</span><br><span class="footer-tag-rest">at the service of your <span class="ink-accent">AI</span> transformation</span></p>
       <p class="footer-signature">Decide before you invest.</p>
     </div>
 
@@ -1274,22 +1287,22 @@ color: var(--plum); margin: 14px 0 0;
       <a href="temoignages-en.html">Testimonials</a>
       <a href="contact-en.html">Contact</a>
       <a href="perspectives-en.html">Blog</a>
-    <a href="perspective-entreprise-utilise-deja-ia-en.html" class="footer-persp-link">→ <span class="art-star" aria-label="Most-read article">★</span>Adopting <span style="color:var(--rose)">AI</span> vs. creating value</a>
+    <a href="perspective-entreprise-utilise-deja-ia-en.html" class="footer-persp-link">→ <span class="art-star" aria-label="Most-read article">★</span>Adopting <span class="ink-accent">AI</span> vs. creating value</a>
     <a href="perspective-toutes-decisions-ne-se-deleguent-pas-en.html" class="footer-persp-link">→ <span class="art-star" aria-label="Most-read article">★</span>Not every decision can be delegated</a>
-    <a href="perspective-transformation-echoue-rarement-technologie-en.html" class="footer-persp-link">→ <span style="color:var(--rose)">AI</span> transformation rarely fails</a>
-    <a href="perspective-probleme-nest-pas-outils-mais-arbitrage-en.html" class="footer-persp-link">→ More <span style="color:var(--rose)">AI</span> tools, not more impact</a>
-    <a href="perspective-projet-ia-peut-il-etre-finance-en.html" class="footer-persp-link">→ Can your <span style="color:var(--rose)">AI</span> project be funded?</a>
+    <a href="perspective-transformation-echoue-rarement-technologie-en.html" class="footer-persp-link">→ <span class="ink-accent">AI</span> transformation rarely fails</a>
+    <a href="perspective-probleme-nest-pas-outils-mais-arbitrage-en.html" class="footer-persp-link">→ More <span class="ink-accent">AI</span> tools, not more impact</a>
+    <a href="perspective-projet-ia-peut-il-etre-finance-en.html" class="footer-persp-link">→ Can your <span class="ink-accent">AI</span> project be funded?</a>
     <a href="perspective-chatbot-savoir-passer-la-main-en.html" class="footer-persp-link">→ When should a chatbot hand over?</a>
-    <div class="footer-persp-c2" style="gap:3px">
+    <div class="footer-persp-c2 gap-3">
     <a href="perspective-budget-ia-adhesion-equipes-en.html" class="footer-persp-link footer-persp-link--c2">→ Why does buy-in matter more than budget?</a>
-    <a href="perspective-shadow-ia-charte-comite-direction-en.html" class="footer-persp-link footer-persp-link--c2">→ Which <span style="color:var(--rose)">AI</span> tools do your teams really use?</a>
+    <a href="perspective-shadow-ia-charte-comite-direction-en.html" class="footer-persp-link footer-persp-link--c2">→ Which <span class="ink-accent">AI</span> tools do your teams really use?</a>
     <a href="perspective-robots-humanoides-token-tax-en.html" class="footer-persp-link footer-persp-link--c2">→ Which tasks would you hand to a humanoid robot?</a>
     <a href="perspective-affaire-orelien-preuve-travail-en.html" class="footer-persp-link footer-persp-link--c2">→ <span class="art-star" aria-label="Most-read article">★</span>Will your teams have to prove their work?</a>
-    <a href="perspective-tri-cv-ia-candidatures-ecartees-en.html" class="footer-persp-link footer-persp-link--c2">→ Who rereads the CVs that <span style="color:var(--rose)">AI</span> rejects?</a>
-    <a href="perspective-agents-ia-recruter-comme-salarie-en.html" class="footer-persp-link footer-persp-link--c2">→ Should you hire an <span style="color:var(--rose)">AI</span> agent like an employee?</a>
+    <a href="perspective-tri-cv-ia-candidatures-ecartees-en.html" class="footer-persp-link footer-persp-link--c2">→ Who rereads the CVs that <span class="ink-accent">AI</span> rejects?</a>
+    <a href="perspective-agents-ia-recruter-comme-salarie-en.html" class="footer-persp-link footer-persp-link--c2">→ Should you hire an <span class="ink-accent">AI</span> agent like an employee?</a>
     <a href="perspective-jumeau-numerique-savoir-dirigeant-en.html" class="footer-persp-link footer-persp-link--c2">→ Digital twin: does a leader’s knowledge leave too?</a>
-    <a href="perspective-forward-deployed-engineer-pme-en.html" class="footer-persp-link footer-persp-link--c2">→ Between <span style="color:var(--rose)">AI</span> and leadership, you need a translator</a>
-    <a href="perspective-enregistreur-ia-reunion-direction-en.html" class="footer-persp-link footer-persp-link--c2">→ An <span style="color:var(--rose)">AI</span> recorder in the management meeting: who decided that?</a>
+    <a href="perspective-forward-deployed-engineer-pme-en.html" class="footer-persp-link footer-persp-link--c2">→ Between <span class="ink-accent">AI</span> and leadership, you need a translator</a>
+    <a href="perspective-enregistreur-ia-reunion-direction-en.html" class="footer-persp-link footer-persp-link--c2">→ An <span class="ink-accent">AI</span> recorder in the management meeting: who decided that?</a>
     </div>
     </div>
 
@@ -1298,7 +1311,7 @@ color: var(--plum); margin: 14px 0 0;
       <a href="mailto:contact@exec-ia.ai">✉️ contact@exec-ia.ai</a>
       <span class="footer-loc">📍 Paris, France, International</span>
       <a href="https://www.linkedin.com/in/val%C3%A9rie-mailland" target="_blank" rel="noopener" class="footer-linkedin-btn"><img src="assets/linkedin-logo.png" alt="LinkedIn" class="footer-linkedin-logo">Follow me on LinkedIn</a>
-      <a href="https://www.instagram.com/execia.consulting/" target="_blank" rel="noopener" class="footer-linkedin-btn footer-instagram-btn"><img src="assets/instagram-logo.png" alt="Instagram" class="footer-linkedin-logo" width="18" height="18"><span>Follow EXEC'<span style="color:var(--rose)">IA</span> on Instagram</span></a>
+      <a href="https://www.instagram.com/execia.consulting/" target="_blank" rel="noopener" class="footer-linkedin-btn footer-instagram-btn"><img src="assets/instagram-logo.png" alt="Instagram" class="footer-linkedin-logo" width="18" height="18"><span>Follow EXEC'<span class="ink-accent">IA</span> on Instagram</span></a>
     </div>
     <div class="footer-col footer-col--langs">
       <span class="footer-col-title">Languages</span>

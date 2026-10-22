@@ -927,7 +927,6 @@ box-shadow: 0 12px 32px rgba(99,59,74,.25);
 .article-book h3.article-meta:first-child{ margin-top: 0; }
 .article-book h3.article-meta + .article-intro{ margin-top: 0; }
 .art-num::before{ content: attr(data-n) "."; color: var(--rose); font-family: var(--sans); font-weight: 600; margin-right: .45em; }
-.article-title br{ display: block; }
 .article-book .article-intro p, .article-book .article-close p, .article-book .art-list li{ text-align: left; text-wrap: pretty; hyphens: auto; -webkit-hyphens: auto; hyphenate-limit-chars: 6 3 3; }
 body.art-justify .article-book .article-intro p{ text-align: justify; text-align-last: left; text-justify: inter-word; }
 body.art-justify .article-book .article-intro p.art-enum{ text-align: left; }
@@ -1051,6 +1050,21 @@ color: var(--plum); margin: 14px 0 0;
 @media (min-width: 1251px){.footer-col--site .footer-persp-c2{ left: calc(18.75rem - 5px); }.footer-bottom .footer-rights{ grid-row: 1; }.footer-bottom .footer-copy{ grid-column: 2 / 4; grid-row: 1; margin-left: calc(18.75rem - 5px); }}
 :focus-visible{ outline: 2px solid var(--rose); outline-offset: 3px; border-radius: 4px; }
 @media print{.reveal, .reveal.visible{ opacity: 1 !important; transform: none !important; }.nav, .cookie-banner, .phare-bubble, #phare-bubble, .qw-bubble{ display: none !important; }}
+.art-ia, .aiact-ia, .aiact-key, .risk-hl, .article-meta, .persp-card-read, .persp-card-subtitle,
+.article-related-title, .article-tldr-arrow, .portrait-link-arrow, .acc-num, .acc-icon, .pilier-title,
+.offre-niveau, .offre-web-tier-price, .nl-req, .agent-eyebrow-txt, .ve-col-num, .constat-flip-cue-txt,
+.cookie-cat-always, .agents-arrow{ color: #C75F62; }
+h1 .art-ia{ color: #C75F62; }
+h2 .art-ia{ color: #C75F62; }
+p .art-ia, li .art-ia, p .aiact-ia, li .aiact-ia, p .risk-hl, li .risk-hl{ font-weight: 600; }
+.article-meta, .persp-card-read, .persp-card-subtitle, .article-related-title, .article-tldr-arrow, .portrait-link-arrow{ font-weight: 600; }
+@media (max-width: 1250px){.footer-col--site{ display: block; columns: 2; column-gap: 24px; width: 100%; max-width: 100%; min-width: 0; box-sizing: border-box; }.footer-col--site > *{ break-inside: avoid; }.footer-col--site .footer-persp-c2{ position: static; margin-top: 0; }}
+.ink-accent{ color: #C75F62 !important; }
+.gap-3{ gap: 3px !important; }
+.mt-28{ margin-top: 28px !important; }
+.persp-card-read, a.persp-all-link, .article-tldr-arrow{ font-weight: 600 !important; }
+.article-meta, .article-related-title, .portrait-link-arrow, .article-tldr-arrow{ color: #633B4A !important; }
+.footer-persp-link, a.footer-persp-link, a.nav-lang{ color: #633B4A !important; opacity: 1 !important; }
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Qué hace una grabadora de IA en una reunión?", "acceptedAnswer": {"@type": "Answer", "text": "Graba la reunión, la transcribe y extrae un resumen, las decisiones tomadas y la lista de acciones. Adopta la forma de un pequeño dispositivo sobre la mesa o de un asistente que se une automáticamente a las videollamadas. La ganancia es real: nadie toma notas, todos escuchan y participan, y el acta puede enviarse el mismo día. El riesgo está en el destino de las conversaciones."}}, {"@type": "Question", "name": "¿Por qué se ha presentado una demanda contra Otter.ai?", "acceptedAnswer": {"@type": "Answer", "text": "En agosto de 2025 se presentó en California una demanda colectiva contra Otter.ai, uno de los asistentes de reunión más utilizados. La demanda afirma que su asistente grababa a participantes sin su consentimiento, siendo solo el organizador quien lo daba, y que esas grabaciones servían para entrenar los modelos del proveedor. En agosto de 2026, un tribunal californiano dejó seguir adelante varias reclamaciones, sin juzgar el fondo: a día de hoy nadie está condenado. Muestra por qué conviene leer el contrato de una herramienta antes de adoptarla."}}, {"@type": "Question", "name": "¿Se puede grabar un comité de dirección sin avisar?", "acceptedAnswer": {"@type": "Answer", "text": "No. Una reunión grabada contiene datos personales: la voz, las palabras y las opiniones de los participantes. El RGPD exige una finalidad precisa, información clara, un plazo de conservación limitado y derechos de acceso y supresión. El artículo L1222-4 del Código del Trabajo francés prohíbe además recoger información personal de un trabajador mediante un dispositivo que no conoce de antemano. Hay que avisar, pues, a cada participante, en cada reunión."}}, {"@type": "Question", "name": "¿Qué reglas fijar antes de grabar una reunión de dirección?", "acceptedAnswer": {"@type": "Answer", "text": "Bastan cuatro reglas. Informar a cada participante al comienzo de cada reunión. Obtener su consentimiento y ofrecer una toma de notas tradicional a quien se niegue. Proteger los datos con una herramienta profesional que no entrene sus modelos con sus conversaciones. Decidir quién conserva la grabación y el resumen, y durante cuánto tiempo. Estas reglas caben en una página, unida a la carta de uso de la IA de la empresa."}}, {"@type": "Question", "name": "¿Qué reuniones no hay que grabar nunca?", "acceptedAnswer": {"@type": "Answer", "text": "Algunas reuniones no tienen cabida en una grabadora, sea cual sea la herramienta: las entrevistas individuales con un trabajador, las conversaciones sobre compras, ventas o captación de fondos, los intercambios con un abogado protegidos por el secreto profesional, los temas de salud o de situación personal y las decisiones sobre remuneraciones. Para estas reuniones, la toma de notas tradicional, revisada por los participantes, sigue siendo el método adecuado."}}, {"@type": "Question", "name": "¿Qué dice el Reglamento de IA sobre las grabadoras de reuniones?", "acceptedAnswer": {"@type": "Answer", "text": "Cuentan dos reglas. En el lugar de trabajo, el reconocimiento de emociones por IA está prohibido desde el 2 de febrero de 2025, salvo por razones médicas o de seguridad: hay que desactivar las funciones que pretenden analizar el tono o el estado de ánimo de los participantes. Y la regla de transparencia vigente desde el 2 de agosto de 2026 exige que cada persona sepa cuándo un contenido, como el resumen de una reunión, lo produce una IA."}}, {"@type": "Question", "name": "¿Cómo elegir una grabadora de IA para una empresa?", "acceptedAnswer": {"@type": "Answer", "text": "Cinco criterios permiten ordenar las ofertas: un contrato que excluya el entrenamiento de modelos con sus grabaciones, un alojamiento en Europa o garantías equivalentes, la supresión del audio una vez obtenido el texto, accesos nominativos reservados a los miembros del comité y una exportación sencilla para no depender del proveedor. La buena herramienta es aquella cuyo funcionamiento puede explicar a un participante inquieto."}}, {"@type": "Question", "name": "¿Quién debe revisar el resumen producido por la IA?", "acceptedAnswer": {"@type": "Answer", "text": "Una persona designada, a menudo la asistente o el asistente de dirección, que conoce los expedientes y las sensibilidades del comité. La herramienta no sabe lo que realmente se decidió, ni lo que no debe circular. Esa persona revisa el resumen, corrige los errores, retira lo confidencial y lo hace validar por el presidente de la sesión. El acta oficial sigue siendo así un documento humano."}}, {"@type": "Question", "name": "¿Cuánto tiempo conservar la grabación de una reunión?", "acceptedAnswer": {"@type": "Answer", "text": "El menor tiempo posible. Una vez validada el acta, pasa a ser el único registro de referencia y el audio ya no tiene razón de conservarse: eliminarlo limita el riesgo en caso de fuga o de solicitud de acceso. El plazo de conservación del texto y del resumen se fija en la carta de grabación, según el uso, y se comprueba cada trimestre con la lista de las grabaciones que aún existen."}}], "inLanguage": "es-ES"}
@@ -1092,7 +1106,7 @@ color: var(--plum); margin: 14px 0 0;
       <div class="article-header-text">
         <a href="perspectives-es.html" class="article-back">← Todas las Perspectives</a>
         <span class="article-meta">Perspectivas • Gobernanza</span>
-        <h1 class="article-title">Una grabadora de <span class="art-ia">IA</span> en el comité de dirección:<br>¿quién lo decidió?</h1>
+        <h1 class="article-title">Una grabadora de <span class="art-ia">IA</span> en el comité de dirección: ¿quién lo decidió?</h1>
         <details class="article-tldr">
           <summary>Versión breve <span class="article-tldr-arrow">→</span></summary>
           <div class="article-tldr-body">
@@ -1141,7 +1155,7 @@ color: var(--plum); margin: 14px 0 0;
         <div class="article-close">
           <p class="article-close-line1">💬 En su comité de dirección,</p>
           <p class="article-close-line2">¿quién decidió grabar?</p>
-          <p class="article-source-note" style="margin-top:28px">Fuentes: <a href="https://www.npr.org/2025/08/15/g-s1-83087/otter-ai-transcription-class-action-lawsuit" target="_blank" rel="noopener">NPR, «&nbsp;Class-action suit claims Otter AI secretly records private work conversations&nbsp;», 15 de agosto de 2025 (en inglés)</a>; <a href="https://www.mondaq.com/when-ai-takes-notes-court-allows-privacy-claims-against-otterai-to-proceed/1834520" target="_blank" rel="noopener">Mondaq, «&nbsp;When AI takes notes, court allows privacy claims against Otter.ai to proceed&nbsp;», 25 de agosto de 2026 (en inglés)</a>; Código del Trabajo francés, artículo L1222-4; <a href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees" target="_blank" rel="noopener">CNIL, el RGPD (en francés)</a>; Reglamento (UE) 2024/1689 (<span class="aiact-ref">AI&nbsp;Act</span>), artículos 5 y 50.</p>
+          <p class="article-source-note mt-28">Fuentes: <a href="https://www.npr.org/2025/08/15/g-s1-83087/otter-ai-transcription-class-action-lawsuit" target="_blank" rel="noopener">NPR, «&nbsp;Class-action suit claims Otter AI secretly records private work conversations&nbsp;», 15 de agosto de 2025 (en inglés)</a>; <a href="https://www.mondaq.com/when-ai-takes-notes-court-allows-privacy-claims-against-otterai-to-proceed/1834520" target="_blank" rel="noopener">Mondaq, «&nbsp;When AI takes notes, court allows privacy claims against Otter.ai to proceed&nbsp;», 25 de agosto de 2026 (en inglés)</a>; Código del Trabajo francés, artículo L1222-4; <a href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees" target="_blank" rel="noopener">CNIL, el RGPD (en francés)</a>; Reglamento (UE) 2024/1689 (<span class="aiact-ref">AI&nbsp;Act</span>), artículos 5 y 50.</p>
           <p class="article-hashtags">#EXECIA #InteligenciaArtificial #ComitéDeDirección #Pymes #Gobernanza</p>
         </div>
         <span class="article-book-folio" aria-hidden="true" data-n="— 02 —"></span>
@@ -1268,7 +1282,7 @@ color: var(--plum); margin: 14px 0 0;
   <div class="wrap footer-grid">
     <div class="footer-brand">
       <img src="assets/logo-execia-bords-prune.webp" alt="EXEC'IA Consulting" class="footer-logo-main" width="450" height="212" decoding="async">
-      <p class="footer-tag"><span class="footer-tag-lead">Una experiencia directiva</span><br><span class="footer-tag-rest">al servicio de su transformación <span style="color:var(--rose)">IA</span></span></p>
+      <p class="footer-tag"><span class="footer-tag-lead">Una experiencia directiva</span><br><span class="footer-tag-rest">al servicio de su transformación <span class="ink-accent">IA</span></span></p>
       <p class="footer-signature">Decida antes de invertir.</p>
     </div>
 
@@ -1281,22 +1295,22 @@ color: var(--plum); margin: 14px 0 0;
       <a href="temoignages-es.html">Testimonios</a>
       <a href="contact-es.html">Contacto</a>
       <a href="perspectives-es.html">Blog</a>
-    <a href="perspective-entreprise-utilise-deja-ia-es.html" class="footer-persp-link">→ <span class="art-star" aria-label="Artículo más leído">★</span>Adoptar la <span style="color:var(--rose)">IA</span> no es crear valor</a>
+    <a href="perspective-entreprise-utilise-deja-ia-es.html" class="footer-persp-link">→ <span class="art-star" aria-label="Artículo más leído">★</span>Adoptar la <span class="ink-accent">IA</span> no es crear valor</a>
     <a href="perspective-toutes-decisions-ne-se-deleguent-pas-es.html" class="footer-persp-link">→ <span class="art-star" aria-label="Artículo más leído">★</span>No todas las decisiones se delegan</a>
-    <a href="perspective-transformation-echoue-rarement-technologie-es.html" class="footer-persp-link">→ La transformación con <span style="color:var(--rose)">IA</span> rara vez fracasa</a>
-    <a href="perspective-probleme-nest-pas-outils-mais-arbitrage-es.html" class="footer-persp-link">→ Más herramientas de <span style="color:var(--rose)">IA</span>, no más impacto</a>
-    <a href="perspective-projet-ia-peut-il-etre-finance-es.html" class="footer-persp-link">→ ¿Se puede financiar su proyecto de <span style="color:var(--rose)">IA</span>?</a>
+    <a href="perspective-transformation-echoue-rarement-technologie-es.html" class="footer-persp-link">→ La transformación con <span class="ink-accent">IA</span> rara vez fracasa</a>
+    <a href="perspective-probleme-nest-pas-outils-mais-arbitrage-es.html" class="footer-persp-link">→ Más herramientas de <span class="ink-accent">IA</span>, no más impacto</a>
+    <a href="perspective-projet-ia-peut-il-etre-finance-es.html" class="footer-persp-link">→ ¿Se puede financiar su proyecto de <span class="ink-accent">IA</span>?</a>
     <a href="perspective-chatbot-savoir-passer-la-main-es.html" class="footer-persp-link">→ ¿Cuándo debe un chatbot pasar el relevo?</a>
-    <div class="footer-persp-c2" style="gap:3px">
+    <div class="footer-persp-c2 gap-3">
     <a href="perspective-budget-ia-adhesion-equipes-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Por qué pesa más la adhesión que el presupuesto?</a>
-    <a href="perspective-shadow-ia-charte-comite-direction-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Qué herramientas de <span style="color:var(--rose)">IA</span> usan sus equipos?</a>
+    <a href="perspective-shadow-ia-charte-comite-direction-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Qué herramientas de <span class="ink-accent">IA</span> usan sus equipos?</a>
     <a href="perspective-robots-humanoides-token-tax-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Qué tareas confiaría a un robot humanoide?</a>
     <a href="perspective-affaire-orelien-preuve-travail-es.html" class="footer-persp-link footer-persp-link--c2">→ <span class="art-star" aria-label="Artículo más leído">★</span>¿Tendrán sus equipos que demostrar su trabajo?</a>
-    <a href="perspective-tri-cv-ia-candidatures-ecartees-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Quién relee los CV que la <span style="color:var(--rose)">IA</span> descarta?</a>
-    <a href="perspective-agents-ia-recruter-comme-salarie-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Se contrata un agente de <span style="color:var(--rose)">IA</span> como a un empleado?</a>
+    <a href="perspective-tri-cv-ia-candidatures-ecartees-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Quién relee los CV que la <span class="ink-accent">IA</span> descarta?</a>
+    <a href="perspective-agents-ia-recruter-comme-salarie-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Se contrata un agente de <span class="ink-accent">IA</span> como a un empleado?</a>
     <a href="perspective-jumeau-numerique-savoir-dirigeant-es.html" class="footer-persp-link footer-persp-link--c2">→ Gemelo digital: ¿se va el saber del directivo?</a>
-    <a href="perspective-forward-deployed-engineer-pme-es.html" class="footer-persp-link footer-persp-link--c2">→ Entre la <span style="color:var(--rose)">IA</span> y la dirección, hace falta un traductor</a>
-    <a href="perspective-enregistreur-ia-reunion-direction-es.html" class="footer-persp-link footer-persp-link--c2">→ Una grabadora de <span style="color:var(--rose)">IA</span> en el comité de dirección: ¿quién lo decidió?</a>
+    <a href="perspective-forward-deployed-engineer-pme-es.html" class="footer-persp-link footer-persp-link--c2">→ Entre la <span class="ink-accent">IA</span> y la dirección, hace falta un traductor</a>
+    <a href="perspective-enregistreur-ia-reunion-direction-es.html" class="footer-persp-link footer-persp-link--c2">→ Una grabadora de <span class="ink-accent">IA</span> en el comité de dirección: ¿quién lo decidió?</a>
     </div>
     </div>
 
@@ -1305,7 +1319,7 @@ color: var(--plum); margin: 14px 0 0;
       <a href="mailto:contact@exec-ia.ai">✉️ contact@exec-ia.ai</a>
       <span class="footer-loc">📍 Paris, France, International</span>
       <a href="https://www.linkedin.com/in/val%C3%A9rie-mailland" target="_blank" rel="noopener" class="footer-linkedin-btn"><img src="assets/linkedin-logo.png" alt="LinkedIn" class="footer-linkedin-logo">Seguirme en LinkedIn</a>
-      <a href="https://www.instagram.com/execia.consulting/" target="_blank" rel="noopener" class="footer-linkedin-btn footer-instagram-btn"><img src="assets/instagram-logo.png" alt="Instagram" class="footer-linkedin-logo" width="18" height="18"><span>Seguir a EXEC'<span style="color:var(--rose)">IA</span> en Instagram</span></a>
+      <a href="https://www.instagram.com/execia.consulting/" target="_blank" rel="noopener" class="footer-linkedin-btn footer-instagram-btn"><img src="assets/instagram-logo.png" alt="Instagram" class="footer-linkedin-logo" width="18" height="18"><span>Seguir a EXEC'<span class="ink-accent">IA</span> en Instagram</span></a>
     </div>
     <div class="footer-col footer-col--langs">
       <span class="footer-col-title">Idiomas</span>

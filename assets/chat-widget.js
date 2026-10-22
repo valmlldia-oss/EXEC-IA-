@@ -28,11 +28,6 @@
     '.qw-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}'
 ,
     'body:has(.cookie-banner.visible) #qw-bubble,body:has(.cookie-banner.visible) #qw-panel{display:none}'
-,
-    '#qw-label{position:fixed;bottom:36px;right:92px;z-index:900;border:1px solid #D9C9C3;border-radius:999px;background:#FAF6F2;color:#633B4A;font-family:Inter,system-ui,sans-serif;font-size:.8rem;font-weight:500;padding:7px 14px;cursor:pointer;box-shadow:0 4px 14px rgba(99,59,74,.15);white-space:nowrap}',
-    '#qw-label:hover{border-color:#C75F62;color:#C75F62}',
-    'body.qw-open #qw-label,body.phare-open #qw-label,body:has(.cookie-banner.visible) #qw-label{display:none}',
-    '@media (max-width:600px){#qw-label{display:none}}'
   ].join('');
   var st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);
 
@@ -50,10 +45,8 @@
     '<button id="qw-send" type="submit">' + T.send + '</button>' +
     '<p id="qw-legal">' + T.legal + '</p><p id="qw-status" role="status" aria-live="polite"></p></form>';
 
-  var label = document.createElement('button');
-  label.id = 'qw-label'; label.type = 'button'; label.textContent = T.lbl; label.setAttribute('aria-hidden', 'true'); label.tabIndex = -1;
 
-  document.body.appendChild(label); document.body.appendChild(bubble); document.body.appendChild(panel);
+  document.body.appendChild(bubble); document.body.appendChild(panel);
 
   function toggle(open) {
     panel.classList.toggle('open', open);
@@ -64,7 +57,6 @@
   // Une seule fenêtre ouverte à la fois : l'assistant IA ferme celle-ci
   document.addEventListener('phare:open', function () { if (panel.classList.contains('open')) toggle(false); });
   bubble.addEventListener('click', function () { toggle(!panel.classList.contains('open')); });
-  label.addEventListener('click', function () { toggle(true); });
   panel.querySelector('#qw-close').addEventListener('click', function () { toggle(false); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && panel.classList.contains('open')) toggle(false); });
 

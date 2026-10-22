@@ -248,12 +248,6 @@ font-size: clamp(.8rem, 1vw, .95rem); font-weight: 600;
 letter-spacing: .22em; text-transform: uppercase;
 color: var(--rose); opacity: 1;
 }
-.eyebrow-sub{ color: var(--plum); opacity: .78; font-weight: 500; }
-.eyebrow-blog{ position: relative; display: inline-block; }
-.eyebrow-blog::after{
-content: ''; position: absolute; left: 2%; width: 62%; bottom: -3px;
-height: 2px; background: var(--rose); opacity: .85;
-}
 .section-title{
 font-family: var(--serif);
 font-size: clamp(2.2rem, 3.4vw, 3.2rem);
@@ -1260,7 +1254,30 @@ color: var(--plum); margin: 14px 0 0;
 @media (max-width: 768px){#perspectives h1.section-title{ font-size: 1.3rem; }}
 :focus-visible{ outline: 2px solid var(--rose); outline-offset: 3px; border-radius: 4px; }
 @media print{.reveal, .reveal.visible{ opacity: 1 !important; transform: none !important; }.nav, .cookie-banner, .phare-bubble, #phare-bubble, .qw-bubble{ display: none !important; }}
-.eyebrow, .maf-eyebrow, .expertise-hero-eyebrow, .hero-eyebrow, .pre, .persp-card-meta{ color: #A84D50 !important; }
+.eyebrow, .maf-eyebrow, .expertise-hero-eyebrow, .hero-eyebrow, .pre, .persp-card-meta{ color: #C75F62 !important; }
+.persp-track-outer.blog-2col{ overflow-x: auto; overflow-y: visible; scroll-snap-type: x mandatory; container-type: inline-size; padding-top: .6rem; scrollbar-width: none; }
+.persp-track-outer.blog-2col::-webkit-scrollbar{ display: none; }
+.persp-track-outer.blog-2col .persp-track{ display: flex; gap: 28px; width: max-content; }
+.persp-track-outer.blog-2col .persp-card{ width: calc((100cqw - 28px) / 2); flex: 0 0 auto; scroll-snap-align: start; }
+@media (max-width: 640px){.persp-track-outer.blog-2col .persp-card{ width: 82vw; }}
+.art-ia, .aiact-ia, .aiact-key, .risk-hl, .article-meta, .persp-card-read, .persp-card-subtitle,
+.article-related-title, .article-tldr-arrow, .portrait-link-arrow, .acc-num, .acc-icon, .pilier-title,
+.offre-niveau, .offre-web-tier-price, .nl-req, .agent-eyebrow-txt, .ve-col-num, .constat-flip-cue-txt,
+.cookie-cat-always, .agents-arrow{ color: #C75F62; }
+h2 .art-ia{ color: #C75F62; }
+.cookie-banner-link{ color: #FAF6F2 !important; }
+@media (min-width: 1025px){#perspectives h1.blog-h1{ white-space: nowrap; font-size: clamp(1.8rem, 2.7vw, 2.4rem); }}
+p .art-ia, li .art-ia, p .aiact-ia, li .aiact-ia, p .risk-hl, li .risk-hl{ font-weight: 600; }
+.article-meta, .persp-card-read, .persp-card-subtitle, .article-related-title, .article-tldr-arrow, .portrait-link-arrow{ font-weight: 600; }
+@media (max-width: 1250px){.footer-col--site{ display: block; columns: 2; column-gap: 24px; width: 100%; max-width: 100%; min-width: 0; box-sizing: border-box; }.footer-col--site > *{ break-inside: avoid; }.footer-col--site .footer-persp-c2{ position: static; margin-top: 0; }}
+.ink-accent{ color: #C75F62 !important; }
+.gap-3{ gap: 3px !important; }
+.ink-accent-500{ color: #C75F62 !important; font-weight: 500 !important; }
+.persp-card-read, a.persp-all-link, .article-tldr-arrow{ font-weight: 600 !important; }
+.article-meta, .article-related-title, .portrait-link-arrow, .article-tldr-arrow{ color: #633B4A !important; }
+.agents-arrow{ color: #633B4A !important; }
+.footer-persp-link, a.footer-persp-link, a.nav-lang{ color: #633B4A !important; opacity: 1 !important; }
+.s16{ text-wrap:balance !important; }
 </style>
 </head>
 <body>
@@ -1296,11 +1313,11 @@ color: var(--plum); margin: 14px 0 0;
 <!-- ═══ PERSPECTIVES ══════════════════════════════════════════ -->
 <section id="perspectives" class="bg-ivory snap-page">
   <div class="wrap">
-    <span class="eyebrow">Perspectives <span class="eyebrow-sub">· the EXEC&#8217;IA <span class="eyebrow-blog">blog</span></span></span>
-    <h1 class="section-title">A view on <span style="color:var(--rose);font-weight:500">AI</span><br><span style="display:block;text-wrap:balance">shaped by years spent close to executives.</span></h1>
-    <p class="persp-intro"><span class="persp-intro-line">Governance, decision-making, transformation, value creation: reflections shared on <span style="color:var(--rose)">LinkedIn</span><img src="assets/linkedin-logo.png" alt="LinkedIn" class="persp-intro-linkedin-logo"> and explored further here</span> <span class="persp-intro-line">to step back and see what <span style="color:var(--rose)">AI</span> actually changes inside your company.</span></p>
+    <span class="eyebrow">Perspectives </span>
+    <h1 class="section-title blog-h1">A view on <span class="ink-accent-500">AI</span> <span class="s16">shaped by years spent close to executives.</span></h1>
+    <p class="persp-intro"><span class="persp-intro-line">Governance, decision-making, transformation, value creation: reflections shared on <span class="ink-accent">LinkedIn</span><img src="assets/linkedin-logo.png" alt="LinkedIn" class="persp-intro-linkedin-logo"> and explored further here</span> <span class="persp-intro-line">to step back and see what <span class="ink-accent">AI</span> actually changes inside your company.</span></p>
 
-    <div class="persp-track-outer reveal delay-2" id="perspTrack">
+    <div class="persp-track-outer blog-2col reveal delay-2" id="perspTrack">
     <div class="persp-track">
       <a href="perspective-entreprise-utilise-deja-ia-en.html" class="persp-card persp-card--link">
         <div class="persp-card-visual persp-card-visual--img persp-card-visual--gouvernance" aria-hidden="true">
@@ -1330,7 +1347,7 @@ color: var(--plum); margin: 14px 0 0;
           <span class="persp-card-visual-overlay">Transformation</span>
         </div>
         <span class="persp-card-meta">Transformation · 7 min</span>
-        <h2 class="persp-card-title"><span style="color:var(--rose)">AI</span> transformations rarely fail because of the technology.</h2>
+        <h2 class="persp-card-title"><span class="ink-accent">AI</span> transformations rarely fail because of the technology.</h2>
         <p class="persp-card-subtitle">They fail when the organisation has not changed, only the tool has.</p>
         <p class="persp-card-desc">A tool transforms nothing as long as the processes, roles and decisions around it stay the same.</p>
         <span class="persp-card-read">Read the article <span class="portrait-link-arrow">→</span></span>
@@ -1341,7 +1358,7 @@ color: var(--plum); margin: 14px 0 0;
           <span class="persp-card-visual-overlay">Value creation</span>
         </div>
         <span class="persp-card-meta">Value creation · 7 min</span>
-        <h2 class="persp-card-title">More <span style="color:var(--rose)">AI</span> tools do not mean more impact.</h2>
+        <h2 class="persp-card-title">More <span class="ink-accent">AI</span> tools do not mean more impact.</h2>
         <p class="persp-card-subtitle">It is not a tooling problem. It is an alignment problem.</p>
         <p class="persp-card-desc">Piling up initiatives without arbitrating them dilutes effort more than it creates results. Three simple criteria to know which ones go the distance.</p>
         <span class="persp-card-read">Read the article <span class="portrait-link-arrow">→</span></span>
@@ -1351,7 +1368,7 @@ color: var(--plum); margin: 14px 0 0;
           <img src="assets/perspectives/projet-ia-financement-carte-v2-en.webp" alt="" loading="lazy" decoding="async">
         </div>
         <span class="persp-card-meta">Funding · 7 min</span>
-        <h2 class="persp-card-title">Can your <span style="color:var(--rose)">AI</span> project be funded? Yes, but not necessarily the one you have in mind.</h2>
+        <h2 class="persp-card-title">Can your <span class="ink-accent">AI</span> project be funded? Yes, but not necessarily the one you have in mind.</h2>
         <p class="persp-card-subtitle">Three families of support, three different logics.</p>
         <p class="persp-card-desc">Osez l’IA, Diag Data IA, France 2030: what can be funded, for whom and on what conditions.</p>
         <span class="persp-card-read">Read the article <span class="portrait-link-arrow">→</span></span>
@@ -1371,7 +1388,7 @@ color: var(--plum); margin: 14px 0 0;
           <img src="assets/perspectives/budget-adhesion-en.webp" alt="" loading="lazy" decoding="async">
         </div>
         <span class="persp-card-meta">Buy-in · 7 min</span>
-        <h2 class="persp-card-title">The <span style="color:var(--rose)">AI</span> budget is not the issue. Buy-in is.</h2>
+        <h2 class="persp-card-title">The <span class="ink-accent">AI</span> budget is not the issue. Buy-in is.</h2>
         <p class="persp-card-subtitle">A tool never changes an organisation on its own.</p>
         <p class="persp-card-desc">A validated <span class="art-ia">AI</span> budget is not enough. Three concrete levers to make teams want to use it.</p>
         <span class="persp-card-read">Read the article <span class="portrait-link-arrow">→</span></span>
@@ -1381,7 +1398,7 @@ color: var(--plum); margin: 14px 0 0;
           <img src="assets/perspectives/shadow-ia-charte-en.webp" alt="" loading="lazy" decoding="async">
         </div>
         <span class="persp-card-meta">Shadow <span class="art-ia">AI</span> · 7 min</span>
-        <h2 class="persp-card-title">An <span style="color:var(--rose)">AI</span> policy that its own leaders do not follow is no longer a policy.</h2>
+        <h2 class="persp-card-title">An <span class="ink-accent">AI</span> policy that its own leaders do not follow is no longer a policy.</h2>
         <p class="persp-card-subtitle">The issue is not team discipline. It is governance.</p>
         <p class="persp-card-desc">78% of employees use unapproved <span class="art-ia">AI</span> tools, and so do executives. Three reflexes to take back control.</p>
         <span class="persp-card-read">Read the article <span class="portrait-link-arrow">→</span></span>
@@ -1496,8 +1513,8 @@ color: var(--plum); margin: 14px 0 0;
       <path d="M58,53 Q63,41 68,30" stroke="#C75F62" stroke-width="6" stroke-linecap="round" fill="none"/>
       <path d="M62,49 Q69,44 75,39" stroke="#C75F62" stroke-width="6" stroke-linecap="round" fill="none"/>
     </svg>
-    <h2 class="about-cta-title">Your company has its own<br class="about-cta-break"> <span style="color:#C75F62">starting point.</span></h2>
-    <p class="about-cta-sub">Let us identify the <span style="color:var(--rose)">AI</span> decisions that truly deserve your attention.</p>
+    <h2 class="about-cta-title">Your company has its own<br class="about-cta-break"> <span class="ink-accent">starting point.</span></h2>
+    <p class="about-cta-sub">Let us identify the <span class="ink-accent">AI</span> decisions that truly deserve your attention.</p>
     <a href="https://calendly.com/exec-ia" target="_blank" rel="noopener" class="btn btn-rose">Your AI diagnostic</a>
       <p class="offres-crosslink"><a href="offres-en.html" class="portrait-link">See the EXEC&#8217;IA offers <span class="portrait-link-arrow">→</span></a></p>
   </div>
@@ -1509,7 +1526,7 @@ color: var(--plum); margin: 14px 0 0;
   <div class="wrap footer-grid">
     <div class="footer-brand">
       <img src="assets/logo-execia-bords-prune.webp" alt="EXEC'IA Consulting" class="footer-logo-main" width="450" height="212" decoding="async">
-      <p class="footer-tag"><span class="footer-tag-lead">Executive-level experience</span><br><span class="footer-tag-rest">at the service of your <span style="color:var(--rose)">AI</span> transformation</span></p>
+      <p class="footer-tag"><span class="footer-tag-lead">Executive-level experience</span><br><span class="footer-tag-rest">at the service of your <span class="ink-accent">AI</span> transformation</span></p>
       <p class="footer-signature">Decide before you invest.</p>
     </div>
 
@@ -1522,22 +1539,22 @@ color: var(--plum); margin: 14px 0 0;
       <a href="temoignages-en.html">Testimonials</a>
       <a href="contact-en.html">Contact</a>
       <a href="perspectives-en.html">Blog</a>
-    <a href="perspective-entreprise-utilise-deja-ia-en.html" class="footer-persp-link">→ <span class="art-star" aria-label="Most-read article">★</span>Adopting <span style="color:var(--rose)">AI</span> vs. creating value</a>
+    <a href="perspective-entreprise-utilise-deja-ia-en.html" class="footer-persp-link">→ <span class="art-star" aria-label="Most-read article">★</span>Adopting <span class="ink-accent">AI</span> vs. creating value</a>
     <a href="perspective-toutes-decisions-ne-se-deleguent-pas-en.html" class="footer-persp-link">→ <span class="art-star" aria-label="Most-read article">★</span>Not every decision can be delegated</a>
-    <a href="perspective-transformation-echoue-rarement-technologie-en.html" class="footer-persp-link">→ <span style="color:var(--rose)">AI</span> transformation rarely fails</a>
-    <a href="perspective-probleme-nest-pas-outils-mais-arbitrage-en.html" class="footer-persp-link">→ More <span style="color:var(--rose)">AI</span> tools, not more impact</a>
-    <a href="perspective-projet-ia-peut-il-etre-finance-en.html" class="footer-persp-link">→ Can your <span style="color:var(--rose)">AI</span> project be funded?</a>
+    <a href="perspective-transformation-echoue-rarement-technologie-en.html" class="footer-persp-link">→ <span class="ink-accent">AI</span> transformation rarely fails</a>
+    <a href="perspective-probleme-nest-pas-outils-mais-arbitrage-en.html" class="footer-persp-link">→ More <span class="ink-accent">AI</span> tools, not more impact</a>
+    <a href="perspective-projet-ia-peut-il-etre-finance-en.html" class="footer-persp-link">→ Can your <span class="ink-accent">AI</span> project be funded?</a>
     <a href="perspective-chatbot-savoir-passer-la-main-en.html" class="footer-persp-link">→ When should a chatbot hand over?</a>
-    <div class="footer-persp-c2" style="gap:3px">
+    <div class="footer-persp-c2 gap-3">
     <a href="perspective-budget-ia-adhesion-equipes-en.html" class="footer-persp-link footer-persp-link--c2">→ Why does buy-in matter more than budget?</a>
-    <a href="perspective-shadow-ia-charte-comite-direction-en.html" class="footer-persp-link footer-persp-link--c2">→ Which <span style="color:var(--rose)">AI</span> tools do your teams really use?</a>
+    <a href="perspective-shadow-ia-charte-comite-direction-en.html" class="footer-persp-link footer-persp-link--c2">→ Which <span class="ink-accent">AI</span> tools do your teams really use?</a>
     <a href="perspective-robots-humanoides-token-tax-en.html" class="footer-persp-link footer-persp-link--c2">→ Which tasks would you hand to a humanoid robot?</a>
     <a href="perspective-affaire-orelien-preuve-travail-en.html" class="footer-persp-link footer-persp-link--c2">→ <span class="art-star" aria-label="Most-read article">★</span>Will your teams have to prove their work?</a>
-    <a href="perspective-tri-cv-ia-candidatures-ecartees-en.html" class="footer-persp-link footer-persp-link--c2">→ Who rereads the CVs that <span style="color:var(--rose)">AI</span> rejects?</a>
-    <a href="perspective-agents-ia-recruter-comme-salarie-en.html" class="footer-persp-link footer-persp-link--c2">→ Should you hire an <span style="color:var(--rose)">AI</span> agent like an employee?</a>
+    <a href="perspective-tri-cv-ia-candidatures-ecartees-en.html" class="footer-persp-link footer-persp-link--c2">→ Who rereads the CVs that <span class="ink-accent">AI</span> rejects?</a>
+    <a href="perspective-agents-ia-recruter-comme-salarie-en.html" class="footer-persp-link footer-persp-link--c2">→ Should you hire an <span class="ink-accent">AI</span> agent like an employee?</a>
     <a href="perspective-jumeau-numerique-savoir-dirigeant-en.html" class="footer-persp-link footer-persp-link--c2">→ Digital twin: does a leader’s knowledge leave too?</a>
-    <a href="perspective-forward-deployed-engineer-pme-en.html" class="footer-persp-link footer-persp-link--c2">→ Between <span style="color:var(--rose)">AI</span> and leadership, you need a translator</a>
-    <a href="perspective-enregistreur-ia-reunion-direction-en.html" class="footer-persp-link footer-persp-link--c2">→ An <span style="color:var(--rose)">AI</span> recorder in the management meeting: who decided that?</a>
+    <a href="perspective-forward-deployed-engineer-pme-en.html" class="footer-persp-link footer-persp-link--c2">→ Between <span class="ink-accent">AI</span> and leadership, you need a translator</a>
+    <a href="perspective-enregistreur-ia-reunion-direction-en.html" class="footer-persp-link footer-persp-link--c2">→ An <span class="ink-accent">AI</span> recorder in the management meeting: who decided that?</a>
     </div>
     </div>
 
@@ -1546,7 +1563,7 @@ color: var(--plum); margin: 14px 0 0;
       <a href="mailto:contact@exec-ia.ai">✉️ contact@exec-ia.ai</a>
       <span class="footer-loc">📍 Paris, France, International</span>
       <a href="https://www.linkedin.com/in/val%C3%A9rie-mailland" target="_blank" rel="noopener" class="footer-linkedin-btn"><img src="assets/linkedin-logo.png" alt="LinkedIn" class="footer-linkedin-logo">Follow me on LinkedIn</a>
-      <a href="https://www.instagram.com/execia.consulting/" target="_blank" rel="noopener" class="footer-linkedin-btn footer-instagram-btn"><img src="assets/instagram-logo.png" alt="Instagram" class="footer-linkedin-logo" width="18" height="18"><span>Follow EXEC'<span style="color:var(--rose)">IA</span> on Instagram</span></a>
+      <a href="https://www.instagram.com/execia.consulting/" target="_blank" rel="noopener" class="footer-linkedin-btn footer-instagram-btn"><img src="assets/instagram-logo.png" alt="Instagram" class="footer-linkedin-logo" width="18" height="18"><span>Follow EXEC'<span class="ink-accent">IA</span> on Instagram</span></a>
     </div>
     <div class="footer-col footer-col--langs">
       <span class="footer-col-title">Languages</span>
@@ -1614,7 +1631,7 @@ color: var(--plum); margin: 14px 0 0;
     </div>
   </div>
 </div>
-<script src="assets/chat-widget.js?v=3" defer></script>
-<script src="assets/phare-chat-widget.js?v=5" defer></script>
+<script src="assets/chat-widget.js?v=4" defer></script>
+<script src="assets/phare-chat-widget.js?v=6" defer></script>
 </body>
 </html>

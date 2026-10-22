@@ -1125,6 +1125,20 @@ color: var(--plum); margin: 14px 0 0;
 @media (min-width: 1251px){.footer-col--site .footer-persp-c2{ left: calc(18.75rem - 5px); }.footer-bottom .footer-rights{ grid-row: 1; }.footer-bottom .footer-copy{ grid-column: 2 / 4; grid-row: 1; margin-left: calc(18.75rem - 5px); }}
 :focus-visible{ outline: 2px solid var(--rose); outline-offset: 3px; border-radius: 4px; }
 @media print{.reveal, .reveal.visible{ opacity: 1 !important; transform: none !important; }.nav, .cookie-banner, .phare-bubble, #phare-bubble, .qw-bubble{ display: none !important; }}
+.art-ia, .aiact-ia, .aiact-key, .risk-hl, .article-meta, .persp-card-read, .persp-card-subtitle,
+.article-related-title, .article-tldr-arrow, .portrait-link-arrow, .acc-num, .acc-icon, .pilier-title,
+.offre-niveau, .offre-web-tier-price, .nl-req, .agent-eyebrow-txt, .ve-col-num, .constat-flip-cue-txt,
+.cookie-cat-always, .agents-arrow{ color: #C75F62; }
+p .art-ia, li .art-ia, p .aiact-ia, li .aiact-ia, p .risk-hl, li .risk-hl{ font-weight: 600; }
+.article-meta, .persp-card-read, .persp-card-subtitle, .article-related-title, .article-tldr-arrow, .portrait-link-arrow{ font-weight: 600; }
+@media (max-width: 1250px){.footer-col--site{ display: block; columns: 2; column-gap: 24px; width: 100%; max-width: 100%; min-width: 0; box-sizing: border-box; }.footer-col--site > *{ break-inside: avoid; }.footer-col--site .footer-persp-c2{ position: static; margin-top: 0; }}
+.ink-accent{ color: #C75F62 !important; }
+.gap-3{ gap: 3px !important; }
+.pb-half{ padding-bottom: 0.5px !important; }
+.mt-28{ margin-top: 28px !important; }
+.persp-card-read, a.persp-all-link, .article-tldr-arrow{ font-weight: 600 !important; }
+.article-meta, .article-related-title, .portrait-link-arrow, .article-tldr-arrow{ color: #633B4A !important; }
+.footer-persp-link, a.footer-persp-link, a.nav-lang{ color: #633B4A !important; opacity: 1 !important; }
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Por qué pensar en tareas y no en oficios?", "acceptedAnswer": {"@type": "Answer", "text": "Porque un oficio es un conjunto de tareas. Un robot humanoide puede asumir las tareas físicas y repetitivas, como mover cajas. El criterio, la relación y la responsabilidad siguen siendo humanos. Pensar en tareas evita dos errores opuestos: creer que nada cambiará, o creer que todo desaparecerá. En la práctica, basta con enumerar las tareas de un puesto, estimar su duración semanal y detectar las que una máquina podría asumir. El oficio se transforma entonces tarea a tarea, y la empresa puede anticipar la formación de las personas afectadas."}}, {"@type": "Question", "name": "¿A qué oficios apuntarán primero los robots humanoides?", "acceptedAnswer": {"@type": "Answer", "text": "A los oficios con tareas físicas, repetitivas o penosas en lugares pensados para personas: logística, industria, comercio, construcción, agricultura y sanidad para el transporte de material. Suelen ser puestos difíciles de cubrir: la Dares francesa contabiliza 457.500 empleos vacantes en el sector privado en el segundo trimestre de 2026 (cifra revisada del 15 de septiembre de 2026). Para una pyme, estos puestos vacantes son un punto de entrada lógico: un robot que asume una tarea penosa puede hacer un puesto más atractivo, sin sustituir a la persona que lo ocupa."}}, {"@type": "Question", "name": "¿Llegan ya los robots humanoides a las empresas?", "acceptedAnswer": {"@type": "Answer", "text": "No. Siguen siendo caros, lentos en gestos sencillos para una persona y frágiles ante lo imprevisto. Según el analista Ming-Chi Kuo, Apple no fabricaría sus robots en serie antes de 2028. Ese plazo sirve para prepararse: cartografiar las tareas y decidir qué debe seguir siendo humano. Una pyme no tiene, por tanto, ningún interés en precipitarse. Le conviene aprovechar estos años para entender sus propias tareas, seguir los primeros pilotos de su sector y preparar a sus equipos, en lugar de comprar una tecnología aún inmadura."}}, {"@type": "Question", "name": "¿Quién fabrica los robots humanoides?", "acceptedAnswer": {"@type": "Answer", "text": "En el primer semestre de 2026, el 97 % de los robots humanoides entregados en el mundo procedía de China, con AgiBot y Unitree a la cabeza. Para Francia y Europa, la cuestión es diseñar y explotar sus propios robots, o comprarlos llave en mano, junto con los datos que recogen. Este dominio pesa sobre la soberanía: un robot conectado recoge datos sobre los centros, los gestos y los ritmos de trabajo. Saber adónde van esos datos y quién puede acceder a ellos forma parte de la elección de un proveedor, igual que el precio."}}, {"@type": "Question", "name": "¿Qué es la «token tax»?", "acceptedAnswer": {"@type": "Answer", "text": "Un impuesto sobre el uso de la IA, aplicado a los tokens, la unidad que los modelos de IA procesan y facturan. Bill Gates defiende gravar los tokens y los robots. En Estados Unidos, un proyecto de ley presentado en el Congreso en agosto de 2026, el AI Tax and Work Protection Act, propone un tipo del 2 % sobre el valor de los tokens cuando el paro está en el 5 % o menos, que sube con el paro. Lo recaudado financiaría empleos y reconversión; algunos ven en ello la base de una renta universal."}}, {"@type": "Question", "name": "¿Qué puede hacer una pyme desde ya?", "acceptedAnswer": {"@type": "Answer", "text": "Tres gestos, sin invertir: enumerar las tareas de cada puesto y su duración; detectar los puestos difíciles de cubrir y qué los hace penosos; decidir qué debe seguir siendo humano. Solo después, calcular el coste de una hora de tarea robotizada y, si las cuentas salen, lanzar un piloto de 90 días sobre una sola tarea. El piloto necesita un responsable designado, indicadores fijados antes de empezar y una decisión prevista al final: continuar, ajustar o parar."}}], "inLanguage": "es-ES"}
@@ -1184,30 +1198,30 @@ color: var(--plum); margin: 14px 0 0;
     </div>
     <div class="article-book">
       <div class="article-book-col">
-        <div class="article-intro" style="padding-bottom:0.5px">
+        <div class="article-intro pb-half">
           <p>¿Dirige una pyme, encabeza un equipo o se pregunta qué será de su propio puesto?<br>Este artículo es para usted.<br>Un robot humanoide no se quedará con su oficio de golpe. Lo irá mordisqueando, tarea a tarea. La verdadera cuestión es cuáles, y en qué orden.</p>
         </div>
-        <div class="article-intro" style="padding-bottom:0.5px">
+        <div class="article-intro pb-half">
           <p>Un Reel de la cadena francesa <span class="art-chip">LCI</span> hablaba hace poco de 300.000 puestos sin cubrir en Francia. El servicio estadístico del Ministerio de Trabajo, la <span class="art-chip">Dares</span>, cuenta más: <span class="art-chip">457.500</span> empleos vacantes en el sector privado en el segundo trimestre de 2026, según su cifra revisada del 15 de septiembre.</p>
         </div>
-        <div class="article-intro" style="padding-bottom:0.5px">
+        <div class="article-intro pb-half">
           <p>Un empleo vacante no siempre es un puesto imposible de cubrir. La Dares incluye puestos desocupados, puestos recién creados y puestos a punto de quedar libres. La cifra no dice, por tanto, «faltan tantas personas». Dice: muchas empresas están buscando gente, ahora mismo.</p>
         </div>
-        <h2 class="article-question" style="padding-bottom:0.5px">🔑 ¿Por qué pensar en tareas y no en oficios?</h2>
-        <div class="article-intro" style="padding-bottom:0.5px">
+        <h2 class="article-question pb-half">🔑 ¿Por qué pensar en tareas y no en oficios?</h2>
+        <div class="article-intro pb-half">
           <p>Porque un oficio es un conjunto. Un preparador de pedidos mueve cajas, pero también detecta un error de etiqueta, tranquiliza a un cliente por teléfono, forma a un temporal. Un robot puede asumir la primera tarea. Las siguientes exigen criterio, relación y responsabilidad.</p>
         </div>
-        <div class="article-intro" style="padding-bottom:0.5px">
+        <div class="article-intro pb-half">
           <p>Pensar en oficios lleva a dos errores opuestos: creer que nada cambiará, o creer que todo desaparecerá. Pensar en tareas permite ver lo que de verdad se mueve, puesto por puesto.</p>
         </div>
-        <h2 class="article-question" style="padding-bottom:0.5px">¿A qué oficios apuntarán primero los robots humanoides?</h2>
-        <div class="article-intro" style="padding-bottom:0.5px">
+        <h2 class="article-question pb-half">¿A qué oficios apuntarán primero los robots humanoides?</h2>
+        <div class="article-intro pb-half">
           <p>A aquellos en los que las tareas son físicas, repetitivas o penosas, en lugares pensados para personas: almacenes, talleres, trastiendas de comercios, obras, explotaciones agrícolas y centros sanitarios para el transporte de material.</p>
         </div>
-        <div class="article-intro" style="padding-bottom:0.5px">
+        <div class="article-intro pb-half">
           <p>Suelen ser también los puestos más difíciles de cubrir. El robot no llega primero para ocupar un lugar ya ocupado. Llega para cubrir un puesto que la empresa no consigue llenar: el turno de noche, la manipulación pesada, las tareas de riesgo.</p>
         </div>
-        <div class="article-intro" style="padding-bottom:0.5px">
+        <div class="article-intro pb-half">
           <p><strong>Tres preguntas para cada puesto:</strong></p>
           <ul class="art-list art-list--num">
             <li>¿Qué tareas podría asumir un robot?</li>
@@ -1215,18 +1229,18 @@ color: var(--plum); margin: 14px 0 0;
             <li>¿Qué puesto vacante, a su alrededor, podría cubrir un robot?</li>
           </ul>
         </div>
-        <h3 class="article-meta" style="padding-bottom:0.5px">¿Por qué nada de esto es inminente?</h3>
-        <div class="article-intro" style="padding-bottom:0.5px">
+        <h3 class="article-meta pb-half">¿Por qué nada de esto es inminente?</h3>
+        <div class="article-intro pb-half">
           <p>El entusiasmo es real; la realidad, más lenta. Ni siquiera <span class="art-chip">Apple</span> fabricaría sus robots en serie antes de 2028, según el analista Ming-Chi Kuo. Los humanoides de hoy siguen siendo caros, lentos en gestos que una persona hace sin pensar y frágiles ante lo imprevisto.</p>
         </div>
-        <div class="article-intro" style="padding-bottom:0.5px">
+        <div class="article-intro pb-half">
           <p>El calendario deja, por tanto, margen. Ese tiempo sirve para prepararse, no para esperar.</p>
         </div>
-        <h3 class="article-meta" style="padding-bottom:0.5px">¿Qué buena noticia hay para quienes conservan su empleo?</h3>
-        <div class="article-intro" style="padding-bottom:0.5px">
+        <h3 class="article-meta pb-half">¿Qué buena noticia hay para quienes conservan su empleo?</h3>
+        <div class="article-intro pb-half">
           <p>Un robot produce sin salario, sin horas extra y sin subida anual. Una vez amortizado, pesa como un coste previsible, lo que puede frenar parte de las subidas de precios.</p>
         </div>
-        <div class="article-intro" style="padding-bottom:0.5px">
+        <div class="article-intro pb-half">
           <p>Con una condición: que el tiempo liberado se dedique a tareas más útiles e interesantes, y no a sumar más carga. Es una decisión de la dirección, no un efecto automático.</p>
         </div>
       </div>
@@ -1266,7 +1280,7 @@ color: var(--plum); margin: 14px 0 0;
         <div class="article-close">
           <p class="article-close-line1">💬 Gravar la <span class="art-ia">IA</span> para proteger<br>a quienes pierden su trabajo:</p>
           <p class="article-close-line2 close-fit">¿buena idea, o freno para nuestras empresas?</p>
-          <p class="article-source-note" style="margin-top:28px">Fuentes: <a href="https://www.journaldunet.com/business/1553861-le-nombre-d-emplois-vacants-dans-le-secteur-prive-recule-de-3-au-deuxieme-trimestre/" target="_blank" rel="noopener">Dares, empleos vacantes en el segundo trimestre de 2026</a> (cifra revisada del 15 de septiembre de 2026); <a href="https://www.journalduweb.org/la-chine-capte-97-des-expeditions-mondiales-de-robots-humanoides-et-ecrase-la-concurrence-americaine/" target="_blank" rel="noopener">Journal du Web, 11 de agosto de 2026</a>; <a href="https://fortune.com/2026/08/26/bill-gates-robot-ai-tax-replacehuman-workers/" target="_blank" rel="noopener">Fortune, 26 de agosto de 2026</a>; <a href="https://fortune.com/2026/09/01/bill-tax-ai-tokens-fund-jobs-technology-unemployment/" target="_blank" rel="noopener">Fortune, 1 de septiembre de 2026</a>; <a href="https://www.ithinkdiff.com/apple-smart-home-robots-production-2028/" target="_blank" rel="noopener">Ming-Chi Kuo, vía iThinkDiff</a>; <a href="https://fr.euronews.com/2026/09/29/cinq-millions-de-robots-dans-les-usines-lengouement-pour-les-humanoides-se-heurte-a-la-rea" target="_blank" rel="noopener">Euronews, 29 de septiembre de 2026</a>.</p>
+          <p class="article-source-note mt-28">Fuentes: <a href="https://www.journaldunet.com/business/1553861-le-nombre-d-emplois-vacants-dans-le-secteur-prive-recule-de-3-au-deuxieme-trimestre/" target="_blank" rel="noopener">Dares, empleos vacantes en el segundo trimestre de 2026</a> (cifra revisada del 15 de septiembre de 2026); <a href="https://www.journalduweb.org/la-chine-capte-97-des-expeditions-mondiales-de-robots-humanoides-et-ecrase-la-concurrence-americaine/" target="_blank" rel="noopener">Journal du Web, 11 de agosto de 2026</a>; <a href="https://fortune.com/2026/08/26/bill-gates-robot-ai-tax-replacehuman-workers/" target="_blank" rel="noopener">Fortune, 26 de agosto de 2026</a>; <a href="https://fortune.com/2026/09/01/bill-tax-ai-tokens-fund-jobs-technology-unemployment/" target="_blank" rel="noopener">Fortune, 1 de septiembre de 2026</a>; <a href="https://www.ithinkdiff.com/apple-smart-home-robots-production-2028/" target="_blank" rel="noopener">Ming-Chi Kuo, vía iThinkDiff</a>; <a href="https://fr.euronews.com/2026/09/29/cinq-millions-de-robots-dans-les-usines-lengouement-pour-les-humanoides-se-heurte-a-la-rea" target="_blank" rel="noopener">Euronews, 29 de septiembre de 2026</a>.</p>
           <p class="article-hashtags">#EXECIA #TokenTax #RobotsHumanoides #FuturoDelTrabajo #IA #Empleo</p>
         </div>
         <span class="article-book-folio" aria-hidden="true" data-n="— 02 —"></span>
@@ -1416,7 +1430,7 @@ color: var(--plum); margin: 14px 0 0;
   <div class="wrap footer-grid">
     <div class="footer-brand">
       <img src="assets/logo-execia-bords-prune.webp" alt="EXEC'IA Consulting" class="footer-logo-main" width="450" height="212" decoding="async">
-      <p class="footer-tag"><span class="footer-tag-lead">Una experiencia directiva</span><br><span class="footer-tag-rest">al servicio de su transformación <span style="color:var(--rose)">IA</span></span></p>
+      <p class="footer-tag"><span class="footer-tag-lead">Una experiencia directiva</span><br><span class="footer-tag-rest">al servicio de su transformación <span class="ink-accent">IA</span></span></p>
       <p class="footer-signature">Decida antes de invertir.</p>
     </div>
 
@@ -1429,22 +1443,22 @@ color: var(--plum); margin: 14px 0 0;
       <a href="temoignages-es.html">Testimonios</a>
       <a href="contact-es.html">Contacto</a>
       <a href="perspectives-es.html">Blog</a>
-    <a href="perspective-entreprise-utilise-deja-ia-es.html" class="footer-persp-link">→ <span class="art-star" aria-label="Artículo más leído">★</span>Adoptar la <span style="color:var(--rose)">IA</span> no es crear valor</a>
+    <a href="perspective-entreprise-utilise-deja-ia-es.html" class="footer-persp-link">→ <span class="art-star" aria-label="Artículo más leído">★</span>Adoptar la <span class="ink-accent">IA</span> no es crear valor</a>
     <a href="perspective-toutes-decisions-ne-se-deleguent-pas-es.html" class="footer-persp-link">→ <span class="art-star" aria-label="Artículo más leído">★</span>No todas las decisiones se delegan</a>
-    <a href="perspective-transformation-echoue-rarement-technologie-es.html" class="footer-persp-link">→ La transformación con <span style="color:var(--rose)">IA</span> rara vez fracasa</a>
-    <a href="perspective-probleme-nest-pas-outils-mais-arbitrage-es.html" class="footer-persp-link">→ Más herramientas de <span style="color:var(--rose)">IA</span>, no más impacto</a>
-    <a href="perspective-projet-ia-peut-il-etre-finance-es.html" class="footer-persp-link">→ ¿Se puede financiar su proyecto de <span style="color:var(--rose)">IA</span>?</a>
+    <a href="perspective-transformation-echoue-rarement-technologie-es.html" class="footer-persp-link">→ La transformación con <span class="ink-accent">IA</span> rara vez fracasa</a>
+    <a href="perspective-probleme-nest-pas-outils-mais-arbitrage-es.html" class="footer-persp-link">→ Más herramientas de <span class="ink-accent">IA</span>, no más impacto</a>
+    <a href="perspective-projet-ia-peut-il-etre-finance-es.html" class="footer-persp-link">→ ¿Se puede financiar su proyecto de <span class="ink-accent">IA</span>?</a>
     <a href="perspective-chatbot-savoir-passer-la-main-es.html" class="footer-persp-link">→ ¿Cuándo debe un chatbot pasar el relevo?</a>
-    <div class="footer-persp-c2" style="gap:3px">
+    <div class="footer-persp-c2 gap-3">
     <a href="perspective-budget-ia-adhesion-equipes-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Por qué pesa más la adhesión que el presupuesto?</a>
-    <a href="perspective-shadow-ia-charte-comite-direction-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Qué herramientas de <span style="color:var(--rose)">IA</span> usan sus equipos?</a>
+    <a href="perspective-shadow-ia-charte-comite-direction-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Qué herramientas de <span class="ink-accent">IA</span> usan sus equipos?</a>
     <a href="perspective-robots-humanoides-token-tax-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Qué tareas confiaría a un robot humanoide?</a>
     <a href="perspective-affaire-orelien-preuve-travail-es.html" class="footer-persp-link footer-persp-link--c2">→ <span class="art-star" aria-label="Artículo más leído">★</span>¿Tendrán sus equipos que demostrar su trabajo?</a>
-    <a href="perspective-tri-cv-ia-candidatures-ecartees-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Quién relee los CV que la <span style="color:var(--rose)">IA</span> descarta?</a>
-    <a href="perspective-agents-ia-recruter-comme-salarie-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Se contrata un agente de <span style="color:var(--rose)">IA</span> como a un empleado?</a>
+    <a href="perspective-tri-cv-ia-candidatures-ecartees-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Quién relee los CV que la <span class="ink-accent">IA</span> descarta?</a>
+    <a href="perspective-agents-ia-recruter-comme-salarie-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Se contrata un agente de <span class="ink-accent">IA</span> como a un empleado?</a>
     <a href="perspective-jumeau-numerique-savoir-dirigeant-es.html" class="footer-persp-link footer-persp-link--c2">→ Gemelo digital: ¿se va el saber del directivo?</a>
-    <a href="perspective-forward-deployed-engineer-pme-es.html" class="footer-persp-link footer-persp-link--c2">→ Entre la <span style="color:var(--rose)">IA</span> y la dirección, hace falta un traductor</a>
-    <a href="perspective-enregistreur-ia-reunion-direction-es.html" class="footer-persp-link footer-persp-link--c2">→ Una grabadora de <span style="color:var(--rose)">IA</span> en el comité de dirección: ¿quién lo decidió?</a>
+    <a href="perspective-forward-deployed-engineer-pme-es.html" class="footer-persp-link footer-persp-link--c2">→ Entre la <span class="ink-accent">IA</span> y la dirección, hace falta un traductor</a>
+    <a href="perspective-enregistreur-ia-reunion-direction-es.html" class="footer-persp-link footer-persp-link--c2">→ Una grabadora de <span class="ink-accent">IA</span> en el comité de dirección: ¿quién lo decidió?</a>
     </div>
     </div>
 
@@ -1453,7 +1467,7 @@ color: var(--plum); margin: 14px 0 0;
       <a href="mailto:contact@exec-ia.ai">✉️ contact@exec-ia.ai</a>
       <span class="footer-loc">📍 Paris, France, International</span>
       <a href="https://www.linkedin.com/in/val%C3%A9rie-mailland" target="_blank" rel="noopener" class="footer-linkedin-btn"><img src="assets/linkedin-logo.png" alt="LinkedIn" class="footer-linkedin-logo">Seguirme en LinkedIn</a>
-      <a href="https://www.instagram.com/execia.consulting/" target="_blank" rel="noopener" class="footer-linkedin-btn footer-instagram-btn"><img src="assets/instagram-logo.png" alt="Instagram" class="footer-linkedin-logo" width="18" height="18"><span>Seguir a EXEC'<span style="color:var(--rose)">IA</span> en Instagram</span></a>
+      <a href="https://www.instagram.com/execia.consulting/" target="_blank" rel="noopener" class="footer-linkedin-btn footer-instagram-btn"><img src="assets/instagram-logo.png" alt="Instagram" class="footer-linkedin-logo" width="18" height="18"><span>Seguir a EXEC'<span class="ink-accent">IA</span> en Instagram</span></a>
     </div>
     <div class="footer-col footer-col--langs">
       <span class="footer-col-title">Idiomas</span>

@@ -442,12 +442,6 @@ font-size: clamp(.8rem, 1vw, .95rem); font-weight: 600;
 letter-spacing: .22em; text-transform: uppercase;
 color: var(--rose); opacity: 1;
 }
-.eyebrow-sub{ color: var(--plum); opacity: .78; font-weight: 500; }
-.eyebrow-blog{ position: relative; display: inline-block; }
-.eyebrow-blog::after{
-content: ''; position: absolute; left: 2%; width: 62%; bottom: -3px;
-height: 2px; background: var(--rose); opacity: .85;
-}
 .section-title{
 font-family: var(--serif);
 font-size: clamp(2.2rem, 3.4vw, 3.2rem);
@@ -1556,7 +1550,6 @@ background: var(--plum);
 border-color: var(--deep); border-top-color: var(--rose);
 }
 .constat-face--back .constat-desc{ color: #FAF6F2 !important; opacity: 1; }
-.constat-face--back .constat-desc span[style*="--rose"]{ color: #C75F62 !important; font-weight: 600 !important; }
 .constat-flip-cue{
 position: absolute; left: 20px; bottom: 16px;
 display: inline-flex; align-items: center; gap: 7px;
@@ -1846,7 +1839,39 @@ color: var(--plum); margin: 14px 0 0;
 .hero-cta-link{ padding: 18px 38px; }
 @media (max-width: 760px){.hero-cta-link{ padding: 16px 22px; }}
 @media print{.reveal, .reveal.visible{ opacity: 1 !important; transform: none !important; }.nav, .cookie-banner, .phare-bubble, #phare-bubble, .qw-bubble{ display: none !important; }}
-.eyebrow, .maf-eyebrow, .expertise-hero-eyebrow, .hero-eyebrow, .pre, .persp-card-meta{ color: #A84D50 !important; }
+.eyebrow, .maf-eyebrow, .expertise-hero-eyebrow, .hero-eyebrow, .pre, .persp-card-meta{ color: #C75F62 !important; }
+section:has(+ .verbes-band){ padding-bottom: clamp(48px, 6.7vh, 80px) !important; }
+section:has(+ .verbes-band) .mon-approche-content .portrait-link{ margin-bottom: clamp(27px, 4vh, 48px); }
+.verbes-band + .constat-section{ padding-top: clamp(72px, 11vh, 110px); }
+@media (min-width: 761px){.stats-strip--hero .ss-item:first-child{ align-items: flex-start; text-align: left; padding-left: 38px; }}
+.art-ia, .aiact-ia, .aiact-key, .risk-hl, .article-meta, .persp-card-read, .persp-card-subtitle,
+.article-related-title, .article-tldr-arrow, .portrait-link-arrow, .acc-num, .acc-icon, .pilier-title,
+.offre-niveau, .offre-web-tier-price, .nl-req, .agent-eyebrow-txt, .ve-col-num, .constat-flip-cue-txt,
+.cookie-cat-always, .agents-arrow{ color: #C75F62; }
+.verbes-band{ border-top: 1px solid rgba(99,59,74,.22); padding-top: 0; }
+.vrai-enjeu-section{ padding-top: 29px; }
+.cookie-banner-link{ color: #FAF6F2 !important; }
+@media (min-width: 761px) and (max-width: 1024px){.stats-strip--hero .ss-item:first-child{ padding-left: calc(62px - clamp(32px, 6vw, 96px)); }}
+.verbes-band{ padding-top: 6px; padding-bottom: 6px; }
+.verbes-mot{ font-size: clamp(1.32rem, 2.09vw, 1.815rem); }
+p .art-ia, li .art-ia, p .aiact-ia, li .aiact-ia, p .risk-hl, li .risk-hl{ font-weight: 600; }
+.article-meta, .persp-card-read, .persp-card-subtitle, .article-related-title, .article-tldr-arrow, .portrait-link-arrow{ font-weight: 600; }
+@media (max-width: 1250px){.footer-col--site{ display: block; columns: 2; column-gap: 24px; width: 100%; max-width: 100%; min-width: 0; box-sizing: border-box; }.footer-col--site > *{ break-inside: avoid; }.footer-col--site .footer-persp-c2{ position: static; margin-top: 0; }}
+.ink-accent{ color: #C75F62 !important; }
+section:has(+ .verbes-band){ padding-bottom: 0 !important; }
+section:has(+ .verbes-band) .mon-approche-content .portrait-link{ margin-bottom: 38px; }
+.verbes-band{ padding-top: 44px; padding-bottom: 44px; }
+.fw-600{ font-weight: 600 !important; }
+.gap-3{ gap: 3px !important; }
+.ink-accent-600{ color: #C75F62 !important; font-weight: 600 !important; }
+.ink-accent-500{ color: #C75F62 !important; font-weight: 500 !important; }
+.persp-card-read, a.persp-all-link, .article-tldr-arrow{ font-weight: 600 !important; }
+.mb-16{ margin-bottom: 16px !important; }
+.article-meta, .article-related-title, .portrait-link-arrow, .article-tldr-arrow{ color: #633B4A !important; }
+.footer-persp-link, a.footer-persp-link, a.nav-lang{ color: #633B4A !important; opacity: 1 !important; }
+.s3{ color:var(--rose); !important; }
+.s4{ font-size:2.42rem;letter-spacing:0.02em !important; }
+.s5{ margin-top:20px !important; }
 </style>
 </head>
 <body>
@@ -1891,9 +1916,9 @@ color: var(--plum); margin: 14px 0 0;
 
       <p class="eyebrow hero-eyebrow">Conseil stratégique pour dirigeants</p>
 
-      <h1 class="hero-sub">L'Intelligence Artificielle est d'abord un sujet de<br><span class="hero-sub-focal" style="color:var(--rose);">Direction Générale.</span></h1>
-      <p class="hero-sub2">Identifier, prioriser et déployer <span style="color:var(--rose)">les usages de l'IA les plus pertinents</span> pour l'organisation.</p>
-      <p class="hero-clarif">L'enjeu n'est pas d'adopter plus d'outils.<br>L'enjeu est d'identifier les priorités qui justifient un investissement <span style="color:var(--rose)">IA</span>.</p>
+      <h1 class="hero-sub">L'Intelligence Artificielle est d'abord un sujet de<br><span class="hero-sub-focal s3">Direction Générale.</span></h1>
+      <p class="hero-sub2">Identifier, prioriser et déployer <span class="ink-accent">les usages de l'IA les plus pertinents</span> pour l'organisation.</p>
+      <p class="hero-clarif">L'enjeu n'est pas d'adopter plus d'outils.<br>L'enjeu est d'identifier les priorités qui justifient un investissement <span class="ink-accent">IA</span>.</p>
 
       <div class="hero-cta">
         <a href="https://calendly.com/exec-ia" target="_blank" rel="noopener" class="btn btn-rose">Votre diagnostic IA <span class="btn-arrow">&#8594;</span></a>
@@ -1910,7 +1935,7 @@ color: var(--plum); margin: 14px 0 0;
         <div class="ss-item">
           <span class="ss-num" data-count-to="20" aria-hidden="true"><span class="ss-count">0</span><span class="ss-sup">+</span></span><span class="sr-only">20+</span>
           <span class="ss-cert-tag">Ans auprès de</span>
-          <span class="ss-label ss-label--1l" style="font-weight:600">Dirigeants</span>
+          <span class="ss-label ss-label--1l fw-600">Dirigeants</span>
         </div>
         <div class="ss-item">
           <span class="ss-num" data-count-to="18" aria-hidden="true"><span class="ss-count">0</span><span class="ss-sup">+</span></span><span class="sr-only">18+</span>
@@ -1922,7 +1947,7 @@ color: var(--plum); margin: 14px 0 0;
           <span class="ss-label ss-label--1l ss-label--strong"><span class="ss-globe-static" aria-hidden="true">🌎</span> France<span class="ss-bigdot" aria-hidden="true">&bull;</span>International</span>
         </div>
         <div class="ss-item">
-          <span class="ss-num ss-num--ia" style="font-size:2.42rem;letter-spacing:0.02em"><span style="color:var(--rose)">IA</span></span>
+          <span class="ss-num ss-num--ia s4"><span class="ink-accent">IA</span></span>
           <span class="ss-cert-tag">Générative &bull; Usages responsables</span>
           <span class="ss-label ss-label--1l">Certifiée RS6776</span>
         </div>
@@ -1945,8 +1970,8 @@ color: var(--plum); margin: 14px 0 0;
     <div class="mon-approche-content">
       <span class="maf-eyebrow">La différence</span>
       <div class="maf-mid">
-        <p class="maf-lead maf-lead--home">Le business avant tout.<br>La <span style="color:var(--rose)">technologie</span> suivra.</p>
-        <p class="maf-body">C'est ainsi que les décisions <span style="color:var(--rose)">IA</span> créent une <span style="color:var(--rose)">valeur durable.</span></p>
+        <p class="maf-lead maf-lead--home">Le business avant tout.<br>La <span class="ink-accent">technologie</span> suivra.</p>
+        <p class="maf-body">C'est ainsi que les décisions <span class="ink-accent">IA</span> créent une <span class="ink-accent">valeur durable.</span></p>
       </div>
       <a class="portrait-link" href="a-propos.html#parcours">Découvrir <strong>le parcours</strong> <span class="portrait-link-arrow">→</span></a>
     </div>
@@ -1968,8 +1993,8 @@ color: var(--plum); margin: 14px 0 0;
 <section class="constat-section">
   <div class="wrap constat-inner reveal">
     <span class="eyebrow constat-eyebrow">Le point de départ</span>
-    <h2 class="constat-title">L&#8217;IA s&#8217;impose partout.<br>Vos <span style="color:var(--rose)">priorités</span>, elles, restent floues.</h2>
-    <p class="constat-intro">Vous n&#8217;avez <strong>pas un problème de technologie</strong>. Vous avez <strong style="color:var(--rose)">3 questions</strong> sans réponse claire.</p>
+    <h2 class="constat-title">L&#8217;IA s&#8217;impose partout.<br>Vos <span class="ink-accent">priorités</span>, elles, restent floues.</h2>
+    <p class="constat-intro">Vous n&#8217;avez <strong>pas un problème de technologie</strong>. Vous avez <strong class="ink-accent">3 questions</strong> sans réponse claire.</p>
     <div class="constat-grid">
       <div class="constat-item constat-flip reveal delay-1" tabindex="0" role="button" aria-pressed="false" aria-label="Vision stratégique&nbsp;? Toucher pour afficher la réponse.">
         <div class="constat-flip-inner">
@@ -1979,7 +2004,7 @@ color: var(--plum); margin: 14px 0 0;
             <span class="constat-flip-cue" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v4h4"/></svg><span class="constat-flip-cue-txt">La réponse</span></span>
           </div>
           <div class="constat-face constat-face--back">
-            <p class="constat-desc">Vous voyez le potentiel de l&#8217;<span style="color:var(--rose);font-weight:600">IA</span>.<br>Reste à savoir où elle crée le plus de valeur.</p>
+            <p class="constat-desc">Vous voyez le potentiel de l&#8217;<span class="ink-accent-600">IA</span>.<br>Reste à savoir où elle crée le plus de valeur.</p>
             <span class="constat-flip-cue constat-flip-cue--back" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v4h-4"/></svg></span>
           </div>
         </div>
@@ -2012,7 +2037,7 @@ color: var(--plum); margin: 14px 0 0;
       </div>
     </div>
     <script src="assets/inline/accueil-1.js" defer></script>
-    <p class="constat-pivot"><em class="constat-pivot-q">La bonne nouvelle&nbsp;?</em>Vous n&#8217;avez pas besoin d&#8217;un expert <span style="color:var(--rose);font-weight:600">IA</span>. Vous avez besoin d&#8217;une <strong class="constat-pivot-punch">direction claire</strong>.<br>Ce sont des décisions de <span style="color:var(--rose);font-weight:500">Direction Générale</span>.</p>
+    <p class="constat-pivot"><em class="constat-pivot-q">La bonne nouvelle&nbsp;?</em>Vous n&#8217;avez pas besoin d&#8217;un expert <span class="ink-accent-600">IA</span>. Vous avez besoin d&#8217;une <strong class="constat-pivot-punch">direction claire</strong>.<br>Ce sont des décisions de <span style="color:#C75F62;font-weight:500">Direction Générale</span>.</p>
   </div>
 </section>
 
@@ -2075,7 +2100,7 @@ color: var(--plum); margin: 14px 0 0;
       </span>
       <div class="ve-bar-text">
         <p class="ve-bar-lead">Moins d'initiatives. Plus de clarté.</p>
-        <p class="ve-bar-sub">C'est ainsi que l'<span style="color:var(--rose)">IA</span> devient un levier de performance durable.</p>
+        <p class="ve-bar-sub">C'est ainsi que l'<span class="ink-accent">IA</span> devient un levier de performance durable.</p>
       </div>
     </div>
   </div>
@@ -2086,11 +2111,11 @@ color: var(--plum); margin: 14px 0 0;
 <section class="ce-que-section bg-white">
   <div class="wrap">
     <span class="eyebrow reveal">Résultats</span>
-    <h2 class="section-title reveal" style="margin-bottom:16px;">Ce que vous obtenez</h2>
+    <h2 class="section-title reveal mb-16">Ce que vous obtenez</h2>
     <p class="ce-que-intro reveal">La démarche remet de l'ordre dans la complexité. <strong>Vous en ressortez avec un cap, des priorités et des décisions prêtes à exécuter.</strong></p>
     <div class="ce-que-inner ia-perf-box reveal">
       <ul class="res-list">
-        <li class="reveal delay-1"><span class="li-label">Une vision claire des priorités</span><span class="li-desc">les usages <span style="color:var(--rose)">IA</span> qui comptent vraiment pour votre organisation.</span></li>
+        <li class="reveal delay-1"><span class="li-label">Une vision claire des priorités</span><span class="li-desc">les usages <span class="ink-accent">IA</span> qui comptent vraiment pour votre organisation.</span></li>
         <li class="reveal delay-2"><span class="li-label">Des décisions plus rapides</span><span class="li-desc">un cadre pour trancher en confiance, sans subir la technologie.</span></li>
         <li class="reveal delay-3"><span class="li-label">Une feuille de route actionnable</span><span class="li-desc">réaliste, séquencée et comprise par tous.</span></li>
         <li class="reveal delay-4"><span class="li-label">Des équipes mobilisées</span><span class="li-desc">alignées autour des bons cas d'usage.</span></li>
@@ -2101,7 +2126,7 @@ color: var(--plum); margin: 14px 0 0;
 </section>
 
 <div class="pourquoi-conclusion-band">
-  <p class="pourquoi-conclusion">Sans priorité claire ni décision de direction, l'<span style="color:var(--rose)">IA</span> reste une dépense, jamais un levier.</p>
+  <p class="pourquoi-conclusion">Sans priorité claire ni décision de direction, l'<span class="ink-accent">IA</span> reste une dépense, jamais un levier.</p>
 </div>
 
 </div><!-- end .pourquoi-ce-que-row -->
@@ -2109,8 +2134,8 @@ color: var(--plum); margin: 14px 0 0;
 <!-- ═══ PERSPECTIVES — DERNIÈRE PUBLICATION ══════════════════ -->
 <section id="home-perspectives" class="bg-ivory">
   <div class="wrap">
-    <span class="eyebrow reveal">Perspectives <span class="eyebrow-sub">· le <span class="eyebrow-blog">blog</span> d&#8217;EXEC&#8217;IA</span></span>
-    <h2 class="section-title reveal" style="margin-bottom:16px;">Un regard sur l&#8217;<span style="color:var(--rose);font-weight:500">IA</span>, façonné par des années<br>au plus près des dirigeants.</h2>
+    <span class="eyebrow reveal">Perspectives </span>
+    <h2 class="section-title reveal mb-16">Un regard sur l&#8217;<span class="ink-accent-500">IA</span>, façonné par des années<br>au plus près des dirigeants.</h2>
     <a href="perspective-entreprise-utilise-deja-ia.html" class="home-persp-card reveal delay-1">
       <div class="home-persp-card-visual home-persp-card-visual--img" aria-hidden="true">
         <img src="assets/perspectives/gouvernance-linkedin-cover.webp" alt="Choisir devient stratégique — publication LinkedIn de Valérie Mailland" loading="lazy" decoding="async">
@@ -2124,7 +2149,7 @@ color: var(--plum); margin: 14px 0 0;
         <span class="persp-card-read">Lire l&#8217;article <span class="portrait-link-arrow">→</span></span>
       </div>
     </a>
-    <a href="perspectives.html" class="persp-all-link" style="margin-top:20px">Toutes les Perspectives <span class="portrait-link-arrow">→</span></a>
+    <a href="perspectives.html" class="persp-all-link s5">Toutes les Perspectives <span class="portrait-link-arrow">→</span></a>
   </div>
 </section>
 
@@ -2134,7 +2159,7 @@ color: var(--plum); margin: 14px 0 0;
   <div class="wrap footer-grid">
     <div class="footer-brand">
       <img src="assets/logo-execia-bords-prune.webp" alt="EXEC'IA Consulting" class="footer-logo-main" width="450" height="212" decoding="async">
-      <p class="footer-tag"><span class="footer-tag-lead">Une expérience dirigeante</span><br><span class="footer-tag-rest">au service de votre transformation <span style="color:var(--rose)">IA</span></span></p>
+      <p class="footer-tag"><span class="footer-tag-lead">Une expérience dirigeante</span><br><span class="footer-tag-rest">au service de votre transformation <span class="ink-accent">IA</span></span></p>
       <p class="footer-signature">Décidez avant d&#8217;investir.</p>
     </div>
 
@@ -2147,22 +2172,22 @@ color: var(--plum); margin: 14px 0 0;
       <a href="temoignages.html">Témoignages</a>
       <a href="contact.html">Contact</a>
       <a href="perspectives.html">Blog</a>
-      <a href="perspective-entreprise-utilise-deja-ia.html" class="footer-persp-link">→ <span class="art-star" aria-label="Article le plus lu">★</span>Votre entreprise utilise déjà l’<span style="color:var(--rose)">IA</span></a>
+      <a href="perspective-entreprise-utilise-deja-ia.html" class="footer-persp-link">→ <span class="art-star" aria-label="Article le plus lu">★</span>Votre entreprise utilise déjà l’<span class="ink-accent">IA</span></a>
       <a href="perspective-toutes-decisions-ne-se-deleguent-pas.html" class="footer-persp-link">→ <span class="art-star" aria-label="Article le plus lu">★</span>Toutes les décisions ne se délèguent pas</a>
-      <a href="perspective-transformation-echoue-rarement-technologie.html" class="footer-persp-link">→ La transformation <span style="color:var(--rose)">IA</span> échoue rarement</a>
-      <a href="perspective-probleme-nest-pas-outils-mais-arbitrage.html" class="footer-persp-link">→ Plus d’outils <span style="color:var(--rose)">IA</span>, pas plus d’impact</a>
-    <a href="perspective-projet-ia-peut-il-etre-finance.html" class="footer-persp-link">→ Votre projet <span style="color:var(--rose)">IA</span> peut-il être financé&nbsp;?</a>
+      <a href="perspective-transformation-echoue-rarement-technologie.html" class="footer-persp-link">→ La transformation <span class="ink-accent">IA</span> échoue rarement</a>
+      <a href="perspective-probleme-nest-pas-outils-mais-arbitrage.html" class="footer-persp-link">→ Plus d’outils <span class="ink-accent">IA</span>, pas plus d’impact</a>
+    <a href="perspective-projet-ia-peut-il-etre-finance.html" class="footer-persp-link">→ Votre projet <span class="ink-accent">IA</span> peut-il être financé&nbsp;?</a>
     <a href="perspective-chatbot-savoir-passer-la-main.html" class="footer-persp-link">→ Où tracer la limite entre chatbot et humain&nbsp;?</a>
-    <div class="footer-persp-c2" style="gap:3px">
+    <div class="footer-persp-c2 gap-3">
     <a href="perspective-budget-ia-adhesion-equipes.html" class="footer-persp-link footer-persp-link--c2">→ L’adhésion compte-t-elle plus que le budget&nbsp;?</a>
-    <a href="perspective-shadow-ia-charte-comite-direction.html" class="footer-persp-link footer-persp-link--c2">→ Quels outils <span style="color:var(--rose)">IA</span> vos équipes utilisent-elles&nbsp;?</a>
+    <a href="perspective-shadow-ia-charte-comite-direction.html" class="footer-persp-link footer-persp-link--c2">→ Quels outils <span class="ink-accent">IA</span> vos équipes utilisent-elles&nbsp;?</a>
     <a href="perspective-robots-humanoides-token-tax.html" class="footer-persp-link footer-persp-link--c2">→ Quelles tâches confier à un robot humanoïde&nbsp;?</a>
     <a href="perspective-affaire-orelien-preuve-travail.html" class="footer-persp-link footer-persp-link--c2">→ <span class="art-star" aria-label="Article le plus lu">★</span>Demain, vos équipes devront-elles prouver leur travail&nbsp;?</a>
-    <a href="perspective-tri-cv-ia-candidatures-ecartees.html" class="footer-persp-link footer-persp-link--c2">→ Qui relit les CV que l’<span style="color:var(--rose)">IA</span> écarte&nbsp;?</a>
-    <a href="perspective-agents-ia-recruter-comme-salarie.html" class="footer-persp-link footer-persp-link--c2">→ Un agent <span style="color:var(--rose)">IA</span> se recrute-t-il comme un salarié&nbsp;?</a>
+    <a href="perspective-tri-cv-ia-candidatures-ecartees.html" class="footer-persp-link footer-persp-link--c2">→ Qui relit les CV que l’<span class="ink-accent">IA</span> écarte&nbsp;?</a>
+    <a href="perspective-agents-ia-recruter-comme-salarie.html" class="footer-persp-link footer-persp-link--c2">→ Un agent <span class="ink-accent">IA</span> se recrute-t-il comme un salarié&nbsp;?</a>
     <a href="perspective-jumeau-numerique-savoir-dirigeant.html" class="footer-persp-link footer-persp-link--c2">→ Jumeau numérique : le savoir du dirigeant part-il&nbsp;?</a>
-    <a href="perspective-forward-deployed-engineer-pme.html" class="footer-persp-link footer-persp-link--c2">→ Entre l’<span style="color:var(--rose)">IA</span> et la Direction, il faut un traducteur</a>
-    <a href="perspective-enregistreur-ia-reunion-direction.html" class="footer-persp-link footer-persp-link--c2">→ Un enregistreur <span style="color:var(--rose)">IA</span> en comité de direction&nbsp;: qui l’a décidé&nbsp;?</a>
+    <a href="perspective-forward-deployed-engineer-pme.html" class="footer-persp-link footer-persp-link--c2">→ Entre l’<span class="ink-accent">IA</span> et la Direction, il faut un traducteur</a>
+    <a href="perspective-enregistreur-ia-reunion-direction.html" class="footer-persp-link footer-persp-link--c2">→ Un enregistreur <span class="ink-accent">IA</span> en comité de direction&nbsp;: qui l’a décidé&nbsp;?</a>
     </div>
     </div>
 
@@ -2171,7 +2196,7 @@ color: var(--plum); margin: 14px 0 0;
       <a href="mailto:contact@exec-ia.ai">✉️ contact@exec-ia.ai</a>
       <span class="footer-loc">📍 Paris, France, International</span>
       <a href="https://www.linkedin.com/in/val%C3%A9rie-mailland" target="_blank" rel="noopener" class="footer-linkedin-btn"><img src="assets/linkedin-logo.png" alt="LinkedIn" class="footer-linkedin-logo">Me suivre sur LinkedIn</a>
-      <a href="https://www.instagram.com/execia.consulting/" target="_blank" rel="noopener" class="footer-linkedin-btn footer-instagram-btn"><img src="assets/instagram-logo.png" alt="Instagram" class="footer-linkedin-logo" width="18" height="18"><span>Suivre EXEC'<span style="color:var(--rose)">IA</span> sur Instagram</span></a>
+      <a href="https://www.instagram.com/execia.consulting/" target="_blank" rel="noopener" class="footer-linkedin-btn footer-instagram-btn"><img src="assets/instagram-logo.png" alt="Instagram" class="footer-linkedin-logo" width="18" height="18"><span>Suivre EXEC'<span class="ink-accent">IA</span> sur Instagram</span></a>
     </div>
     <div class="footer-col footer-col--langs">
       <span class="footer-col-title">Langues</span>
@@ -2240,7 +2265,7 @@ color: var(--plum); margin: 14px 0 0;
     </div>
   </div>
 </div>
-<script src="assets/chat-widget.js?v=3" defer></script>
-<script src="assets/phare-chat-widget.js?v=5" defer></script>
+<script src="assets/chat-widget.js?v=4" defer></script>
+<script src="assets/phare-chat-widget.js?v=6" defer></script>
 </body>
 </html>

@@ -1654,10 +1654,6 @@ box-shadow: 0 12px 32px rgba(99,59,74,.25);
 }.nav-links.open a{ color: #FAF6F2 !important; font-size: 1rem; max-width: none !important; }.nav-links.open a::after{ background: #C75F62; }}
 @media (max-width: 1260px){.footer-brand .footer-tag, .footer-brand .footer-mention-ia{ white-space: normal; }}
 @media (max-width: 1100px){.piliers{ grid-template-columns: repeat(3, minmax(0, 1fr)); }.pilier{ min-width: 0; }.pilier *, .newsletter-content *, .nl-box *{ overflow-wrap: anywhere; }.newsletter-inner > *, .newsletter-content, .nl-box{ min-width: 0; max-width: 100%; }}
-@media (max-width: 1200px){.about-lede--1l, .about-principe-sub--1l, .tl-item--essec h3, .tl-item--essec .tl-role,
-.tl-studeria-topics, .tl-studeria-quote, .agents-tasks-1l, .tl-intro--diff, .tl-one-line,
-.article-page--guide .article-title--2l,
-[style*="white-space:nowrap"], [style*="white-space: nowrap"]{ white-space: normal !important; }}
 .article-book .article-intro p, .article-book .article-close p, .article-book .art-list li{ text-align: left; text-wrap: pretty; hyphens: auto; -webkit-hyphens: auto; hyphenate-limit-chars: 6 3 3; }
 body.art-justify .article-book .article-intro p{ text-align: justify; text-align-last: left; text-justify: inter-word; }
 .footer-col a.footer-instagram-btn{ margin-top: -6px; }
@@ -1838,7 +1834,25 @@ color: var(--plum); margin: 14px 0 0;
 @media (min-width: 1251px){.footer-col--site .footer-persp-c2{ left: calc(18.75rem - 5px); }.footer-bottom .footer-rights{ grid-row: 1; }.footer-bottom .footer-copy{ grid-column: 2 / 4; grid-row: 1; margin-left: calc(18.75rem - 5px); }}
 :focus-visible{ outline: 2px solid var(--rose); outline-offset: 3px; border-radius: 4px; }
 @media print{.reveal, .reveal.visible{ opacity: 1 !important; transform: none !important; }.nav, .cookie-banner, .phare-bubble, #phare-bubble, .qw-bubble{ display: none !important; }}
-.eyebrow, .maf-eyebrow, .expertise-hero-eyebrow, .hero-eyebrow, .pre, .persp-card-meta{ color: #A84D50 !important; }
+.eyebrow, .maf-eyebrow, .expertise-hero-eyebrow, .hero-eyebrow, .pre, .persp-card-meta{ color: #C75F62 !important; }
+.art-ia, .aiact-ia, .aiact-key, .risk-hl, .article-meta, .persp-card-read, .persp-card-subtitle,
+.article-related-title, .article-tldr-arrow, .portrait-link-arrow, .acc-num, .acc-icon, .pilier-title,
+.offre-niveau, .offre-web-tier-price, .nl-req, .agent-eyebrow-txt, .ve-col-num, .constat-flip-cue-txt,
+.cookie-cat-always, .agents-arrow{ color: #C75F62; }
+.cookie-banner-link{ color: #FAF6F2 !important; }
+.article-meta, .persp-card-read, .persp-card-subtitle, .article-related-title, .article-tldr-arrow, .portrait-link-arrow{ font-weight: 600; }
+@media (max-width: 1250px){.footer-col--site{ display: block; columns: 2; column-gap: 24px; width: 100%; max-width: 100%; min-width: 0; box-sizing: border-box; }.footer-col--site > *{ break-inside: avoid; }.footer-col--site .footer-persp-c2{ position: static; margin-top: 0; }}
+.ink-accent{ color: #C75F62 !important; }
+.gap-3{ gap: 3px !important; }
+.ink-accent-600{ color: #C75F62 !important; font-weight: 600 !important; }
+.article-meta, .article-related-title, .portrait-link-arrow, .article-tldr-arrow{ color: #633B4A !important; }
+.footer-persp-link, a.footer-persp-link, a.nav-lang{ color: #633B4A !important; opacity: 1 !important; }
+.s6{ display:none;color:#C75F62;font-size:.82rem;margin:0 0 6px;padding-left:2px; !important; }
+.s7{ display:none;padding:32px 24px;text-align:center; !important; }
+.s8{ font-size:.95rem;color:var(--plum-muted);margin:0 0 20px;line-height:1.6; !important; }
+.s9{ font-size:.78rem;color:var(--plum-muted); !important; }
+.s10{ margin-top:8px;font-size:1rem;color:var(--plum) !important; }
+.s11{ white-space:nowrap;font-weight:600 !important; }
 </style>
 <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "VideoObject", "name": "Combien l'IA peut-elle faire gagner à vos équipes ? Le simulateur EXEC'IA", "description": "Démonstration du simulateur de gains EXEC'IA pour dirigeants de PME : nombre de personnes, heures gagnées par semaine, coût horaire. Commentée par Valérie Mailland.", "thumbnailUrl": "https://exec-ia.ai/assets/video/simulateur-roi-poster.webp", "uploadDate": "2026-09-30", "duration": "PT30S", "contentUrl": "https://exec-ia.ai/assets/video/simulateur-roi.mp4?v=2", "inLanguage": "fr-FR", "publisher": {"@id": "https://exec-ia.ai/#organization"}}
@@ -1929,18 +1943,18 @@ color: var(--plum); margin: 14px 0 0;
               <label for="nl-email">E-mail professionnel <span class="nl-req">*</span></label>
               <input type="email" id="nl-email" name="email" autocomplete="email" required>
             </div>
-            <p id="nl-global-err" style="display:none;color:#C75F62;font-size:.82rem;margin:0 0 6px;padding-left:2px;"></p>
+            <p class="s6" id="nl-global-err"></p>
             <button type="submit" class="btn btn-rose nl-submit" id="nl-submit-btn">Recevoir la ressource</button>
           </form>
           <p class="newsletter-trust">🔒 Pas de spam &nbsp;•&nbsp; Désinscription en un clic &nbsp;•&nbsp; Conforme <span class="rgpd-b">RGPD</span></p>
         </div>
 
         <!-- Message de confirmation -->
-        <div id="nl-box-success" style="display:none;padding:32px 24px;text-align:center;">
+        <div class="s7" id="nl-box-success">
           <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.6rem;color:var(--plum);font-weight:400;margin:0 0 12px;line-height:1.3;">Merci <span id="nl-success-name"></span>.</p>
-          <p style="font-size:.95rem;color:var(--plum-muted);margin:0 0 20px;line-height:1.6;">Un email est en route vers votre boîte professionnelle.<br>Vous pouvez aussi accéder directement au document&nbsp;:</p>
+          <p class="s8">Un email est en route vers votre boîte professionnelle.<br>Vous pouvez aussi accéder directement au document&nbsp;:</p>
           <a id="nl-doc-link" href="#" target="_blank" rel="noopener" style="display:inline-block;margin-bottom:20px;background:#C75F62;color:#FAF6F2;font-family:'Inter',sans-serif;font-size:.88rem;font-weight:500;letter-spacing:.1em;text-decoration:none;padding:13px 28px;border-radius:2px;">Voir le document</a>
-          <p style="font-size:.78rem;color:var(--plum-muted);">🔒 Conforme <span class="rgpd-b">RGPD</span> &nbsp;•&nbsp; Désinscription en un clic</p>
+          <p class="s9">🔒 Conforme <span class="rgpd-b">RGPD</span> &nbsp;•&nbsp; Désinscription en un clic</p>
           <button type="button" id="nl-new-signup" style="margin-top:16px;display:block;width:100%;background:transparent;border:1px solid rgba(99,59,74,.28);color:var(--plum-muted);font-family:'Inter',sans-serif;font-size:.78rem;letter-spacing:.08em;padding:9px 20px;cursor:pointer;border-radius:2px;">Inscrire un autre participant</button>
         </div>
 
@@ -1956,7 +1970,7 @@ color: var(--plum); margin: 14px 0 0;
   <div class="wrap">
 
     <span class="eyebrow reveal">Offres</span>
-    <h1 class="section-title offres-section-title reveal delay-1">Chaque transformation commence par une <span style="color:var(--rose)">décision</span>.</h1>
+    <h1 class="section-title offres-section-title reveal delay-1">Chaque transformation commence par une <span class="ink-accent">décision</span>.</h1>
     <p class="offres-subtitle reveal delay-2">Un accompagnement de direction générale, complété par deux savoir-faire à la carte.</p>
 
     <div class="offre-decouverte offre-decouverte--transverse reveal delay-2">
@@ -1983,9 +1997,9 @@ color: var(--plum); margin: 14px 0 0;
         <div class="offre-card offre-card--ivory reveal delay-1">
           <div class="offre-niveau">Niveau I &nbsp;·&nbsp; <strong>Clarifiez</strong></div>
           <div class="offre-titre-capsule"><h2>Cap IA</h2></div>
-          <p class="offre-accroche">Identifiez où l'<span style="color:var(--rose)">IA</span> créera le plus de valeur et fixez vos priorités.</p>
+          <p class="offre-accroche">Identifiez où l'<span class="ink-accent">IA</span> créera le plus de valeur et fixez vos priorités.</p>
           <ul class="offre-points">
-            <li>Cartographie des usages <span style="color:var(--rose)">IA</span> prioritaires.</li>
+            <li>Cartographie des usages <span class="ink-accent">IA</span> prioritaires.</li>
             <li>3 décisions à prendre, argumentées.</li>
             <li>Compte-rendu sous 5 jours.</li>
           </ul>
@@ -1998,7 +2012,7 @@ color: var(--plum); margin: 14px 0 0;
         <div class="offre-card offre-card--ivory reveal delay-2">
           <div class="offre-niveau">Niveau II &nbsp;·&nbsp; <strong>Décidez dans la durée</strong></div>
           <div class="offre-titre-capsule"><h2>Sparring Dirigeant</h2></div>
-          <p class="offre-accroche">Arbitrez vos décisions <span style="color:var(--rose)">IA</span> dans la durée avec un partenaire de confiance.</p>
+          <p class="offre-accroche">Arbitrez vos décisions <span class="ink-accent">IA</span> dans la durée avec un partenaire de confiance.</p>
           <ul class="offre-points">
             <li>Journal de décisions.</li>
             <li>Grille d'arbitrage réutilisable.</li>
@@ -2014,9 +2028,9 @@ color: var(--plum); margin: 14px 0 0;
           <span class="offre-badge">Accompagnement de référence</span>
           <div class="offre-niveau">Niveau III &nbsp;·&nbsp; <strong>Transformez</strong></div>
           <div class="offre-titre-capsule"><h2>Transformation IA</h2></div>
-          <p class="offre-accroche">Transformez votre stratégie <span style="color:var(--rose)">IA</span> en feuille de route opérationnelle.</p>
+          <p class="offre-accroche">Transformez votre stratégie <span class="ink-accent">IA</span> en feuille de route opérationnelle.</p>
           <ul class="offre-points">
-            <li>Feuille de route <span style="color:var(--rose)">IA</span>.</li>
+            <li>Feuille de route <span class="ink-accent">IA</span>.</li>
             <li>Plan de déploiement.</li>
             <li>Tableau de bord de suivi.</li>
             <li>Bilan de fin de mission.</li>
@@ -2031,7 +2045,7 @@ color: var(--plum); margin: 14px 0 0;
       <div class="offre-livrable reveal">
         <h2 class="offre-livrable-title">Ce avec quoi vous repartez</h2>
         <ul class="offre-livrable-list">
-          <li>Une vision claire des opportunités <span style="color:var(--rose)">IA</span> réellement créatrices de valeur.</li>
+          <li>Une vision claire des opportunités <span class="ink-accent">IA</span> réellement créatrices de valeur.</li>
           <li>Des priorités clarifiées&nbsp;: ce qu'il faut lancer, différer ou abandonner.</li>
           <li>Une trajectoire cohérente avec vos enjeux et vos ressources.</li>
           <li>Un cadre de décision réutilisable pour les arbitrages à venir.</li>
@@ -2074,7 +2088,7 @@ color: var(--plum); margin: 14px 0 0;
         <div class="offres-cat-body">
           <div class="offres-cat-inner">
             <div class="offre-web">
-              <p class="offre-web-desc">Des agents IA sur mesure, connectés à vos outils, pour automatiser ce qui vous fait perdre du temps.<br>Une IA agentique avec <span style="color:var(--rose)">supervision humaine</span>&nbsp;: elle soutient vos équipes sans les remplacer,<br>et reste utile chaque jour, longtemps après sa mise en service.</p>
+              <p class="offre-web-desc">Des agents IA sur mesure, connectés à vos outils, pour automatiser ce qui vous fait perdre du temps.<br>Une IA agentique avec <span class="ink-accent">supervision humaine</span>&nbsp;: elle soutient vos équipes sans les remplacer,<br>et reste utile chaque jour, longtemps après sa mise en service.</p>
               <div class="offre-web-tiers offre-web-tiers--agents">
                 <div class="offre-web-tier">
                   <span class="offre-web-tier-name">Agent IA «&nbsp;Essentiel&nbsp;»</span>
@@ -2092,7 +2106,7 @@ color: var(--plum); margin: 14px 0 0;
                   <span class="offre-web-tier-price"><span class="offre-price-lead">Sur devis, à partir de</span> 2&nbsp;990&nbsp;€ <span class="offre-price-ht">HT</span></span>
                   <div class="offre-agent-pastilles">
                     <span class="offre-agent-pastille"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg> 1 workflow · 3 à 4 outils</span>
-                    <span class="offre-agent-pastille"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg> <span style="color:var(--rose)">IA</span> générative intégrée</span>
+                    <span class="offre-agent-pastille"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg> <span class="ink-accent">IA</span> générative intégrée</span>
                     <span class="offre-agent-pastille"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg> Ex.&nbsp;: leads → fiche CRM</span>
                   </div>
                   <span class="offre-agent-inclus">Inclus&nbsp;: cadrage 2h · documentation · formation 1h · correctifs&nbsp;2&nbsp;mois</span>
@@ -2108,7 +2122,7 @@ color: var(--plum); margin: 14px 0 0;
                   <span class="offre-agent-inclus">Inclus&nbsp;: audit · prototype · déploiement · formation · suivi&nbsp;3&nbsp;mois</span>
                 </div>
               </div>
-              <p class="offre-price-note"><strong style="color:var(--rose);font-weight:600">Diagnostic de 30 min offert</strong> · pour cadrer le périmètre et fixer le prix</p>
+              <p class="offre-price-note"><strong class="ink-accent-600">Diagnostic de 30 min offert</strong> · pour cadrer le périmètre et fixer le prix</p>
               <a href="https://calendly.com/exec-ia" target="_blank" rel="noopener" class="btn btn-rose offre-web-btn">Discuter de mon projet <span class="btn-arrow">→</span></a>
             </div>
           </div>
@@ -2170,7 +2184,7 @@ color: var(--plum); margin: 14px 0 0;
           <span class="ooc-arrow">Voir l&#8217;offre <span class="portrait-link-arrow">→</span></span>
         </button>
       </div>
-      <p class="offre-price-note" style="margin-top:8px;font-size:1rem;color:var(--plum)">Un projet d&#8217;agents <span style="color:var(--rose);font-weight:600">IA</span> révèle souvent des enjeux plus larges&nbsp;:<br>beaucoup de missions Direction générale démarrent par un premier agent.</p>
+      <p class="offre-price-note s10">Un projet d&#8217;agents <span class="ink-accent-600">IA</span> révèle souvent des enjeux plus larges&nbsp;:<br>beaucoup de missions Direction générale démarrent par un premier agent.</p>
     </div>
 
   </div>
@@ -2182,7 +2196,7 @@ color: var(--plum); margin: 14px 0 0;
   <div class="roi-band" aria-hidden="true"></div>
   <div class="wrap">
     <span class="eyebrow reveal">Calculateur d'impact</span>
-    <h2 class="section-title reveal delay-1" style="white-space:nowrap;font-weight:600">Faites le calcul en <span style="color:var(--rose)">30&nbsp;secondes</span></h2>
+    <h2 class="section-title reveal delay-1 s11">Faites le calcul en <span class="ink-accent">30&nbsp;secondes</span></h2>
     <figure class="roi-video reveal delay-2">
       <video controls preload="none" playsinline width="1280" height="688" poster="assets/video/simulateur-roi-poster.webp" aria-label="Démonstration du simulateur, commentée par Valérie Mailland">
         <source src="assets/video/simulateur-roi.mp4?v=2" type="video/mp4">
@@ -2230,7 +2244,7 @@ color: var(--plum); margin: 14px 0 0;
   <div class="wrap footer-grid">
     <div class="footer-brand">
       <img src="assets/logo-execia-bords-prune.webp" alt="EXEC'IA Consulting" class="footer-logo-main" width="450" height="212" decoding="async">
-      <p class="footer-tag"><span class="footer-tag-lead">Une expérience dirigeante</span><br><span class="footer-tag-rest">au service de votre transformation <span style="color:var(--rose)">IA</span></span></p>
+      <p class="footer-tag"><span class="footer-tag-lead">Une expérience dirigeante</span><br><span class="footer-tag-rest">au service de votre transformation <span class="ink-accent">IA</span></span></p>
       <p class="footer-signature">Décidez avant d&#8217;investir.</p>
     </div>
 
@@ -2243,22 +2257,22 @@ color: var(--plum); margin: 14px 0 0;
       <a href="temoignages.html">Témoignages</a>
       <a href="contact.html">Contact</a>
       <a href="perspectives.html">Blog</a>
-      <a href="perspective-entreprise-utilise-deja-ia.html" class="footer-persp-link">→ <span class="art-star" aria-label="Article le plus lu">★</span>Votre entreprise utilise déjà l’<span style="color:var(--rose)">IA</span></a>
+      <a href="perspective-entreprise-utilise-deja-ia.html" class="footer-persp-link">→ <span class="art-star" aria-label="Article le plus lu">★</span>Votre entreprise utilise déjà l’<span class="ink-accent">IA</span></a>
       <a href="perspective-toutes-decisions-ne-se-deleguent-pas.html" class="footer-persp-link">→ <span class="art-star" aria-label="Article le plus lu">★</span>Toutes les décisions ne se délèguent pas</a>
-      <a href="perspective-transformation-echoue-rarement-technologie.html" class="footer-persp-link">→ La transformation <span style="color:var(--rose)">IA</span> échoue rarement</a>
-      <a href="perspective-probleme-nest-pas-outils-mais-arbitrage.html" class="footer-persp-link">→ Plus d’outils <span style="color:var(--rose)">IA</span>, pas plus d’impact</a>
-    <a href="perspective-projet-ia-peut-il-etre-finance.html" class="footer-persp-link">→ Votre projet <span style="color:var(--rose)">IA</span> peut-il être financé&nbsp;?</a>
+      <a href="perspective-transformation-echoue-rarement-technologie.html" class="footer-persp-link">→ La transformation <span class="ink-accent">IA</span> échoue rarement</a>
+      <a href="perspective-probleme-nest-pas-outils-mais-arbitrage.html" class="footer-persp-link">→ Plus d’outils <span class="ink-accent">IA</span>, pas plus d’impact</a>
+    <a href="perspective-projet-ia-peut-il-etre-finance.html" class="footer-persp-link">→ Votre projet <span class="ink-accent">IA</span> peut-il être financé&nbsp;?</a>
     <a href="perspective-chatbot-savoir-passer-la-main.html" class="footer-persp-link">→ Où tracer la limite entre chatbot et humain&nbsp;?</a>
-    <div class="footer-persp-c2" style="gap:3px">
+    <div class="footer-persp-c2 gap-3">
     <a href="perspective-budget-ia-adhesion-equipes.html" class="footer-persp-link footer-persp-link--c2">→ L’adhésion compte-t-elle plus que le budget&nbsp;?</a>
-    <a href="perspective-shadow-ia-charte-comite-direction.html" class="footer-persp-link footer-persp-link--c2">→ Quels outils <span style="color:var(--rose)">IA</span> vos équipes utilisent-elles&nbsp;?</a>
+    <a href="perspective-shadow-ia-charte-comite-direction.html" class="footer-persp-link footer-persp-link--c2">→ Quels outils <span class="ink-accent">IA</span> vos équipes utilisent-elles&nbsp;?</a>
     <a href="perspective-robots-humanoides-token-tax.html" class="footer-persp-link footer-persp-link--c2">→ Quelles tâches confier à un robot humanoïde&nbsp;?</a>
     <a href="perspective-affaire-orelien-preuve-travail.html" class="footer-persp-link footer-persp-link--c2">→ <span class="art-star" aria-label="Article le plus lu">★</span>Demain, vos équipes devront-elles prouver leur travail&nbsp;?</a>
-    <a href="perspective-tri-cv-ia-candidatures-ecartees.html" class="footer-persp-link footer-persp-link--c2">→ Qui relit les CV que l’<span style="color:var(--rose)">IA</span> écarte&nbsp;?</a>
-    <a href="perspective-agents-ia-recruter-comme-salarie.html" class="footer-persp-link footer-persp-link--c2">→ Un agent <span style="color:var(--rose)">IA</span> se recrute-t-il comme un salarié&nbsp;?</a>
+    <a href="perspective-tri-cv-ia-candidatures-ecartees.html" class="footer-persp-link footer-persp-link--c2">→ Qui relit les CV que l’<span class="ink-accent">IA</span> écarte&nbsp;?</a>
+    <a href="perspective-agents-ia-recruter-comme-salarie.html" class="footer-persp-link footer-persp-link--c2">→ Un agent <span class="ink-accent">IA</span> se recrute-t-il comme un salarié&nbsp;?</a>
     <a href="perspective-jumeau-numerique-savoir-dirigeant.html" class="footer-persp-link footer-persp-link--c2">→ Jumeau numérique : le savoir du dirigeant part-il&nbsp;?</a>
-    <a href="perspective-forward-deployed-engineer-pme.html" class="footer-persp-link footer-persp-link--c2">→ Entre l’<span style="color:var(--rose)">IA</span> et la Direction, il faut un traducteur</a>
-    <a href="perspective-enregistreur-ia-reunion-direction.html" class="footer-persp-link footer-persp-link--c2">→ Un enregistreur <span style="color:var(--rose)">IA</span> en comité de direction&nbsp;: qui l’a décidé&nbsp;?</a>
+    <a href="perspective-forward-deployed-engineer-pme.html" class="footer-persp-link footer-persp-link--c2">→ Entre l’<span class="ink-accent">IA</span> et la Direction, il faut un traducteur</a>
+    <a href="perspective-enregistreur-ia-reunion-direction.html" class="footer-persp-link footer-persp-link--c2">→ Un enregistreur <span class="ink-accent">IA</span> en comité de direction&nbsp;: qui l’a décidé&nbsp;?</a>
     </div>
     </div>
 
@@ -2267,7 +2281,7 @@ color: var(--plum); margin: 14px 0 0;
       <a href="mailto:contact@exec-ia.ai">✉️ contact@exec-ia.ai</a>
       <span class="footer-loc">📍 Paris, France, International</span>
       <a href="https://www.linkedin.com/in/val%C3%A9rie-mailland" target="_blank" rel="noopener" class="footer-linkedin-btn"><img src="assets/linkedin-logo.png" alt="LinkedIn" class="footer-linkedin-logo">Me suivre sur LinkedIn</a>
-      <a href="https://www.instagram.com/execia.consulting/" target="_blank" rel="noopener" class="footer-linkedin-btn footer-instagram-btn"><img src="assets/instagram-logo.png" alt="Instagram" class="footer-linkedin-logo" width="18" height="18"><span>Suivre EXEC'<span style="color:var(--rose)">IA</span> sur Instagram</span></a>
+      <a href="https://www.instagram.com/execia.consulting/" target="_blank" rel="noopener" class="footer-linkedin-btn footer-instagram-btn"><img src="assets/instagram-logo.png" alt="Instagram" class="footer-linkedin-logo" width="18" height="18"><span>Suivre EXEC'<span class="ink-accent">IA</span> sur Instagram</span></a>
     </div>
     <div class="footer-col footer-col--langs">
       <span class="footer-col-title">Langues</span>
@@ -2335,7 +2349,7 @@ color: var(--plum); margin: 14px 0 0;
     </div>
   </div>
 </div>
-<script src="assets/chat-widget.js?v=3" defer></script>
-<script src="assets/phare-chat-widget.js?v=5" defer></script>
+<script src="assets/chat-widget.js?v=4" defer></script>
+<script src="assets/phare-chat-widget.js?v=6" defer></script>
 </body>
 </html>

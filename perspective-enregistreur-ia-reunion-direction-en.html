@@ -927,7 +927,6 @@ box-shadow: 0 12px 32px rgba(99,59,74,.25);
 .article-book h3.article-meta:first-child{ margin-top: 0; }
 .article-book h3.article-meta + .article-intro{ margin-top: 0; }
 .art-num::before{ content: attr(data-n) "."; color: var(--rose); font-family: var(--sans); font-weight: 600; margin-right: .45em; }
-.article-title br{ display: block; }
 .article-book .article-intro p, .article-book .article-close p, .article-book .art-list li{ text-align: left; text-wrap: pretty; hyphens: auto; -webkit-hyphens: auto; hyphenate-limit-chars: 6 3 3; }
 body.art-justify .article-book .article-intro p{ text-align: justify; text-align-last: left; text-justify: inter-word; }
 body.art-justify .article-book .article-intro p.art-enum{ text-align: left; }
@@ -1051,6 +1050,21 @@ color: var(--plum); margin: 14px 0 0;
 @media (min-width: 1251px){.footer-col--site .footer-persp-c2{ left: calc(18.75rem - 5px); }.footer-bottom .footer-rights{ grid-row: 1; }.footer-bottom .footer-copy{ grid-column: 2 / 4; grid-row: 1; margin-left: calc(18.75rem - 5px); }}
 :focus-visible{ outline: 2px solid var(--rose); outline-offset: 3px; border-radius: 4px; }
 @media print{.reveal, .reveal.visible{ opacity: 1 !important; transform: none !important; }.nav, .cookie-banner, .phare-bubble, #phare-bubble, .qw-bubble{ display: none !important; }}
+.art-ia, .aiact-ia, .aiact-key, .risk-hl, .article-meta, .persp-card-read, .persp-card-subtitle,
+.article-related-title, .article-tldr-arrow, .portrait-link-arrow, .acc-num, .acc-icon, .pilier-title,
+.offre-niveau, .offre-web-tier-price, .nl-req, .agent-eyebrow-txt, .ve-col-num, .constat-flip-cue-txt,
+.cookie-cat-always, .agents-arrow{ color: #C75F62; }
+h1 .art-ia{ color: #C75F62; }
+h2 .art-ia{ color: #C75F62; }
+p .art-ia, li .art-ia, p .aiact-ia, li .aiact-ia, p .risk-hl, li .risk-hl{ font-weight: 600; }
+.article-meta, .persp-card-read, .persp-card-subtitle, .article-related-title, .article-tldr-arrow, .portrait-link-arrow{ font-weight: 600; }
+@media (max-width: 1250px){.footer-col--site{ display: block; columns: 2; column-gap: 24px; width: 100%; max-width: 100%; min-width: 0; box-sizing: border-box; }.footer-col--site > *{ break-inside: avoid; }.footer-col--site .footer-persp-c2{ position: static; margin-top: 0; }}
+.ink-accent{ color: #C75F62 !important; }
+.gap-3{ gap: 3px !important; }
+.mt-28{ margin-top: 28px !important; }
+.persp-card-read, a.persp-all-link, .article-tldr-arrow{ font-weight: 600 !important; }
+.article-meta, .article-related-title, .portrait-link-arrow, .article-tldr-arrow{ color: #633B4A !important; }
+.footer-persp-link, a.footer-persp-link, a.nav-lang{ color: #633B4A !important; opacity: 1 !important; }
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does an AI recorder do in a meeting?", "acceptedAnswer": {"@type": "Answer", "text": "It records the meeting, transcribes it, then draws out a summary, the decisions taken and the list of actions. It comes as a small device on the table or as an assistant that joins video calls automatically. The gain is real: nobody takes notes, everyone listens and takes part, and the minutes can go out the same day. The risk lies in where the conversations go."}}, {"@type": "Question", "name": "Why is Otter.ai the subject of a lawsuit?", "acceptedAnswer": {"@type": "Answer", "text": "In August 2025, a class action was filed in California against Otter.ai, one of the most widely used meeting assistants. The complaint says its assistant recorded participants without their consent, with only the meeting host giving theirs, and that the recordings were used to train the vendor’s models. In August 2026, a California court let several claims go forward without ruling on the merits: nobody has been found liable at this stage. It shows why a tool’s contract should be read before it is adopted."}}, {"@type": "Question", "name": "Can you record a management meeting without telling people?", "acceptedAnswer": {"@type": "Answer", "text": "No. A recorded meeting contains personal data: voices, words and opinions. The GDPR requires a precise purpose, clear information, a limited retention period and rights of access and erasure. Article L1222-4 of the French Labour Code also forbids collecting personal information about an employee through a device they were not told about in advance. Every participant must therefore be told, at every meeting."}}, {"@type": "Question", "name": "What rules should you set before recording a management meeting?", "acceptedAnswer": {"@type": "Answer", "text": "Four rules are enough. Inform every participant at the start of every meeting. Obtain their consent and offer traditional note-taking to anyone who declines. Protect the data with a business-grade tool that does not train its models on your conversations. Decide who keeps the recording and the summary, and for how long. These rules fit on one page, attached to the company’s AI policy."}}, {"@type": "Question", "name": "Which meetings should never be recorded?", "acceptedAnswer": {"@type": "Answer", "text": "Some meetings have no place in a recorder, whatever the tool: one-to-one interviews with an employee, discussions about acquisitions, disposals or fundraising, exchanges with a lawyer protected by professional privilege, health or personal-situation topics, and pay decisions. For these meetings, traditional note-taking, reviewed by the participants, remains the right method."}}, {"@type": "Question", "name": "What does the AI Act say about meeting recorders?", "acceptedAnswer": {"@type": "Answer", "text": "Two rules matter. In the workplace, emotion recognition by AI has been banned since 2 February 2025, except for medical or safety reasons: functions that claim to analyse participants’ tone or mood should be turned off. And the transparency rule in force since 2 August 2026 requires everyone to know when a piece of content, such as a meeting summary, is produced by an AI."}}, {"@type": "Question", "name": "How do you choose an AI recorder for a company?", "acceptedAnswer": {"@type": "Answer", "text": "Five criteria help sort the offers: a contract that excludes training models on your recordings, hosting in Europe or equivalent guarantees, deletion of the audio once the text is obtained, named access reserved for committee members, and a simple export so as not to depend on the vendor. The right tool is the one whose workings you can explain to an anxious participant."}}, {"@type": "Question", "name": "Who should review the summary produced by the AI?", "acceptedAnswer": {"@type": "Answer", "text": "A designated person, often the executive assistant, who knows the files and the committee’s sensitivities. The tool does not know what was really decided, or what must not circulate. That person reviews the summary, corrects errors, removes anything confidential, then has it validated by the chair. The official minutes thus remain a human document."}}, {"@type": "Question", "name": "How long should a meeting recording be kept?", "acceptedAnswer": {"@type": "Answer", "text": "As briefly as possible. Once the minutes are validated, they become the only reference record and the audio no longer has a reason to be kept: deleting it limits the risk in case of a leak or an access request. The retention period for the text and the summary is set in the recording policy, according to use, and checked each quarter against the list of recordings that still exist."}}], "inLanguage": "en-GB"}
@@ -1092,7 +1106,7 @@ color: var(--plum); margin: 14px 0 0;
       <div class="article-header-text">
         <a href="perspectives-en.html" class="article-back">← All Perspectives</a>
         <span class="article-meta">Perspectives • Governance</span>
-        <h1 class="article-title">An <span class="art-ia">AI</span> recorder in the management meeting:<br>who decided that?</h1>
+        <h1 class="article-title">An <span class="art-ia">AI</span> recorder in the management meeting: who decided that?</h1>
         <details class="article-tldr">
           <summary>Short version <span class="article-tldr-arrow">→</span></summary>
           <div class="article-tldr-body">
@@ -1141,7 +1155,7 @@ color: var(--plum); margin: 14px 0 0;
         <div class="article-close">
           <p class="article-close-line1">💬 In your management team,</p>
           <p class="article-close-line2">who decided to record?</p>
-          <p class="article-source-note" style="margin-top:28px">Sources: <a href="https://www.npr.org/2025/08/15/g-s1-83087/otter-ai-transcription-class-action-lawsuit" target="_blank" rel="noopener">NPR, “Class-action suit claims Otter AI secretly records private work conversations”, 15 August 2025</a>; <a href="https://www.mondaq.com/when-ai-takes-notes-court-allows-privacy-claims-against-otterai-to-proceed/1834520" target="_blank" rel="noopener">Mondaq, “When AI takes notes, court allows privacy claims against Otter.ai to proceed”, 25 August 2026</a>; French Labour Code, Article L1222-4; <a href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees" target="_blank" rel="noopener">CNIL, the GDPR (in French)</a>; Regulation (EU) 2024/1689 (<span class="aiact-ref">AI&nbsp;Act</span>), Articles 5 and 50.</p>
+          <p class="article-source-note mt-28">Sources: <a href="https://www.npr.org/2025/08/15/g-s1-83087/otter-ai-transcription-class-action-lawsuit" target="_blank" rel="noopener">NPR, “Class-action suit claims Otter AI secretly records private work conversations”, 15 August 2025</a>; <a href="https://www.mondaq.com/when-ai-takes-notes-court-allows-privacy-claims-against-otterai-to-proceed/1834520" target="_blank" rel="noopener">Mondaq, “When AI takes notes, court allows privacy claims against Otter.ai to proceed”, 25 August 2026</a>; French Labour Code, Article L1222-4; <a href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees" target="_blank" rel="noopener">CNIL, the GDPR (in French)</a>; Regulation (EU) 2024/1689 (<span class="aiact-ref">AI&nbsp;Act</span>), Articles 5 and 50.</p>
           <p class="article-hashtags">#EXECIA #ArtificialIntelligence #ManagementTeam #SMEs #Governance</p>
         </div>
         <span class="article-book-folio" aria-hidden="true" data-n="— 02 —"></span>
@@ -1268,7 +1282,7 @@ color: var(--plum); margin: 14px 0 0;
   <div class="wrap footer-grid">
     <div class="footer-brand">
       <img src="assets/logo-execia-bords-prune.webp" alt="EXEC'IA Consulting" class="footer-logo-main" width="450" height="212" decoding="async">
-      <p class="footer-tag"><span class="footer-tag-lead">Executive-level experience</span><br><span class="footer-tag-rest">at the service of your <span style="color:var(--rose)">AI</span> transformation</span></p>
+      <p class="footer-tag"><span class="footer-tag-lead">Executive-level experience</span><br><span class="footer-tag-rest">at the service of your <span class="ink-accent">AI</span> transformation</span></p>
       <p class="footer-signature">Decide before you invest.</p>
     </div>
 
@@ -1281,22 +1295,22 @@ color: var(--plum); margin: 14px 0 0;
       <a href="temoignages-en.html">Testimonials</a>
       <a href="contact-en.html">Contact</a>
       <a href="perspectives-en.html">Blog</a>
-    <a href="perspective-entreprise-utilise-deja-ia-en.html" class="footer-persp-link">→ <span class="art-star" aria-label="Most-read article">★</span>Adopting <span style="color:var(--rose)">AI</span> vs. creating value</a>
+    <a href="perspective-entreprise-utilise-deja-ia-en.html" class="footer-persp-link">→ <span class="art-star" aria-label="Most-read article">★</span>Adopting <span class="ink-accent">AI</span> vs. creating value</a>
     <a href="perspective-toutes-decisions-ne-se-deleguent-pas-en.html" class="footer-persp-link">→ <span class="art-star" aria-label="Most-read article">★</span>Not every decision can be delegated</a>
-    <a href="perspective-transformation-echoue-rarement-technologie-en.html" class="footer-persp-link">→ <span style="color:var(--rose)">AI</span> transformation rarely fails</a>
-    <a href="perspective-probleme-nest-pas-outils-mais-arbitrage-en.html" class="footer-persp-link">→ More <span style="color:var(--rose)">AI</span> tools, not more impact</a>
-    <a href="perspective-projet-ia-peut-il-etre-finance-en.html" class="footer-persp-link">→ Can your <span style="color:var(--rose)">AI</span> project be funded?</a>
+    <a href="perspective-transformation-echoue-rarement-technologie-en.html" class="footer-persp-link">→ <span class="ink-accent">AI</span> transformation rarely fails</a>
+    <a href="perspective-probleme-nest-pas-outils-mais-arbitrage-en.html" class="footer-persp-link">→ More <span class="ink-accent">AI</span> tools, not more impact</a>
+    <a href="perspective-projet-ia-peut-il-etre-finance-en.html" class="footer-persp-link">→ Can your <span class="ink-accent">AI</span> project be funded?</a>
     <a href="perspective-chatbot-savoir-passer-la-main-en.html" class="footer-persp-link">→ When should a chatbot hand over?</a>
-    <div class="footer-persp-c2" style="gap:3px">
+    <div class="footer-persp-c2 gap-3">
     <a href="perspective-budget-ia-adhesion-equipes-en.html" class="footer-persp-link footer-persp-link--c2">→ Why does buy-in matter more than budget?</a>
-    <a href="perspective-shadow-ia-charte-comite-direction-en.html" class="footer-persp-link footer-persp-link--c2">→ Which <span style="color:var(--rose)">AI</span> tools do your teams really use?</a>
+    <a href="perspective-shadow-ia-charte-comite-direction-en.html" class="footer-persp-link footer-persp-link--c2">→ Which <span class="ink-accent">AI</span> tools do your teams really use?</a>
     <a href="perspective-robots-humanoides-token-tax-en.html" class="footer-persp-link footer-persp-link--c2">→ Which tasks would you hand to a humanoid robot?</a>
     <a href="perspective-affaire-orelien-preuve-travail-en.html" class="footer-persp-link footer-persp-link--c2">→ <span class="art-star" aria-label="Most-read article">★</span>Will your teams have to prove their work?</a>
-    <a href="perspective-tri-cv-ia-candidatures-ecartees-en.html" class="footer-persp-link footer-persp-link--c2">→ Who rereads the CVs that <span style="color:var(--rose)">AI</span> rejects?</a>
-    <a href="perspective-agents-ia-recruter-comme-salarie-en.html" class="footer-persp-link footer-persp-link--c2">→ Should you hire an <span style="color:var(--rose)">AI</span> agent like an employee?</a>
+    <a href="perspective-tri-cv-ia-candidatures-ecartees-en.html" class="footer-persp-link footer-persp-link--c2">→ Who rereads the CVs that <span class="ink-accent">AI</span> rejects?</a>
+    <a href="perspective-agents-ia-recruter-comme-salarie-en.html" class="footer-persp-link footer-persp-link--c2">→ Should you hire an <span class="ink-accent">AI</span> agent like an employee?</a>
     <a href="perspective-jumeau-numerique-savoir-dirigeant-en.html" class="footer-persp-link footer-persp-link--c2">→ Digital twin: does a leader’s knowledge leave too?</a>
-    <a href="perspective-forward-deployed-engineer-pme-en.html" class="footer-persp-link footer-persp-link--c2">→ Between <span style="color:var(--rose)">AI</span> and leadership, you need a translator</a>
-    <a href="perspective-enregistreur-ia-reunion-direction-en.html" class="footer-persp-link footer-persp-link--c2">→ An <span style="color:var(--rose)">AI</span> recorder in the management meeting: who decided that?</a>
+    <a href="perspective-forward-deployed-engineer-pme-en.html" class="footer-persp-link footer-persp-link--c2">→ Between <span class="ink-accent">AI</span> and leadership, you need a translator</a>
+    <a href="perspective-enregistreur-ia-reunion-direction-en.html" class="footer-persp-link footer-persp-link--c2">→ An <span class="ink-accent">AI</span> recorder in the management meeting: who decided that?</a>
     </div>
     </div>
 
@@ -1305,7 +1319,7 @@ color: var(--plum); margin: 14px 0 0;
       <a href="mailto:contact@exec-ia.ai">✉️ contact@exec-ia.ai</a>
       <span class="footer-loc">📍 Paris, France, International</span>
       <a href="https://www.linkedin.com/in/val%C3%A9rie-mailland" target="_blank" rel="noopener" class="footer-linkedin-btn"><img src="assets/linkedin-logo.png" alt="LinkedIn" class="footer-linkedin-logo">Follow me on LinkedIn</a>
-      <a href="https://www.instagram.com/execia.consulting/" target="_blank" rel="noopener" class="footer-linkedin-btn footer-instagram-btn"><img src="assets/instagram-logo.png" alt="Instagram" class="footer-linkedin-logo" width="18" height="18"><span>Follow EXEC'<span style="color:var(--rose)">IA</span> on Instagram</span></a>
+      <a href="https://www.instagram.com/execia.consulting/" target="_blank" rel="noopener" class="footer-linkedin-btn footer-instagram-btn"><img src="assets/instagram-logo.png" alt="Instagram" class="footer-linkedin-logo" width="18" height="18"><span>Follow EXEC'<span class="ink-accent">IA</span> on Instagram</span></a>
     </div>
     <div class="footer-col footer-col--langs">
       <span class="footer-col-title">Languages</span>

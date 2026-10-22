@@ -30,11 +30,6 @@
     '#phare-send[disabled]{opacity:.6;cursor:default}'
 ,
     'body:has(.cookie-banner.visible) #phare-bubble,body:has(.cookie-banner.visible) #phare-panel{display:none}'
-,
-    '#phare-label{position:fixed;bottom:104px;right:92px;z-index:900;border:1px solid #D9C9C3;border-radius:999px;background:#FAF6F2;color:#633B4A;font-family:Inter,system-ui,sans-serif;font-size:.8rem;font-weight:500;padding:7px 14px;cursor:pointer;box-shadow:0 4px 14px rgba(99,59,74,.15);white-space:nowrap}',
-    '#phare-label:hover{border-color:#C75F62;color:#C75F62}',
-    'body.qw-open #phare-label,body.phare-open #phare-label,body:has(.cookie-banner.visible) #phare-label{display:none}',
-    '@media (max-width:600px){#phare-label{display:none}}'
   ].join('');
   var st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);
 
@@ -51,10 +46,8 @@
     '<p id="phare-note">' + T.note + '</p>' +
     '<form id="phare-form"><div style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden" aria-hidden="true"><input id="phare-web" type="text" name="website" tabindex="-1" autocomplete="off"></div><input id="phare-input" type="text" maxlength="1000" autocomplete="off" placeholder="' + T.ph + '" aria-label="' + T.ph + '"><button id="phare-send" type="submit">' + T.send + '</button></form>';
 
-  var label = document.createElement('button');
-  label.id = 'phare-label'; label.type = 'button'; label.textContent = T.lbl; label.setAttribute('aria-hidden', 'true'); label.tabIndex = -1;
 
-  document.body.appendChild(label); document.body.appendChild(bubble); document.body.appendChild(panel);
+  document.body.appendChild(bubble); document.body.appendChild(panel);
 
   var log = panel.querySelector('#phare-log');
   var form = panel.querySelector('#phare-form');
@@ -112,7 +105,6 @@
   // Une seule fenêtre ouverte à la fois : « Une question ? » ferme celle-ci
   document.addEventListener('qw:open', function () { if (panel.classList.contains('open')) toggle(false); });
   bubble.addEventListener('click', function () { toggle(!panel.classList.contains('open')); });
-  label.addEventListener('click', function () { toggle(true); });
   panel.querySelector('#phare-close').addEventListener('click', function () { toggle(false); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && panel.classList.contains('open')) toggle(false); });
 
