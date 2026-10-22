@@ -7996,11 +7996,11 @@ h1 .hero-sub-focal, h1 .hero-sub-focal.s3 { font-size: inherit !important; }
   .footer-col--site { min-width: 0; }
 }
 /* Titres d'articles : 2 lignes maximum (pied de page et cartes du Blog) */
-.footer-persp-grid a.footer-persp-link, .persp-card-title {
+.persp-card-title {
   display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
 }
 /* Option 2 : accents « IA » et petits repères terracotta du texte passent en prune (titres h1/h2 gardés en #C75F62) */
 :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl, .ink-accent-600, .ink-accent-500, .ink-accent-fixed, .persp-card-subtitle, .article-meta):not(h1 *):not(h2 *) { color: #633B4A !important; }
 :is(h1, h2) :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl) { color: #C75F62 !important; }
 /* Sur fonds sombres, l'accent passe en ivoire */
-:is(.testi--dark, .stats-strip, footer, .cookie-banner, .cookie-modal, .xcard--ia, .roi-chip--hero, .ticker-bar, .es-line) :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl, .ink-accent-600, .ink-accent-500, .ink-accent-fixed, .ss-sup) { color: #FAF6F2 !important; }
+:is(.testi--dark, .stats-strip, .cookie-banner, .cookie-modal, .xcard--ia, .roi-chip--hero, .ticker-bar, .es-line) :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl, .ink-accent-600, .ink-accent-500, .ink-accent-fixed, .ss-sup) { color: #FAF6F2 !important; }
