@@ -7985,3 +7985,9 @@ section:has(+ .verbes-band) .mon-approche-content .portrait-link { margin-bottom
 .maf-lead--home { font-size: clamp(2.2rem, 3.4vw, 3.2rem) !important; line-height: 1.1; }
 /* Bandeau des verbes : mots +7 % */
 .verbes-mot { font-size: clamp(1.41rem, 2.24vw, 1.94rem) !important; }
+/* Harmonisation de tous les H1 sur une seule échelle (celle des titres de section) */
+h1, h1.article-title, h1.article-title--2l, h1.section-title, h1.hero-sub, h1.expertise-hero-title, h1.blog-h1 {
+  font-size: clamp(2.2rem, 3.4vw, 3.2rem) !important;
+  line-height: 1.1 !important;
+}
+h1 .hero-sub-focal, h1 .hero-sub-focal.s3 { font-size: inherit !important; }
