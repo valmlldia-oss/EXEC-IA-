@@ -8004,3 +8004,5 @@ h1 .hero-sub-focal, h1 .hero-sub-focal.s3 { font-size: inherit !important; }
 :is(h1, h2) :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl) { color: #C75F62 !important; }
 /* Sur fonds sombres, l'accent passe en ivoire */
 :is(.testi--dark, .stats-strip, .cookie-banner, .cookie-modal, .xcard--ia, .roi-chip--hero, .ticker-bar, .es-line) :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl, .ink-accent-600, .ink-accent-500, .ink-accent-fixed, .ss-sup) { color: #FAF6F2 !important; }
+/* Titre des guides : « AI Act » et « RGPD » en graisse 400, plus élégant */
+h1 .aiact-ref, h1 .rgpd-b { font-weight: 400 !important; }
