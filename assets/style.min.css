@@ -6774,10 +6774,6 @@ section:has(+ .verbes-band) .mon-approche-content .portrait-link { margin-bottom
 .footer-persp-grid { display: grid !important; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(8, auto); grid-auto-flow: column; column-gap: 24px; row-gap: 6px; align-items: start; }
 .footer-persp-grid a.footer-persp-link { margin: 0 !important; position: relative; }
 }
-.stats-strip--hero .ss-grid { max-width: 1000px; margin: 0 auto; }
-.stats-strip--hero .ss-num { font-size: 2.3rem; }
-.stats-strip--hero .ss-label, .stats-strip--hero .ss-cert-tag, .stats-strip--hero .ss-label strong { font-weight: 400 !important; }
-.stats-strip--hero .ss-firm { font-weight: 500 !important; }
 .testi--dark .testi-tag { color: #FAF6F2 !important; }
 .xcard--ia p.s14 { color: #FAF6F2 !important; }
 .roi-chip--hero .roi-chip-lbl { color: #FAF6F2 !important; }
