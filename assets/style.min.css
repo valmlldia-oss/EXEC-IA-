@@ -6852,3 +6852,5 @@ h1.hero-sub { text-wrap: balance; }
 .footer-brand .footer-tag { max-width: 100%; }
 }
 h1.expertise-hero-title { text-wrap: balance; }
+.footer-persp-grid a.footer-persp-link { display: block; line-height: 1.4; }
+.footer-persp-grid .art-star { position: static !important; transform: none !important; margin-right: .35em; display: inline; }
