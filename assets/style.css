@@ -8091,3 +8091,6 @@ p, li, figcaption, blockquote { text-wrap: pretty; }
 
 /* Charte : « IA » toujours en terracotta, partout */
 .ia-rose { color: #C75F62 !important; }
+
+/* H1 : le mot-clé du titre en terracotta */
+.h1-key { color: #C75F62; }

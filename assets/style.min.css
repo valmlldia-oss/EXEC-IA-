@@ -6865,3 +6865,4 @@ h1, h2, h3 { text-wrap: balance; }
 p, li, figcaption, blockquote { text-wrap: pretty; }
 .hero-cta-link, summary, .semi-600, .pourquoi-conclusion, .aiact-toc-label { color: #A84D50 !important; }
 .ia-rose { color: #C75F62 !important; }
+.h1-key { color: #C75F62; }
