@@ -8164,5 +8164,5 @@ p, li, figcaption, blockquote { text-wrap: pretty; }
 
 /* Bandeau des chiffres (accueil, ordinateur) : il part du bord gauche du contenu, comme le logo */
 @media (min-width: 1025px) {
-  .stats-strip--hero .wrap { max-width: none; }
+  .stats-strip--hero .wrap { max-width: none; padding-left: clamp(16px, 2vw, 32px); padding-right: clamp(16px, 2vw, 32px); }
 }
