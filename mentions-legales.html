@@ -819,6 +819,10 @@ p :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl, .ink-accent-fixed, .art-chip, .
 @media (min-width: 761px){.footer-persp-grid{ grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important; column-gap: 18px !important; }.footer-persp-grid a.footer-persp-link{ white-space: normal !important; }.footer-col--site{ min-width: 0; max-width: 100%; }.site-footer{ grid-template-columns: minmax(0, 1fr) minmax(0, auto) minmax(0, auto) minmax(0, auto) !important; }}
 @media (max-width: 760px){.footer-col--site{ columns: 1 !important; display: block; }.footer-col--site > a{ display: block; margin: 0 0 8px; }.footer-persp-grid{ display: grid !important; grid-template-columns: 1fr !important; width: 100%; gap: 6px !important; }.footer-persp-grid a.footer-persp-link{ white-space: normal !important; }}
 @media (max-width: 760px){.footer-persp-grid{ position: static !important; left: auto !important; right: auto !important; transform: none !important; margin: 0 !important; }.footer-persp-grid a.footer-persp-link{ margin: 0 !important; position: static !important; }.agent-card, .agent-card > *{ max-width: 100% !important; min-width: 0 !important; box-sizing: border-box; }.agent-card img, .agent-img img{ max-width: 100%; height: auto; }}
+.footer-brand{ min-width: 0; max-width: 100%; }
+.footer-brand .footer-tag, .footer-brand .footer-mention-ia{ white-space: normal !important; overflow-wrap: break-word; }
+@media (min-width: 761px) and (max-width: 1250px){.site-footer{ grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important; }.footer-brand{ grid-column: 1; }.footer-col--site{ grid-column: 2; }}
+@media (min-width: 1251px){.footer-col--site{ max-width: 500px; }.footer-brand .footer-tag{ max-width: 100%; }}
 </style>
   <style>
     .ml-page { max-width: 760px; margin: 0 auto; padding: 80px 24px clamp(60px, 8vw, 100px); }
