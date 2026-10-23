@@ -1765,7 +1765,7 @@ font-size: clamp(1.2rem, 1.9vw, 1.65rem); letter-spacing: .02em;
 color: var(--plum); white-space: nowrap; padding: 0 clamp(18px, 2.4vw, 34px);
 }
 .verbes-sep{
-width: 6px; height: 6px; border-radius: 50%;
+width: 8px; height: 8px; border-radius: 50%;
 background: var(--rose); flex-shrink: 0;
 }
 @keyframes verbes-defile{ from { transform: translateX(0); } to { transform: translateX(-50%); } }
@@ -1853,7 +1853,6 @@ p .art-ia, li .art-ia, p .aiact-ia, li .aiact-ia, p .risk-hl, li .risk-hl{ font-
 section:has(+ .verbes-band){ padding-bottom: 0 !important; }
 section:has(+ .verbes-band) .mon-approche-content .portrait-link{ margin-bottom: 38px; }
 .verbes-band{ padding-top: 44px; padding-bottom: 44px; }
-.fw-600{ font-weight: 600 !important; }
 .ink-accent-600{ color: #C75F62 !important; font-weight: 600 !important; }
 .ink-accent-500{ color: #C75F62 !important; font-weight: 500 !important; }
 .persp-card-read, a.persp-all-link, .article-tldr-arrow{ font-weight: 600 !important; }
@@ -1861,7 +1860,6 @@ section:has(+ .verbes-band) .mon-approche-content .portrait-link{ margin-bottom:
 .article-meta, .article-related-title, .portrait-link-arrow, .article-tldr-arrow{ color: #633B4A !important; }
 .footer-persp-link, a.footer-persp-link, a.nav-lang{ color: #633B4A !important; opacity: 1 !important; }
 .s3{ color:var(--rose); !important; }
-.s4{ font-size:2.42rem;letter-spacing:0.02em !important; }
 .s5{ margin-top:20px !important; }
 @media (min-width: 761px){.footer-col--site{ columns: auto !important; }.footer-persp-grid{ display: grid !important; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(8, auto); grid-auto-flow: column; column-gap: 24px; row-gap: 6px; align-items: start; }.footer-persp-grid a.footer-persp-link{ margin: 0 !important; position: relative; }}
 .s-12061{ color:#C75F62;font-weight:500 !important; }
@@ -1966,7 +1964,7 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
         <div class="ss-item">
           <span class="ss-num" data-count-to="20" aria-hidden="true"><span class="ss-count">0</span><span class="ss-sup">+</span></span><span class="sr-only">20+</span>
           <span class="ss-cert-tag">Ans auprès de</span>
-          <span class="ss-label ss-label--1l fw-600">Dirigeants</span>
+          <span class="ss-label ss-label--1l" style="font-weight:600">Dirigeants</span>
         </div>
         <div class="ss-item">
           <span class="ss-num" data-count-to="18" aria-hidden="true"><span class="ss-count">0</span><span class="ss-sup">+</span></span><span class="sr-only">18+</span>
@@ -1978,7 +1976,7 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
           <span class="ss-label ss-label--1l ss-label--strong"><span class="ss-globe-static" aria-hidden="true">🌎</span> France<span class="ss-bigdot" aria-hidden="true">&bull;</span>International</span>
         </div>
         <div class="ss-item">
-          <span class="ss-num ss-num--ia s4"><span class="ink-accent"><span class="ia-rose">IA</span></span></span>
+          <span class="ss-num ss-num--ia" style="font-size:2.42rem;letter-spacing:0.02em"><span style="color:var(--rose)">IA</span></span>
           <span class="ss-cert-tag">Générative &bull; Usages responsables</span>
           <span class="ss-label ss-label--1l">Certifiée RS6776</span>
         </div>
@@ -2296,7 +2294,7 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
     </div>
   </div>
 </div>
-<script src="assets/chat-widget.js?v=7" defer></script>
-<script src="assets/phare-chat-widget.js?v=9" defer></script>
+<script src="assets/chat-widget.js?v=8" defer></script>
+<script src="assets/phare-chat-widget.js?v=10" defer></script>
 </body>
 </html>

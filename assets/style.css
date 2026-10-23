@@ -445,7 +445,7 @@ strong, b { font-weight: 600; }
   color: var(--plum);
 }
 .hero-badge-dot {
-  width: 6px; height: 6px; border-radius: 50%;
+  width: 8px; height: 8px; border-radius: 50%;
   background: var(--rose); flex-shrink: 0;
   box-shadow: 0 0 6px rgba(199,95,98,.5);
   animation: pulse 2s ease-in-out infinite;
@@ -7557,7 +7557,7 @@ body.cookie-modal-open { overflow: hidden; }
   color: var(--plum); white-space: nowrap; padding: 0 clamp(18px, 2.4vw, 34px);
 }
 .verbes-sep {
-  width: 6px; height: 6px; border-radius: 50%;
+  width: 8px; height: 8px; border-radius: 50%;
   background: var(--rose); flex-shrink: 0;
 }
 @keyframes verbes-defile { from { transform: translateX(0); } to { transform: translateX(-50%); } }
