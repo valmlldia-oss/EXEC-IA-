@@ -8166,3 +8166,13 @@ p, li, figcaption, blockquote { text-wrap: pretty; }
 @media (min-width: 1025px) {
   .stats-strip--hero .wrap { max-width: none; padding-left: clamp(16px, 2vw, 32px); padding-right: clamp(16px, 2vw, 32px); }
 }
+
+/* Bandeau des chiffres (accueil, ordinateur) : le « 20+ » commence à la même position que le bouton « Votre diagnostic IA » */
+@media (min-width: 1025px) {
+  .stats-strip--hero .ss-grid > .ss-item:first-child {
+    text-align: left;
+    padding-left: calc(max(0px, (100vw - 1240px) / 2) + 24px - clamp(16px, 2vw, 32px));
+  }
+  .stats-strip--hero .ss-grid > .ss-item:first-child { align-items: flex-start; }
+  .stats-strip--hero .ss-grid > .ss-item:first-child .ss-num { justify-content: flex-start; }
+}
