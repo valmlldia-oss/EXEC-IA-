@@ -44,7 +44,7 @@
 --ivory:     #F6F1EB;
 --white:     #FAF6F2;
 --pale-rose: #D9C9C3;
---plum-muted: rgba(99,59,74,.7);
+--plum-muted: rgba(99,59,74,.85);
 --text:      #633B4A;
 --serif:     'Cormorant Garamond', Georgia, serif;
 --sans:      'Inter', 'Helvetica Neue', sans-serif;
@@ -538,11 +538,11 @@ transition: color .2s;
 color: rgba(99,59,74,.88);
 }
 .footer-col a:hover{ color: var(--rose); }
-.footer-col .footer-loc{ color: rgba(99,59,74,.55); }
+.footer-col .footer-loc{ color: rgba(99,59,74,.85); }
 .footer-col a.footer-persp-link{
 font-size: .78rem; padding-left: 6px; margin-top: -7px;
 line-height: 1.3; white-space: nowrap;
-color: rgba(99,59,74,.68);
+color: rgba(99,59,74,.85);
 }
 .footer-col a.footer-lang-btn{
 border: 1px solid rgba(99,59,74,.3);
@@ -611,12 +611,12 @@ display: grid;
 grid-template-columns: subgrid;
 align-items: center;
 padding-top: 8px; padding-bottom: 10px;
-font-size: .88rem; color: rgba(99,59,74,.55);
+font-size: .88rem; color: rgba(99,59,74,.85);
 }
 .footer-legal{ margin: 0; grid-column: 1; }
 .footer-legal a{
 display: inline-block;
-color: rgba(99,59,74,.8); text-decoration: none;
+color: rgba(99,59,74,.85); text-decoration: none;
 font-size: .98rem;
 border: 1px solid rgba(99,59,74,.3);
 border-radius: 2rem;
@@ -624,9 +624,9 @@ padding: 6px 16px;
 transition: color .2s, border-color .2s;
 }
 .footer-legal a:hover{ color: var(--rose); border-color: var(--rose); }
-.footer-rights{ margin: 0; grid-column: 2; font-size: .98rem; color: rgba(99,59,74,.8); }
+.footer-rights{ margin: 0; grid-column: 2; font-size: .98rem; color: rgba(99,59,74,.85); }
 .footer-bottom .footer-copy{ grid-column: 4; justify-self: start; }
-.site-footer .footer-copy{ margin: 0; font-size: .98rem; color: rgba(99,59,74,.8); }
+.site-footer .footer-copy{ margin: 0; font-size: .98rem; color: rgba(99,59,74,.85); }
 @media (max-width: 900px){.footer-grid{ grid-template-columns: 1fr 1fr; row-gap: 40px; }.footer-brand{ grid-column: 1 / -1; }.footer-bottom{
 display: flex; flex-wrap: wrap; align-items: center;
 justify-content: space-between; gap: 12px;
@@ -719,7 +719,7 @@ border-top: 1px solid rgba(93,47,55,.18);
 }
 .article-author-photo{ width: 52px; height: 52px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
 .article-author-name{ font-family: var(--serif); font-size: 1.05rem; color: var(--plum); margin: 0 0 2px; font-weight: 500; }
-.article-author-bio{ font-size: .88rem; color: rgba(99,59,74,.75); margin: 0; line-height: 1.5; }
+.article-author-bio{ font-size: .88rem; color: rgba(99,59,74,.85); margin: 0; line-height: 1.5; }
 .article-author-bio a{ color: var(--rose); text-decoration: underline; white-space: nowrap; }
 @media (max-width: 560px){.article-author{ flex-direction: column; align-items: flex-start; text-align: left; }}
 @keyframes agents-pulse{
@@ -869,7 +869,7 @@ transform: translateY(-1px);
 display: none;
 margin: 22px auto 0;
 font-family: var(--sans); font-size: .85rem; font-weight: 500;
-color: rgba(99,59,74,.6);
+color: rgba(99,59,74,.85);
 background: none; border: none;
 text-decoration: underline; cursor: pointer;
 }
@@ -942,7 +942,7 @@ body.art-justify .article-book .article-intro p, body.art-justify .article-book 
 .footer-col--site{ position: relative; }
 .footer-grid > .footer-col--contact{ margin-right: 0; }
 .footer-grid > .footer-col--contact a, .footer-grid > .footer-col--contact .footer-loc{ color: rgba(99,59,74,.88); }
-.footer-grid > .footer-col--contact .footer-loc{ color: rgba(99,59,74,.55); }
+.footer-grid > .footer-col--contact .footer-loc{ color: rgba(99,59,74,.85); }
 .footer-grid > .footer-col--langs{ margin-right: 0; }
 .footer-grid > .footer-col--langs a{ color: rgba(99,59,74,.92); }
 .footer-bottom .footer-copy{ grid-column: 3; justify-self: start; }
@@ -1088,6 +1088,7 @@ p :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl, .ink-accent-fixed, .art-chip, .
 @media (min-width: 1251px){.site-footer{ grid-template-columns: minmax(300px, 1fr) minmax(0, auto) minmax(0, auto) minmax(0, auto) !important; }.footer-col--site{ max-width: 420px; }}
 h1, h2, h3{ text-wrap: balance; }
 p, li, figcaption, blockquote{ text-wrap: pretty; }
+.hero-cta-link, summary, .semi-600, .pourquoi-conclusion, .aiact-toc-label{ color: #A84D50 !important; }
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What happened in the Orélien affair?", "acceptedAnswer": {"@type": "Answer", "text": "Thélyson Orélien published his first novel, “C’était ça ou mourir” (Grasset), in autumn 2026. On 21 September, an anonymous account claimed, based on a detector, that the text had been written by AI; on 23 September, another detector tested by the AFP reached the opposite conclusion. On 25 September, the Goncourt Academy withdrew the novel from its shortlist, also citing plagiarism allegations. The author denies the claims; no formal proof has been made public. The case shows how quickly a suspicion can cost an author a prize, before any proof exists."}}, {"@type": "Question", "name": "Can an AI detector prove that a text was written by a machine?", "acceptedAnswer": {"@type": "Answer", "text": "No. A detector gives a probability, never proof. OpenAI withdrew its own detector in July 2023: it caught only 26% of AI-written texts and wrongly flagged 9% of human ones. A Stanford study (Patterns, 2023) found that seven detectors labelled, on average, 61% of essays by non-native English speakers as AI-generated. For a company, the lesson is simple: a detector score should never be enough to accuse an employee, a candidate or a supplier. It can raise a flag; only a human review, backed by work records, can reach a conclusion."}}, {"@type": "Question", "name": "Why does the Orélien affair matter to businesses?", "acceptedAnswer": {"@type": "Answer", "text": "Because the burden of proof has flipped: the author has to prove he is the author. Tomorrow, a client may ask a company who really produced a report or a study. Meanwhile, 78% of employees use AI tools their company has not approved (WalkMe, July 2025). The issue is not the use of AI as such, which is often legitimate. It is the ability to show how a deliverable was produced, by whom and with which tools. A company with no written rule and no records kept will have no answer for that client."}}, {"@type": "Question", "name": "What counts as proof of work?", "acceptedAnswer": {"@type": "Answer", "text": "A set of records showing how a document came to be: version history, drafts and notes, sources consulted, exchanges with a reviewer or the client, and a note of the AI tools used. Most already exist in office software; you only need to decide to keep them. These records are not there to monitor teams. They protect the real author of a document if it is challenged, and they reassure the client about the method. A simple retention policy that everyone knows is enough: what to keep, where, and for how long."}}, {"@type": "Question", "name": "What goes into a one-page AI rule?", "acceptedAnswer": {"@type": "Answer", "text": "Three categories, with examples: free uses (correcting, rephrasing, summarising a public document), uses to declare (a first draft, an analysis or a visual for a client) and banned uses (client data in an unapproved tool, generated work presented as your own without saying so). One page is enough, as long as it is read and understood. Present it to the leadership team, then to the teams, with examples from their daily work. Review it every quarter, because tools and uses change fast."}}, {"@type": "Question", "name": "What can a business leader do right now?", "acceptedAnswer": {"@type": "Answer", "text": "Three safeguards, with no budget: a one-page written rule, a record of the work (versions, drafts, sources) and a right to explain before any decision about an employee or a supplier. Then: a disclosure line on client deliverables and an AI clause in supplier contracts. The right to explain matters most: before any sanction based on a mere suspicion of AI use, the person concerned must be able to show their work records. It is a matter of fairness, and legal protection for the company."}}], "inLanguage": "en-GB"}

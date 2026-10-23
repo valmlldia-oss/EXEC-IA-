@@ -44,7 +44,7 @@
 --ivory:     #F6F1EB;
 --white:     #FAF6F2;
 --pale-rose: #D9C9C3;
---plum-muted: rgba(99,59,74,.7);
+--plum-muted: rgba(99,59,74,.85);
 --text:      #633B4A;
 --serif:     'Cormorant Garamond', Georgia, serif;
 --sans:      'Inter', 'Helvetica Neue', sans-serif;
@@ -537,11 +537,11 @@ transition: color .2s;
 color: rgba(99,59,74,.88);
 }
 .footer-col a:hover{ color: var(--rose); }
-.footer-col .footer-loc{ color: rgba(99,59,74,.55); }
+.footer-col .footer-loc{ color: rgba(99,59,74,.85); }
 .footer-col a.footer-persp-link{
 font-size: .78rem; padding-left: 6px; margin-top: -7px;
 line-height: 1.3; white-space: nowrap;
-color: rgba(99,59,74,.68);
+color: rgba(99,59,74,.85);
 }
 .footer-col a.footer-lang-btn{
 border: 1px solid rgba(99,59,74,.3);
@@ -610,12 +610,12 @@ display: grid;
 grid-template-columns: subgrid;
 align-items: center;
 padding-top: 8px; padding-bottom: 10px;
-font-size: .88rem; color: rgba(99,59,74,.55);
+font-size: .88rem; color: rgba(99,59,74,.85);
 }
 .footer-legal{ margin: 0; grid-column: 1; }
 .footer-legal a{
 display: inline-block;
-color: rgba(99,59,74,.8); text-decoration: none;
+color: rgba(99,59,74,.85); text-decoration: none;
 font-size: .98rem;
 border: 1px solid rgba(99,59,74,.3);
 border-radius: 2rem;
@@ -623,9 +623,9 @@ padding: 6px 16px;
 transition: color .2s, border-color .2s;
 }
 .footer-legal a:hover{ color: var(--rose); border-color: var(--rose); }
-.footer-rights{ margin: 0; grid-column: 2; font-size: .98rem; color: rgba(99,59,74,.8); }
+.footer-rights{ margin: 0; grid-column: 2; font-size: .98rem; color: rgba(99,59,74,.85); }
 .footer-bottom .footer-copy{ grid-column: 4; justify-self: start; }
-.site-footer .footer-copy{ margin: 0; font-size: .98rem; color: rgba(99,59,74,.8); }
+.site-footer .footer-copy{ margin: 0; font-size: .98rem; color: rgba(99,59,74,.85); }
 @media (max-width: 900px){.footer-grid{ grid-template-columns: 1fr 1fr; row-gap: 40px; }.footer-brand{ grid-column: 1 / -1; }.footer-bottom{
 display: flex; flex-wrap: wrap; align-items: center;
 justify-content: space-between; gap: 12px;
@@ -718,7 +718,7 @@ border-top: 1px solid rgba(93,47,55,.18);
 }
 .article-author-photo{ width: 52px; height: 52px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
 .article-author-name{ font-family: var(--serif); font-size: 1.05rem; color: var(--plum); margin: 0 0 2px; font-weight: 500; }
-.article-author-bio{ font-size: .88rem; color: rgba(99,59,74,.75); margin: 0; line-height: 1.5; }
+.article-author-bio{ font-size: .88rem; color: rgba(99,59,74,.85); margin: 0; line-height: 1.5; }
 .article-author-bio a{ color: var(--rose); text-decoration: underline; white-space: nowrap; }
 @media (max-width: 560px){.article-author{ flex-direction: column; align-items: flex-start; text-align: left; }}
 @keyframes agents-pulse{
@@ -868,7 +868,7 @@ transform: translateY(-1px);
 display: none;
 margin: 22px auto 0;
 font-family: var(--sans); font-size: .85rem; font-weight: 500;
-color: rgba(99,59,74,.6);
+color: rgba(99,59,74,.85);
 background: none; border: none;
 text-decoration: underline; cursor: pointer;
 }
@@ -948,7 +948,7 @@ body.art-justify .article-book .article-intro p, body.art-justify .article-book 
 .footer-col--site{ position: relative; }
 .footer-grid > .footer-col--contact{ margin-right: 0; }
 .footer-grid > .footer-col--contact a, .footer-grid > .footer-col--contact .footer-loc{ color: rgba(99,59,74,.88); }
-.footer-grid > .footer-col--contact .footer-loc{ color: rgba(99,59,74,.55); }
+.footer-grid > .footer-col--contact .footer-loc{ color: rgba(99,59,74,.85); }
 .footer-grid > .footer-col--langs{ margin-right: 0; }
 .footer-grid > .footer-col--langs a{ color: rgba(99,59,74,.92); }
 .footer-bottom .footer-copy{ grid-column: 3; justify-self: start; }
@@ -1101,6 +1101,7 @@ p :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl, .ink-accent-fixed, .art-chip, .
 @media (min-width: 1251px){.site-footer{ grid-template-columns: minmax(300px, 1fr) minmax(0, auto) minmax(0, auto) minmax(0, auto) !important; }.footer-col--site{ max-width: 420px; }}
 h1, h2, h3{ text-wrap: balance; }
 p, li, figcaption, blockquote{ text-wrap: pretty; }
+.hero-cta-link, summary, .semi-600, .pourquoi-conclusion, .aiact-toc-label{ color: #A84D50 !important; }
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Pourquoi ces trois critères en particulier ?", "acceptedAnswer": {"@type": "Answer", "text": "Parce que chacun élimine un piège. Le premier écarte les envies du moment : tester un outil parce qu’un concurrent l’utilise, ce n’est pas un enjeu, c’est de la comparaison. Le deuxième oblige à décider : sans budget ni responsable nommé, un outil reste un essai, jamais un choix. Le troisième protège de l’argent déjà dépensé : un outil qu’on n’ose plus arrêter, parce qu’on a passé du temps à l’installer, finit par coûter plus cher que celui qu’on n’a jamais lancé."}}, {"@type": "Question", "name": "Que se passe-t-il si personne ne tranche ?", "acceptedAnswer": {"@type": "Answer", "text": "Dans les faits, un obstacle revient souvent : personne n’a clairement la mission de trier. Chacun garde l’outil qu’il a testé, parce qu’il y a passé du temps et n’a pas envie de le voir écarté. Sans quelqu’un dont c’est le rôle, et qui n’est attaché à aucun outil, la liste ne fait que s’allonger. Personne ne décide de ne pas trancher. La liste grossit, pendant que chacun attend que quelqu’un d’autre s’en charge. Trancher, c’est aussi admettre qu’un outil abandonné n’est pas un échec. C’est la preuve que le tri a fonctionné. Une équipe qui n’abandonne jamais rien n’a sans doute jamais trié."}}, {"@type": "Question", "name": "Comment appliquer ce tri au quotidien ?", "acceptedAnswer": {"@type": "Answer", "text": "Le tri marche mieux en rituel qu’en grande décision : une revue courte, chaque trimestre, où chaque outil actif doit justifier sa place face aux trois critères. Ce qui ne passe plus est arrêté, sans long débat. Ce rythme évite le piège le plus courant : attendre la grande remise à plat annuelle, quand la liste a déjà doublé. Un rituel court et régulier demande moins d’énergie. Surtout, il empêche la liste de devenir assez longue pour qu’un grand ménage soit nécessaire."}}, {"@type": "Question", "name": "Comment introduire ce rituel sans en faire une nouvelle lourdeur ?", "acceptedAnswer": {"@type": "Answer", "text": "En le gardant court. Quinze minutes suffisent si chaque outil passe devant les trois mêmes critères, toujours dans le même ordre. Ce qui l’alourdit, ce n’est pas sa fréquence. C’est la tentation d’ajouter de nouveaux critères à chaque fois. Trois critères stables, appliqués sans exception, valent mieux que dix critères ajustés au cas par cas. Le signe que ça marche ? Ce n’est pas le nombre d’outils supprimés. C’est que la liste des outils actifs arrête de grandir toute seule entre deux revues."}}, {"@type": "Question", "name": "Comment éviter l’empilement d’outils ?", "acceptedAnswer": {"@type": "Answer", "text": "Avec une règle simple : aucun nouvel outil sans usage nommé, sans responsable et sans date de revue. Un outil sans propriétaire finit par ne servir à personne, tout en continuant à coûter. Quand un nouvel outil arrive, posez la bonne question : quel outil remplace-t-il, ou quel usage rend-il inutile ? Faites une fois par an l’inventaire des outils payés, face aux usages réels. Vous découvrirez souvent deux équipes qui paient pour le même besoin. Le bon réflexe : chaque nouvel abonnement passe par la même personne, qui vérifie qu’il ne fait pas doublon."}}, {"@type": "Question", "name": "Comment arrêter proprement un outil qui ne sert plus ?", "acceptedAnswer": {"@type": "Answer", "text": "Fixez une date, prévenez ceux qui l’utilisent, et récupérez ce qui doit l’être : les données, les modèles de travail, les bonnes habitudes. Un arrêt se prépare comme un lancement, en plus court. Une équipe qui sait arrêter ose davantage tester, parce qu’elle sait qu’un essai ne l’engage pas pour toujours. Notez pourquoi vous l’arrêtez. Ça évitera de le voir revenir dans un an, sous un autre nom ou par une autre équipe. Pensez aussi au fournisseur : beaucoup d’abonnements se renouvellent tout seuls, souvent pour un an. Notez la date de résiliation dans l’agenda."}}, {"@type": "Question", "name": "Combien coûte l’arbitrage lui-même ?", "acceptedAnswer": {"@type": "Answer", "text": "Très peu d’argent, un peu de temps. Une revue mensuelle de quelques usages suffit souvent, avec quelqu’un qui a le pouvoir de dire oui ou non. Ce qui coûte cher, c’est de ne pas le faire : des projets éparpillés qui n’aboutissent jamais. Trier, c’est un investissement d’attention, pas un budget en plus. Pour une PME, une heure par mois autour d’un tableau partagé des usages en cours suffit en général pour démarrer. Le vrai coût, c’est le courage de dire non à un outil que quelqu’un aime bien. C’est pour ça qu’il faut une personne qui a clairement ce pouvoir."}}, {"@type": "Question", "name": "Comment aider une équipe à dire non à un bon outil ?", "acceptedAnswer": {"@type": "Answer", "text": "En rappelant que la question n’est pas la qualité de l’outil. C’est son utilité pour un enjeu précis, maintenant. Un excellent outil qui ne sert aucun besoin prioritaire attend son tour, et l’équipe a le droit de l’apprécier. Dire non à ce moment-là, c’est pouvoir dire oui plus fort à ce qui compte. Proposez aussi de noter l’outil dans une liste d’attente, avec la condition qui le rendrait prioritaire. Le non devient un « pas maintenant », beaucoup plus facile à accepter."}}], "inLanguage": "fr-FR"}

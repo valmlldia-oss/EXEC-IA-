@@ -44,7 +44,7 @@
 --ivory:     #F6F1EB;
 --white:     #FAF6F2;
 --pale-rose: #D9C9C3;
---plum-muted: rgba(99,59,74,.7);
+--plum-muted: rgba(99,59,74,.85);
 --text:      #633B4A;
 --serif:     'Cormorant Garamond', Georgia, serif;
 --sans:      'Inter', 'Helvetica Neue', sans-serif;
@@ -545,11 +545,11 @@ transition: color .2s;
 color: rgba(99,59,74,.88);
 }
 .footer-col a:hover{ color: var(--rose); }
-.footer-col .footer-loc{ color: rgba(99,59,74,.55); }
+.footer-col .footer-loc{ color: rgba(99,59,74,.85); }
 .footer-col a.footer-persp-link{
 font-size: .78rem; padding-left: 6px; margin-top: -7px;
 line-height: 1.3; white-space: nowrap;
-color: rgba(99,59,74,.68);
+color: rgba(99,59,74,.85);
 }
 .footer-col a.footer-lang-btn{
 border: 1px solid rgba(99,59,74,.3);
@@ -618,12 +618,12 @@ display: grid;
 grid-template-columns: subgrid;
 align-items: center;
 padding-top: 8px; padding-bottom: 10px;
-font-size: .88rem; color: rgba(99,59,74,.55);
+font-size: .88rem; color: rgba(99,59,74,.85);
 }
 .footer-legal{ margin: 0; grid-column: 1; }
 .footer-legal a{
 display: inline-block;
-color: rgba(99,59,74,.8); text-decoration: none;
+color: rgba(99,59,74,.85); text-decoration: none;
 font-size: .98rem;
 border: 1px solid rgba(99,59,74,.3);
 border-radius: 2rem;
@@ -631,9 +631,9 @@ padding: 6px 16px;
 transition: color .2s, border-color .2s;
 }
 .footer-legal a:hover{ color: var(--rose); border-color: var(--rose); }
-.footer-rights{ margin: 0; grid-column: 2; font-size: .98rem; color: rgba(99,59,74,.8); }
+.footer-rights{ margin: 0; grid-column: 2; font-size: .98rem; color: rgba(99,59,74,.85); }
 .footer-bottom .footer-copy{ grid-column: 4; justify-self: start; }
-.site-footer .footer-copy{ margin: 0; font-size: .98rem; color: rgba(99,59,74,.8); }
+.site-footer .footer-copy{ margin: 0; font-size: .98rem; color: rgba(99,59,74,.85); }
 @media (max-width: 900px){.footer-grid{ grid-template-columns: 1fr 1fr; row-gap: 40px; }.footer-brand{ grid-column: 1 / -1; }.footer-bottom{
 display: flex; flex-wrap: wrap; align-items: center;
 justify-content: space-between; gap: 12px;
@@ -726,7 +726,7 @@ border-top: 1px solid rgba(93,47,55,.18);
 }
 .article-author-photo{ width: 52px; height: 52px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
 .article-author-name{ font-family: var(--serif); font-size: 1.05rem; color: var(--plum); margin: 0 0 2px; font-weight: 500; }
-.article-author-bio{ font-size: .88rem; color: rgba(99,59,74,.75); margin: 0; line-height: 1.5; }
+.article-author-bio{ font-size: .88rem; color: rgba(99,59,74,.85); margin: 0; line-height: 1.5; }
 .article-author-bio a{ color: var(--rose); text-decoration: underline; white-space: nowrap; }
 @media (max-width: 560px){.article-author{ flex-direction: column; align-items: flex-start; text-align: left; }}
 @keyframes agents-pulse{
@@ -876,7 +876,7 @@ transform: translateY(-1px);
 display: none;
 margin: 22px auto 0;
 font-family: var(--sans); font-size: .85rem; font-weight: 500;
-color: rgba(99,59,74,.6);
+color: rgba(99,59,74,.85);
 background: none; border: none;
 text-decoration: underline; cursor: pointer;
 }
@@ -954,7 +954,7 @@ body.art-justify .article-book .article-intro p, body.art-justify .article-book 
 .footer-col--site{ position: relative; }
 .footer-grid > .footer-col--contact{ margin-right: 0; }
 .footer-grid > .footer-col--contact a, .footer-grid > .footer-col--contact .footer-loc{ color: rgba(99,59,74,.88); }
-.footer-grid > .footer-col--contact .footer-loc{ color: rgba(99,59,74,.55); }
+.footer-grid > .footer-col--contact .footer-loc{ color: rgba(99,59,74,.85); }
 .footer-grid > .footer-col--langs{ margin-right: 0; }
 .footer-grid > .footer-col--langs a{ color: rgba(99,59,74,.92); }
 .footer-bottom .footer-copy{ grid-column: 3; justify-self: start; }
@@ -1161,6 +1161,7 @@ p :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl, .ink-accent-fixed, .art-chip, .
 @media (min-width: 1251px){.site-footer{ grid-template-columns: minmax(300px, 1fr) minmax(0, auto) minmax(0, auto) minmax(0, auto) !important; }.footer-col--site{ max-width: 420px; }}
 h1, h2, h3{ text-wrap: balance; }
 p, li, figcaption, blockquote{ text-wrap: pretty; }
+.hero-cta-link, summary, .semi-600, .pourquoi-conclusion, .aiact-toc-label{ color: #A84D50 !important; }
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Pourquoi raisonner en tâches plutôt qu’en métiers ?", "acceptedAnswer": {"@type": "Answer", "text": "Parce qu’un métier est un assemblage de tâches. Un robot humanoïde peut reprendre les tâches physiques et répétitives, comme déplacer des bacs. Le jugement, la relation et la responsabilité restent humains. Raisonner en tâches évite deux erreurs opposées : croire que rien ne changera, ou croire que tout disparaîtra. Concrètement, il suffit de lister les tâches d’un poste, d’estimer leur durée chaque semaine et de repérer celles qu’une machine pourrait assurer. Le métier se transforme alors tâche par tâche, et l’entreprise peut anticiper la formation des personnes concernées."}}, {"@type": "Question", "name": "Quels métiers les robots humanoïdes viseront-ils d’abord ?", "acceptedAnswer": {"@type": "Answer", "text": "Les métiers où les tâches sont physiques, répétitives ou pénibles, dans des lieux pensés pour des humains : logistique, industrie, commerce, BTP, agriculture, santé pour le transport de matériel. Ce sont souvent des métiers en tension : la Dares compte 457 500 emplois vacants dans le secteur privé au 2e trimestre 2026 (chiffre révisé du 15 septembre 2026). Pour une PME, ces postes vacants sont un point d'entrée logique : un robot qui prend en charge une tâche pénible peut rendre un poste plus attractif, sans remplacer la personne qui l'occupe."}}, {"@type": "Question", "name": "Les robots humanoïdes arrivent-ils tout de suite dans les entreprises ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Ils restent chers, lents sur des gestes simples pour un humain et fragiles face à l’imprévu. Selon l’analyste Ming-Chi Kuo, Apple ne produirait pas ses robots en série avant 2028. Ce délai sert à préparer : cartographier les tâches, décider ce qui doit rester humain. Une PME n’a donc aucun intérêt à se précipiter. Elle gagne à utiliser ces années pour comprendre ses propres tâches, suivre les premiers pilotes de son secteur et préparer ses équipes, plutôt que d’acheter une technologie encore immature."}}, {"@type": "Question", "name": "Qui fabrique les robots humanoïdes ?", "acceptedAnswer": {"@type": "Answer", "text": "Au premier semestre 2026, 97 % des robots humanoïdes livrés dans le monde venaient de Chine, avec AgiBot et Unitree en tête. Pour la France et l’Europe, la question est de concevoir et d’exploiter ses robots, ou de les acheter clés en main, avec les données qu’ils recueillent. Cette domination pèse sur la souveraineté : un robot connecté recueille des données sur les sites, les gestes et les rythmes de travail. Savoir où partent ces données et qui peut y accéder fait partie du choix d’un fournisseur, au même titre que le prix."}}, {"@type": "Question", "name": "Qu’est-ce que la « token tax » ?", "acceptedAnswer": {"@type": "Answer", "text": "Une taxe sur l’usage de l’IA, prélevée sur les tokens, l’unité que les modèles d’IA traitent et facturent. Bill Gates défend l’idée de taxer les tokens et les robots. Aux États-Unis, un projet de loi déposé au Congrès en août 2026, l’AI Tax and Work Protection Act, propose un taux de 2 % sur la valeur des tokens quand le chômage est à 5 % ou moins, en hausse avec le chômage. Les recettes financeraient emplois et reconversion ; certains y voient la base d’un revenu universel."}}, {"@type": "Question", "name": "Que peut faire une PME dès maintenant ?", "acceptedAnswer": {"@type": "Answer", "text": "Trois gestes, sans investir : lister les tâches de chaque poste et leur durée ; repérer les postes difficiles à pourvoir et ce qui les rend pénibles ; décider ce qui doit rester humain. Ensuite seulement, chiffrer une heure de tâche robotisée et, si le calcul tient, lancer un pilote de 90 jours sur une seule tâche. Ce pilote doit avoir un responsable nommé, des indicateurs fixés avant le démarrage et une décision prévue à la fin : continuer, ajuster ou arrêter."}}], "inLanguage": "fr-FR"}

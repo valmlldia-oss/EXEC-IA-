@@ -44,7 +44,7 @@
 --ivory:     #F6F1EB;
 --white:     #FAF6F2;
 --pale-rose: #D9C9C3;
---plum-muted: rgba(99,59,74,.7);
+--plum-muted: rgba(99,59,74,.85);
 --text:      #633B4A;
 --serif:     'Cormorant Garamond', Georgia, serif;
 --sans:      'Inter', 'Helvetica Neue', sans-serif;
@@ -538,11 +538,11 @@ transition: color .2s;
 color: rgba(99,59,74,.88);
 }
 .footer-col a:hover{ color: var(--rose); }
-.footer-col .footer-loc{ color: rgba(99,59,74,.55); }
+.footer-col .footer-loc{ color: rgba(99,59,74,.85); }
 .footer-col a.footer-persp-link{
 font-size: .78rem; padding-left: 6px; margin-top: -7px;
 line-height: 1.3; white-space: nowrap;
-color: rgba(99,59,74,.68);
+color: rgba(99,59,74,.85);
 }
 .footer-col a.footer-lang-btn{
 border: 1px solid rgba(99,59,74,.3);
@@ -611,12 +611,12 @@ display: grid;
 grid-template-columns: subgrid;
 align-items: center;
 padding-top: 8px; padding-bottom: 10px;
-font-size: .88rem; color: rgba(99,59,74,.55);
+font-size: .88rem; color: rgba(99,59,74,.85);
 }
 .footer-legal{ margin: 0; grid-column: 1; }
 .footer-legal a{
 display: inline-block;
-color: rgba(99,59,74,.8); text-decoration: none;
+color: rgba(99,59,74,.85); text-decoration: none;
 font-size: .98rem;
 border: 1px solid rgba(99,59,74,.3);
 border-radius: 2rem;
@@ -624,9 +624,9 @@ padding: 6px 16px;
 transition: color .2s, border-color .2s;
 }
 .footer-legal a:hover{ color: var(--rose); border-color: var(--rose); }
-.footer-rights{ margin: 0; grid-column: 2; font-size: .98rem; color: rgba(99,59,74,.8); }
+.footer-rights{ margin: 0; grid-column: 2; font-size: .98rem; color: rgba(99,59,74,.85); }
 .footer-bottom .footer-copy{ grid-column: 4; justify-self: start; }
-.site-footer .footer-copy{ margin: 0; font-size: .98rem; color: rgba(99,59,74,.8); }
+.site-footer .footer-copy{ margin: 0; font-size: .98rem; color: rgba(99,59,74,.85); }
 @media (max-width: 900px){.footer-grid{ grid-template-columns: 1fr 1fr; row-gap: 40px; }.footer-brand{ grid-column: 1 / -1; }.footer-bottom{
 display: flex; flex-wrap: wrap; align-items: center;
 justify-content: space-between; gap: 12px;
@@ -719,7 +719,7 @@ border-top: 1px solid rgba(93,47,55,.18);
 }
 .article-author-photo{ width: 52px; height: 52px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
 .article-author-name{ font-family: var(--serif); font-size: 1.05rem; color: var(--plum); margin: 0 0 2px; font-weight: 500; }
-.article-author-bio{ font-size: .88rem; color: rgba(99,59,74,.75); margin: 0; line-height: 1.5; }
+.article-author-bio{ font-size: .88rem; color: rgba(99,59,74,.85); margin: 0; line-height: 1.5; }
 .article-author-bio a{ color: var(--rose); text-decoration: underline; white-space: nowrap; }
 @media (max-width: 560px){.article-author{ flex-direction: column; align-items: flex-start; text-align: left; }}
 @keyframes agents-pulse{
@@ -869,7 +869,7 @@ transform: translateY(-1px);
 display: none;
 margin: 22px auto 0;
 font-family: var(--sans); font-size: .85rem; font-weight: 500;
-color: rgba(99,59,74,.6);
+color: rgba(99,59,74,.85);
 background: none; border: none;
 text-decoration: underline; cursor: pointer;
 }
@@ -943,7 +943,7 @@ body.art-justify .article-book .article-intro p, body.art-justify .article-book 
 .footer-col--site{ position: relative; }
 .footer-grid > .footer-col--contact{ margin-right: 0; }
 .footer-grid > .footer-col--contact a, .footer-grid > .footer-col--contact .footer-loc{ color: rgba(99,59,74,.88); }
-.footer-grid > .footer-col--contact .footer-loc{ color: rgba(99,59,74,.55); }
+.footer-grid > .footer-col--contact .footer-loc{ color: rgba(99,59,74,.85); }
 .footer-grid > .footer-col--langs{ margin-right: 0; }
 .footer-grid > .footer-col--langs a{ color: rgba(99,59,74,.92); }
 .footer-bottom .footer-copy{ grid-column: 3; justify-self: start; }
@@ -1094,6 +1094,7 @@ p :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl, .ink-accent-fixed, .art-chip, .
 @media (min-width: 1251px){.site-footer{ grid-template-columns: minmax(300px, 1fr) minmax(0, auto) minmax(0, auto) minmax(0, auto) !important; }.footer-col--site{ max-width: 420px; }}
 h1, h2, h3{ text-wrap: balance; }
 p, li, figcaption, blockquote{ text-wrap: pretty; }
+.hero-cta-link, summary, .semi-600, .pourquoi-conclusion, .aiact-toc-label{ color: #A84D50 !important; }
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Qué es un agente de IA?", "acceptedAnswer": {"@type": "Answer", "text": "Un programa que no se limita a responder: actúa. Recibe un objetivo, utiliza herramientas, encadena varios pasos y produce un resultado, como reclamar una factura o clasificar solicitudes. Esa autonomía lo distingue de un chatbot, que solo responde, y de una automatización, que sigue siempre el mismo guion. Un agente elige sus propios pasos y puede, por tanto, equivocarse actuando. Por eso necesita un marco claro, un ámbito limitado y un responsable humano."}}, {"@type": "Question", "name": "¿Qué es Agentalent.ai?", "acceptedAnswer": {"@type": "Answer", "text": "Una plataforma lanzada por monday.com el 23 de marzo de 2026 para «contratar» agentes de IA: descripción del puesto, presentación de un agente, instalación en una semana aproximadamente, dos semanas de prueba con reembolso íntegro. El modelo toma el de una agencia de selección y lo aplica a los agentes. Un detalle importa más que el precio: una persona real del equipo de la plataforma es responsable de cada agente que propone, con nombre y dirección de correo. Incluso en una empresa que vende agentes, ningún agente trabaja sin responsable humano."}}, {"@type": "Question", "name": "¿Cuánto cuesta un agente de IA en Agentalent.ai?", "acceptedAnswer": {"@type": "Answer", "text": "Un mes de «salario» pagado una vez, o ese «salario» cada mes con un 15 % de comisión. Constellation Research estimaba los primeros agentes en torno a 2.000 dólares al mes en el lanzamiento. El precio anunciado es solo una parte del coste real. Hay que sumar el tiempo del equipo para preparar los datos, redactar la descripción del puesto del agente, revisar su trabajo durante la prueba y supervisarlo después. Un agente que ahorra diez horas a la semana pero exige cinco de verificación solo cumple la mitad de su promesa."}}, {"@type": "Question", "name": "¿Quién es responsable de un agente de IA en la empresa?", "acceptedAnswer": {"@type": "Answer", "text": "La empresa que lo utiliza. Un agente no asume responsabilidad propia: hay que nombrar a una persona que lo supervise, con tiempo y autoridad para detenerlo. En una pyme, ese responsable suele ser quien dirige la actividad en cuestión: contabilidad para un agente de reclamación de pagos, atención al cliente para un agente de respuesta. No necesita ser técnico. Necesita conocer el oficio, revisar con regularidad el trabajo del agente y ajustar sus instrucciones."}}, {"@type": "Question", "name": "¿Qué dice el AI Act sobre los agentes de IA?", "acceptedAnswer": {"@type": "Answer", "text": "Desde el 2 de agosto de 2026, una persona debe saber que trata con una IA (artículo 50). Los usos ligados a la selección o la gestión de empleados son de alto riesgo, con obligaciones a partir del 2 de diciembre de 2027. El RGPD, en su artículo 22, ya protege a cada persona frente a una decisión basada únicamente en un tratamiento automatizado cuando le afecta de forma significativa. Un agente que escribe a sus clientes debe presentarse como una IA, y un agente que rechaza por sí solo un reembolso o una candidatura expone a la empresa."}}, {"@type": "Question", "name": "¿Qué decisiones no hay que confiar a un agente de IA?", "acceptedAnswer": {"@type": "Answer", "text": "Contratar, rechazar o despedir a una persona, conceder gestos comerciales fuera de norma, responder a un cliente en litigio. El agente puede prepararlas; las toma una persona. Estas decisiones afectan a una persona y comprometen a la empresa: alguien debe poder explicarlas. Las mejores tareas para un agente son concretas, repetitivas y fáciles de verificar, como reclamar una factura impagada con un mensaje validado de antemano o preparar un dosier antes de una reunión."}}], "inLanguage": "es-ES"}

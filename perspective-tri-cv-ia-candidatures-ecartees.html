@@ -44,7 +44,7 @@
 --ivory:     #F6F1EB;
 --white:     #FAF6F2;
 --pale-rose: #D9C9C3;
---plum-muted: rgba(99,59,74,.7);
+--plum-muted: rgba(99,59,74,.85);
 --text:      #633B4A;
 --serif:     'Cormorant Garamond', Georgia, serif;
 --sans:      'Inter', 'Helvetica Neue', sans-serif;
@@ -533,11 +533,11 @@ transition: color .2s;
 color: rgba(99,59,74,.88);
 }
 .footer-col a:hover{ color: var(--rose); }
-.footer-col .footer-loc{ color: rgba(99,59,74,.55); }
+.footer-col .footer-loc{ color: rgba(99,59,74,.85); }
 .footer-col a.footer-persp-link{
 font-size: .78rem; padding-left: 6px; margin-top: -7px;
 line-height: 1.3; white-space: nowrap;
-color: rgba(99,59,74,.68);
+color: rgba(99,59,74,.85);
 }
 .footer-col a.footer-lang-btn{
 border: 1px solid rgba(99,59,74,.3);
@@ -606,12 +606,12 @@ display: grid;
 grid-template-columns: subgrid;
 align-items: center;
 padding-top: 8px; padding-bottom: 10px;
-font-size: .88rem; color: rgba(99,59,74,.55);
+font-size: .88rem; color: rgba(99,59,74,.85);
 }
 .footer-legal{ margin: 0; grid-column: 1; }
 .footer-legal a{
 display: inline-block;
-color: rgba(99,59,74,.8); text-decoration: none;
+color: rgba(99,59,74,.85); text-decoration: none;
 font-size: .98rem;
 border: 1px solid rgba(99,59,74,.3);
 border-radius: 2rem;
@@ -619,9 +619,9 @@ padding: 6px 16px;
 transition: color .2s, border-color .2s;
 }
 .footer-legal a:hover{ color: var(--rose); border-color: var(--rose); }
-.footer-rights{ margin: 0; grid-column: 2; font-size: .98rem; color: rgba(99,59,74,.8); }
+.footer-rights{ margin: 0; grid-column: 2; font-size: .98rem; color: rgba(99,59,74,.85); }
 .footer-bottom .footer-copy{ grid-column: 4; justify-self: start; }
-.site-footer .footer-copy{ margin: 0; font-size: .98rem; color: rgba(99,59,74,.8); }
+.site-footer .footer-copy{ margin: 0; font-size: .98rem; color: rgba(99,59,74,.85); }
 @media (max-width: 900px){.footer-grid{ grid-template-columns: 1fr 1fr; row-gap: 40px; }.footer-brand{ grid-column: 1 / -1; }.footer-bottom{
 display: flex; flex-wrap: wrap; align-items: center;
 justify-content: space-between; gap: 12px;
@@ -714,7 +714,7 @@ border-top: 1px solid rgba(93,47,55,.18);
 }
 .article-author-photo{ width: 52px; height: 52px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
 .article-author-name{ font-family: var(--serif); font-size: 1.05rem; color: var(--plum); margin: 0 0 2px; font-weight: 500; }
-.article-author-bio{ font-size: .88rem; color: rgba(99,59,74,.75); margin: 0; line-height: 1.5; }
+.article-author-bio{ font-size: .88rem; color: rgba(99,59,74,.85); margin: 0; line-height: 1.5; }
 .article-author-bio a{ color: var(--rose); text-decoration: underline; white-space: nowrap; }
 @media (max-width: 560px){.article-author{ flex-direction: column; align-items: flex-start; text-align: left; }}
 @keyframes agents-pulse{
@@ -864,7 +864,7 @@ transform: translateY(-1px);
 display: none;
 margin: 22px auto 0;
 font-family: var(--sans); font-size: .85rem; font-weight: 500;
-color: rgba(99,59,74,.6);
+color: rgba(99,59,74,.85);
 background: none; border: none;
 text-decoration: underline; cursor: pointer;
 }
@@ -937,7 +937,7 @@ body.art-justify .article-book .article-intro p, body.art-justify .article-book 
 .footer-col--site{ position: relative; }
 .footer-grid > .footer-col--contact{ margin-right: 0; }
 .footer-grid > .footer-col--contact a, .footer-grid > .footer-col--contact .footer-loc{ color: rgba(99,59,74,.88); }
-.footer-grid > .footer-col--contact .footer-loc{ color: rgba(99,59,74,.55); }
+.footer-grid > .footer-col--contact .footer-loc{ color: rgba(99,59,74,.85); }
 .footer-grid > .footer-col--langs{ margin-right: 0; }
 .footer-grid > .footer-col--langs a{ color: rgba(99,59,74,.92); }
 .footer-bottom .footer-copy{ grid-column: 3; justify-self: start; }
@@ -1087,6 +1087,7 @@ p :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl, .ink-accent-fixed, .art-chip, .
 @media (min-width: 1251px){.site-footer{ grid-template-columns: minmax(300px, 1fr) minmax(0, auto) minmax(0, auto) minmax(0, auto) !important; }.footer-col--site{ max-width: 420px; }}
 h1, h2, h3{ text-wrap: balance; }
 p, li, figcaption, blockquote{ text-wrap: pretty; }
+.hero-cta-link, summary, .semi-600, .pourquoi-conclusion, .aiact-toc-label{ color: #A84D50 !important; }
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Que fait un logiciel de tri de CV ?", "acceptedAnswer": {"@type": "Answer", "text": "Il extrait les informations des CV, les compare à l’offre (mots-clés ou proximité de sens), attribue un score et classe ou écarte les candidatures, parfois avec des questions éliminatoires. Beaucoup d’outils de suivi des candidatures (ATS) intègrent désormais de l’IA. Un candidat écarté par la machine n’est souvent relu par personne. C’est là que se loge le risque : un outil entraîné sur d’anciens recrutements reproduit les choix passés, y compris leurs angles morts. Sans relecture humaine des candidatures écartées, l’entreprise ignore quels profils elle perd et ne peut pas expliquer ses refus."}}, {"@type": "Question", "name": "Qu’est-ce que l’affaire Workday ?", "acceptedAnswer": {"@type": "Answer", "text": "Derek Mobley, candidat afro-américain de plus de 40 ans, accuse l’outil de tri de Workday de l’avoir écarté de nombreuses offres. En mai 2025, la juge a autorisé à titre préliminaire une action collective pour les candidats de plus de 40 ans ; le 22 juin 2026, elle a rejeté pour l’essentiel la demande d’abandon des poursuites. En septembre 2026, les plaignants ont demandé une action de groupe au nom de quatre populations ; l’audience est fixée au 9 mars 2027. Selon un témoin de Workday, plus de 356 millions de candidatures sont passées par l’outil en 2024."}}, {"@type": "Question", "name": "Le tri de CV par IA est-il encadré en France ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Le Code du travail impose d’informer les candidats des méthodes d’aide au recrutement utilisées et interdit toute collecte par un dispositif non porté à leur connaissance. Le RGPD (article 22) protège contre les décisions fondées exclusivement sur un traitement automatisé. La CNIL a fait du recrutement une priorité de contrôle en 2026. Concrètement, l’entreprise doit pouvoir dire au candidat qu’un outil a été utilisé, ce qu’il a pris en compte, et lui permettre de demander qu’une personne réexamine sa candidature."}}, {"@type": "Question", "name": "Que change l’IA Act pour le recrutement ?", "acceptedAnswer": {"@type": "Answer", "text": "Il classe les systèmes d’IA de recrutement, de filtrage de candidatures et d’évaluation des candidats parmi les systèmes à haut risque. À partir du 2 décembre 2027, l’employeur qui les utilise devra notamment assurer un contrôle humain par des personnes compétentes, conserver les journaux au moins six mois, informer les représentants du personnel et les personnes concernées. Ces obligations s’ajoutent à celles du fournisseur de l’outil. L’employeur reste responsable de l’usage qu’il en fait : mieux vaut documenter dès maintenant le fonctionnement de l’outil, les contrôles réalisés et les personnes chargées de la supervision."}}, {"@type": "Question", "name": "Comment contrôler un outil de tri sans perdre le gain de temps ?", "acceptedAnswer": {"@type": "Answer", "text": "En relisant chaque mois un échantillon de candidatures écartées, par exemple une sur dix, avec une question simple : aurais-je voulu rencontrer ce candidat ? Si la réponse est souvent oui, le réglage doit changer. Il est aussi utile de remplacer l’élimination automatique par un simple classement. Ce contrôle demande peu de temps. Il permet de repérer tôt un critère mal réglé, par exemple un diplôme exigé à tort ou une interruption de carrière pénalisée, avant qu’il n’écarte des centaines de profils."}}, {"@type": "Question", "name": "Quelles questions poser à un éditeur de logiciel de recrutement ?", "acceptedAnswer": {"@type": "Answer", "text": "Sur quelles données le modèle a été entraîné ; quels critères pèsent dans le score ; s’il a fait l’objet d’un audit de biais ; si l’élimination automatique peut être désactivée ; où sont stockées les données des candidats et combien de temps ; comment il se prépare aux obligations de l’IA Act. Les réponses doivent être écrites et conservées. Un éditeur incapable d’expliquer son score ou de désactiver l’élimination automatique fait porter un risque juridique à l’entreprise cliente, qui reste responsable de ses décisions d’embauche."}}], "inLanguage": "fr-FR"}

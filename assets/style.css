@@ -12,7 +12,7 @@
   --ivory:     #F6F1EB;
   --white:     #FAF6F2;
   --pale-rose: #D9C9C3;
-  --plum-muted: rgba(99,59,74,.7);
+  --plum-muted: rgba(99,59,74,.85);
   --text:      #633B4A;
   --serif:     'Cormorant Garamond', Georgia, serif;
   --sans:      'Inter', 'Helvetica Neue', sans-serif;
@@ -568,7 +568,7 @@ strong, b { font-weight: 600; }
   font-size: clamp(1.1rem, 1.67vw, 1.37rem);
   white-space: normal;
   font-weight: 400;
-  color: rgba(99,59,74,.72);
+  color: rgba(99,59,74,.85);
   line-height: 1.6;
   margin-top: 26px;
   margin-bottom: 0;
@@ -1026,7 +1026,7 @@ section { padding: var(--section-gap) 0; }
   font-size: clamp(1.5rem, 2.4vw, 2rem);
   font-weight: 400;
   font-style: italic;
-  color: rgba(99,59,74,.7);
+  color: rgba(99,59,74,.85);
   margin-bottom: 14px;
 }
 .offres-subtitle2 {
@@ -2232,10 +2232,10 @@ section { padding: var(--section-gap) 0; }
   color: #FAF6F2;
 }
 .testi-author strong { display: block; font-size: 1.2rem; color: var(--plum); font-weight: 400; }
-.testi-author .testi-role { font-size: 1rem; font-weight: 400; color: rgba(99,59,74,.78); }
+.testi-author .testi-role { font-size: 1rem; font-weight: 400; color: rgba(99,59,74,.85); }
 .testi-author span  { font-size: 1rem; color: var(--plum); display: block; font-weight: 400; }
 .testi-name { display: block; font-size: 1.2rem; color: var(--plum); font-weight: 600; }
-.testi-role { display: block; font-size: 1rem; color: rgba(99,59,74,.78); font-weight: 400; }
+.testi-role { display: block; font-size: 1rem; color: rgba(99,59,74,.85); font-weight: 400; }
 /* Fonction, sous le nom de l'organisation — plus de tirets à rallonge.
    Scopé sous .testi-author pour battre `.testi-author span { font-size: 1rem }`. */
 .testi-author .testi-title {
@@ -2244,14 +2244,14 @@ section { padding: var(--section-gap) 0; }
   font-size: .78rem;
   line-height: 1.42;
   font-weight: 400;
-  color: rgba(99,59,74,.78);
+  color: rgba(99,59,74,.85);
   margin-top: 2px;
 }
 .testi--dark .testi-author .testi-title { color: rgba(250,246,242,.72); }
 /* Le "IA"/"AI" coloré imbriqué dans testi-title hérite sinon de
    `.testi-author span { display:block }` et saute toujours de ligne. */
 .testi-title span { display: inline; font-size: inherit; font-weight: inherit; }
-.testi-translated   { font-size: .88rem; color: rgba(99,59,74,.6); font-style: italic; display: block; margin-top: 4px; font-weight: 500; }
+.testi-translated   { font-size: .88rem; color: rgba(99,59,74,.85); font-style: italic; display: block; margin-top: 4px; font-weight: 500; }
 /* Variante fond prune */
 .testi--dark {
   background: #4F2F3B;
@@ -2415,7 +2415,7 @@ footer { background: #4F2F3B; padding: 0 36px 22px; text-align: center; }
 /* Ligne 1 : plus grande — Ligne 2 : plus petite, blanc cassé */
 .footer-tag-lead { font-size: clamp(2.09rem, 2.65vw, 2.46rem); }
 .footer-tag-rest { font-size: clamp(1.59rem, 1.99vw, 1.87rem); color: var(--plum); }
-.footer-brand .footer-mention-ia { font-size: .95rem; margin: 0; text-align: left; color: rgba(99,59,74,.6); white-space: nowrap; }
+.footer-brand .footer-mention-ia { font-size: .95rem; margin: 0; text-align: left; color: rgba(99,59,74,.85); white-space: nowrap; }
 /* Grille éditoriale du footer (desktop uniquement) :
    — axe haut : centre vertical du logo aligné sur la ligne des titres LE SITE/LANGUES/COORDONNÉES
    — axe bas : dernière ligne ("Validation humaine systématique") alignée sur "Contact"
@@ -2467,11 +2467,11 @@ footer { background: #4F2F3B; padding: 0 36px 22px; text-align: center; }
   color: rgba(99,59,74,.88);
 }
 .footer-col a:hover { color: var(--rose); }
-.footer-col .footer-loc { color: rgba(99,59,74,.55); }
+.footer-col .footer-loc { color: rgba(99,59,74,.85); }
 .footer-col a.footer-persp-link {
   font-size: .78rem; padding-left: 6px; margin-top: -7px;
   line-height: 1.3; white-space: nowrap;
-  color: rgba(99,59,74,.68);
+  color: rgba(99,59,74,.85);
 }
 /* Langues : boutons rectangulaires arrondis, comme EN/ES de la nav */
 .footer-col a.footer-lang-btn {
@@ -2588,13 +2588,13 @@ footer { background: #4F2F3B; padding: 0 36px 22px; text-align: center; }
   grid-template-columns: subgrid;
   align-items: center;
   padding-top: 8px; padding-bottom: 10px;
-  font-size: .88rem; color: rgba(99,59,74,.55);
+  font-size: .88rem; color: rgba(99,59,74,.85);
 }
 .footer-legal { margin: 0; grid-column: 1; }
 /* Mentions légales : bouton arrondi, sans soulignement — même police que le © */
 .footer-legal a {
   display: inline-block;
-  color: rgba(99,59,74,.8); text-decoration: none;
+  color: rgba(99,59,74,.85); text-decoration: none;
   font-size: .98rem;
   border: 1px solid rgba(99,59,74,.3);
   border-radius: 2rem;
@@ -2604,9 +2604,9 @@ footer { background: #4F2F3B; padding: 0 36px 22px; text-align: center; }
 .footer-legal a:hover { color: var(--rose); border-color: var(--rose); }
 /* "Tous droits réservés" : même colonne que "Le site" → T aligné sous L,
    même police que le © */
-.footer-rights { margin: 0; grid-column: 2; font-size: .98rem; color: rgba(99,59,74,.8); }
+.footer-rights { margin: 0; grid-column: 2; font-size: .98rem; color: rgba(99,59,74,.85); }
 .footer-bottom .footer-copy { grid-column: 4; justify-self: start; }
-.site-footer .footer-copy { margin: 0; font-size: .98rem; color: rgba(99,59,74,.8); }
+.site-footer .footer-copy { margin: 0; font-size: .98rem; color: rgba(99,59,74,.85); }
 
 @media (max-width: 900px) {
   .footer-grid { grid-template-columns: 1fr 1fr; row-gap: 40px; }
@@ -2827,7 +2827,7 @@ footer { background: #4F2F3B; padding: 0 36px 22px; text-align: center; }
 }
 .offres-secondary-label {
   font-family: var(--sans); font-size: .78rem; font-weight: 600;
-  letter-spacing: .12em; text-transform: uppercase; color: rgba(99,59,74,.55);
+  letter-spacing: .12em; text-transform: uppercase; color: rgba(99,59,74,.85);
   text-align: center; margin: 48px 0 0;
 }
 .offres-categories { margin-top: 32px; }
@@ -3556,7 +3556,7 @@ footer { background: #4F2F3B; padding: 0 36px 22px; text-align: center; }
   color: var(--plum); margin-bottom: 8px;
 }
 .qualiopi-cert {
-  font-size: .83rem; line-height: 1.6; color: rgba(99,59,74,.6);
+  font-size: .83rem; line-height: 1.6; color: rgba(99,59,74,.85);
   font-style: italic; margin: 4px 0 12px 22px;
 }
 .qualiopi-text { font-size: .82rem; line-height: 1.65; color: var(--text); margin-bottom: 16px; }
@@ -3664,7 +3664,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   font-size: clamp(1.25rem, 1.9vw, 1.55rem);
   font-weight: 400;
   line-height: 1.6;
-  color: rgba(99,59,74,.72);
+  color: rgba(99,59,74,.85);
   margin: 26px 0 0;
   /* Pas de barre devant le lead — juste aligné sous le texte du titre */
   padding-left: 25px;
@@ -3857,7 +3857,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   font-size: clamp(1.02rem, 1.45vw, 1.25rem);
   font-weight: 500;
   line-height: 1.5;
-  color: rgba(99, 59, 74, .6);
+  color: rgba(99, 59, 74, .85);
 }
 .mon-approche-section--manifeste .maf-body {
   font-family: var(--serif);
@@ -4063,7 +4063,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 }
 /* La statistique passe en appui, le titre garde la focale.
    Le chiffre reste mis en exergue : terracotta, plus gros, semi-gras. */
-#expertise .conviction-lead { color: rgba(99, 59, 74, .72); }
+#expertise .conviction-lead { color: rgba(99, 59, 74, .85); }
 #expertise .conv-stat {
   display: inline-block;
   margin-bottom: 6px;
@@ -4143,7 +4143,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
   font-size: clamp(1.25rem, 1.9vw, 1.55rem);
   font-weight: 400;
   line-height: 1.6;
-  color: rgba(99, 59, 74, .72);
+  color: rgba(99, 59, 74, .85);
 }
 .expertise-contact-cta { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 16px 40px; }
 .expertise-contact-cta .offres-crosslink { margin: 0; }
@@ -4235,7 +4235,7 @@ html[lang="en"] .expertise-hero-eyebrow { margin-top: 1.5em; }
 }
 .article-author-photo { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
 .article-author-name { font-family: var(--serif); font-size: 1.05rem; color: var(--plum); margin: 0 0 2px; font-weight: 500; }
-.article-author-bio { font-size: .88rem; color: rgba(99,59,74,.75); margin: 0; line-height: 1.5; }
+.article-author-bio { font-size: .88rem; color: rgba(99,59,74,.85); margin: 0; line-height: 1.5; }
 .article-author-bio a { color: var(--rose); text-decoration: underline; white-space: nowrap; }
 @media (max-width: 560px) {
   .article-author { flex-direction: column; align-items: flex-start; text-align: left; }
@@ -5049,22 +5049,22 @@ body > section.newsletter-section.snap-page, body > main > section.newsletter-se
 .nl-box .nl-box-body p,
 .nl-box .nl-box-body p:last-child { color: var(--plum); }
 .nl-box .nl-box-trust { color: var(--plum-muted); }
-.nl-box .nl-box-lead { color: rgba(99,59,74,.7); }
+.nl-box .nl-box-lead { color: rgba(99,59,74,.85); }
 .nl-box .nl-form-back {
   border-color: #6F5160;
-  color: rgba(99,59,74,.68);
+  color: rgba(99,59,74,.85);
 }
 .nl-box .nl-form-back:hover {
   color: var(--plum);
   border-color: #6F5160;
 }
-.nl-box .nl-gate-field label { color: rgba(99,59,74,.68); }
+.nl-box .nl-gate-field label { color: rgba(99,59,74,.85); }
 .nl-box .nl-gate-field input {
   background: rgba(255,255,255,.55);
   border-color: rgba(199,95,98,.4);
   color: var(--plum);
 }
-.nl-box .nl-gate-field input::placeholder { color: rgba(99,59,74,.35); }
+.nl-box .nl-gate-field input::placeholder { color: rgba(99,59,74,.85); }
 .nl-box .nl-gate-field input:focus { background: rgba(255,255,255,.8); }
 .nl-box .newsletter-trust { color: var(--plum-muted); }
 .nl-box-title {
@@ -5617,7 +5617,7 @@ body > section.newsletter-section.snap-page, body > main > section.newsletter-se
   /* -6%, cohérent avec .hero-sub2 */
   font-size: clamp(1.13rem, 1.69vw, 1.32rem);
   font-weight: 400;
-  color: rgba(99,59,74,.65);
+  color: rgba(99,59,74,.85);
   line-height: 1.65;
   margin-top: 22px;
   letter-spacing: .015em;
@@ -5919,7 +5919,7 @@ body > section.newsletter-section.snap-page, body > main > section.newsletter-se
 .maf-body {
   font-family: var(--sans);
   font-size: clamp(1.25rem, 1.9vw, 1.55rem);
-  color: rgba(99,59,74,.72);
+  color: rgba(99,59,74,.85);
   line-height: 1.6; font-weight: 400; margin: 0;
   padding-left: 0;
 }
@@ -6568,7 +6568,7 @@ body.cookie-banner-open .hero-cta { transition: margin-bottom .3s ease; }
   box-sizing: border-box;
   transition: border-color .25s var(--ease);
 }
-.diag-input::placeholder { color: rgba(99,59,74,.45); }
+.diag-input::placeholder { color: rgba(99,59,74,.85); }
 .diag-input:focus { outline: none; border-color: var(--rose); }
 .diag-input.err { border-color: var(--rose); background: rgba(199,95,98,.04); }
 .diag-lead-err {
@@ -6609,7 +6609,7 @@ body.cookie-banner-open .hero-cta { transition: margin-bottom .3s ease; }
   display: none;
   margin: 22px auto 0;
   font-family: var(--sans); font-size: .85rem; font-weight: 500;
-  color: rgba(99,59,74,.6);
+  color: rgba(99,59,74,.85);
   background: none; border: none;
   text-decoration: underline; cursor: pointer;
 }
@@ -7334,7 +7334,7 @@ body.art-justify .article-book .article-intro p, body.art-justify .article-book 
 .footer-col--site .footer-persp-c2 { position: absolute; left: 18.75rem; bottom: 0; }
 .footer-grid > .footer-col--contact { margin-right: 0; }
 .footer-grid > .footer-col--contact a, .footer-grid > .footer-col--contact .footer-loc { color: rgba(99,59,74,.88); }
-.footer-grid > .footer-col--contact .footer-loc { color: rgba(99,59,74,.55); }
+.footer-grid > .footer-col--contact .footer-loc { color: rgba(99,59,74,.85); }
 .footer-grid > .footer-col--langs { margin-right: 0; }
 .footer-grid > .footer-col--langs a { color: rgba(99,59,74,.92); }
 .footer-bottom .footer-copy { grid-column: 3; justify-self: start; }
@@ -7353,7 +7353,7 @@ body.art-justify .article-book .article-intro p, body.art-justify .article-book 
 
 /* Mention IA sous le filet du pied de page */
 .footer-mention-row { padding-top: 10px; padding-bottom: 0; }
-.footer-mention-row .footer-mention-ia { margin: 0; font-size: .9rem; text-align: left; color: rgba(99,59,74,.6); white-space: normal; }
+.footer-mention-row .footer-mention-ia { margin: 0; font-size: .9rem; text-align: left; color: rgba(99,59,74,.85); white-space: normal; }
 
 /* Pied de page sur téléphone et tablette : le cadre du logo, « Une expérience dirigeante » et les lignes suivantes partagent le même bord gauche ;
    la première ligne de la signature tient sur une seule ligne (taille adaptée à la largeur de l'écran). */
@@ -7938,7 +7938,7 @@ section:has(+ .verbes-band) .mon-approche-content .portrait-link { margin-bottom
 .s16 { text-wrap:balance !important; }
 .s17 { margin-top:18px !important; }
 .s18 { list-style:none;margin:8px 0 18px;padding:0;display:grid;gap:8px !important; }
-.s19 { font-size:.88rem; color: rgba(99,59,74,.6); margin-top: 20px; !important; }
+.s19 { font-size:.88rem; color: rgba(99,59,74,.85); margin-top: 20px; !important; }
 .s20 { font-size:clamp(1.0486rem, 1.2305vw, 1.1235rem) !important; }
 .s21 { color:var(--plum);font-weight:600 !important; }
 .s22 { margin-bottom:20px !important; }
@@ -7949,7 +7949,7 @@ section:has(+ .verbes-band) .mon-approche-content .portrait-link { margin-bottom
 .s27 { margin-bottom:10px !important; }
 .s28 { color:#C75F62;font-weight:600;text-decoration:none !important; }
 .s29 { opacity:.68;font-size:.88em !important; }
-.s30 { flex-basis:100%;font-size:.72rem;color:rgba(99,59,74,.55) !important; }
+.s30 { flex-basis:100%;font-size:.72rem;color:rgba(99,59,74,.85) !important; }
 .s31 { margin-top:24px !important; }
 .s32 { white-space:nowrap !important; }
 .s33 { font-size:1.9rem;text-wrap:wrap;hyphens:manual;-webkit-hyphens:manual !important; }
@@ -8085,3 +8085,6 @@ h1.expertise-hero-title { text-wrap: balance; }
 /* Typographie (tout le site) : titres équilibrés, paragraphes sans mot seul en fin de ligne */
 h1, h2, h3 { text-wrap: balance; }
 p, li, figcaption, blockquote { text-wrap: pretty; }
+
+/* Contraste : texte secondaire en prune à 85 % minimum, terracotta foncé pour les petits textes */
+.hero-cta-link, summary, .semi-600, .pourquoi-conclusion, .aiact-toc-label { color: #A84D50 !important; }

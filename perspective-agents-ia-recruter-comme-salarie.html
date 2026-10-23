@@ -44,7 +44,7 @@
 --ivory:     #F6F1EB;
 --white:     #FAF6F2;
 --pale-rose: #D9C9C3;
---plum-muted: rgba(99,59,74,.7);
+--plum-muted: rgba(99,59,74,.85);
 --text:      #633B4A;
 --serif:     'Cormorant Garamond', Georgia, serif;
 --sans:      'Inter', 'Helvetica Neue', sans-serif;
@@ -538,11 +538,11 @@ transition: color .2s;
 color: rgba(99,59,74,.88);
 }
 .footer-col a:hover{ color: var(--rose); }
-.footer-col .footer-loc{ color: rgba(99,59,74,.55); }
+.footer-col .footer-loc{ color: rgba(99,59,74,.85); }
 .footer-col a.footer-persp-link{
 font-size: .78rem; padding-left: 6px; margin-top: -7px;
 line-height: 1.3; white-space: nowrap;
-color: rgba(99,59,74,.68);
+color: rgba(99,59,74,.85);
 }
 .footer-col a.footer-lang-btn{
 border: 1px solid rgba(99,59,74,.3);
@@ -611,12 +611,12 @@ display: grid;
 grid-template-columns: subgrid;
 align-items: center;
 padding-top: 8px; padding-bottom: 10px;
-font-size: .88rem; color: rgba(99,59,74,.55);
+font-size: .88rem; color: rgba(99,59,74,.85);
 }
 .footer-legal{ margin: 0; grid-column: 1; }
 .footer-legal a{
 display: inline-block;
-color: rgba(99,59,74,.8); text-decoration: none;
+color: rgba(99,59,74,.85); text-decoration: none;
 font-size: .98rem;
 border: 1px solid rgba(99,59,74,.3);
 border-radius: 2rem;
@@ -624,9 +624,9 @@ padding: 6px 16px;
 transition: color .2s, border-color .2s;
 }
 .footer-legal a:hover{ color: var(--rose); border-color: var(--rose); }
-.footer-rights{ margin: 0; grid-column: 2; font-size: .98rem; color: rgba(99,59,74,.8); }
+.footer-rights{ margin: 0; grid-column: 2; font-size: .98rem; color: rgba(99,59,74,.85); }
 .footer-bottom .footer-copy{ grid-column: 4; justify-self: start; }
-.site-footer .footer-copy{ margin: 0; font-size: .98rem; color: rgba(99,59,74,.8); }
+.site-footer .footer-copy{ margin: 0; font-size: .98rem; color: rgba(99,59,74,.85); }
 @media (max-width: 900px){.footer-grid{ grid-template-columns: 1fr 1fr; row-gap: 40px; }.footer-brand{ grid-column: 1 / -1; }.footer-bottom{
 display: flex; flex-wrap: wrap; align-items: center;
 justify-content: space-between; gap: 12px;
@@ -719,7 +719,7 @@ border-top: 1px solid rgba(93,47,55,.18);
 }
 .article-author-photo{ width: 52px; height: 52px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
 .article-author-name{ font-family: var(--serif); font-size: 1.05rem; color: var(--plum); margin: 0 0 2px; font-weight: 500; }
-.article-author-bio{ font-size: .88rem; color: rgba(99,59,74,.75); margin: 0; line-height: 1.5; }
+.article-author-bio{ font-size: .88rem; color: rgba(99,59,74,.85); margin: 0; line-height: 1.5; }
 .article-author-bio a{ color: var(--rose); text-decoration: underline; white-space: nowrap; }
 @media (max-width: 560px){.article-author{ flex-direction: column; align-items: flex-start; text-align: left; }}
 @keyframes agents-pulse{
@@ -869,7 +869,7 @@ transform: translateY(-1px);
 display: none;
 margin: 22px auto 0;
 font-family: var(--sans); font-size: .85rem; font-weight: 500;
-color: rgba(99,59,74,.6);
+color: rgba(99,59,74,.85);
 background: none; border: none;
 text-decoration: underline; cursor: pointer;
 }
@@ -943,7 +943,7 @@ body.art-justify .article-book .article-intro p, body.art-justify .article-book 
 .footer-col--site{ position: relative; }
 .footer-grid > .footer-col--contact{ margin-right: 0; }
 .footer-grid > .footer-col--contact a, .footer-grid > .footer-col--contact .footer-loc{ color: rgba(99,59,74,.88); }
-.footer-grid > .footer-col--contact .footer-loc{ color: rgba(99,59,74,.55); }
+.footer-grid > .footer-col--contact .footer-loc{ color: rgba(99,59,74,.85); }
 .footer-grid > .footer-col--langs{ margin-right: 0; }
 .footer-grid > .footer-col--langs a{ color: rgba(99,59,74,.92); }
 .footer-bottom .footer-copy{ grid-column: 3; justify-self: start; }
@@ -1094,6 +1094,7 @@ p :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl, .ink-accent-fixed, .art-chip, .
 @media (min-width: 1251px){.site-footer{ grid-template-columns: minmax(300px, 1fr) minmax(0, auto) minmax(0, auto) minmax(0, auto) !important; }.footer-col--site{ max-width: 420px; }}
 h1, h2, h3{ text-wrap: balance; }
 p, li, figcaption, blockquote{ text-wrap: pretty; }
+.hero-cta-link, summary, .semi-600, .pourquoi-conclusion, .aiact-toc-label{ color: #A84D50 !important; }
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Qu'est-ce qu'un agent IA ?", "acceptedAnswer": {"@type": "Answer", "text": "Un logiciel qui ne se contente pas de répondre : il agit. Il reçoit un objectif, consulte des outils, enchaîne plusieurs étapes et produit un résultat, par exemple relancer une facture ou trier des demandes. C'est cette autonomie qui le distingue d'un chatbot, qui se contente de répondre, et d'une automatisation, qui suit toujours le même scénario. Un agent choisit ses étapes : il peut donc se tromper en agissant, ce qui impose de lui fixer un cadre clair, un périmètre limité et un responsable humain."}}, {"@type": "Question", "name": "Qu'est-ce qu'Agentalent.ai ?", "acceptedAnswer": {"@type": "Answer", "text": "Une plateforme lancée par monday.com le 23 mars 2026 pour « recruter » des agents IA : description du poste, présentation d'un agent, installation en une semaine environ, deux semaines d'essai avec remboursement intégral. Le modèle reprend celui d'un cabinet de recrutement, appliqué aux agents. Un détail compte plus que le prix : une personne réelle de l'équipe de la plateforme est responsable de chaque agent proposé, avec un nom et une adresse e-mail. Même chez un vendeur d'agents, aucun agent ne travaille sans responsable humain."}}, {"@type": "Question", "name": "Combien coûte un agent IA sur Agentalent.ai ?", "acceptedAnswer": {"@type": "Answer", "text": "Un mois de « salaire » payé une fois, ou ce « salaire » chaque mois avec 15 % de frais de plateforme. Constellation Research estimait les premiers agents autour de 2 000 dollars par mois au lancement. Le prix affiché n'est qu'une partie du coût réel. Il faut y ajouter le temps de l'équipe pour préparer les données, rédiger la fiche de poste de l'agent, relire son travail pendant l'essai, puis le superviser. Un agent qui fait gagner dix heures par semaine mais en demande cinq de vérification ne tient que la moitié de sa promesse."}}, {"@type": "Question", "name": "Qui est responsable d'un agent IA dans l'entreprise ?", "acceptedAnswer": {"@type": "Answer", "text": "L'entreprise qui l'utilise. Un agent n'engage pas sa propre responsabilité : il faut nommer une personne chargée de le superviser, avec le temps et l'autorité de l'arrêter. Dans une PME, ce responsable est souvent la personne qui dirige l'activité concernée : la comptabilité pour un agent de relance, le service client pour un agent de réponse. Il n'a pas besoin d'être technicien. Il doit connaître le métier, relire régulièrement le travail de l'agent et ajuster ses consignes."}}, {"@type": "Question", "name": "Que dit l'IA Act sur les agents IA ?", "acceptedAnswer": {"@type": "Answer", "text": "Depuis le 2 août 2026, une personne doit savoir qu'elle échange avec une IA (article 50). Les usages liés au recrutement ou à la gestion des salariés relèvent des systèmes à haut risque, avec des obligations au 2 décembre 2027. Le RGPD, dans son article 22, protège déjà chacun contre une décision fondée exclusivement sur un traitement automatisé lorsqu'elle l'affecte de manière significative. Un agent qui écrit à vos clients doit donc se présenter comme une IA, et un agent qui refuse seul un remboursement ou une candidature expose l'entreprise."}}, {"@type": "Question", "name": "Quelles décisions ne pas confier à un agent IA ?", "acceptedAnswer": {"@type": "Answer", "text": "Embaucher, refuser ou licencier une personne, accorder un geste commercial hors cadre, répondre à un client en litige. L'agent peut préparer ces décisions ; un humain les prend. Ces décisions touchent une personne et engagent l'entreprise : quelqu'un doit pouvoir les expliquer. Les meilleures tâches pour un agent sont précises, répétitives et faciles à vérifier, comme relancer une facture impayée avec un message validé à l'avance ou préparer un dossier avant un rendez-vous."}}], "inLanguage": "fr-FR"}
