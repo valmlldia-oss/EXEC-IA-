@@ -8003,7 +8003,9 @@ h1 .hero-sub-focal, h1 .hero-sub-focal.s3 { font-size: inherit !important; }
 :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl, .ink-accent-600, .ink-accent-500, .ink-accent-fixed, .persp-card-subtitle, .article-meta):not(h1 *):not(h2 *) { color: #633B4A !important; }
 :is(h1, h2) :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl) { color: #C75F62 !important; }
 /* Sur fonds sombres, l'accent passe en ivoire */
-:is(.testi--dark, .stats-strip, .cookie-banner, .cookie-modal, .xcard--ia, .roi-chip--hero, .ticker-bar, .es-line) :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl, .ink-accent-600, .ink-accent-500, .ink-accent-fixed, .ss-sup) { color: #FAF6F2 !important; }
+:is(.testi--dark, .cookie-banner, .cookie-modal, .xcard--ia, .roi-chip--hero, .ticker-bar, .es-line) :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl, .ink-accent-600, .ink-accent-500, .ink-accent-fixed) { color: #FAF6F2 !important; }
+/* Bandeau des chiffres : couleurs d'origine (IA et + en terracotta, comme avant) */
+.stats-strip--hero .ss-num--ia .ink-accent, .stats-strip--hero .ss-sup, .stats-strip .ss-sup { color: #C75F62 !important; }
 /* Titre des guides : « AI Act » et « RGPD » en graisse 400, plus élégant */
 h1 .aiact-ref, h1 .rgpd-b { font-weight: 400 !important; }
 /* Titres de section : graisse 500 (comme « Plus de 80 % »), « La technologie ne crée pas la valeur. » sur une seule ligne sur ordinateur */

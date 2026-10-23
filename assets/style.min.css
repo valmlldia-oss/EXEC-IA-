@@ -6805,7 +6805,8 @@ display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overf
 }
 :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl, .ink-accent-600, .ink-accent-500, .ink-accent-fixed, .persp-card-subtitle, .article-meta):not(h1 *):not(h2 *) { color: #633B4A !important; }
 :is(h1, h2) :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl) { color: #C75F62 !important; }
-:is(.testi--dark, .stats-strip, .cookie-banner, .cookie-modal, .xcard--ia, .roi-chip--hero, .ticker-bar, .es-line) :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl, .ink-accent-600, .ink-accent-500, .ink-accent-fixed, .ss-sup) { color: #FAF6F2 !important; }
+:is(.testi--dark, .cookie-banner, .cookie-modal, .xcard--ia, .roi-chip--hero, .ticker-bar, .es-line) :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl, .ink-accent-600, .ink-accent-500, .ink-accent-fixed) { color: #FAF6F2 !important; }
+.stats-strip--hero .ss-num--ia .ink-accent, .stats-strip--hero .ss-sup, .stats-strip .ss-sup { color: #C75F62 !important; }
 h1 .aiact-ref, h1 .rgpd-b { font-weight: 400 !important; }
 .section-title, .slide-title, .conviction-title, .diag-title { font-weight: 500 !important; }
 @media (min-width: 1025px) { .conviction-title { white-space: nowrap; } }
