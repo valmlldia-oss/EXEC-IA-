@@ -1,12 +1,12 @@
 # EXEC'IA : contenu intégral (version longue)
 
-Contenu des articles Perspectives et du guide AI Act/RGPD pour PME, en français, anglais et espagnol, sans HTML. Source : https://exec-ia.ai
+Contenu des articles du Blog et du guide AI Act/RGPD pour PME, en français, anglais et espagnol, sans HTML. Source : https://exec-ia.ai
 
 ## EXEC'IA · Affaire Orélien : demain, vos équipes devront prouver leur travail
 URL : https://exec-ia.ai/perspective-affaire-orelien-preuve-travail.html
 
-← Toutes les Perspectives
-★ Perspectives • Affaire Orélien
+← Tous les articles
+★ Blog • Affaire Orélien
 Affaire Orélien : demain, vos équipes
 devront prouver leur travail
 Article développé à partir de ma publication LinkedIn ( 01/10/2026 )
@@ -152,8 +152,8 @@ Passer de la réflexion à l’action : découvrir les offres EXEC’IA →
 ## EXEC'IA · Agents IA : faut-il les recruter comme des salariés ?
 URL : https://exec-ia.ai/perspective-agents-ia-recruter-comme-salarie.html
 
-← Toutes les Perspectives
-Perspectives • Agents IA
+← Tous les articles
+Blog • Agents IA
 Agents IA : faut-il les recruter
 comme des salariés ?
 Article développé à partir de ma publication LinkedIn ( 09/10/2026 )
@@ -266,8 +266,8 @@ Passer de la réflexion à l’action : découvrir les offres EXEC’IA →
 ## EXEC'IA · L’adhésion pèse plus que le budget IA
 URL : https://exec-ia.ai/perspective-budget-ia-adhesion-equipes.html
 
-← Toutes les Perspectives
-Perspectives • Adhésion
+← Tous les articles
+Blog • Adhésion
 Le budget IA n’est pas le sujet.
 L’adhésion, si.
 25 septembre 2026
@@ -433,8 +433,8 @@ Passer de la réflexion à l’action : découvrir les offres EXEC’IA →
 ## EXEC'IA · Chatbot : savoir passer la main
 URL : https://exec-ia.ai/perspective-chatbot-savoir-passer-la-main.html
 
-← Toutes les Perspectives
-Perspectives • Relation client
+← Tous les articles
+Blog • Relation client
 Le chatbot d’Air France
 répond seul à une partie des demandes.
 Le reste, il sait passer la main.
@@ -610,8 +610,8 @@ Passer de la réflexion à l’action : découvrir les offres EXEC’IA →
 ## EXEC'IA · Un enregistreur IA en comité de direction : qui l'a décidé ?
 URL : https://exec-ia.ai/perspective-enregistreur-ia-reunion-direction.html
 
-← Toutes les Perspectives
-Perspectives • Gouvernance
+← Tous les articles
+Blog • Gouvernance
 Un enregistreur IA en comité de direction : qui l’a décidé ?
 Version courte →
 Dirigeants de PME : les enregistreurs IA entrent en réunion de direction, souvent sans règle, parce qu’ils font gagner un temps précieux.
@@ -790,8 +790,8 @@ Passer de la réflexion à l’action : découvrir les offres EXEC’IA →
 ## EXEC'IA · Votre entreprise utilise déjà l'IA
 URL : https://exec-ia.ai/perspective-entreprise-utilise-deja-ia.html
 
-← Toutes les Perspectives
-★ Perspectives • Gouvernance
+← Tous les articles
+★ Blog • Gouvernance
 Adopter l’ IA est une chose.
 En créer de la valeur
 en est une autre.
@@ -987,8 +987,8 @@ Passer de la réflexion à l’action : découvrir les offres EXEC’IA →
 ## EXEC'IA · Les géants de l'IA s'installent chez leurs clients. Et votre PME ?
 URL : https://exec-ia.ai/perspective-forward-deployed-engineer-pme.html
 
-← Toutes les Perspectives
-Perspectives • Déploiement
+← Tous les articles
+Blog • Déploiement
 Les géants de l’ IA s’installent chez leurs clients.
 Et votre PME ?
 Version courte →
@@ -1170,8 +1170,8 @@ Passer de la réflexion à l’action : découvrir les offres EXEC’IA →
 ## EXEC'IA · Quand le dirigeant part, comment garder son savoir ?
 URL : https://exec-ia.ai/perspective-jumeau-numerique-savoir-dirigeant.html
 
-← Toutes les Perspectives
-Perspectives • Transmission
+← Tous les articles
+Blog • Transmission
 Quand le dirigeant part,
 comment garder son savoir ?
 Article développé à partir de ma publication LinkedIn ( 13/10/2026 )
@@ -1320,8 +1320,8 @@ Passer de la réflexion à l’action : découvrir les offres EXEC’IA →
 ## EXEC'IA · Plus d'outils IA, pas plus d'impact
 URL : https://exec-ia.ai/perspective-probleme-nest-pas-outils-mais-arbitrage.html
 
-← Toutes les Perspectives
-Perspectives • Création de valeur
+← Tous les articles
+Blog • Création de valeur
 Plus d’outils IA ne veut pas
 dire plus d’impact.
 Ce n’est pas un problème d’outils.
@@ -1485,8 +1485,8 @@ Passer de la réflexion à l’action : découvrir les offres EXEC’IA →
 ## EXEC'IA · Votre projet IA peut-il être financé ?
 URL : https://exec-ia.ai/perspective-projet-ia-peut-il-etre-finance.html
 
-← Toutes les Perspectives
-Perspectives • Financement
+← Tous les articles
+Blog • Financement
 Votre projet IA peut-il être financé ?
 Oui, mais pas forcément
 celui que vous pensez.
@@ -1679,8 +1679,8 @@ Passer de la réflexion à l’action : découvrir les offres EXEC’IA →
 ## EXEC'IA · Robots humanoïdes et token tax : quelles tâches confier
 URL : https://exec-ia.ai/perspective-robots-humanoides-token-tax.html
 
-← Toutes les Perspectives
-Perspectives • Robots humanoïdes
+← Tous les articles
+Blog • Robots humanoïdes
 Robots humanoïdes : quelles tâches
 partiront en premier ?
 6 octobre 2026
@@ -1854,8 +1854,8 @@ Passer de la réflexion à l’action : découvrir les offres EXEC’IA →
 ## EXEC'IA · Shadow IA : la charte que personne ne suit
 URL : https://exec-ia.ai/perspective-shadow-ia-charte-comite-direction.html
 
-← Toutes les Perspectives
-Perspectives • Shadow IA
+← Tous les articles
+Blog • Shadow IA
 Une politique IA que ses
 dirigeants ne respectent pas
 n’est plus une politique.
@@ -2048,8 +2048,8 @@ Passer de la réflexion à l’action : découvrir les offres EXEC’IA →
 ## EXEC'IA · Toutes les décisions ne se délèguent pas
 URL : https://exec-ia.ai/perspective-toutes-decisions-ne-se-deleguent-pas.html
 
-← Toutes les Perspectives
-★ Perspectives • Décision
+← Tous les articles
+★ Blog • Décision
 Toutes les décisions
 ne se délèguent pas.
 Même à une IA .
@@ -2213,8 +2213,8 @@ Passer de la réflexion à l’action : découvrir les offres EXEC’IA →
 ## EXEC'IA · La transformation IA échoue rarement
 URL : https://exec-ia.ai/perspective-transformation-echoue-rarement-technologie.html
 
-← Toutes les Perspectives
-Perspectives • Transformation
+← Tous les articles
+Blog • Transformation
 La transformation IA
 échoue rarement à cause
 de la technologie.
@@ -2380,8 +2380,8 @@ Passer de la réflexion à l’action : découvrir les offres EXEC’IA →
 ## EXEC'IA · Tri de CV par IA : qui relit les candidatures écartées ?
 URL : https://exec-ia.ai/perspective-tri-cv-ia-candidatures-ecartees.html
 
-← Toutes les Perspectives
-Perspectives • Recrutement
+← Tous les articles
+Blog • Recrutement
 Tri de CV par IA : qui relit
 les candidatures écartées ?
 7 octobre 2026
@@ -2534,10 +2534,10 @@ Passer de la réflexion à l’action : découvrir les offres EXEC’IA →
 
 ---
 
-## EXEC'IA · Perspectives : IA et décision pour dirigeants de PME
+## EXEC'IA · Blog : IA et décision pour dirigeants de PME
 URL : https://exec-ia.ai/perspectives.html
 
-Perspectives
+Blog
 Un regard sur l’ IA façonné par des années au plus près des dirigeants.
 Gouvernance, décision, transformation, création de valeur : des réflexions approfondies ici pour prendre du recul sur ce que l’IA change réellement dans votre entreprise.
 Gouvernance
@@ -2637,8 +2637,8 @@ Découvrir les offres EXEC’IA →
 ## EXEC'IA · The Orélien affair: tomorrow, your teams will have to prove their work
 URL : https://exec-ia.ai/perspective-affaire-orelien-preuve-travail-en.html
 
-← All Perspectives
-★ Perspectives • The Orélien affair
+← All articles
+★ Blog • The Orélien affair
 The Orélien affair: tomorrow, your teams
 will have to prove their work
 Article developed from my LinkedIn post ( 1 October 2026 )
@@ -2784,8 +2784,8 @@ Discuss your situation →
 ## EXEC'IA · AI agents: should you hire them like employees?
 URL : https://exec-ia.ai/perspective-agents-ia-recruter-comme-salarie-en.html
 
-← All Perspectives
-Perspectives • AI agents
+← All articles
+Blog • AI agents
 AI agents: should you hire them
 like employees?
 Article developed from my LinkedIn post ( 09/10/2026 )
@@ -2898,8 +2898,8 @@ Discuss your situation →
 ## EXEC'IA · Buy-in matters more than the AI budget
 URL : https://exec-ia.ai/perspective-budget-ia-adhesion-equipes-en.html
 
-← All Perspectives
-Perspectives • Buy-in
+← All articles
+Blog • Buy-in
 The AI budget is not the issue.
 Buy-in is.
 September 25, 2026
@@ -3066,8 +3066,8 @@ Discuss your situation →
 ## EXEC'IA · Chatbot: knowing when to hand over
 URL : https://exec-ia.ai/perspective-chatbot-savoir-passer-la-main-en.html
 
-← All Perspectives
-Perspectives • Customer relations
+← All articles
+Blog • Customer relations
 Air France’s chatbot answers
 a share of requests alone.
 For the rest, it knows
@@ -3244,8 +3244,8 @@ Discuss your situation →
 ## EXEC'IA · An AI recorder in the management meeting: who decided that?
 URL : https://exec-ia.ai/perspective-enregistreur-ia-reunion-direction-en.html
 
-← All Perspectives
-Perspectives • Governance
+← All articles
+Blog • Governance
 An AI recorder in the management meeting: who decided that?
 Short version →
 SME leaders: AI recorders are entering management meetings, often with no rules, because they save precious time.
@@ -3421,11 +3421,11 @@ Discuss your situation →
 
 ---
 
-## EXEC'IA · Perspectives: adopting AI is not creating value
+## EXEC'IA · Blog: adopting AI is not creating value
 URL : https://exec-ia.ai/perspective-entreprise-utilise-deja-ia-en.html
 
-← All Perspectives
-★ Perspectives • Governance
+← All articles
+★ Blog • Governance
 Adopting AI is one thing.
 Creating value from it
 is another.
@@ -3619,8 +3619,8 @@ Discuss your situation →
 ## EXEC'IA · AI giants now move in with their clients. What about your SME?
 URL : https://exec-ia.ai/perspective-forward-deployed-engineer-pme-en.html
 
-← All Perspectives
-Perspectives • Deployment
+← All articles
+Blog • Deployment
 AI giants now move in with their clients.
 What about your SME?
 Short version →
@@ -3802,8 +3802,8 @@ Discuss your situation →
 ## EXEC'IA · When a leader leaves, how do you keep their knowledge?
 URL : https://exec-ia.ai/perspective-jumeau-numerique-savoir-dirigeant-en.html
 
-← All Perspectives
-Perspectives • Succession
+← All articles
+Blog • Succession
 When a leader leaves,
 how do you keep their knowledge?
 Article developed from my LinkedIn post ( 13/10/2026 )
@@ -3952,8 +3952,8 @@ Discuss your situation →
 ## EXEC'IA · More AI tools, not more impact
 URL : https://exec-ia.ai/perspective-probleme-nest-pas-outils-mais-arbitrage-en.html
 
-← All Perspectives
-Perspectives • Value creation
+← All articles
+Blog • Value creation
 More AI tools do not
 mean more impact.
 It is not a tools problem.
@@ -4116,8 +4116,8 @@ Discuss your situation →
 ## EXEC'IA · Can your AI project be funded?
 URL : https://exec-ia.ai/perspective-projet-ia-peut-il-etre-finance-en.html
 
-← All Perspectives
-Perspectives • Funding
+← All articles
+Blog • Funding
 Can your AI project be funded?
 Yes, but not necessarily
 the one you have in mind.
@@ -4310,8 +4310,8 @@ Discuss your situation →
 ## EXEC'IA · Humanoid robots and the token tax: which tasks go first
 URL : https://exec-ia.ai/perspective-robots-humanoides-token-tax-en.html
 
-← All Perspectives
-Perspectives • Humanoid robots
+← All articles
+Blog • Humanoid robots
 Humanoid robots: which tasks
 will go first?
 October 6, 2026
@@ -4485,8 +4485,8 @@ Discuss your situation →
 ## EXEC'IA · Shadow AI: the policy nobody follows
 URL : https://exec-ia.ai/perspective-shadow-ia-charte-comite-direction-en.html
 
-← All Perspectives
-Perspectives • Shadow AI
+← All articles
+Blog • Shadow AI
 An AI policy that its own
 leaders do not follow
 is no longer a policy.
@@ -4679,11 +4679,11 @@ Discuss your situation →
 
 ---
 
-## EXEC'IA · Perspectives: Not every decision can be delegated
+## EXEC'IA · Blog: Not every decision can be delegated
 URL : https://exec-ia.ai/perspective-toutes-decisions-ne-se-deleguent-pas-en.html
 
-← All Perspectives
-★ Perspectives • Decision
+← All articles
+★ Blog • Decision
 Not every decision
 can be delegated.
 Not even to an AI .
@@ -4847,8 +4847,8 @@ Discuss your situation →
 ## EXEC'IA · AI transformation rarely fails
 URL : https://exec-ia.ai/perspective-transformation-echoue-rarement-technologie-en.html
 
-← All Perspectives
-Perspectives • Transformation
+← All articles
+Blog • Transformation
 AI transformation rarely fails
 because of the technology.
 It fails when the organisation
@@ -5012,8 +5012,8 @@ Discuss your situation →
 ## EXEC'IA · AI CV screening: who rereads the rejected applications?
 URL : https://exec-ia.ai/perspective-tri-cv-ia-candidatures-ecartees-en.html
 
-← All Perspectives
-Perspectives • Recruitment
+← All articles
+Blog • Recruitment
 AI CV screening: who rereads
 the rejected applications?
 7 October 2026
@@ -5166,10 +5166,10 @@ Discuss your situation →
 
 ---
 
-## EXEC'IA · Perspectives: AI and decision-making for SME leaders
+## EXEC'IA · Blog: AI and decision-making for SME leaders
 URL : https://exec-ia.ai/perspectives-en.html
 
-Perspectives
+Blog
 A view on AI shaped by years spent close to executives.
 Governance, decision-making, transformation, value creation: reflections shared on LinkedIn and explored further here to step back and see what AI actually changes inside your company.
 Governance
@@ -5269,8 +5269,8 @@ See the EXEC’IA offers →
 ## EXEC'IA · El caso Orélien: mañana, sus equipos tendrán que demostrar su trabajo
 URL : https://exec-ia.ai/perspective-affaire-orelien-preuve-travail-es.html
 
-← Todas las Perspectives
-★ Perspectives • El caso Orélien
+← Todas las Blog
+★ Blog • El caso Orélien
 El caso Orélien: mañana, sus equipos
 tendrán que demostrar su trabajo
 Artículo desarrollado a partir de mi publicación en LinkedIn ( 01/10/2026 )
@@ -5416,8 +5416,8 @@ Hablemos de su situación →
 ## EXEC'IA · Agentes de IA: ¿hay que contratarlos como a un empleado?
 URL : https://exec-ia.ai/perspective-agents-ia-recruter-comme-salarie-es.html
 
-← Todas las Perspectives
-Perspectivas • Agentes de IA
+← Todas las Blog
+Blog • Agentes de IA
 Agentes de IA : ¿hay que contratarlos
 como a un empleado?
 Artículo desarrollado a partir de mi publicación en LinkedIn ( 09/10/2026 )
@@ -5530,8 +5530,8 @@ Hablemos de su situación →
 ## EXEC'IA · La adhesión pesa más que el presupuesto de IA
 URL : https://exec-ia.ai/perspective-budget-ia-adhesion-equipes-es.html
 
-← Todas las Perspectives
-Perspectives • Adhesión
+← Todas las Blog
+Blog • Adhesión
 El presupuesto de IA
 no es el tema.
 La adhesión, sí.
@@ -5698,8 +5698,8 @@ Hablemos de su situación →
 ## EXEC'IA · Chatbot: saber pasar el relevo
 URL : https://exec-ia.ai/perspective-chatbot-savoir-passer-la-main-es.html
 
-← Todas las Perspectives
-Perspectives • Relación con el cliente
+← Todas las Blog
+Blog • Relación con el cliente
 El chatbot de Air France
 responde solo a una partede las consultas.
 El resto, sabe pasarlo
@@ -5876,8 +5876,8 @@ Hablemos de su situación →
 ## EXEC'IA · Una grabadora de IA en el comité de dirección: ¿quién lo decidió?
 URL : https://exec-ia.ai/perspective-enregistreur-ia-reunion-direction-es.html
 
-← Todas las Perspectives
-Perspectivas • Gobernanza
+← Todas las Blog
+Blog • Gobernanza
 Una grabadora de IA en el comité de dirección: ¿quién lo decidió?
 Versión breve →
 Directivos de pymes: las grabadoras de IA entran en las reuniones de dirección, a menudo sin reglas, porque ahorran un tiempo precioso.
@@ -6053,11 +6053,11 @@ Hablemos de su situación →
 
 ---
 
-## EXEC'IA · Perspectives: adoptar la IA no es crear valor
+## EXEC'IA · Blog: adoptar la IA no es crear valor
 URL : https://exec-ia.ai/perspective-entreprise-utilise-deja-ia-es.html
 
-← Todas las Perspectives
-★ Perspectives • Gobernanza
+← Todas las Blog
+★ Blog • Gobernanza
 Adoptar la IA es una cosa.
 Crear valor con ella,
 otra muy distinta.
@@ -6251,8 +6251,8 @@ Hablemos de su situación →
 ## EXEC'IA · Los gigantes de la IA se instalan en casa de sus clientes. ¿Y su pyme?
 URL : https://exec-ia.ai/perspective-forward-deployed-engineer-pme-es.html
 
-← Todas las Perspectives
-Perspectivas • Despliegue
+← Todas las Blog
+Blog • Despliegue
 Los gigantes de la IA se instalan en casa de sus clientes.
 ¿Y su pyme?
 Versión breve →
@@ -6434,8 +6434,8 @@ Hablemos de su situación →
 ## EXEC'IA · Cuando el directivo se va, ¿cómo conservar su saber?
 URL : https://exec-ia.ai/perspective-jumeau-numerique-savoir-dirigeant-es.html
 
-← Todas las Perspectives
-Perspectivas • Transmisión
+← Todas las Blog
+Blog • Transmisión
 Cuando el directivo se va,
 ¿cómo conservar su saber?
 Artículo desarrollado a partir de mi publicación en LinkedIn ( 13/10/2026 )
@@ -6581,11 +6581,11 @@ Hablemos de su situación →
 
 ---
 
-## EXEC'IA · Perspectives: más herramientas, no más impacto
+## EXEC'IA · Blog: más herramientas, no más impacto
 URL : https://exec-ia.ai/perspective-probleme-nest-pas-outils-mais-arbitrage-es.html
 
-← Todas las Perspectives
-Perspectives • Creación de valor
+← Todas las Blog
+Blog • Creación de valor
 Más herramientas de IA
 no significa más impacto.
 No es un problema de herramientas.
@@ -6748,8 +6748,8 @@ Hablemos de su situación →
 ## EXEC'IA · ¿Se puede financiar su proyecto de IA?
 URL : https://exec-ia.ai/perspective-projet-ia-peut-il-etre-finance-es.html
 
-← Todas las Perspectives
-Perspectives • Financiación
+← Todas las Blog
+Blog • Financiación
 ¿Se puede financiar su proyecto de IA ?
 Sí, pero no necesariamente
 el que usted imagina.
@@ -6942,8 +6942,8 @@ Hablemos de su situación →
 ## EXEC'IA · Robots humanoides y token tax: qué tareas confiarles
 URL : https://exec-ia.ai/perspective-robots-humanoides-token-tax-es.html
 
-← Todas las Perspectives
-Perspectives • Robots humanoides
+← Todas las Blog
+Blog • Robots humanoides
 Robots humanoides: ¿qué tareas
 se irán primero?
 6 de octubre de 2026
@@ -7117,8 +7117,8 @@ Hablemos de su situación →
 ## EXEC'IA · Shadow IA: la política que nadie cumple
 URL : https://exec-ia.ai/perspective-shadow-ia-charte-comite-direction-es.html
 
-← Todas las Perspectives
-Perspectives • Shadow IA
+← Todas las Blog
+Blog • Shadow IA
 Una política de IA que sus
 directivos no respetan
 deja de ser una política.
@@ -7311,8 +7311,8 @@ Hablemos de su situación →
 ## EXEC'IA · No todas las decisiones se delegan
 URL : https://exec-ia.ai/perspective-toutes-decisions-ne-se-deleguent-pas-es.html
 
-← Todas las Perspectives
-★ Perspectives • Decisión
+← Todas las Blog
+★ Blog • Decisión
 No todas las decisiones
 se delegan.
 Ni siquiera en una IA .
@@ -7475,8 +7475,8 @@ Hablemos de su situación →
 ## EXEC'IA · La transformación con IA rara vez falla
 URL : https://exec-ia.ai/perspective-transformation-echoue-rarement-technologie-es.html
 
-← Todas las Perspectives
-Perspectives • Transformación
+← Todas las Blog
+Blog • Transformación
 La transformación con IA
 rara vez fracasa por la tecnología.
 Fracasa cuando la organización
@@ -7640,8 +7640,8 @@ Hablemos de su situación →
 ## EXEC'IA · Cribado de CV con IA: ¿quién relee las candidaturas descartadas?
 URL : https://exec-ia.ai/perspective-tri-cv-ia-candidatures-ecartees-es.html
 
-← Todas las Perspectives
-Perspectives • Selección de personal
+← Todas las Blog
+Blog • Selección de personal
 Cribado de CV con IA : ¿quién relee
 las candidaturas descartadas?
 7 de octubre de 2026
@@ -7794,10 +7794,10 @@ Hablemos de su situación →
 
 ---
 
-## EXEC'IA · Perspectives: IA y decisión para directivos de pymes
+## EXEC'IA · Blog: IA y decisión para directivos de pymes
 URL : https://exec-ia.ai/perspectives-es.html
 
-Perspectives
+Blog
 Una mirada sobre la IA forjada por años junto a los directivos.
 Gobernanza, decisión, transformación, creación de valor: reflexiones compartidas en LinkedIn y profundizadas aquí para tomar distancia y entender lo que la IA cambia realmente en su empresa.
 Gobernanza
