@@ -8049,3 +8049,5 @@ p :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl, .ink-accent-fixed, .art-chip, .
   .agent-card, .agent-card > * { max-width: 100% !important; min-width: 0 !important; box-sizing: border-box; }
   .agent-card img, .agent-img img { max-width: 100%; height: auto; }
 }
+/* Titre d'accueil (toutes langues) : pas de mot seul sur une ligne */
+h1.hero-sub { text-wrap: balance; }
