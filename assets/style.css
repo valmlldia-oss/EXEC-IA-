@@ -8035,3 +8035,10 @@ p :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl, .ink-accent-fixed, .art-chip, .
 .about-cta-title .about-cta-break { display: none; }
 /* Accueil : le hero s'aligne sur le bord gauche du logo (au lieu d'être décalé de ~60 px vers la droite) */
 @media (min-width: 1025px) { #hero > .hero-wrap { padding-left: 24px; } }
+/* Pied de page téléphone : liens du site empilés, liste Blog pleine largeur (plus écrasée à droite) */
+@media (max-width: 760px) {
+  .footer-col--site { columns: 1 !important; display: block; }
+  .footer-col--site > a { display: block; margin: 0 0 8px; }
+  .footer-persp-grid { display: grid !important; grid-template-columns: 1fr !important; width: 100%; gap: 6px !important; }
+  .footer-persp-grid a.footer-persp-link { white-space: normal !important; }
+}
