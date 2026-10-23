@@ -8033,3 +8033,5 @@ p :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl, .ink-accent-fixed, .art-chip, .
 /* Titre de fin (« Votre entreprise a son propre point de départ ») : pas de mot seul sur une ligne */
 .about-cta-title { text-wrap: balance; }
 .about-cta-title .about-cta-break { display: none; }
+/* Accueil : le hero s'aligne sur le bord gauche du logo (au lieu d'être décalé de ~60 px vers la droite) */
+@media (min-width: 1025px) { #hero > .hero-wrap { padding-left: 24px; } }

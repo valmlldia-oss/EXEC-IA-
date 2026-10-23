@@ -6825,3 +6825,4 @@ p :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl, .ink-accent-fixed, .art-chip, .
 }
 .about-cta-title { text-wrap: balance; }
 .about-cta-title .about-cta-break { display: none; }
+@media (min-width: 1025px) { #hero > .hero-wrap { padding-left: 24px; } }
