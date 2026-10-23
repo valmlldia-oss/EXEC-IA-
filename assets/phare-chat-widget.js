@@ -29,7 +29,7 @@
     '#phare-send{border:none;background:#C75F62;color:#FAF6F2;padding:0 16px;font:inherit;font-size:.88rem;font-weight:600;cursor:pointer}',
     '#phare-send[disabled]{opacity:.6;cursor:default}'
 ,
-    '#phare-bubble::after{content:attr(data-label);position:absolute;right:calc(100% + 12px);top:50%;transform:translateY(-50%);white-space:nowrap;background:#FAF6F2;color:#633B4A;border:1px solid #D9C9C3;border-radius:999px;padding:6px 14px;font-family:Inter,system-ui,sans-serif;font-size:.8rem;font-weight:500;box-shadow:0 6px 20px rgba(99,59,74,.18);pointer-events:none}',
+    '#phare-bubble::after{content:attr(data-label);position:absolute;width:auto;min-width:max-content;height:auto;right:calc(100% + 12px);top:50%;transform:translateY(-50%);white-space:nowrap;background:#FAF6F2;color:#633B4A;border:1px solid #D9C9C3;border-radius:999px;padding:6px 14px;font-family:Inter,system-ui,sans-serif;font-size:.8rem;font-weight:500;box-shadow:0 6px 20px rgba(99,59,74,.18);pointer-events:none}',
     'body:has(.cookie-banner.visible) #phare-bubble,body:has(.cookie-banner.visible) #phare-panel{display:none}'
   ].join('');
   var st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);
