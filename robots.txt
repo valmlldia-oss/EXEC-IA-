@@ -6,8 +6,7 @@ Disallow: /brevo-en-cours.html
 # Points d'entrée techniques des formulaires (réponse 405 à une simple visite) : à ne pas explorer
 Disallow: /api/
 
-# Robots d'entraînement de modèles IA (pas de citation) : bloqués au niveau Cloudflare.
-# Déclaré ici pour que robots.txt reflète honnêtement la politique appliquée.
+# Robots d'entraînement de modèles IA : bloqués (pas de citation, pas d'usage de vos textes pour entraîner les modèles).
 User-agent: GPTBot
 Disallow: /
 
@@ -22,5 +21,24 @@ Disallow: /
 
 User-agent: Bytespider
 Disallow: /
+
+# Robots de recherche et de réponse IA : autorisés (ce sont eux qui peuvent citer le site dans une réponse).
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
 
 Sitemap: https://exec-ia.ai/sitemap.xml

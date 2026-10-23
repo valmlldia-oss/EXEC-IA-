@@ -1420,7 +1420,7 @@ border-radius: 6px;
 -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px);
 box-shadow: 0 14px 34px rgba(99,59,74,.05);
 }
-.pilier-star { color: #BFA06A; font-size: 1.6rem; line-height: 1; margin-bottom: 8px; }
+.pilier-star { color: #C9A227; font-size: 1.6rem; line-height: 1; margin-bottom: 8px; }
 .pilier-title {
 color: var(--rose); font-family: var(--sans);
 font-size: 1.28rem; font-weight: 500; line-height: 1.32; letter-spacing: .005em;
@@ -6873,3 +6873,13 @@ p, li, figcaption, blockquote { text-wrap: pretty; }
 .footer-linkedin-btn { min-height: 44px; }
 .nav-burger { min-width: 44px; }
 .pilier-btn { min-height: 44px; }
+@media (max-width: 760px) {
+.footer-persp-link, .agent-pill, .article-meta, .nav-lang, .footer-col-title, .persp-card-meta,
+.cookie-btn, .eyebrow, .agent-desc, .ss-label, .ss-cert-tag, .ve-col-label, .agent-eyebrow-txt,
+.xcard-tag, .offre-price-ht, .footer-signature, .cookie-cat-always, .constat-flip-cue-txt,
+.cookie-switch-state { font-size: 13px !important; }
+}
+@media (min-width: 1401px) {
+.footer-col--site { max-width: 600px !important; }
+.footer-persp-grid { width: 560px !important; max-width: none !important; }
+}
