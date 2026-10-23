@@ -456,7 +456,7 @@ Automatiser une demande fréquente, ça libère du temps.
 Savoir répartir le reste, c’est ça, le vrai savoir-faire.
 Pourquoi la passation compte-t-elle autant que l’automatisation ?
 Parce que votre client ne juge pas la technologie. Il juge son parcours.
-Vous pouvez réussir 30 % des demandes en automatique et tout perdre sur une seule passation ratée : celle où le client doit tout répéter à un conseiller qui ne sait rien de l’échange précédent.
+Vous pouvez réussir les demandes simples en automatique et tout perdre sur une seule passation ratée : celle où le client doit tout répéter à un conseiller qui ne sait rien de l’échange précédent.
 Une bonne passation transmet le contexte : ce que le client a demandé, ce que l’outil a répondu, ce qui reste à résoudre. Le conseiller reprend la conversation là où elle s’est arrêtée.
 Pour l’entreprise, c’est un détail d’organisation. Pour le client, c’est toute la différence entre « on s’occupe de moi » et « je recommence à zéro ».
 Quelles demandes ne jamais automatiser de bout en bout ?
