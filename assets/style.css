@@ -8161,3 +8161,8 @@ p, li, figcaption, blockquote { text-wrap: pretty; }
   .footer-col--site { max-width: 600px !important; }
   .footer-persp-grid { width: 560px !important; max-width: none !important; }
 }
+
+/* Bandeau des chiffres (accueil, ordinateur) : il part du bord gauche du contenu, comme le logo */
+@media (min-width: 1025px) {
+  .stats-strip--hero .wrap { max-width: none; }
+}

@@ -6924,3 +6924,6 @@ p, li, figcaption, blockquote { text-wrap: pretty; }
 .footer-col--site { max-width: 600px !important; }
 .footer-persp-grid { width: 560px !important; max-width: none !important; }
 }
+@media (min-width: 1025px) {
+.stats-strip--hero .wrap { max-width: none; }
+}
