@@ -6812,7 +6812,7 @@ h1 .aiact-ref, h1 .rgpd-b { font-weight: 400 !important; }
 @media (min-width: 1025px) { .conviction-title { white-space: nowrap; } }
 @media (min-width: 1025px) { .conviction-section .conviction-title { display: block; text-align: center; margin-left: auto; margin-right: auto; } }
 .footer-loc, .footer-legal, .footer-copy, .footer-bottom, .article-author-bio { color: #633B4A !important; opacity: 1 !important; }
-.art-star { color: #8C6D1F !important; }
+.art-star { color: #C9A227 !important; }
 .btn-rose, .cookie-btn--accept, #phare-bubble, #qw-bubble, #phare-send, #qw-send, .nav-lang.active, .nav-lang[aria-current="true"] { background-color: #A84D50 !important; }
 .persp-card-read, .article-tldr-arrow, a.persp-all-link, .article-related-title, .portrait-link-arrow, .persp-card-meta { color: #633B4A !important; }
 .eyebrow, [class*="eyebrow"], .acc-num, .acc-icon, .offre-web-tier-price, .aiact-key, .nl-req, .pilier-title, .constat-flip-cue-txt, .ve-col-num, .offre-niveau, .offre-approche-num, .ooc-arrow, .roi-sv, .stat-ref, .agent-visit-link, .aiact-tl-date, .rgpd-b, .art-qlist-accent, .web-testi-author, .cookie-cat-always, .num-accent { color: #633B4A !important; }
@@ -6854,3 +6854,10 @@ h1.hero-sub { text-wrap: balance; }
 h1.expertise-hero-title { text-wrap: balance; }
 .footer-persp-grid a.footer-persp-link { display: block; line-height: 1.4; }
 .footer-persp-grid .art-star { position: static !important; transform: none !important; margin-right: .35em; display: inline; }
+.footer-brand .footer-tag-lead, .footer-brand .footer-tag-rest { white-space: normal !important; display: inline; }
+.footer-brand .footer-tag-lead { font-size: clamp(1.7rem, 2.1vw, 2.1rem) !important; }
+.footer-brand .footer-tag-rest { font-size: clamp(1.3rem, 1.6vw, 1.6rem) !important; }
+@media (min-width: 1251px) {
+.site-footer { grid-template-columns: minmax(300px, 1fr) minmax(0, auto) minmax(0, auto) minmax(0, auto) !important; }
+.footer-col--site { max-width: 420px; }
+}

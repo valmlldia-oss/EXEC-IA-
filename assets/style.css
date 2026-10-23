@@ -8015,7 +8015,7 @@ h1 .aiact-ref, h1 .rgpd-b { font-weight: 400 !important; }
 @media (min-width: 1025px) { .conviction-section .conviction-title { display: block; text-align: center; margin-left: auto; margin-right: auto; } }
 /* Contraste : mentions et coordonnées du pied de page, bio d'auteur en prune plein ; étoiles dorées plus foncées */
 .footer-loc, .footer-legal, .footer-copy, .footer-bottom, .article-author-bio { color: #633B4A !important; opacity: 1 !important; }
-.art-star { color: #8C6D1F !important; }
+.art-star { color: #C9A227 !important; }
 /* Boutons terracotta à texte ivoire : fond #A84D50 (ivoire lisible, 5:1) */
 .btn-rose, .cookie-btn--accept, #phare-bubble, #qw-bubble, #phare-send, #qw-send, .nav-lang.active, .nav-lang[aria-current="true"] { background-color: #A84D50 !important; }
 /* Liens terracotta de petite taille sur fond clair : prune plein (titres et accents « IA » gardés en terracotta) */
@@ -8072,3 +8072,13 @@ h1.expertise-hero-title { text-wrap: balance; }
 /* Pied de page, liste Blog : étoile dans le flux du texte (plus de décalage des lignes) */
 .footer-persp-grid a.footer-persp-link { display: block; line-height: 1.4; }
 .footer-persp-grid .art-star { position: static !important; transform: none !important; margin-right: .35em; display: inline; }
+/* Pied de page : slogan (toutes langues) sur plusieurs lignes, sans débordement sur la colonne « Le site » */
+.footer-brand .footer-tag-lead, .footer-brand .footer-tag-rest { white-space: normal !important; display: inline; }
+.footer-brand .footer-tag-lead { font-size: clamp(1.7rem, 2.1vw, 2.1rem) !important; }
+.footer-brand .footer-tag-rest { font-size: clamp(1.3rem, 1.6vw, 1.6rem) !important; }
+
+/* Pied de page (grand écran) : le slogan a une vraie colonne, il ne chevauche plus « Le site » */
+@media (min-width: 1251px) {
+  .site-footer { grid-template-columns: minmax(300px, 1fr) minmax(0, auto) minmax(0, auto) minmax(0, auto) !important; }
+  .footer-col--site { max-width: 420px; }
+}
