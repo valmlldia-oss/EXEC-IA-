@@ -3170,7 +3170,7 @@ margin: 0;
 border-left: 3px solid var(--rose);
 padding-left: 22px;
 }
-.expertise-hero-title .ehg-rose { font-style: italic; color: #633B4A; }
+.expertise-hero-title .ehg-rose { font-style: italic; color: #C75F62; }
 .expertise-hero-lead {
 font-family: var(--sans);
 font-size: clamp(1.25rem, 1.9vw, 1.55rem);
@@ -3178,13 +3178,13 @@ font-weight: 400;
 line-height: 1.6;
 color: rgba(99,59,74,.85);
 margin: 26px 0 0;
-padding-left: 25px;
+padding-left: 0;
 }
 .expertise-hero-lead .ehg-rose { color: var(--rose); }
 .expertise-hero-lead strong { font-weight: 600; }
 .expertise-hero-cta {
 margin-top: clamp(56px, 11vh, 110px);
-margin-left: 25px;
+margin-left: 0;
 align-self: flex-start;
 padding: 14px 28px;
 border: 1px solid rgba(199, 95, 98, .5);
@@ -6864,3 +6864,4 @@ h1.expertise-hero-title { text-wrap: balance; }
 h1, h2, h3 { text-wrap: balance; }
 p, li, figcaption, blockquote { text-wrap: pretty; }
 .hero-cta-link, summary, .semi-600, .pourquoi-conclusion, .aiact-toc-label { color: #A84D50 !important; }
+.ia-rose { color: #C75F62 !important; }
