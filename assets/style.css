@@ -8023,3 +8023,13 @@ h1 .aiact-ref, h1 .rgpd-b { font-weight: 400 !important; }
 main a:not([class*="btn"]):not([class*="nav"]):not([class*="cookie"]):not([class*="footer"]):not([class*="persp-card"]):not([class*="hero"]) { color: #633B4A !important; }
 /* Mots importants (accents « IA », repères, étoiles) dans le texte : semi-gras 500, pas plus */
 p :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl, .ink-accent-fixed, .art-chip, .art-star, .rgpd-b, .aiact-key), li :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl, .ink-accent-fixed, .art-chip, .art-star, .rgpd-b, .aiact-key) { font-weight: 500 !important; }
+/* Pied de page : la liste Blog ne doit plus pousser les colonnes hors écran (titres qui passent à la ligne, colonnes contraintes) */
+@media (min-width: 761px) {
+  .footer-persp-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important; column-gap: 18px !important; }
+  .footer-persp-grid a.footer-persp-link { white-space: normal !important; }
+  .footer-col--site { min-width: 0; max-width: 100%; }
+  .site-footer { grid-template-columns: minmax(0, 1fr) minmax(0, auto) minmax(0, auto) minmax(0, auto) !important; }
+}
+/* Titre de fin (« Votre entreprise a son propre point de départ ») : pas de mot seul sur une ligne */
+.about-cta-title { text-wrap: balance; }
+.about-cta-title .about-cta-break { display: none; }
