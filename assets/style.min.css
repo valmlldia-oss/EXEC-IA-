@@ -6861,3 +6861,5 @@ h1.expertise-hero-title { text-wrap: balance; }
 .site-footer { grid-template-columns: minmax(300px, 1fr) minmax(0, auto) minmax(0, auto) minmax(0, auto) !important; }
 .footer-col--site { max-width: 420px; }
 }
+h1, h2, h3 { text-wrap: balance; }
+p, li, figcaption, blockquote { text-wrap: pretty; }
