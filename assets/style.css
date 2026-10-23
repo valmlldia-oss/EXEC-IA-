@@ -8021,5 +8021,5 @@ h1 .aiact-ref, h1 .rgpd-b { font-weight: 400 !important; }
 /* Libellés et liens terracotta de petite taille sur fond clair : prune (boutons, navigation, titres et accents « IA » inchangés) */
 .eyebrow, [class*="eyebrow"], .acc-num, .acc-icon, .offre-web-tier-price, .aiact-key, .nl-req, .pilier-title, .constat-flip-cue-txt, .ve-col-num, .offre-niveau, .offre-approche-num, .ooc-arrow, .roi-sv, .stat-ref, .agent-visit-link, .aiact-tl-date, .rgpd-b, .art-qlist-accent, .web-testi-author, .cookie-cat-always, .num-accent { color: #633B4A !important; }
 main a:not([class*="btn"]):not([class*="nav"]):not([class*="cookie"]):not([class*="footer"]):not([class*="persp-card"]):not([class*="hero"]) { color: #633B4A !important; }
-/* Mots importants (accents « IA », repères, étoiles) dans le texte : semi-gras 600, pas plus */
-p :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl, .ink-accent-fixed, .art-chip, .art-star, .rgpd-b, .aiact-key), li :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl, .ink-accent-fixed, .art-chip, .art-star, .rgpd-b, .aiact-key) { font-weight: 600 !important; }
+/* Mots importants (accents « IA », repères, étoiles) dans le texte : semi-gras 500, pas plus */
+p :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl, .ink-accent-fixed, .art-chip, .art-star, .rgpd-b, .aiact-key), li :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl, .ink-accent-fixed, .art-chip, .art-star, .rgpd-b, .aiact-key) { font-weight: 500 !important; }
