@@ -359,7 +359,7 @@ color: var(--plum); margin-bottom: 32px;
 font-weight: 400;
 }
 @media (max-width: 900px){.ce-que-section{ padding: var(--section-gap) 0; }}
-.portrait-link-arrow{ transition: transform .2s var(--ease); display: inline-block; }
+.portrait-link-arrow{ transition: transform .2s var(--ease); display: inline-block; margin-left: 8px; }
 .persp-track{
 display: flex; gap: 1.25rem;
 width: max-content;
@@ -1121,7 +1121,7 @@ white-space: normal !important;
 .diagnostic-section{ background: var(--white); }
 .diag-title{
 margin-bottom: 10px;
-font-family: var(--sans);
+font-family: var(--serif);
 font-weight: 400;
 font-size: clamp(2.2rem, 3.8vw, 3rem);
 letter-spacing: -.01em;
@@ -1420,6 +1420,7 @@ color: var(--text); margin: 16px 0 0; max-width: 62ch; text-align: left;
 text-wrap: pretty;
 }
 .zone-pin{ margin-right: .35em; }
+@media (min-width: 641px){.zone-line, .about-cta-inner .zone-line{ max-width: none; white-space: nowrap !important; }}
 .footer-signature{
 font-family: var(--sans); font-size: .76rem; font-weight: 600;
 letter-spacing: .18em; text-transform: uppercase;
@@ -1495,7 +1496,8 @@ line-height: 1.1 !important;
 :is(h1, h2) :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl){ color: #C75F62 !important; }
 .section-title, .slide-title, .conviction-title, .diag-title{ font-weight: 500 !important; }
 .conviction-title{ text-wrap: balance; }
-@media (min-width: 1025px){.conviction-section .conviction-title{ display: block; text-align: center; margin-left: auto; margin-right: auto; }}
+@media (min-width: 1025px){.conviction-title .conv-l1{ white-space: nowrap; }}
+@media (min-width: 1025px){.conviction-section .conviction-title{ display: block; width: max-content; text-align: center; margin-left: 50%; transform: translateX(-50%); }}
 .footer-loc, .footer-legal, .footer-copy, .footer-bottom, .article-author-bio{ color: #633B4A !important; opacity: 1 !important; }
 .art-star{ color: #C9A227 !important; }
 .btn-rose, .cookie-btn--accept, #qw-bubble, #phare-send, #qw-send, .nav-lang.active, .nav-lang[aria-current="true"]{ background-color: #C75F62 !important; }
@@ -1655,7 +1657,7 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
   <div class="conviction-band" aria-hidden="true"></div>
   <div class="wrap conviction-inner reveal">
     <span class="eyebrow">Una convicción</span>
-    <h1 class="section-title slide-title conviction-title">La tecnología no crea valor.<br><span class="ink-accent">Los usos, sí.</span></h1>
+    <h1 class="section-title slide-title conviction-title"><span class="conv-l1">La tecnología no crea valor.</span><br><span class="ink-accent">Los usos, sí.</span></h1>
 
     <div class="stat-figure">
       <p class="stat-number">Más del 80%<span class="stat-ref">(*)</span></p>

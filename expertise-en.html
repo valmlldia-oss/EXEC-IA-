@@ -375,7 +375,7 @@ font-weight: 400;
 }
 @media (max-width: 900px){.ce-que-section{ padding: var(--section-gap) 0; }}
 .portrait-link{
-display: inline-flex; align-items: center; gap: 8px;
+display: inline-flex; align-items: center; gap: 0;
 font-family: var(--sans); font-size: 1rem; font-weight: 500;
 color: var(--rose); letter-spacing: .02em;
 margin-top: 2px;
@@ -384,7 +384,8 @@ transition: opacity .2s;
 }
 @media (max-width: 480px){.portrait-link{ white-space: normal; }}
 .portrait-link:hover{ opacity: .75; }
-.portrait-link-arrow{ transition: transform .2s var(--ease); display: inline-block; }
+.portrait-link-arrow{ transition: transform .2s var(--ease); display: inline-block; margin-left: 8px; }
+.portrait-link .ia-rose{ margin-left: 0; }
 .portrait-link:hover .portrait-link-arrow{ transform: translateX(4px); }
 .portrait-link .portrait-link-arrow{ animation: hero-cta-nudge 5s ease-in-out infinite; }
 .portrait-link:hover .portrait-link-arrow{ animation: none; }

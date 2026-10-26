@@ -999,7 +999,7 @@ section { padding: var(--section-gap) 0; }
   color: #633B4A; margin: 0; line-height: 1.3;
 }
 .portrait-link {
-  display: inline-flex; align-items: center; gap: 8px;
+  display: inline-flex; align-items: center; gap: 0;
   font-family: var(--sans); font-size: 1rem; font-weight: 500;
   color: var(--rose); letter-spacing: .02em;
   margin-top: 2px;
@@ -1010,7 +1010,9 @@ section { padding: var(--section-gap) 0; }
   .portrait-link { white-space: normal; }
 }
 .portrait-link:hover { opacity: .75; }
-.portrait-link-arrow { transition: transform .2s var(--ease); display: inline-block; }
+.portrait-link-arrow { transition: transform .2s var(--ease); display: inline-block; margin-left: 8px; }
+/* « EXEC’IA » reste soudé : l'espace ne s'applique qu'avant la flèche */
+.portrait-link .ia-rose { margin-left: 0; }
 .portrait-link:hover .portrait-link-arrow { transform: translateX(4px); }
 /* Discret rappel visuel périodique, cohérent avec le lien de téléchargement du Hero */
 .portrait-link .portrait-link-arrow { animation: hero-cta-nudge 5s ease-in-out infinite; }
@@ -6536,7 +6538,7 @@ body.cookie-banner-open .hero-cta { transition: margin-bottom .3s ease; }
 .diagnostic-section { background: var(--white); }
 .diag-title {
   margin-bottom: 10px;
-  font-family: var(--sans);
+  font-family: var(--serif);
   font-weight: 400;
   font-size: clamp(2.2rem, 3.8vw, 3rem);
   letter-spacing: -.01em;
@@ -7666,6 +7668,11 @@ body.cookie-modal-open { overflow: hidden; }
 }
 .about-cta-inner .zone-line { margin: 18px auto 0; text-align: center; text-wrap: balance; }
 .zone-pin { margin-right: .35em; }
+/* Titre de la carte McKinsey : une seule ligne sur ordinateur */
+@media (min-width: 1025px) { .tl-item h3.tl-title--1l { white-space: nowrap; font-size: 1.18rem; } }
+/* Sur ordinateur, la phrase de zone tient sur une seule ligne */
+@media (min-width: 641px) { .zone-line, .about-cta-inner .zone-line { max-width: none; white-space: nowrap !important; } }
+@media (min-width: 641px) { .about-cta-inner .zone-line { width: max-content; margin-left: 50%; transform: translateX(-50%); } }
 /* Signature EXEC'IA (pied de page, toutes les pages · FR/EN/ES) */
 .footer-signature {
   font-family: var(--sans); font-size: .76rem; font-weight: 600;
@@ -8056,7 +8063,9 @@ h1 .aiact-ref, h1 .rgpd-b { font-weight: 400 !important; }
 .section-title, .slide-title, .conviction-title, .diag-title { font-weight: 500 !important; }
 /* Slide « La technologie ne crée pas la valeur » : centré, revient à la ligne (plus de débordement hors écran) */
 .conviction-title { text-wrap: balance; }
-@media (min-width: 1025px) { .conviction-section .conviction-title { display: block; text-align: center; margin-left: auto; margin-right: auto; } }
+/* Première phrase de la conviction sur une seule ligne ; « Les usages, oui. » passe à la ligne (ordinateur) */
+@media (min-width: 1025px) { .conviction-title .conv-l1 { white-space: nowrap; } }
+@media (min-width: 1025px) { .conviction-section .conviction-title { display: block; width: max-content; text-align: center; margin-left: 50%; transform: translateX(-50%); } }
 /* Contraste : mentions et coordonnées du pied de page, bio d'auteur en prune plein ; étoiles dorées plus foncées */
 .footer-loc, .footer-legal, .footer-copy, .footer-bottom, .article-author-bio { color: #633B4A !important; opacity: 1 !important; }
 .art-star { color: #C9A227 !important; }

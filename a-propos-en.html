@@ -307,7 +307,7 @@ font-weight: 400;
 }
 @media (max-width: 900px){.ce-que-section{ padding: var(--section-gap) 0; }}
 .portrait-link{
-display: inline-flex; align-items: center; gap: 8px;
+display: inline-flex; align-items: center; gap: 0;
 font-family: var(--sans); font-size: 1rem; font-weight: 500;
 color: var(--rose); letter-spacing: .02em;
 margin-top: 2px;
@@ -316,7 +316,8 @@ transition: opacity .2s;
 }
 @media (max-width: 480px){.portrait-link{ white-space: normal; }}
 .portrait-link:hover{ opacity: .75; }
-.portrait-link-arrow{ transition: transform .2s var(--ease); display: inline-block; }
+.portrait-link-arrow{ transition: transform .2s var(--ease); display: inline-block; margin-left: 8px; }
+.portrait-link .ia-rose{ margin-left: 0; }
 .portrait-link:hover .portrait-link-arrow{ transform: translateX(4px); }
 .portrait-link .portrait-link-arrow{ animation: hero-cta-nudge 5s ease-in-out infinite; }
 .portrait-link:hover .portrait-link-arrow{ animation: none; }
@@ -1525,6 +1526,9 @@ text-wrap: pretty;
 }
 .about-cta-inner .zone-line{ margin: 18px auto 0; text-align: center; text-wrap: balance; }
 .zone-pin{ margin-right: .35em; }
+@media (min-width: 1025px){.tl-item h3.tl-title--1l{ white-space: nowrap; font-size: 1.18rem; }}
+@media (min-width: 641px){.zone-line, .about-cta-inner .zone-line{ max-width: none; white-space: nowrap !important; }}
+@media (min-width: 641px){.about-cta-inner .zone-line{ width: max-content; margin-left: 50%; transform: translateX(-50%); }}
 .footer-signature{
 font-family: var(--sans); font-size: .76rem; font-weight: 600;
 letter-spacing: .18em; text-transform: uppercase;
@@ -1994,7 +1998,7 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
       </div>
 
       <div class="tl-item reveal delay-1">
-        <h3>McKinsey &amp; Company · 18 years</h3>
+        <h3 class="tl-title--1l">McKinsey &amp; Company · 18 years</h3>
         <p>Executive coordination &amp; communications for the Alumni network (&gt;&nbsp;1,000 people)</p>
       </div>
 
