@@ -8052,8 +8052,8 @@ h1 .hero-sub-focal, h1 .hero-sub-focal.s3 { font-size: inherit !important; }
 h1 .aiact-ref, h1 .rgpd-b { font-weight: 400 !important; }
 /* Titres de section : graisse 500 (comme « Plus de 80 % »), « La technologie ne crée pas la valeur. » sur une seule ligne sur ordinateur */
 .section-title, .slide-title, .conviction-title, .diag-title { font-weight: 500 !important; }
-@media (min-width: 1025px) { .conviction-title { white-space: nowrap; } }
-/* Slide « La technologie ne crée pas la valeur » : centré sur la largeur de la présentation */
+/* Slide « La technologie ne crée pas la valeur » : centré, revient à la ligne (plus de débordement hors écran) */
+.conviction-title { text-wrap: balance; }
 @media (min-width: 1025px) { .conviction-section .conviction-title { display: block; text-align: center; margin-left: auto; margin-right: auto; } }
 /* Contraste : mentions et coordonnées du pied de page, bio d'auteur en prune plein ; étoiles dorées plus foncées */
 .footer-loc, .footer-legal, .footer-copy, .footer-bottom, .article-author-bio { color: #633B4A !important; opacity: 1 !important; }
