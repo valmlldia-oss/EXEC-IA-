@@ -8063,6 +8063,8 @@ h1 .aiact-ref, h1 .rgpd-b { font-weight: 400 !important; }
 .section-title, .slide-title, .conviction-title, .diag-title { font-weight: 500 !important; }
 /* Slide « La technologie ne crée pas la valeur » : centré, revient à la ligne (plus de débordement hors écran) */
 .conviction-title { text-wrap: balance; }
+/* « Travaillons ensemble » et « Voilà pourquoi… » : même police que le diagnostic (Cormorant, 500) */
+#contact .section-title.diag-title, #questions .section-title.diag-title { font-family: var(--serif); font-weight: 500; line-height: 1.1; }
 /* Première phrase de la conviction sur une seule ligne ; « Les usages, oui. » passe à la ligne (ordinateur) */
 @media (min-width: 1025px) { .conviction-title .conv-l1 { white-space: nowrap; } }
 @media (min-width: 1025px) { .conviction-section .conviction-title { display: block; width: max-content; text-align: center; margin-left: 50%; transform: translateX(-50%); } }
