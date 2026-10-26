@@ -7982,7 +7982,9 @@ section:has(+ .verbes-band) .mon-approche-content .portrait-link { margin-bottom
 .s18 { list-style:none;margin:8px 0 18px;padding:0;display:grid;gap:8px !important; }
 .s19 { font-size:.88rem; color: rgba(99,59,74,.85); margin-top: 20px; !important; }
 .s20 { font-size:clamp(1.0486rem, 1.2305vw, 1.1235rem) !important; }
-.s21 { color:var(--plum);font-weight:600 !important; }
+.s21 { color:var(--plum);font-weight:500 !important; }
+/* « EXEC’IA » en tête de la phrase : « IA » au même poids que le reste du nom */
+.s21 .ia-rose { font-weight:500 !important; }
 .s22 { margin-bottom:20px !important; }
 .s23 { margin-top:14px;margin-bottom:32px !important; }
 .s24 { margin-bottom:-3px !important; }
