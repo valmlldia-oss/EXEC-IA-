@@ -35,5 +35,5 @@
 <text x="247.5" y="250.0" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="23" fill="#633B4A">measure and</text>
 <text x="247.5" y="276.0" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="23" fill="#633B4A">correct</text>
 <text x="560" y="388" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="32" font-weight="600" fill="#633B4A">An AI agent</text>
-<text x="560" y="418" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="24" fill="#633B4A">decision loop</text>
+<text x="560" y="418" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="24" fill="#633B4A">Decision loop</text>
 </svg>
