@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 880" role="img" aria-label="Cycle d'un agent IA en six étapes : percevoir, raisonner, planifier, coordonner avec l'humain, agir, apprendre, puis retour à percevoir.">
-<defs><marker id="fl" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#633B4A"/></marker></defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 900" role="img" aria-label="Cycle d'un agent IA en six étapes : percevoir, raisonner, planifier, coordonner avec l'humain, agir, apprendre, puis retour à percevoir.">
+<defs><marker id="fl" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#633B4A"/></marker></defs><text x="560" y="44" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="30" font-weight="600" fill="#633B4A">Le cycle d'un agent IA, de la perception à l'apprentissage</text><g transform="translate(0 70)">
 <rect width="1120" height="770" fill="#FAF6F2"/>
 <path d="M652.0 159.5 A250 250 0 0 1 715.3 196.1" fill="none" stroke="#633B4A" stroke-width="2.5" marker-end="url(#fl)"/>
 <path d="M807.3 355.4 A250 250 0 0 1 807.3 428.6" fill="none" stroke="#633B4A" stroke-width="2.5" marker-end="url(#fl)"/>
@@ -36,4 +36,4 @@
 <text x="247.5" y="276.0" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="23" fill="#633B4A">corriger</text>
 <text x="560" y="388" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="32" font-weight="600" fill="#633B4A">Un agent IA</text>
 <text x="560" y="418" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="24" fill="#633B4A">Boucle de décision</text>
-<line x1="500" y1="762" x2="620" y2="762" stroke="#C75F62" stroke-width="2"/><text x="560" y="806" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="22" fill="#633B4A">Le cycle d'un agent IA, de la perception à l'apprentissage.</text><text x="560" y="838" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" fill="#633B4A">Inspiré du guide <tspan style="text-decoration:underline">Snowflake</tspan>, « A practical guide to AI agents » (2025).</text></svg>
+<text x="560" y="812" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" fill="#633B4A">Inspiré du guide <tspan style="text-decoration:underline">Snowflake</tspan>, « A Practical Guide to AI Agents » (2025).</text></g></svg>
