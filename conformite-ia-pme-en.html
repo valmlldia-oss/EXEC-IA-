@@ -1467,7 +1467,7 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
         <span class="aiact-frame-tag">Upcoming or&nbsp;postponed</span>
         <ol class="aiact-timeline">
           <li class="aiact-tl-item aiact-tl-item--pending">
-            <div class="aiact-tl-head"><time class="aiact-tl-date"><span class="date-b">2&nbsp;December 2026</span></time></div><p class="aiact-countdown" data-target="2026-12-02T00:00:00+01:00" style="margin:6px 0 0;font-size:.9rem;color:#633B4A">Countdown: <strong style="font-weight:600;color:#C75F62">2 December 2026</strong></p>
+            <div class="aiact-tl-head"><time class="aiact-tl-date"><span class="date-b">2&nbsp;December 2026</span></time></div><p class="aiact-countdown" data-target="2026-12-02T00:00:00+01:00" style="margin:6px 0 0;font-size:.9rem;color:#633B4A"><strong style="font-weight:600;color:#C75F62">D-34</strong></p>
             <p class="aiact-tl-text">Two new prohibited practices (Art.&nbsp;5): non-consensual intimate deepfakes, <span class="aiact-ia"><span class="ia-rose">AI</span></span>-generated child sexual abuse material, introduced by&nbsp;amending Regulation&nbsp;(EU)&nbsp;2026/1744</p>
           </li>
           <li class="aiact-tl-item aiact-tl-item--pending">
@@ -1694,6 +1694,6 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
 </div>
 <script src="assets/chat-widget.js?v=9" defer></script>
 <script src="assets/phare-chat-widget.js?v=11" defer></script>
-<script>(function(){var el=document.querySelector(".aiact-countdown");if(!el)return;var target=new Date(el.getAttribute("data-target"));var n=el.querySelector("strong");function upd(){var d=Math.ceil((target-new Date())/86400000);if(d>0){n.textContent="Only "+d+" days left";}else{el.textContent="In force since 2 December 2026.";}}upd();setInterval(upd,3600000);})();</script>
+<script>(function(){var el=document.querySelector(".aiact-countdown");if(!el)return;var target=new Date(el.getAttribute("data-target"));var n=el.querySelector("strong");function upd(){var d=Math.ceil((target-new Date())/86400000);if(d>0){n.textContent="D-"+d;}else{el.textContent="In force since 2 December 2026.";}}upd();setInterval(upd,3600000);})();</script>
 </body>
 </html>
