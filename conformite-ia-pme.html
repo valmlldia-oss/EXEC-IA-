@@ -1469,7 +1469,7 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
         <span class="aiact-frame-tag">À&nbsp;venir ou&nbsp;reporté</span>
         <ol class="aiact-timeline">
           <li class="aiact-tl-item aiact-tl-item--pending">
-            <div class="aiact-tl-head"><time class="aiact-tl-date"><span class="date-b">2&nbsp;décembre 2026</span></time></div>
+            <div class="aiact-tl-head"><time class="aiact-tl-date"><span class="date-b">2&nbsp;décembre 2026</span></time></div><p class="aiact-countdown" data-target="2026-12-02T00:00:00+01:00" style="margin:6px 0 0;font-size:.9rem;color:#633B4A">Compte à rebours : <strong style="font-weight:600;color:#C75F62">2 décembre 2026</strong></p>
             <p class="aiact-tl-text">Deux nouvelles pratiques interdites (art.&nbsp;5)&nbsp;: deepfakes à&nbsp;caractère intime non&nbsp;consentis, contenus de&nbsp;pédopornographie générés par&nbsp;<span class="aiact-ia"><span class="ia-rose">IA</span></span>, introduites par&nbsp;le règlement&nbsp;modificatif&nbsp;(UE)&nbsp;2026/1744</p>
           </li>
           <li class="aiact-tl-item aiact-tl-item--pending">
@@ -1696,5 +1696,6 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
 </div>
 <script src="assets/chat-widget.js?v=9" defer></script>
 <script src="assets/phare-chat-widget.js?v=11" defer></script>
+<script>(function(){var el=document.querySelector(".aiact-countdown");if(!el)return;var target=new Date(el.getAttribute("data-target"));var n=el.querySelector("strong");function upd(){var d=Math.ceil((target-new Date())/86400000);if(d>0){n.textContent="J-"+d+" jours";}else{el.textContent="En vigueur depuis le 2 décembre 2026.";}}upd();setInterval(upd,3600000);})();</script>
 </body>
 </html>
