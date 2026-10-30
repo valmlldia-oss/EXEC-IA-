@@ -1956,7 +1956,10 @@ padding-left: calc(max(0px, (100vw - 1240px) / 2) + 24px - clamp(16px, 2vw, 32px
 .footer-col--site{ display: block; }
 .footer-col--site > .footer-col-title{ display: block; margin-bottom: 10px; }
 .footer-col--site > a{ display: inline-block; }
-.footer-col--site > a + a::before{ content: "|"; display: inline-block; margin: 0 .6em; color: #C75F62; }
+.footer-col--site > a{ white-space: nowrap; }
+.footer-col--site > a::after{ content: "|"; display: inline; margin: 0 .6em; color: #C75F62; }
+.footer-col--site > a:last-of-type::after{ content: none; }
+.footer-col--site > .footer-persp-grid{ margin-top: 18px; }
 @media (min-width: 900px){.footer-grid > .footer-col--site{ grid-column: 2 / -1; max-width: none; }}
 .site-footer .footer-bottom .footer-rights{ display: none; }
 .site-footer .footer-bottom .footer-copy{ white-space: nowrap; }
