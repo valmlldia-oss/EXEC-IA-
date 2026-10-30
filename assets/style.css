@@ -606,7 +606,7 @@ strong, b { font-weight: 600; }
 .hero-sub-focal { font-size: clamp(2.8rem, 5vw, 4.05rem); display: inline-block; }
 /* Sur ordinateur : « Direction Générale. » plus grand et en italique (ligne focale du hero) */
 @media (min-width: 900px) {
-  body h1 .hero-sub-focal.s3 { font-size: clamp(2.4rem, 6.2vw, 5.4rem) !important; line-height: 1.02; font-style: italic; }
+  body h1 .hero-sub-focal.s3 { font-size: calc(1em + 2px) !important; line-height: 1.02; font-style: italic; }
 }
 .hero-sub2 {
   font-family: var(--sans);
@@ -8203,7 +8203,7 @@ p, li, figcaption, blockquote { text-wrap: pretty; }
 .footer-col--site > a { white-space: nowrap; }
 .footer-col--site > a::after { content: "|"; display: inline; margin: 0 .6em; color: #C75F62; }
 .footer-col--site > a:last-of-type::after { content: none; }
-.footer-col--site > .footer-persp-grid { margin-top: 18px; }
+.footer-col--site > .footer-persp-grid { margin-top: 18px; margin-bottom: 28px; }
 @media (min-width: 900px) {
   .footer-grid > .footer-col--site { grid-column: 2 / -1; max-width: none; }
 }
