@@ -27,7 +27,7 @@
     '#qw-status{font-size:.85rem;line-height:1.5}',
     '.qw-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}'
 ,
-    '#qw-bubble::after{content:attr(data-label);position:absolute;width:auto;min-width:max-content;height:auto;right:calc(100% + 12px);top:50%;transform:translateY(-50%);white-space:nowrap;background:#FAF6F2;color:#633B4A;border:1px solid #D9C9C3;border-radius:999px;padding:6px 14px;font-family:Inter,system-ui,sans-serif;font-size:.8rem;font-weight:500;box-shadow:0 6px 20px rgba(99,59,74,.18);pointer-events:none}',
+    '#qw-bubble::after{content:attr(data-label);position:absolute;width:auto;min-width:max-content;height:auto;right:calc(100% + 6px);top:50%;transform:translateY(-50%);white-space:nowrap;background:#FAF6F2;color:#633B4A;border:1px solid #D9C9C3;border-radius:999px;padding:6px 14px;font-family:Inter,system-ui,sans-serif;font-size:.8rem;font-weight:500;box-shadow:0 6px 20px rgba(99,59,74,.18);pointer-events:none}',
     'body:has(.cookie-banner.visible) #qw-bubble,body:has(.cookie-banner.visible) #qw-panel{display:none}'
   ].join('');
   var st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);

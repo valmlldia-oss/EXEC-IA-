@@ -8195,3 +8195,16 @@ p, li, figcaption, blockquote { text-wrap: pretty; }
   .stats-strip--hero .ss-grid > .ss-item:first-child { align-items: flex-start; }
   .stats-strip--hero .ss-grid > .ss-item:first-child .ss-num { justify-content: flex-start; }
 }
+
+/* Footer : liens du site sur une ligne, séparés par des barres */
+.footer-col--site { display: block; }
+.footer-col--site > .footer-col-title { display: block; margin-bottom: 10px; }
+.footer-col--site > a { display: inline-block; }
+.footer-col--site > a + a::before { content: "|"; display: inline-block; margin: 0 .6em; color: #C75F62; }
+@media (min-width: 900px) {
+  .footer-grid > .footer-col--site { grid-column: 2 / -1; max-width: none; }
+}
+/* Footer : copyright et droits réservés sur une seule ligne */
+.site-footer .footer-bottom .footer-rights { display: none; }
+.site-footer .footer-bottom .footer-copy { white-space: nowrap; }
+.site-footer .footer-bottom .footer-copy::after { content: " · Tous droits réservés"; }
