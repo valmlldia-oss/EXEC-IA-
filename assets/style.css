@@ -604,6 +604,10 @@ strong, b { font-weight: 600; }
 }
 /* Point focal du Hero — taille exceptionnelle réservée à cette seule ligne */
 .hero-sub-focal { font-size: clamp(2.8rem, 5vw, 4.05rem); display: inline-block; }
+/* Sur ordinateur : « Direction Générale. » plus grand et en italique (ligne focale du hero) */
+@media (min-width: 900px) {
+  body h1 .hero-sub-focal.s3 { font-size: clamp(2.4rem, 6.2vw, 5.4rem) !important; line-height: 1.02; font-style: italic; }
+}
 .hero-sub2 {
   font-family: var(--sans);
   /* -6% puis -6% supplémentaire : seul élément qui concurrençait encore le H1 */

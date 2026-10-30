@@ -491,6 +491,9 @@ padding-left: 22px;
 animation: slideup .9s var(--ease) .28s both;
 }
 .hero-sub-focal { font-size: clamp(2.8rem, 5vw, 4.05rem); display: inline-block; }
+@media (min-width: 900px) {
+body h1 .hero-sub-focal.s3 { font-size: clamp(2.4rem, 6.2vw, 5.4rem) !important; line-height: 1.02; font-style: italic; }
+}
 .hero-sub2 {
 font-family: var(--sans);
 font-size: clamp(1.1rem, 1.67vw, 1.37rem);
