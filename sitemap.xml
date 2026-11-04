@@ -170,6 +170,10 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://exec-ia.ai/temoignages.html"/>
   </url>
   <url>
+    <loc>https://exec-ia.ai/articles.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
     <loc>https://exec-ia.ai/perspectives.html</loc>
     <lastmod>2026-10-07</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://exec-ia.ai/perspectives.html"/>
