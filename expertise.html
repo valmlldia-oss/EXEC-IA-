@@ -542,6 +542,7 @@ display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
 .jumeau-cards{ display: flex; flex-direction: column; gap: 24px; min-width: 0; }
 .jumeau-steps{ padding-left: 1.2em; margin: 0 0 10px; font-size: .9rem; line-height: 1.75; color: var(--text); }
 .jumeau-steps li{ margin-bottom: 8px; }
+.jumeau-note{ max-width: 640px; margin: 32px auto 0; padding: 0 1.5rem; text-align: center; font-family: var(--serif); font-size: 1.15rem; line-height: 1.6; color: var(--plum); }
 .jumeau-cta{ text-align: center; margin-top: 28px; padding-bottom: 8px; }
 @media (max-width: 768px){ .jumeau-grid{ grid-template-columns: 1fr; } }
 .xcard{
@@ -2577,15 +2578,16 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
       <div class="xcard">
         <h3>Une mise en œuvre rigoureuse</h3>
         <ol class="jumeau-steps">
-          <li><strong style="font-weight:600">Capitalisation&nbsp;:</strong> dix entretiens approfondis pour recueillir les décisions structurantes.</li>
+          <li><strong style="font-weight:600">Capitalisation&nbsp;:</strong> des entretiens approfondis pour recueillir les décisions structurantes.</li>
           <li><strong style="font-weight:600">Validation&nbsp;:</strong> chaque transcription est relue et approuvée par le dirigeant.</li>
           <li><strong style="font-weight:600">Mise à l&#8217;épreuve&nbsp;:</strong> des questions réelles permettent de tester la pertinence des réponses avec le successeur.</li>
           <li><strong style="font-weight:600">Actualisation&nbsp;:</strong> la mémoire est enrichie chaque trimestre jusqu&#8217;au départ.</li>
         </ol>
-        <p>Un audit de cadrage est obligatoire avant toute mise en service.<br>Sans ce cadrage, aucune garantie.</p>
       </div>
     </div>
   </div>
+
+  <p class="jumeau-note reveal">Un audit de cadrage est obligatoire avant toute mise en service.<br>Sans ce cadrage, aucune garantie.</p>
 
   <div class="jumeau-cta reveal">
     <a href="https://calendly.com/exec-ia" target="_blank" rel="noopener" class="btn btn-rose questions-cta-btn">Réserver un échange <span class="btn-arrow">→</span></a>
