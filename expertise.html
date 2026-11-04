@@ -536,6 +536,14 @@ transition: border-color .25s, box-shadow .25s;
 .cards-grid{
 display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
 }
+.jumeau-grid{ display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 24px; align-items: stretch; max-width: 1080px; margin: 8px auto 0; padding: 0 1.5rem; }
+.jumeau-figure{ margin: 0; border: 1.5px solid var(--plum); border-radius: 1.25rem; overflow: hidden; box-shadow: 0 4px 24px rgba(99,59,74,.12); }
+.jumeau-figure img{ display: block; width: 100%; height: 100%; object-fit: cover; }
+.jumeau-cards{ display: flex; flex-direction: column; gap: 24px; min-width: 0; }
+.jumeau-steps{ padding-left: 1.2em; margin: 0 0 10px; font-size: .9rem; line-height: 1.75; color: var(--text); }
+.jumeau-steps li{ margin-bottom: 8px; }
+.jumeau-cta{ text-align: center; margin-top: 28px; padding-bottom: 8px; }
+@media (max-width: 768px){ .jumeau-grid{ grid-template-columns: 1fr; } }
 .xcard{
 background: var(--ivory); border-radius: 18px; padding: 18px 22px;
 border-top: 3px solid var(--plum);
@@ -2541,14 +2549,23 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
 </details>
 </section>
 <!-- ═══ LE JUMEAU NUMÉRIQUE DU DIRIGEANT ═══════════════════════ -->
-<section id="jumeau-numerique" class="bg-white snap-page expertise-page-rule">
-  <div class="wrap">
-    <span class="eyebrow reveal">Sur-mesure</span>
-    <h2 class="section-title reveal delay-1">Le Jumeau numérique du dirigeant</h2>
-    <p class="ce-que-intro reveal s12">Un espace personnel, construit pour un seul dirigeant.<br>Il mémorise son contexte et ses décisions, sans remplacer <span class="ink-accent">VIGIE</span> ni <span class="ink-accent">TRAME</span>.</p>
-    <figure class="reveal delay-1" style="margin:32px auto;max-width:460px"><img src="assets/perspectives/jumeau-numerique-section.webp" width="1092" height="830" loading="lazy" decoding="async" alt="Un dirigeant de profil face à son jumeau numérique, figuré en réseau de lumière, relié à un ordinateur portable et à des icônes de décision" style="width:100%;height:auto;display:block;border-radius:6px"></figure>
-    <div class="cards-grid">
-      <div class="xcard reveal delay-1">
+<section id="jumeau-numerique" class="agents-section snap-page">
+  <div class="agents-header reveal">
+    <p class="agents-v2-eyebrow">Initiative <span class="ia-rose">IA</span></p>
+    <h2 class="agents-title"><span class="agents-plum">Le Jumeau</span> <span class="agents-rose">numérique du dirigeant</span></h2>
+  </div>
+
+  <div class="agents-team-caption-block reveal">
+    <p class="agents-team-title">Un espace personnel, construit pour <span class="agents-team-tc">un seul dirigeant</span>.</p>
+    <p class="web-intro">Il mémorise son contexte et ses décisions, sans remplacer VIGIE ni TRAME.</p>
+  </div>
+
+  <div class="jumeau-grid reveal">
+    <figure class="jumeau-figure">
+      <img src="assets/perspectives/jumeau-numerique-section.webp" width="1092" height="830" loading="lazy" decoding="async" alt="Un dirigeant de profil face à son jumeau numérique, figuré en réseau de lumière, relié à un ordinateur portable et à des icônes de décision">
+    </figure>
+    <div class="jumeau-cards">
+      <div class="xcard">
         <h3>Ce qu&#8217;il fait</h3>
         <ul class="s0">
           <li class="row-baseline"><span class="ink-accent-fixed">✓</span><span>Mémorise le contexte et les décisions.</span></li>
@@ -2557,18 +2574,21 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
           <li class="row-baseline"><span class="ink-accent-fixed">✓</span><span>S&#8217;adapte à la façon d&#8217;écrire du dirigeant.</span></li>
         </ul>
       </div>
-      <div class="xcard reveal delay-2">
+      <div class="xcard">
         <h3>Comment ça démarre</h3>
-        <ol class="s0" style="padding-left:1.2em">
-          <li class="row-baseline" style="margin-bottom:8px">Dix entretiens d&#8217;une heure sur les décisions qui ont façonné l&#8217;entreprise.</li>
-          <li class="row-baseline" style="margin-bottom:8px">Chaque transcription est relue et validée par le dirigeant.</li>
-          <li class="row-baseline" style="margin-bottom:8px">Un test avec le successeur, sur des questions réelles.</li>
-          <li class="row-baseline" style="margin-bottom:8px">Une mémoire enrichie chaque trimestre, jusqu&#8217;au départ.</li>
+        <ol class="jumeau-steps">
+          <li>Dix entretiens d&#8217;une heure sur les décisions qui ont façonné l&#8217;entreprise.</li>
+          <li>Chaque transcription est relue et validée par le dirigeant.</li>
+          <li>Un test avec le successeur, sur des questions réelles.</li>
+          <li>Une mémoire enrichie chaque trimestre, jusqu&#8217;au départ.</li>
         </ol>
         <p>Un audit de cadrage est obligatoire avant toute mise en service.<br>Sans ce cadrage, aucune garantie.</p>
       </div>
     </div>
-    <p class="reveal" style="margin-top:32px"><a href="https://calendly.com/exec-ia" target="_blank" rel="noopener" class="btn btn-rose questions-cta-btn">Réserver un échange <span class="btn-arrow">→</span></a></p>
+  </div>
+
+  <div class="jumeau-cta reveal">
+    <a href="https://calendly.com/exec-ia" target="_blank" rel="noopener" class="btn btn-rose questions-cta-btn">Réserver un échange <span class="btn-arrow">→</span></a>
   </div>
 </section>
 
