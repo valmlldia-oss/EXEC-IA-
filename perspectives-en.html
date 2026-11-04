@@ -1373,6 +1373,12 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
 .site-footer .footer-bottom .footer-copy::after{ content: " · Tous droits réservés"; }
 html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · All rights reserved"; }
 </style>
+<style id="footer-contact-gauche">
+@media (min-width: 1251px){
+  .footer-grid > .footer-col--contact{ grid-column: 2; grid-row: 1; }
+  .footer-grid > .footer-col--site{ grid-column: 3 / -1; grid-row: 1; }
+}
+</style>
 </head>
 <body><a class="skip-link" href="#contenu">Skip to content</a>
 
