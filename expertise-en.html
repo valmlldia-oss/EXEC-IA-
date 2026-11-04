@@ -536,6 +536,15 @@ transition: border-color .25s, box-shadow .25s;
 .cards-grid{
 display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
 }
+.jumeau-grid{ display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 24px; align-items: stretch; max-width: 1080px; margin: 8px auto 0; padding: 0 1.5rem; }
+.jumeau-figure{ margin: 0; align-self: center; border: 1.5px solid var(--plum); border-radius: 1.25rem; overflow: hidden; box-shadow: 0 4px 24px rgba(99,59,74,.12); }
+.jumeau-figure img{ display: block; width: 100%; height: auto; aspect-ratio: 1092 / 830; object-fit: cover; object-position: 50% 50%; }
+.jumeau-cards{ display: flex; flex-direction: column; gap: 24px; min-width: 0; }
+.jumeau-steps{ padding-left: 1.2em; margin: 0 0 10px; font-size: .9rem; line-height: 1.75; color: var(--text); }
+.jumeau-steps li{ margin-bottom: 8px; }
+.jumeau-note{ max-width: 640px; margin: 32px auto 0; padding: 0 1.5rem; text-align: center; font-family: var(--serif); font-size: 1.15rem; line-height: 1.6; color: var(--plum); }
+.jumeau-cta{ text-align: center; margin-top: 28px; padding-bottom: 8px; }
+@media (max-width: 768px){ .jumeau-grid{ grid-template-columns: 1fr; } }
 .xcard{
 background: var(--ivory); border-radius: 18px; padding: 18px 22px;
 border-top: 3px solid var(--plum);
@@ -2277,7 +2286,7 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
           </div>
           <details class="agent-more">
             <summary class="agent-cta"><span>Discover SENTRY</span> <span class="portrait-link-arrow">→</span></summary>
-            <p class="agent-desc-full">SENTRY is your <span class="ia-rose">AI</span> executive assistant, designed for a leader who does not have time to learn artificial intelligence. Each morning, it sorts what truly deserves your attention, prepares your meetings from your calendar and recent exchanges, and delivers a clear summary before you even open your inbox. You keep control of every decision: SENTRY handles the sorting.</p>
+            <p class="agent-desc-full">SENTRY is your <span class="ia-rose">AI</span> executive assistant, designed for a leader who does not have time to learn artificial intelligence. Each morning, it sorts what truly deserves your attention, prepares your meetings from your calendar and recent exchanges, and delivers a clear summary before you even open your inbox. You keep control of every decision: SENTRY handles the sorting. Want it to know your context, your files and how you decide too? Discover the <a href="#jumeau-numerique">leader’s digital twin</a>.</p>
           </details>
         </div>
       </div>
@@ -2377,7 +2386,7 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
           </div>
           <details class="agent-more">
             <summary class="agent-cta"><span>Discover THREAD</span> <span class="portrait-link-arrow">→</span></summary>
-            <p class="agent-desc-full">THREAD is your <span class="ia-rose">AI</span> meeting-notes and knowledge agent, designed so no decision gets lost between two meetings. It writes your meeting notes, lets you retrieve a past decision or exchange within seconds, and tracks commitments through to closure. You keep the memory of every decision: THREAD handles the record-keeping.</p>
+            <p class="agent-desc-full">THREAD is your <span class="ia-rose">AI</span> meeting-notes and knowledge agent, designed so no decision gets lost between two meetings. It writes your meeting notes, lets you retrieve a past decision or exchange within seconds, and tracks commitments through to closure. You keep the memory of every decision: THREAD handles the record-keeping. Want this memory to extend across your whole business? Discover the <a href="#jumeau-numerique">leader’s digital twin</a>.</p>
           </details>
         </div>
       </div>
@@ -2551,6 +2560,52 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
   </ol>
 </details>
 </section>
+<!-- ═══ THE LEADER'S DIGITAL TWIN ═══════════════════════ -->
+<section id="jumeau-numerique" class="agents-section snap-page">
+  <div class="agents-header reveal">
+    <p class="agents-v2-eyebrow"><span class="ia-rose">AI</span> Initiative</p>
+    <h2 class="agents-title"><span class="agents-plum">The leader’s</span> <span class="agents-rose">digital twin</span></h2>
+  </div>
+
+  <div class="agents-team-caption-block reveal">
+    <p class="agents-team-title">A strategic memory, built around <span class="agents-team-tc">a single leader</span>.</p>
+    <p class="web-intro">A decision memory that preserves context, trade-offs and continuity of leadership.</p>
+  </div>
+
+  <div class="jumeau-grid reveal">
+    <figure class="jumeau-figure">
+      <img src="assets/perspectives/jumeau-numerique-section.webp" width="1092" height="830" loading="lazy" decoding="async" alt="A leader in profile facing their digital twin, drawn as a network of light, linked to a laptop and decision icons">
+    </figure>
+    <div class="jumeau-cards">
+      <div class="xcard">
+        <h3>Intelligence in the service of decisions</h3>
+        <ul class="s0">
+          <li class="row-baseline"><span class="ink-accent-fixed">✓</span><span><strong style="font-weight:600">Strategic memory:</strong> captures the leader’s context and trade-offs.</span></li>
+          <li class="row-baseline"><span class="ink-accent-fixed">✓</span><span><strong style="font-weight:600">Anticipation:</strong> prepares priorities and points to watch.</span></li>
+          <li class="row-baseline"><span class="ink-accent-fixed">✓</span><span><strong style="font-weight:600">Executive continuity:</strong> structures reports and follow-ups.</span></li>
+          <li class="row-baseline"><span class="ink-accent-fixed">✓</span><span><strong style="font-weight:600">Personalisation:</strong> adapts to the leader’s writing preferences.</span></li>
+        </ul>
+      </div>
+      <div class="xcard">
+        <h3>Rigorous implementation</h3>
+        <ol class="jumeau-steps">
+          <li><strong style="font-weight:600">Capture:</strong> in-depth interviews to record the decisions that shaped the company.</li>
+          <li><strong style="font-weight:600">Validation:</strong> every transcript is reviewed and approved by the leader.</li>
+          <li><strong style="font-weight:600">Stress test:</strong> real questions check the answers with the successor.</li>
+          <li><strong style="font-weight:600">Update:</strong> the memory is enriched every quarter until departure.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <p class="jumeau-note reveal">A scoping audit is mandatory before any go-live.<br>Without this scoping, no guarantee.</p>
+
+  <div class="jumeau-cta reveal">
+    <a href="https://calendly.com/exec-ia" target="_blank" rel="noopener" class="btn btn-rose questions-cta-btn">Book a conversation <span class="btn-arrow">→</span></a>
+    <p class="jumeau-more"><a href="perspective-jumeau-numerique-savoir-dirigeant-en.html" class="portrait-link">Read the article: “When a leader leaves, how do you keep their knowledge?” <span class="portrait-link-arrow">→</span></a></p>
+  </div>
+</section>
+
 <section id="webcreation" class="agents-section snap-page">
   <div class="agents-header reveal">
     <p class="agents-v2-eyebrow"><span class="ia-rose">AI</span> Initiative</p>

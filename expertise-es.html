@@ -536,6 +536,15 @@ transition: border-color .25s, box-shadow .25s;
 .cards-grid{
 display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
 }
+.jumeau-grid{ display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 24px; align-items: stretch; max-width: 1080px; margin: 8px auto 0; padding: 0 1.5rem; }
+.jumeau-figure{ margin: 0; align-self: center; border: 1.5px solid var(--plum); border-radius: 1.25rem; overflow: hidden; box-shadow: 0 4px 24px rgba(99,59,74,.12); }
+.jumeau-figure img{ display: block; width: 100%; height: auto; aspect-ratio: 1092 / 830; object-fit: cover; object-position: 50% 50%; }
+.jumeau-cards{ display: flex; flex-direction: column; gap: 24px; min-width: 0; }
+.jumeau-steps{ padding-left: 1.2em; margin: 0 0 10px; font-size: .9rem; line-height: 1.75; color: var(--text); }
+.jumeau-steps li{ margin-bottom: 8px; }
+.jumeau-note{ max-width: 640px; margin: 32px auto 0; padding: 0 1.5rem; text-align: center; font-family: var(--serif); font-size: 1.15rem; line-height: 1.6; color: var(--plum); }
+.jumeau-cta{ text-align: center; margin-top: 28px; padding-bottom: 8px; }
+@media (max-width: 768px){ .jumeau-grid{ grid-template-columns: 1fr; } }
 .xcard{
 background: var(--ivory); border-radius: 18px; padding: 18px 22px;
 border-top: 3px solid var(--plum);
@@ -2275,7 +2284,7 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
           </div>
           <details class="agent-more">
             <summary class="agent-cta"><span>Descubrir VIGÍA</span> <span class="portrait-link-arrow">→</span></summary>
-            <p class="agent-desc-full">VIGÍA es tu asistente de dirección con <span class="ia-rose">IA</span>, pensado para un directivo que no tiene tiempo de formarse en inteligencia artificial. Cada mañana filtra lo que realmente merece tu atención, prepara tus reuniones a partir de tu agenda y tus intercambios recientes, y te entrega un resumen claro antes incluso de que abras tu correo. Tú conservas el control de cada decisión: VIGÍA se encarga del filtrado.</p>
+            <p class="agent-desc-full">VIGÍA es tu asistente de dirección con <span class="ia-rose">IA</span>, pensado para un directivo que no tiene tiempo de formarse en inteligencia artificial. Cada mañana filtra lo que realmente merece tu atención, prepara tus reuniones a partir de tu agenda y tus intercambios recientes, y te entrega un resumen claro antes incluso de que abras tu correo. Tú conservas el control de cada decisión: VIGÍA se encarga del filtrado. ¿Quieres que también conozca tu contexto, tus expedientes y tu forma de decidir? Descubre el <a href="#jumeau-numerique">gemelo digital del directivo</a>.</p>
           </details>
         </div>
       </div>
@@ -2375,7 +2384,7 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
           </div>
           <details class="agent-more">
             <summary class="agent-cta"><span>Descubrir HILO</span> <span class="portrait-link-arrow">→</span></summary>
-            <p class="agent-desc-full">HILO es tu agente de actas y conocimiento con <span class="ia-rose">IA</span>, pensado para que ninguna decisión se pierda entre dos reuniones. Redacta tus actas, permite recuperar en segundos una decisión o un intercambio pasado, y sigue los compromisos hasta su cierre. Tú conservas la memoria de cada decisión: HILO se encarga del archivo.</p>
+            <p class="agent-desc-full">HILO es tu agente de actas y conocimiento con <span class="ia-rose">IA</span>, pensado para que ninguna decisión se pierda entre dos reuniones. Redacta tus actas, permite recuperar en segundos una decisión o un intercambio pasado, y sigue los compromisos hasta su cierre. Tú conservas la memoria de cada decisión: HILO se encarga del archivo. ¿Quieres que esta memoria se extienda a toda tu actividad? Descubre el <a href="#jumeau-numerique">gemelo digital del directivo</a>.</p>
           </details>
         </div>
       </div>
@@ -2549,6 +2558,52 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
   </ol>
 </details>
 </section>
+<!-- ═══ EL GEMELO DIGITAL DEL DIRECTIVO ═══════════════════════ -->
+<section id="jumeau-numerique" class="agents-section snap-page">
+  <div class="agents-header reveal">
+    <p class="agents-v2-eyebrow">Iniciativa <span class="ia-rose">IA</span></p>
+    <h2 class="agents-title"><span class="agents-plum">El gemelo</span> <span class="agents-rose">digital del directivo</span></h2>
+  </div>
+
+  <div class="agents-team-caption-block reveal">
+    <p class="agents-team-title">Una memoria estratégica, construida en torno a <span class="agents-team-tc">un único directivo</span>.</p>
+    <p class="web-intro">Una memoria de decisiones que preserva el contexto, los arbitrajes y la continuidad de la dirección.</p>
+  </div>
+
+  <div class="jumeau-grid reveal">
+    <figure class="jumeau-figure">
+      <img src="assets/perspectives/jumeau-numerique-section.webp" width="1092" height="830" loading="lazy" decoding="async" alt="Un directivo de perfil frente a su gemelo digital, representado como una red de luz, conectado a un portátil e iconos de decisión">
+    </figure>
+    <div class="jumeau-cards">
+      <div class="xcard">
+        <h3>Una inteligencia al servicio de la decisión</h3>
+        <ul class="s0">
+          <li class="row-baseline"><span class="ink-accent-fixed">✓</span><span><strong style="font-weight:600">Memoria estratégica:</strong> recoge el contexto y los arbitrajes del directivo.</span></li>
+          <li class="row-baseline"><span class="ink-accent-fixed">✓</span><span><strong style="font-weight:600">Anticipación:</strong> prepara las prioridades y los puntos de vigilancia.</span></li>
+          <li class="row-baseline"><span class="ink-accent-fixed">✓</span><span><strong style="font-weight:600">Continuidad ejecutiva:</strong> estructura los informes y los seguimientos.</span></li>
+          <li class="row-baseline"><span class="ink-accent-fixed">✓</span><span><strong style="font-weight:600">Personalización:</strong> se adapta a las preferencias de redacción del directivo.</span></li>
+        </ul>
+      </div>
+      <div class="xcard">
+        <h3>Una puesta en marcha rigurosa</h3>
+        <ol class="jumeau-steps">
+          <li><strong style="font-weight:600">Captura:</strong> entrevistas en profundidad para recoger las decisiones que dieron forma a la empresa.</li>
+          <li><strong style="font-weight:600">Validación:</strong> el directivo revisa y aprueba cada transcripción.</li>
+          <li><strong style="font-weight:600">Prueba:</strong> preguntas reales contrastan las respuestas con el sucesor.</li>
+          <li><strong style="font-weight:600">Actualización:</strong> la memoria se enriquece cada trimestre hasta la marcha.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <p class="jumeau-note reveal">Una auditoría de encuadre es obligatoria antes de cualquier puesta en servicio.<br>Sin este encuadre, ninguna garantía.</p>
+
+  <div class="jumeau-cta reveal">
+    <a href="https://calendly.com/exec-ia" target="_blank" rel="noopener" class="btn btn-rose questions-cta-btn">Reservar una conversación <span class="btn-arrow">→</span></a>
+    <p class="jumeau-more"><a href="perspective-jumeau-numerique-savoir-dirigeant-es.html" class="portrait-link">Leer el artículo: «Cuando el directivo se va, ¿cómo conservar su saber?» <span class="portrait-link-arrow">→</span></a></p>
+  </div>
+</section>
+
 <section id="webcreation" class="agents-section snap-page">
   <div class="agents-header reveal">
     <p class="agents-v2-eyebrow">Iniciativa <span class="ia-rose">IA</span></p>
