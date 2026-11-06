@@ -2200,6 +2200,35 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
 .cerveau-sig-label{ display: block; font-family: var(--sans); font-size: .72rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--rose); margin-bottom: 8px; }
 .cerveau-sig p{ font-family: var(--sans); font-size: .88rem; line-height: 1.55; color: var(--plum); margin: 0; }
 @media (max-width: 860px){ .cerveau-cards, .cerveau-sig{ grid-template-columns: 1fr; } }
+
+/* ═══ PARCOURS « POURQUOI UN SECOND CERVEAU » : retrouver → comprendre → décider ═══ */
+.cerveau-path{ position: relative; list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.cerveau-path::before{ content: ""; position: absolute; left: 16.66%; right: 16.66%; top: 66px; height: 1px; background: var(--rose); opacity: .55; pointer-events: none; }
+.cerveau-step{ position: relative; display: flex; flex-direction: column; background: var(--ivory); border: 1px solid var(--pale-rose); border-radius: 14px; padding: 26px 26px 24px; min-width: 0; transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease; }
+@media (hover: hover){ .cerveau-step:hover{ transform: translateY(-4px); border-color: var(--rose); box-shadow: 0 16px 36px rgba(99,59,74,.08); } }
+.cerveau-step-art{ height: 120px; margin: 0 0 18px; color: var(--plum); }
+.cerveau-step-art svg{ width: 100%; height: 100%; display: block; overflow: visible; }
+.cerveau-art-line{ fill: none; stroke: var(--plum); stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; }
+.cerveau-art-accent{ fill: none; stroke: var(--rose); stroke-width: 1.4; }
+rect.cerveau-art-accent{ fill: var(--rose); stroke: none; }
+.cerveau-art-dot{ fill: var(--rose); transform-box: fill-box; transform-origin: center; transition: transform .3s ease; }
+@media (hover: hover){ .cerveau-step:hover .cerveau-art-dot{ transform: scale(1.3); } }
+.cerveau-step-kicker{ display: flex; align-items: baseline; gap: 10px; margin: 0 0 10px; font-family: var(--sans); font-size: .72rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--plum); }
+.cerveau-step-num{ font-family: var(--serif); font-size: 1.05rem; letter-spacing: .08em; color: var(--rose); }
+.cerveau-step h3{ font-family: var(--serif); font-weight: 500; font-size: 1.6rem; line-height: 1.15; color: var(--plum); margin: 0 0 10px; text-wrap: balance; }
+.cerveau-step-hook{ font-family: var(--serif); font-style: italic; font-size: 1.08rem; line-height: 1.4; color: var(--plum); margin: 0 0 12px; }
+.cerveau-step-text{ font-family: var(--sans); font-size: .92rem; line-height: 1.6; color: var(--plum); margin: 0; }
+.cerveau-step-benefit{ margin: auto 0 0; padding-top: 16px; border-top: 1px solid var(--pale-rose); margin-top: 18px; font-family: var(--serif); font-size: 1.2rem; line-height: 1.3; color: var(--rose); }
+.cerveau-h2 .ia-rose{ color: var(--rose); }
+@media (max-width: 860px){
+  .cerveau-path{ grid-template-columns: 1fr; gap: 16px; }
+  .cerveau-path::before{ display: none; }
+  .cerveau-step-art{ height: 96px; }
+}
+@media (prefers-reduced-motion: reduce){
+  .cerveau-step, .cerveau-art-dot{ transition: none !important; }
+  .cerveau-step:hover, .cerveau-step:hover .cerveau-art-dot{ transform: none !important; }
+}
 </style>
 <style id="footer-contact-gauche">
 @media (min-width: 1251px){
@@ -2734,8 +2763,9 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
   </div>
 
   <div class="cerveau-block">
-    <h3 class="cerveau-h3">Why a second brain</h3>
-    <div class="cerveau-grid"><article class="cerveau-card"><h3>Free your mind</h3><p>You no longer have to hold files, follow-ups and deadlines in your head. The system carries them for you, and your attention stays available for what needs your judgment.</p></article><article class="cerveau-card"><h3>Structure information without ambiguity</h3><p>Each piece of data has one source, one definition and one date. When information is clear, decisions are too.</p></article><article class="cerveau-card"><h3>Align the system with your judgment</h3><p>This is the digital twin: a system that reasons according to your criteria, your priorities and your limits.</p></article></div>
+    <h2 class="cerveau-h2">A second brain. <span class="ia-rose">Your judgment stays in control.</span></h2>
+    <p class="cerveau-lede">Less to keep in mind. More clarity to decide. An AI that adapts to the way you work.</p>
+    <ol class="cerveau-path"><li class="cerveau-step"><div class="cerveau-step-art"><svg viewBox="0 0 160 120" aria-hidden="true" focusable="false"><g class="cerveau-art-line"><rect x="12" y="16" width="18" height="22" rx="2"/><rect x="12" y="49" width="18" height="22" rx="2"/><rect x="12" y="82" width="18" height="22" rx="2"/><path d="M30 27 C 56 27, 62 52, 84 56"/><path d="M30 60 L 84 60"/><path d="M30 93 C 56 93, 62 68, 84 64"/></g><circle class="cerveau-art-accent" cx="108" cy="60" r="22"/><circle class="cerveau-art-dot" cx="108" cy="60" r="5"/></svg></div><p class="cerveau-step-kicker"><span class="cerveau-step-num">01</span>Retrieve</p><h3>Less mental load</h3><p class="cerveau-step-hook">Keep the essentials in mind. Not everything else.</p><p class="cerveau-step-text">Documents, deadlines, decisions and follow-ups: your second brain organizes accessible information and helps you find what matters at the right moment.</p><p class="cerveau-step-benefit">Get your time back for what matters.</p></li><li class="cerveau-step"><div class="cerveau-step-art"><svg viewBox="0 0 160 120" aria-hidden="true" focusable="false"><g class="cerveau-art-line"><path d="M12 28 C 44 28, 56 50, 84 52"/><path d="M12 60 L 84 60"/><path d="M12 92 C 44 92, 56 70, 84 68"/><path d="M96 88 H 150"/></g><rect class="cerveau-art-accent" x="100" y="46" width="9" height="42" rx="1.5"/><rect class="cerveau-art-line" x="115" y="34" width="9" height="54" rx="1.5"/><rect class="cerveau-art-line" x="130" y="58" width="9" height="30" rx="1.5"/></svg></div><p class="cerveau-step-kicker"><span class="cerveau-step-num">02</span>Understand</p><h3>More decision clarity</h3><p class="cerveau-step-hook">The right information. With its context.</p><p class="cerveau-step-text">Data from your tools is brought together, put in context and presented in a structured way. Gaps and missing information can be flagged.</p><p class="cerveau-step-benefit">Decide with a clearer view.</p></li><li class="cerveau-step"><div class="cerveau-step-art"><svg viewBox="0 0 160 120" aria-hidden="true" focusable="false"><g class="cerveau-art-line"><circle cx="24" cy="28" r="9"/><circle cx="24" cy="60" r="9"/><circle cx="24" cy="92" r="9"/><path d="M33 28 C 62 28, 66 60, 92 60"/><path d="M33 60 L 92 60"/><path d="M33 92 C 62 92, 66 60, 92 60"/></g><circle class="cerveau-art-accent" cx="120" cy="60" r="18"/><circle class="cerveau-art-dot" cx="120" cy="60" r="5"/></svg></div><p class="cerveau-step-kicker"><span class="cerveau-step-num">03</span>Decide</p><h3>An AI tailored to you</h3><p class="cerveau-step-hook">Your way of deciding remains the reference.</p><p class="cerveau-step-text">The system takes into account the priorities, criteria and rules you set to prepare analyses and suggest actions suited to your context.</p><p class="cerveau-step-benefit">AI prepares. You decide.</p></li></ol>
   </div>
 
   <div class="cerveau-block">
