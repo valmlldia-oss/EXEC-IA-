@@ -2067,6 +2067,36 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
 .site-footer .footer-bottom .footer-rights{ display: none; }
 .site-footer .footer-bottom .footer-copy{ white-space: nowrap; }
 .site-footer .footer-bottom .footer-copy::after{ content: " · Tous droits réservés"; }
+
+/* ═══ SECTION CERVEAU : piliers, objectifs, rôles, bénéfices, FAQ ═══ */
+#cerveau.cerveau-section{ background: var(--white); padding: 96px 0 72px; }
+.cerveau-block{ max-width: 1080px; margin: 0 auto 96px; padding: 0 1.5rem; }
+.cerveau-block:last-child{ margin-bottom: 0; }
+.cerveau-eyebrow{ font-family: var(--sans); font-size: .72rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--rose); margin: 0 0 14px; }
+.cerveau-h2{ font-family: var(--serif); font-weight: 400; font-size: clamp(2rem, 4vw, 2.9rem); line-height: 1.12; color: var(--plum); margin: 0 0 40px; text-wrap: balance; }
+.cerveau-h2 .ia-rose{ color: var(--rose); }
+.cerveau-h3{ font-family: var(--serif); font-weight: 500; font-size: clamp(1.45rem, 2.6vw, 1.85rem); line-height: 1.2; color: var(--plum); margin: 0 0 22px; text-wrap: balance; }
+.cerveau-h4{ font-family: var(--serif); font-weight: 500; font-size: 1.25rem; line-height: 1.3; color: var(--plum); margin: 28px 0 10px; }
+.cerveau-text{ font-family: var(--sans); font-size: 1rem; line-height: 1.7; color: var(--plum); max-width: 720px; margin: 0 0 16px; }
+.cerveau-grid{ display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.cerveau-card{ background: var(--ivory); border: 1px solid var(--pale-rose); border-radius: 14px; padding: 28px 26px; min-width: 0; }
+.cerveau-card h3{ font-family: var(--serif); font-weight: 500; font-size: 1.35rem; line-height: 1.25; color: var(--plum); margin: 0 0 12px; }
+.cerveau-card p{ font-family: var(--sans); font-size: .95rem; line-height: 1.65; color: var(--plum); margin: 0; }
+.cerveau-quote{ font-family: var(--serif); font-style: italic; font-size: clamp(1.5rem, 3vw, 2.1rem); line-height: 1.3; color: var(--rose); text-align: center; max-width: 820px; margin: 0 auto; text-wrap: balance; }
+.cerveau-table-wrap{ overflow-x: auto; }
+.cerveau-table{ width: 100%; border-collapse: collapse; font-family: var(--sans); font-size: .93rem; line-height: 1.55; color: var(--plum); min-width: 560px; }
+.cerveau-table th, .cerveau-table td{ border-bottom: 1px solid var(--pale-rose); padding: 14px 16px; text-align: left; vertical-align: top; }
+.cerveau-table th{ font-weight: 600; font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; color: var(--rose); }
+.cerveau-table td:first-child{ font-weight: 600; white-space: nowrap; }
+.cerveau-list{ list-style: none; padding: 0; margin: 0; max-width: 760px; display: grid; gap: 16px; }
+.cerveau-list li{ font-family: var(--sans); font-size: 1rem; line-height: 1.65; color: var(--plum); padding-left: 22px; position: relative; }
+.cerveau-list li::before{ content: ""; position: absolute; left: 0; top: .72em; width: 7px; height: 7px; border-radius: 50%; background: var(--rose); }
+.cerveau-list strong{ font-weight: 600; }
+.cerveau-faq{ max-width: 760px; border-top: 1px solid var(--pale-rose); }
+.cerveau-faq details{ border-bottom: 1px solid var(--pale-rose); padding: 20px 0; }
+.cerveau-faq summary{ cursor: pointer; font-family: var(--serif); font-size: 1.3rem; line-height: 1.3; color: var(--plum); }
+.cerveau-faq p{ font-family: var(--sans); font-size: 1rem; line-height: 1.7; color: var(--plum); margin: 14px 0 0; }
+@media (max-width: 860px){ .cerveau-grid{ grid-template-columns: 1fr; } }
 </style>
 <style id="footer-contact-gauche">
 @media (min-width: 1251px){
@@ -2601,6 +2631,77 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
   </div>
 </section>
 
+<!-- ═══ CERVEAU : piliers, objectifs, rôles, bénéfices, FAQ ═══ -->
+<section id="cerveau" class="cerveau-section">
+
+  <div class="cerveau-block">
+    <p class="cerveau-eyebrow">Le cerveau <span class="ia-rose">IA</span></p>
+    <h2 class="cerveau-h2">Votre cerveau, <span class="ia-rose">en trois piliers</span></h2>
+    <div class="cerveau-grid"><article class="cerveau-card"><h3>La mémoire</h3><p>Tout ce que vous avez déjà pensé, écrit et décidé&nbsp;: notes, comptes rendus, arbitrages. Le savoir qui dort aujourd’hui dans des fichiers et dans votre tête devient disponible au moment où vous en avez besoin.</p></article><article class="cerveau-card"><h3>Les données vivantes</h3><p>Clients, chiffres, pipeline. Elles bougent chaque jour. Un cerveau qui les tient à jour en continu montre l’état réel de l’entreprise, sans attendre le tableau de fin de mois.</p></article><article class="cerveau-card"><h3>Les capacités</h3><p>Ce que le cerveau sait faire&nbsp;: préparer une proposition, relancer un prospect, produire un compte rendu, vérifier qu’un processus a bien été suivi. Une capacité se décrit une fois, puis elle s’exécute aussi souvent que nécessaire.</p></article></div>
+  </div>
+
+  <div class="cerveau-block">
+    <h3 class="cerveau-h3">Pourquoi un second cerveau</h3>
+    <div class="cerveau-grid"><article class="cerveau-card"><h3>Libérer votre esprit</h3><p>Vous n’avez plus à retenir les dossiers, les relances et les échéances. Le système les porte à votre place, et votre attention reste disponible pour ce qui demande votre jugement.</p></article><article class="cerveau-card"><h3>Structurer l’information sans ambiguïté</h3><p>Chaque donnée a une seule source, une définition et une date. Quand l’information est claire, les décisions le sont aussi.</p></article><article class="cerveau-card"><h3>Aligner le système sur votre jugement</h3><p>C’est le jumeau numérique&nbsp;: un système qui raisonne selon vos critères, vos priorités et vos limites.</p></article></div>
+  </div>
+
+  <div class="cerveau-block">
+    <h3 class="cerveau-h3">Automatisation et agent&nbsp;: deux façons d’agir</h3>
+    <div class="cerveau-table-wrap">
+      <table class="cerveau-table">
+        <thead><tr><th scope="col"></th><th scope="col">Automatisation</th><th scope="col">Agent</th></tr></thead>
+        <tbody><tr><td>Déclenchement</td><td>Un événement précis&nbsp;: un formulaire envoyé, une date atteinte</td><td>Un objectif&nbsp;: préparer le rendez-vous de jeudi</td></tr><tr><td>Comportement</td><td>Déterministe&nbsp;: mêmes entrées, même résultat</td><td>Autonome&nbsp;: choisit ses étapes et s’adapte au contexte</td></tr><tr><td>Ressources</td><td>Une suite d’étapes fixée à l’avance</td><td>Mobilise des skills, des outils et le contexte du dirigeant</td></tr><tr><td>Contrôle</td><td>Auditable&nbsp;: chaque étape est traçable et vérifiable</td><td>Encadré&nbsp;: les actions sensibles passent par une validation humaine</td></tr><tr><td>Exemple EXEC’IA Consulting</td><td>Un prospect réserve un créneau&nbsp;: la fiche est créée dans le CRM et le mail de remerciement part</td><td>Avant un entretien, l’agent rassemble les échanges précédents, la fiche du prospect et la veille, puis propose un plan d’entretien</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="cerveau-block">
+    <p class="cerveau-quote">Une IA qui pense, c’est bien. Une IA qui agit, c’est ce que nous construisons chez EXEC’IA Consulting.</p>
+  </div>
+
+  <div class="cerveau-block">
+    <h3 class="cerveau-h3">Votre rôle change</h3>
+    <div class="cerveau-grid"><article class="cerveau-card"><h3>L’architecte</h3><p>Vous encodez votre méthode dans des skills, pour qu’elle s’applique sans que vous ayez à la répéter.</p></article><article class="cerveau-card"><h3>Le responsable</h3><p>Vous vérifiez que chaque workflow est bien exécuté, du début à la fin.</p></article><article class="cerveau-card"><h3>Le stratège</h3><p>Vous gardez les idées, les relations et les décisions, ce qu’une machine ne peut pas porter à votre place.</p></article></div>
+    <p class="cerveau-text" style="margin-top:24px">EXEC’IA Consulting vous accompagne vers ces trois rôles, et non vers l’exécution. Vous gardez la main sur ce qui crée la valeur&nbsp;; le système prend en charge le reste.</p>
+  </div>
+
+  <div class="cerveau-block">
+    <h3 class="cerveau-h3">Un seul cerveau, pas un agent par besoin</h3>
+    <p class="cerveau-text">EXEC’IA Consulting construit un seul cerveau central, nourri de skills, plutôt qu’un agent séparé pour chaque tâche ou chaque client. C’est un choix de méthode. Chaque demande ne consulte que le contexte du projet concerné&nbsp;: les dossiers ne se mélangent pas, et le système ne mobilise que ce dont il a besoin pour répondre. Ce qui a été décidé en janvier reste disponible en mars, sans recopie. Chaque nouvelle compétence s’ajoute à la même base, sans accumuler de dette technique. Enfin, l’outil reste interchangeable&nbsp;: le modèle d’IA peut changer sans que le cerveau, ses skills et votre méthode soient à refaire.</p>
+    <h4 class="cerveau-h4">REPÈRE, TRAME, FLUX et ANCRE&nbsp;: quatre priorités, un seul cerveau</h4>
+    <p class="cerveau-text">REPÈRE (recrutement), TRAME (mémoire des réunions), FLUX (facturation) et ANCRE (mémoire documentaire) ne sont pas quatre systèmes séparés. Ce sont quatre priorités que surveille le même cerveau. Ils partagent le même contexte et les mêmes règles de fond&nbsp;; seule la priorité change. REPÈRE ne prend aucune décision finale de recrutement&nbsp;: il prépare le travail, et la décision reste humaine.</p>
+  </div>
+
+  <div class="cerveau-block">
+    <h3 class="cerveau-h3">Souveraineté des données</h3>
+    <p class="cerveau-text">Vos données restent les vôtres. Nous appliquons le principe de minimisation&nbsp;: seules les données nécessaires à la mission sont utilisées. Elles ne sont confiées à un outil d’IA que si cet usage est autorisé, nécessaire et encadré par contrat. Lorsque des données personnelles sont traitées pour votre compte, un accord de traitement conforme au RGPD est signé avant le démarrage.</p>
+  </div>
+
+  <div class="cerveau-block">
+    <h3 class="cerveau-h3">Renverser le 80-20, et la place de l’humain</h3>
+    <p class="cerveau-text">Aujourd’hui, une grande part de votre temps part dans l’exécution&nbsp;: relancer, classer, recopier, reprendre ce qui a déjà été dit. Le cerveau prend cette part en charge. Le temps libéré sert à ce qui a une valeur humaine&nbsp;: superviser les processus IA, affiner les méthodes, prendre soin de la relation avec vos clients et vos équipes.</p><p class="cerveau-text">Ce temps ouvre aussi la porte aux projets mis de côté faute de disponibilité, et permet de viser plus haut. Une ambition qui a du sens, c’est un projet dont l’utilité dépasse le chiffre d’affaires&nbsp;: une équipe mieux organisée, un client mieux servi, une décision prise avec plus de recul.</p><p class="cerveau-text">L’IA reste un levier au service des priorités de l’entreprise. La décision, l’arbitrage et la responsabilité restent humains. Le cerveau propose, vous tranchez.</p>
+  </div>
+
+  <div class="cerveau-block">
+    <h3 class="cerveau-h3">Ce que le cerveau change au quotidien</h3>
+    <ul class="cerveau-list"><li><strong>Ne plus jamais réexpliquer qui vous êtes.</strong> Votre contexte est capturé une fois, puis mobilisé à chaque demande.</li><li><strong>Un système qui vous suit au quotidien.</strong> Il accompagne votre activité, quel que soit l’outil ou le lieu où vous travaillez.</li><li><strong>Le savoir tacite devient mobilisable.</strong> Les règles que vous appliquez sans les écrire deviennent un cadre que l’IA peut suivre.</li><li><strong>Des données qui vous appartiennent.</strong> Elles restent les vôtres et vous sont restituées à la fin de la mission.</li><li><strong>Un système indépendant du modèle d’IA.</strong> Le modèle peut évoluer ou être remplacé sans refaire le cerveau.</li><li><strong>Une IA qui écrit dans votre voix.</strong> Les textes reprennent votre ton, vos formules et votre manière de dire les choses.</li></ul>
+  </div>
+
+  <div class="cerveau-block">
+    <div class="cerveau-faq">
+      <details>
+        <summary>Si je donne mon cerveau à mes employés, est-ce que je leur vole leur savoir-faire&nbsp;?</summary>
+        <p>Non. Les skills les plus utiles sont ceux que chaque collaborateur écrit ou adapte lui-même&nbsp;: un skill imposé d’en haut colle rarement à la façon réelle de travailler. Vous ne récupérez donc pas le savoir-faire de vos équipes. Vous leur donnez un cadre pour le structurer, selon leur manière de travailler.</p>
+      </details>
+    </div>
+  </div>
+
+  <div class="cerveau-block">
+    <h3 class="cerveau-h3">Le skill, quintessence de votre valeur</h3>
+    <p class="cerveau-text">Chaque skill EXEC’IA est construit avec la rigueur d’un savoir-faire artisanal. Il est affiné dans le détail pour refléter votre méthode et vos règles de décision, et non un modèle générique trouvé en ligne. Il part de votre méthode, se vérifie avec vous et se corrige jusqu’à vous ressembler.</p>
+  </div>
+
+</section>
 <section id="webcreation" class="agents-section snap-page">
   <div class="agents-header reveal">
     <p class="agents-v2-eyebrow">Initiative <span class="ia-rose">IA</span></p>
