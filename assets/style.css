@@ -8207,3 +8207,16 @@ p, li, figcaption, blockquote { text-wrap: pretty; }
 .site-footer .footer-bottom .footer-copy::after { content: " · Tous droits réservés"; }
 html[lang="en"] .site-footer .footer-bottom .footer-copy::after { content: " · All rights reserved"; }
 html[lang="es"] .site-footer .footer-bottom .footer-copy::after { content: " · Todos los derechos reservados"; }
+
+/* Accessibilité : contraste des petits textes terracotta (4,5:1 min) et cibles tactiles (24 px min). Le terracotta #C75F62 reste sur les grands titres. */
+.ia-rose { color: #A6474B !important; }
+:is(h1, h2) .ia-rose { color: #C75F62 !important; }
+.agents-dot { flex: 0 0 24px; width: 24px; min-width: 24px; height: 24px; background: transparent !important; transform: none !important; }
+.agents-dot::before { content: ""; position: absolute; left: 50%; top: 50%; width: 7px; height: 7px; margin: -3.5px 0 0 -3.5px; border-radius: 50%; background: rgba(99,59,74,.18); transition: background .2s, transform .2s; }
+.agents-dot.active::before { background: var(--rose); transform: scale(1.3); }
+
+/* Accessibilité, boutons : ivoire sur terracotta = 3,73:1 ; fond #A6474B = 5,39:1. Même famille de couleur, un ton plus sombre. */
+.btn-rose, .cookie-btn--accept, .nav-lang.active, .nav-lang[aria-current="true"], .nav-lang-active { background-color: #A6474B !important; border-color: #A6474B !important; }
+.btn-rose:hover, .cookie-btn--accept:hover { background-color: #953F43 !important; border-color: #953F43 !important; filter: none; }
+.btn .ia-rose, .btn-rose .ia-rose, .cookie-btn .ia-rose { color: #FAF6F2 !important; }
+.hero-cta-link, .hero-cta-link strong { color: #A6474B !important; }
