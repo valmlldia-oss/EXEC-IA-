@@ -2137,6 +2137,17 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
 .cerveau-pilier-col{ width: auto; height: 145px; margin: 0 0 6px; opacity: .42; }
 .cerveau-pilier-sub{ display: block; color: var(--plum); font-family: var(--sans); font-size: .98rem; line-height: 1.6; }
 @media (max-width: 860px){ .cerveau-piliers{ grid-template-columns: 1fr; } }
+
+/* ═══ ARTICLE MIS EN AVANT (jumeau numérique) ═══ */
+.cerveau-article{ display: flex; align-items: center; gap: 24px; max-width: 760px; margin: 36px auto 0; padding: 14px; background: var(--ivory); border: 1px solid var(--pale-rose); border-radius: 14px; box-shadow: 0 14px 34px rgba(99,59,74,.06); color: var(--plum); text-decoration: none; transition: transform .3s var(--ease), box-shadow .3s var(--ease); }
+.cerveau-article:hover{ transform: translateY(-3px); box-shadow: 0 20px 44px rgba(99,59,74,.12); }
+.cerveau-article:focus-visible{ outline: 2px solid var(--rose); outline-offset: 3px; }
+.cerveau-article-img{ display: block; width: 240px; height: auto; border-radius: 10px; flex-shrink: 0; }
+.cerveau-article-body{ display: flex; flex-direction: column; gap: 12px; min-width: 0; text-align: left; }
+.cerveau-article-title{ font-family: var(--serif); font-size: 1.4rem; line-height: 1.25; color: var(--plum); text-wrap: balance; }
+.cerveau-article-cta{ display: inline-flex; align-items: center; gap: 10px; font-family: var(--sans); font-size: .9rem; font-weight: 600; color: var(--rose); }
+.cerveau-article-cta img{ width: 22px; height: 22px; display: block; }
+@media (max-width: 640px){ .cerveau-article{ flex-direction: column; align-items: stretch; text-align: center; } .cerveau-article-img{ width: 100%; } .cerveau-article-body{ text-align: center; } .cerveau-article-cta{ justify-content: center; } }
 </style>
 <style id="footer-contact-gauche">
 @media (min-width: 1251px){
@@ -2646,11 +2657,11 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
     </div>
   </div>
 
-  <p class="jumeau-note reveal">A scoping audit is mandatory before any go-live.<br>Without this scoping, no guarantee.</p>
+  <p class="jumeau-note reveal">A <span class="ia-rose">scoping audit</span> is mandatory before any go-live.<br>Without this scoping, no guarantee.</p>
 
   <div class="jumeau-cta reveal">
     <a href="https://calendly.com/exec-ia" target="_blank" rel="noopener" class="btn btn-rose questions-cta-btn">Book a conversation <span class="btn-arrow">→</span></a>
-    <p class="jumeau-more"><a href="perspective-jumeau-numerique-savoir-dirigeant-en.html" class="portrait-link">Read the article: “When a leader leaves, how do you keep their knowledge?” <span class="portrait-link-arrow">→</span></a></p>
+    <a href="perspective-jumeau-numerique-savoir-dirigeant-en.html" class="cerveau-article"><img src="assets/perspectives/jumeau-numerique-dirigeant-en-card.webp" alt="" class="cerveau-article-img" loading="lazy" decoding="async"><span class="cerveau-article-body"><span class="cerveau-article-title">When a leader leaves, how do you keep their knowledge?</span><span class="cerveau-article-cta"><img src="assets/linkedin-logo.png" alt="" width="22" height="22" loading="lazy">Read the article <span aria-hidden="true">→</span></span></span></a>
   </div>
 </section>
 
