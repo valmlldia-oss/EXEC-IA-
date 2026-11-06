@@ -2110,7 +2110,7 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
 .cerveau-card{ background: var(--ivory); border: 1px solid var(--pale-rose); border-radius: 14px; padding: 28px 26px; min-width: 0; }
 .cerveau-card h3{ font-family: var(--serif); font-weight: 500; font-size: 1.35rem; line-height: 1.25; color: var(--plum); margin: 0 0 12px; }
 .cerveau-card p{ font-family: var(--sans); font-size: .95rem; line-height: 1.65; color: var(--plum); margin: 0; }
-.cerveau-quote{ font-family: var(--serif); font-style: italic; font-size: clamp(1.15rem, 2.3vw, 1.7rem); line-height: 1.35; color: var(--rose); text-align: center; max-width: 1040px; margin: 0 auto; }
+.cerveau-quote{ font-family: var(--serif); font-style: italic; font-size: clamp(1.15rem, 2.3vw, 1.7rem); line-height: 1.35; color: var(--plum); text-align: center; max-width: 1040px; margin: 0 auto; }
 .cerveau-quote .cerveau-quote-part{ display: block; }
 .cerveau-quote .cerveau-quote-line{ display: block; white-space: nowrap; }
 @media (max-width: 860px){ .cerveau-quote .cerveau-quote-line{ white-space: normal; } }
@@ -2229,6 +2229,21 @@ rect.cerveau-art-accent{ fill: var(--rose); stroke: none; }
   .cerveau-step, .cerveau-art-dot{ transition: none !important; }
   .cerveau-step:hover, .cerveau-step:hover .cerveau-art-dot{ transform: none !important; }
 }
+
+/* ═══ VOTRE RÔLE CHANGE : trois cartes et conclusion ═══ */
+.roles-grid{ display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; align-items: stretch; }
+.role-card{ display: flex; flex-direction: column; background: var(--ivory); border: 1px solid var(--pale-rose); border-radius: 14px; padding: 26px 26px 24px; min-width: 0; transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease; }
+@media (hover: hover){ .role-card:hover{ transform: translateY(-4px); border-color: var(--rose); box-shadow: 0 16px 36px rgba(99,59,74,.08); } }
+.role-top{ display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 16px; }
+.role-art{ width: 120px; height: 90px; color: var(--plum); }
+.role-art svg{ width: 100%; height: 100%; display: block; overflow: visible; }
+.role-kicker{ margin: 0 0 8px; font-family: var(--sans); font-size: .72rem; font-weight: 600; line-height: 1; letter-spacing: .16em; text-transform: uppercase; color: var(--plum); }
+.role-card h3{ font-family: var(--serif); font-weight: 500; font-size: 1.5rem; line-height: 1.2; color: var(--plum); margin: 0 0 10px; }
+.role-card .role-text{ font-family: var(--sans); font-size: .95rem; line-height: 1.6; color: var(--plum); margin: 0; }
+.roles-close{ max-width: 720px; margin: 52px 0 0; font-family: var(--sans); font-size: 1.05rem; line-height: 1.65; color: var(--plum); }
+@media (max-width: 860px){ .roles-grid{ grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce){ .role-card{ transition: none !important; } .role-card:hover{ transform: none !important; } }
+.cerveau-quote .cerveau-quote-accent{ color: var(--rose); }
 </style>
 <style id="footer-contact-gauche">
 @media (min-width: 1251px){
@@ -2667,7 +2682,7 @@ rect.cerveau-art-accent{ fill: var(--rose); stroke: none; }
 <section class="agent-type-section" style="padding:40px 20px 24px;max-width:760px;margin:0 auto">
   <details style="font-size:1.6rem;margin-bottom:14px">
   <summary style="cursor:pointer"><span class="section-title" style="font-size:1.6rem">An enterprise agent, not a personal one</span></summary>
-  <p style="font-size:1.05rem;line-height:1.6">A personal agent serves one person, with that person’s own data.<br>An enterprise agent works on shared data, serves collective goals and follows the organisation’s rules.<br>This is the kind of agent EXEC’IA designs.</p>
+  <p style="font-size:1.05rem;line-height:1.6">A personal agent serves one person, with that person’s own data.<br>An enterprise agent works on shared data, serves collective goals and follows the organisation’s rules.<br>This is the kind of agent EXEC’<span class="ia-rose">IA</span> designs.</p>
 </details>
   <details style="font-size:1.6rem;margin:32px 0 14px">
   <summary style="cursor:pointer"><span class="section-title" style="font-size:1.6rem">Five questions to ask before an agent project</span></summary>
@@ -2779,25 +2794,25 @@ rect.cerveau-art-accent{ fill: var(--rose); stroke: none; }
 <tr><th scope="row">Behavior</th><td data-label="Automation">Runs <strong>predefined rules</strong></td><td data-label="AI agent">Plans and <strong>adapts</strong> its actions</td></tr>
 <tr><th scope="row">Resources</th><td data-label="Automation">Follows a <strong>structured workflow</strong></td><td data-label="AI agent">Draws on <strong>tools, data and context</strong></td></tr>
 <tr><th scope="row">Control</th><td data-label="Automation">Defined, <strong>traceable</strong> steps</td><td data-label="AI agent">Actions framed and <strong>supervised</strong></td></tr>
-<tr class="cmp-example"><th scope="row">EXEC’IA Consulting example</th><td data-label="Automation">Booking → CRM updated → confirmation sent</td><td data-label="AI agent">Prepares an interview: history, prospect, watch and meeting plan</td></tr>
+<tr class="cmp-example"><th scope="row">EXEC’<span class="ia-rose">IA</span> Consulting example</th><td data-label="Automation">Booking → CRM updated → confirmation sent</td><td data-label="AI agent">Prepares an interview: history, prospect, watch and meeting plan</td></tr>
     </tbody>
   </table>
 </div>
   </div>
 
   <div class="cerveau-block">
-    <p class="cerveau-quote"><span class="cerveau-quote-part">An AI that thinks is useful.</span> <span class="cerveau-quote-line">An AI that acts is what we build at EXEC’IA Consulting.</span></p>
+    <p class="cerveau-quote"><span class="cerveau-quote-part">An AI that thinks is useful…</span> <span class="cerveau-quote-line">An AI that <span class="cerveau-quote-accent">acts</span> is what we build at EXEC’<span class="ia-rose">IA</span> Consulting.</span></p>
   </div>
 
   <div class="cerveau-block">
     <h3 class="cerveau-h3">Your role changes</h3>
-    <div class="cerveau-grid"><article class="cerveau-card"><h3>The architect</h3><p>You encode your method in skills, so it applies without having to be repeated.</p></article><article class="cerveau-card"><h3>The manager</h3><p>You check that every workflow runs properly, from start to finish.</p></article><article class="cerveau-card"><h3>The strategist</h3><p>You keep ideas, relationships and decisions: what a machine cannot carry in your place.</p></article></div>
-    <p class="cerveau-text" style="margin-top:24px">EXEC’IA Consulting supports you towards these three roles, not towards execution. You stay in control of what creates value; the system takes care of the rest.</p>
+    <div class="roles-grid"><article class="role-card"><div class="role-top"><span class="cerveau-num">01</span><div class="role-art"><svg viewBox="0 0 160 120" aria-hidden="true" focusable="false"><g class="cerveau-art-line"><rect x="22" y="14" width="116" height="92" rx="3"/><path d="M22 44H138M62 44V106M62 74H138"/></g><path class="cerveau-art-accent" d="M92 94H128"/><circle class="cerveau-art-dot" cx="62" cy="44" r="4.5"/></svg></div></div><p class="role-kicker">Design</p><h3>The architect</h3><p class="role-text">You formalize your methods, business rules and quality criteria to guide the system’s actions.</p></article><article class="role-card"><div class="role-top"><span class="cerveau-num">02</span><div class="role-art"><svg viewBox="0 0 160 120" aria-hidden="true" focusable="false"><g class="cerveau-art-line"><circle cx="80" cy="60" r="38"/><circle cx="80" cy="60" r="20"/><path d="M80 14v8M80 98v8M34 60h8M118 60h8"/></g><path class="cerveau-art-accent" d="M71 60l6 6 12-13"/></svg></div></div><p class="role-kicker">Supervise</p><h3>The supervisor</h3><p class="role-text">You monitor results, handle exceptions and adjust processes when needed.</p></article><article class="role-card"><div class="role-top"><span class="cerveau-num">03</span><div class="role-art"><svg viewBox="0 0 160 120" aria-hidden="true" focusable="false"><g class="cerveau-art-line"><circle cx="80" cy="60" r="38"/><path d="M80 22V98M42 60H118"/></g><path class="cerveau-art-accent" d="M80 30L88 60H80Z"/><circle class="cerveau-art-dot" cx="80" cy="60" r="4"/></svg></div></div><p class="role-kicker">Decide</p><h3>The strategist</h3><p class="role-text">You devote your expertise to the directions, relationships and trade-offs that commit the company.</p></article></div>
+    <p class="roles-close">EXEC’<span class="ia-rose">IA</span> Consulting supports you through this shift: formalizing your methods, supervising your systems and focusing your expertise on the decisions that matter.</p>
   </div>
 
   <div class="cerveau-block">
     <h3 class="cerveau-h3">One brain, not one agent per need</h3>
-    <p class="cerveau-text">EXEC’IA Consulting builds one central brain, fed by skills, rather than a separate agent for each task or client. This is a methodological choice. Each request draws only on the context of the relevant project: files do not mix, and the system uses only what it needs to answer. What was decided in January is still available in March, without copying. Each new skill joins the same base, without piling up technical debt. And the tool stays interchangeable: the AI model can change without rebuilding the brain, its skills or your method.</p>
+    <p class="cerveau-text">EXEC’<span class="ia-rose">IA</span> Consulting builds one central brain, fed by skills, rather than a separate agent for each task or client. This is a methodological choice. Each request draws only on the context of the relevant project: files do not mix, and the system uses only what it needs to answer. What was decided in January is still available in March, without copying. Each new skill joins the same base, without piling up technical debt. And the tool stays interchangeable: the AI model can change without rebuilding the brain, its skills or your method.</p>
     <h4 class="cerveau-h4">REPÈRE, TRAME, FLUX and ANCRE: four priorities, one brain</h4>
     <p class="cerveau-text">REPÈRE (recruitment), TRAME (meeting memory), FLUX (invoicing) and ANCRE (document memory) are not four separate systems. They are four priorities watched by the same brain. They share the same context and the same core rules; only the priority changes. REPÈRE takes no final recruitment decision: it prepares the work, and the decision stays with a human.</p>
   </div>
@@ -2828,7 +2843,7 @@ rect.cerveau-art-accent{ fill: var(--rose); stroke: none; }
 
   <div class="cerveau-block">
     <h3 class="cerveau-h3">The skill, the essence of your value</h3>
-    <p class="cerveau-text">Each EXEC’IA skill is built with the rigor of a craft. It is refined in detail to reflect your method and your decision rules, not a generic template found online. It starts from your method, is checked with you, and is corrected until it reflects how you decide.</p>
+    <p class="cerveau-text">Each EXEC’<span class="ia-rose">IA</span> skill is built with the rigor of a craft. It is refined in detail to reflect your method and your decision rules, not a generic template found online. It starts from your method, is checked with you, and is corrected until it reflects how you decide.</p>
   </div>
 
 </section>
