@@ -2128,6 +2128,15 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
 .cerveau-faq summary{ cursor: pointer; font-family: var(--serif); font-size: 1.3rem; line-height: 1.3; color: var(--plum); }
 .cerveau-faq p{ font-family: var(--sans); font-size: 1rem; line-height: 1.7; color: var(--plum); margin: 14px 0 0; }
 @media (max-width: 860px){ .cerveau-grid{ grid-template-columns: 1fr; } }
+
+/* ═══ PILIERS DU CERVEAU (même gabarit que « une école d’exigence », sans étoile) ═══ */
+.cerveau-piliers{ display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 0; }
+.cerveau-pilier{ display: flex; flex-direction: column; align-items: center; text-align: center; padding: 12px 18px 16px; background: linear-gradient(180deg, rgba(250,246,242,.72), rgba(250,246,242,.30)); border: 1px solid rgba(216,200,195,.6); border-radius: 6px; box-shadow: 0 14px 34px rgba(99,59,74,.05); min-width: 0; }
+.cerveau-pilier-title{ display: block; color: var(--rose); font-family: var(--sans); font-size: 1.28rem; font-weight: 500; line-height: 1.32; letter-spacing: .005em; margin-bottom: 4px; }
+.cerveau-pilier-title::after{ content: ""; display: block; width: 34px; height: 2px; background: var(--rose); border-radius: 2px; margin: 10px auto 0; }
+.cerveau-pilier-col{ width: auto; height: 145px; margin: 0 0 6px; opacity: .42; }
+.cerveau-pilier-sub{ display: block; color: var(--plum); font-family: var(--sans); font-size: .98rem; line-height: 1.6; }
+@media (max-width: 860px){ .cerveau-piliers{ grid-template-columns: 1fr; } }
 </style>
 <style id="footer-contact-gauche">
 @media (min-width: 1251px){
@@ -2651,7 +2660,7 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
   <div class="cerveau-block">
     <p class="cerveau-eyebrow">The <span class="ia-rose">AI</span> brain</p>
     <h2 class="cerveau-h2">Your brain, <span class="ia-rose">in three pillars</span></h2>
-    <div class="cerveau-grid"><article class="cerveau-card"><h3>Memory</h3><p>Everything you have already thought, written and decided: notes, minutes, trade-offs. Knowledge that today sits in files and in your head becomes available when you need it.</p></article><article class="cerveau-card"><h3>Living data</h3><p>Clients, figures, pipeline. They change every day. A brain that keeps them up to date shows the real state of the company, without waiting for the end-of-month report.</p></article><article class="cerveau-card"><h3>Capabilities</h3><p>What the brain can do: draft a proposal, follow up with a prospect, write minutes, check that a process was followed. A capability is described once, then runs as often as needed.</p></article></div>
+    <div class="cerveau-piliers"><article class="cerveau-pilier"><span class="cerveau-pilier-title">Memory</span><img width="1024" height="1536" class="cerveau-pilier-col" src="assets/Pilier-prune.webp?v=2" alt="" aria-hidden="true"><span class="cerveau-pilier-sub">Everything you have already thought, written and decided: notes, minutes, trade-offs. Knowledge that today sits in files and in your head becomes available when you need it.</span></article><article class="cerveau-pilier"><span class="cerveau-pilier-title">Living data</span><img width="1024" height="1536" class="cerveau-pilier-col" src="assets/Pilier-prune.webp?v=2" alt="" aria-hidden="true"><span class="cerveau-pilier-sub">Clients, figures, pipeline. They change every day. A brain that keeps them up to date shows the real state of the company, without waiting for the end-of-month report.</span></article><article class="cerveau-pilier"><span class="cerveau-pilier-title">Capabilities</span><img width="1024" height="1536" class="cerveau-pilier-col" src="assets/Pilier-prune.webp?v=2" alt="" aria-hidden="true"><span class="cerveau-pilier-sub">What the brain can do: draft a proposal, follow up with a prospect, write minutes, check that a process was followed. A capability is described once, then runs as often as needed.</span></article></div>
   </div>
 
   <div class="cerveau-block">
