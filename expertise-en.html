@@ -2148,6 +2148,37 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
 .cerveau-article-cta{ display: inline-flex; align-items: center; gap: 10px; font-family: var(--sans); font-size: .9rem; font-weight: 600; color: var(--rose); }
 .cerveau-article-cta img{ width: 22px; height: 22px; display: block; }
 @media (max-width: 640px){ .cerveau-article{ flex-direction: column; align-items: stretch; text-align: center; } .cerveau-article-img{ width: 100%; } .cerveau-article-body{ text-align: center; } .cerveau-article-cta{ justify-content: center; } }
+
+/* ═══ COMPARATIF AUTOMATISATION / AGENT IA ═══ */
+.cerveau-compare{ min-width: 0; }
+.cerveau-compare thead th{ padding-bottom: 18px; border-bottom: 1px solid var(--pale-rose); font-size: .8rem; letter-spacing: .14em; }
+.cerveau-compare .cmp-head{ display: inline-flex; align-items: center; gap: 12px; }
+.cerveau-compare .cmp-auto{ color: var(--rose); }
+.cerveau-compare .cmp-agent{ color: var(--plum); }
+.cerveau-compare .cmp-icon{ flex-shrink: 0; }
+.cerveau-compare tbody th{ font-weight: 600; font-size: .92rem; letter-spacing: .01em; text-transform: none; color: var(--plum); white-space: nowrap; width: 210px; }
+.cerveau-compare tbody td{ padding: 20px 22px; font-size: .98rem; line-height: 1.6; }
+.cerveau-compare tbody tr:last-child th, .cerveau-compare tbody tr:last-child td{ border-bottom: 0; }
+.cerveau-compare tr.cmp-example td, .cerveau-compare tr.cmp-example th{ background: rgba(217,201,195,.22); }
+.cerveau-compare tr.cmp-example td{ border-bottom: 0; }
+.cerveau-compare tr.cmp-example th{ border-bottom: 0; }
+.cerveau-compare td strong{ font-weight: 600; }
+.cerveau-sr{ position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+@media (max-width: 899px){
+  .cerveau-compare{ min-width: 0; }
+  .cerveau-compare thead{ display: none; }
+  .cerveau-compare, .cerveau-compare tbody, .cerveau-compare tr, .cerveau-compare th, .cerveau-compare td{ display: block; width: 100%; }
+  .cerveau-compare tbody tr{ padding: 20px 18px; border-bottom: 1px solid var(--pale-rose); }
+  .cerveau-compare tbody tr:last-child{ border-bottom: 0; }
+  .cerveau-compare tbody th{ width: auto; white-space: normal; padding: 0 0 10px; font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; color: var(--rose); }
+  .cerveau-compare tbody td{ padding: 6px 0 8px; border: 0; }
+  .cerveau-compare tbody td::before{ content: attr(data-label); display: block; font-size: .72rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--plum); margin-bottom: 2px; }
+  .cerveau-compare tbody td[data-label="Automatisation"]::before, .cerveau-compare tbody td[data-label="Automation"]::before, .cerveau-compare tbody td[data-label="Automatización"]::before{ color: var(--rose); }
+  .cerveau-compare tr.cmp-example{ border-radius: 10px; }
+  .cerveau-compare tr.cmp-example th{ padding: 14px 16px 6px; border-radius: 10px 10px 0 0; }
+  .cerveau-compare tr.cmp-example td{ padding-left: 16px; padding-right: 16px; }
+  .cerveau-compare tr.cmp-example td:last-child{ padding-bottom: 14px; }
+}
 </style>
 <style id="footer-contact-gauche">
 @media (min-width: 1251px){
@@ -2682,11 +2713,18 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
   <div class="cerveau-block">
     <h3 class="cerveau-h3">Automation and agent: two ways to act</h3>
     <div class="cerveau-table-wrap">
-      <table class="cerveau-table">
-        <thead><tr><th scope="col"></th><th scope="col">Automation</th><th scope="col">Agent</th></tr></thead>
-        <tbody><tr><td>Trigger</td><td>A specific event: a form submitted, a date reached</td><td>A goal: prepare Thursday’s meeting</td></tr><tr><td>Behavior</td><td>Deterministic: same inputs, same result</td><td>Autonomous: chooses its steps and adapts to context</td></tr><tr><td>Resources</td><td>A sequence of steps fixed in advance</td><td>Draws on skills, tools and the leader’s context</td></tr><tr><td>Control</td><td>Auditable: each step is traceable and verifiable</td><td>Supervised: sensitive actions go through human validation</td></tr><tr><td>EXEC’IA Consulting example</td><td>A prospect books a slot: the record is created in the CRM and the thank-you email is sent</td><td>Before a meeting, the agent gathers previous exchanges, the prospect’s file and market watch, then proposes an interview plan</td></tr></tbody>
-      </table>
-    </div>
+  <table class="cerveau-table cerveau-compare">
+    <caption class="cerveau-sr">Comparison between automation and AI agent</caption>
+    <thead><tr><th scope="col"><span class="cerveau-sr"></span></th><th scope="col" class="cmp-auto"><span class="cmp-head"><svg class="cmp-icon" viewBox="0 0 32 32" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="12" width="7" height="8" rx="1.5"/><rect x="12.5" y="12" width="7" height="8" rx="1.5"/><rect x="22" y="12" width="7" height="8" rx="1.5"/><path d="M10 16h2.5M19.5 16H22"/></svg>Automation</span></th><th scope="col" class="cmp-agent"><span class="cmp-head"><svg class="cmp-icon" viewBox="0 0 32 32" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="3.2"/><circle cx="6" cy="8" r="2.2"/><circle cx="26" cy="8" r="2.2"/><circle cx="6" cy="24" r="2.2"/><circle cx="26" cy="24" r="2.2"/><path d="M8 9.5l5.5 4.5M24 9.5l-5.5 4.5M8 22.5l5.5-4.5M24 22.5l-5.5-4.5"/></svg>AI agent</span></th></tr></thead>
+    <tbody>
+<tr><th scope="row">Trigger</th><td data-label="Automation">Reacts to <strong>a defined event</strong></td><td data-label="AI agent">Pursues <strong>an assigned goal</strong></td></tr>
+<tr><th scope="row">Behavior</th><td data-label="Automation">Runs <strong>predefined rules</strong></td><td data-label="AI agent">Plans and <strong>adapts</strong> its actions</td></tr>
+<tr><th scope="row">Resources</th><td data-label="Automation">Follows a <strong>structured workflow</strong></td><td data-label="AI agent">Draws on <strong>tools, data and context</strong></td></tr>
+<tr><th scope="row">Control</th><td data-label="Automation">Defined, <strong>traceable</strong> steps</td><td data-label="AI agent">Actions framed and <strong>supervised</strong></td></tr>
+<tr class="cmp-example"><th scope="row">EXEC’IA Consulting example</th><td data-label="Automation">Booking → CRM updated → confirmation sent</td><td data-label="AI agent">Prepares an interview: history, prospect, watch and meeting plan</td></tr>
+    </tbody>
+  </table>
+</div>
   </div>
 
   <div class="cerveau-block">
