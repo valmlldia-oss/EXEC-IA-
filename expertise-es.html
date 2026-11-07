@@ -2279,6 +2279,51 @@ rect.cerveau-art-accent{ fill: var(--rose); stroke: none; }
 .btn-rose:hover, .cookie-btn--accept:hover { background-color: #953F43 !important; border-color: #953F43 !important; filter: none; }
 .btn .ia-rose, .btn-rose .ia-rose, .cookie-btn .ia-rose { color: #FAF6F2 !important; }
 .hero-cta-link, .hero-cta-link strong { color: #A6474B !important; }
+
+/* Retouches Expertise : jumeau en trois colonnes, terracotta sur les mots clés, listes et encadrés du cerveau */
+.jumeau-grid{ grid-template-columns: minmax(0,1fr) minmax(0,1.3fr) minmax(0,1fr) !important; align-items: center !important; max-width: 1180px !important; }
+@media (max-width: 900px){ .jumeau-grid{ grid-template-columns: 1fr !important; } }
+.jumeau-grid .xcard li{ margin-bottom: 14px; }
+.jumeau-figure img{ aspect-ratio: 1412 / 830 !important; }
+.ink-terra-lg{ color: #C75F62 !important; }
+.cerveau-num{ font-size: 1.6rem !important; line-height: 1; color: #A6474B !important; }
+.cerveau-path{ max-width: 1160px; margin-left: auto; margin-right: auto; }
+.cerveau-article-img{ width: 240px !important; }
+.roles-bullets{ list-style: none; margin: 16px 0 0; padding: 0; max-width: 720px; font-family: var(--sans); font-size: 1.05rem; line-height: 1.65; color: var(--plum); }
+.roles-bullets li{ position: relative; padding-left: 1.5em; margin-bottom: 8px; }
+.roles-bullets li::before{ content: ""; position: absolute; left: 0; top: .62em; width: .55em; height: .55em; border-radius: 50%; background: #C75F62; }
+.cerveau-focus{ background: var(--ivory); border: 1px solid var(--pale-rose); border-radius: 14px; padding: 28px 30px; box-shadow: 0 14px 34px rgba(99,59,74,.06); }
+.priorites{ list-style: none; margin: 14px 0 0; padding: 0; font-family: var(--sans); font-size: 1rem; line-height: 1.65; color: var(--plum); }
+.priorites li{ position: relative; padding-left: 1.4em; margin-bottom: 10px; }
+.priorites li::before{ content: ""; position: absolute; left: 0; top: .6em; width: .5em; height: .5em; border-radius: 50%; background: #C75F62; }
+.priorites strong{ font-weight: 600; color: #A6474B; }
+.questions-cta-btn, .questions-cta-btn:hover{ background-color: #C75F62 !important; border-color: #C75F62 !important; color: #FAF6F2 !important; font-weight: 700 !important; font-size: 1.17rem !important; }
+.questions-cta-btn:hover{ background-color: #A6474B !important; border-color: #A6474B !important; }
+.cerveau-text strong{ font-weight: 600; color: var(--plum); }
+.cerveau-lead{ font-family: var(--serif); font-size: clamp(1.15rem, 2vw, 1.35rem); line-height: 1.5; color: var(--plum); margin-bottom: 16px; }
+.cerveau-quote{ font-size: clamp(1.6rem, 3.4vw, 2.5rem) !important; line-height: 1.25 !important; }
+.jumeau-note .ia-rose{ color: #C75F62 !important; font-size: 1.5rem; font-weight: 600; line-height: 1.35; }
+.cerveau-h2-nowrap{ white-space: normal !important; }
+.roles-trio{ margin: 16px 0 0; font-family: var(--sans); font-size: 1.02rem; line-height: 1.65; color: var(--plum); white-space: nowrap; max-width: none; }
+.roles-trio .roles-dot{ display: inline-block; width: .5em; height: .5em; border-radius: 50%; background: #C75F62; margin: 0 .8em; vertical-align: middle; position: relative; top: -.08em; }
+@media (max-width: 900px){ .roles-trio{ white-space: normal; } }
+.cerveau-h4-line{ display: block; }
+.prio-name{ color: #A6474B; font-weight: 600; text-decoration: none; border-bottom: 1px dotted #A6474B; }
+.prio-name:hover{ border-bottom-style: solid; }
+.cerveau-fold{ margin: 0 0 8px; }
+.cerveau-fold summary{ cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.cerveau-fold summary::-webkit-details-marker{ display: none; }
+.cerveau-fold summary h3{ margin: 0; }
+.cerveau-fold summary::after{ content: "+"; font-family: var(--sans); font-size: 1.5rem; line-height: 1; color: #A6474B; }
+.cerveau-fold[open] summary::after{ content: "–"; }
+.cerveau-fold-body{ padding-top: 14px; }
+.jumeau-fold{ margin: 0; border-bottom: 1px solid var(--pale-rose); padding: 4px 0; }
+.jumeau-fold:last-child{ border-bottom: 0; }
+.jumeau-fold summary{ cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; font-weight: 600; color: var(--plum); padding: 8px 0; }
+.jumeau-fold summary::-webkit-details-marker{ display: none; }
+.jumeau-fold summary::after{ content: "+"; font-size: 1.3rem; line-height: 1; color: #A6474B; }
+.jumeau-fold[open] summary::after{ content: "–"; }
+.jumeau-fold p{ margin: 2px 0 10px; }
 </style>
 <style id="footer-contact-gauche">
 @media (min-width: 1251px){
@@ -2546,7 +2591,7 @@ rect.cerveau-art-accent{ fill: var(--rose); stroke: none; }
           <img loading="lazy" decoding="async" width="1536" height="1024" src="assets/agents/repere.webp" alt="REFERENTE — Agente de IA de Reclutamiento de EXEC'IA">
         </div>
         <div class="agent-body">
-          <h3 class="agent-name"><span class="ink-accent">REFERENTE</span> <span>Reclutamiento</span></h3>
+          <h3 class="agent-name" id="agent-repere"><span class="ink-accent">REFERENTE</span> <span>Reclutamiento</span></h3>
           <div class="agent-divider"></div>
           <p class="agent-desc">Detecta los mejores perfiles para orientar tus decisiones de contratación.</p>
           <div class="agent-pills">
@@ -2566,7 +2611,7 @@ rect.cerveau-art-accent{ fill: var(--rose); stroke: none; }
           <img loading="lazy" decoding="async" width="1536" height="1024" src="assets/agents/trame.webp" alt="HILO — Agente de IA de Memoria de Reuniones de EXEC'IA">
         </div>
         <div class="agent-body">
-          <h3 class="agent-name"><span class="ink-accent">HILO</span> <span>Memoria de reuniones</span></h3>
+          <h3 class="agent-name" id="agent-trame"><span class="ink-accent">HILO</span> <span>Memoria de reuniones</span></h3>
           <div class="agent-divider"></div>
           <p class="agent-desc">Convierte cada reunión en una memoria consultable y utilizable.</p>
           <div class="agent-pills">
@@ -2586,7 +2631,7 @@ rect.cerveau-art-accent{ fill: var(--rose); stroke: none; }
           <img loading="lazy" decoding="async" width="1536" height="1024" src="assets/agents/flux.webp" alt="FLUJO — Agente de IA de Facturación de EXEC'IA">
         </div>
         <div class="agent-body">
-          <h3 class="agent-name"><span class="ink-accent">FLUJO</span> <span>Facturación</span></h3>
+          <h3 class="agent-name" id="agent-flux"><span class="ink-accent">FLUJO</span> <span>Facturación</span></h3>
           <div class="agent-divider"></div>
           <p class="agent-desc">Aclara las decisiones de tesorería antes de que se conviertan en urgencias.</p>
           <div class="agent-pills">
@@ -2677,7 +2722,7 @@ rect.cerveau-art-accent{ fill: var(--rose); stroke: none; }
           <details class="agent-more">
             <summary class="agent-cta"><span>Descubrir MIRA</span> <span class="portrait-link-arrow">→</span></summary>
             <p class="agent-desc-full">MIRA es tu agente de licitaciones con <span class="ia-rose">IA</span>, pensado para responder con precisión en lugar de responder a todo. Analiza los pliegos de condiciones, identifica los requisitos clave y prepara una primera respuesta específica. Tú conservas la decisión de presentarte y el arbitraje final: MIRA se encarga del encuadre.</p>
-          <h3>ANCLA Memoria documental</h3>
+          <h3 id="agent-ancre">ANCLA Memoria documental</h3>
           <p>Indexa tu memoria documental y encuentra cualquier información en una sola búsqueda.</p>
           <p>ANCLA es tu agente de memoria documental, pensado para que ninguna información se pierda en tus expedientes. Indexa cada documento que se archiva, encuentra en segundos lo que ya se escribió o decidió, y señala lo que debe actualizarse. Tú conservas la decisión sobre lo que se archiva o se cambia: ANCLA se encarga de la memoria.</p>
           </details>
@@ -2754,34 +2799,37 @@ rect.cerveau-art-accent{ fill: var(--rose); stroke: none; }
 <section id="jumeau-numerique" class="agents-section snap-page">
   <div class="agents-header reveal">
     <p class="agents-v2-eyebrow">Iniciativa <span class="ia-rose">IA</span></p>
-    <h2 class="agents-title"><span class="agents-plum">El gemelo</span> <span class="agents-rose">digital del directivo</span></h2>
+    <h2 class="agents-title"><span class="agents-plum">El gemelo</span> <span class="ink-terra-lg">digital del directivo</span></h2>
   </div>
 
   <div class="agents-team-caption-block reveal">
-    <p class="agents-team-title"><span class="cerveau-h2-line">Preservar la memoria de las decisiones.</span><span class="cerveau-h2-line">Transmitir la inteligencia de su contexto.</span></p>
+    <p class="agents-team-title"><span class="cerveau-h2-line">Preservar la <span class="ink-terra-lg">memoria de las decisiones</span>.</span><span class="cerveau-h2-line">Transmitir la <span class="ink-terra-lg">inteligencia</span> de su contexto.</span></p>
     <p class="web-intro">Una decisión no se reduce a su resultado. Se inscribe en un contexto, descansa en arbitrajes y responde a prioridades. El gemelo digital pretende preservar esta memoria estratégica para facilitar su consulta y su transmisión, en particular durante una sucesión en la dirección.</p>
     <p class="jumeau-tag">Más allá de los documentos, preservar las razones de las decisiones.</p>
   </div>
 
   <div class="jumeau-grid reveal">
-    <figure class="jumeau-figure">
-      <img src="assets/perspectives/jumeau-numerique-section.webp" width="1092" height="830" loading="lazy" decoding="async" alt="Un directivo de perfil frente a su gemelo digital, representado como una red de luz, conectado a un portátil e iconos de decisión">
-    </figure>
-    <div class="jumeau-cards">
       <div class="xcard">
         <h3>Una memoria estratégica al servicio de la decisión</h3>
         <ul class="s0"><li class="row-baseline"><span class="ink-accent-fixed">✓</span><span><span class="jm-label">Capitalización estratégica</span>Documentar las decisiones clave, sus motivos y los arbitrajes asociados.</span></li><li class="row-baseline"><span class="ink-accent-fixed">✓</span><span><span class="jm-label">Preparación de decisiones</span>Recuperar los precedentes pertinentes y los puntos de vigilancia documentados.</span></li><li class="row-baseline"><span class="ink-accent-fixed">✓</span><span><span class="jm-label">Continuidad de la dirección</span>Facilitar la transmisión del conocimiento en un cambio de directivo.</span></li><li class="row-baseline"><span class="ink-accent-fixed">✓</span><span><span class="jm-label">Personalización</span>Estructurar la memoria según las prioridades y los criterios definidos por el directivo.</span></li></ul>
       </div>
+    <figure class="jumeau-figure">
+      <img src="assets/perspectives/jumeau-numerique-section.webp" width="1412" height="830" loading="lazy" decoding="async" alt="Un directivo de perfil frente a su gemelo digital, representado como una red de luz, conectado a un portátil e iconos de decisión">
+    </figure>
       <div class="xcard">
         <h3>Un método estructurado, bajo control humano</h3>
         <ol class="jumeau-steps jumeau-steps--method"><li><span class="jm-num">01</span><span><span class="jm-label">Capitalizar</span>Recoger las decisiones, los razonamientos y su contexto en entrevistas estructuradas.</span></li><li><span class="jm-num">02</span><span><span class="jm-label">Validar</span>Hacer que el directivo verifique y apruebe la información antes de incorporarla.</span></li><li><span class="jm-num">03</span><span><span class="jm-label">Probar</span>Someter las respuestas a situaciones concretas y comprobar su fidelidad a las fuentes.</span></li><li><span class="jm-num">04</span><span><span class="jm-label">Actualizar</span>Prever una actualización periódica y tras cada decisión estratégica importante.</span></li></ol>
       </div>
-    </div>
   </div>
 
   <div class="jumeau-privacy">
-    <p><strong>Confidencialidad.</strong> La memoria estratégica puede contener información especialmente sensible. Los derechos de acceso, los plazos de conservación y las condiciones de tratamiento deben definirse desde el encuadre, conforme a las obligaciones aplicables.</p>
-    <p><strong>Papel de las personas.</strong> El gemelo digital no sustituye ni al directivo ni a su sucesor. Facilita el acceso a una memoria documentada. La interpretación, los arbitrajes y las decisiones siguen siendo humanos.</p>
+    <details class="jumeau-fold"><summary>Confidencialidad.</summary><p>La memoria estratégica puede contener información especialmente sensible. Los derechos de acceso, los plazos de conservación y las condiciones de tratamiento deben definirse desde el encuadre, conforme a las obligaciones aplicables.</p></details>
+    <details class="jumeau-fold"><summary>Papel de las personas.</summary><p>El gemelo digital no sustituye ni al directivo ni a su sucesor. Facilita el acceso a una memoria documentada. La interpretación, los arbitrajes y las decisiones siguen siendo humanos.</p></details>
+  </div>
+
+  <div class="jumeau-privacy">
+    <details class="jumeau-fold"><summary>Una memoria escrita y mantenida.</summary><p>Una memoria que la IA construye sola, sin un método humano para mantenerla al día, se degrada con el tiempo y termina desalineada del directivo. El gemelo digital se apoya en un contexto escrito y mantenido con intención.</p></details>
+    <details class="jumeau-fold"><summary>Los documentos imperfectos no bloquean nada.</summary><p>La memoria está diseñada para encontrar una información gracias a su contexto, no gracias a una clasificación perfecta. Basta con empezar con lo que ya se tiene.</p></details>
   </div>
 
   <p class="jumeau-note reveal">Cada proyecto comienza con una <span class="ia-rose">auditoría de encuadre</span>.</p>
@@ -2789,7 +2837,7 @@ rect.cerveau-art-accent{ fill: var(--rose); stroke: none; }
 
   <div class="jumeau-cta reveal">
     <a href="https://calendly.com/exec-ia" target="_blank" rel="noopener" class="btn btn-rose questions-cta-btn">Reservar una conversación <span class="btn-arrow">→</span></a>
-    <a href="perspective-jumeau-numerique-savoir-dirigeant-es.html" class="cerveau-article"><img src="assets/perspectives/jumeau-numerique-dirigeant-card.webp" alt="" class="cerveau-article-img" loading="lazy" decoding="async"><span class="cerveau-article-body"><span class="cerveau-article-title">Cuando el directivo se va, ¿cómo conservar su saber?</span><span class="cerveau-article-cta"><img src="assets/linkedin-logo.png" alt="" width="22" height="22" loading="lazy">Leer el artículo <span aria-hidden="true">→</span></span></span></a>
+    <a href="perspective-jumeau-numerique-savoir-dirigeant-es.html" class="cerveau-article"><img src="assets/perspectives/jumeau-numerique-section.webp" alt="" class="cerveau-article-img" loading="lazy" decoding="async"><span class="cerveau-article-body"><span class="cerveau-article-title">Cuando el directivo se va, ¿cómo conservar su saber?</span><span class="cerveau-article-cta"><img src="assets/linkedin-logo.png" alt="" width="22" height="22" loading="lazy">Leer el artículo <span aria-hidden="true">→</span></span></span></a>
   </div>
 </section>
 
@@ -2798,20 +2846,20 @@ rect.cerveau-art-accent{ fill: var(--rose); stroke: none; }
 
   <div class="cerveau-block">
     <p class="cerveau-eyebrow">El cerebro <span class="ia-rose">IA</span></p>
-    <h2 class="cerveau-h2"><span class="cerveau-h2-line">Tres pilares.</span><span class="cerveau-h2-line cerveau-h2-nowrap">Una <span class="ia-rose">inteligencia</span> al servicio de tus decisiones.</span></h2>
-    <p class="cerveau-lede">Una memoria estratégica, datos actualizados y capacidades de acción: tres componentes complementarios para iluminar tus decisiones.</p>
-    <div class="cerveau-cards"><article class="cerveau-pcard"><div class="cerveau-pcard-top"><span class="cerveau-num">01</span><svg class="cerveau-pico" viewBox="0 0 48 48" width="44" height="44" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="24" cy="24" r="4.5"/><circle cx="9" cy="11" r="3.5"/><circle cx="39" cy="11" r="3.5"/><circle cx="9" cy="37" r="3.5"/><circle cx="39" cy="37" r="3.5"/><path d="M12 13l8.5 7.5M36 13l-8.5 7.5M12 35l8.5-7.5M36 35l-8.5-7.5"/></svg></div><h3>La memoria estratégica</h3><p>Decisiones, arbitrajes, intercambios y documentos: el conocimiento esencial se estructura para encontrarlo y utilizarlo cuando lo necesitas.</p><p class="cerveau-benefit">Tu saber sigue accesible.</p></article><article class="cerveau-pcard"><div class="cerveau-pcard-top"><span class="cerveau-num">02</span><svg class="cerveau-pico" viewBox="0 0 48 48" width="44" height="44" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 41V7M7 41h34"/><path d="M13 32l9-8 7 5 12-12"/><path d="M36 17h5v5"/></svg></div><h3>Los datos actualizados</h3><p>Clientes, indicadores, actividad comercial: la información de tus herramientas conectadas se cruza para ofrecer una visión coherente y actualizada de tu actividad.</p><p class="cerveau-benefit">Una visión fiable, siempre que los datos lo sean.</p></article><article class="cerveau-pcard"><div class="cerveau-pcard-top"><span class="cerveau-num">03</span><svg class="cerveau-pico" viewBox="0 0 48 48" width="44" height="44" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="17" width="12" height="14" rx="2.5"/><rect x="18" y="17" width="12" height="14" rx="2.5"/><rect x="32" y="17" width="12" height="14" rx="2.5"/><path d="M16 24h2M30 24h2"/></svg></div><h3>Las capacidades de acción</h3><p>Preparación de reuniones, síntesis de encuentros, seguimiento comercial: los agentes de IA pueden utilizar las herramientas y la información necesarias para realizar tareas definidas.</p><p class="cerveau-benefit">Tareas delegadas. Decisiones supervisadas.</p></article></div>
-    <div class="cerveau-sig"><div class="cerveau-sig-item"><img class="cerveau-sig-col" src="assets/Pilier-prune.webp?v=2" width="1024" height="1536" alt="" aria-hidden="true" loading="lazy"><span class="cerveau-sig-label">Comunicación</span><p>McKinsey &amp; Company</p><p>Dirección de Comunicación, Francia</p><p>Claridad, síntesis y rigor en la redacción.</p></div><div class="cerveau-sig-item"><img class="cerveau-sig-col" src="assets/Pilier-prune.webp?v=2" width="1024" height="1536" alt="" aria-hidden="true" loading="lazy"><span class="cerveau-sig-label">Dirección</span><p>Más de 20 años junto a direcciones generales internacionales.</p><p>Comprensión de los retos estratégicos y de los arbitrajes.</p></div><div class="cerveau-sig-item"><img class="cerveau-sig-col" src="assets/Pilier-prune.webp?v=2" width="1024" height="1536" alt="" aria-hidden="true" loading="lazy"><span class="cerveau-sig-label">Inteligencia artificial</span><p>Certificación IA generativa RS6776.</p><p>Formación de consultora IA Studeria.</p><p>Executive Online Certificate ESSEC, en curso.</p></div></div>
+    <h2 class="cerveau-h2"><span class="cerveau-h2-line">Tres pilares.</span><span class="cerveau-h2-line cerveau-h2-nowrap">Tres <span class="ia-rose">componentes complementarios</span> para apoyar tus decisiones.</span></h2>
+    <p class="cerveau-lede">Una memoria estratégica, datos actualizados y capacidades de acción.</p>
+    <div class="cerveau-cards"><article class="cerveau-pcard"><div class="cerveau-pcard-top"><span class="cerveau-num">01</span><svg class="cerveau-pico" viewBox="0 0 48 48" width="44" height="44" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 14a3 3 0 0 1 3-3h10l3 3h17a3 3 0 0 1 3 3v17a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3z"/><path d="M16 24h16M16 30h10"/></svg></div><h3>La memoria estratégica</h3><p>Decisiones, arbitrajes, intercambios y documentos: el conocimiento esencial se estructura para encontrarlo y utilizarlo cuando lo necesitas.</p><p class="cerveau-benefit">Tu conocimiento sigue accesible, incluso tras una salida.</p></article><article class="cerveau-pcard"><div class="cerveau-pcard-top"><span class="cerveau-num">02</span><svg class="cerveau-pico" viewBox="0 0 48 48" width="44" height="44" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M40 24a16 16 0 1 1-4.7-11.3"/><path d="M40 7v8h-8"/><circle cx="24" cy="24" r="3"/></svg></div><h3>Los datos actualizados</h3><p>Clientes, indicadores, actividad comercial: la información de tus herramientas conectadas se cruza para ofrecer una visión coherente y actualizada de tu actividad.</p><p class="cerveau-benefit">Una visión fiable, siempre que los datos lo sean.</p></article><article class="cerveau-pcard"><div class="cerveau-pcard-top"><span class="cerveau-num">03</span><svg class="cerveau-pico" viewBox="0 0 48 48" width="44" height="44" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="24" cy="24" r="17"/><path d="M20 17l10 7-10 7z"/></svg></div><h3>Las capacidades de acción</h3><p>Preparación de reuniones, síntesis de encuentros, seguimiento comercial: los agentes de IA pueden utilizar las herramientas y la información necesarias para realizar tareas definidas.</p><p class="cerveau-benefit">Tareas delegadas. Decisiones supervisadas.</p></article></div>
+    <div class="cerveau-sig"><div class="cerveau-sig-item"><img class="cerveau-sig-col" src="assets/Pilier-prune.webp?v=2" width="1024" height="1536" alt="" aria-hidden="true" loading="lazy"><span class="cerveau-sig-label">Comunicación</span><p>McKinsey &amp; Company</p><p>Dirección de Comunicación, Francia</p><p>Claridad, síntesis y rigor en la redacción.</p></div><div class="cerveau-sig-item"><img class="cerveau-sig-col" src="assets/Pilier-prune.webp?v=2" width="1024" height="1536" alt="" aria-hidden="true" loading="lazy"><span class="cerveau-sig-label">Dirección</span><p>Más de 20 años junto a direcciones generales.</p><p>Comprensión de los retos estratégicos y de los arbitrajes.</p></div><div class="cerveau-sig-item"><img class="cerveau-sig-col" src="assets/Pilier-prune.webp?v=2" width="1024" height="1536" alt="" aria-hidden="true" loading="lazy"><span class="cerveau-sig-label ia-rose">Inteligencia artificial</span><p>Certificación IA generativa RS6776.</p><p>Formación de consultora IA Studeria.</p><p>Online Certificate ESSEC (en curso).</p></div></div>
   </div>
 
   <div class="cerveau-block">
     <h2 class="cerveau-h2"><span class="cerveau-h2-line">Un segundo cerebro.</span><span class="cerveau-h2-line cerveau-h2-nowrap">Tu <span class="ia-rose">juicio</span> sigue al mando.</span></h2>
     <p class="cerveau-lede">Recuperar lo esencial.<br class="cerveau-br-desk"> Comprender más rápido.<br class="cerveau-br-desk"> Actuar con método.</p>
-    <ol class="cerveau-path"><li class="cerveau-step"><div class="cerveau-step-art"><svg viewBox="0 0 160 120" aria-hidden="true" focusable="false"><g class="cerveau-art-line"><rect x="12" y="16" width="18" height="22" rx="2"/><rect x="12" y="49" width="18" height="22" rx="2"/><rect x="12" y="82" width="18" height="22" rx="2"/><path d="M30 27 C 56 27, 62 52, 84 56"/><path d="M30 60 L 84 60"/><path d="M30 93 C 56 93, 62 68, 84 64"/></g><circle class="cerveau-art-accent" cx="108" cy="60" r="22"/><circle class="cerveau-art-dot" cx="108" cy="60" r="5"/></svg></div><p class="cerveau-step-kicker"><span class="cerveau-step-num">01</span>Recuperar</p><h3>Menos carga mental</h3><p class="cerveau-step-hook">Lo esencial, sin tener que memorizarlo todo.</p><p class="cerveau-step-text">Documentos, plazos y seguimientos se organizan para facilitar el acceso a la información útil, en el momento en que la necesitas.</p><p class="cerveau-step-benefit">Tiempo recuperado para lo esencial.</p></li><li class="cerveau-step"><div class="cerveau-step-art"><svg viewBox="0 0 160 120" aria-hidden="true" focusable="false"><g class="cerveau-art-line"><path d="M12 28 C 44 28, 56 50, 84 52"/><path d="M12 60 L 84 60"/><path d="M12 92 C 44 92, 56 70, 84 68"/><path d="M96 88 H 150"/></g><rect class="cerveau-art-accent" x="100" y="46" width="9" height="42" rx="1.5"/><rect class="cerveau-art-line" x="115" y="34" width="9" height="54" rx="1.5"/><rect class="cerveau-art-line" x="130" y="58" width="9" height="30" rx="1.5"/></svg></div><p class="cerveau-step-kicker"><span class="cerveau-step-num">02</span>Comprender</p><h3>Más claridad</h3><p class="cerveau-step-hook">La información puesta en perspectiva.</p><p class="cerveau-step-text">Los datos disponibles se cruzan y se contextualizan. Los desajustes, incoherencias o datos que faltan pueden señalarse para facilitar su análisis.</p><p class="cerveau-step-benefit">Una mejor lectura de la situación.</p></li><li class="cerveau-step"><div class="cerveau-step-art"><svg viewBox="0 0 160 120" aria-hidden="true" focusable="false"><g class="cerveau-art-line"><circle cx="24" cy="28" r="9"/><circle cx="24" cy="60" r="9"/><circle cx="24" cy="92" r="9"/><path d="M33 28 C 62 28, 66 60, 92 60"/><path d="M33 60 L 92 60"/><path d="M33 92 C 62 92, 66 60, 92 60"/></g><circle class="cerveau-art-accent" cx="120" cy="60" r="18"/><circle class="cerveau-art-dot" cx="120" cy="60" r="5"/></svg></div><p class="cerveau-step-kicker"><span class="cerveau-step-num">03</span>Actuar</p><h3>Una IA a tu medida</h3><p class="cerveau-step-hook">Tus prioridades definen el marco.</p><p class="cerveau-step-text">El sistema utiliza las herramientas y las reglas que defines para preparar análisis y proponer acciones adaptadas a tu contexto.</p><p class="cerveau-step-benefit">La IA prepara. Tú arbitras.</p></li></ol>
+    <ol class="cerveau-path"><li class="cerveau-step"><div class="cerveau-step-art"><svg viewBox="0 0 160 120" aria-hidden="true" focusable="false"><g class="cerveau-art-line"><rect x="10" y="14" width="46" height="9" rx="2"/><rect x="10" y="32" width="46" height="9" rx="2"/><rect x="10" y="50" width="46" height="9" rx="2"/><rect x="10" y="68" width="46" height="9" rx="2"/><rect x="10" y="86" width="46" height="9" rx="2"/><path d="M68 16H96L84 56V92L80 96V56Z"/><path d="M86 60H100"/></g><circle class="cerveau-art-accent" cx="122" cy="60" r="22"/><circle class="cerveau-art-dot" cx="122" cy="60" r="5"/></svg></div><p class="cerveau-step-kicker"><span class="cerveau-step-num">01</span>Recuperar</p><h3>Menos carga mental</h3><p class="cerveau-step-hook">Lo esencial, sin tener que memorizarlo todo.</p><p class="cerveau-step-text">Documentos, plazos y seguimientos se organizan para facilitar el acceso a la información útil, en el momento en que la necesitas.</p><p class="cerveau-step-benefit"><span class="ia-rose">Más tiempo</span> para lo esencial.</p></li><li class="cerveau-step"><div class="cerveau-step-art"><svg viewBox="0 0 160 120" aria-hidden="true" focusable="false"><g class="cerveau-art-line"><rect x="12" y="22" width="64" height="9" rx="2"/><rect x="12" y="44" width="50" height="9" rx="2"/><rect x="12" y="66" width="70" height="9" rx="2"/><rect x="12" y="88" width="42" height="9" rx="2"/></g><rect class="cerveau-art-accent" x="12" y="44" width="50" height="9" rx="2"/><circle class="cerveau-art-accent" cx="112" cy="48" r="18"/><path class="cerveau-art-accent" d="M125 61L140 76"/></svg></div><p class="cerveau-step-kicker"><span class="cerveau-step-num">02</span>Comprender</p><h3>Más claridad</h3><p class="cerveau-step-hook">La información puesta en perspectiva.</p><p class="cerveau-step-text">Los datos disponibles se cruzan y se contextualizan. Los desajustes, incoherencias o datos que faltan pueden señalarse para facilitar su análisis.</p><p class="cerveau-step-benefit">Una <span class="ia-rose">visión más clara</span> de la situación.</p></li><li class="cerveau-step"><div class="cerveau-step-art"><svg viewBox="0 0 160 120" aria-hidden="true" focusable="false"><g class="cerveau-art-line"><path d="M16 30H144M16 60H144M16 90H144"/></g><circle class="cerveau-art-line" cx="54" cy="30" r="8"/><circle class="cerveau-art-accent" cx="112" cy="60" r="8"/><circle class="cerveau-art-line" cx="82" cy="90" r="8"/></svg></div><p class="cerveau-step-kicker"><span class="cerveau-step-num">03</span>Actuar</p><h3>Una IA a tu medida</h3><p class="cerveau-step-hook">Tus prioridades definen el marco.</p><p class="cerveau-step-text">El sistema utiliza las herramientas y las reglas que defines para preparar análisis y proponer acciones adaptadas a tu contexto.</p><p class="cerveau-step-benefit">La IA prepara. Tú arbitras.</p></li></ol>
   </div>
 
   <div class="cerveau-block">
-    <h3 class="cerveau-h3">Automatización o agente IA: ¿cuál es la diferencia?</h3>
+    <h3 class="cerveau-h3"><span class="ia-rose">Automatización o agente</span> IA: ¿cuál es la diferencia?</h3>
     <div class="cerveau-table-wrap">
   <table class="cerveau-table cerveau-compare">
     <caption class="cerveau-sr">Comparación entre automatización y agente IA</caption>
@@ -2821,41 +2869,41 @@ rect.cerveau-art-accent{ fill: var(--rose); stroke: none; }
 <tr><th scope="row">Comportamiento</th><td data-label="Automatización">Ejecuta <strong>reglas predefinidas</strong>.</td><td data-label="Agente IA">Planifica y <strong>adapta</strong> sus acciones en un marco definido.</td></tr>
 <tr><th scope="row">Recursos</th><td data-label="Automatización">Sigue un <strong>flujo de trabajo estructurado</strong></td><td data-label="Agente IA">Utiliza <strong>herramientas, datos y contexto</strong></td></tr>
 <tr><th scope="row">Control</th><td data-label="Automatización">Pasos definidos y <strong>trazables</strong></td><td data-label="Agente IA">Acciones encuadradas y <strong>supervisadas</strong></td></tr>
-<tr class="cmp-example"><th scope="row">Ejemplo EXEC’<span class="ia-rose">IA</span> Consulting</th><td data-label="Automatización">Reserva → CRM actualizado → confirmación enviada</td><td data-label="Agente IA">Prepara una entrevista: historial, prospecto, vigilancia y plan de encuentro</td></tr>
+<tr class="cmp-example"><th scope="row">Ejemplo EXEC’<span class="ia-rose">IA</span> Consulting</th><td data-label="Automatización">Reserva <span style="white-space:nowrap">→&nbsp;CRM actualizado</span> <span style="white-space:nowrap">→&nbsp;confirmación enviada</span></td><td data-label="Agente IA">Prepara una entrevista: historial, prospecto, vigilancia y plan de encuentro</td></tr>
     </tbody>
   </table>
 </div>
   </div>
 
   <div class="cerveau-block">
-    <p class="cerveau-quote"><span class="cerveau-quote-line">Comprender no basta. El reto es pasar a la <span class="ia-rose">acción</span>.</span></p>
+    <p class="cerveau-quote"><span class="cerveau-quote-line">Comprender no basta. El reto es <span class="ia-rose">pasar a la acción</span>.</span></p>
   </div>
 
   <div class="cerveau-block">
-    <h3 class="cerveau-h3">Tu papel cambia</h3>
-    <div class="roles-grid"><article class="role-card"><div class="role-top"><span class="cerveau-num">01</span><div class="role-art"><svg viewBox="0 0 160 120" aria-hidden="true" focusable="false"><g class="cerveau-art-line"><rect x="22" y="14" width="116" height="92" rx="3"/><path d="M22 44H138M62 44V106M62 74H138"/></g><path class="cerveau-art-accent" d="M92 94H128"/><circle class="cerveau-art-dot" cx="62" cy="44" r="4.5"/></svg></div></div><p class="role-kicker">Diseñar</p><h3>El arquitecto</h3><p class="role-text">Formalizas tus métodos, tus reglas de negocio y tus criterios de calidad para guiar las acciones del sistema.</p></article><article class="role-card"><div class="role-top"><span class="cerveau-num">02</span><div class="role-art"><svg viewBox="0 0 160 120" aria-hidden="true" focusable="false"><g class="cerveau-art-line"><circle cx="80" cy="60" r="38"/><circle cx="80" cy="60" r="20"/><path d="M80 14v8M80 98v8M34 60h8M118 60h8"/></g><path class="cerveau-art-accent" d="M71 60l6 6 12-13"/></svg></div></div><p class="role-kicker">Supervisar</p><h3>El supervisor</h3><p class="role-text">Controlas los resultados, gestionas las excepciones y ajustas los procesos cuando hace falta.</p></article><article class="role-card"><div class="role-top"><span class="cerveau-num">03</span><div class="role-art"><svg viewBox="0 0 160 120" aria-hidden="true" focusable="false"><g class="cerveau-art-line"><circle cx="80" cy="60" r="38"/><path d="M80 22V98M42 60H118"/></g><path class="cerveau-art-accent" d="M80 30L88 60H80Z"/><circle class="cerveau-art-dot" cx="80" cy="60" r="4"/></svg></div></div><p class="role-kicker">Decidir</p><h3>El estratega</h3><p class="role-text">Dedicas tu experiencia a las orientaciones, las relaciones y los arbitrajes que comprometen a la empresa.</p></article></div>
-    <p class="roles-close">EXEC’<span class="ia-rose">IA</span> Consulting te acompaña en esta evolución: formalizar tus métodos, supervisar los sistemas y concentrar tu experiencia en las decisiones que importan.</p>
+    <h3 class="cerveau-h3"><span class="ia-rose">Tu papel cambia</span></h3>
+    <div class="roles-grid"><article class="role-card"><div class="role-top"><span class="cerveau-num">01</span><div class="role-art"><svg viewBox="0 0 160 120" aria-hidden="true" focusable="false"><g class="cerveau-art-line"><rect x="22" y="14" width="116" height="92" rx="2"/><path d="M22 58H92M92 14V72H138M92 84V106M52 14V58M52 58V72H22"/></g><path class="cerveau-art-accent" d="M22 100H138"/><circle class="cerveau-art-dot" cx="92" cy="72" r="4.5"/></svg></div></div><p class="role-kicker">Diseñar</p><h3>El arquitecto</h3><p class="role-text">Formalizas tus métodos, tus reglas de negocio y tus criterios de calidad para guiar las acciones del sistema.</p></article><article class="role-card"><div class="role-top"><span class="cerveau-num">02</span><div class="role-art"><svg viewBox="0 0 160 120" aria-hidden="true" focusable="false"><g class="cerveau-art-line"><rect x="26" y="18" width="108" height="66" rx="4"/><path d="M80 84V100M56 104H104"/></g><path class="cerveau-art-accent" d="M40 70 L62 52 L80 62 L104 38 L120 46"/></svg></div></div><p class="role-kicker">Supervisar</p><h3>El supervisor</h3><p class="role-text">Controlas los resultados, gestionas las excepciones y ajustas los procesos cuando hace falta.</p></article><article class="role-card"><div class="role-top"><span class="cerveau-num">03</span><div class="role-art"><svg viewBox="0 0 160 120" aria-hidden="true" focusable="false"><g class="cerveau-art-line"><path d="M26 92C52 92 52 40 84 46S116 30 134 30"/><circle cx="84" cy="46" r="4"/></g><circle class="cerveau-art-dot" cx="26" cy="92" r="5"/><path class="cerveau-art-accent" d="M134 30V12M134 12L148 17L134 22"/></svg></div></div><p class="role-kicker">Decidir</p><h3>El estratega</h3><p class="role-text">Dedicas tu experiencia a las orientaciones, las relaciones y los arbitrajes que comprometen a la empresa.</p></article></div>
+    <p class="roles-close">EXEC’<span class="ia-rose">IA</span> Consulting te acompaña en esta evolución.</p><p class="roles-trio">Formalizar tus métodos <span class="roles-dot" aria-hidden="true"></span> Supervisar los sistemas <span class="roles-dot" aria-hidden="true"></span> Concentrar tu experiencia en las decisiones que importan</p>
+  </div>
+
+  <div class="cerveau-block cerveau-focus">
+    <h3 class="cerveau-h3"><span class="ink-terra-lg">Un solo cerebro</span>, no un agente por necesidad</h3>
+    <p class="cerveau-text"><strong>EXEC’<span class="ia-rose">IA</span> Consulting construye un único cerebro central, alimentado por skills.</strong> En lugar de un agente separado para cada tarea o cada cliente, es una decisión de método.</p><p class="cerveau-text">Cada petición solo consulta el contexto del proyecto correspondiente: los expedientes no se mezclan, y el sistema usa únicamente lo que necesita. Lo decidido en enero sigue disponible en marzo, sin copiarlo.</p><p class="cerveau-text">Cada nueva capacidad se añade a la misma base, sin acumular deuda técnica. Y la herramienta sigue siendo intercambiable: el modelo de IA puede cambiar sin que haya que rehacer el cerebro, sus skills ni tu método.</p>
+    <h4 class="cerveau-h4"><span class="cerveau-h4-line">REFERENTE, HILO, FLUJO y ANCLA</span><span class="cerveau-h4-line">Cuatro prioridades, un solo cerebro</span></h4>
+    <p class="cerveau-text">Comparten el mismo contexto y los mismos principios de base; solo cambia la prioridad.</p>
+    <ul class="priorites"><li><a class="prio-name" href="#agent-repere">REFERENTE</a> identifica los perfiles adecuados para apoyar tus decisiones de contratación. Prepara el trabajo; la decisión sigue siendo humana.</li><li><a class="prio-name" href="#agent-trame">HILO</a> convierte cada reunión en una memoria consultable y útil.</li><li><a class="prio-name" href="#agent-flux">FLUJO</a> te ayuda a sopesar las decisiones de tesorería antes de que se conviertan en urgencias.</li><li><a class="prio-name" href="#agent-ancre">ANCLA</a> organiza tu memoria documental para que cualquier información se encuentre con una sola búsqueda.</li></ul>
   </div>
 
   <div class="cerveau-block">
-    <h3 class="cerveau-h3">Un solo cerebro, no un agente por necesidad</h3>
-    <p class="cerveau-text">EXEC’<span class="ia-rose">IA</span> Consulting construye un único cerebro central, alimentado por skills, en lugar de un agente separado para cada tarea o cada cliente. Es una decisión de método. Cada petición solo consulta el contexto del proyecto afectado: los expedientes no se mezclan, y el sistema utiliza únicamente lo que necesita para responder. Lo decidido en enero sigue disponible en marzo, sin copiarlo. Cada nueva capacidad se añade a la misma base, sin acumular deuda técnica. Y la herramienta sigue siendo intercambiable: el modelo de IA puede cambiar sin que haya que rehacer el cerebro, sus skills ni tu método.</p>
-    <h4 class="cerveau-h4">REPÈRE, TRAME, FLUX y ANCRE: cuatro prioridades, un solo cerebro</h4>
-    <p class="cerveau-text">REPÈRE (reclutamiento), TRAME (memoria de las reuniones), FLUX (facturación) y ANCRE (memoria documental) no son cuatro sistemas separados. Son cuatro prioridades que vigila el mismo cerebro. Comparten el mismo contexto y las mismas reglas de fondo; solo cambia la prioridad. REPÈRE no toma ninguna decisión final de contratación: prepara el trabajo, y la decisión sigue siendo humana.</p>
+    <details class="cerveau-fold"><summary><h3 class="cerveau-h3">Soberanía de los datos</h3></summary><div class="cerveau-fold-body"><p class="cerveau-text"><strong>Tus datos siguen siendo tuyos.</strong></p><ul class="priorites"><li>Aplicamos el principio de minimización: solo se usan los datos necesarios para la misión.</li><li>Un dato solo se confía a una herramienta de IA cuando ese uso está autorizado, es necesario y está amparado por contrato.</li><li>Cuando se tratan datos personales por tu cuenta, se firma un acuerdo de tratamiento conforme al RGPD antes de empezar.</li></ul></div></details>
+  </div>
+
+  <div class="cerveau-block cerveau-focus">
+    <h3 class="cerveau-h3"><span class="ink-terra-lg">Invertir el 80-20, y el lugar de las personas</span></h3>
+    <p class="cerveau-text cerveau-lead">Hoy, una gran parte de tu tiempo se va en la ejecución: hacer seguimientos, clasificar, copiar, repasar lo que ya se ha dicho. <strong>El cerebro asume esa parte.</strong></p><p class="cerveau-text">El tiempo liberado se dedica a lo que tiene valor humano:</p><ul class="priorites"><li>supervisar los procesos de IA;</li><li>afinar los métodos;</li><li>cuidar la relación con tus clientes y tus equipos.</li></ul><p class="cerveau-text">Ese tiempo también abre la puerta a los proyectos aparcados por falta de disponibilidad, y permite aspirar a más. Una ambición con sentido va más allá de la facturación: un equipo mejor organizado, un cliente mejor atendido, una decisión tomada con más perspectiva.</p><p class="cerveau-text">La IA sigue siendo una palanca al servicio de las prioridades de la empresa. La decisión, el arbitraje y la responsabilidad siguen siendo humanos. <strong>El cerebro propone; tú decides.</strong></p>
   </div>
 
   <div class="cerveau-block">
-    <h3 class="cerveau-h3">Soberanía de los datos</h3>
-    <p class="cerveau-text">Tus datos siguen siendo tuyos. Aplicamos el principio de minimización: solo se utilizan los datos necesarios para la misión. Solo se confían a una herramienta de IA cuando ese uso está autorizado, es necesario y está amparado por contrato. Cuando se tratan datos personales por tu cuenta, se firma un acuerdo de tratamiento conforme al RGPD antes de empezar.</p>
-  </div>
-
-  <div class="cerveau-block">
-    <h3 class="cerveau-h3">Invertir el 80-20, y el lugar de las personas</h3>
-    <p class="cerveau-text">Hoy, una gran parte de tu tiempo se va en la ejecución: hacer seguimientos, clasificar, copiar, repasar lo que ya se ha dicho. El cerebro asume esa parte. El tiempo liberado se dedica a lo que tiene valor humano: supervisar los procesos de IA, afinar los métodos, cuidar la relación con tus clientes y tus equipos.</p><p class="cerveau-text">Ese tiempo también abre la puerta a los proyectos aparcados por falta de disponibilidad, y permite aspirar a más. Una ambición con sentido es un proyecto cuya utilidad va más allá de la facturación: un equipo mejor organizado, un cliente mejor atendido, una decisión tomada con más perspectiva.</p><p class="cerveau-text">La IA sigue siendo una palanca al servicio de las prioridades de la empresa. La decisión, el arbitraje y la responsabilidad siguen siendo humanos. El cerebro propone; tú decides.</p>
-  </div>
-
-  <div class="cerveau-block">
-    <h3 class="cerveau-h3">Lo que el cerebro cambia en el día a día</h3>
+    <h3 class="cerveau-h3"><span class="ink-terra-lg">Lo que el cerebro cambia en el día a día</span></h3>
     <ul class="cerveau-list"><li><strong>No volver a explicar nunca quién eres.</strong> Tu contexto se capta una vez y después se utiliza en cada petición.</li><li><strong>Un sistema que te acompaña en el día a día.</strong> Te sigue en tu trabajo, con independencia de la herramienta o del lugar.</li><li><strong>El saber tácito pasa a ser utilizable.</strong> Las reglas que aplicas sin escribirlas se convierten en un marco que la IA puede seguir.</li><li><strong>Datos que pertenecen al cliente.</strong> Siguen siendo del cliente y se le devuelven al final de la misión.</li><li><strong>Un sistema independiente del modelo de IA.</strong> El modelo puede evolucionar o cambiarse sin rehacer el cerebro.</li><li><strong>Una IA que escribe con tu voz.</strong> Los textos recogen tu tono, tus fórmulas y tu forma de decir las cosas.</li></ul>
   </div>
 
@@ -2865,12 +2913,16 @@ rect.cerveau-art-accent{ fill: var(--rose); stroke: none; }
         <summary>Si doy mi cerebro a mis empleados, ¿les robo su saber hacer?</summary>
         <p>No. Los skills más útiles son los que cada colaborador escribe o adapta él mismo: un skill impuesto desde arriba rara vez encaja con la forma real de trabajar. Tú no te apropias del saber hacer de tus equipos. Les das un marco para estructurarlo ellos mismos, a su manera.</p>
       </details>
+      <details>
+        <summary>¿Por qué no esperar a que Claude o ChatGPT aprendan a conocerte por sí solos?</summary>
+        <p>Anthropic y OpenAI ya trabajan en memorias que observan cómo trabajas. Hay dos límites. Esa memoria pertenece al proveedor: no puedes leerla completa ni exportarla, y dependes de un actor que fija sus precios y sus reglas. Y aun la mejor IA tiende hacia la respuesta media. Un cerebro construido a partir de tu propio método te permite diferenciarte, en lugar de producir lo mismo que todos.</p>
+      </details>
     </div>
   </div>
 
   <div class="cerveau-block">
-    <h3 class="cerveau-h3">El skill, la quintaesencia de tu valor</h3>
-    <p class="cerveau-text">Cada skill de EXEC’<span class="ia-rose">IA</span> se construye con el rigor de un oficio artesanal. Se afina al detalle para reflejar tu método y tus reglas de decisión, y no es una plantilla genérica encontrada en internet. Parte de tu método, se verifica contigo y se corrige hasta parecerse a como decides.</p>
+    <h3 class="cerveau-h3">El skill, <span class="ink-terra-lg">la quintaesencia de tu valor</span></h3>
+    <p class="cerveau-text"><strong>Cada skill de EXEC’<span class="ia-rose">IA</span> se construye con el rigor de un oficio artesanal.</strong> Se afina al detalle para reflejar tu método y tus reglas de decisión, y no es una plantilla genérica encontrada en internet.</p><p class="cerveau-text">Parte de tu método, se verifica contigo y se corrige hasta parecerse a como decides.</p>
   </div>
 
 </section>
