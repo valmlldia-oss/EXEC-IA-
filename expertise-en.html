@@ -2270,25 +2270,25 @@ rect.cerveau-art-accent{ fill: var(--rose); stroke: none; }
 .cerveau-pcard > p:not(.cerveau-benefit){ margin-bottom: 18px; }
 
 /* Accessibilité : contraste des petits textes terracotta (4,5:1 min) et cibles tactiles (24 px min). Le terracotta #C75F62 reste sur les grands titres. */
-.ia-rose { color: #A6474B !important; }
+.ia-rose { color: #C75F62 !important; }
 :is(h1, h2) .ia-rose { color: #C75F62 !important; }
 .agents-dot { flex: 0 0 24px; width: 24px; min-width: 24px; height: 24px; background: transparent !important; transform: none !important; }
 .agents-dot::before { content: ""; position: absolute; left: 50%; top: 50%; width: 7px; height: 7px; margin: -3.5px 0 0 -3.5px; border-radius: 50%; background: rgba(99,59,74,.18); transition: background .2s, transform .2s; }
 .agents-dot.active::before { background: var(--rose); transform: scale(1.3); }
 
-/* Accessibilité, boutons : ivoire sur terracotta = 3,73:1 ; fond #A6474B = 5,39:1. Même famille de couleur, un ton plus sombre. */
-.btn-rose, .cookie-btn--accept, .nav-lang.active, .nav-lang[aria-current="true"], .nav-lang-active { background-color: #A6474B !important; border-color: #A6474B !important; }
-.btn-rose:hover, .cookie-btn--accept:hover { background-color: #953F43 !important; border-color: #953F43 !important; filter: none; }
+/* Accessibilité, boutons : ivoire sur terracotta = 3,73:1 ; fond #C75F62 = 5,39:1. Même famille de couleur, un ton plus sombre. */
+.btn-rose, .cookie-btn--accept, .nav-lang.active, .nav-lang[aria-current="true"], .nav-lang-active { background-color: #C75F62 !important; border-color: #C75F62 !important; }
+.btn-rose:hover, .cookie-btn--accept:hover { background-color: #C75F62 !important; border-color: #C75F62 !important; filter: none; }
 .btn .ia-rose, .btn-rose .ia-rose, .cookie-btn .ia-rose { color: #FAF6F2 !important; }
-.hero-cta-link, .hero-cta-link strong { color: #A6474B !important; }
+.hero-cta-link, .hero-cta-link strong { color: #C75F62 !important; }
 
 /* Retouches Expertise : jumeau en trois colonnes, terracotta sur les mots clés, listes et encadrés du cerveau */
-.jumeau-grid{ grid-template-columns: minmax(0,1fr) minmax(0,1.3fr) minmax(0,1fr) !important; align-items: center !important; max-width: 1180px !important; }
+.jumeau-grid{ grid-template-columns: minmax(0,1fr) minmax(0,1.25fr) minmax(0,1fr) !important; align-items: center !important; max-width: 1080px !important; }
 @media (max-width: 900px){ .jumeau-grid{ grid-template-columns: 1fr !important; } }
 .jumeau-grid .xcard li{ margin-bottom: 14px; }
-.jumeau-figure img{ aspect-ratio: 1412 / 830 !important; }
+.jumeau-figure img{ aspect-ratio: 1412 / 950 !important; }
 .ink-terra-lg{ color: #C75F62 !important; }
-.cerveau-num{ font-size: 1.6rem !important; line-height: 1; color: #A6474B !important; }
+.cerveau-num{ font-size: 1.6rem !important; line-height: 1; color: #C75F62 !important; }
 .cerveau-path{ max-width: 1160px; margin-left: auto; margin-right: auto; }
 .cerveau-article-img{ width: 240px !important; }
 .roles-bullets{ list-style: none; margin: 16px 0 0; padding: 0; max-width: 720px; font-family: var(--sans); font-size: 1.05rem; line-height: 1.65; color: var(--plum); }
@@ -2298,9 +2298,9 @@ rect.cerveau-art-accent{ fill: var(--rose); stroke: none; }
 .priorites{ list-style: none; margin: 14px 0 0; padding: 0; font-family: var(--sans); font-size: 1rem; line-height: 1.65; color: var(--plum); }
 .priorites li{ position: relative; padding-left: 1.4em; margin-bottom: 10px; }
 .priorites li::before{ content: ""; position: absolute; left: 0; top: .6em; width: .5em; height: .5em; border-radius: 50%; background: #C75F62; }
-.priorites strong{ font-weight: 600; color: #A6474B; }
+.priorites strong{ font-weight: 600; color: #C75F62; }
 .questions-cta-btn, .questions-cta-btn:hover{ background-color: #C75F62 !important; border-color: #C75F62 !important; color: #FAF6F2 !important; font-weight: 700 !important; font-size: 1.17rem !important; }
-.questions-cta-btn:hover{ background-color: #A6474B !important; border-color: #A6474B !important; }
+.questions-cta-btn:hover{ background-color: #C75F62 !important; border-color: #C75F62 !important; }
 .cerveau-text strong{ font-weight: 600; color: var(--plum); }
 .cerveau-lead{ font-family: var(--serif); font-size: clamp(1.15rem, 2vw, 1.35rem); line-height: 1.5; color: var(--plum); margin-bottom: 16px; }
 .cerveau-quote{ font-size: clamp(1.6rem, 3.4vw, 2.5rem) !important; line-height: 1.25 !important; }
@@ -2310,26 +2310,122 @@ rect.cerveau-art-accent{ fill: var(--rose); stroke: none; }
 .roles-trio .roles-dot{ display: inline-block; width: .5em; height: .5em; border-radius: 50%; background: #C75F62; margin: 0 .8em; vertical-align: middle; position: relative; top: -.08em; }
 @media (max-width: 900px){ .roles-trio{ white-space: normal; } }
 .cerveau-h4-line{ display: block; }
-.prio-name{ color: #A6474B; font-weight: 600; text-decoration: none; border-bottom: 1px dotted #A6474B; }
+.prio-name{ color: #C75F62; font-weight: 600; text-decoration: none; border-bottom: 1px dotted #C75F62; }
 .prio-name:hover{ border-bottom-style: solid; }
 .cerveau-fold{ margin: 0 0 8px; }
 .cerveau-fold summary{ cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
 .cerveau-fold summary::-webkit-details-marker{ display: none; }
 .cerveau-fold summary h3{ margin: 0; }
-.cerveau-fold summary::after{ content: "+"; font-family: var(--sans); font-size: 1.5rem; line-height: 1; color: #A6474B; }
+.cerveau-fold summary::after{ content: "+"; font-family: var(--sans); font-size: 1.5rem; line-height: 1; color: #C75F62; }
 .cerveau-fold[open] summary::after{ content: "–"; }
 .cerveau-fold-body{ padding-top: 14px; }
 .jumeau-fold{ margin: 0; border-bottom: 1px solid var(--pale-rose); padding: 4px 0; }
 .jumeau-fold:last-child{ border-bottom: 0; }
 .jumeau-fold summary{ cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; font-weight: 600; color: var(--plum); padding: 8px 0; }
 .jumeau-fold summary::-webkit-details-marker{ display: none; }
-.jumeau-fold summary::after{ content: "+"; font-size: 1.3rem; line-height: 1; color: #A6474B; }
+.jumeau-fold summary::after{ content: "+"; font-size: 1.3rem; line-height: 1; color: #C75F62; }
 .jumeau-fold[open] summary::after{ content: "–"; }
 .jumeau-fold p{ margin: 2px 0 10px; }
 .role-top{ margin-bottom: 10px; }
 .role-art{ width: 84px; height: 60px; }
 .cerveau-faq summary{ color: var(--plum) !important; }
 .cerveau-sig-label.ia-rose{ color: #C75F62 !important; }
+.expertise-fold{ max-width: 1120px; margin: 0 auto; border-top: 1px solid var(--pale-rose); padding: 0 20px; }
+.expertise-fold > summary{ list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 36px 8px; }
+.expertise-fold > summary::-webkit-details-marker{ display: none; }
+.expertise-fold-eyebrow{ display: block; font-family: var(--sans); font-size: .72rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: #C75F62; margin-bottom: 6px; }
+.expertise-fold-title{ font-family: var(--serif); font-weight: 500; font-size: clamp(1.6rem, 3.4vw, 2.3rem); line-height: 1.2; color: var(--plum); margin: 0; }
+.expertise-fold-icon{ flex: 0 0 auto; font-size: 2rem; line-height: 1; color: #C75F62; }
+.expertise-fold-icon::after{ content: "+"; }
+.expertise-fold[open] .expertise-fold-icon::after{ content: "–"; }
+.expertise-fold[open] > summary{ padding-bottom: 8px; }
+.expertise-fold > summary:focus-visible{ outline: 2px solid #C75F62; outline-offset: 4px; }
+.jumeau-steps--method li{ margin-bottom: 10px; }
+.web-fold{ max-width: 760px; margin: 0 auto 14px; border: 1px solid var(--pale-rose); border-radius: 14px; background: var(--ivory); overflow: hidden; }
+.web-fold > summary{ list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 18px 22px; }
+.web-fold > summary::-webkit-details-marker{ display: none; }
+.web-fold > summary .agent-eyebrow-txt{ margin: 0 0 4px; }
+.web-fold > summary .agent-name{ margin: 0; font-size: 1.35rem; }
+.web-fold > summary .expertise-fold-icon{ flex: 0 0 auto; font-size: 1.8rem; line-height: 1; color: #C75F62; }
+.web-fold > summary .expertise-fold-icon::after{ content: "+"; }
+.web-fold[open] > summary .expertise-fold-icon::after{ content: "–"; }
+.web-fold .web-fold-body{ padding: 0 22px 22px; }
+.web-fold .web-fold-body .agent-img{ margin-bottom: 14px; border-radius: 10px; overflow: hidden; }
+.web-fold .web-fold-body .agent-body a{ color: #C75F62; font-weight: 600; }
+#webTrack{ overflow: visible !important; }
+#webTrack .agents-track{ display: grid !important; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px; align-items: start; padding: 0 !important; transform: none !important; }
+@media (max-width: 700px){ #webTrack .agents-track{ grid-template-columns: minmax(0,1fr) !important; } }
+#webTrack .web-fold{ max-width: none !important; margin: 0 !important; }
+#webTrack + .agents-nav, #webTrack + .agents-nav + .agents-arrows{ display: none !important; }
+/* Pied de page : une ligne (site + articles, contact, langues), espaces resserrés */
+@media (min-width: 901px){
+  .site-footer .footer-grid{ display: grid !important; grid-template-columns: auto auto auto auto !important; justify-content: space-between !important; column-gap: 22px !important; }
+  .site-footer .footer-grid > *{ grid-column: auto !important; grid-row: auto !important; }
+  .site-footer .footer-persp-grid{ column-gap: 14px !important; width: 450px !important; }
+}
+.sub-fold{ max-width: 1080px; margin: 0 auto; border-top: 1px solid var(--pale-rose); }
+.sub-fold > summary{ list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 8px; }
+.sub-fold > summary::-webkit-details-marker{ display: none; }
+.sub-fold-title{ font-family: var(--serif); font-weight: 500; font-size: clamp(1.3rem, 2.4vw, 1.7rem); color: var(--plum); margin: 0; }
+.sub-fold-icon{ flex: 0 0 auto; font-size: 1.8rem; line-height: 1; color: #C75F62; }
+.sub-fold-icon::after{ content: "+"; }
+.sub-fold[open] > summary .sub-fold-icon::after{ content: "–"; }
+/* Pied de page propre : aucun recouvrement, textes resserrés (bureau à partir de 901 px) */
+@media (min-width: 901px){
+  .site-footer .footer-grid{ display: grid !important; grid-template-columns: auto auto auto auto !important; justify-content: space-between !important; column-gap: 28px !important; row-gap: 0 !important; align-items: start !important; }
+  .site-footer .footer-grid > *{ grid-column: auto !important; grid-row: auto !important; }
+  .site-footer .footer-col{ gap: 7px !important; margin: 0 !important; }
+  .site-footer .footer-col--site{ display: block !important; }
+  .site-footer .footer-col--site > a{ display: inline-block !important; margin: 0 14px 4px 0 !important; font-size: .9rem !important; white-space: nowrap !important; }
+  .site-footer .footer-col-title{ display: block !important; margin-bottom: 6px !important; font-size: .72rem !important; }
+  .site-footer .footer-col a, .site-footer .footer-col .footer-loc{ font-size: .9rem !important; line-height: 1.35 !important; }
+  .site-footer .footer-col a.footer-persp-link{ margin: 0 !important; position: relative !important; transform: none !important; white-space: normal !important; font-size: .84rem !important; line-height: 1.35 !important; }
+  .site-footer .footer-col--site a.footer-persp-link:not(.footer-persp-link--c2){ margin: 0 !important; }
+  .site-footer .footer-persp-link .art-star{ position: static !important; transform: none !important; top: auto !important; right: auto !important; margin-right: .3em !important; font-size: 1em !important; display: inline !important; }
+  .site-footer .footer-persp-grid{ display: grid !important; grid-template-columns: 1fr 1fr !important; grid-template-rows: none !important; grid-auto-flow: row !important; column-gap: 18px !important; row-gap: 5px !important; width: auto !important; max-width: none !important; position: static !important; transform: none !important; left: auto !important; right: auto !important; margin: 14px 0 0 !important; }
+  .site-footer .footer-tag-lead, .site-footer .footer-tag-rest{ display: inline !important; position: static !important; }
+}
+.expertise-lead{ font-family: var(--serif); font-weight: 500; font-size: clamp(1.15rem, 2vw, 1.4rem); line-height: 1.35; color: var(--plum); margin: 10px 0 6px; }
+.expertise-lead-txt{ font-family: var(--sans); font-size: .98rem; line-height: 1.6; color: var(--plum); margin: 0; max-width: 680px; }
+.expertise-fold > summary > div{ flex: 1 1 auto; min-width: 0; }
+.jn-head{ text-align: center; max-width: 900px; margin: 0 auto; padding: 0 20px; }
+.jn-title{ font-family: var(--serif); font-weight: 500; font-size: clamp(1.9rem, 3.6vw, 2.6rem); line-height: 1.15; color: var(--plum); margin: 0 0 14px; }
+.jn-accroche{ font-family: var(--serif); font-weight: 500; font-size: clamp(1.3rem, 2.4vw, 1.7rem); line-height: 1.3; color: var(--plum); margin: 0 0 16px; }
+.jn-accroche .jn-line{ display: block; }
+.jn-accroche em{ font-style: italic; }
+.jn-intro{ font-family: var(--sans); font-weight: 400; font-size: 1rem; line-height: 1.7; color: var(--plum); margin: 0 0 40px; }
+.jn-intro p{ margin: 0; }
+.jn-grid{ display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.25fr) minmax(0,1fr); gap: 28px; align-items: stretch; max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+.jn-card{ height: 100%; box-sizing: border-box; background: var(--ivory); border: 1px solid var(--pale-rose); border-top: 3px solid var(--plum); border-radius: 14px; padding: 26px 26px 22px; }
+.jn-card-title{ font-family: var(--serif); font-weight: 500; font-size: 1.4rem; line-height: 1.25; color: #4F2F3B; margin: 0 0 16px; }
+.jn-list{ list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+.jn-list li{ display: grid; grid-template-columns: 2.2rem minmax(0,1fr); gap: 10px; align-items: start; }
+.jn-num{ font-family: var(--serif); font-size: 1rem; line-height: 1.4; color: #8E6F7A; letter-spacing: .06em; }
+.jn-label{ display: block; font-family: var(--sans); font-weight: 600; font-size: .95rem; color: #4F2F3B; margin-bottom: 2px; }
+.jn-desc{ display: block; font-family: var(--sans); font-size: .9rem; line-height: 1.55; color: var(--plum); }
+.jn-figure{ margin: 0; border-radius: 16px; overflow: hidden; }
+.jn-figure img{ display: block; width: 100%; height: auto; aspect-ratio: 1092 / 1440; object-fit: cover; object-position: 50% 50%; }
+.jn-folds{ display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 20px; max-width: 1080px; margin: 36px auto 0; padding: 0 20px; }
+.jn-fold{ background: var(--ivory); border: 1px solid var(--plum); border-radius: 12px; padding: 0 22px; }
+.jn-fold summary{ cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 18px 0; font-family: var(--serif); font-weight: 500; font-size: 1.2rem; color: var(--plum); }
+.jn-fold summary::-webkit-details-marker{ display: none; }
+.jn-fold summary::after{ content: "+"; font-family: var(--sans); font-size: 1.2rem; font-weight: 300; color: var(--plum); }
+.jn-fold[open] summary::after{ content: "–"; }
+.jn-fold p{ font-family: var(--sans); font-size: .95rem; line-height: 1.65; color: var(--plum); margin: 0 0 18px; }
+.jn-audit{ text-align: center; max-width: 760px; margin: 44px auto 0; padding: 0 20px; }
+.jn-audit-title{ font-family: var(--serif); font-weight: 500; font-size: 1.6rem; line-height: 1.3; color: var(--plum); margin: 0 0 10px; }
+.jn-audit-sub{ font-family: var(--sans); font-size: .98rem; line-height: 1.6; color: var(--plum); margin: 0; }
+@media (max-width: 900px){ .jn-grid{ grid-template-columns: minmax(0,1fr); } .jn-folds{ grid-template-columns: minmax(0,1fr); } }
+@media (min-width: 901px){ .cerveau-br-desk{ display: none !important; } .cerveau-lede:has(.cerveau-br-desk){ max-width: none !important; white-space: nowrap; } }
+.cerveau-dot{ display: inline-block; width: .5em; height: .5em; border-radius: 50%; background: #C75F62; margin: 0 .7em; vertical-align: middle; position: relative; top: -.08em; }
+.cerveau-lede--trio{ white-space: normal; }
+@media (min-width: 901px){ .cerveau-lede--trio{ white-space: nowrap; max-width: none !important; } }
+.cerveau-step-art{ height: 92px !important; margin: 0 0 10px !important; }
+.prio-fn{ display: block; font-family: var(--sans); font-weight: 600; font-size: .95rem; color: #C75F62; margin-bottom: 2px; }
+.prio-desc{ display: block; }
+.cerveau-block:has(> .cerveau-fold){ margin-top: 0 !important; padding-top: 0 !important; padding-bottom: 0 !important; }
+.cerveau-fold-body{ padding-top: 6px !important; }
+.cerveau-fold > summary{ padding: 4px 0 !important; }
 </style>
 <style id="footer-contact-gauche">
 @media (min-width: 1251px){
@@ -2497,7 +2593,7 @@ rect.cerveau-art-accent{ fill: var(--rose); stroke: none; }
 
 <!-- ═══ VOS AGENTS IA (v2) ═══════════════════════════════════ -->
 
-<section id="agents-v2" class="agents-section snap-page">
+<details class="expertise-fold" id="fold-agents"><summary><div><span class="expertise-fold-eyebrow">Expertise 1</span><h2 class="expertise-fold-title">AI agents</h2><p class="expertise-lead">AI agents that work for you, under your control.</p><p class="expertise-lead-txt">Each agent handles one precise task (recruitment, meetings, invoicing, watch) and reports back to you. The decision stays yours.</p></div><span class="expertise-fold-icon" aria-hidden="true"></span></summary><details class="sub-fold" id="sub-agents"><summary><h3 class="sub-fold-title">Your AI agents</h3><span class="sub-fold-icon" aria-hidden="true"></span></summary><div class="sub-fold-body"><section id="agents-v2" class="agents-section snap-page">
   <div class="agents-header reveal">
     <p class="agents-v2-eyebrow"><span class="ia-rose">AI</span> Initiative <span class="agents-v2-counter" id="agentsCounter2">· 1/11</span></p>
     <h2 class="agents-title"><span class="agents-plum">Your</span> <span class="agents-rose"><span class="ia-rose">AI</span> agents</span></h2>
@@ -2758,10 +2854,11 @@ rect.cerveau-art-accent{ fill: var(--rose); stroke: none; }
   <div class="agents-team-ticks">
     <em class="agents-team-sub ink-prune"><span class="agents-tick">✓</span> Retrieve the essentials.<br><span class="agents-tick">✓</span> Understand faster.<br><span class="agents-tick">✓</span> Act with method.</em>
   </div>
-</section>
+</section></div></details>
+
 
 <!-- ═══ WEBSITE CREATION ══════════════════════════════════════ -->
-<section class="agent-cycle-section" style="padding:48px 20px 24px;max-width:1080px;margin:0 auto;text-align:center">
+<details class="sub-fold" id="sub-cycle"><summary><h3 class="sub-fold-title">How an AI agent works</h3><span class="sub-fold-icon" aria-hidden="true"></span></summary><div class="sub-fold-body"><section class="agent-cycle-section" style="padding:48px 20px 24px;max-width:1080px;margin:0 auto;text-align:center">
   <h2 class="section-title" style="font-size:1.6rem;margin-bottom:18px">How an AI agent works</h2>
   <figure class="agent-cycle" style="margin:0 auto;max-width:900px"><img src="assets/schema-cycle-agent-ia-en.svg?v=3" alt="Six-step cycle of an AI agent: perceive, reason, plan, coordinate with the human, act, learn, then back to perceive." width="1120" height="900" loading="lazy" style="width:100%;height:auto"></figure>
 </section>
@@ -2800,55 +2897,13 @@ rect.cerveau-art-accent{ fill: var(--rose); stroke: none; }
     <li style="margin-bottom:8px"><strong style="font-weight:600">Transparency:</strong> the agent must be able to explain its decision, with the data and steps it used.</li>
   </ol>
 </details>
-</section>
+</section></div></details>
+
 <!-- ═══ THE LEADER'S DIGITAL TWIN ═══════════════════════ -->
-<section id="jumeau-numerique" class="agents-section snap-page">
-  <div class="agents-header reveal">
-    <p class="agents-v2-eyebrow"><span class="ia-rose">AI</span> Initiative</p>
-    <h2 class="agents-title"><span class="agents-plum">The leader’s</span> <span class="ink-terra-lg">digital twin</span></h2>
-  </div>
 
-  <div class="agents-team-caption-block reveal">
-    <p class="agents-team-title"><span class="cerveau-h2-line">Preserve the <span class="ink-terra-lg">memory of decisions</span>.</span><span class="cerveau-h2-line">Pass on the <span class="ink-terra-lg">intelligence</span> of their context.</span></p>
-    <p class="web-intro">A decision is not summed up by its outcome. It sits within a context, rests on trade-offs and answers to priorities. The digital twin aims to preserve this strategic memory, to make it easier to consult and pass on, notably during a leadership succession.</p>
-    <p class="jumeau-tag">Beyond documents, preserving the reasons behind decisions.</p>
-  </div>
-
-  <div class="jumeau-grid reveal">
-      <div class="xcard">
-        <h3>Strategic memory in the service of decisions</h3>
-        <ul class="s0"><li class="row-baseline"><span class="ink-accent-fixed">✓</span><span><span class="jm-label">Strategic capture</span>Document the major decisions, their rationale and the trade-offs behind them.</span></li><li class="row-baseline"><span class="ink-accent-fixed">✓</span><span><span class="jm-label">Decision preparation</span>Retrieve relevant precedents and documented points of vigilance.</span></li><li class="row-baseline"><span class="ink-accent-fixed">✓</span><span><span class="jm-label">Leadership continuity</span>Make it easier to pass on knowledge when a leader changes.</span></li><li class="row-baseline"><span class="ink-accent-fixed">✓</span><span><span class="jm-label">Personalization</span>Structure the memory around the priorities and criteria set by the leader.</span></li></ul>
-      </div>
-    <figure class="jumeau-figure">
-      <img src="assets/perspectives/jumeau-numerique-section.webp" width="1412" height="830" loading="lazy" decoding="async" alt="A leader in profile facing their digital twin, drawn as a network of light, linked to a laptop and decision icons">
-    </figure>
-      <div class="xcard">
-        <h3>A structured method, under human control</h3>
-        <ol class="jumeau-steps jumeau-steps--method"><li><span class="jm-num">01</span><span><span class="jm-label">Capture</span>Record decisions, reasoning and their context in structured interviews.</span></li><li><span class="jm-num">02</span><span><span class="jm-label">Validate</span>Have the leader check and approve information before it is kept.</span></li><li><span class="jm-num">03</span><span><span class="jm-label">Test</span>Test outputs on concrete situations and check their fidelity to the sources.</span></li><li><span class="jm-num">04</span><span><span class="jm-label">Update</span>Plan regular updates, and one after each major strategic decision.</span></li></ol>
-      </div>
-  </div>
-
-  <div class="jumeau-privacy">
-    <details class="jumeau-fold"><summary>Confidentiality.</summary><p>A strategic memory may contain highly sensitive information. Access rights, retention periods and processing conditions must be defined at the scoping stage, in line with applicable obligations.</p></details>
-    <details class="jumeau-fold"><summary>Role of people.</summary><p>The digital twin replaces neither the leader nor their successor. It makes documented memory easier to access. Interpretation, trade-offs and decisions remain human.</p></details>
-  </div>
-
-  <div class="jumeau-privacy">
-    <details class="jumeau-fold"><summary>A written, maintained memory.</summary><p>A memory that AI builds on its own, without a human method to keep it up to date, drifts over time and ends up out of line with the leader. The digital twin rests on a written context, maintained deliberately.</p></details>
-    <details class="jumeau-fold"><summary>Imperfect documents are no obstacle.</summary><p>The memory is designed so you find information through its context, not through perfect filing. Start with what you have.</p></details>
-  </div>
-
-  <p class="jumeau-note reveal">Every project starts with a <span class="ia-rose">scoping audit</span>.</p>
-  <p class="jumeau-note-sub">Objectives, scope, confidentiality, responsibilities and validation criteria: deployment conditions are defined before any implementation.</p>
-
-  <div class="jumeau-cta reveal">
-    <a href="https://calendly.com/exec-ia" target="_blank" rel="noopener" class="btn btn-rose questions-cta-btn">Book a conversation <span class="btn-arrow">→</span></a>
-    <a href="perspective-jumeau-numerique-savoir-dirigeant-en.html" class="cerveau-article"><img src="assets/perspectives/jumeau-numerique-section.webp" alt="" class="cerveau-article-img" loading="lazy" decoding="async"><span class="cerveau-article-body"><span class="cerveau-article-title">When a leader leaves, how do you keep their knowledge?</span><span class="cerveau-article-cta"><img src="assets/linkedin-logo.png" alt="" width="22" height="22" loading="lazy">Read the article <span aria-hidden="true">→</span></span></span></a>
-  </div>
-</section>
 
 <!-- ═══ CERVEAU : piliers, objectifs, rôles, bénéfices, FAQ ═══ -->
-<section id="cerveau" class="cerveau-section">
+<details class="sub-fold" id="sub-cerveau"><summary><h3 class="sub-fold-title">The AI brain</h3><span class="sub-fold-icon" aria-hidden="true"></span></summary><div class="sub-fold-body"><section id="cerveau" class="cerveau-section">
 
   <div class="cerveau-block">
     <p class="cerveau-eyebrow">The <span class="ia-rose">AI</span> brain</p>
@@ -2860,7 +2915,7 @@ rect.cerveau-art-accent{ fill: var(--rose); stroke: none; }
 
   <div class="cerveau-block">
     <h2 class="cerveau-h2"><span class="cerveau-h2-line">A second brain.</span><span class="cerveau-h2-line cerveau-h2-nowrap">Your <span class="ia-rose">judgment</span> stays in control.</span></h2>
-    <p class="cerveau-lede">Retrieve the essentials.<br class="cerveau-br-desk"> Understand faster.<br class="cerveau-br-desk"> Act with method.</p>
+    <p class="cerveau-lede cerveau-lede--trio">Retrieve the essentials <span class="cerveau-dot" aria-hidden="true"></span> Understand faster <span class="cerveau-dot" aria-hidden="true"></span> Act with method.</p>
     <ol class="cerveau-path"><li class="cerveau-step"><div class="cerveau-step-art"><svg viewBox="0 0 160 120" aria-hidden="true" focusable="false"><g class="cerveau-art-line"><rect x="10" y="14" width="46" height="9" rx="2"/><rect x="10" y="32" width="46" height="9" rx="2"/><rect x="10" y="50" width="46" height="9" rx="2"/><rect x="10" y="68" width="46" height="9" rx="2"/><rect x="10" y="86" width="46" height="9" rx="2"/><path d="M68 16H96L84 56V92L80 96V56Z"/><path d="M86 60H100"/></g><circle class="cerveau-art-accent" cx="122" cy="60" r="22"/><circle class="cerveau-art-dot" cx="122" cy="60" r="5"/></svg></div><p class="cerveau-step-kicker"><span class="cerveau-step-num">01</span>Retrieve</p><h3>Less mental load</h3><p class="cerveau-step-hook">The essentials, without having to memorize everything.</p><p class="cerveau-step-text">Documents, deadlines and follow-ups are organized to make useful information easy to reach, when you need it.</p><p class="cerveau-step-benefit"><span class="ia-rose">More time</span> for what matters.</p></li><li class="cerveau-step"><div class="cerveau-step-art"><svg viewBox="0 0 160 120" aria-hidden="true" focusable="false"><g class="cerveau-art-line"><rect x="12" y="22" width="64" height="9" rx="2"/><rect x="12" y="44" width="50" height="9" rx="2"/><rect x="12" y="66" width="70" height="9" rx="2"/><rect x="12" y="88" width="42" height="9" rx="2"/></g><rect class="cerveau-art-accent" x="12" y="44" width="50" height="9" rx="2"/><circle class="cerveau-art-accent" cx="112" cy="48" r="18"/><path class="cerveau-art-accent" d="M125 61L140 76"/></svg></div><p class="cerveau-step-kicker"><span class="cerveau-step-num">02</span>Understand</p><h3>More clarity</h3><p class="cerveau-step-hook">Information put back into perspective.</p><p class="cerveau-step-text">Available data is brought together and put in context. Gaps, inconsistencies or missing information can be flagged to make analysis easier.</p><p class="cerveau-step-benefit">A <span class="ia-rose">clearer picture</span> of the situation.</p></li><li class="cerveau-step"><div class="cerveau-step-art"><svg viewBox="0 0 160 120" aria-hidden="true" focusable="false"><g class="cerveau-art-line"><path d="M16 30H144M16 60H144M16 90H144"/></g><circle class="cerveau-art-line" cx="54" cy="30" r="8"/><circle class="cerveau-art-accent" cx="112" cy="60" r="8"/><circle class="cerveau-art-line" cx="82" cy="90" r="8"/></svg></div><p class="cerveau-step-kicker"><span class="cerveau-step-num">03</span>Act</p><h3>An AI tailored to you</h3><p class="cerveau-step-hook">Your priorities set the framework.</p><p class="cerveau-step-text">The system draws on the tools and rules you define to prepare analyses and suggest actions suited to your context.</p><p class="cerveau-step-benefit">AI prepares. You arbitrate.</p></li></ol>
   </div>
 
@@ -2895,9 +2950,9 @@ rect.cerveau-art-accent{ fill: var(--rose); stroke: none; }
     <h3 class="cerveau-h3"><span class="ink-terra-lg">One brain</span>, not one agent per need</h3>
     <p class="cerveau-text"><strong>EXEC’<span class="ia-rose">IA</span> Consulting builds one central brain, fed by skills.</strong></p>
     <p class="cerveau-text">Rather than a separate agent for each task or client, it is a methodological choice.</p><p class="cerveau-text">Each request draws only on the context of the relevant project: files never mix, and the system uses only what it needs. What was decided in January is still available in March, without copying.</p><p class="cerveau-text">Each new skill joins the same base without piling up technical debt. And the tool stays interchangeable: the AI model can change without rebuilding the brain, its skills or your method.</p>
-    <h4 class="cerveau-h4"><span class="cerveau-h4-line">BEARING, THREAD, FLOW and ANCHOR</span><span class="cerveau-h4-line">Four priorities, one brain</span></h4>
+    <h4 class="cerveau-h4">Four priorities, one brain</h4>
     <p class="cerveau-text">They share the same context and the same core rules; only the priority changes.</p>
-    <ul class="priorites"><li><a class="prio-name" href="#agent-repere">BEARING</a> identifies the right profiles to support your recruitment decisions. It prepares the work; the decision stays human.</li><li><a class="prio-name" href="#agent-trame">THREAD</a> turns every meeting into usable, searchable memory.</li><li><a class="prio-name" href="#agent-flux">FLOW</a> helps you weigh cash trade-offs before they turn into emergencies.</li><li><a class="prio-name" href="#agent-ancre">ANCHOR</a> organizes your document memory so any piece of information can be found in one search.</li></ul>
+    <ul class="priorites"><li><span class="prio-fn">Document memory</span><span class="prio-desc"><a class="prio-name" href="#agent-ancre">ANCHOR</a> indexes your document memory so any piece of information can be found in one search.</span></li><li><span class="prio-fn">Meeting memory</span><span class="prio-desc"><a class="prio-name" href="#agent-trame">THREAD</a> turns every meeting into usable, searchable memory.</span></li><li><span class="prio-fn">Cash</span><span class="prio-desc"><a class="prio-name" href="#agent-flux">FLOW</a> sheds light on trade-offs before they become emergencies.</span></li><li><span class="prio-fn">Recruitment</span><span class="prio-desc"><a class="prio-name" href="#agent-repere">BEARING</a> identifies the right profiles to support your hiring decisions. It prepares the work; the decision stays human.</span></li></ul>
   </div>
 
   <div class="cerveau-block">
@@ -2932,73 +2987,39 @@ rect.cerveau-art-accent{ fill: var(--rose); stroke: none; }
     <p class="cerveau-text"><strong>Each EXEC’<span class="ia-rose">IA</span> skill is built with the rigor of a craft.</strong></p><p class="cerveau-text">It is refined to reflect your method and your decision rules.</p><p class="cerveau-text">It starts from your method, is checked with you, and is corrected until it reflects how you decide.</p>
   </div>
 
-</section>
-<section id="webcreation" class="agents-section snap-page">
-  <div class="agents-header reveal">
-    <p class="agents-v2-eyebrow"><span class="ia-rose">AI</span> Initiative</p>
-    <h2 class="agents-title"><span class="agents-plum">Website</span> <span class="agents-rose">creation</span></h2>
+</section></div></details>
+</details>
+<details class="expertise-fold" id="fold-jumeau"><summary><div><span class="expertise-fold-eyebrow">Expertise 2</span><h2 class="expertise-fold-title">The leader’s digital twin</h2></div><span class="expertise-fold-icon" aria-hidden="true"></span></summary><section id="jumeau-numerique" class="agents-section snap-page">
+  <div class="jn-head reveal">
+    <h2 class="jn-title"><span class="agents-plum">The leader’s</span> <span class="ink-terra-lg">digital twin</span></h2>
+    <p class="jn-accroche"><span class="jn-line">Preserve the memory of decisions.</span><span class="jn-line">Pass on the <em>intelligence</em> of their context.</span></p>
+    <div class="jn-intro"><p>Preserving decisions also means preserving what motivated them.</p><p>The digital twin organizes this knowledge to ensure its continuity and transmission.</p></div>
   </div>
-
-  <div class="agents-team-caption-block reveal">
-    <p class="agents-team-title">Your digital presence deserves as much attention as your <span class="agents-team-tc">strategy</span>.</p>
-    <p class="web-intro">Creation, launch or upgrade: bespoke, multilingual websites,<br>designed to express an identity, showcase expertise and assert a positioning.<br>Every project builds its own signature, far from off-the-shelf templates.</p>
+  <div class="jn-grid reveal">
+    <div class="jn-card"><h3 class="jn-card-title">What the leader preserves</h3><ol class="jn-list"><li><span class="jn-num">01</span><div><span class="jn-label">The context</span><span class="jn-desc">Recover the circumstances and priorities that guided decisions.</span></div></li><li><span class="jn-num">02</span><div><span class="jn-label">The trade-offs</span><span class="jn-desc">Understand the options considered and the reasons behind each choice.</span></div></li><li><span class="jn-num">03</span><div><span class="jn-label">Continuity</span><span class="jn-desc">Make it easier to pass on knowledge when leadership changes.</span></div></li><li><span class="jn-num">04</span><div><span class="jn-label">The benchmarks</span><span class="jn-desc">Keep the criteria and principles that guide decisions.</span></div></li></ol></div>
+    <figure class="jn-figure"><img src="assets/perspectives/jumeau-numerique-section.webp" width="1092" height="1440" loading="lazy" decoding="async" alt="Leader in profile facing a digital twin shown as a network of light"></figure>
+    <div class="jn-card"><h3 class="jn-card-title">A structured approach</h3><ol class="jn-list"><li><span class="jn-num">01</span><div><span class="jn-label">Capture</span><span class="jn-desc">Gather structuring decisions and their context in in-depth interviews.</span></div></li><li><span class="jn-num">02</span><div><span class="jn-label">Validate</span><span class="jn-desc">Have the leader check and approve information before it is kept.</span></div></li><li><span class="jn-num">03</span><div><span class="jn-label">Test</span><span class="jn-desc">Test outputs on concrete situations and check their fidelity to the sources.</span></div></li><li><span class="jn-num">04</span><div><span class="jn-label">Update</span><span class="jn-desc">Update knowledge after each major strategic decision.</span></div></li></ol></div>
   </div>
-
+  <div class="jn-folds reveal">
+    <details class="jn-fold"><summary>Confidentiality and data control</summary><p>The scope of information, access conditions, hosting and retention are defined during scoping. Sensitive data is subject to appropriate protection measures.</p></details>
+    <details class="jn-fold"><summary>Human oversight and reliability</summary><p>The leader validates the information added. Outputs are checked against the sources. The system supports consultation and knowledge transfer, without replacing human judgment.</p></details>
+  </div>
+  <div class="jn-audit reveal"><p class="jn-audit-title">Every project starts with a scoping audit.</p><p class="jn-audit-sub">It defines the objectives, scope, usable data and confidentiality requirements before any implementation.</p></div>
+  <div class="jumeau-cta reveal">
+    <a href="https://calendly.com/exec-ia" target="_blank" rel="noopener" class="btn btn-rose questions-cta-btn">Book a conversation <span class="btn-arrow">→</span></a>
+    <a href="perspective-jumeau-numerique-savoir-dirigeant-en.html" class="cerveau-article"><img src="assets/perspectives/jumeau-numerique-vignette.webp" alt="" class="cerveau-article-img" loading="lazy" decoding="async"><span class="cerveau-article-body"><span class="cerveau-article-title">When a leader leaves, how do you keep their knowledge?</span><span class="cerveau-article-cta"><img src="assets/linkedin-logo.png" alt="" width="22" height="22" loading="lazy">Read the article <span aria-hidden="true">→</span></span></span></a>
+  </div>
+</section></details>
+<details class="expertise-fold" id="fold-sites"><summary><div><span class="expertise-fold-eyebrow">Expertise 3</span><h2 class="expertise-fold-title">Website creation</h2><p class="expertise-lead">Your digital presence deserves as much attention as your strategy.</p><p class="expertise-lead-txt">Custom, multilingual websites, designed to convey an identity and affirm a positioning.</p></div><span class="expertise-fold-icon" aria-hidden="true"></span></summary><section id="webcreation" class="agents-section snap-page">
   <div class="agents-track-outer" id="webTrack">
     <div class="agents-track">
 
-      <!-- 01 · Corsetterie (placeholder — à venir) -->
-      <div class="agent-card">
-        <div class="agent-img web-img">
-          <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Website preview — corsetry company">
-            <rect width="300" height="200" fill="#FBF7F2"/>
-            <rect x="0" y="0" width="300" height="30" fill="#EFE6DE"/>
-            <circle cx="16" cy="15" r="3.4" fill="#C75F62"/><circle cx="28" cy="15" r="3.4" fill="#D9C9C3"/><circle cx="40" cy="15" r="3.4" fill="#D9C9C3"/>
-            <rect x="58" y="9.5" width="214" height="11" rx="5.5" fill="#F6F1EB"/>
-            <g transform="translate(150,86)" fill="none" stroke="#C75F62" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M-15 -24 C -7 -10 -7 10 -15 24 H 15 C 7 10 7 -10 15 -24 Z"/>
-              <path d="M-5 -15 L 5 -9 M 5 -15 L -5 -9 M -5 -5 L 5 1 M 5 -5 L -5 1 M -5 5 L 5 11 M 5 5 L -5 11"/>
-            </g>
-            <text x="150" y="150" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" letter-spacing="1.5" fill="#9a7b82">COMING SOON</text>
-            <rect x="120" y="166" width="60" height="7" rx="3.5" fill="#E9DED7"/>
-          </svg>
-        </div>
-        <div class="agent-body">
-          <p class="agent-eyebrow-txt">Showcase site</p>
-          <h3 class="agent-name">Corsetry <span>company</span></h3>
-          <div class="agent-divider"></div>
-          <p class="agent-desc">An elegant site presenting the collections, the house’s craftsmanship and useful information for customers.</p>
-        </div>
-        <!-- Reserved slot: client testimonial once the site is live (see .web-testi, card 03) -->
-      </div>
-
-      <!-- 02 · Sophrologie (aperçu réel — In Equilibrium, en cours de finalisation) -->
-      <a class="agent-card agent-card--link" href="https://sophro-site.vercel.app/" target="_blank" rel="noopener">
-        <div class="agent-img">
+      <details class="web-fold"><summary><div><p class="agent-eyebrow-txt">Showcase site · Caycedian sophrology</p><h3 class="agent-name">&#171;&nbsp;In Equilibrium&nbsp;&#187;</h3></div><span class="expertise-fold-icon" aria-hidden="true"></span></summary><div class="web-fold-body"><div class="agent-img">
           <img loading="lazy" decoding="async" width="1200" height="800" src="assets/sites/sophro-in-equilibrium.webp" alt="Preview of the In Equilibrium website — sophrology practice">
-        </div>
-        <div class="agent-body">
-          <p class="agent-eyebrow-txt">Showcase site · Caycedian sophrology</p>
-          <h3 class="agent-name">&#171;&nbsp;In Equilibrium&nbsp;&#187;</h3>
-          <div class="agent-divider"></div>
-          <p class="agent-desc">Clarifying the offer and making it immediately accessible. Structured content, prioritized programs and a user journey designed to make getting in touch effortless.</p>
-          <span class="agent-visit-link">Visit the live site <span class="portrait-link-arrow">→</span></span>
-        </div>
-      </a>
-
-      <!-- 03 · Coiffure (aperçu réel — Atelier François) -->
-      <a class="agent-card agent-card--link" href="https://atelier-francois-ruddy.vercel.app" target="_blank" rel="noopener">
-        <div class="agent-img">
+        </div><div class="agent-body"><p class="agent-desc">Clarifying the offer and making it immediately accessible. Structured content, prioritized programs and a user journey designed to make getting in touch effortless.</p><a href="https://sophro-site.vercel.app/" target="_blank" rel="noopener">Visit the live site <span class="portrait-link-arrow">→</a></div></div></details>
+<details class="web-fold"><summary><div><p class="agent-eyebrow-txt">Launching a hair salon · Paris 8<sup>th</sup></p><h3 class="agent-name">&#8220;Atelier François&#8221;</h3></div><span class="expertise-fold-icon" aria-hidden="true"></span></summary><div class="web-fold-body"><div class="agent-img">
           <img loading="lazy" decoding="async" width="1200" height="800" src="assets/sites/coiffure-atelier-francois.webp" alt="Preview of the Atelier François website — hair salon">
-        </div>
-        <div class="agent-body">
-          <p class="agent-eyebrow-txt">Launching a hair salon · Paris 8<sup>th</sup></p>
-          <h3 class="agent-name">&#8220;Atelier François&#8221;</h3>
-          <div class="agent-divider"></div>
-          <p class="agent-desc">Turning the identity of the place and its founder&#8217;s craft into a brand signature. Building the identity, name, logo, visual identity, and designing an elegant, distinctive website inspired by the salon&#8217;s emblematic painting. A digital presence worthy of his talent.</p>
-          <span class="agent-visit-link">View the live site <span class="portrait-link-arrow">→</span></span>
-        </div>
-      </a>
+        </div><div class="agent-body"><p class="agent-desc">Turning the identity of the place and its founder&#8217;s craft into a brand signature. Building the identity, name, logo, visual identity, and designing an elegant, distinctive website inspired by the salon&#8217;s emblematic painting. A digital presence worthy of his talent.</p><a href="https://atelier-francois-ruddy.vercel.app" target="_blank" rel="noopener">View the live site <span class="portrait-link-arrow">→</a></div></div></details>
 
     </div>
   </div>
@@ -3016,8 +3037,6 @@ rect.cerveau-art-accent{ fill: var(--rose); stroke: none; }
   <div class="web-testi-section reveal">
     <div class="agents-track-outer" id="testiTrack">
       <div class="agents-track">
-
-        <!-- Reserved slot: Corsetry testimonial (add once launched) -->
 
         <!-- 2 · In Equilibrium testimonial -->
         <div class="web-testi-card">
@@ -3045,13 +3064,15 @@ rect.cerveau-art-accent{ fill: var(--rose); stroke: none; }
       <button class="agents-arrow" id="testiNext">&#8594;</button>
     </div>
   </div>
-</section>
+</section></details>
+
+
 
 <!-- ═══ EXPERTISE ═════════════════════════════════════════════ -->
 <section id="expertise" class="bg-white snap-page expertise-page-rule">
   <div class="wrap">
     <span class="eyebrow reveal">Profile</span>
-    <h2 class="section-title expertise-section-title reveal delay-1">4 areas of <span class="ink-accent">expertise</span> at the service of your priorities</h2>
+    <h2 class="section-title expertise-section-title reveal delay-1">Four areas <span class="ink-accent">at the service</span> of your priorities</h2>
     <div class="pillars pillars--expertise reveal delay-1">
       <div class="pillar">
         <div class="pillar-icon pillar-icon--arrow">
@@ -3149,13 +3170,14 @@ rect.cerveau-art-accent{ fill: var(--rose); stroke: none; }
 </section>
 
 <!-- ═══ FOOTER ════════════════════════════════════════════════ -->
+<script>(function(){function openFor(h){if(!h)return;var el=document.getElementById(h);if(!el)return;var d=el.closest('details');while(d){d.open=true;d=d.parentElement?d.parentElement.closest('details'):null;}}openFor(location.hash.slice(1));window.addEventListener('hashchange',function(){openFor(location.hash.slice(1));});})();</script>
 </main>
 <footer class="snap-page site-footer">
   <div class="wrap footer-grid">
     <div class="footer-brand">
       <img src="assets/logo-execia-bords-prune.webp" alt="EXEC'IA Consulting" class="footer-logo-main" width="450" height="212" decoding="async">
       <p class="footer-tag"><span class="footer-tag-lead">Executive-level experience</span><br><span class="footer-tag-rest">at the service of your <span class="ink-accent"><span class="ia-rose">AI</span></span> transformation</span></p>
-      <p class="footer-signature">Decide before you invest.</p>
+      <p class="footer-signature">« Decide before you invest. »</p>
     </div>
 
     <div class="footer-col footer-col--site">
@@ -3189,7 +3211,7 @@ rect.cerveau-art-accent{ fill: var(--rose); stroke: none; }
     <div class="footer-col footer-col--contact">
       <span class="footer-col-title">Contact</span>
       <a href="mailto:contact@exec-ia.ai">✉️ contact@exec-ia.ai</a>
-      <span class="footer-loc">📍 Paris, France, International</span>
+      <span class="footer-loc">📍 Paris, Île-de-France</span>
       <a href="https://www.linkedin.com/in/val%C3%A9rie-mailland" target="_blank" rel="noopener" class="footer-linkedin-btn"><img width="72" height="72" src="assets/linkedin-logo.png" alt="LinkedIn" class="footer-linkedin-logo">Follow me on LinkedIn</a>
       <a href="https://www.instagram.com/execia.consulting/" target="_blank" rel="noopener" class="footer-linkedin-btn footer-instagram-btn"><img src="assets/instagram-logo.png" alt="Instagram" class="footer-linkedin-logo" width="18" height="18"><span>Follow EXEC'<span class="ink-accent"><span class="ia-rose">IA</span></span> on Instagram</span></a>
     </div>

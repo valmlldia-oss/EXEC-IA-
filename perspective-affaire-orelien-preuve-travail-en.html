@@ -1153,17 +1153,38 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
 html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · All rights reserved"; }
 
 /* Accessibilité : contraste des petits textes terracotta (4,5:1 min) et cibles tactiles (24 px min). Le terracotta #C75F62 reste sur les grands titres. */
-.ia-rose { color: #A6474B !important; }
+.ia-rose { color: #C75F62 !important; }
 :is(h1, h2) .ia-rose { color: #C75F62 !important; }
 .agents-dot { flex: 0 0 24px; width: 24px; min-width: 24px; height: 24px; background: transparent !important; transform: none !important; }
 .agents-dot::before { content: ""; position: absolute; left: 50%; top: 50%; width: 7px; height: 7px; margin: -3.5px 0 0 -3.5px; border-radius: 50%; background: rgba(99,59,74,.18); transition: background .2s, transform .2s; }
 .agents-dot.active::before { background: var(--rose); transform: scale(1.3); }
 
-/* Accessibilité, boutons : ivoire sur terracotta = 3,73:1 ; fond #A6474B = 5,39:1. Même famille de couleur, un ton plus sombre. */
-.btn-rose, .cookie-btn--accept, .nav-lang.active, .nav-lang[aria-current="true"], .nav-lang-active { background-color: #A6474B !important; border-color: #A6474B !important; }
-.btn-rose:hover, .cookie-btn--accept:hover { background-color: #953F43 !important; border-color: #953F43 !important; filter: none; }
+/* Accessibilité, boutons : ivoire sur terracotta = 3,73:1 ; fond #C75F62 = 5,39:1. Même famille de couleur, un ton plus sombre. */
+.btn-rose, .cookie-btn--accept, .nav-lang.active, .nav-lang[aria-current="true"], .nav-lang-active { background-color: #C75F62 !important; border-color: #C75F62 !important; }
+.btn-rose:hover, .cookie-btn--accept:hover { background-color: #C75F62 !important; border-color: #C75F62 !important; filter: none; }
 .btn .ia-rose, .btn-rose .ia-rose, .cookie-btn .ia-rose { color: #FAF6F2 !important; }
-.hero-cta-link, .hero-cta-link strong { color: #A6474B !important; }
+.hero-cta-link, .hero-cta-link strong { color: #C75F62 !important; }
+/* Pied de page : une ligne (site + articles, contact, langues), espaces resserrés */
+@media (min-width: 901px){
+  .site-footer .footer-grid{ display: grid !important; grid-template-columns: auto auto auto auto !important; justify-content: space-between !important; column-gap: 22px !important; }
+  .site-footer .footer-grid > *{ grid-column: auto !important; grid-row: auto !important; }
+  .site-footer .footer-persp-grid{ column-gap: 14px !important; width: 450px !important; }
+}
+/* Pied de page propre : aucun recouvrement, textes resserrés (bureau à partir de 901 px) */
+@media (min-width: 901px){
+  .site-footer .footer-grid{ display: grid !important; grid-template-columns: auto auto auto auto !important; justify-content: space-between !important; column-gap: 28px !important; row-gap: 0 !important; align-items: start !important; }
+  .site-footer .footer-grid > *{ grid-column: auto !important; grid-row: auto !important; }
+  .site-footer .footer-col{ gap: 7px !important; margin: 0 !important; }
+  .site-footer .footer-col--site{ display: block !important; }
+  .site-footer .footer-col--site > a{ display: inline-block !important; margin: 0 14px 4px 0 !important; font-size: .9rem !important; white-space: nowrap !important; }
+  .site-footer .footer-col-title{ display: block !important; margin-bottom: 6px !important; font-size: .72rem !important; }
+  .site-footer .footer-col a, .site-footer .footer-col .footer-loc{ font-size: .9rem !important; line-height: 1.35 !important; }
+  .site-footer .footer-col a.footer-persp-link{ margin: 0 !important; position: relative !important; transform: none !important; white-space: normal !important; font-size: .84rem !important; line-height: 1.35 !important; }
+  .site-footer .footer-col--site a.footer-persp-link:not(.footer-persp-link--c2){ margin: 0 !important; }
+  .site-footer .footer-persp-link .art-star{ position: static !important; transform: none !important; top: auto !important; right: auto !important; margin-right: .3em !important; font-size: 1em !important; display: inline !important; }
+  .site-footer .footer-persp-grid{ display: grid !important; grid-template-columns: 1fr 1fr !important; grid-template-rows: none !important; grid-auto-flow: row !important; column-gap: 18px !important; row-gap: 5px !important; width: auto !important; max-width: none !important; position: static !important; transform: none !important; left: auto !important; right: auto !important; margin: 14px 0 0 !important; }
+  .site-footer .footer-tag-lead, .site-footer .footer-tag-rest{ display: inline !important; position: static !important; }
+}
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What happened in the Orélien affair?", "acceptedAnswer": {"@type": "Answer", "text": "Thélyson Orélien published his first novel, “C’était ça ou mourir” (Grasset), in autumn 2026. On 21 September, an anonymous account claimed, based on a detector, that the text had been written by AI; on 23 September, another detector tested by the AFP reached the opposite conclusion. On 25 September, the Goncourt Academy withdrew the novel from its shortlist, also citing plagiarism allegations. The author denies the claims; no formal proof has been made public. The case shows how quickly a suspicion can cost an author a prize, before any proof exists."}}, {"@type": "Question", "name": "Can an AI detector prove that a text was written by a machine?", "acceptedAnswer": {"@type": "Answer", "text": "No. A detector gives a probability, never proof. OpenAI withdrew its own detector in July 2023: it caught only 26% of AI-written texts and wrongly flagged 9% of human ones. A Stanford study (Patterns, 2023) found that seven detectors labelled, on average, 61% of essays by non-native English speakers as AI-generated. For a company, the lesson is simple: a detector score should never be enough to accuse an employee, a candidate or a supplier. It can raise a flag; only a human review, backed by work records, can reach a conclusion."}}, {"@type": "Question", "name": "Why does the Orélien affair matter to businesses?", "acceptedAnswer": {"@type": "Answer", "text": "Because the burden of proof has flipped: the author has to prove he is the author. Tomorrow, a client may ask a company who really produced a report or a study. Meanwhile, 78% of employees use AI tools their company has not approved (WalkMe, July 2025). The issue is not the use of AI as such, which is often legitimate. It is the ability to show how a deliverable was produced, by whom and with which tools. A company with no written rule and no records kept will have no answer for that client."}}, {"@type": "Question", "name": "What counts as proof of work?", "acceptedAnswer": {"@type": "Answer", "text": "A set of records showing how a document came to be: version history, drafts and notes, sources consulted, exchanges with a reviewer or the client, and a note of the AI tools used. Most already exist in office software; you only need to decide to keep them. These records are not there to monitor teams. They protect the real author of a document if it is challenged, and they reassure the client about the method. A simple retention policy that everyone knows is enough: what to keep, where, and for how long."}}, {"@type": "Question", "name": "What goes into a one-page AI rule?", "acceptedAnswer": {"@type": "Answer", "text": "Three categories, with examples: free uses (correcting, rephrasing, summarising a public document), uses to declare (a first draft, an analysis or a visual for a client) and banned uses (client data in an unapproved tool, generated work presented as your own without saying so). One page is enough, as long as it is read and understood. Present it to the leadership team, then to the teams, with examples from their daily work. Review it every quarter, because tools and uses change fast."}}, {"@type": "Question", "name": "What can a business leader do right now?", "acceptedAnswer": {"@type": "Answer", "text": "Three safeguards, with no budget: a one-page written rule, a record of the work (versions, drafts, sources) and a right to explain before any decision about an employee or a supplier. Then: a disclosure line on client deliverables and an AI clause in supplier contracts. The right to explain matters most: before any sanction based on a mere suspicion of AI use, the person concerned must be able to show their work records. It is a matter of fairness, and legal protection for the company."}}], "inLanguage": "en-GB"}
@@ -1399,7 +1420,7 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
     <div class="footer-brand">
       <img src="assets/logo-execia-bords-prune.webp" alt="EXEC'IA Consulting" class="footer-logo-main" width="450" height="212" decoding="async">
       <p class="footer-tag"><span class="footer-tag-lead">Executive-level experience</span><br><span class="footer-tag-rest">at the service of your <span class="ink-accent"><span class="ia-rose">AI</span></span> transformation</span></p>
-      <p class="footer-signature">Decide before you invest.</p>
+      <p class="footer-signature">« Decide before you invest. »</p>
     </div>
 
     <div class="footer-col footer-col--site">
@@ -1433,7 +1454,7 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
     <div class="footer-col footer-col--contact">
       <span class="footer-col-title">Contact</span>
       <a href="mailto:contact@exec-ia.ai">✉️ contact@exec-ia.ai</a>
-      <span class="footer-loc">📍 Paris, France, International</span>
+      <span class="footer-loc">📍 Paris, Île-de-France</span>
       <a href="https://www.linkedin.com/in/val%C3%A9rie-mailland" target="_blank" rel="noopener" class="footer-linkedin-btn"><img width="72" height="72" src="assets/linkedin-logo.png" alt="LinkedIn" class="footer-linkedin-logo">Follow me on LinkedIn</a>
       <a href="https://www.instagram.com/execia.consulting/" target="_blank" rel="noopener" class="footer-linkedin-btn footer-instagram-btn"><img src="assets/instagram-logo.png" alt="Instagram" class="footer-linkedin-logo" width="18" height="18"><span>Follow EXEC'<span class="ink-accent"><span class="ia-rose">IA</span></span> on Instagram</span></a>
     </div>

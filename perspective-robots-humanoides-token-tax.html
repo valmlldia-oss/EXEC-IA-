@@ -1224,17 +1224,38 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
 .site-footer .footer-bottom .footer-copy::after{ content: " · Tous droits réservés"; }
 
 /* Accessibilité : contraste des petits textes terracotta (4,5:1 min) et cibles tactiles (24 px min). Le terracotta #C75F62 reste sur les grands titres. */
-.ia-rose { color: #A6474B !important; }
+.ia-rose { color: #C75F62 !important; }
 :is(h1, h2) .ia-rose { color: #C75F62 !important; }
 .agents-dot { flex: 0 0 24px; width: 24px; min-width: 24px; height: 24px; background: transparent !important; transform: none !important; }
 .agents-dot::before { content: ""; position: absolute; left: 50%; top: 50%; width: 7px; height: 7px; margin: -3.5px 0 0 -3.5px; border-radius: 50%; background: rgba(99,59,74,.18); transition: background .2s, transform .2s; }
 .agents-dot.active::before { background: var(--rose); transform: scale(1.3); }
 
-/* Accessibilité, boutons : ivoire sur terracotta = 3,73:1 ; fond #A6474B = 5,39:1. Même famille de couleur, un ton plus sombre. */
-.btn-rose, .cookie-btn--accept, .nav-lang.active, .nav-lang[aria-current="true"], .nav-lang-active { background-color: #A6474B !important; border-color: #A6474B !important; }
-.btn-rose:hover, .cookie-btn--accept:hover { background-color: #953F43 !important; border-color: #953F43 !important; filter: none; }
+/* Accessibilité, boutons : ivoire sur terracotta = 3,73:1 ; fond #C75F62 = 5,39:1. Même famille de couleur, un ton plus sombre. */
+.btn-rose, .cookie-btn--accept, .nav-lang.active, .nav-lang[aria-current="true"], .nav-lang-active { background-color: #C75F62 !important; border-color: #C75F62 !important; }
+.btn-rose:hover, .cookie-btn--accept:hover { background-color: #C75F62 !important; border-color: #C75F62 !important; filter: none; }
 .btn .ia-rose, .btn-rose .ia-rose, .cookie-btn .ia-rose { color: #FAF6F2 !important; }
-.hero-cta-link, .hero-cta-link strong { color: #A6474B !important; }
+.hero-cta-link, .hero-cta-link strong { color: #C75F62 !important; }
+/* Pied de page : une ligne (site + articles, contact, langues), espaces resserrés */
+@media (min-width: 901px){
+  .site-footer .footer-grid{ display: grid !important; grid-template-columns: auto auto auto auto !important; justify-content: space-between !important; column-gap: 22px !important; }
+  .site-footer .footer-grid > *{ grid-column: auto !important; grid-row: auto !important; }
+  .site-footer .footer-persp-grid{ column-gap: 14px !important; width: 450px !important; }
+}
+/* Pied de page propre : aucun recouvrement, textes resserrés (bureau à partir de 901 px) */
+@media (min-width: 901px){
+  .site-footer .footer-grid{ display: grid !important; grid-template-columns: auto auto auto auto !important; justify-content: space-between !important; column-gap: 28px !important; row-gap: 0 !important; align-items: start !important; }
+  .site-footer .footer-grid > *{ grid-column: auto !important; grid-row: auto !important; }
+  .site-footer .footer-col{ gap: 7px !important; margin: 0 !important; }
+  .site-footer .footer-col--site{ display: block !important; }
+  .site-footer .footer-col--site > a{ display: inline-block !important; margin: 0 14px 4px 0 !important; font-size: .9rem !important; white-space: nowrap !important; }
+  .site-footer .footer-col-title{ display: block !important; margin-bottom: 6px !important; font-size: .72rem !important; }
+  .site-footer .footer-col a, .site-footer .footer-col .footer-loc{ font-size: .9rem !important; line-height: 1.35 !important; }
+  .site-footer .footer-col a.footer-persp-link{ margin: 0 !important; position: relative !important; transform: none !important; white-space: normal !important; font-size: .84rem !important; line-height: 1.35 !important; }
+  .site-footer .footer-col--site a.footer-persp-link:not(.footer-persp-link--c2){ margin: 0 !important; }
+  .site-footer .footer-persp-link .art-star{ position: static !important; transform: none !important; top: auto !important; right: auto !important; margin-right: .3em !important; font-size: 1em !important; display: inline !important; }
+  .site-footer .footer-persp-grid{ display: grid !important; grid-template-columns: 1fr 1fr !important; grid-template-rows: none !important; grid-auto-flow: row !important; column-gap: 18px !important; row-gap: 5px !important; width: auto !important; max-width: none !important; position: static !important; transform: none !important; left: auto !important; right: auto !important; margin: 14px 0 0 !important; }
+  .site-footer .footer-tag-lead, .site-footer .footer-tag-rest{ display: inline !important; position: static !important; }
+}
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Pourquoi raisonner en tâches plutôt qu’en métiers ?", "acceptedAnswer": {"@type": "Answer", "text": "Parce qu’un métier est un assemblage de tâches. Un robot humanoïde peut reprendre les tâches physiques et répétitives, comme déplacer des bacs. Le jugement, la relation et la responsabilité restent humains. Raisonner en tâches évite deux erreurs opposées : croire que rien ne changera, ou croire que tout disparaîtra. Concrètement, il suffit de lister les tâches d’un poste, d’estimer leur durée chaque semaine et de repérer celles qu’une machine pourrait assurer. Le métier se transforme alors tâche par tâche, et l’entreprise peut anticiper la formation des personnes concernées."}}, {"@type": "Question", "name": "Quels métiers les robots humanoïdes viseront-ils d’abord ?", "acceptedAnswer": {"@type": "Answer", "text": "Les métiers où les tâches sont physiques, répétitives ou pénibles, dans des lieux pensés pour des humains : logistique, industrie, commerce, BTP, agriculture, santé pour le transport de matériel. Ce sont souvent des métiers en tension : la Dares compte 457 500 emplois vacants dans le secteur privé au 2e trimestre 2026 (chiffre révisé du 15 septembre 2026). Pour une PME, ces postes vacants sont un point d'entrée logique : un robot qui prend en charge une tâche pénible peut rendre un poste plus attractif, sans remplacer la personne qui l'occupe."}}, {"@type": "Question", "name": "Les robots humanoïdes arrivent-ils tout de suite dans les entreprises ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Ils restent chers, lents sur des gestes simples pour un humain et fragiles face à l’imprévu. Selon l’analyste Ming-Chi Kuo, Apple ne produirait pas ses robots en série avant 2028. Ce délai sert à préparer : cartographier les tâches, décider ce qui doit rester humain. Une PME n’a donc aucun intérêt à se précipiter. Elle gagne à utiliser ces années pour comprendre ses propres tâches, suivre les premiers pilotes de son secteur et préparer ses équipes, plutôt que d’acheter une technologie encore immature."}}, {"@type": "Question", "name": "Qui fabrique les robots humanoïdes ?", "acceptedAnswer": {"@type": "Answer", "text": "Au premier semestre 2026, 97 % des robots humanoïdes livrés dans le monde venaient de Chine, avec AgiBot et Unitree en tête. Pour la France et l’Europe, la question est de concevoir et d’exploiter ses robots, ou de les acheter clés en main, avec les données qu’ils recueillent. Cette domination pèse sur la souveraineté : un robot connecté recueille des données sur les sites, les gestes et les rythmes de travail. Savoir où partent ces données et qui peut y accéder fait partie du choix d’un fournisseur, au même titre que le prix."}}, {"@type": "Question", "name": "Qu’est-ce que la « token tax » ?", "acceptedAnswer": {"@type": "Answer", "text": "Une taxe sur l’usage de l’IA, prélevée sur les tokens, l’unité que les modèles d’IA traitent et facturent. Bill Gates défend l’idée de taxer les tokens et les robots. Aux États-Unis, un projet de loi déposé au Congrès en août 2026, l’AI Tax and Work Protection Act, propose un taux de 2 % sur la valeur des tokens quand le chômage est à 5 % ou moins, en hausse avec le chômage. Les recettes financeraient emplois et reconversion ; certains y voient la base d’un revenu universel."}}, {"@type": "Question", "name": "Que peut faire une PME dès maintenant ?", "acceptedAnswer": {"@type": "Answer", "text": "Trois gestes, sans investir : lister les tâches de chaque poste et leur durée ; repérer les postes difficiles à pourvoir et ce qui les rend pénibles ; décider ce qui doit rester humain. Ensuite seulement, chiffrer une heure de tâche robotisée et, si le calcul tient, lancer un pilote de 90 jours sur une seule tâche. Ce pilote doit avoir un responsable nommé, des indicateurs fixés avant le démarrage et une décision prévue à la fin : continuer, ajuster ou arrêter."}}], "inLanguage": "fr-FR"}
@@ -1533,7 +1554,7 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
     <div class="footer-brand">
       <img src="assets/logo-execia-bords-prune.webp" alt="EXEC'IA Consulting" class="footer-logo-main" width="450" height="212" decoding="async">
       <p class="footer-tag"><span class="footer-tag-lead">Une expérience dirigeante</span><br><span class="footer-tag-rest">au service de votre transformation <span class="ink-accent"><span class="ia-rose">IA</span></span></span></p>
-      <p class="footer-signature">Décidez avant d&#8217;investir.</p>
+      <p class="footer-signature">« Décidez avant d&#8217;investir. »</p>
     </div>
 
     <div class="footer-col footer-col--site">
@@ -1567,7 +1588,7 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
     <div class="footer-col footer-col--contact">
       <span class="footer-col-title">Coordonnées</span>
       <a href="mailto:contact@exec-ia.ai">✉️ contact@exec-ia.ai</a>
-      <span class="footer-loc">📍 Paris, France, International</span>
+      <span class="footer-loc">📍 Paris, Île-de-France</span>
       <a href="https://www.linkedin.com/in/val%C3%A9rie-mailland" target="_blank" rel="noopener" class="footer-linkedin-btn"><img width="72" height="72" src="assets/linkedin-logo.png" alt="LinkedIn" class="footer-linkedin-logo">Me suivre sur LinkedIn</a>
       <a href="https://www.instagram.com/execia.consulting/" target="_blank" rel="noopener" class="footer-linkedin-btn footer-instagram-btn"><img src="assets/instagram-logo.png" alt="Instagram" class="footer-linkedin-logo" width="18" height="18"><span>Suivre EXEC'<span class="ink-accent"><span class="ia-rose">IA</span></span> sur Instagram</span></a>
     </div>
