@@ -1975,7 +1975,7 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
 .nav-actions a.nav-cta:hover{ background: #C75F62; color: #FAF6F2 !important; transform: translateY(-1px); }
 .nav-actions a.nav-cta:focus-visible{ outline: 2px solid #633B4A; outline-offset: 3px; }
 .nav-actions .nav-cta--bar{ display: none; }
-@media (min-width: 1181px) and (max-width: 1567px){
+@media (min-width: 1181px) and (max-width: 1365px){
 .nav-links{ display: none; }
 .nav-burger{ display: flex; }
 .nav-actions .nav-cta--bar{ display: none; }
@@ -1987,12 +1987,12 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
 .nav-item--dd{ flex-direction: column; align-items: flex-start; }
 }
 
-@media (max-width: 1567px){
+@media (max-width: 1365px){
 .nav-dd a{ position: relative; padding: 6px 0 6px 24px; }
 .nav-dd a::before{ content: '→'; position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: .9rem; color: #D9C9C3; opacity: .85; }
 }
-@media (min-width: 1568px){
-  :root{ --nav-pad: clamp(10px, calc(4vw - 52px), 26px); --nav-col: clamp(16px, 1.2vw, 32px); }
+@media (min-width: 1366px){
+  :root{ --nav-pad: clamp(10px, calc(4vw - 46px), 26px); --nav-col: clamp(16px, 1.2vw, 32px); }
   .nav-in{ padding: 0 24px; gap: var(--nav-col); }
   .nav-brand{ margin-right: 0; }
   .nav-burger{ display: none; }
@@ -2002,11 +2002,11 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
   .nav-links > :nth-last-child(2){ margin-right: 0; }
   .nav-links > :nth-child(n+2):not(.nav-cta)::before{ content: ''; position: absolute; left: calc(-1 * var(--nav-pad)); top: 50%; width: 1px; height: 18px; transform: translateY(-50%); background: rgba(99,59,74,.24); pointer-events: none; }
   .nav-links .nav-cta--panel{ display: none; }
-  .nav-actions .nav-cta--bar{ display: inline-flex; align-items: center; }
+  .nav-actions{ flex-direction: column; align-items: flex-end; gap: 7px; }
+  .nav-actions .nav-cta--bar{ display: inline-flex; align-items: center; padding: 7px 18px; }
   .nav-lang:last-child{ margin-right: 0; }
-  .nav-links > .nav-item--dd > a{ padding-right: 11px; }
-  .nav-links > .nav-item--dd > a::before{ content: ''; position: absolute; right: 0; top: 50%; width: 5px; height: 5px; border-right: 1.3px solid currentColor; border-bottom: 1.3px solid currentColor; transform: translateY(-75%) rotate(45deg); opacity: .65; transition: transform .2s, opacity .2s; }
-  .nav-links > .nav-item--dd:hover > a::before, .nav-links > .nav-item--dd:focus-within > a::before{ transform: translateY(-25%) rotate(225deg); opacity: 1; }
+  .nav-links > .nav-item--dd > a::before{ content: ''; position: absolute; left: 50%; bottom: -13px; width: 6px; height: 6px; border-right: 1.4px solid currentColor; border-bottom: 1.4px solid currentColor; transform: translateX(-50%) rotate(45deg); opacity: .75; transition: transform .2s, opacity .2s; }
+  .nav-links > .nav-item--dd:hover > a::before, .nav-links > .nav-item--dd:focus-within > a::before{ transform: translateX(-50%) translateY(3px) rotate(225deg); opacity: 1; }
   .nav-dd a{ position: relative; padding-left: 36px; }
   .nav-dd a::before{ content: '→'; position: absolute; left: 16px; top: 50%; transform: translateY(-50%); font-size: .85rem; color: #633B4A; opacity: .5; transition: transform .2s, opacity .2s, color .2s; }
   .nav-dd a:hover::before, .nav-dd a:focus-visible::before{ color: #C75F62; opacity: 1; transform: translateY(-50%) translateX(3px); }
@@ -2044,14 +2044,14 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
 </nav>
 <main id="contenu">
 <section class="sol-hero">
-  <p class="sol-eyebrow">Achievements</p>
-  <h1 class="sol-title">Our <span class="ia-rose">achievements</span></h1>
+  <p class="sol-eyebrow">Projects, demonstrations, use cases</p>
+  <h1 class="sol-title"><span class="ia-rose">Achievements</span></h1>
   <p class="sol-intro">Client projects, demonstrations, internal projects and business use cases. Each card follows the same thread: context, problem, solution, result. When a result is not yet documented, the card says so.</p>
 </section>
 <section class="re-section" id="clients"><h2 class="re-section-title">Client projects delivered</h2><p class="re-section-intro">Work actually delivered for clients, with their testimonial.</p><div class="re-grid"><article class="re-card"><img src="assets/sites/sophro-in-equilibrium.webp" alt="Preview of the In Equilibrium website, a sophrology practice" width="1200" height="800" loading="lazy" decoding="async"><p class="re-tag">Showcase website · Sophrology practice</p><h3 class="re-name">In Equilibrium</h3><dl class="re-fields"><div><dt>Context</dt><dd>A sophrology practice, whose founder wanted to convey her universe.</dd></div><div><dt>Problem</dt><dd>Clarify the offer and make it immediately accessible.</dd></div><div><dt>Solution</dt><dd>Structured content, a clear hierarchy of services and a journey designed to make contact easy.</dd></div><div><dt>Result</dt><dd class="re-quote">“An elegant, distinctive website, deeply aligned with my identity.” Isabelle Giroudot, founder.</dd></div></dl><div class="re-links"><a href="https://sophro-site.vercel.app/" target="_blank" rel="noopener">See the live website</a><a href="temoignages-en.html">Read the full testimonial</a></div></article><article class="re-card"><img src="assets/sites/coiffure-atelier-francois.webp" alt="Preview of the Atelier François website, a hair salon" width="1200" height="800" loading="lazy" decoding="async"><p class="re-tag">Hair salon launch · Paris 8th</p><h3 class="re-name">Atelier François</h3><dl class="re-fields"><div><dt>Context</dt><dd>The launch of a hair salon in Paris 8th, with its founder.</dd></div><div><dt>Problem</dt><dd>Turn the identity of the place and the founder’s craft into a brand signature.</dd></div><div><dt>Solution</dt><dd>Creation of the identity (name, logo, graphic charter) and of an elegant, distinctive website, inspired by the salon’s emblematic painting.</dd></div><div><dt>Result</dt><dd class="re-quote">“The result goes beyond what I had imagined.” François, founder.</dd></div></dl><div class="re-links"><a href="https://atelier-francois-ruddy.vercel.app/" target="_blank" rel="noopener">See the live website</a><a href="temoignages-en.html">Read the full testimonial</a></div></article></div></section>
 <section class="re-section" id="demos"><h2 class="re-section-title">Demonstrations and internal tools</h2><p class="re-section-intro">Tools presented for how they work. They are not client achievements.</p><div class="re-grid"><article class="re-card"><p class="re-tag">Commented demonstration · Valérie Mailland</p><h3 class="re-name">Impact calculator</h3><dl class="re-fields"><div><dt>Context</dt><dd>Estimating the value of time freed up by AI in a team.</dd></div><div><dt>Problem</dt><dd>Giving an order of magnitude from the number of people concerned, the hours freed and the hourly rate.</dd></div><div><dt>Solution</dt><dd>A calculation that converts the hours freed into a value of time per month and per year. It gives the value of time freed, not a saving.</dd></div></dl><div class="re-links"><a href="offres-en.html#roi">Open the calculator</a></div></article><article class="re-card"><p class="re-tag">Website AI assistant</p><h3 class="re-name">EXEC’IA assistant</h3><dl class="re-fields"><div><dt>Context</dt><dd>An assistant shown on the website's pages to answer questions about the offers and the firm's approach.</dd></div><div><dt>Problem</dt><dd>Giving a first answer at any time, without waiting for an exchange.</dd></div><div><dt>Solution</dt><dd>An AI assistant that points to the “A question?” bubble for a personal answer.</dd></div></dl><div class="re-links"><a href="contact-en.html">Ask a question</a></div></article></div></section>
 <section class="re-section" id="usages"><h2 class="re-section-title">Illustrative use cases</h2><p class="re-section-intro">Examples of possible missions, to be scoped before any implementation. They are not delivered projects.</p><div class="re-grid"><article class="re-card"><p class="re-tag">Simple automation</p><h3 class="re-name">Sorting and replying to emails</h3><dl class="re-fields"><div><dt>Context</dt><dd>Messages to sort and answer one by one.</dd></div><div><dt>Problem</dt><dd>Time spent sorting and answering routine messages.</dd></div><div><dt>Solution</dt><dd>An AI agent on one process, with fewer than five steps, across one or two tools.</dd></div></dl><div class="re-links"><a href="offres-en.html#a-la-carte">See terms and pricing</a></div></article><article class="re-card"><p class="re-tag">Operational automation</p><h3 class="re-name">Leads turned into a CRM record</h3><dl class="re-fields"><div><dt>Context</dt><dd>Leads to enter in the CRM.</dd></div><div><dt>Problem</dt><dd>Leads entered by hand in the CRM.</dd></div><div><dt>Solution</dt><dd>A workflow across three to four tools, with integrated generative AI.</dd></div></dl><div class="re-links"><a href="offres-en.html#a-la-carte">See terms and pricing</a></div></article><article class="re-card"><p class="re-tag">Multi-step automation</p><h3 class="re-name">End-to-end handling of a file</h3><dl class="re-fields"><div><dt>Context</dt><dd>Files that go through several steps, with business rules.</dd></div><div><dt>Problem</dt><dd>Steps of a file chained by hand.</dd></div><div><dt>Solution</dt><dd>A multi-step process with business rules and human validation at key points.</dd></div></dl><div class="re-links"><a href="offres-en.html#a-la-carte">See terms and pricing</a></div></article></div></section>
-<section class="re-cta"><h2>A comparable project?</h2><p>Tell us your context: we will identify with you the closest achievement.</p><a href="contact-en.html" class="btn btn-rose">Book an appointment <span class="btn-arrow">→</span></a></section>
+<section class="re-cta"><h2>A comparable project?</h2><p>Describe your context: the closest achievement is identified with you.</p><a href="contact-en.html" class="btn btn-rose">Book an appointment <span class="btn-arrow">→</span></a></section>
 <div class="re-back"><a href="solutions-en.html">← Back to Digital &amp; AI solutions</a></div>
 </main>
 </main>
@@ -2096,7 +2096,7 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
       <span class="footer-col-title">Contact</span>
       <a href="mailto:contact@exec-ia.ai">✉️ contact@exec-ia.ai</a>
       <span class="footer-loc">📍 Paris, Île-de-France</span>
-      <a href="https://www.linkedin.com/in/val%C3%A9rie-mailland" target="_blank" rel="noopener" class="footer-linkedin-btn"><img width="72" height="72" src="assets/linkedin-logo.png" alt="LinkedIn" class="footer-linkedin-logo">Follow me on LinkedIn</a>
+      <a href="https://www.linkedin.com/in/val%C3%A9rie-mailland" target="_blank" rel="noopener" class="footer-linkedin-btn"><img width="72" height="72" src="assets/linkedin-logo.png" alt="LinkedIn" class="footer-linkedin-logo">Follow Valérie Mailland on LinkedIn</a>
       <a href="https://www.instagram.com/execia.consulting/" target="_blank" rel="noopener" class="footer-linkedin-btn footer-instagram-btn"><img src="assets/instagram-logo.png" alt="Instagram" class="footer-linkedin-logo" width="18" height="18"><span>Follow EXEC'<span class="ink-accent"><span class="ia-rose">IA</span></span> on Instagram</span></a>
     </div>
     <div class="footer-col footer-col--langs">

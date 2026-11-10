@@ -2066,7 +2066,7 @@ p :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl, .ink-accent-fixed, .art-chip, .
 .nav-actions a.nav-cta:hover{ background: #C75F62; color: #FAF6F2 !important; transform: translateY(-1px); }
 .nav-actions a.nav-cta:focus-visible{ outline: 2px solid #633B4A; outline-offset: 3px; }
 .nav-actions .nav-cta--bar{ display: none; }
-@media (min-width: 1181px) and (max-width: 1567px){
+@media (min-width: 1181px) and (max-width: 1365px){
 .nav-links{ display: none; }
 .nav-burger{ display: flex; }
 .nav-actions .nav-cta--bar{ display: none; }
@@ -2078,12 +2078,12 @@ p :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl, .ink-accent-fixed, .art-chip, .
 .nav-item--dd{ flex-direction: column; align-items: flex-start; }
 }
 
-@media (max-width: 1567px){
+@media (max-width: 1365px){
 .nav-dd a{ position: relative; padding: 6px 0 6px 24px; }
 .nav-dd a::before{ content: '→'; position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: .9rem; color: #D9C9C3; opacity: .85; }
 }
-@media (min-width: 1568px){
-  :root{ --nav-pad: clamp(10px, calc(4vw - 52px), 26px); --nav-col: clamp(16px, 1.2vw, 32px); }
+@media (min-width: 1366px){
+  :root{ --nav-pad: clamp(10px, calc(4vw - 46px), 26px); --nav-col: clamp(16px, 1.2vw, 32px); }
   .nav-in{ padding: 0 24px; gap: var(--nav-col); }
   .nav-brand{ margin-right: 0; }
   .nav-burger{ display: none; }
@@ -2093,11 +2093,11 @@ p :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl, .ink-accent-fixed, .art-chip, .
   .nav-links > :nth-last-child(2){ margin-right: 0; }
   .nav-links > :nth-child(n+2):not(.nav-cta)::before{ content: ''; position: absolute; left: calc(-1 * var(--nav-pad)); top: 50%; width: 1px; height: 18px; transform: translateY(-50%); background: rgba(99,59,74,.24); pointer-events: none; }
   .nav-links .nav-cta--panel{ display: none; }
-  .nav-actions .nav-cta--bar{ display: inline-flex; align-items: center; }
+  .nav-actions{ flex-direction: column; align-items: flex-end; gap: 7px; }
+  .nav-actions .nav-cta--bar{ display: inline-flex; align-items: center; padding: 7px 18px; }
   .nav-lang:last-child{ margin-right: 0; }
-  .nav-links > .nav-item--dd > a{ padding-right: 11px; }
-  .nav-links > .nav-item--dd > a::before{ content: ''; position: absolute; right: 0; top: 50%; width: 5px; height: 5px; border-right: 1.3px solid currentColor; border-bottom: 1.3px solid currentColor; transform: translateY(-75%) rotate(45deg); opacity: .65; transition: transform .2s, opacity .2s; }
-  .nav-links > .nav-item--dd:hover > a::before, .nav-links > .nav-item--dd:focus-within > a::before{ transform: translateY(-25%) rotate(225deg); opacity: 1; }
+  .nav-links > .nav-item--dd > a::before{ content: ''; position: absolute; left: 50%; bottom: -13px; width: 6px; height: 6px; border-right: 1.4px solid currentColor; border-bottom: 1.4px solid currentColor; transform: translateX(-50%) rotate(45deg); opacity: .75; transition: transform .2s, opacity .2s; }
+  .nav-links > .nav-item--dd:hover > a::before, .nav-links > .nav-item--dd:focus-within > a::before{ transform: translateX(-50%) translateY(3px) rotate(225deg); opacity: 1; }
   .nav-dd a{ position: relative; padding-left: 36px; }
   .nav-dd a::before{ content: '→'; position: absolute; left: 16px; top: 50%; transform: translateY(-50%); font-size: .85rem; color: #633B4A; opacity: .5; transition: transform .2s, opacity .2s, color .2s; }
   .nav-dd a:hover::before, .nav-dd a:focus-visible::before{ color: #C75F62; opacity: 1; transform: translateY(-50%) translateX(3px); }
@@ -2388,7 +2388,7 @@ p :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl, .ink-accent-fixed, .art-chip, .
 <section id="engagements" class="bg-white snap-page expertise-page-rule">
   <div class="wrap">
     <h2 class="section-title reveal">Commitments</h2>
-    <details class="cerveau-fold" open><summary><h3 class="cerveau-h3"><span class="ink-terra-lg">Data sovereignty</span></h3></summary><div class="cerveau-fold-body"><p class="cerveau-text"><strong>Your data remains yours.</strong></p><ul class="priorites"><li>We apply data minimization: only the data the mission needs is used.</li><li>Data is entrusted to an AI tool only where that use is authorized, necessary and governed by contract.</li><li>When personal data is processed on your behalf, a GDPR-compliant data processing agreement is signed before work starts.</li></ul></div></details>
+    <details class="cerveau-fold" open><summary><h3 class="cerveau-h3"><span class="ink-terra-lg">Data sovereignty</span></h3></summary><div class="cerveau-fold-body"><p class="cerveau-text"><strong>Your data remains yours.</strong></p><ul class="priorites"><li>EXEC’<span class="ia-rose">IA</span> applies data minimization: only the data the mission needs is used.</li><li>Data is entrusted to an AI tool only where that use is authorized, necessary and governed by contract.</li><li>When personal data is processed on your behalf, a GDPR-compliant data processing agreement is signed before work starts.</li></ul></div></details>
     <div class="funding-note reveal">
       <p class="funding-note-title">Governance &amp; compliance</p>
       <p>An <span class="ia-rose">AI</span> agent handling your data has to build in <strong class="fw-600"><span class="rgpd-b">GDPR</span> and the EU <span class="ia-rose">AI</span> Act</strong> from the design stage, not as an afterthought. That rigour was practised at <span class="art-chip">Bureau Veritas</span>, an international leader in testing, inspection and certification, before being applied to designing EXEC'<span class="ink-accent"><span class="ia-rose">IA</span></span>'s <span class="ia-rose">AI</span> agents.</p>
@@ -2417,7 +2417,7 @@ p :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl, .ink-accent-fixed, .art-chip, .
     <a href="https://calendly.com/exec-ia" target="_blank" rel="noopener" class="btn btn-rose">Your <span class="ia-rose">AI</span> diagnostic</a>
       <p class="offres-crosslink"><a href="offres-en.html" class="portrait-link">See the EXEC&#8217;<span class="ia-rose">IA</span> offers <span class="portrait-link-arrow">→</span></a></p>
       <p class="offres-crosslink"><a href="perspectives-en.html" class="portrait-link">Browse the Insights <span class="portrait-link-arrow">→</span></a></p>
-    <p class="zone-line"><span class="zone-pin" aria-hidden="true">📍</span>I work in Paris and across Île-de-France, on site or remotely.</p>
+    <p class="zone-line"><span class="zone-pin" aria-hidden="true">📍</span>EXEC’<span class="ia-rose">IA</span> works in Paris and across Île-de-France, on site or remotely.</p>
   </div>
 </section>
 
@@ -2464,7 +2464,7 @@ p :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl, .ink-accent-fixed, .art-chip, .
       <span class="footer-col-title">Contact</span>
       <a href="mailto:contact@exec-ia.ai">✉️ contact@exec-ia.ai</a>
       <span class="footer-loc">📍 Paris, Île-de-France</span>
-      <a href="https://www.linkedin.com/in/val%C3%A9rie-mailland" target="_blank" rel="noopener" class="footer-linkedin-btn"><img width="72" height="72" src="assets/linkedin-logo.png" alt="LinkedIn" class="footer-linkedin-logo">Follow me on LinkedIn</a>
+      <a href="https://www.linkedin.com/in/val%C3%A9rie-mailland" target="_blank" rel="noopener" class="footer-linkedin-btn"><img width="72" height="72" src="assets/linkedin-logo.png" alt="LinkedIn" class="footer-linkedin-logo">Follow Valérie Mailland on LinkedIn</a>
       <a href="https://www.instagram.com/execia.consulting/" target="_blank" rel="noopener" class="footer-linkedin-btn footer-instagram-btn"><img src="assets/instagram-logo.png" alt="Instagram" class="footer-linkedin-logo" width="18" height="18"><span>Follow EXEC'<span class="ink-accent"><span class="ia-rose">IA</span></span> on Instagram</span></a>
     </div>
     <div class="footer-col footer-col--langs">

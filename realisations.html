@@ -1977,7 +1977,7 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
 .nav-actions a.nav-cta:hover{ background: #C75F62; color: #FAF6F2 !important; transform: translateY(-1px); }
 .nav-actions a.nav-cta:focus-visible{ outline: 2px solid #633B4A; outline-offset: 3px; }
 .nav-actions .nav-cta--bar{ display: none; }
-@media (min-width: 1181px) and (max-width: 1567px){
+@media (min-width: 1181px) and (max-width: 1365px){
 .nav-links{ display: none; }
 .nav-burger{ display: flex; }
 .nav-actions .nav-cta--bar{ display: none; }
@@ -1989,12 +1989,12 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
 .nav-item--dd{ flex-direction: column; align-items: flex-start; }
 }
 
-@media (max-width: 1567px){
+@media (max-width: 1365px){
 .nav-dd a{ position: relative; padding: 6px 0 6px 24px; }
 .nav-dd a::before{ content: '→'; position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: .9rem; color: #D9C9C3; opacity: .85; }
 }
-@media (min-width: 1568px){
-  :root{ --nav-pad: clamp(10px, calc(4vw - 52px), 26px); --nav-col: clamp(16px, 1.2vw, 32px); }
+@media (min-width: 1366px){
+  :root{ --nav-pad: clamp(10px, calc(4vw - 46px), 26px); --nav-col: clamp(16px, 1.2vw, 32px); }
   .nav-in{ padding: 0 24px; gap: var(--nav-col); }
   .nav-brand{ margin-right: 0; }
   .nav-burger{ display: none; }
@@ -2004,11 +2004,11 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
   .nav-links > :nth-last-child(2){ margin-right: 0; }
   .nav-links > :nth-child(n+2):not(.nav-cta)::before{ content: ''; position: absolute; left: calc(-1 * var(--nav-pad)); top: 50%; width: 1px; height: 18px; transform: translateY(-50%); background: rgba(99,59,74,.24); pointer-events: none; }
   .nav-links .nav-cta--panel{ display: none; }
-  .nav-actions .nav-cta--bar{ display: inline-flex; align-items: center; }
+  .nav-actions{ flex-direction: column; align-items: flex-end; gap: 7px; }
+  .nav-actions .nav-cta--bar{ display: inline-flex; align-items: center; padding: 7px 18px; }
   .nav-lang:last-child{ margin-right: 0; }
-  .nav-links > .nav-item--dd > a{ padding-right: 11px; }
-  .nav-links > .nav-item--dd > a::before{ content: ''; position: absolute; right: 0; top: 50%; width: 5px; height: 5px; border-right: 1.3px solid currentColor; border-bottom: 1.3px solid currentColor; transform: translateY(-75%) rotate(45deg); opacity: .65; transition: transform .2s, opacity .2s; }
-  .nav-links > .nav-item--dd:hover > a::before, .nav-links > .nav-item--dd:focus-within > a::before{ transform: translateY(-25%) rotate(225deg); opacity: 1; }
+  .nav-links > .nav-item--dd > a::before{ content: ''; position: absolute; left: 50%; bottom: -13px; width: 6px; height: 6px; border-right: 1.4px solid currentColor; border-bottom: 1.4px solid currentColor; transform: translateX(-50%) rotate(45deg); opacity: .75; transition: transform .2s, opacity .2s; }
+  .nav-links > .nav-item--dd:hover > a::before, .nav-links > .nav-item--dd:focus-within > a::before{ transform: translateX(-50%) translateY(3px) rotate(225deg); opacity: 1; }
   .nav-dd a{ position: relative; padding-left: 36px; }
   .nav-dd a::before{ content: '→'; position: absolute; left: 16px; top: 50%; transform: translateY(-50%); font-size: .85rem; color: #633B4A; opacity: .5; transition: transform .2s, opacity .2s, color .2s; }
   .nav-dd a:hover::before, .nav-dd a:focus-visible::before{ color: #C75F62; opacity: 1; transform: translateY(-50%) translateX(3px); }
@@ -2047,14 +2047,14 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
 </nav>
 <main id="contenu">
 <section class="sol-hero">
-  <p class="sol-eyebrow">Réalisations</p>
-  <h1 class="sol-title">Nos <span class="ia-rose">réalisations</span></h1>
+  <p class="sol-eyebrow">Projets, démonstrations, cas d’usage</p>
+  <h1 class="sol-title"><span class="ia-rose">Réalisations</span></h1>
   <p class="sol-intro">Projets clients, démonstrations, projets internes et cas d’usage métiers. Chaque fiche suit le même fil : contexte, problème, solution, résultat. Lorsqu’un résultat n’est pas encore documenté, la fiche le dit.</p>
 </section>
 <section class="re-section" id="clients"><h2 class="re-section-title">Projets clients réalisés</h2><p class="re-section-intro">Des travaux effectivement réalisés pour des clients, avec leur témoignage.</p><div class="re-grid"><article class="re-card"><img src="assets/sites/sophro-in-equilibrium.webp" alt="Aperçu du site In Equilibrium, cabinet de sophrologie" width="1200" height="800" loading="lazy" decoding="async"><p class="re-tag">Site vitrine · Sophrologie caycédienne</p><h3 class="re-name">In Equilibrium</h3><dl class="re-fields"><div><dt>Contexte</dt><dd>Cabinet de sophrologie caycédienne, dont la fondatrice souhaitait traduire son univers.</dd></div><div><dt>Problème</dt><dd>Clarifier l’offre et la rendre immédiatement accessible.</dd></div><div><dt>Solution</dt><dd>Structuration des contenus, hiérarchisation des accompagnements et parcours pensé pour faciliter la prise de contact.</dd></div><div><dt>Résultat</dt><dd class="re-quote">« Un site élégant, singulier et profondément aligné avec mon identité. » Isabelle Giroudot, fondatrice.</dd></div></dl><div class="re-links"><a href="https://sophro-site.vercel.app/" target="_blank" rel="noopener">Voir le site en ligne</a><a href="temoignages.html">Lire le témoignage complet</a></div></article><article class="re-card"><img src="assets/sites/coiffure-atelier-francois.webp" alt="Aperçu du site Atelier François, salon de coiffure" width="1200" height="800" loading="lazy" decoding="async"><p class="re-tag">Lancement d’un salon de coiffure · Paris 8e</p><h3 class="re-name">Atelier François</h3><dl class="re-fields"><div><dt>Contexte</dt><dd>Lancement d’un salon de coiffure à Paris 8e, avec son fondateur.</dd></div><div><dt>Problème</dt><dd>Transformer l’identité du lieu et le savoir-faire du fondateur en une signature de marque.</dd></div><div><dt>Solution</dt><dd>Création de l’identité (nom, logo, charte graphique) et d’un site élégant et distinctif, inspiré du tableau emblématique du salon.</dd></div><div><dt>Résultat</dt><dd class="re-quote">« Le résultat dépasse ce que j’avais imaginé. » François, fondateur.</dd></div></dl><div class="re-links"><a href="https://atelier-francois-ruddy.vercel.app/" target="_blank" rel="noopener">Voir le site en ligne</a><a href="temoignages.html">Lire le témoignage complet</a></div></article></div></section>
 <section class="re-section" id="demos"><h2 class="re-section-title">Démonstrations et outils internes</h2><p class="re-section-intro">Des outils présentés pour leur fonctionnement. Ce ne sont pas des réalisations clients.</p><div class="re-grid"><article class="re-card"><p class="re-tag">Démonstration commentée · Valérie Mailland</p><h3 class="re-name">Calculateur d’impact</h3><dl class="re-fields"><div><dt>Contexte</dt><dd>Estimer la valeur du temps libéré par l’IA dans une équipe.</dd></div><div><dt>Problème</dt><dd>Donner un ordre de grandeur à partir des collaborateurs concernés, des heures libérées et du taux horaire.</dd></div><div><dt>Solution</dt><dd>Un calcul qui convertit les heures libérées en valeur de temps par mois et par an. Il donne la valeur du temps libéré, pas une économie.</dd></div></dl><div class="re-links"><a href="offres.html#roi">Ouvrir le calculateur</a></div></article><article class="re-card"><p class="re-tag">Assistant IA du site</p><h3 class="re-name">Assistant EXEC’IA</h3><dl class="re-fields"><div><dt>Contexte</dt><dd>Un assistant affiché sur les pages du site pour répondre aux questions sur les offres et l’approche du cabinet.</dd></div><div><dt>Problème</dt><dd>Donner une première réponse à toute heure, sans attendre un échange.</dd></div><div><dt>Solution</dt><dd>Assistant IA qui renvoie vers la bulle « Une question ? » pour une réponse personnelle.</dd></div></dl><div class="re-links"><a href="contact.html">Poser une question</a></div></article></div></section>
 <section class="re-section" id="usages"><h2 class="re-section-title">Cas d’usage illustratifs</h2><p class="re-section-intro">Exemples de missions possibles, à cadrer avant toute mise en œuvre. Ce ne sont pas des projets réalisés.</p><div class="re-grid"><article class="re-card"><p class="re-tag">Automatisation simple</p><h3 class="re-name">Tri et réponse aux mails</h3><dl class="re-fields"><div><dt>Contexte</dt><dd>Messages à trier et à traiter un par un.</dd></div><div><dt>Problème</dt><dd>Temps consacré au tri et à la réponse aux messages courants.</dd></div><div><dt>Solution</dt><dd>Agent IA sur un processus, avec moins de cinq étapes, sur un à deux outils.</dd></div></dl><div class="re-links"><a href="offres.html#a-la-carte">Voir les conditions et tarifs</a></div></article><article class="re-card"><p class="re-tag">Automatisation opérationnelle</p><h3 class="re-name">Leads transformés en fiche CRM</h3><dl class="re-fields"><div><dt>Contexte</dt><dd>Des leads à reporter dans le CRM.</dd></div><div><dt>Problème</dt><dd>Saisie manuelle des leads dans le CRM.</dd></div><div><dt>Solution</dt><dd>Workflow sur trois à quatre outils, avec IA générative intégrée.</dd></div></dl><div class="re-links"><a href="offres.html#a-la-carte">Voir les conditions et tarifs</a></div></article><article class="re-card"><p class="re-tag">Automatisation multi-étapes</p><h3 class="re-name">Traitement d’un dossier de bout en bout</h3><dl class="re-fields"><div><dt>Contexte</dt><dd>Des dossiers qui traversent plusieurs étapes, avec des règles métier.</dd></div><div><dt>Problème</dt><dd>Enchaînement manuel des étapes d’un dossier.</dd></div><div><dt>Solution</dt><dd>Processus multi-étapes avec règles métier et validation humaine aux points clés.</dd></div></dl><div class="re-links"><a href="offres.html#a-la-carte">Voir les conditions et tarifs</a></div></article></div></section>
-<section class="re-cta"><h2>Un projet comparable ?</h2><p>Décrivez-nous votre contexte : nous identifions avec vous la réalisation la plus proche.</p><a href="contact.html" class="btn btn-rose">Prendre rendez-vous <span class="btn-arrow">→</span></a></section>
+<section class="re-cta"><h2>Un projet comparable ?</h2><p>Décrivez votre contexte : la réalisation la plus proche est identifiée avec vous.</p><a href="contact.html" class="btn btn-rose">Prendre rendez-vous <span class="btn-arrow">→</span></a></section>
 <div class="re-back"><a href="solutions.html">← Retour à Solutions digitales &amp; IA</a></div>
 </main>
 </main>
@@ -2099,7 +2099,7 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
       <span class="footer-col-title">Coordonnées</span>
       <a href="mailto:contact@exec-ia.ai">✉️ contact@exec-ia.ai</a>
       <span class="footer-loc">📍 Paris, Île-de-France</span>
-      <a href="https://www.linkedin.com/in/val%C3%A9rie-mailland" target="_blank" rel="noopener" class="footer-linkedin-btn"><img width="72" height="72" src="assets/linkedin-logo.png" alt="LinkedIn" class="footer-linkedin-logo">Me suivre sur LinkedIn</a>
+      <a href="https://www.linkedin.com/in/val%C3%A9rie-mailland" target="_blank" rel="noopener" class="footer-linkedin-btn"><img width="72" height="72" src="assets/linkedin-logo.png" alt="LinkedIn" class="footer-linkedin-logo">Suivre Valérie Mailland sur LinkedIn</a>
       <a href="https://www.instagram.com/execia.consulting/" target="_blank" rel="noopener" class="footer-linkedin-btn footer-instagram-btn"><img src="assets/instagram-logo.png" alt="Instagram" class="footer-linkedin-logo" width="18" height="18"><span>Suivre EXEC'<span class="ink-accent"><span class="ia-rose">IA</span></span> sur Instagram</span></a>
     </div>
     <div class="footer-col footer-col--langs">

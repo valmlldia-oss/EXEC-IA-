@@ -1225,7 +1225,7 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
 .nav-actions a.nav-cta:hover{ background: #C75F62; color: #FAF6F2 !important; transform: translateY(-1px); }
 .nav-actions a.nav-cta:focus-visible{ outline: 2px solid #633B4A; outline-offset: 3px; }
 .nav-actions .nav-cta--bar{ display: none; }
-@media (min-width: 1181px) and (max-width: 1567px){
+@media (min-width: 1181px) and (max-width: 1365px){
 .nav-links{ display: none; }
 .nav-burger{ display: flex; }
 .nav-actions .nav-cta--bar{ display: none; }
@@ -1237,12 +1237,12 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
 .nav-item--dd{ flex-direction: column; align-items: flex-start; }
 }
 
-@media (max-width: 1567px){
+@media (max-width: 1365px){
 .nav-dd a{ position: relative; padding: 6px 0 6px 24px; }
 .nav-dd a::before{ content: '→'; position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: .9rem; color: #D9C9C3; opacity: .85; }
 }
-@media (min-width: 1568px){
-  :root{ --nav-pad: clamp(10px, calc(4vw - 52px), 26px); --nav-col: clamp(16px, 1.2vw, 32px); }
+@media (min-width: 1366px){
+  :root{ --nav-pad: clamp(10px, calc(4vw - 46px), 26px); --nav-col: clamp(16px, 1.2vw, 32px); }
   .nav-in{ padding: 0 24px; gap: var(--nav-col); }
   .nav-brand{ margin-right: 0; }
   .nav-burger{ display: none; }
@@ -1252,11 +1252,11 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
   .nav-links > :nth-last-child(2){ margin-right: 0; }
   .nav-links > :nth-child(n+2):not(.nav-cta)::before{ content: ''; position: absolute; left: calc(-1 * var(--nav-pad)); top: 50%; width: 1px; height: 18px; transform: translateY(-50%); background: rgba(99,59,74,.24); pointer-events: none; }
   .nav-links .nav-cta--panel{ display: none; }
-  .nav-actions .nav-cta--bar{ display: inline-flex; align-items: center; }
+  .nav-actions{ flex-direction: column; align-items: flex-end; gap: 7px; }
+  .nav-actions .nav-cta--bar{ display: inline-flex; align-items: center; padding: 7px 18px; }
   .nav-lang:last-child{ margin-right: 0; }
-  .nav-links > .nav-item--dd > a{ padding-right: 11px; }
-  .nav-links > .nav-item--dd > a::before{ content: ''; position: absolute; right: 0; top: 50%; width: 5px; height: 5px; border-right: 1.3px solid currentColor; border-bottom: 1.3px solid currentColor; transform: translateY(-75%) rotate(45deg); opacity: .65; transition: transform .2s, opacity .2s; }
-  .nav-links > .nav-item--dd:hover > a::before, .nav-links > .nav-item--dd:focus-within > a::before{ transform: translateY(-25%) rotate(225deg); opacity: 1; }
+  .nav-links > .nav-item--dd > a::before{ content: ''; position: absolute; left: 50%; bottom: -13px; width: 6px; height: 6px; border-right: 1.4px solid currentColor; border-bottom: 1.4px solid currentColor; transform: translateX(-50%) rotate(45deg); opacity: .75; transition: transform .2s, opacity .2s; }
+  .nav-links > .nav-item--dd:hover > a::before, .nav-links > .nav-item--dd:focus-within > a::before{ transform: translateX(-50%) translateY(3px) rotate(225deg); opacity: 1; }
   .nav-dd a{ position: relative; padding-left: 36px; }
   .nav-dd a::before{ content: '→'; position: absolute; left: 16px; top: 50%; transform: translateY(-50%); font-size: .85rem; color: #633B4A; opacity: .5; transition: transform .2s, opacity .2s, color .2s; }
   .nav-dd a:hover::before, .nav-dd a:focus-visible::before{ color: #C75F62; opacity: 1; transform: translateY(-50%) translateX(3px); }
@@ -1462,7 +1462,7 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
       <img src="assets/photo-valerie-thumb.jpg" alt="Valérie Mailland" class="article-author-photo" width="104" height="104" loading="lazy" decoding="async">
       <div>
         <p class="article-author-name">Valérie Mailland</p>
-        <p class="article-author-bio">Fondatrice d’EXEC’<span class="ia-rose">IA</span> Consulting. Plus de 20 ans auprès de dirigeants, dont 18 en coordination exécutive chez McKinsey &amp; Company. <a href="https://www.linkedin.com/in/val%C3%A9rie-mailland" target="_blank" rel="noopener">Me suivre sur LinkedIn →</a></p>
+        <p class="article-author-bio">Fondatrice d’EXEC’<span class="ia-rose">IA</span> Consulting. Plus de 20 ans auprès de dirigeants, dont 18 en coordination exécutive chez McKinsey &amp; Company. <a href="https://www.linkedin.com/in/val%C3%A9rie-mailland" target="_blank" rel="noopener">Suivre Valérie Mailland sur LinkedIn →</a></p>
       </div>
     </div>
     <nav class="article-related" aria-label="À lire aussi">
@@ -1522,7 +1522,7 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
       <span class="footer-col-title">Coordonnées</span>
       <a href="mailto:contact@exec-ia.ai">✉️ contact@exec-ia.ai</a>
       <span class="footer-loc">📍 Paris, Île-de-France</span>
-      <a href="https://www.linkedin.com/in/val%C3%A9rie-mailland" target="_blank" rel="noopener" class="footer-linkedin-btn"><img width="72" height="72" src="assets/linkedin-logo.png" alt="LinkedIn" class="footer-linkedin-logo">Me suivre sur LinkedIn</a>
+      <a href="https://www.linkedin.com/in/val%C3%A9rie-mailland" target="_blank" rel="noopener" class="footer-linkedin-btn"><img width="72" height="72" src="assets/linkedin-logo.png" alt="LinkedIn" class="footer-linkedin-logo">Suivre Valérie Mailland sur LinkedIn</a>
       <a href="https://www.instagram.com/execia.consulting/" target="_blank" rel="noopener" class="footer-linkedin-btn footer-instagram-btn"><img src="assets/instagram-logo.png" alt="Instagram" class="footer-linkedin-logo" width="18" height="18"><span>Suivre EXEC'<span class="ink-accent"><span class="ia-rose">IA</span></span> sur Instagram</span></a>
     </div>
     <div class="footer-col footer-col--langs">
