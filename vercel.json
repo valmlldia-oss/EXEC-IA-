@@ -98,7 +98,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+          "value": "default-src 'self'; script-src 'self' https://js-eu1.hs-scripts.com https://js-eu1.hs-banner.com https://js-eu1.hs-analytics.net https://js-eu1.hscollectedforms.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://track-eu1.hubspot.com https://forms-eu1.hscollectedforms.net; connect-src 'self' https://api-eu1.hubapi.com https://forms-eu1.hscollectedforms.net https://js-eu1.hs-banner.com https://js-eu1.hs-analytics.net https://track-eu1.hubspot.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
         },
         {
           "key": "X-Frame-Options",
