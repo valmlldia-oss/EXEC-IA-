@@ -1580,6 +1580,33 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
   .site-footer .footer-persp-grid{ display: grid !important; grid-template-columns: 1fr 1fr !important; grid-template-rows: none !important; grid-auto-flow: row !important; column-gap: 18px !important; row-gap: 5px !important; width: auto !important; max-width: none !important; position: static !important; transform: none !important; left: auto !important; right: auto !important; margin: 14px 0 0 !important; }
   .site-footer .footer-tag-lead, .site-footer .footer-tag-rest{ display: inline !important; position: static !important; }
 }
+/* Menu principal (arborescence) : 6 rubriques, menus déroulants, bouton « Prendre rendez-vous » */
+.nav-item{ position: relative; display: inline-flex; align-items: center; }
+.nav-dd{ position: absolute; top: 100%; left: 50%; transform: translateX(-50%); min-width: 250px; background: var(--ivory); border: 1px solid var(--pale-rose); border-radius: 12px; box-shadow: 0 14px 34px rgba(99,59,74,.12); padding: 8px 0; opacity: 0; visibility: hidden; transition: opacity .2s, visibility .2s; z-index: 60; }
+.nav-item:hover .nav-dd, .nav-item:focus-within .nav-dd{ opacity: 1; visibility: visible; }
+.nav-dd a{ display: block; padding: 9px 18px; font-size: .9rem; font-weight: 500; letter-spacing: 0; text-transform: none; white-space: nowrap; color: var(--plum); }
+.nav-dd a::after{ display: none; }
+.nav-dd a:hover{ color: #C75F62; }
+.nav-links a{ white-space: nowrap; }
+.nav-links a.nav-cta{ background: #C75F62; color: #FAF6F2 !important; padding: 9px 18px; border-radius: 24px; font-size: .78rem; line-height: 1.2; letter-spacing: .06em; }
+.nav-links a.nav-cta::after{ display: none; }
+.nav-links a.nav-cta:hover{ background: #C75F62; color: #FAF6F2 !important; }
+@media (max-width: 1100px){
+  .nav-dd{ position: static; transform: none; opacity: 1; visibility: visible; min-width: 0; background: transparent; border: 0; box-shadow: none; padding: 0 0 6px 14px; }
+  .nav-dd a{ padding: 6px 0; font-size: .95rem; }
+  .nav-item--dd{ flex-direction: column; align-items: flex-start; }
+}
+/* Menu : resserrement (dès 1025 px, quelle que soit la largeur) pour que les rubriques, le bouton et les langues tiennent sur une ligne */
+@media (min-width: 1025px){ .nav-links{ gap: 10px !important; } .nav-links > a, .nav-links .nav-item > a{ font-size: .68rem !important; letter-spacing: .03em !important; } .nav-links a.nav-cta{ font-size: .66rem !important; padding: 8px 12px !important; } .nav-langs{ margin-left: 12px !important; } }
+@media (min-width: 1181px) and (max-width: 1280px){ .nav-brand{ margin-right: 14px !important; } .nav-links{ gap: 7px !important; } .nav-links > a, .nav-links .nav-item > a{ font-size: .64rem !important; letter-spacing: .02em !important; } .nav-links a.nav-cta{ font-size: .62rem !important; padding: 8px 10px !important; } .nav-langs{ margin-left: 8px !important; } }
+/* Menu mobile : le panneau défile quand il dépasse la hauteur de l'écran (sinon les dernières rubriques et le bouton restent inaccessibles) */
+@media (max-width: 1180px){ .nav-links.open{ max-height: calc(100vh - var(--nav-h, 64px)); max-height: calc(100dvh - var(--nav-h, 64px)); overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; } }
+
+/* FAQ : ancres et lien vers toutes les questions */
+.accord-item{ scroll-margin-top: 110px; }
+.faq-all-link{ margin: 22px 0 0; font-family: var(--sans); font-size: .98rem; }
+.faq-all-link a{ color: #C75F62; border-bottom: 1px solid rgba(199,95,98,.45); padding-bottom: 2px; }
+.faq-all-link a:hover{ color: var(--plum); border-bottom-color: var(--plum); }
 </style>
   <script type="application/ld+json">
 {
@@ -1686,15 +1713,7 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
       <img src="assets/logo-prune-final.webp" alt="EXEC'IA logo" class="nav-logo-rond" width="1254" height="1254" decoding="async">
       <img src="assets/logo-execia-bords-prune-240.webp" alt="EXEC'IA Consulting" class="nav-logo-full" width="240" height="113" fetchpriority="high" decoding="async">
     </a>
-    <div class="nav-links">
-      <a href="index-es.html">Inicio</a>
-      <a href="expertise-es.html">Experiencia</a>
-      <a href="offres-es.html">Servicios</a>
-      <a href="a-propos-es.html">Perfil</a>
-      <a href="temoignages-es.html">Testimonios</a>
-      <a href="contact-es.html" class="active">Contacto</a>
-      <a href="perspectives-es.html">Blog</a>
-    </div>
+    <div class="nav-links"><a href="index-es.html">Inicio</a><div class="nav-item nav-item--dd"><a href="offres-es.html">Acompañamiento IA</a><div class="nav-dd"><a href="offres-es.html#diagnostic">Diagnóstico estratégico IA</a><a href="offres-es.html#conseil">Consultoría estratégica / Advisory</a><a href="offres-es.html#transformation">Transformación IA</a><a href="offres-es.html#formation">Formación IA</a></div></div><div class="nav-item nav-item--dd"><a href="solutions-es.html">Soluciones digitales e IA</a><div class="nav-dd"><a href="agents-ia-es.html">Agentes IA por función</a><a href="solutions-es.html#automatisation">Automatización de procesos</a><a href="solutions-es.html#operationnelles">Soluciones operativas</a><a href="solutions-es.html#sites">Creación de sitios web</a></div></div><div class="nav-item nav-item--dd"><a href="realisations-es.html">Realizaciones</a><div class="nav-dd"><a href="realisations-es.html#clientes">Proyectos de clientes</a><a href="realisations-es.html#demostraciones">Demostraciones y herramientas</a><a href="realisations-es.html#usos">Casos de uso ilustrativos</a><a href="temoignages-es.html">Testimonios</a></div></div><a href="perspectives-es.html">Perspectivas</a><a href="a-propos-es.html">Perfil</a><a href="contact-es.html" class="nav-cta">Pedir una cita</a></div>
     <div class="nav-langs">
       <a href="contact.html" class="nav-lang">FR</a>
       <a href="contact-en.html" class="nav-lang">EN</a>
@@ -1785,17 +1804,17 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
       <div class="diag-result" data-result="align">
         <p class="diag-result-title">El problema no es la tecnología.<br>Es la priorización.</p>
         <p class="diag-result-body">Tiene los medios para avanzar, pero sin un método para elegir dónde concentrar el esfuerzo, cada decisión de <span class="ia-rose">IA</span> sigue siendo una apuesta. Es exactamente lo que hace EXEC'<span class="ia-rose">IA</span> con las Direcciones Generales: transformar la incertidumbre en prioridades claras.</p>
-        <a href="https://calendly.com/exec-ia" target="_blank" rel="noopener" class="diag-cta">Reservar una cita <span class="portrait-link-arrow">→</span></a>
+        <a href="https://calendly.com/exec-ia" target="_blank" rel="noopener" class="diag-cta">Pedir una cita <span class="portrait-link-arrow">→</span></a>
       </div>
       <div class="diag-result" data-result="tech">
         <p class="diag-result-title">La tecnología (probablemente) no es el problema.</p>
         <p class="diag-result-body s20">Sus proyectos de <span class="ia-rose">IA</span> no fracasan por falta de herramientas, sino porque avanzan sin una prioridad clara. Antes de añadir tecnología, aclaremos a qué debe servir.</p>
-        <a href="https://calendly.com/exec-ia" target="_blank" rel="noopener" class="diag-cta">Reservar una cita <span class="portrait-link-arrow">→</span></a>
+        <a href="https://calendly.com/exec-ia" target="_blank" rel="noopener" class="diag-cta">Pedir una cita <span class="portrait-link-arrow">→</span></a>
       </div>
       <div class="diag-result" data-result="unclear">
         <p class="diag-result-title">Sin un liderazgo claro, la <span class="ia-rose">IA</span> sigue siendo una idea.</p>
         <p class="diag-result-body">Un proyecto de <span class="ia-rose">IA</span> sin responsable ni método de priorización tiene pocas probabilidades de prosperar. El primer paso no es técnico: es designar quién decide y con qué criterios.</p>
-        <a href="https://calendly.com/exec-ia" target="_blank" rel="noopener" class="diag-cta">Reservar una cita <span class="portrait-link-arrow">→</span></a>
+        <a href="https://calendly.com/exec-ia" target="_blank" rel="noopener" class="diag-cta">Pedir una cita <span class="portrait-link-arrow">→</span></a>
       </div>
 
       <button type="button" class="diag-restart">Empezar de nuevo</button>
@@ -1840,7 +1859,7 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
 
     <div class="accord-list">
 
-      <div class="accord-item reveal">
+      <div id="faq-1" class="accord-item reveal">
         <button class="accord-btn" aria-expanded="false">
           <span>¿Por qué algunas empresas esperan demasiado antes de actuar?</span>
           <span class="accord-icon" aria-hidden="true">+</span>
@@ -1852,7 +1871,7 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
         </div>
       </div>
 
-      <div class="accord-item reveal delay-1">
+      <div id="faq-2" class="accord-item reveal delay-1">
         <button class="accord-btn" aria-expanded="false">
           <span>¿Cómo saber si un tema merece realmente la atención de la dirección?</span>
           <span class="accord-icon" aria-hidden="true">+</span>
@@ -1864,7 +1883,7 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
         </div>
       </div>
 
-      <div class="accord-item reveal delay-2">
+      <div id="faq-3" class="accord-item reveal delay-2">
         <button class="accord-btn" aria-expanded="false">
           <span>¿La <span class="ink-accent"><span class="ia-rose">IA</span></span> sustituye la experiencia de los equipos?</span>
           <span class="accord-icon" aria-hidden="true">+</span>
@@ -1876,7 +1895,7 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
         </div>
       </div>
 
-      <div class="accord-item reveal delay-1">
+      <div id="faq-4" class="accord-item reveal delay-1">
         <button class="accord-btn" aria-expanded="false">
           <span>¿Cómo preservar el conocimiento crítico?</span>
           <span class="accord-icon" aria-hidden="true">+</span>
@@ -1888,7 +1907,7 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
         </div>
       </div>
 
-      <div class="accord-item reveal delay-2">
+      <div id="faq-5" class="accord-item reveal delay-2">
         <button class="accord-btn" aria-expanded="false">
           <span>¿Por qué los mejores mánagers suelen ser los más solicitados?</span>
           <span class="accord-icon" aria-hidden="true">+</span>
@@ -1900,7 +1919,7 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
         </div>
       </div>
 
-      <div class="accord-item reveal delay-1">
+      <div id="faq-6" class="accord-item reveal delay-1">
         <button class="accord-btn" aria-expanded="false">
           <span>¿Cómo evitar los proyectos de <span class="ink-accent"><span class="ia-rose">IA</span></span> que no crean valor?</span>
           <span class="accord-icon" aria-hidden="true">+</span>
@@ -1913,7 +1932,7 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
         </div>
       </div>
 
-      <div class="accord-item reveal delay-2">
+      <div id="faq-7" class="accord-item reveal delay-2">
         <button class="accord-btn" aria-expanded="false">
           <span>¿Qué señales deberían alertar a una dirección?</span>
           <span class="accord-icon" aria-hidden="true">+</span>
@@ -1925,7 +1944,7 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
         </div>
       </div>
 
-      <div class="accord-item reveal delay-1">
+      <div id="faq-8" class="accord-item reveal delay-1">
         <button class="accord-btn" aria-expanded="false">
           <span>¿Cómo medir lo que de verdad crea valor?</span>
           <span class="accord-icon" aria-hidden="true">+</span>
@@ -1937,7 +1956,7 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
         </div>
       </div>
 
-      <div class="accord-item reveal delay-2">
+      <div id="faq-9" class="accord-item reveal delay-2">
         <button class="accord-btn" aria-expanded="false">
           <span>¿Por qué empezar por una sesión de encuadre?</span>
           <span class="accord-icon" aria-hidden="true">+</span>
@@ -1949,7 +1968,7 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
         </div>
       </div>
 
-      <div class="accord-item reveal delay-1">
+      <div id="faq-10" class="accord-item reveal delay-1">
         <button class="accord-btn" aria-expanded="false">
           <span>¿En qué momento esperar se vuelve arriesgado?</span>
           <span class="accord-icon" aria-hidden="true">+</span>
@@ -1962,6 +1981,8 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
       </div>
 
     </div>
+
+    <p class="faq-all-link reveal"><a href="ressources-es.html#faq">Ver todas las preguntas frecuentes, por tema →</a></p>
 
     <div class="faq-end-rule reveal" aria-hidden="true"></div>
 
@@ -1993,12 +2014,13 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
     <div class="footer-col footer-col--site">
       <span class="footer-col-title">El sitio</span>
       <a href="index-es.html">Inicio</a>
-      <a href="expertise-es.html">Experiencia</a>
-      <a href="offres-es.html">Servicios</a>
+      <a href="offres-es.html">Acompañamiento IA</a>
+      <a href="solutions-es.html">Soluciones digitales e IA</a>
+      <a href="realisations-es.html">Realizaciones</a>
       <a href="a-propos-es.html">Perfil</a>
       <a href="temoignages-es.html">Testimonios</a>
-      <a href="contact-es.html">Contact</a>
-      <a href="perspectives-es.html">Blog</a>
+      <a href="contact-es.html">Contacto</a>
+      <a href="perspectives-es.html">Perspectivas</a><a href="ressources-es.html">Recursos</a>
     <div class="footer-persp-grid">
     <a href="perspective-entreprise-utilise-deja-ia-es.html" class="footer-persp-link">→ <span class="art-star" aria-label="Artículo más leído">★</span>Adoptar la <span class="ink-accent"><span class="ia-rose">IA</span></span> no es crear valor</a>
     <a href="perspective-toutes-decisions-ne-se-deleguent-pas-es.html" class="footer-persp-link">→ <span class="art-star" aria-label="Artículo más leído">★</span>No todas las decisiones se delegan</a>
@@ -2042,7 +2064,7 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
   </div>
 </footer>
 
-<script src="assets/script.js?v=39"></script>
+<script src="assets/script.js?v=40"></script>
 
 <!-- ═══ COOKIE BANNER ══════════════════════════════════════════ -->
 <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Consentimiento de cookies">

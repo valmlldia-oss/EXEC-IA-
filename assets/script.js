@@ -44,8 +44,18 @@ window.addEventListener('DOMContentLoaded', () => {
 /* ── Mobile menu ── */
 const burger = document.querySelector('.nav-burger');
 const links  = document.querySelector('.nav-links');
-burger?.addEventListener('click', () => links.classList.toggle('open'));
-links?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+if (burger && links) {
+  links.id = links.id || 'nav-links';
+  burger.setAttribute('aria-controls', links.id);
+  burger.setAttribute('aria-expanded', 'false');
+}
+function setMenu(open) {
+  links?.classList.toggle('open', open);
+  burger?.setAttribute('aria-expanded', open ? 'true' : 'false');
+}
+burger?.addEventListener('click', () => setMenu(!links.classList.contains('open')));
+links?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && links?.classList.contains('open')) { setMenu(false); burger?.focus(); } });
 
 /* ── Scroll reveal ── */
 const observer = new IntersectionObserver((entries) => {

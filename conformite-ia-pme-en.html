@@ -20,7 +20,7 @@
   <link rel="alternate" hreflang="es" href="https://exec-ia.ai/conformite-ia-pme-es.html" />
   <link rel="alternate" hreflang="x-default" href="https://exec-ia.ai/conformite-ia-pme.html" />
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://exec-ia.ai/index-en.html"}, {"@type": "ListItem", "position": 2, "name": "Expertise", "item": "https://exec-ia.ai/expertise-en.html"}, {"@type": "ListItem", "position": 3, "name": "AI Act and GDPR for an SME", "item": "https://exec-ia.ai/conformite-ia-pme-en.html"}]}
+  {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://exec-ia.ai/index-en.html"}, {"@type": "ListItem", "position": 2, "name": "Resources", "item": "https://exec-ia.ai/ressources-en.html"}, {"@type": "ListItem", "position": 3, "name": "AI Act and GDPR: obligations for an SME", "item": "https://exec-ia.ai/conformite-ia-pme-en.html"}]}
   </script>
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "Article", "image": "https://exec-ia.ai/assets/photo-valerie.jpg", "headline": "AI Act and GDPR: what an SME using AI actually has to do", "description": "The current timeline, provider or deployer, prohibited practices, SME relief measures.", "datePublished": "2026-09-23", "dateModified": "2026-10-22", "author": {"@type": "Person", "@id": "https://exec-ia.ai/#valerie-mailland", "name": "Valérie Mailland", "url": "https://exec-ia.ai/a-propos-en.html", "sameAs": ["https://www.linkedin.com/in/val%C3%A9rie-mailland"]}, "publisher": {"@type": "Organization", "@id": "https://exec-ia.ai/#organization", "name": "EXEC'IA Consulting", "url": "https://exec-ia.ai/", "logo": {"@type": "ImageObject", "url": "https://exec-ia.ai/assets/logo-execia-bords-prune.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://exec-ia.ai/conformite-ia-pme-en.html"}, "inLanguage": "en-US", "wordCount": 2110, "keywords": ["AI Act SME", "AI Act obligations", "GDPR artificial intelligence", "AI compliance SME", "Digital Omnibus"]}
@@ -1404,6 +1404,37 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
   .site-footer .footer-persp-grid{ display: grid !important; grid-template-columns: 1fr 1fr !important; grid-template-rows: none !important; grid-auto-flow: row !important; column-gap: 18px !important; row-gap: 5px !important; width: auto !important; max-width: none !important; position: static !important; transform: none !important; left: auto !important; right: auto !important; margin: 14px 0 0 !important; }
   .site-footer .footer-tag-lead, .site-footer .footer-tag-rest{ display: inline !important; position: static !important; }
 }
+/* Menu principal (arborescence) : 6 rubriques, menus déroulants, bouton « Prendre rendez-vous » */
+.nav-item{ position: relative; display: inline-flex; align-items: center; }
+.nav-dd{ position: absolute; top: 100%; left: 50%; transform: translateX(-50%); min-width: 250px; background: var(--ivory); border: 1px solid var(--pale-rose); border-radius: 12px; box-shadow: 0 14px 34px rgba(99,59,74,.12); padding: 8px 0; opacity: 0; visibility: hidden; transition: opacity .2s, visibility .2s; z-index: 60; }
+.nav-item:hover .nav-dd, .nav-item:focus-within .nav-dd{ opacity: 1; visibility: visible; }
+.nav-dd a{ display: block; padding: 9px 18px; font-size: .9rem; font-weight: 500; letter-spacing: 0; text-transform: none; white-space: nowrap; color: var(--plum); }
+.nav-dd a::after{ display: none; }
+.nav-dd a:hover{ color: #C75F62; }
+.nav-links a{ white-space: nowrap; }
+.nav-links a.nav-cta{ background: #C75F62; color: #FAF6F2 !important; padding: 9px 18px; border-radius: 24px; font-size: .78rem; line-height: 1.2; letter-spacing: .06em; }
+.nav-links a.nav-cta::after{ display: none; }
+.nav-links a.nav-cta:hover{ background: #C75F62; color: #FAF6F2 !important; }
+@media (max-width: 1100px){
+  .nav-dd{ position: static; transform: none; opacity: 1; visibility: visible; min-width: 0; background: transparent; border: 0; box-shadow: none; padding: 0 0 6px 14px; }
+  .nav-dd a{ padding: 6px 0; font-size: .95rem; }
+  .nav-item--dd{ flex-direction: column; align-items: flex-start; }
+}
+/* Menu : resserrement (dès 1025 px, quelle que soit la largeur) pour que les rubriques, le bouton et les langues tiennent sur une ligne */
+@media (min-width: 1025px){ .nav-links{ gap: 10px !important; } .nav-links > a, .nav-links .nav-item > a{ font-size: .68rem !important; letter-spacing: .03em !important; } .nav-links a.nav-cta{ font-size: .66rem !important; padding: 8px 12px !important; } .nav-langs{ margin-left: 12px !important; } }
+@media (min-width: 1181px) and (max-width: 1280px){ .nav-brand{ margin-right: 14px !important; } .nav-links{ gap: 7px !important; } .nav-links > a, .nav-links .nav-item > a{ font-size: .64rem !important; letter-spacing: .02em !important; } .nav-links a.nav-cta{ font-size: .62rem !important; padding: 8px 10px !important; } .nav-langs{ margin-left: 8px !important; } }
+/* Menu mobile : le panneau défile quand il dépasse la hauteur de l'écran (sinon les dernières rubriques et le bouton restent inaccessibles) */
+@media (max-width: 1180px){ .nav-links.open{ max-height: calc(100vh - var(--nav-h, 64px)); max-height: calc(100dvh - var(--nav-h, 64px)); overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; } }
+
+/* Fil d'Ariane */
+.article-bc{ gap: 8px; flex-wrap: wrap; opacity: 1; }
+.article-bc a{ color: var(--plum); opacity: .7; text-decoration: none; transition: opacity .2s, color .2s; }
+.article-bc a:hover{ opacity: 1; color: #C75F62; }
+.article-bc .bc-sep{ opacity: .45; }
+.bc-nav{ max-width: 1080px; margin: 0 auto; padding: 18px 20px 0; font-family: var(--sans); font-size: .85rem; display: flex; flex-wrap: wrap; gap: 8px; color: var(--plum); }
+.bc-nav a{ color: var(--plum); opacity: .7; text-decoration: none; }
+.bc-nav a:hover{ opacity: 1; color: #C75F62; }
+.bc-nav .bc-sep{ opacity: .45; }
 </style>
 <style id="footer-contact-gauche">
 @media (min-width: 1251px){
@@ -1421,15 +1452,7 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
       <img src="assets/logo-prune-final.webp" alt="EXEC'IA logo" class="nav-logo-rond" width="1254" height="1254" decoding="async">
       <img src="assets/logo-execia-bords-prune-240.webp" alt="EXEC'IA Consulting" class="nav-logo-full" width="240" height="113" fetchpriority="high" decoding="async">
     </a>
-    <div class="nav-links">
-      <a href="index-en.html">Home</a>
-      <a href="expertise-en.html" class="active">Expertise</a>
-      <a href="offres-en.html">Offers</a>
-      <a href="a-propos-en.html">About</a>
-      <a href="temoignages-en.html">Testimonials</a>
-      <a href="contact-en.html">Contact</a>
-      <a href="perspectives-en.html">Blog</a>
-    </div>
+    <div class="nav-links"><a href="index-en.html">Home</a><div class="nav-item nav-item--dd"><a href="offres-en.html" class="active">AI support</a><div class="nav-dd"><a href="offres-en.html#diagnostic">AI strategic diagnostic</a><a href="offres-en.html#conseil">Strategic advisory</a><a href="offres-en.html#transformation">AI transformation</a><a href="offres-en.html#formation">AI training</a></div></div><div class="nav-item nav-item--dd"><a href="solutions-en.html">Digital &amp; AI solutions</a><div class="nav-dd"><a href="agents-ia-en.html">Business AI agents</a><a href="solutions-en.html#automatisation">Process automation</a><a href="solutions-en.html#operationnelles">Operational solutions</a><a href="solutions-en.html#sites">Website creation</a></div></div><div class="nav-item nav-item--dd"><a href="realisations-en.html">Achievements</a><div class="nav-dd"><a href="realisations-en.html#clients">Client projects</a><a href="realisations-en.html#demos">Demonstrations and tools</a><a href="realisations-en.html#usages">Illustrative use cases</a><a href="temoignages-en.html">Testimonials</a></div></div><a href="perspectives-en.html">Insights</a><a href="a-propos-en.html">About</a><a href="contact-en.html" class="nav-cta">Book an appointment</a></div>
     <div class="nav-langs">
       <a href="conformite-ia-pme.html" class="nav-lang">FR</a>
       <span class="nav-lang nav-lang-active">EN</span>
@@ -1445,7 +1468,7 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
 <main class="article-page article-page--guide" id="contenu">
   <div class="wrap">
     <div class="article-header-text">
-      <a href="expertise-en.html" class="article-back">← Expertise</a>
+      <nav class="article-back article-bc" aria-label="Breadcrumb"><a href="index-en.html">Home</a><span class="bc-sep" aria-hidden="true">›</span><a href="ressources-en.html">Resources</a></nav>
       <span class="article-meta">Practical guide • <span class="aiact-ia"><span class="ia-rose">AI</span></span>&nbsp;compliance</span>
       <h1 class="article-title article-title--2l"><span class="aiact-ref"><span class="ia-rose">AI</span>&nbsp;Act</span> and <span class="rgpd-b">GDPR</span>: what an&nbsp;SME<br>using <span class="aiact-ia"><span class="ia-rose">AI</span></span>&nbsp;actually has to&nbsp;do.</h1>
       <p class="article-source-note">Updated on <time datetime="2026-10-22">22/10/2026</time> · Reading time: 9&nbsp;min · Sources: <a href="https://www.europarl.europa.eu/news/en/press-room/20260611IPR45207/ai-act-ep-approves-simplification-measures-and-nudifier-app-ban" target="_blank" rel="noopener">European Parliament, press release of 11 June 2026</a>; <a href="https://eur-lex.europa.eu/eli/reg/2026/1744/oj" target="_blank" rel="noopener">Regulation (EU) 2026/1744 (EUR-Lex)</a>.</p>
@@ -1560,37 +1583,37 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
     </div>
 
     <div class="article-accordion" id="g6">
-      <details class="acc-item" open>
+      <details id="faq-1" class="acc-item" open>
         <summary><span class="acc-num">01</span><span class="acc-title">Is&nbsp;a&nbsp;small company really covered by&nbsp;the <span class="ia-rose">AI</span>&nbsp;Act?</span><span class="acc-icon">+</span></summary>
         <div class="acc-body">
           <p>Yes, and this is&nbsp;the most common misunderstanding. The <span class="ia-rose">AI</span>&nbsp;Act applies to&nbsp;any organisation that provides or&nbsp;uses an&nbsp;<span class="aiact-ia"><span class="ia-rose">AI</span></span>&nbsp;system on&nbsp;the European market, regardless of&nbsp;size.<br>What size changes is&nbsp;not whether the rules apply, but the level of&nbsp;obligation resting on&nbsp;you and which relief measures you can claim.<br>An&nbsp;SME using a&nbsp;third-party <span class="aiact-ia"><span class="ia-rose">AI</span></span>&nbsp;tool to&nbsp;screen job applications or&nbsp;assess credit risk is&nbsp;covered by&nbsp;<strong class="fw-600">deployer</strong> obligations, even if&nbsp;it&nbsp;never wrote a&nbsp;single line of&nbsp;<span class="aiact-ia"><span class="ia-rose">AI</span></span>&nbsp;code itself.<br>The only question worth asking is&nbsp;not how small you are, but what you actually use <span class="aiact-ia"><span class="ia-rose">AI</span></span>&nbsp;for and which risk category it&nbsp;falls&nbsp;into.</p>
         </div>
       </details>
-      <details class="acc-item">
+      <details id="faq-2" class="acc-item">
         <summary><span class="acc-num">02</span><span class="acc-title">What is&nbsp;the difference between a&nbsp;<strong class="fw-600">provider</strong> and a&nbsp;<strong class="fw-600">deployer</strong>?</span><span class="acc-icon">+</span></summary>
         <div class="acc-body">
           <p>A&nbsp;<strong class="fw-600">provider</strong> develops an&nbsp;<span class="aiact-ia"><span class="ia-rose">AI</span></span>&nbsp;system, or&nbsp;has one developed, and places it&nbsp;on&nbsp;the market under its own name; a&nbsp;<strong class="fw-600">deployer</strong> uses that system in&nbsp;the course of&nbsp;its professional activity.<br>Almost every SME is&nbsp;a&nbsp;<strong class="fw-600">deployer</strong>: it&nbsp;buys or&nbsp;subscribes to&nbsp;an&nbsp;existing <span class="aiact-ia"><span class="ia-rose">AI</span></span>&nbsp;tool rather than building one. <strong class="fw-600">Deployer</strong> obligations are markedly lighter than <strong class="fw-600">provider</strong> obligations, except when the system used falls into the <span class="risk-hl">high-risk</span> category (recruitment, credit scoring, biometrics...).<br>Knowing which side of&nbsp;that line you sit on&nbsp;stops you from imposing <strong class="fw-600">provider</strong>-level obligations on&nbsp;yourself out of&nbsp;excess caution, and equally from underestimating a&nbsp;real <strong class="fw-600">deployer</strong>&nbsp;obligation.</p>
         </div>
       </details>
-      <details class="acc-item">
+      <details id="faq-3" class="acc-item">
         <summary><span class="acc-num">03</span><span class="acc-title">What is&nbsp;mandatory today, and what has been postponed?</span><span class="acc-icon">+</span></summary>
         <div class="acc-body">
           <p>Three blocks are already in&nbsp;force:<br>1) since <span class="date-b">February&nbsp;2025</span>, prohibited <span class="aiact-ia"><span class="ia-rose">AI</span></span>&nbsp;practices and the <span class="aiact-ia"><span class="ia-rose">AI</span></span>&nbsp;literacy obligation;<br>2) since <span class="date-b">August&nbsp;2025</span>, governance rules and obligations for providers of&nbsp;general-purpose <span class="aiact-ia"><span class="ia-rose">AI</span></span>&nbsp;models;<br>3) since <span class="date-b">August&nbsp;2026</span>, transparency obligations for systems that interact with people (conversational agents, synthetic content).<br>On&nbsp;<span class="date-b">2&nbsp;December&nbsp;2026</span>, two new prohibited practices are added (non-consensual intimate deepfakes, <span class="aiact-ia"><span class="ia-rose">AI</span></span>-generated child sexual abuse material), introduced by&nbsp;amending Regulation&nbsp;(EU)&nbsp;2026/1744.<br>The bulk of&nbsp;the Annex III <span class="risk-hl">high-risk</span> obligations, originally due in&nbsp;<span class="date-b">August&nbsp;2026</span>, has been pushed back to&nbsp;<span class="date-b">2&nbsp;December&nbsp;2027</span> by&nbsp;that same regulation.<br><span class="ink-accent"><span class="risk-hl">High-risk</span></span> systems embedded in&nbsp;already-regulated products (medical devices, machinery) now have until <span class="date-b">2&nbsp;August&nbsp;2028</span>.<br>The timeline genuinely moved this year, this is&nbsp;not a&nbsp;rumour.</p>
         </div>
       </details>
-      <details class="acc-item">
+      <details id="faq-4" class="acc-item">
         <summary><span class="acc-num">04</span><span class="acc-title">Which <span class="aiact-ia"><span class="ia-rose">AI</span></span>&nbsp;practices are prohibited, regardless of&nbsp;company size?</span><span class="acc-icon">+</span></summary>
         <div class="acc-body">
           <p>These bans admit no&nbsp;size exception.<br>Since <span class="date-b">February&nbsp;2025</span>, they cover, among others:<br>1) <strong class="fw-600">subliminal manipulation</strong> or&nbsp;<strong class="fw-600">exploiting vulnerabilities</strong> (age, disability, social or&nbsp;economic situation) to&nbsp;distort behaviour in&nbsp;a&nbsp;harmful way;<br>2) generalised <strong class="fw-600">social scoring</strong> of&nbsp;a&nbsp;person based on&nbsp;their behaviour;<br>3) <strong class="fw-600">biometric categorisation</strong> used to&nbsp;infer political opinions, religious beliefs or&nbsp;sexual orientation;<br>4) <strong class="fw-600">emotion recognition</strong> in&nbsp;the workplace, outside strictly limited medical or&nbsp;safety exceptions.<br>The amending Regulation&nbsp;(EU)&nbsp;2026/1744 adds two more:<br>5) <strong class="fw-600">non-consensual intimate deepfakes</strong> of&nbsp;an&nbsp;identifiable person;<br>6) <span class="aiact-ia"><span class="ia-rose">AI</span></span>-generated <strong class="fw-600">child sexual abuse material</strong>.<br>An&nbsp;SME considering an&nbsp;<span class="aiact-ia"><span class="ia-rose">AI</span></span>&nbsp;use case touching recruitment, customer scoring or&nbsp;staff monitoring should check this point before any other compliance step.<br>It&nbsp;is&nbsp;the one category that admits no&nbsp;size-based&nbsp;relief.</p>
         </div>
       </details>
-      <details class="acc-item">
+      <details id="faq-5" class="acc-item">
         <summary><span class="acc-num">05</span><span class="acc-title">Does the GDPR apply on&nbsp;top of&nbsp;the <span class="ia-rose">AI</span>&nbsp;Act?</span><span class="acc-icon">+</span></summary>
         <div class="acc-body">
           <p>Systematically, as&nbsp;soon as&nbsp;an&nbsp;<span class="aiact-ia"><span class="ia-rose">AI</span></span>&nbsp;system processes personal&nbsp;data, which covers the vast majority of&nbsp;business uses.<br>The <span class="ia-rose">AI</span>&nbsp;Act governs the system itself; the <span class="rgpd-b">GDPR</span> governs the data it&nbsp;processes, independently of&nbsp;the risk level the <span class="ia-rose">AI</span>&nbsp;Act assigns to&nbsp;it.<br>In&nbsp;practice this means an&nbsp;identified lawful basis before any processing, clear information for the people concerned, minimisation of&nbsp;the data used to&nbsp;configure or&nbsp;fine-tune the tool, and a&nbsp;data protection impact assessment as&nbsp;soon as&nbsp;the processing is&nbsp;likely to&nbsp;result in&nbsp;a&nbsp;<span class="ink-accent">high&nbsp;risk</span>.<br>A&nbsp;tool the <span class="ia-rose">AI</span>&nbsp;Act treats as&nbsp;low-risk can still trigger a&nbsp;<span class="rgpd-b">GDPR</span> obligation if&nbsp;the data it&nbsp;processes is&nbsp;sensitive.</p>
         </div>
       </details>
-      <details class="acc-item">
+      <details id="faq-6" class="acc-item">
         <summary><span class="acc-num">06</span><span class="acc-title">What relief does the <span class="ia-rose">AI</span>&nbsp;Act provide for SMEs and microenterprises?</span><span class="acc-icon">+</span></summary>
         <div class="acc-body">
           <p>Four separate articles ease the burden for SMEs.<br>Article&nbsp;11 opens simplified technical documentation, accepted by&nbsp;authorities, to&nbsp;every SME, not only to&nbsp;microenterprises.<br>Article&nbsp;62 sets out priority access to&nbsp;national regulatory&nbsp;sandboxes, certification fees reduced in&nbsp;proportion to&nbsp;company size, and dedicated awareness measures.<br>Article&nbsp;99 caps an&nbsp;SME's&nbsp;fine at&nbsp;whichever is&nbsp;lower between the fixed amount and the percentage of&nbsp;turnover, never the higher one.<br>SMEs and microenterprises without partner or&nbsp;linked enterprises also benefit, under Article&nbsp;63, from simplified compliance with certain elements of&nbsp;the quality management system required for <span class="risk-hl">high-risk</span> systems.<br>This is&nbsp;not limited to&nbsp;microenterprises alone.<br>None of&nbsp;this relief removes a&nbsp;substantive obligation; it&nbsp;reduces the documentation burden and the cost of&nbsp;reaching&nbsp;compliance.</p>
@@ -1638,12 +1661,13 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
     <div class="footer-col">
       <span class="footer-col-title">Site</span>
       <a href="index-en.html">Home</a>
-      <a href="expertise-en.html">Expertise</a>
-      <a href="offres-en.html">Offers</a>
+      <a href="offres-en.html">AI support</a>
+      <a href="solutions-en.html">Digital &amp; AI solutions</a>
+      <a href="realisations-en.html">Achievements</a>
       <a href="a-propos-en.html">About</a>
       <a href="temoignages-en.html">Testimonials</a>
       <a href="contact-en.html">Contact</a>
-      <a href="perspectives-en.html">Blog</a>
+      <a href="perspectives-en.html">Insights</a><a href="ressources-en.html">Resources</a>
     <div class="footer-persp-grid">
     <a href="perspective-entreprise-utilise-deja-ia-en.html" class="footer-persp-link">→ <span class="art-star" aria-label="Most-read article">★</span>Adopting <span class="ink-accent"><span class="ia-rose">AI</span></span> vs. creating value</a>
     <a href="perspective-toutes-decisions-ne-se-deleguent-pas-en.html" class="footer-persp-link">→ <span class="art-star" aria-label="Most-read article">★</span>Not every decision can be delegated</a>
@@ -1688,7 +1712,7 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
   </div>
 </footer>
 
-<script src="assets/script.js?v=39"></script>
+<script src="assets/script.js?v=40"></script>
 
 <!-- ═══ COOKIE BANNER ══════════════════════════════════════════ -->
 <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Cookie consent">
@@ -1740,6 +1764,7 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
 </div>
 <script src="assets/chat-widget.js?v=9" defer></script>
 <script src="assets/phare-chat-widget.js?v=11" defer></script>
-<script>(function(){var el=document.querySelector(".aiact-countdown");if(!el)return;var target=new Date(el.getAttribute("data-target"));var n=el.querySelector("strong");function upd(){var d=Math.ceil((target-new Date())/86400000);if(d>0){n.textContent="D-"+d;}else{el.textContent="In force since 2 December 2026.";}}upd();setInterval(upd,3600000);})();</script>
+<script src="assets/inline/conformite-countdown-en.js" defer></script>
+<script src="assets/anchor-open.js?v=1" defer></script>
 </body>
 </html>

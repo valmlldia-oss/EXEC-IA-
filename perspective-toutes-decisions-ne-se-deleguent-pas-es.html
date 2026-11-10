@@ -10,7 +10,7 @@
   <meta name="keywords" content="decisión IA, gobernanza IA, directivos, EXEC'IA, Valérie Mailland, supervisión humana">
   <meta name="author" content="Valérie Mailland — EXEC'IA">
   <meta property="og:title" content="No todas las decisiones se delegan. Ni siquiera en una IA.">
-  <meta property="og:description" content="Una reflexión de Valérie Mailland, compartida inicialmente en LinkedIn — EXEC'IA Blog.">
+  <meta property="og:description" content="Una reflexión de Valérie Mailland, compartida inicialmente en LinkedIn — EXEC'IA Perspectivas.">
   <meta property="og:url" content="https://exec-ia.ai/perspective-toutes-decisions-ne-se-deleguent-pas-es.html">
   <meta property="og:type" content="article">
   <meta name="robots" content="index, follow">
@@ -20,7 +20,7 @@
   <link rel="alternate" hreflang="es" href="https://exec-ia.ai/perspective-toutes-decisions-ne-se-deleguent-pas-es.html" />
   <link rel="alternate" hreflang="x-default" href="https://exec-ia.ai/perspective-toutes-decisions-ne-se-deleguent-pas.html" />
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://exec-ia.ai/index-es.html"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://exec-ia.ai/perspectives-es.html"}, {"@type": "ListItem", "position": 3, "name": "No todas las decisiones se delegan", "item": "https://exec-ia.ai/perspective-toutes-decisions-ne-se-deleguent-pas-es.html"}]}
+  {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://exec-ia.ai/index-es.html"}, {"@type": "ListItem", "position": 2, "name": "Perspectivas", "item": "https://exec-ia.ai/perspectives-es.html"}, {"@type": "ListItem", "position": 3, "name": "No todas las decisiones se delegan", "item": "https://exec-ia.ai/perspective-toutes-decisions-ne-se-deleguent-pas-es.html"}]}
   </script>
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "BlogPosting", "headline": "No todas las decisiones se delegan", "description": "No todas las decisiones se delegan, ni siquiera en una IA. Reflexión de Valérie Mailland sobre lo que el directivo debe seguir decidiendo por sí mismo.", "image": "https://exec-ia.ai/assets/perspectives/decision-jusquou-deleguer-es.png", "datePublished": "2026-09-08", "dateModified": "2026-09-30", "author": {"@type": "Person", "@id": "https://exec-ia.ai/#valerie-mailland", "name": "Valérie Mailland", "jobTitle": "Fundadora y Presidenta", "image": "https://exec-ia.ai/assets/photo-valerie.jpg", "url": "https://exec-ia.ai/a-propos.html", "sameAs": ["https://www.linkedin.com/in/val%C3%A9rie-mailland"]}, "publisher": {"@type": "Organization", "@id": "https://exec-ia.ai/#organization", "name": "EXEC'IA Consulting", "url": "https://exec-ia.ai/", "logo": {"@type": "ImageObject", "url": "https://exec-ia.ai/assets/logo-execia-bords-prune.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://exec-ia.ai/perspective-toutes-decisions-ne-se-deleguent-pas-es.html"}, "inLanguage": "es-ES", "wordCount": 1593, "keywords": ["decisión IA", "gobernanza IA", "directivos", "EXEC'IA", "Valérie Mailland", "supervisión humana"], "citation": [{"@type": "CreativeWork", "name": "Morgan Stanley, «AI Governance Survey», 2026", "url": "https://www.morganstanley.com/insights/articles/ai-governance-adoption-report-2026"}]}
@@ -30,7 +30,7 @@
   <meta property="og:site_name" content="EXEC'IA" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="No todas las decisiones se delegan. Ni siquiera en una IA." />
-  <meta name="twitter:description" content="Una reflexión de Valérie Mailland, compartida inicialmente en LinkedIn — EXEC'IA Blog." />
+  <meta name="twitter:description" content="Una reflexión de Valérie Mailland, compartida inicialmente en LinkedIn — EXEC'IA Perspectivas." />
   <meta name="twitter:image" content="https://exec-ia.ai/assets/perspectives/decision-jusquou-deleguer-es.png" />
   <style id="css-page">
 @font-face{font-family:"Cormorant Garamond";font-style:italic;font-weight:400;font-display:swap;src:url(assets/fonts/cormorantgaramond-italic-400-cyrillic-ext.woff2) format("woff2");unicode-range:U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F}
@@ -1201,6 +1201,43 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
   .site-footer .footer-persp-grid{ display: grid !important; grid-template-columns: 1fr 1fr !important; grid-template-rows: none !important; grid-auto-flow: row !important; column-gap: 18px !important; row-gap: 5px !important; width: auto !important; max-width: none !important; position: static !important; transform: none !important; left: auto !important; right: auto !important; margin: 14px 0 0 !important; }
   .site-footer .footer-tag-lead, .site-footer .footer-tag-rest{ display: inline !important; position: static !important; }
 }
+/* Menu principal (arborescence) : 6 rubriques, menus déroulants, bouton « Prendre rendez-vous » */
+.nav-item{ position: relative; display: inline-flex; align-items: center; }
+.nav-dd{ position: absolute; top: 100%; left: 50%; transform: translateX(-50%); min-width: 250px; background: var(--ivory); border: 1px solid var(--pale-rose); border-radius: 12px; box-shadow: 0 14px 34px rgba(99,59,74,.12); padding: 8px 0; opacity: 0; visibility: hidden; transition: opacity .2s, visibility .2s; z-index: 60; }
+.nav-item:hover .nav-dd, .nav-item:focus-within .nav-dd{ opacity: 1; visibility: visible; }
+.nav-dd a{ display: block; padding: 9px 18px; font-size: .9rem; font-weight: 500; letter-spacing: 0; text-transform: none; white-space: nowrap; color: var(--plum); }
+.nav-dd a::after{ display: none; }
+.nav-dd a:hover{ color: #C75F62; }
+.nav-links a{ white-space: nowrap; }
+.nav-links a.nav-cta{ background: #C75F62; color: #FAF6F2 !important; padding: 9px 18px; border-radius: 24px; font-size: .78rem; line-height: 1.2; letter-spacing: .06em; }
+.nav-links a.nav-cta::after{ display: none; }
+.nav-links a.nav-cta:hover{ background: #C75F62; color: #FAF6F2 !important; }
+@media (max-width: 1100px){
+  .nav-dd{ position: static; transform: none; opacity: 1; visibility: visible; min-width: 0; background: transparent; border: 0; box-shadow: none; padding: 0 0 6px 14px; }
+  .nav-dd a{ padding: 6px 0; font-size: .95rem; }
+  .nav-item--dd{ flex-direction: column; align-items: flex-start; }
+}
+/* Menu : resserrement (dès 1025 px, quelle que soit la largeur) pour que les rubriques, le bouton et les langues tiennent sur une ligne */
+@media (min-width: 1025px){ .nav-links{ gap: 10px !important; } .nav-links > a, .nav-links .nav-item > a{ font-size: .68rem !important; letter-spacing: .03em !important; } .nav-links a.nav-cta{ font-size: .66rem !important; padding: 8px 12px !important; } .nav-langs{ margin-left: 12px !important; } }
+@media (min-width: 1181px) and (max-width: 1280px){ .nav-brand{ margin-right: 14px !important; } .nav-links{ gap: 7px !important; } .nav-links > a, .nav-links .nav-item > a{ font-size: .64rem !important; letter-spacing: .02em !important; } .nav-links a.nav-cta{ font-size: .62rem !important; padding: 8px 10px !important; } .nav-langs{ margin-left: 8px !important; } }
+/* Menu mobile : le panneau défile quand il dépasse la hauteur de l'écran (sinon les dernières rubriques et le bouton restent inaccessibles) */
+@media (max-width: 1180px){ .nav-links.open{ max-height: calc(100vh - var(--nav-h, 64px)); max-height: calc(100dvh - var(--nav-h, 64px)); overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; } }
+.pv-related{ max-width: 760px; margin: 48px auto 0; padding: 26px 26px 24px; background: var(--ivory); border: 1px solid var(--pale-rose); border-top: 3px solid var(--plum); border-radius: 14px; }
+.pv-related-title{ font-family: var(--serif); font-weight: 500; font-size: 1.3rem; color: var(--plum); margin: 0 0 12px; }
+.pv-related ul{ list-style: none; margin: 0 0 16px; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.pv-related a{ font-family: var(--sans); font-size: .95rem; line-height: 1.5; color: var(--plum); font-weight: 600; }
+.pv-related a:hover{ color: #C75F62; }
+.pv-related .pv-offer a{ color: #C75F62; }
+
+/* Fil d'Ariane */
+.article-bc{ gap: 8px; flex-wrap: wrap; opacity: 1; }
+.article-bc a{ color: var(--plum); opacity: .7; text-decoration: none; transition: opacity .2s, color .2s; }
+.article-bc a:hover{ opacity: 1; color: #C75F62; }
+.article-bc .bc-sep{ opacity: .45; }
+.bc-nav{ max-width: 1080px; margin: 0 auto; padding: 18px 20px 0; font-family: var(--sans); font-size: .85rem; display: flex; flex-wrap: wrap; gap: 8px; color: var(--plum); }
+.bc-nav a{ color: var(--plum); opacity: .7; text-decoration: none; }
+.bc-nav a:hover{ opacity: 1; color: #C75F62; }
+.bc-nav .bc-sep{ opacity: .45; }
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Cómo saber si una decisión puede delegarse?", "acceptedAnswer": {"@type": "Answer", "text": "Hágase una pregunta: si la decisión sale mal, ¿se puede dar marcha atrás con facilidad? Si la respuesta es sí, y las consecuencias son limitadas, puede confiarla a la IA sin problema. Clasificar solicitudes, proponer una hora de cita, preparar una primera síntesis: se corrige rápido y nadie sale perjudicado. Si es no, porque la decisión es difícil de deshacer o sus efectos van mucho más allá de quien la tomó, manténgala en manos humanas. No es prudencia excesiva. Es proporcional al riesgo. En caso de duda, pregúntese también cuánto tiempo tardaría en detectarse un error. Un error visto en un minuto no exige la misma vigilancia que uno que un cliente descubre seis meses después."}}, {"@type": "Question", "name": "¿Qué reveló un caso judicial real sobre delegar en la IA?", "acceptedAnswer": {"@type": "Answer", "text": "En febrero de 2024, un tribunal canadiense resolvió un caso que lo dice todo. Un cliente de Air Canada había obtenido del chatbot de la compañía una promesa de reembolso. El problema: esa promesa no correspondía a la política de la empresa. Ante el tribunal, Air Canada sostuvo que su chatbot era «una entidad jurídica distinta, responsable de sus propios actos». El tribunal descartó el argumento: una empresa responde de lo que dicen todos sus agentes, humanos o automatizados. Air Canada tuvo que cumplir la promesa. Lo que me llama la atención de esta historia no es la tecnología. Es que nadie en la empresa estaba encargado de comprobar lo que la herramienta podía prometer en nombre de la compañía. El límite no existía antes del incidente. Lo fijó el tribunal en su lugar, y no en el sentido más favorable."}}, {"@type": "Question", "name": "¿Dónde trazar la frontera entre la IA y la decisión humana?", "acceptedAnswer": {"@type": "Answer", "text": "La IA ilumina la decisión. El directivo decide. Ese límite no se negocia caso por caso: se fija una vez, con calma, antes de que una urgencia le obligue a improvisar. No es dar la espalda a la herramienta. Es reconocer algo sencillo: un algoritmo, por bueno que sea, nunca será quien dé la cara ante la empresa por lo que la decisión haya producido. Cuanto más avance la IA, más se convertirá en una competencia de directivo saber qué confiarle, y qué no confiarle nunca. Estoy convencida de ello."}}, {"@type": "Question", "name": "¿Es fija esta frontera?", "acceptedAnswer": {"@type": "Answer", "text": "No, y es una buena noticia. Una decisión que ayer exigía criterio humano puede, con el tiempo y con pruebas, pasar al lado de lo que una herramienta hace bien sola: clasificar un primer nivel de expedientes, detectar anomalías que se repiten, preparar una síntesis. Lo que no cambia es la obligación de revisarla con regularidad, en lugar de fijarla una vez y olvidarla. Un límite que nadie ha releído en dos años describe a menudo un mundo que ya no existe. La pregunta que yo le haría no es si confía en la IA. Es más bien quién, en su empresa, tiene claramente derecho a decir que no a lo que recomienda la IA. Si la respuesta no está clara, el límite todavía no existe. Se supone, nada más."}}, {"@type": "Question", "name": "¿Cómo formalizar esta frontera?", "acceptedAnswer": {"@type": "Answer", "text": "Basta una lista corta: las familias de decisiones que la empresa se niega a confiar a la IA, sea cual sea la calidad de la herramienta. Una lista escrita, releída una vez al año, vale más que un gran principio que cada uno interpreta a su manera. Escribirla tiene otra ventaja: obliga a resolver desacuerdos que, dejados en la vaguedad, solo habrían estallado en el peor momento. Basta una página, con ejemplos concretos: un despido, un precio propuesto a un cliente importante, un compromiso con un socio."}}, {"@type": "Question", "name": "¿Quién decide cuando la organización no está de acuerdo?", "acceptedAnswer": {"@type": "Answer", "text": "Una lista no basta si nadie sabe quién tiene la última palabra cuando dos personas de confianza llegan a conclusiones opuestas. En una estructura pequeña, suele estar resuelto de oficio: decide el directivo, y está muy bien así. El riesgo aparece cuando la empresa crece, se forma un comité de dirección y nadie vuelve a decir claramente quién arbitra. La respuesta no tiene nada de complicado. Solo tiene que estar escrita, ser conocida por todos y decidirse antes del desacuerdo. Una empresa que descubre en plena crisis que nunca resolvió la cuestión la resuelve con prisas, a menudo mal. A veces es incluso una herramienta de IA la que llena el vacío por defecto. Es exactamente ese vacío el que el caso de Air Canada sacó a la luz."}}, {"@type": "Question", "name": "¿Cómo documentar una decisión tomada con ayuda de una IA?", "acceptedAnswer": {"@type": "Answer", "text": "Guarde constancia de tres cosas: la pregunta planteada, las opciones estudiadas y la razón de su elección. Ese breve relato le permitirá releer la decisión más adelante y entender qué pesó. No hace falta convertirlo en un expediente. Unas líneas escritas en el momento valen más que una reconstrucción a posteriori. A menudo basta un párrafo en el acta de la reunión. Añada una cuarta cosa: lo que la IA había propuesto y usted no retuvo. Ahí suele verse el verdadero criterio. Es también lo primero que le pedirá un auditor o un cliente."}}, {"@type": "Question", "name": "¿En qué consiste una supervisión humana real?", "acceptedAnswer": {"@type": "Answer", "text": "Hace falta alguien que revise, en un momento preciso, con poder para decir que no. Revisar por cumplir, sin poder detener nada, no es supervisar. Es firmar. La buena pregunta: en su empresa, ¿quién puede rechazar una recomendación de la IA, y en qué condiciones? Esa persona también necesita tiempo para hacerlo. Una validación pedida al final del día, sobre decenas de expedientes, siempre acaba en un simple clic de aprobación. Si quiere una supervisión de verdad, prevea el tiempo que la acompaña."}}, {"@type": "Question", "name": "¿Cómo enseñar a los equipos a cuestionar una recomendación?", "acceptedAnswer": {"@type": "Answer", "text": "Deles tres comprobaciones: en qué se basa esta recomendación, qué podría hacerla falsa y qué pasa si nos equivocamos. Se aprenden en cinco minutos y sirven para todo. Con ellas, la respuesta de la IA se convierte en el inicio de la reflexión, y ya no en su conclusión. Practique con casos pasados cuyo final conoce. El equipo ve entonces dónde se habría equivocado la IA, y aprende a detectar sus puntos ciegos sin correr ningún riesgo. Tras unas pocas sesiones, estas comprobaciones se convierten en un reflejo del equipo, y no en una consigna."}}, {"@type": "Question", "name": "¿Qué lugar dejar a la intuición del directivo?", "acceptedAnswer": {"@type": "Answer", "text": "Un lugar de verdad, siempre que se diga en voz alta. La intuición suele ser años de experiencia resumidos en un segundo. Apartarla en nombre de los datos sería tan discutible como seguirla sin mirar las cifras. La IA ilumina, la intuición alerta, y es el directivo quien decide, asumiendo su elección. Un hábito que me gusta: anote su intuición antes de consultar la IA. Unas semanas después, compare. Aprenderá mucho sobre la fiabilidad de una y otra. Es también la mejor manera de saber cuándo escucharla."}}], "inLanguage": "es-ES"}
@@ -1221,15 +1258,7 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
       <img src="assets/logo-prune-final.webp" alt="EXEC'IA logo" class="nav-logo-rond" width="1254" height="1254" decoding="async">
       <img src="assets/logo-execia-bords-prune-240.webp" alt="EXEC'IA Consulting" class="nav-logo-full" width="240" height="113" fetchpriority="high" decoding="async">
     </a>
-    <div class="nav-links">
-      <a href="index-es.html">Inicio</a>
-      <a href="expertise-es.html">Experiencia</a>
-      <a href="offres-es.html">Servicios</a>
-      <a href="a-propos-es.html">Perfil</a>
-      <a href="temoignages-es.html">Testimonios</a>
-      <a href="contact-es.html">Contacto</a>
-      <a href="perspectives-es.html" class="active">Blog</a>
-    </div>
+    <div class="nav-links"><a href="index-es.html">Inicio</a><div class="nav-item nav-item--dd"><a href="offres-es.html">Acompañamiento IA</a><div class="nav-dd"><a href="offres-es.html#diagnostic">Diagnóstico estratégico IA</a><a href="offres-es.html#conseil">Consultoría estratégica / Advisory</a><a href="offres-es.html#transformation">Transformación IA</a><a href="offres-es.html#formation">Formación IA</a></div></div><div class="nav-item nav-item--dd"><a href="solutions-es.html">Soluciones digitales e IA</a><div class="nav-dd"><a href="agents-ia-es.html">Agentes IA por función</a><a href="solutions-es.html#automatisation">Automatización de procesos</a><a href="solutions-es.html#operationnelles">Soluciones operativas</a><a href="solutions-es.html#sites">Creación de sitios web</a></div></div><div class="nav-item nav-item--dd"><a href="realisations-es.html">Realizaciones</a><div class="nav-dd"><a href="realisations-es.html#clientes">Proyectos de clientes</a><a href="realisations-es.html#demostraciones">Demostraciones y herramientas</a><a href="realisations-es.html#usos">Casos de uso ilustrativos</a><a href="temoignages-es.html">Testimonios</a></div></div><a href="perspectives-es.html" class="active">Perspectivas</a><a href="a-propos-es.html">Perfil</a><a href="contact-es.html" class="nav-cta">Pedir una cita</a></div>
     <div class="nav-langs">
       <a href="perspective-toutes-decisions-ne-se-deleguent-pas.html" class="nav-lang">FR</a>
       <a href="perspective-toutes-decisions-ne-se-deleguent-pas-en.html" class="nav-lang">EN</a>
@@ -1246,8 +1275,8 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
   <div class="wrap">
     <div class="article-header-grid">
       <div class="article-header-text">
-        <a href="perspectives.html" class="article-back">← Todas las Blog</a>
-        <span class="article-meta"><span class="art-star" aria-label="Artículo más leído">★</span>Blog • Decisión</span>
+        <nav class="article-back article-bc" aria-label="Ruta de navegación"><a href="index-es.html">Inicio</a><span class="bc-sep" aria-hidden="true">›</span><a href="perspectives-es.html">Perspectivas</a></nav>
+        <span class="article-meta"><span class="art-star" aria-label="Artículo más leído">★</span>Perspectivas • Decisión</span>
         <h1 class="article-title">No todas las decisiones<br>se delegan.<br>Ni siquiera en una&nbsp;<span class="ink-accent"><span class="ia-rose">IA</span></span>.</h1>
         <p class="article-source-note article-source-note--linkedin"><img width="72" height="72" src="assets/linkedin-logo.png" alt="" class="article-linkedin-icon">Artículo desarrollado a partir de mi publicación en <span class="ink-accent">LinkedIn</span> (<time datetime="2026-09-08">08/09/2026</time>)<br>Actualizado el <time datetime="2026-09-30">30/09/2026</time></p>
         <details class="article-tldr">
@@ -1441,12 +1470,13 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
       <p class="article-related-offer">De la reflexión a la acción: <a href="offres-es.html#offres">descubra las ofertas de EXEC’<span class="ia-rose">IA</span> →</a></p>
     </nav>
     <div class="article-cta-wrap">
-      <a href="https://calendly.com/exec-ia" target="_blank" rel="noopener" class="btn btn-rose article-cta-btn">Hablemos de su situación <span class="btn-arrow">→</span></a>
+      <a href="https://calendly.com/exec-ia" target="_blank" rel="noopener" class="btn btn-rose article-cta-btn">Pedir una cita <span class="btn-arrow">→</span></a>
     </div>
   </div>
 </main>
 
 <!-- ═══ FOOTER ════════════════════════════════════════════════ -->
+<aside class="pv-related" aria-label="Artículos relacionados"><p class="pv-related-title">Artículos relacionados</p><ul><li><a href="perspective-transformation-echoue-rarement-technologie-es.html">Las transformaciones con IA rara vez fracasan por la tecnología.</a></li><li><a href="perspective-probleme-nest-pas-outils-mais-arbitrage-es.html">Más herramientas de IA no significa más impacto.</a></li></ul><p class="pv-offer"><a href="offres-es.html#diagnostic">Ver el diagnóstico estratégico IA →</a></p></aside>
 <footer class="snap-page site-footer">
   <div class="wrap footer-grid">
     <div class="footer-brand">
@@ -1458,12 +1488,13 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
     <div class="footer-col footer-col--site">
       <span class="footer-col-title">El sitio</span>
       <a href="index-es.html">Inicio</a>
-      <a href="expertise-es.html">Experiencia</a>
-      <a href="offres-es.html">Servicios</a>
+      <a href="offres-es.html">Acompañamiento IA</a>
+      <a href="solutions-es.html">Soluciones digitales e IA</a>
+      <a href="realisations-es.html">Realizaciones</a>
       <a href="a-propos-es.html">Perfil</a>
       <a href="temoignages-es.html">Testimonios</a>
       <a href="contact-es.html">Contacto</a>
-      <a href="perspectives-es.html">Blog</a>
+      <a href="perspectives-es.html">Perspectivas</a><a href="ressources-es.html">Recursos</a>
     <div class="footer-persp-grid">
     <a href="perspective-entreprise-utilise-deja-ia-es.html" class="footer-persp-link">→ <span class="art-star" aria-label="Artículo más leído">★</span>Adoptar la <span class="ink-accent"><span class="ia-rose">IA</span></span> no es crear valor</a>
     <a href="perspective-toutes-decisions-ne-se-deleguent-pas-es.html" class="footer-persp-link">→ <span class="art-star" aria-label="Artículo más leído">★</span>No todas las decisiones se delegan</a>
@@ -1506,6 +1537,6 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
   </div>
 </footer>
 
-<script src="assets/script.js?v=39"></script>
+<script src="assets/script.js?v=40"></script>
 </body>
 </html>

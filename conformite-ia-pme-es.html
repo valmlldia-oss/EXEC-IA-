@@ -20,7 +20,7 @@
   <link rel="alternate" hreflang="es" href="https://exec-ia.ai/conformite-ia-pme-es.html" />
   <link rel="alternate" hreflang="x-default" href="https://exec-ia.ai/conformite-ia-pme.html" />
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://exec-ia.ai/index-es.html"}, {"@type": "ListItem", "position": 2, "name": "Experiencia", "item": "https://exec-ia.ai/expertise-es.html"}, {"@type": "ListItem", "position": 3, "name": "AI Act y RGPD para una PYME", "item": "https://exec-ia.ai/conformite-ia-pme-es.html"}]}
+  {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://exec-ia.ai/index-es.html"}, {"@type": "ListItem", "position": 2, "name": "Recursos", "item": "https://exec-ia.ai/ressources-es.html"}, {"@type": "ListItem", "position": 3, "name": "AI Act y RGPD: las obligaciones de una PYME", "item": "https://exec-ia.ai/conformite-ia-pme-es.html"}]}
   </script>
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "Article", "image": "https://exec-ia.ai/assets/photo-valerie.jpg", "headline": "AI Act y RGPD: lo que una PYME que usa IA debe hacer realmente", "description": "Calendario actualizado, proveedor o responsable del despliegue, prácticas prohibidas, alivios para PYME.", "datePublished": "2026-09-23", "dateModified": "2026-10-22", "author": {"@type": "Person", "@id": "https://exec-ia.ai/#valerie-mailland", "name": "Valérie Mailland", "url": "https://exec-ia.ai/a-propos-es.html", "sameAs": ["https://www.linkedin.com/in/val%C3%A9rie-mailland"]}, "publisher": {"@type": "Organization", "@id": "https://exec-ia.ai/#organization", "name": "EXEC'IA Consulting", "url": "https://exec-ia.ai/", "logo": {"@type": "ImageObject", "url": "https://exec-ia.ai/assets/logo-execia-bords-prune.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://exec-ia.ai/conformite-ia-pme-es.html"}, "inLanguage": "es-ES", "wordCount": 2490, "keywords": ["AI Act PYME", "obligaciones AI Act", "RGPD inteligencia artificial", "cumplimiento IA PYME", "Ómnibus Digital"]}
@@ -1403,6 +1403,37 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
   .site-footer .footer-persp-grid{ display: grid !important; grid-template-columns: 1fr 1fr !important; grid-template-rows: none !important; grid-auto-flow: row !important; column-gap: 18px !important; row-gap: 5px !important; width: auto !important; max-width: none !important; position: static !important; transform: none !important; left: auto !important; right: auto !important; margin: 14px 0 0 !important; }
   .site-footer .footer-tag-lead, .site-footer .footer-tag-rest{ display: inline !important; position: static !important; }
 }
+/* Menu principal (arborescence) : 6 rubriques, menus déroulants, bouton « Prendre rendez-vous » */
+.nav-item{ position: relative; display: inline-flex; align-items: center; }
+.nav-dd{ position: absolute; top: 100%; left: 50%; transform: translateX(-50%); min-width: 250px; background: var(--ivory); border: 1px solid var(--pale-rose); border-radius: 12px; box-shadow: 0 14px 34px rgba(99,59,74,.12); padding: 8px 0; opacity: 0; visibility: hidden; transition: opacity .2s, visibility .2s; z-index: 60; }
+.nav-item:hover .nav-dd, .nav-item:focus-within .nav-dd{ opacity: 1; visibility: visible; }
+.nav-dd a{ display: block; padding: 9px 18px; font-size: .9rem; font-weight: 500; letter-spacing: 0; text-transform: none; white-space: nowrap; color: var(--plum); }
+.nav-dd a::after{ display: none; }
+.nav-dd a:hover{ color: #C75F62; }
+.nav-links a{ white-space: nowrap; }
+.nav-links a.nav-cta{ background: #C75F62; color: #FAF6F2 !important; padding: 9px 18px; border-radius: 24px; font-size: .78rem; line-height: 1.2; letter-spacing: .06em; }
+.nav-links a.nav-cta::after{ display: none; }
+.nav-links a.nav-cta:hover{ background: #C75F62; color: #FAF6F2 !important; }
+@media (max-width: 1100px){
+  .nav-dd{ position: static; transform: none; opacity: 1; visibility: visible; min-width: 0; background: transparent; border: 0; box-shadow: none; padding: 0 0 6px 14px; }
+  .nav-dd a{ padding: 6px 0; font-size: .95rem; }
+  .nav-item--dd{ flex-direction: column; align-items: flex-start; }
+}
+/* Menu : resserrement (dès 1025 px, quelle que soit la largeur) pour que les rubriques, le bouton et les langues tiennent sur une ligne */
+@media (min-width: 1025px){ .nav-links{ gap: 10px !important; } .nav-links > a, .nav-links .nav-item > a{ font-size: .68rem !important; letter-spacing: .03em !important; } .nav-links a.nav-cta{ font-size: .66rem !important; padding: 8px 12px !important; } .nav-langs{ margin-left: 12px !important; } }
+@media (min-width: 1181px) and (max-width: 1280px){ .nav-brand{ margin-right: 14px !important; } .nav-links{ gap: 7px !important; } .nav-links > a, .nav-links .nav-item > a{ font-size: .64rem !important; letter-spacing: .02em !important; } .nav-links a.nav-cta{ font-size: .62rem !important; padding: 8px 10px !important; } .nav-langs{ margin-left: 8px !important; } }
+/* Menu mobile : le panneau défile quand il dépasse la hauteur de l'écran (sinon les dernières rubriques et le bouton restent inaccessibles) */
+@media (max-width: 1180px){ .nav-links.open{ max-height: calc(100vh - var(--nav-h, 64px)); max-height: calc(100dvh - var(--nav-h, 64px)); overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; } }
+
+/* Fil d'Ariane */
+.article-bc{ gap: 8px; flex-wrap: wrap; opacity: 1; }
+.article-bc a{ color: var(--plum); opacity: .7; text-decoration: none; transition: opacity .2s, color .2s; }
+.article-bc a:hover{ opacity: 1; color: #C75F62; }
+.article-bc .bc-sep{ opacity: .45; }
+.bc-nav{ max-width: 1080px; margin: 0 auto; padding: 18px 20px 0; font-family: var(--sans); font-size: .85rem; display: flex; flex-wrap: wrap; gap: 8px; color: var(--plum); }
+.bc-nav a{ color: var(--plum); opacity: .7; text-decoration: none; }
+.bc-nav a:hover{ opacity: 1; color: #C75F62; }
+.bc-nav .bc-sep{ opacity: .45; }
 </style>
 <style id="footer-contact-gauche">
 @media (min-width: 1251px){
@@ -1420,15 +1451,7 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
       <img src="assets/logo-prune-final.webp" alt="EXEC'IA logo" class="nav-logo-rond" width="1254" height="1254" decoding="async">
       <img src="assets/logo-execia-bords-prune-240.webp" alt="EXEC'IA Consulting" class="nav-logo-full" width="240" height="113" fetchpriority="high" decoding="async">
     </a>
-    <div class="nav-links">
-      <a href="index-es.html">Inicio</a>
-      <a href="expertise-es.html" class="active">Experiencia</a>
-      <a href="offres-es.html">Servicios</a>
-      <a href="a-propos-es.html">Perfil</a>
-      <a href="temoignages-es.html">Testimonios</a>
-      <a href="contact-es.html">Contacto</a>
-      <a href="perspectives-es.html">Blog</a>
-    </div>
+    <div class="nav-links"><a href="index-es.html">Inicio</a><div class="nav-item nav-item--dd"><a href="offres-es.html" class="active">Acompañamiento IA</a><div class="nav-dd"><a href="offres-es.html#diagnostic">Diagnóstico estratégico IA</a><a href="offres-es.html#conseil">Consultoría estratégica / Advisory</a><a href="offres-es.html#transformation">Transformación IA</a><a href="offres-es.html#formation">Formación IA</a></div></div><div class="nav-item nav-item--dd"><a href="solutions-es.html">Soluciones digitales e IA</a><div class="nav-dd"><a href="agents-ia-es.html">Agentes IA por función</a><a href="solutions-es.html#automatisation">Automatización de procesos</a><a href="solutions-es.html#operationnelles">Soluciones operativas</a><a href="solutions-es.html#sites">Creación de sitios web</a></div></div><div class="nav-item nav-item--dd"><a href="realisations-es.html">Realizaciones</a><div class="nav-dd"><a href="realisations-es.html#clientes">Proyectos de clientes</a><a href="realisations-es.html#demostraciones">Demostraciones y herramientas</a><a href="realisations-es.html#usos">Casos de uso ilustrativos</a><a href="temoignages-es.html">Testimonios</a></div></div><a href="perspectives-es.html">Perspectivas</a><a href="a-propos-es.html">Perfil</a><a href="contact-es.html" class="nav-cta">Pedir una cita</a></div>
     <div class="nav-langs">
       <a href="conformite-ia-pme.html" class="nav-lang">FR</a>
       <a href="conformite-ia-pme-en.html" class="nav-lang">EN</a>
@@ -1444,7 +1467,7 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
 <main class="article-page article-page--guide" id="contenu">
   <div class="wrap">
     <div class="article-header-text">
-      <a href="expertise-es.html" class="article-back">← Experiencia</a>
+      <nav class="article-back article-bc" aria-label="Ruta de navegación"><a href="index-es.html">Inicio</a><span class="bc-sep" aria-hidden="true">›</span><a href="ressources-es.html">Recursos</a></nav>
       <span class="article-meta">Guía práctica • Cumplimiento <span class="aiact-ia"><span class="ia-rose">IA</span></span></span>
       <h1 class="article-title article-title--2l"><span class="aiact-ref"><span class="ia-rose">AI</span>&nbsp;Act</span>&nbsp;y&nbsp;<span class="rgpd-b">RGPD</span>: las&nbsp;obligaciones reales<br>de&nbsp;una&nbsp;PYME que&nbsp;usa&nbsp;<span class="aiact-ia"><span class="ia-rose">IA</span></span>.</h1>
       <p class="article-source-note">Actualizado el <time datetime="2026-10-22">22/10/2026</time> · Lectura: 10&nbsp;min · Fuentes: <a href="https://www.europarl.europa.eu/news/es/press-room/20260611IPR45207/" target="_blank" rel="noopener">Parlamento Europeo, comunicado del 11 de junio de 2026</a>; <a href="https://eur-lex.europa.eu/eli/reg/2026/1744/oj" target="_blank" rel="noopener">Reglamento (UE) 2026/1744 (EUR-Lex)</a>.</p>
@@ -1559,37 +1582,37 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
     </div>
 
     <div class="article-accordion" id="g6">
-      <details class="acc-item" open>
+      <details id="faq-1" class="acc-item" open>
         <summary><span class="acc-num">01</span><span class="acc-title">¿Una&nbsp;empresa pequeña está realmente sujeta al&nbsp;<span class="ia-rose">AI</span>&nbsp;Act?</span><span class="acc-icon">+</span></summary>
         <div class="acc-body">
           <p>Sí, y&nbsp;esta es&nbsp;la&nbsp;confusión más&nbsp;frecuente. El&nbsp;<span class="ia-rose">AI</span>&nbsp;Act&nbsp;se&nbsp;aplica a&nbsp;toda organización que&nbsp;suministre o&nbsp;utilice un&nbsp;sistema&nbsp;de&nbsp;<span class="aiact-ia"><span class="ia-rose">IA</span></span>&nbsp;en&nbsp;el&nbsp;mercado europeo, sea&nbsp;cual sea&nbsp;su&nbsp;tamaño.<br>Lo&nbsp;que&nbsp;cambia con&nbsp;el&nbsp;tamaño no&nbsp;es&nbsp;si&nbsp;las&nbsp;normas se&nbsp;aplican, sino qué&nbsp;nivel de&nbsp;obligación recae sobre usted y&nbsp;qué&nbsp;alivios puede invocar.<br>Una&nbsp;PYME que&nbsp;utiliza una&nbsp;herramienta de&nbsp;<span class="aiact-ia"><span class="ia-rose">IA</span></span>&nbsp;de&nbsp;un&nbsp;tercero para preseleccionar candidaturas o&nbsp;evaluar un&nbsp;riesgo de&nbsp;crédito está sujeta a&nbsp;las&nbsp;obligaciones de&nbsp;<strong class="fw-600">responsable del&nbsp;despliegue</strong>, aunque nunca haya desarrollado ni&nbsp;una&nbsp;sola línea de&nbsp;código de&nbsp;<span class="aiact-ia"><span class="ia-rose">IA</span></span>.<br>La&nbsp;única pregunta que&nbsp;vale la&nbsp;pena hacerse no&nbsp;es&nbsp;si&nbsp;es&nbsp;lo&nbsp;bastante pequeña para pasar desapercibida, sino qué&nbsp;uso&nbsp;hace realmente de&nbsp;la&nbsp;<span class="aiact-ia"><span class="ia-rose">IA</span></span>&nbsp;y&nbsp;en&nbsp;qué&nbsp;categoría de&nbsp;riesgo&nbsp;encaja.</p>
         </div>
       </details>
-      <details class="acc-item">
+      <details id="faq-2" class="acc-item">
         <summary><span class="acc-num">02</span><span class="acc-title">¿Cuál es&nbsp;la&nbsp;diferencia entre <strong class="fw-600">proveedor</strong> y&nbsp;<strong class="fw-600">responsable del&nbsp;despliegue</strong>?</span><span class="acc-icon">+</span></summary>
         <div class="acc-body">
           <p>El&nbsp;<strong class="fw-600">proveedor</strong> desarrolla, o&nbsp;hace desarrollar, un&nbsp;sistema&nbsp;de&nbsp;<span class="aiact-ia"><span class="ia-rose">IA</span></span>&nbsp;y&nbsp;lo&nbsp;introduce en&nbsp;el&nbsp;mercado bajo su&nbsp;propio nombre; el&nbsp;<strong class="fw-600">responsable del&nbsp;despliegue</strong> lo&nbsp;utiliza en&nbsp;el&nbsp;marco de&nbsp;su&nbsp;actividad profesional.<br>Casi todas las&nbsp;PYME son&nbsp;<strong class="fw-600">responsables del&nbsp;despliegue</strong>: utilizan una&nbsp;herramienta de&nbsp;<span class="aiact-ia"><span class="ia-rose">IA</span></span>&nbsp;ya&nbsp;existente en&nbsp;lugar de&nbsp;crearla. Las&nbsp;obligaciones del&nbsp;<strong class="fw-600">responsable del&nbsp;despliegue</strong> son&nbsp;claramente más&nbsp;ligeras que&nbsp;las&nbsp;del&nbsp;<strong class="fw-600">proveedor</strong>, salvo cuando el&nbsp;sistema utilizado entra en&nbsp;la&nbsp;categoría de&nbsp;<span class="risk-hl">alto&nbsp;riesgo</span>.<br>Saber de&nbsp;qué&nbsp;lado de&nbsp;esa&nbsp;línea se&nbsp;encuentra evita imponerse, por&nbsp;exceso de&nbsp;prudencia, obligaciones de&nbsp;<strong class="fw-600">proveedor</strong> que&nbsp;no&nbsp;le&nbsp;corresponden, o&nbsp;al&nbsp;contrario, subestimar una&nbsp;obligación real como <strong class="fw-600">responsable del&nbsp;despliegue</strong>.</p>
         </div>
       </details>
-      <details class="acc-item">
+      <details id="faq-3" class="acc-item">
         <summary><span class="acc-num">03</span><span class="acc-title">¿Qué&nbsp;es&nbsp;obligatorio hoy&nbsp;y&nbsp;qué&nbsp;se&nbsp;ha&nbsp;aplazado?</span><span class="acc-icon">+</span></summary>
         <div class="acc-body">
           <p>Tres bloques ya&nbsp;están en&nbsp;vigor:<br>1) desde <span class="date-b">febrero de&nbsp;2025</span>, las&nbsp;prácticas de&nbsp;<span class="aiact-ia"><span class="ia-rose">IA</span></span>&nbsp;prohibidas y&nbsp;la&nbsp;obligación de&nbsp;alfabetización en&nbsp;<span class="aiact-ia"><span class="ia-rose">IA</span></span>&nbsp;de&nbsp;los&nbsp;equipos;<br>2) desde <span class="date-b">agosto de&nbsp;2025</span>, las&nbsp;normas de&nbsp;gobernanza y&nbsp;las&nbsp;obligaciones de&nbsp;los&nbsp;proveedores de&nbsp;modelos de&nbsp;<span class="aiact-ia"><span class="ia-rose">IA</span></span>&nbsp;de&nbsp;uso&nbsp;general;<br>3) desde <span class="date-b">agosto de&nbsp;2026</span>, las&nbsp;obligaciones de&nbsp;transparencia de&nbsp;los&nbsp;sistemas que&nbsp;interactúan con&nbsp;personas.<br>El&nbsp;<span class="date-b">2&nbsp;de&nbsp;diciembre&nbsp;de&nbsp;2026</span> se&nbsp;añaden dos&nbsp;nuevas prácticas prohibidas (deepfakes de&nbsp;carácter íntimo no&nbsp;consentidos, contenidos de&nbsp;pornografía infantil generados por&nbsp;<span class="aiact-ia"><span class="ia-rose">IA</span></span>), introducidas por&nbsp;el reglamento&nbsp;modificativo&nbsp;(UE)&nbsp;2026/1744.<br>En&nbsp;cambio, la&nbsp;mayor parte de&nbsp;las&nbsp;obligaciones de&nbsp;<span class="risk-hl">alto&nbsp;riesgo</span> del&nbsp;anexo III, previstas inicialmente para <span class="date-b">agosto de&nbsp;2026</span>, se&nbsp;ha&nbsp;aplazado al&nbsp;<span class="date-b">2&nbsp;de&nbsp;diciembre&nbsp;de&nbsp;2027</span> mediante ese&nbsp;mismo reglamento.<br>Los&nbsp;sistemas de&nbsp;<span class="risk-hl">alto&nbsp;riesgo</span> integrados en&nbsp;productos ya&nbsp;regulados (dispositivos médicos, maquinaria) han&nbsp;visto su&nbsp;plazo ampliado hasta el&nbsp;<span class="date-b">2&nbsp;de&nbsp;agosto&nbsp;de&nbsp;2028</span>.<br>El&nbsp;calendario realmente ha&nbsp;cambiado este año, no&nbsp;es&nbsp;un&nbsp;rumor.</p>
         </div>
       </details>
-      <details class="acc-item">
+      <details id="faq-4" class="acc-item">
         <summary><span class="acc-num">04</span><span class="acc-title">¿Qué&nbsp;prácticas de&nbsp;<span class="aiact-ia"><span class="ia-rose">IA</span></span>&nbsp;están prohibidas, sea&nbsp;cual sea&nbsp;el&nbsp;tamaño de&nbsp;la&nbsp;empresa?</span><span class="acc-icon">+</span></summary>
         <div class="acc-body">
           <p>Estas prohibiciones no&nbsp;admiten excepción por&nbsp;tamaño.<br>Desde <span class="date-b">febrero de&nbsp;2025</span>, cubren, entre otras:<br>1) la&nbsp;<strong class="fw-600">manipulación subliminal</strong> o&nbsp;la&nbsp;<strong class="fw-600">explotación de&nbsp;vulnerabilidades</strong> (edad, discapacidad, situación social o&nbsp;económica) para alterar un&nbsp;comportamiento de&nbsp;forma perjudicial;<br>2) la&nbsp;<strong class="fw-600">puntuación social</strong> generalizada de&nbsp;una&nbsp;persona a&nbsp;partir de&nbsp;su&nbsp;comportamiento;<br>3) la&nbsp;<strong class="fw-600">categorización biométrica</strong> destinada a&nbsp;deducir opiniones políticas, religiosas o&nbsp;la&nbsp;orientación sexual;<br>4) el&nbsp;<strong class="fw-600">reconocimiento de&nbsp;emociones</strong> en&nbsp;el&nbsp;lugar de&nbsp;trabajo, fuera de&nbsp;excepciones médicas o&nbsp;de&nbsp;seguridad estrictamente delimitadas.<br>El reglamento&nbsp;modificativo&nbsp;(UE)&nbsp;2026/1744 añade dos más:<br>5) los&nbsp;<strong class="fw-600">deepfakes de&nbsp;carácter íntimo</strong> creados sin&nbsp;el&nbsp;consentimiento de&nbsp;la&nbsp;persona representada;<br>6) los&nbsp;<strong class="fw-600">contenidos de&nbsp;pornografía infantil</strong> generados por&nbsp;<span class="aiact-ia"><span class="ia-rose">IA</span></span>.<br>Una&nbsp;PYME que&nbsp;valore un&nbsp;uso&nbsp;de&nbsp;<span class="aiact-ia"><span class="ia-rose">IA</span></span>&nbsp;relacionado con&nbsp;la&nbsp;selección de&nbsp;personal, la&nbsp;puntuación de&nbsp;sus&nbsp;clientes o&nbsp;la&nbsp;vigilancia de&nbsp;sus&nbsp;empleados debe comprobar este punto antes que&nbsp;cualquier otro trámite de&nbsp;cumplimiento.<br>Es&nbsp;la&nbsp;única categoría que&nbsp;no&nbsp;admite ningún alivio por&nbsp;tamaño.</p>
         </div>
       </details>
-      <details class="acc-item">
+      <details id="faq-5" class="acc-item">
         <summary><span class="acc-num">05</span><span class="acc-title">¿Se&nbsp;aplica el&nbsp;RGPD además del&nbsp;<span class="ia-rose">AI</span>&nbsp;Act?</span><span class="acc-icon">+</span></summary>
         <div class="acc-body">
           <p>Sistemáticamente, en&nbsp;cuanto un&nbsp;sistema&nbsp;de&nbsp;<span class="aiact-ia"><span class="ia-rose">IA</span></span>&nbsp;trata datos&nbsp;personales, lo&nbsp;que&nbsp;cubre la&nbsp;gran mayoría de&nbsp;los&nbsp;usos empresariales.<br>El&nbsp;<span class="ia-rose">AI</span>&nbsp;Act&nbsp;regula el&nbsp;sistema en&nbsp;sí&nbsp;mismo; el&nbsp;<span class="rgpd-b">RGPD</span> regula los&nbsp;datos que&nbsp;trata, con&nbsp;independencia del&nbsp;nivel de&nbsp;riesgo que&nbsp;le&nbsp;asigne el&nbsp;<span class="ia-rose">AI</span>&nbsp;Act.<br>En&nbsp;la&nbsp;práctica, esto implica una&nbsp;base legal identificada antes de&nbsp;cualquier tratamiento, una&nbsp;información clara a&nbsp;las&nbsp;personas afectadas, una&nbsp;minimización de&nbsp;los&nbsp;datos utilizados para configurar o&nbsp;afinar la&nbsp;herramienta, y&nbsp;una&nbsp;evaluación de&nbsp;impacto relativa a&nbsp;la&nbsp;protección de&nbsp;datos en&nbsp;cuanto el&nbsp;tratamiento pueda suponer un&nbsp;riesgo elevado.<br>Una&nbsp;herramienta considerada de&nbsp;bajo riesgo por&nbsp;el&nbsp;<span class="ia-rose">AI</span>&nbsp;Act&nbsp;puede, aun&nbsp;así, generar una&nbsp;obligación derivada del&nbsp;<span class="rgpd-b">RGPD</span> si&nbsp;los&nbsp;datos que&nbsp;trata son&nbsp;sensibles.</p>
         </div>
       </details>
-      <details class="acc-item">
+      <details id="faq-6" class="acc-item">
         <summary><span class="acc-num">06</span><span class="acc-title">¿Qué&nbsp;alivios prevé el&nbsp;<span class="ia-rose">AI</span>&nbsp;Act&nbsp;para las&nbsp;PYME y&nbsp;microempresas?</span><span class="acc-icon">+</span></summary>
         <div class="acc-body">
           <p>Cuatro artículos distintos alivian la&nbsp;carga para las&nbsp;PYME.<br>El artículo&nbsp;11 abre a&nbsp;toda PYME, no&nbsp;solo a&nbsp;las&nbsp;microempresas, el&nbsp;derecho a&nbsp;presentar una&nbsp;documentación técnica simplificada aceptada por&nbsp;las&nbsp;autoridades.<br>El artículo&nbsp;62 establece acceso prioritario a&nbsp;los&nbsp;sandboxes&nbsp;regulatorios, tasas de&nbsp;certificación reducidas de&nbsp;forma proporcional al&nbsp;tamaño de&nbsp;la&nbsp;empresa, y&nbsp;acciones de&nbsp;sensibilización dedicadas.<br>El artículo&nbsp;99 limita la&nbsp;multa de&nbsp;una&nbsp;PYME al&nbsp;importe más&nbsp;bajo entre el&nbsp;importe fijo y&nbsp;el&nbsp;porcentaje de&nbsp;la&nbsp;facturación, nunca el&nbsp;más&nbsp;alto.<br>Las&nbsp;PYME y&nbsp;microempresas sin&nbsp;empresa asociada o&nbsp;vinculada se&nbsp;benefician además, en&nbsp;virtud del artículo&nbsp;63, de&nbsp;una&nbsp;simplificación de&nbsp;ciertos elementos del&nbsp;sistema de&nbsp;gestión de&nbsp;calidad exigido para los&nbsp;sistemas de&nbsp;<span class="risk-hl">alto&nbsp;riesgo</span>, no&nbsp;reservado únicamente a&nbsp;las&nbsp;microempresas.<br>Ninguno de&nbsp;estos alivios exime de&nbsp;una&nbsp;obligación de&nbsp;fondo; reducen la&nbsp;carga documental y&nbsp;el&nbsp;coste de&nbsp;acceso al&nbsp;cumplimiento.</p>
@@ -1637,12 +1660,13 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
     <div class="footer-col">
       <span class="footer-col-title">El sitio</span>
       <a href="index-es.html">Inicio</a>
-      <a href="expertise-es.html">Experiencia</a>
-      <a href="offres-es.html">Servicios</a>
+      <a href="offres-es.html">Acompañamiento IA</a>
+      <a href="solutions-es.html">Soluciones digitales e IA</a>
+      <a href="realisations-es.html">Realizaciones</a>
       <a href="a-propos-es.html">Perfil</a>
       <a href="temoignages-es.html">Testimonios</a>
       <a href="contact-es.html">Contacto</a>
-      <a href="perspectives-es.html">Blog</a>
+      <a href="perspectives-es.html">Perspectivas</a><a href="ressources-es.html">Recursos</a>
     <div class="footer-persp-grid">
     <a href="perspective-entreprise-utilise-deja-ia-es.html" class="footer-persp-link">→ <span class="art-star" aria-label="Artículo más leído">★</span>Adoptar la <span class="ink-accent"><span class="ia-rose">IA</span></span> no es crear valor</a>
     <a href="perspective-toutes-decisions-ne-se-deleguent-pas-es.html" class="footer-persp-link">→ <span class="art-star" aria-label="Artículo más leído">★</span>No todas las decisiones se delegan</a>
@@ -1687,7 +1711,7 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
   </div>
 </footer>
 
-<script src="assets/script.js?v=39"></script>
+<script src="assets/script.js?v=40"></script>
 
 <!-- ═══ COOKIE BANNER ══════════════════════════════════════════ -->
 <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Consentimiento de cookies">
@@ -1739,6 +1763,7 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
 </div>
 <script src="assets/chat-widget.js?v=9" defer></script>
 <script src="assets/phare-chat-widget.js?v=11" defer></script>
-<script>(function(){var el=document.querySelector(".aiact-countdown");if(!el)return;var target=new Date(el.getAttribute("data-target"));var n=el.querySelector("strong");function upd(){var d=Math.ceil((target-new Date())/86400000);if(d>0){n.textContent="D-"+d;}else{el.textContent="En vigor desde el 2 de diciembre de 2026.";}}upd();setInterval(upd,3600000);})();</script>
+<script src="assets/inline/conformite-countdown-es.js" defer></script>
+<script src="assets/anchor-open.js?v=1" defer></script>
 </body>
 </html>

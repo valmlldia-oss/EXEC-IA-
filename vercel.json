@@ -33,6 +33,26 @@
       "permanent": true
     },
     {
+      "source": "/expertise.html",
+      "destination": "/offres.html#expertise-strategique",
+      "permanent": true
+    },
+    {
+      "source": "/expertise-en.html",
+      "destination": "/offres-en.html#expertise-strategique",
+      "permanent": true
+    },
+    {
+      "source": "/expertise-es.html",
+      "destination": "/offres-es.html#expertise-strategique",
+      "permanent": true
+    },
+    {
+      "source": "/expertise",
+      "destination": "/offres.html#expertise-strategique",
+      "permanent": true
+    },
+    {
       "source": "/index.html",
       "destination": "/",
       "permanent": true
@@ -51,6 +71,16 @@
       "source": "/robot-es",
       "destination": "/perspective-robots-humanoides-token-tax-es.html#mini-diagnostic",
       "permanent": false
+    },
+    {
+      "source": "/articles.html",
+      "destination": "/perspectives.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles",
+      "destination": "/perspectives.html",
+      "permanent": true
     }
   ],
   "headers": [

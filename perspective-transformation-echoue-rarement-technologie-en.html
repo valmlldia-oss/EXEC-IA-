@@ -10,7 +10,7 @@
   <meta name="keywords" content="AI transformation, organisation, executives, EXEC'IA, Valérie Mailland, change management, AI adoption">
   <meta name="author" content="Valérie Mailland — EXEC'IA">
   <meta property="og:title" content="AI transformation rarely fails because of the technology.">
-  <meta property="og:description" content="A reflection by Valérie Mailland, first shared on LinkedIn — EXEC'IA Blog.">
+  <meta property="og:description" content="A reflection by Valérie Mailland, first shared on LinkedIn — EXEC'IA Insights.">
   <meta property="og:url" content="https://exec-ia.ai/perspective-transformation-echoue-rarement-technologie-en.html">
   <meta property="og:type" content="article">
   <meta name="robots" content="index, follow">
@@ -20,7 +20,7 @@
   <link rel="alternate" hreflang="es" href="https://exec-ia.ai/perspective-transformation-echoue-rarement-technologie-es.html" />
   <link rel="alternate" hreflang="x-default" href="https://exec-ia.ai/perspective-transformation-echoue-rarement-technologie.html" />
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://exec-ia.ai/index-en.html"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://exec-ia.ai/perspectives-en.html"}, {"@type": "ListItem", "position": 3, "name": "AI transformation rarely fails", "item": "https://exec-ia.ai/perspective-transformation-echoue-rarement-technologie-en.html"}]}
+  {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://exec-ia.ai/index-en.html"}, {"@type": "ListItem", "position": 2, "name": "Insights", "item": "https://exec-ia.ai/perspectives-en.html"}, {"@type": "ListItem", "position": 3, "name": "AI transformation rarely fails", "item": "https://exec-ia.ai/perspective-transformation-echoue-rarement-technologie-en.html"}]}
   </script>
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "BlogPosting", "headline": "AI transformation rarely fails because of the technology", "description": "AI transformation rarely fails because of the technology. Valérie Mailland on what has to change in the organisation.", "image": "https://exec-ia.ai/assets/perspectives/transformation-outil-organisation-en.png", "datePublished": "2026-09-09", "dateModified": "2026-10-01", "author": {"@type": "Person", "@id": "https://exec-ia.ai/#valerie-mailland", "name": "Valérie Mailland", "jobTitle": "Founder & President", "image": "https://exec-ia.ai/assets/photo-valerie.jpg", "url": "https://exec-ia.ai/a-propos.html", "sameAs": ["https://www.linkedin.com/in/val%C3%A9rie-mailland"]}, "publisher": {"@type": "Organization", "@id": "https://exec-ia.ai/#organization", "name": "EXEC'IA Consulting", "url": "https://exec-ia.ai/", "logo": {"@type": "ImageObject", "url": "https://exec-ia.ai/assets/logo-execia-bords-prune.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://exec-ia.ai/perspective-transformation-echoue-rarement-technologie-en.html"}, "inLanguage": "en-US", "wordCount": 1545, "keywords": ["AI transformation", "organisation", "executives", "EXEC'IA", "Valérie Mailland", "change management", "AI adoption"], "citation": [{"@type": "CreativeWork", "name": "RAND Corporation, “The Root Causes of Failure for Artificial Intelligence Projects and How They Can Succeed”, 2024", "url": "https://www.rand.org/pubs/research_reports/RRA2680-1.html"}, {"@type": "CreativeWork", "name": "Orgvue, « 92% of organizations have invested in AI but 78% say projects have either stalled or failed », 2026", "url": "https://www.prnewswire.com/news-releases/92-of-organizations-have-invested-in-ai-but-78-say-projects-have-either-stalled-or-failed-302769202.html"}]}
@@ -30,7 +30,7 @@
   <meta property="og:site_name" content="EXEC'IA" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="AI transformation rarely fails because of the technology." />
-  <meta name="twitter:description" content="A reflection by Valérie Mailland, first shared on LinkedIn — EXEC'IA Blog." />
+  <meta name="twitter:description" content="A reflection by Valérie Mailland, first shared on LinkedIn — EXEC'IA Insights." />
   <meta name="twitter:image" content="https://exec-ia.ai/assets/perspectives/transformation-outil-organisation-en.png" />
   <style id="css-page">
 @font-face{font-family:"Cormorant Garamond";font-style:italic;font-weight:400;font-display:swap;src:url(assets/fonts/cormorantgaramond-italic-400-cyrillic-ext.woff2) format("woff2");unicode-range:U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F}
@@ -1193,6 +1193,43 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
   .site-footer .footer-persp-grid{ display: grid !important; grid-template-columns: 1fr 1fr !important; grid-template-rows: none !important; grid-auto-flow: row !important; column-gap: 18px !important; row-gap: 5px !important; width: auto !important; max-width: none !important; position: static !important; transform: none !important; left: auto !important; right: auto !important; margin: 14px 0 0 !important; }
   .site-footer .footer-tag-lead, .site-footer .footer-tag-rest{ display: inline !important; position: static !important; }
 }
+/* Menu principal (arborescence) : 6 rubriques, menus déroulants, bouton « Prendre rendez-vous » */
+.nav-item{ position: relative; display: inline-flex; align-items: center; }
+.nav-dd{ position: absolute; top: 100%; left: 50%; transform: translateX(-50%); min-width: 250px; background: var(--ivory); border: 1px solid var(--pale-rose); border-radius: 12px; box-shadow: 0 14px 34px rgba(99,59,74,.12); padding: 8px 0; opacity: 0; visibility: hidden; transition: opacity .2s, visibility .2s; z-index: 60; }
+.nav-item:hover .nav-dd, .nav-item:focus-within .nav-dd{ opacity: 1; visibility: visible; }
+.nav-dd a{ display: block; padding: 9px 18px; font-size: .9rem; font-weight: 500; letter-spacing: 0; text-transform: none; white-space: nowrap; color: var(--plum); }
+.nav-dd a::after{ display: none; }
+.nav-dd a:hover{ color: #C75F62; }
+.nav-links a{ white-space: nowrap; }
+.nav-links a.nav-cta{ background: #C75F62; color: #FAF6F2 !important; padding: 9px 18px; border-radius: 24px; font-size: .78rem; line-height: 1.2; letter-spacing: .06em; }
+.nav-links a.nav-cta::after{ display: none; }
+.nav-links a.nav-cta:hover{ background: #C75F62; color: #FAF6F2 !important; }
+@media (max-width: 1100px){
+  .nav-dd{ position: static; transform: none; opacity: 1; visibility: visible; min-width: 0; background: transparent; border: 0; box-shadow: none; padding: 0 0 6px 14px; }
+  .nav-dd a{ padding: 6px 0; font-size: .95rem; }
+  .nav-item--dd{ flex-direction: column; align-items: flex-start; }
+}
+/* Menu : resserrement (dès 1025 px, quelle que soit la largeur) pour que les rubriques, le bouton et les langues tiennent sur une ligne */
+@media (min-width: 1025px){ .nav-links{ gap: 10px !important; } .nav-links > a, .nav-links .nav-item > a{ font-size: .68rem !important; letter-spacing: .03em !important; } .nav-links a.nav-cta{ font-size: .66rem !important; padding: 8px 12px !important; } .nav-langs{ margin-left: 12px !important; } }
+@media (min-width: 1181px) and (max-width: 1280px){ .nav-brand{ margin-right: 14px !important; } .nav-links{ gap: 7px !important; } .nav-links > a, .nav-links .nav-item > a{ font-size: .64rem !important; letter-spacing: .02em !important; } .nav-links a.nav-cta{ font-size: .62rem !important; padding: 8px 10px !important; } .nav-langs{ margin-left: 8px !important; } }
+/* Menu mobile : le panneau défile quand il dépasse la hauteur de l'écran (sinon les dernières rubriques et le bouton restent inaccessibles) */
+@media (max-width: 1180px){ .nav-links.open{ max-height: calc(100vh - var(--nav-h, 64px)); max-height: calc(100dvh - var(--nav-h, 64px)); overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; } }
+.pv-related{ max-width: 760px; margin: 48px auto 0; padding: 26px 26px 24px; background: var(--ivory); border: 1px solid var(--pale-rose); border-top: 3px solid var(--plum); border-radius: 14px; }
+.pv-related-title{ font-family: var(--serif); font-weight: 500; font-size: 1.3rem; color: var(--plum); margin: 0 0 12px; }
+.pv-related ul{ list-style: none; margin: 0 0 16px; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.pv-related a{ font-family: var(--sans); font-size: .95rem; line-height: 1.5; color: var(--plum); font-weight: 600; }
+.pv-related a:hover{ color: #C75F62; }
+.pv-related .pv-offer a{ color: #C75F62; }
+
+/* Fil d'Ariane */
+.article-bc{ gap: 8px; flex-wrap: wrap; opacity: 1; }
+.article-bc a{ color: var(--plum); opacity: .7; text-decoration: none; transition: opacity .2s, color .2s; }
+.article-bc a:hover{ opacity: 1; color: #C75F62; }
+.article-bc .bc-sep{ opacity: .45; }
+.bc-nav{ max-width: 1080px; margin: 0 auto; padding: 18px 20px 0; font-family: var(--sans); font-size: .85rem; display: flex; flex-wrap: wrap; gap: 8px; color: var(--plum); }
+.bc-nav a{ color: var(--plum); opacity: .7; text-decoration: none; }
+.bc-nav a:hover{ opacity: 1; color: #C75F62; }
+.bc-nav .bc-sep{ opacity: .45; }
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why is changing the software not enough?", "acceptedAnswer": {"@type": "Answer", "text": "Because you keep the same processes, the same roles, the same meetings where nobody decides. The result: AI is added on top of what exists. It does not change it. The surest sign that no transformation happened? There are still just as many approval meetings. A new tool that goes through exactly the same approval circuit, with the same people consulted in the same order, has transformed nothing. It sped up one link. The chain is just as long as before."}}, {"@type": "Question", "name": "Have economists already named this pattern?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, and for a long time. Back in 1987, economist Robert Solow observed, about the computerisation of companies: “You can see the computer age everywhere but in the productivity statistics.” Researchers Erik Brynjolfsson and Lorin Hitt later showed why. Technology only pays off when it comes with an equivalent investment in the organisation, often invisible in budgets: redesigning processes, redistributing decisions, evolving roles. Generative AI is doing exactly the same thing, only faster. The tool is installed in a few weeks. The organisation takes months, sometimes years, to follow, when it follows at all. That gap is what the estimate cited by RAND shows: only one project in five would cross it successfully."}}, {"@type": "Question", "name": "What three things does a real AI transformation have to touch?", "acceptedAnswer": {"@type": "Answer", "text": "If the decision stays at the same level as before, automating only speeds up a bottleneck that was already there. Doing a useless step faster does not make it useful. If nobody changes what they do with the time saved, that time fills up with something else, with no gain for the company. These three points are checked one by one: you can automate without deciding differently, or decide differently without any role changing. Either way, one is missing to call it a transformation. Without these three changes, the company quickly slips back into its old habits, with one more tool."}}, {"@type": "Question", "name": "In what order should you tackle these three points?", "acceptedAnswer": {"@type": "Answer", "text": "The order matters. First, who decides and when: until that is clear, nobody knows which process to redesign first. Then the process. Then the roles. A role does not change because someone announced it would. It changes because the actual work has changed shape. Starting at the end, by announcing that roles will change without having redesigned either the decision or the process, rarely gives the result you hoped for. The message changes, and the results stay the same."}}, {"@type": "Question", "name": "Where should you start, concretely?", "acceptedAnswer": {"@type": "Answer", "text": "Before any AI project, do not ask what the tool will do. Ask who will need to decide differently once it is in place. If the answer is “no one”, you are automating what exists, not transforming anything. That map fits on one page. Its shortness is exactly what makes it impossible to dodge. Do it in an hour, with the heads of the teams concerned: for each decision the tool touches, write down who makes it today, who will make it tomorrow, and when."}}, {"@type": "Question", "name": "What does this mean concretely for a mid-sized company’s leader?", "acceptedAnswer": {"@type": "Answer", "text": "A very direct consequence: the budget for an AI project should never stop at the licence and the technical integration. Keep part of it for the time you will spend with the teams working out who decides what, once the tool is in place. That time appears on no supplier invoice. Yet it is what decides whether your project joins the four in five that fail, or the fifth that succeeds. Six months after launch, run a simple test. Ask the team to describe how they work without mentioning the tool. If the description matches the old one line for line, with one extra step, nothing has been transformed. The software changed. The work did not."}}, {"@type": "Question", "name": "How can you quickly tell where your organisation stands?", "acceptedAnswer": {"@type": "Answer", "text": "Three checks are usually enough to see where an AI project stands. Answer them honestly, with the team that uses the tool every day, not only with the person who chose it. The gap between the two sets of answers is often a finding in itself. If you answer no three times, the project stands a good chance of joining the four in five that fail, according to the estimate cited by RAND, however good the chosen AI is. The reverse holds too: three yeses mean the company has started to change, even if the tool itself is modest. This test does not replace a full diagnosis. But it takes ten minutes, needs no consultant, and tells you straight away whether the topic deserves a closer look. It is the first question I would ask about an AI project already under way: not which tool you chose, but who, at your company, decides differently since it went live."}}, {"@type": "Question", "name": "How do you involve teams from the start?", "acceptedAnswer": {"@type": "Answer", "text": "Get them involved in describing the problem, before anyone talks about a solution. The people doing the work know the real sticking points, the ones no organisation chart shows. A transformation built with them is far more likely to be applied than one that is simply announced. Invite an open sceptic too. Their objections, heard early, cost far less than resistance discovered after launch. In practice: a one-hour workshop with four or five people from the field, and a single question: “what makes you lose the most time?”"}}, {"@type": "Question", "name": "How do you know an organisation has really changed?", "acceptedAnswer": {"@type": "Answer", "text": "Three concrete signs. Decisions are made by other people, or at another time. Processes have changed in practice. Roles have evolved, and some tasks have been dropped. If none of that has moved, the tool is installed, but the company has not changed. Ask the question again a few months later. Real change lasts. Cosmetic change fades as soon as attention drops. A simple test: ask a newcomer how things work here. If they describe the old way of doing things, nothing has really changed."}}, {"@type": "Question", "name": "What do you do when the transformation stalls?", "acceptedAnswer": {"@type": "Answer", "text": "Go back to the starting question: what was supposed to change, and what is blocking it? The answer is almost always a decision not taken, a process not redesigned or a role not clarified. Adding a tool at that point makes the problem worse. First remove the obstacle within the organisation. Write the obstacle down in black and white, with an owner and a date. A blockage nobody owns ends up worked around rather than removed. A checkpoint every two weeks is enough to see whether the obstacle has moved."}}, {"@type": "Question", "name": "What role does the leader play over time?", "acceptedAnswer": {"@type": "Answer", "text": "Holding the course, and making the choices visible: what continues, what stops, what we will not do. A transformation lasts months, and the leader’s attention is one of its scarcest resources. A leader who stays present, without steering everything, gives the company permission to change. A few minutes set aside for the topic at every executive committee meeting are enough to keep that signal alive. The strongest signal is still the example: a leader who applies the new way of working themselves is worth every speech."}}], "inLanguage": "en-US"}
@@ -1213,15 +1250,7 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
       <img src="assets/logo-prune-final.webp" alt="EXEC'IA logo" class="nav-logo-rond" width="1254" height="1254" decoding="async">
       <img src="assets/logo-execia-bords-prune-240.webp" alt="EXEC'IA Consulting" class="nav-logo-full" width="240" height="113" fetchpriority="high" decoding="async">
     </a>
-    <div class="nav-links">
-      <a href="index-en.html">Home</a>
-      <a href="expertise-en.html">Expertise</a>
-      <a href="offres-en.html">Offers</a>
-      <a href="a-propos-en.html">About</a>
-      <a href="temoignages-en.html">Testimonials</a>
-      <a href="contact-en.html">Contact</a>
-      <a href="perspectives-en.html" class="active">Blog</a>
-    </div>
+    <div class="nav-links"><a href="index-en.html">Home</a><div class="nav-item nav-item--dd"><a href="offres-en.html">AI support</a><div class="nav-dd"><a href="offres-en.html#diagnostic">AI strategic diagnostic</a><a href="offres-en.html#conseil">Strategic advisory</a><a href="offres-en.html#transformation">AI transformation</a><a href="offres-en.html#formation">AI training</a></div></div><div class="nav-item nav-item--dd"><a href="solutions-en.html">Digital &amp; AI solutions</a><div class="nav-dd"><a href="agents-ia-en.html">Business AI agents</a><a href="solutions-en.html#automatisation">Process automation</a><a href="solutions-en.html#operationnelles">Operational solutions</a><a href="solutions-en.html#sites">Website creation</a></div></div><div class="nav-item nav-item--dd"><a href="realisations-en.html">Achievements</a><div class="nav-dd"><a href="realisations-en.html#clients">Client projects</a><a href="realisations-en.html#demos">Demonstrations and tools</a><a href="realisations-en.html#usages">Illustrative use cases</a><a href="temoignages-en.html">Testimonials</a></div></div><a href="perspectives-en.html" class="active">Insights</a><a href="a-propos-en.html">About</a><a href="contact-en.html" class="nav-cta">Book an appointment</a></div>
     <div class="nav-langs">
       <a href="perspective-transformation-echoue-rarement-technologie.html" class="nav-lang">FR</a>
       <span class="nav-lang nav-lang-active">EN</span>
@@ -1238,8 +1267,8 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
   <div class="wrap">
     <div class="article-header-grid">
       <div class="article-header-text">
-        <a href="perspectives.html" class="article-back">← All articles</a>
-        <span class="article-meta">Blog • Transformation</span>
+        <nav class="article-back article-bc" aria-label="Breadcrumb"><a href="index-en.html">Home</a><span class="bc-sep" aria-hidden="true">›</span><a href="perspectives-en.html">Insights</a></nav>
+        <span class="article-meta">Insights • Transformation</span>
         <h1 class="article-title"><span class="ink-accent"><span class="ia-rose">AI</span></span> transformation rarely fails<br>because of the technology.<br>It fails when the organisation<br>has not changed, only the tool.</h1>
         <p class="article-source-note article-source-note--linkedin"><img width="72" height="72" src="assets/linkedin-logo.png" alt="" class="article-linkedin-icon">Article developed from my <span class="ink-accent">LinkedIn</span> post (<time datetime="2026-09-09">9 September 2026</time>)<br>Updated on <time datetime="2026-10-01">1 October 2026</time></p>
         <details class="article-tldr">
@@ -1446,12 +1475,13 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
       <p class="article-related-offer">From reflection to action: <a href="offres-en.html#offres">explore EXEC’<span class="ia-rose">IA</span> services →</a></p>
     </nav>
     <div class="article-cta-wrap">
-      <a href="https://calendly.com/exec-ia" target="_blank" rel="noopener" class="btn btn-rose article-cta-btn">Discuss your situation <span class="btn-arrow">→</span></a>
+      <a href="https://calendly.com/exec-ia" target="_blank" rel="noopener" class="btn btn-rose article-cta-btn">Book an appointment <span class="btn-arrow">→</span></a>
     </div>
   </div>
 </main>
 
 <!-- ═══ FOOTER ════════════════════════════════════════════════ -->
+<aside class="pv-related" aria-label="Related articles"><p class="pv-related-title">Related articles</p><ul><li><a href="perspective-toutes-decisions-ne-se-deleguent-pas-en.html">Which decisions should a leader never hand over to AI?</a></li><li><a href="perspective-probleme-nest-pas-outils-mais-arbitrage-en.html">More AI tools do not mean more impact.</a></li></ul><p class="pv-offer"><a href="offres-en.html#diagnostic">See the AI strategic diagnostic →</a></p></aside>
 <footer class="snap-page site-footer">
   <div class="wrap footer-grid">
     <div class="footer-brand">
@@ -1463,12 +1493,13 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
     <div class="footer-col footer-col--site">
       <span class="footer-col-title">Site</span>
       <a href="index-en.html">Home</a>
-      <a href="expertise-en.html">Expertise</a>
-      <a href="offres-en.html">Offers</a>
+      <a href="offres-en.html">AI support</a>
+      <a href="solutions-en.html">Digital &amp; AI solutions</a>
+      <a href="realisations-en.html">Achievements</a>
       <a href="a-propos-en.html">About</a>
       <a href="temoignages-en.html">Testimonials</a>
       <a href="contact-en.html">Contact</a>
-      <a href="perspectives-en.html">Blog</a>
+      <a href="perspectives-en.html">Insights</a><a href="ressources-en.html">Resources</a>
     <div class="footer-persp-grid">
     <a href="perspective-entreprise-utilise-deja-ia-en.html" class="footer-persp-link">→ <span class="art-star" aria-label="Most-read article">★</span>Adopting <span class="ink-accent"><span class="ia-rose">AI</span></span> vs. creating value</a>
     <a href="perspective-toutes-decisions-ne-se-deleguent-pas-en.html" class="footer-persp-link">→ <span class="art-star" aria-label="Most-read article">★</span>Not every decision can be delegated</a>
@@ -1511,6 +1542,6 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
   </div>
 </footer>
 
-<script src="assets/script.js?v=39"></script>
+<script src="assets/script.js?v=40"></script>
 </body>
 </html>

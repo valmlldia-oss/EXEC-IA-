@@ -10,7 +10,7 @@
   <meta name="keywords" content="adhésion IA, conduite du changement IA, transformation IA, dirigeants, EXEC'IA, Valérie Mailland">
   <meta name="author" content="Valérie Mailland — EXEC'IA">
   <meta property="og:title" content="Le budget IA n’est pas le sujet. L’adhésion, si.">
-  <meta property="og:description" content="Une réflexion de Valérie Mailland — EXEC'IA Blog.">
+  <meta property="og:description" content="Une réflexion de Valérie Mailland — EXEC'IA Perspectives.">
   <meta property="og:url" content="https://exec-ia.ai/perspective-budget-ia-adhesion-equipes.html">
   <meta property="og:type" content="article">
   <meta name="robots" content="index, follow">
@@ -20,7 +20,7 @@
   <link rel="alternate" hreflang="es" href="https://exec-ia.ai/perspective-budget-ia-adhesion-equipes-es.html" />
   <link rel="alternate" hreflang="x-default" href="https://exec-ia.ai/perspective-budget-ia-adhesion-equipes.html" />
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://exec-ia.ai/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://exec-ia.ai/perspectives.html"}, {"@type": "ListItem", "position": 3, "name": "Le budget IA n’est pas le sujet, l’adhésion si", "item": "https://exec-ia.ai/perspective-budget-ia-adhesion-equipes.html"}]}
+  {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://exec-ia.ai/"}, {"@type": "ListItem", "position": 2, "name": "Perspectives", "item": "https://exec-ia.ai/perspectives.html"}, {"@type": "ListItem", "position": 3, "name": "Le budget IA n’est pas le sujet, l’adhésion si", "item": "https://exec-ia.ai/perspective-budget-ia-adhesion-equipes.html"}]}
   </script>
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Le budget IA n’est pas le sujet, l’adhésion si", "description": "Un budget IA validé ne suffit pas : encore faut-il que les équipes aient envie de s’en servir. Trois leviers concrets pour créer l’adhésion.", "image": "https://exec-ia.ai/assets/perspectives/budget-adhesion.jpg", "datePublished": "2026-09-25", "dateModified": "2026-10-01", "author": {"@type": "Person", "@id": "https://exec-ia.ai/#valerie-mailland", "name": "Valérie Mailland", "jobTitle": "Fondatrice & Présidente", "image": "https://exec-ia.ai/assets/photo-valerie.jpg", "url": "https://exec-ia.ai/a-propos.html", "sameAs": ["https://www.linkedin.com/in/val%C3%A9rie-mailland"]}, "publisher": {"@type": "Organization", "@id": "https://exec-ia.ai/#organization", "name": "EXEC'IA Consulting", "url": "https://exec-ia.ai/", "logo": {"@type": "ImageObject", "url": "https://exec-ia.ai/assets/logo-execia-bords-prune.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://exec-ia.ai/perspective-budget-ia-adhesion-equipes.html"}, "inLanguage": "fr-FR", "wordCount": 1518, "keywords": ["adhésion IA", "conduite du changement IA", "transformation IA", "dirigeants", "EXEC'IA", "Valérie Mailland"], "citation": [{"@type": "CreativeWork", "name": "HubSpot, « AI Trends for Marketers 2025 »", "url": "https://offers.hubspot.com/ai-marketing"}, {"@type": "CreativeWork", "name": "Gallup, « Organizational AI Adoption Jumps Six Points », 2026", "url": "https://www.gallup.com/workplace/712736/organizational-adoption-jumps-six-points.aspx"}]}
@@ -30,7 +30,7 @@
   <meta property="og:site_name" content="EXEC'IA" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Le budget IA n’est pas le sujet. L’adhésion, si." />
-  <meta name="twitter:description" content="Une réflexion de Valérie Mailland — EXEC'IA Blog." />
+  <meta name="twitter:description" content="Une réflexion de Valérie Mailland — EXEC'IA Perspectives." />
   <meta name="twitter:image" content="https://exec-ia.ai/assets/perspectives/budget-adhesion.jpg" />
   <style id="css-page">
 @font-face{font-family:"Cormorant Garamond";font-style:italic;font-weight:400;font-display:swap;src:url(assets/fonts/cormorantgaramond-italic-400-cyrillic-ext.woff2) format("woff2");unicode-range:U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F}
@@ -1185,6 +1185,43 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
   .site-footer .footer-persp-grid{ display: grid !important; grid-template-columns: 1fr 1fr !important; grid-template-rows: none !important; grid-auto-flow: row !important; column-gap: 18px !important; row-gap: 5px !important; width: auto !important; max-width: none !important; position: static !important; transform: none !important; left: auto !important; right: auto !important; margin: 14px 0 0 !important; }
   .site-footer .footer-tag-lead, .site-footer .footer-tag-rest{ display: inline !important; position: static !important; }
 }
+/* Menu principal (arborescence) : 6 rubriques, menus déroulants, bouton « Prendre rendez-vous » */
+.nav-item{ position: relative; display: inline-flex; align-items: center; }
+.nav-dd{ position: absolute; top: 100%; left: 50%; transform: translateX(-50%); min-width: 250px; background: var(--ivory); border: 1px solid var(--pale-rose); border-radius: 12px; box-shadow: 0 14px 34px rgba(99,59,74,.12); padding: 8px 0; opacity: 0; visibility: hidden; transition: opacity .2s, visibility .2s; z-index: 60; }
+.nav-item:hover .nav-dd, .nav-item:focus-within .nav-dd{ opacity: 1; visibility: visible; }
+.nav-dd a{ display: block; padding: 9px 18px; font-size: .9rem; font-weight: 500; letter-spacing: 0; text-transform: none; white-space: nowrap; color: var(--plum); }
+.nav-dd a::after{ display: none; }
+.nav-dd a:hover{ color: #C75F62; }
+.nav-links a{ white-space: nowrap; }
+.nav-links a.nav-cta{ background: #C75F62; color: #FAF6F2 !important; padding: 9px 18px; border-radius: 24px; font-size: .78rem; line-height: 1.2; letter-spacing: .06em; }
+.nav-links a.nav-cta::after{ display: none; }
+.nav-links a.nav-cta:hover{ background: #C75F62; color: #FAF6F2 !important; }
+@media (max-width: 1100px){
+  .nav-dd{ position: static; transform: none; opacity: 1; visibility: visible; min-width: 0; background: transparent; border: 0; box-shadow: none; padding: 0 0 6px 14px; }
+  .nav-dd a{ padding: 6px 0; font-size: .95rem; }
+  .nav-item--dd{ flex-direction: column; align-items: flex-start; }
+}
+/* Menu : resserrement (dès 1025 px, quelle que soit la largeur) pour que les rubriques, le bouton et les langues tiennent sur une ligne */
+@media (min-width: 1025px){ .nav-links{ gap: 10px !important; } .nav-links > a, .nav-links .nav-item > a{ font-size: .68rem !important; letter-spacing: .03em !important; } .nav-links a.nav-cta{ font-size: .66rem !important; padding: 8px 12px !important; } .nav-langs{ margin-left: 12px !important; } }
+@media (min-width: 1181px) and (max-width: 1280px){ .nav-brand{ margin-right: 14px !important; } .nav-links{ gap: 7px !important; } .nav-links > a, .nav-links .nav-item > a{ font-size: .64rem !important; letter-spacing: .02em !important; } .nav-links a.nav-cta{ font-size: .62rem !important; padding: 8px 10px !important; } .nav-langs{ margin-left: 8px !important; } }
+/* Menu mobile : le panneau défile quand il dépasse la hauteur de l'écran (sinon les dernières rubriques et le bouton restent inaccessibles) */
+@media (max-width: 1180px){ .nav-links.open{ max-height: calc(100vh - var(--nav-h, 64px)); max-height: calc(100dvh - var(--nav-h, 64px)); overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; } }
+.pv-related{ max-width: 760px; margin: 48px auto 0; padding: 26px 26px 24px; background: var(--ivory); border: 1px solid var(--pale-rose); border-top: 3px solid var(--plum); border-radius: 14px; }
+.pv-related-title{ font-family: var(--serif); font-weight: 500; font-size: 1.3rem; color: var(--plum); margin: 0 0 12px; }
+.pv-related ul{ list-style: none; margin: 0 0 16px; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.pv-related a{ font-family: var(--sans); font-size: .95rem; line-height: 1.5; color: var(--plum); font-weight: 600; }
+.pv-related a:hover{ color: #C75F62; }
+.pv-related .pv-offer a{ color: #C75F62; }
+
+/* Fil d'Ariane */
+.article-bc{ gap: 8px; flex-wrap: wrap; opacity: 1; }
+.article-bc a{ color: var(--plum); opacity: .7; text-decoration: none; transition: opacity .2s, color .2s; }
+.article-bc a:hover{ opacity: 1; color: #C75F62; }
+.article-bc .bc-sep{ opacity: .45; }
+.bc-nav{ max-width: 1080px; margin: 0 auto; padding: 18px 20px 0; font-family: var(--sans); font-size: .85rem; display: flex; flex-wrap: wrap; gap: 8px; color: var(--plum); }
+.bc-nav a{ color: var(--plum); opacity: .7; text-decoration: none; }
+.bc-nav a:hover{ opacity: 1; color: #C75F62; }
+.bc-nav .bc-sep{ opacity: .45; }
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Pourquoi l’adhésion pèse-t-elle plus lourd que le budget ?", "acceptedAnswer": {"@type": "Answer", "text": "Parce qu’un outil ne change jamais une organisation tout seul. Ce sont vos équipes qui décident, chaque jour, de l’utiliser ou de le contourner. Vous pouvez signer le meilleur contrat du marché : si personne ne l’ouvre le lundi matin, vous avez acheté une licence, pas un changement. La résistance ne vient presque jamais de la technologie. Elle vient des habitudes qu’on lui demande de remplacer. Une habitude, c’est des années de gestes qui marchent. On ne la remplace pas par une annonce. On la remplace par une meilleure façon de faire, que l’équipe a elle-même testée."}}, {"@type": "Question", "name": "Que révèle l’écart entre investissement et envie d’utiliser l’outil ?", "acceptedAnswer": {"@type": "Answer", "text": "Deux horloges tournent en parallèle. La première, c’est celle de la décision : un budget se vote en quelques semaines, un outil se déploie en quelques mois. La seconde, c’est celle des habitudes : elles changent au rythme des équipes, pas de l’agenda du comité de direction. Quand ces deux horloges ne sont pas réglées ensemble, l’entreprise paie pour un usage qui n’existe pas encore. Le tableau de bord dit que l’outil est déployé. Le terrain dit qu’il est ouvert de temps en temps, puis oublié. Mon conseil : avant de parler de budget, demandez combien de temps il faudra à vos équipes pour changer leurs gestes. C’est souvent plus long que le déploiement."}}, {"@type": "Question", "name": "Pourquoi le budget dépensé est-il un mauvais indicateur ?", "acceptedAnswer": {"@type": "Answer", "text": "Parce qu’il mesure une intention, pas un changement. Un budget dépensé prouve qu’une décision a été prise. Il ne dit rien de ce que les équipes font, lundi matin, différemment d’hier. Le bon indicateur est l’usage régulier : combien de personnes se servent de l’outil chaque semaine, pour quelle tâche précise, et qu’ont-elles cessé de faire à la main ?"}}, {"@type": "Question", "name": "Comment mesurer l’adhésion, concrètement ?", "acceptedAnswer": {"@type": "Answer", "text": "Trois éléments suffisent pour commencer : qui l’utilise chaque semaine et pour quoi, qui l’a essayé puis abandonné et pourquoi, et quelle tâche a réellement disparu ou raccourci. Ces réponses se recueillent par une conversation de vingt minutes avec quelques membres de l’équipe, pas par un formulaire de satisfaction. Elles donnent une image plus fidèle que n’importe quelle statistique de connexion."}}, {"@type": "Question", "name": "Pourquoi une équipe adopte-t-elle un outil ?", "acceptedAnswer": {"@type": "Answer", "text": "Une équipe adopte un outil quand elle en voit l’intérêt pour elle-même, pas seulement pour l’entreprise. Le gain doit se sentir dans le quotidien : une tâche plus courte, une erreur en moins, un dossier préparé plus vite. Quand le bénéfice n’est visible que dans un tableau de bord de direction, l’outil est vécu comme une charge supplémentaire. Le premier travail consiste donc à traduire le bénéfice attendu dans le langage de celles et ceux qui l’utiliseront."}}, {"@type": "Question", "name": "Quelles résistances rencontre-t-on le plus souvent ?", "acceptedAnswer": {"@type": "Answer", "text": "Trois reviennent. 1) La peur de mal faire, surtout quand l’outil semble ne laisser aucune place à l’erreur. 2) La crainte d’être remplacé, qui s’exprime rarement de face. 3) L’impression que l’outil ajoute une étape au lieu d’en supprimer une. Chacune appelle sa réponse : un droit à l’essai, une parole claire de la direction sur ce qui ne changera pas, et une démonstration sur une vraie tâche plutôt que sur un exemple de catalogue."}}, {"@type": "Question", "name": "Pourquoi expliquer avant d’équiper ?", "acceptedAnswer": {"@type": "Answer", "text": "🎯 Quels leviers font vraiment la différence ? Trois, du plus simple au plus exigeant. 1) Expliquer avant d’équiper. 2) Former sur les usages. 3) Prouver tôt. Le pourquoi passe toujours avant l’outil. Une équipe qui comprend ce que l’outil change dans son travail, et ce qu’il ne change pas, l’adopte plus facilement qu’une équipe à qui l’on annonce un déploiement. Expliquer, ça prend une réunion. Ne pas expliquer, ça coûte des mois de résistance silencieuse."}}, {"@type": "Question", "name": "Comment former sans noyer les équipes ?", "acceptedAnswer": {"@type": "Answer", "text": "En partant des usages du quotidien, pas de la liste des fonctionnalités. Une heure sur une tâche que la personne fait chaque semaine vaut mieux qu’une journée de démonstration générale."}}, {"@type": "Question", "name": "Quand étendre l’outil à toute l’organisation ?", "acceptedAnswer": {"@type": "Answer", "text": "Après avoir prouvé un résultat concret, tôt, sur un périmètre restreint. Ce résultat devient l’argument, à la place de la promesse. L’extension se fait alors avec des équipes qui ont déjà vu ce que l’outil apporte."}}, {"@type": "Question", "name": "Que faire quand une équipe contourne l’outil ?", "acceptedAnswer": {"@type": "Answer", "text": "Commencer par comprendre, avant de rappeler la règle. Un contournement n’est presque jamais de la mauvaise volonté. Il révèle un besoin que l’outil ne couvre pas, une étape trop lourde, ou une habitude que personne n’a aidé à transformer. Une équipe qui contourne un outil dit, sans le formuler, ce qu’elle attend de lui. C’est une information précieuse, à condition de la recueillir sans chercher de coupable."}}, {"@type": "Question", "name": "Quel rôle le dirigeant joue-t-il dans l’adhésion ?", "acceptedAnswer": {"@type": "Answer", "text": "Un rôle de démonstration plus que de décision. Un dirigeant qui utilise lui-même l’outil, qui dit à quoi il lui sert et où il l’a trouvé décevant, donne aux équipes la permission d’essayer et de dire ce qui ne marche pas. À l’inverse, un outil imposé sans être utilisé par ceux qui l’imposent envoie un message contraire à celui du discours."}}, {"@type": "Question", "name": "Quelles erreurs éviter dans un déploiement ?", "acceptedAnswer": {"@type": "Answer", "text": "Quatre reviennent. 1) Déployer partout en même temps. 2) Former sur la liste des fonctionnalités. 3) Annoncer sans expliquer le pourquoi. 4) Juger le succès au budget consommé plutôt qu’à l’usage réel. Chacune a la même origine : traiter l’outil comme un achat à réussir plutôt que comme un changement de pratique à accompagner."}}, {"@type": "Question", "name": "Comment lancer un pilote de trente jours ?", "acceptedAnswer": {"@type": "Answer", "text": "Première semaine : choisir une équipe volontaire et une tâche qui revient chaque semaine, puis expliquer pourquoi. Deuxième semaine : former sur cette tâche uniquement. Troisième semaine : laisser l’équipe l’utiliser et noter ce qui gêne. Quatrième semaine : mesurer le résultat, décider de continuer, d’ajuster ou d’arrêter. À la fin du mois, le dirigeant dispose de quelque chose que le budget seul ne lui donnait pas : une preuve, dans son organisation, de ce que l’outil apporte ou non."}}, {"@type": "Question", "name": "Quel rôle donner aux managers de proximité ?", "acceptedAnswer": {"@type": "Answer", "text": "Un rôle central. Ce sont eux qui traduisent la décision en pratique quotidienne. Un manager convaincu donne l’exemple, protège le temps d’apprentissage et remonte ce qui bloque. Un manager qui n’a pas été associé devient, sans le vouloir, le premier frein. Avant de déployer, il vaut mieux consacrer une séance courte à ces relais : ce qui change pour eux, ce qu’ils diront à leurs équipes, et à qui ils s’adresseront quand une difficulté apparaît."}}, {"@type": "Question", "name": "Comment savoir si l’adhésion progresse ?", "acceptedAnswer": {"@type": "Answer", "text": "Trois signes concrets. 1) Les mêmes personnes reviennent à l’outil d’une semaine sur l’autre. 2) Elles en parlent spontanément quand elles décrivent leur travail. 3) Elles proposent elles-mêmes de nouveaux usages. À l’inverse, un usage qui reste concentré sur une ou deux personnes, ou qui disparaît dès que l’animation s’arrête, signale une adhésion de façade. Ces signaux se relèvent par l’observation et la conversation, sans outil de mesure supplémentaire."}}, {"@type": "Question", "name": "Que dire à un dirigeant qui veut aller vite ?", "acceptedAnswer": {"@type": "Answer", "text": "Que la vitesse se gagne par l’adhésion, pas par la précipitation. Un déploiement rapide sur une équipe qui n’a pas adhéré coûte du temps deux fois : pour l’installer, puis pour le relancer. Un pilote court, avec un résultat visible, convainc plus vite qu’un plan de communication. Le bon calendrier est celui où chaque étape prouve quelque chose à l’équipe suivante."}}, {"@type": "Question", "name": "Quel rôle jouent les premiers utilisateurs ?", "acceptedAnswer": {"@type": "Answer", "text": "Les premiers utilisateurs convaincus sont les meilleurs relais. Leur retour d’expérience, dit avec leurs mots, pèse plus qu’une présentation de la direction. Identifiez-les tôt, donnez-leur un peu de temps pour approfondir, et laissez-les montrer à leurs collègues ce qui marche et ce qui ne marche pas. Veillez à ne pas en faire des experts isolés : leur rôle est de partager, pas de porter seuls l’usage pour toute l’équipe."}}, {"@type": "Question", "name": "Comment garder l’élan après le lancement ?", "acceptedAnswer": {"@type": "Answer", "text": "Un usage qui n’est plus animé s’éteint. Prévoyez un rendez-vous court et régulier pour partager ce qui a fonctionné, ce qui a gêné et ce que chacun a essayé. Quinze minutes suffisent, à condition qu’elles aient lieu. Mettez en avant un résultat concret plutôt qu’un chiffre d’usage : une tâche raccourcie, un dossier livré plus tôt. C’est ce que les autres équipes retiendront."}}], "inLanguage": "fr-FR"}
@@ -1205,15 +1242,7 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
       <img src="assets/logo-prune-final.webp" alt="EXEC'IA logo" class="nav-logo-rond" width="1254" height="1254" decoding="async">
       <img src="assets/logo-execia-bords-prune-240.webp" alt="EXEC'IA Consulting" class="nav-logo-full" width="240" height="113" fetchpriority="high" decoding="async">
     </a>
-    <div class="nav-links">
-      <a href="/">Accueil</a>
-      <a href="expertise.html">Expertise</a>
-      <a href="offres.html">Offres</a>
-      <a href="a-propos.html">À propos</a>
-      <a href="temoignages.html">Témoignages</a>
-      <a href="contact.html">Contact</a>
-      <a href="perspectives.html" class="active">Blog</a>
-    </div>
+    <div class="nav-links"><a href="/">Accueil</a><div class="nav-item nav-item--dd"><a href="offres.html">Accompagnement IA</a><div class="nav-dd"><a href="offres.html#diagnostic">Diagnostic stratégique IA</a><a href="offres.html#conseil">Conseil stratégique / Advisory</a><a href="offres.html#transformation">Transformation IA</a><a href="offres.html#formation">Formation IA</a></div></div><div class="nav-item nav-item--dd"><a href="solutions.html">Solutions digitales &amp; IA</a><div class="nav-dd"><a href="agents-ia.html">Agents IA métiers</a><a href="solutions.html#automatisation">Automatisation des processus</a><a href="solutions.html#operationnelles">Solutions opérationnelles</a><a href="solutions.html#sites">Création de sites web</a></div></div><div class="nav-item nav-item--dd"><a href="realisations.html">Réalisations</a><div class="nav-dd"><a href="realisations.html#clients">Projets clients</a><a href="realisations.html#demos">Démonstrations et outils</a><a href="realisations.html#usages">Cas d’usage illustratifs</a><a href="temoignages.html">Témoignages clients</a></div></div><a href="perspectives.html" class="active">Perspectives</a><a href="a-propos.html">À propos</a><a href="contact.html" class="nav-cta">Prendre rendez-vous</a></div>
     <div class="nav-langs">
       <span class="nav-lang nav-lang-active">FR</span>
       <a href="perspective-budget-ia-adhesion-equipes-en.html" class="nav-lang">EN</a>
@@ -1230,8 +1259,8 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
   <div class="wrap">
     <div class="article-header-grid">
       <div class="article-header-text">
-        <a href="perspectives.html" class="article-back">← Tous les articles</a>
-        <span class="article-meta">Blog • Adhésion</span>
+        <nav class="article-back article-bc" aria-label="Fil d'Ariane"><a href="/">Accueil</a><span class="bc-sep" aria-hidden="true">›</span><a href="perspectives.html">Perspectives</a></nav>
+        <span class="article-meta">Perspectives • Adhésion</span>
         <h1 class="article-title">Le budget <span class="ink-accent"><span class="ia-rose">IA</span></span> n’est pas le sujet.<br>L’adhésion, si.</h1>
         <p class="article-source-note"><time datetime="2026-09-25">25 septembre 2026</time> · <span>Mis à jour le 1 octobre 2026</span></p>
         <details class="article-tldr">
@@ -1463,12 +1492,13 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
       <p class="article-related-offer">Passer de la réflexion à l’action&nbsp;: <a href="offres.html#offres">découvrir les offres EXEC’<span class="ia-rose">IA</span> →</a></p>
     </nav>
     <div class="article-cta-wrap">
-      <a href="https://calendly.com/exec-ia" target="_blank" rel="noopener" class="btn btn-rose article-cta-btn">Échanger sur votre situation <span class="btn-arrow">→</span></a>
+      <a href="https://calendly.com/exec-ia" target="_blank" rel="noopener" class="btn btn-rose article-cta-btn">Prendre rendez-vous <span class="btn-arrow">→</span></a>
     </div>
   </div>
 </main>
 
 <!-- ═══ FOOTER ═══════════════════════════════════════════════ -->
+<aside class="pv-related" aria-label="Articles connexes"><p class="pv-related-title">Articles connexes</p><ul><li><a href="perspective-projet-ia-peut-il-etre-finance.html">Votre projet IA peut-il être financé&nbsp;? Oui, mais pas forcément celui que vous pensez.</a></li><li><a href="perspective-forward-deployed-engineer-pme.html">Les géants de l’IA s’installent chez leurs clients. Et votre PME&nbsp;?</a></li></ul><p class="pv-offer"><a href="offres.html#transformation">Voir la transformation IA →</a></p></aside>
 <footer class="snap-page site-footer">
   <div class="wrap footer-grid">
     <div class="footer-brand">
@@ -1480,12 +1510,13 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
     <div class="footer-col footer-col--site">
       <span class="footer-col-title">Le site</span>
       <a href="/">Accueil</a>
-      <a href="expertise.html">Expertise</a>
-      <a href="offres.html">Offres</a>
+      <a href="offres.html">Accompagnement IA</a>
+      <a href="solutions.html">Solutions digitales &amp; IA</a>
+      <a href="realisations.html">Réalisations</a>
       <a href="a-propos.html">À propos</a>
       <a href="temoignages.html">Témoignages</a>
       <a href="contact.html">Contact</a>
-      <a href="perspectives.html">Blog</a>
+      <a href="perspectives.html">Perspectives</a><a href="ressources.html">Ressources</a>
     <div class="footer-persp-grid">
     <a href="perspective-entreprise-utilise-deja-ia.html" class="footer-persp-link">→ <span class="art-star" aria-label="Article le plus lu">★</span>Votre entreprise utilise déjà l’<span class="ink-accent"><span class="ia-rose">IA</span></span></a>
     <a href="perspective-toutes-decisions-ne-se-deleguent-pas.html" class="footer-persp-link">→ <span class="art-star" aria-label="Article le plus lu">★</span>Toutes les décisions ne se délèguent pas</a>
@@ -1528,6 +1559,6 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
   </div>
 </footer>
 
-<script src="assets/script.js?v=39"></script>
+<script src="assets/script.js?v=40"></script>
 </body>
 </html>

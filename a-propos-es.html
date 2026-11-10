@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/favicon.png">
-  <title>EXEC'IA · Perfil — Valérie Mailland, fundadora</title>
-  <meta name="description" content="Valérie Mailland: más de 20 años junto a directivos, 18 de ellos en coordinación ejecutiva en McKinsey &amp; Company, certificada en IA.">
+  <title>EXEC'IA · Perfil: fundadora, metodología y compromisos</title>
+  <meta name="description" content="Valérie Mailland: más de 20 años junto a directivos, 18 de ellos en coordinación ejecutiva en McKinsey &amp; Company, certificada en IA. Metodología y compromisos.">
   <meta name="keywords" content="Valérie Mailland, trayectoria, McKinsey, IA, directivos, EXEC'IA, consultora IA">
   <meta name="author" content="Valérie Mailland — EXEC'IA">
-  <meta property="og:title" content="EXEC'IA · Perfil — Valérie Mailland">
-  <meta property="og:description" content="Más de 20 años junto a directivos, 18 de ellos en coordinación ejecutiva en McKinsey & Company, certificada en IA. Una trayectoria singular de Buenos Aires a la Inteligencia Artificial.">
+  <meta property="og:title" content="EXEC'IA · Perfil: fundadora, metodología y compromisos">
+  <meta property="og:description" content="Valérie Mailland: más de 20 años junto a directivos, 18 de ellos en coordinación ejecutiva en McKinsey &amp; Company, certificada en IA. Metodología y compromisos.">
   <meta property="og:url" content="https://exec-ia.ai/a-propos-es.html">
   <meta property="og:type" content="website">
   <meta name="robots" content="index, follow">
@@ -29,8 +29,8 @@
   <meta property="og:locale" content="es_ES" />
   <meta property="og:site_name" content="EXEC'IA" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="EXEC'IA · Perfil — Valérie Mailland" />
-  <meta name="twitter:description" content="Más de 20 años junto a directivos, 18 de ellos en coordinación ejecutiva en McKinsey & Company, certificada en IA." />
+  <meta name="twitter:title" content="EXEC'IA · Perfil: fundadora, metodología y compromisos" />
+  <meta name="twitter:description" content="Valérie Mailland: más de 20 años junto a directivos, 18 de ellos en coordinación ejecutiva en McKinsey &amp; Company, certificada en IA. Metodología y compromisos." />
   <meta name="twitter:image" content="https://exec-ia.ai/assets/photo-valerie.jpg" />
   <style id="css-page">
 @font-face{font-family:"Cormorant Garamond";font-style:italic;font-weight:400;font-display:swap;src:url(assets/fonts/cormorantgaramond-italic-400-cyrillic-ext.woff2) format("woff2");unicode-range:U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F}
@@ -1715,6 +1715,351 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
   .site-footer .footer-persp-grid{ display: grid !important; grid-template-columns: 1fr 1fr !important; grid-template-rows: none !important; grid-auto-flow: row !important; column-gap: 18px !important; row-gap: 5px !important; width: auto !important; max-width: none !important; position: static !important; transform: none !important; left: auto !important; right: auto !important; margin: 14px 0 0 !important; }
   .site-footer .footer-tag-lead, .site-footer .footer-tag-rest{ display: inline !important; position: static !important; }
 }
+/* Menu principal (arborescence) : 6 rubriques, menus déroulants, bouton « Prendre rendez-vous » */
+.nav-item{ position: relative; display: inline-flex; align-items: center; }
+.nav-dd{ position: absolute; top: 100%; left: 50%; transform: translateX(-50%); min-width: 250px; background: var(--ivory); border: 1px solid var(--pale-rose); border-radius: 12px; box-shadow: 0 14px 34px rgba(99,59,74,.12); padding: 8px 0; opacity: 0; visibility: hidden; transition: opacity .2s, visibility .2s; z-index: 60; }
+.nav-item:hover .nav-dd, .nav-item:focus-within .nav-dd{ opacity: 1; visibility: visible; }
+.nav-dd a{ display: block; padding: 9px 18px; font-size: .9rem; font-weight: 500; letter-spacing: 0; text-transform: none; white-space: nowrap; color: var(--plum); }
+.nav-dd a::after{ display: none; }
+.nav-dd a:hover{ color: #C75F62; }
+.nav-links a{ white-space: nowrap; }
+.nav-links a.nav-cta{ background: #C75F62; color: #FAF6F2 !important; padding: 9px 18px; border-radius: 24px; font-size: .78rem; line-height: 1.2; letter-spacing: .06em; }
+.nav-links a.nav-cta::after{ display: none; }
+.nav-links a.nav-cta:hover{ background: #C75F62; color: #FAF6F2 !important; }
+@media (max-width: 1100px){
+  .nav-dd{ position: static; transform: none; opacity: 1; visibility: visible; min-width: 0; background: transparent; border: 0; box-shadow: none; padding: 0 0 6px 14px; }
+  .nav-dd a{ padding: 6px 0; font-size: .95rem; }
+  .nav-item--dd{ flex-direction: column; align-items: flex-start; }
+}
+/* Menu : resserrement (dès 1025 px, quelle que soit la largeur) pour que les rubriques, le bouton et les langues tiennent sur une ligne */
+@media (min-width: 1025px){ .nav-links{ gap: 10px !important; } .nav-links > a, .nav-links .nav-item > a{ font-size: .68rem !important; letter-spacing: .03em !important; } .nav-links a.nav-cta{ font-size: .66rem !important; padding: 8px 12px !important; } .nav-langs{ margin-left: 12px !important; } }
+@media (min-width: 1181px) and (max-width: 1280px){ .nav-brand{ margin-right: 14px !important; } .nav-links{ gap: 7px !important; } .nav-links > a, .nav-links .nav-item > a{ font-size: .64rem !important; letter-spacing: .02em !important; } .nav-links a.nav-cta{ font-size: .62rem !important; padding: 8px 10px !important; } .nav-langs{ margin-left: 8px !important; } }
+/* Menu mobile : le panneau défile quand il dépasse la hauteur de l'écran (sinon les dernières rubriques et le bouton restent inaccessibles) */
+@media (max-width: 1180px){ .nav-links.open{ max-height: calc(100vh - var(--nav-h, 64px)); max-height: calc(100dvh - var(--nav-h, 64px)); overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; } }
+
+
+/* ── Contenus déplacés depuis Expertise ── */
+@keyframes spin{ to { transform: rotate(360deg); } }
+.snap-page:not(#offres):not(#agents):not(#questions):not(#expertise):not(#diagnostic):not(#parcours) > .wrap,.snap-page:not(#offres):not(#agents):not(#questions):not(#expertise):not(#diagnostic) > .lm-inner{
+margin-top: auto;
+margin-bottom: auto;
+}
+#expertise.snap-page,#diagnostic.snap-page{
+justify-content: flex-start;
+}
+#diagnostic.snap-page{
+padding-top: calc(var(--snap-breath) + 13px);
+min-height: auto;
+padding-bottom: var(--snap-breath);
+}
+#expertise.snap-page{
+padding-top: var(--snap-breath);
+scroll-margin-top: var(--nav-h);
+}
+.delay-3{ transition-delay: .3s; }
+.delay-4{ transition-delay: .4s; }
+.photo-ring{
+width: 260px; height: 260px; border-radius: 50%;
+position: relative;
+}
+.photo-ring::before{
+content: ''; position: absolute; inset: -3px; border-radius: 50%;
+background: conic-gradient(
+from 0deg,
+rgba(255,255,255,0) 0deg,
+rgba(255,255,255,.35) 90deg,
+rgba(199,95,98,.5) 180deg,
+rgba(255,255,255,0) 280deg
+);
+animation: spin 8s linear infinite;
+}
+.photo-inner{
+width: 100%; height: 100%; border-radius: 50%;
+overflow: hidden; position: relative; z-index: 2;
+border: 3px solid rgba(255,255,255,.25);
+}
+.photo-inner img{
+width: 100%; height: 100%;
+object-fit: cover; object-position: center top;
+}
+.photo-inner--icon{
+display: flex; align-items: center; justify-content: center;
+background: radial-gradient(circle at 50% 42%, #FAF6F2 0%, #EEE2DB 100%);
+}
+.photo-inner--icon img{
+width: 59%; height: 59%;
+object-fit: contain; object-position: center;
+}
+.bg-white{ background: var(--white); }
+.expertise-section-title{
+line-height: 1.1 !important;
+margin-bottom: 24px !important;
+font-weight: 400 !important;
+}
+.pillars{ display: flex; flex-direction: column; gap: 0; height: 100%; justify-content: space-between; }
+.pillars--expertise{ flex-direction: row; gap: 0; height: auto; justify-content: flex-start; flex-wrap: nowrap; margin: 32px 0 40px; border-top: 1px solid rgba(99, 59, 74,.12); border-bottom: 1px solid rgba(99, 59, 74,.12); padding: 24px 0; }
+.pillars--expertise .pillar{ flex: 1; border-right: 1px solid rgba(99, 59, 74,.12); padding: 0 28px; }
+.pillars--expertise .pillar:first-child{ padding-left: 0; }
+.pillars--expertise .pillar:last-child{ border-right: none; }
+.pillar{
+background: var(--white); border-radius: 14px; padding: 12px 16px;
+border-left: 3px solid transparent;
+box-shadow: 0 2px 12px rgba(99,59,74,.06);
+transition: border-color .25s, box-shadow .25s;
+}
+.pillar:hover{ border-color: var(--rose); box-shadow: 0 6px 28px rgba(99,59,74,.1); }
+.pillar{ display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto auto; column-gap: 12px; align-items: center; }
+.pillar-icon{ font-size: 1.15rem; color: var(--rose); grid-column: 1; grid-row: 1; margin-bottom: 0; display: flex; align-items: center; }
+.pillar-icon--arrow{ display: flex; align-items: center; }
+.pillar h4,.pillar h3{ font-family: var(--serif); font-size: 1.36rem; color: var(--plum); margin-bottom: 0; font-weight: 500; line-height: 1.3; grid-column: 2; grid-row: 1; white-space: nowrap; }
+.cards-grid{
+display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+}
+.xcard{
+background: var(--ivory); border-radius: 18px; padding: 18px 22px;
+border-top: 3px solid var(--plum);
+transition: transform .25s var(--ease), box-shadow .25s;
+position: relative; overflow: hidden;
+display: flex; flex-direction: column;
+}
+.xcard > .xcard-tag:last-child{ margin-top: auto; }
+.xcard::after{
+content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+background: var(--rose);
+opacity: 0; transition: opacity .25s;
+}
+.xcard:hover{ transform: translateY(-5px); box-shadow: 0 20px 56px rgba(99,59,74,.1); }
+.xcard:hover::after{ opacity: 1; }
+.xcard-num{
+font-family: var(--serif); font-size: 3rem; font-weight: 500;
+color: var(--plum); line-height: 1; margin-bottom: 4px;
+}
+.xcard-num-ia{ font-size: 4.4rem; }
+.xcard h3{ font-family: var(--serif); font-size: 1.3rem; color: var(--plum); margin-bottom: 6px; }
+.xcard p{ font-size: .9rem; line-height: 1.75; color: var(--text); margin-bottom: 10px; }
+.xcard-tag{
+display: inline-flex; align-items: center; gap: 5px;
+background: rgba(99,59,74,.07);
+color: var(--plum); border-radius: 20px; padding: 6px 16px;
+font-size: .82rem; font-weight: 500; letter-spacing: .03em;
+white-space: nowrap;
+}
+.xcard-tag .tag-icon{
+font-size: 1.5em; line-height: 1; letter-spacing: 0;
+display: inline-flex;
+}
+.xcard-tag .tag-icon svg{
+width: 15px; height: 15px; flex-shrink: 0;
+}
+.xcard-tag--refs{
+font-size: .76rem; padding: 7px 14px;
+white-space: nowrap; text-align: left; line-height: 1.4;
+border-radius: 20px; max-width: 100%; letter-spacing: .01em;
+}
+.xcard-tag-stack{
+display: flex; flex-direction: row; flex-wrap: wrap; gap: 7px; align-items: flex-start;
+margin-top: auto; padding-top: 12px;
+}
+.xcard-tag-stack .xcard-tag{
+font-size: .76rem; padding: 5px 13px; max-width: 100%;
+overflow: hidden; text-overflow: ellipsis;
+}
+.xcard--ia{
+background: #4F2F3B;
+border-top: 3px solid var(--rose);
+}
+.xcard--ia:hover{ box-shadow: 0 20px 56px rgba(199,95,98,.28); }
+.xcard--ia::after{ background: var(--rose); }
+.xcard--ia .xcard-num{ color: rgba(246,241,235,.22); }
+.xcard--ia h3{ color: var(--ivory); }
+.xcard--ia p{ color: rgba(246,241,235,.72); }
+.xcard--ia .xcard-tag{ background: rgba(246,241,235,.14); color: var(--ivory); }
+@media (max-width: 1024px){.cards-grid{ grid-template-columns: 1fr; }}
+@media (max-width: 768px){.photo-ring{ width: 210px; height: 210px; }}
+.expertise-page-rule{
+border-bottom: 1px solid rgba(61, 32, 48, .35);
+}
+.mon-approche-section .maf-band--hairline{
+background: transparent;
+height: 8px;
+margin-top: var(--section-gap);
+}
+.mon-approche-section--manifeste .maf-mid{
+gap: 10px;
+}
+.mon-approche-section--manifeste .maf-lead{
+border-left: none; padding-left: 0;
+font-family: var(--serif);
+font-size: clamp(1.02rem, 1.45vw, 1.25rem);
+font-weight: 500;
+line-height: 1.5;
+color: rgba(99, 59, 74, .85);
+}
+.mon-approche-section--manifeste .maf-body{
+font-family: var(--serif);
+font-size: clamp(1.55rem, 2.7vw, 2.25rem);
+font-weight: 500;
+letter-spacing: -.01em;
+line-height: 1.25;
+color: #633B4A;
+}
+#expertise > .wrap > .eyebrow{ margin-bottom: 8px; }
+#expertise .expertise-section-title{ margin-bottom: 12px !important; }
+#expertise .pillars--expertise{
+margin: 14px 0 20px;
+padding: 12px 0;
+}
+#expertise .pillars--expertise .pillar{ padding: 0 20px; }
+#expertise .pillars--expertise .pillar h4,#expertise .pillars--expertise .pillar h3{ font-size: 1.14rem; }
+#expertise .pillars--expertise .pillar-icon svg{ width: 28px; height: 19px; }
+#expertise .cards-grid{ gap: 16px; }
+#expertise .xcard{ padding: 13px 22px; }
+#expertise .xcard-num{ font-size: 2.35rem; margin-bottom: 2px; }
+#expertise .xcard-num-ia{ font-size: 3.3rem; }
+#expertise .xcard h3{ margin-bottom: 4px; }
+#expertise .xcard p{ line-height: 1.58; margin-bottom: 8px; }
+.funding-note{ max-width: 760px; margin: 40px auto 0; padding: 26px 30px; background: var(--white); border: 1px solid rgba(93,47,55,.24); border-radius: 14px; }
+.funding-note-title{ font-family: var(--sans); font-size: .82rem; font-weight: 600; letter-spacing: .04em; color: var(--rose); text-transform: uppercase; margin: 0 0 10px; }
+.funding-note p{ font-size: .95rem; color: var(--plum); line-height: 1.6; margin: 0 0 10px; }
+.funding-note a{ color: var(--rose); text-decoration: underline; }
+@media (max-width: 620px){.funding-note{ padding: 20px 20px; }}
+@media (max-width: 1024px){.pillars{ flex-direction: row; flex-wrap: wrap; gap: 16px; }
+.pillar{ flex: 1 1 calc(50% - 8px); }
+.cards-grid{ grid-template-columns: 1fr 1fr; gap: 16px; }}
+@media (max-width: 768px){.xcard-tag,.pillar p{ white-space: normal !important; }
+.xcard-tag-stack .xcard-tag{ white-space: nowrap !important; font-size: .68rem; }
+.expertise-section-title{ font-size: clamp(1.6rem, 5.5vw, 2rem) !important; }
+.pillars{ flex-direction: column !important; gap: 12px !important; height: auto !important; min-height: 0 !important; justify-content: flex-start !important; }
+.pillar{ grid-template-columns: 36px 1fr !important; flex: 0 0 auto !important; min-height: 0 !important; }
+.pillar-icon svg{ width: 36px !important; height: 24px !important; max-width: 36px !important; }
+.cards-grid{ grid-template-columns: 1fr; }
+.xcard{ padding: 22px 18px; }
+.ce-que-intro{ font-size: 1.15rem !important; }}
+@media (min-width: 640px) and (max-width: 768px){.pillars{ flex-direction: row !important; flex-wrap: wrap !important; gap: 16px !important; height: auto !important; }
+.pillar{ flex: 1 1 calc(50% - 8px) !important; min-width: 0; }}
+@media (max-width: 480px){.xcard{ padding: 22px 18px; }}
+.ce-que-intro{
+font-family: var(--serif);
+font-size: clamp(1.15rem, 1.5vw, 1.4rem);
+color: var(--plum);
+font-style: normal;
+font-weight: 400;
+margin-bottom: 20px;
+line-height: 1.5;
+}
+.mon-approche-section{
+background: var(--white);
+border-top: 1px solid rgba(99,59,74,.1);
+height: auto; min-height: 0;
+justify-content: flex-start;
+padding: clamp(72px, 11vh, 128px) 0 clamp(64px, 9vh, 112px);
+scroll-margin-top: var(--nav-h);
+}
+.maf-band{
+background: var(--deep);
+height: clamp(80px, 10vh, 102px);
+margin-top: clamp(14px, 2vh, 22px);
+}
+.mon-approche-inner{
+display: flex; align-items: stretch; gap: 64px;
+}
+.mon-approche-photo{
+flex-shrink: 0;
+display: flex; flex-direction: column; align-items: center; gap: 14px;
+}
+.mon-approche-photo-ring{ width: 160px; height: 160px; }
+.mon-approche-content{
+display: flex; flex-direction: column; justify-content: space-between;
+max-width: 760px; margin: 0;
+}
+.maf-eyebrow{
+font-family: var(--sans); font-size: .8rem; font-weight: 600;
+letter-spacing: .18em; text-transform: uppercase; color: var(--rose);
+padding-left: 0;
+}
+.maf-mid{
+display: flex; flex-direction: column; gap: 14px;
+}
+.maf-lead{
+font-family: var(--sans);
+font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+font-weight: 400; line-height: 1.3;
+color: #633B4A; margin: 0;
+}
+.maf-body{
+font-family: var(--sans);
+font-size: clamp(1.25rem, 1.9vw, 1.55rem);
+color: rgba(99,59,74,.85);
+line-height: 1.6; font-weight: 400; margin: 0;
+padding-left: 0;
+}
+.mon-approche-content .portrait-link{
+align-self: flex-start;
+gap: 6px; margin-left: 0;
+font-family: var(--sans); font-size: .9rem; font-weight: 500;
+color: var(--plum); letter-spacing: .04em;
+border-bottom: 1px solid rgba(99,59,74,.3);
+padding-bottom: 2px;
+margin-top: 0;
+transition: color .2s, border-color .2s;
+}
+.mon-approche-content .portrait-link strong{ font-weight: 600; }
+.mon-approche-content .portrait-link:hover{ color: var(--rose); border-color: var(--rose); opacity: 1; }
+@media (max-width: 640px){.mon-approche-inner{ flex-direction: column; align-items: flex-start; gap: 16px; }
+.mon-approche-content{ max-width: 100%; border-left: none; padding-left: 0; }
+.mon-approche-content .portrait-link{ margin-top: 6px; }}
+#expertise .expertise-section-title{ font-weight: 500 !important; }
+.guide-link-card{ display: flex; flex-direction: column; align-items: center; text-align: center; gap: 4px; margin: 18px 0 4px; padding: 18px 22px 16px; background: rgba(217,201,195,.34); border: 1.25px solid rgba(99,59,74,.34); border-radius: 12px; text-decoration: none; color: var(--plum); transition: background .25s, border-color .25s, box-shadow .25s, transform .25s; }
+.guide-link-title{ font-family: var(--sans); font-weight: 600; font-size: 1.12rem; letter-spacing: .01em; color: var(--plum); line-height: 1.3; transition: color .25s; }
+.guide-link-arrow{ display: block; margin: 2px auto 0; transition: transform .25s; }
+.guide-link-desc{ font-family: var(--sans); font-size: .95rem; line-height: 1.55; color: var(--plum-muted); max-width: 56ch; text-wrap: balance; text-decoration: none; }
+.guide-link-card:hover,.guide-link-card:focus-visible{ background: rgba(217,201,195,.52); border-color: var(--rose); box-shadow: 0 8px 22px rgba(99,59,74,.12); transform: translateY(-2px); }
+.guide-link-card:hover .guide-link-title,.guide-link-card:focus-visible .guide-link-title{ color: var(--rose); }
+.guide-link-card:hover .guide-link-arrow,.guide-link-card:focus-visible .guide-link-arrow{ transform: translateY(-3px); }
+@media (prefers-reduced-motion: reduce){.guide-link-card,.guide-link-arrow{ transition: none; }}
+.art-chip{ font-family: var(--sans); font-weight: 600; font-style: normal; font-size: .92em; color: var(--plum); background: rgba(217,201,195,.38); padding: .04em .38em; border-radius: 4px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.art-chip{ hyphens: none; -webkit-hyphens: none; white-space: nowrap; }
+@media (max-width: 760px){.article-book-col .art-chip{ white-space: normal; }}
+.rgpd-b{ font-weight: 600; }
+.mon-approche-content .portrait-link{ margin-bottom: clamp(40px, 6vh, 72px); padding-bottom: 8px; }
+.mon-approche-section{ padding-bottom: clamp(72px, 10vh, 120px) !important; }
+.maf-eyebrow{ color: #C75F62 !important; }
+.ink-accent-fixed{ color: #C75F62 !important; flex-shrink: 0; }
+.row-baseline{ display: flex; gap: 10px; align-items: baseline; }
+.no-underline{ text-decoration: none !important; }
+.ink-ivory-600{ color: #FAF6F2 !important; font-weight: 600 !important; }
+.ink-ivory-ml2{ color: #FAF6F2 !important; margin-left: 2px !important; }
+.s0{ list-style:none;padding:0;margin:0 0 14px;display:flex;flex-direction:column;gap:8px;font-size:.9rem;line-height:1.5;color:var(--text) !important; }
+.s12{ margin-bottom:36px !important; }
+.s13{ font-style:italic !important; }
+.s14{ margin-bottom:14px;font-style:italic;color:rgba(246,241,235,.55) !important; }
+.s15{ list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;font-size:.93rem;line-height:1.5;color:rgba(246,241,235,.88) !important; }
+.xcard--ia p.s14{ color: #FAF6F2 !important; }
+:is(.ink-accent, .art-ia, .aiact-ia, .risk-hl, .ink-accent-600, .ink-accent-500, .ink-accent-fixed, .persp-card-subtitle, .article-meta):not(h1 *):not(h2 *){ color: #633B4A !important; }
+:is(.testi--dark, .cookie-banner, .cookie-modal, .xcard--ia, .roi-chip--hero, .ticker-bar, .es-line) :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl, .ink-accent-600, .ink-accent-500, .ink-accent-fixed){ color: #FAF6F2 !important; }
+.rgpd-b{ color: #633B4A !important; }
+p :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl, .ink-accent-fixed, .art-chip, .art-star, .rgpd-b, .aiact-key),li :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl, .ink-accent-fixed, .art-chip, .art-star, .rgpd-b, .aiact-key){ font-weight: 500 !important; }
+@media (max-width: 760px){.xcard-tag{ font-size: 13px !important; }}
+.cerveau-h3{ font-family: var(--serif); font-weight: 500; font-size: clamp(1.45rem, 2.6vw, 1.85rem); line-height: 1.2; color: var(--plum); margin: 0 0 22px; text-wrap: balance; }
+.cerveau-text{ font-family: var(--sans); font-size: 1rem; line-height: 1.7; color: var(--plum); max-width: 720px; margin: 0 0 16px; }
+.jumeau-cards .xcard li{ margin-bottom: 14px; }
+.jumeau-grid .xcard li{ margin-bottom: 14px; }
+.ink-terra-lg{ color: #C75F62 !important; }
+.priorites{ list-style: none; margin: 14px 0 0; padding: 0; font-family: var(--sans); font-size: 1rem; line-height: 1.65; color: var(--plum); }
+.priorites li{ position: relative; padding-left: 1.4em; margin-bottom: 10px; }
+.priorites li::before{ content: ""; position: absolute; left: 0; top: .6em; width: .5em; height: .5em; border-radius: 50%; background: #C75F62; }
+.priorites strong{ font-weight: 600; color: #C75F62; }
+.cerveau-text strong{ font-weight: 600; color: var(--plum); }
+.cerveau-fold{ margin: 0 0 8px; }
+.cerveau-fold summary{ cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.cerveau-fold summary::-webkit-details-marker{ display: none; }
+.cerveau-fold summary h3{ margin: 0; }
+.cerveau-fold summary::after{ content: "+"; font-family: var(--sans); font-size: 1.5rem; line-height: 1; color: #C75F62; }
+.cerveau-fold[open] summary::after{ content: "–"; }
+.cerveau-fold-body{ padding-top: 14px; }
+.cerveau-block:has(> .cerveau-fold){ margin-top: 0 !important; padding-top: 0 !important; padding-bottom: 0 !important; }
+.cerveau-fold-body{ padding-top: 6px !important; }
+.cerveau-fold > summary{ padding: 4px 0 !important; }
 </style>
 <style id="footer-contact-gauche">
 @media (min-width: 1251px){
@@ -1732,15 +2077,7 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
       <img src="assets/logo-prune-final.webp" alt="EXEC'IA logo" class="nav-logo-rond" width="1254" height="1254" decoding="async">
       <img src="assets/logo-execia-bords-prune-240.webp" alt="EXEC'IA Consulting" class="nav-logo-full" width="240" height="113" fetchpriority="high" decoding="async">
     </a>
-    <div class="nav-links">
-      <a href="index-es.html">Inicio</a>
-      <a href="expertise-es.html">Experiencia</a>
-      <a href="offres-es.html">Servicios</a>
-      <a href="a-propos-es.html" class="active">Perfil</a>
-      <a href="temoignages-es.html">Testimonios</a>
-      <a href="contact-es.html">Contacto</a>
-      <a href="perspectives-es.html">Blog</a>
-    </div>
+    <div class="nav-links"><a href="index-es.html">Inicio</a><div class="nav-item nav-item--dd"><a href="offres-es.html">Acompañamiento IA</a><div class="nav-dd"><a href="offres-es.html#diagnostic">Diagnóstico estratégico IA</a><a href="offres-es.html#conseil">Consultoría estratégica / Advisory</a><a href="offres-es.html#transformation">Transformación IA</a><a href="offres-es.html#formation">Formación IA</a></div></div><div class="nav-item nav-item--dd"><a href="solutions-es.html">Soluciones digitales e IA</a><div class="nav-dd"><a href="agents-ia-es.html">Agentes IA por función</a><a href="solutions-es.html#automatisation">Automatización de procesos</a><a href="solutions-es.html#operationnelles">Soluciones operativas</a><a href="solutions-es.html#sites">Creación de sitios web</a></div></div><div class="nav-item nav-item--dd"><a href="realisations-es.html">Realizaciones</a><div class="nav-dd"><a href="realisations-es.html#clientes">Proyectos de clientes</a><a href="realisations-es.html#demostraciones">Demostraciones y herramientas</a><a href="realisations-es.html#usos">Casos de uso ilustrativos</a><a href="temoignages-es.html">Testimonios</a></div></div><a href="perspectives-es.html">Perspectivas</a><a href="a-propos-es.html" class="active">Perfil</a><a href="contact-es.html" class="nav-cta">Pedir una cita</a></div>
     <div class="nav-langs">
       <a href="a-propos.html" class="nav-lang">FR</a>
       <a href="a-propos-en.html" class="nav-lang">EN</a>
@@ -1798,195 +2135,6 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
 </section>
 
 <!-- ═══ PERSPECTIVES ══════════════════════════════════════════ -->
-<section id="perspectives" class="bg-ivory snap-page persp-compact">
-  <span class="about-cta-sep" aria-hidden="true"></span>
-  <div class="wrap">
-    <span class="eyebrow reveal">Blog </span>
-    <h2 class="section-title reveal delay-1">Una mirada sobre la <span class="ink-accent-500"><span class="ia-rose">IA</span></span>, forjada por años<br>junto a los directivos.</h2>
-    <p class="persp-intro reveal delay-2"><span class="persp-intro-line">Gobernanza, decisión, transformación, creación de valor: reflexiones compartidas en <span class="ink-accent">LinkedIn</span><img width="72" height="72" src="assets/linkedin-logo.png" alt="" class="persp-intro-linkedin-logo"> y profundizadas aquí</span> <span class="persp-intro-line">para tomar distancia y entender lo que la <span class="ink-accent"><span class="ia-rose">IA</span></span> cambia realmente en su empresa.</span></p>
-
-    <div class="persp-track-outer reveal delay-2" id="perspTrack">
-    <div class="persp-track">
-      <a href="perspective-entreprise-utilise-deja-ia-es.html" class="persp-card persp-card--link">
-        <div class="persp-card-visual persp-card-visual--img persp-card-visual--gouvernance" aria-hidden="true">
-          <img width="700" height="640" src="assets/perspectives/gouvernance-linkedin-cover-es.webp" alt="" loading="lazy" decoding="async">
-          <span class="persp-card-visual-overlay">Gobernanza</span>
-        </div>
-        <span class="persp-card-meta"><span class="art-star" aria-label="Artículo más leído">★</span>Gobernanza · 7 min</span>
-        <h2 class="persp-card-title">Su empresa ya utiliza la <span class="art-ia"><span class="ia-rose">IA</span></span>.</h2>
-        <p class="persp-card-subtitle">Aunque todavía no haya decidido nada.</p>
-        <p class="persp-card-desc">La <span class="art-ia"><span class="ia-rose">IA</span></span> ya resume, analiza y prioriza decisiones dentro de su organización, sin que ninguna estrategia lo haya decidido.</p>
-        <span class="persp-card-read">Leer el artículo <span class="portrait-link-arrow">→</span></span>
-      </a>
-      <a href="perspective-toutes-decisions-ne-se-deleguent-pas-es.html" class="persp-card persp-card--link">
-        <div class="persp-card-visual persp-card-visual--img persp-card-visual--decision" aria-hidden="true">
-          <img width="700" height="875" src="assets/perspectives/decision-jusquou-deleguer-es.webp" alt="" loading="lazy" decoding="async">
-          <span class="persp-card-visual-overlay">Decisión</span>
-        </div>
-        <span class="persp-card-meta"><span class="art-star" aria-label="Artículo más leído">★</span>Decisión · 7 min</span>
-        <h2 class="persp-card-title">¿Qué decisiones no debería delegar nunca un directivo a la <span class="art-ia"><span class="ia-rose">IA</span></span>?</h2>
-        <p class="persp-card-subtitle">Entre delegar y abdicar, la frontera es más delgada de lo que parece.</p>
-        <p class="persp-card-desc">Algunas decisiones ganan si la <span class="art-ia"><span class="ia-rose">IA</span></span> las ilumina. Otras implican una responsabilidad que la empresa debe seguir asumiendo ella misma.</p>
-        <span class="persp-card-read">Leer el artículo <span class="portrait-link-arrow">→</span></span>
-      </a>
-      <a href="perspective-transformation-echoue-rarement-technologie-es.html" class="persp-card persp-card--link">
-        <div class="persp-card-visual persp-card-visual--img persp-card-visual--transformation" aria-hidden="true">
-          <img width="700" height="875" src="assets/perspectives/transformation-outil-organisation-es.webp" alt="" loading="lazy" decoding="async">
-          <span class="persp-card-visual-overlay">Transformación</span>
-        </div>
-        <span class="persp-card-meta">Transformación · 7 min</span>
-        <h2 class="persp-card-title">Las transformaciones con <span class="ink-accent"><span class="ia-rose">IA</span></span> rara vez fracasan por la tecnología.</h2>
-        <p class="persp-card-subtitle">Fracasan cuando la organización no ha cambiado, solo la herramienta.</p>
-        <p class="persp-card-desc">Una herramienta no transforma nada mientras los procesos, los roles y las decisiones que la rodean sigan igual.</p>
-        <span class="persp-card-read">Leer el artículo <span class="portrait-link-arrow">→</span></span>
-      </a>
-      <a href="perspective-probleme-nest-pas-outils-mais-arbitrage-es.html" class="persp-card persp-card--link">
-        <div class="persp-card-visual persp-card-visual--img persp-card-visual--creation" aria-hidden="true">
-          <img width="700" height="875" src="assets/perspectives/creation-valeur-arbitrage-outils-es.webp" alt="" loading="lazy" decoding="async">
-          <span class="persp-card-visual-overlay">Creación de valor</span>
-        </div>
-        <span class="persp-card-meta">Creación de valor · 7 min</span>
-        <h2 class="persp-card-title">Más herramientas de <span class="ink-accent"><span class="ia-rose">IA</span></span> no significa más impacto.</h2>
-        <p class="persp-card-subtitle">No es un problema de herramientas. Es un problema de alineación.</p>
-        <p class="persp-card-desc">Multiplicar iniciativas sin priorizarlas diluye el esfuerzo más de lo que genera resultados. Tres criterios sencillos para saber cuáles llegan hasta el final.</p>
-        <span class="persp-card-read">Leer el artículo <span class="portrait-link-arrow">→</span></span>
-      </a>
-      <a href="perspective-projet-ia-peut-il-etre-finance-es.html" class="persp-card persp-card--link">
-        <div class="persp-card-visual persp-card-visual--img" aria-hidden="true">
-          <img width="700" height="393" src="assets/perspectives/projet-ia-financement-carte-v2-es.webp" alt="" loading="lazy" decoding="async">
-        </div>
-        <span class="persp-card-meta">Financiación · 7 min</span>
-        <h2 class="persp-card-title">¿Se puede financiar su proyecto de <span class="ink-accent"><span class="ia-rose">IA</span></span>? Sí, pero no necesariamente el que usted imagina.</h2>
-        <p class="persp-card-subtitle">Tres familias de ayudas, tres lógicas distintas.</p>
-        <p class="persp-card-desc">Osez l’<span class="ia-rose">IA</span>, Diag Data <span class="art-ia"><span class="ia-rose">IA</span></span>, France 2030: qué se puede financiar, para quién y con qué condiciones.</p>
-        <span class="persp-card-read">Leer el artículo <span class="portrait-link-arrow">→</span></span>
-      </a>
-      <a href="perspective-chatbot-savoir-passer-la-main-es.html" class="persp-card persp-card--link">
-        <div class="persp-card-visual persp-card-visual--img" aria-hidden="true">
-          <img width="700" height="640" src="assets/perspectives/chatbot-passer-la-main-es.webp" alt="" loading="lazy" decoding="async">
-        </div>
-        <span class="persp-card-meta">Relación con el cliente · 7 min</span>
-        <h2 class="persp-card-title">El chatbot de Air France responde solo a una partede las consultas. El resto, sabe pasarlo a una persona.</h2>
-        <p class="persp-card-subtitle">No es la <span class="art-ia"><span class="ia-rose">IA</span></span> la que más ha progresado. Es la frontera trazada.</p>
-        <p class="persp-card-desc">Louis resuelve solo una parte de las consultas y pasa el resto. Tres señales para notar el límite.</p>
-        <span class="persp-card-read">Leer el artículo <span class="portrait-link-arrow">→</span></span>
-      </a>
-      <a href="perspective-budget-ia-adhesion-equipes-es.html" class="persp-card persp-card--link">
-        <div class="persp-card-visual persp-card-visual--img" aria-hidden="true">
-          <img width="700" height="639" src="assets/perspectives/budget-adhesion-es.webp" alt="" loading="lazy" decoding="async">
-        </div>
-        <span class="persp-card-meta">Adhesión · 7 min</span>
-        <h2 class="persp-card-title">El presupuesto de <span class="ink-accent"><span class="ia-rose">IA</span></span> no es el tema. La adhesión, sí.</h2>
-        <p class="persp-card-subtitle">Una herramienta nunca cambia sola a una organización.</p>
-        <p class="persp-card-desc">Un presupuesto de <span class="art-ia"><span class="ia-rose">IA</span></span> aprobado no basta. Tres palancas concretas para que los equipos quieran usarla.</p>
-        <span class="persp-card-read">Leer el artículo <span class="portrait-link-arrow">→</span></span>
-      </a>
-      <a href="perspective-shadow-ia-charte-comite-direction-es.html" class="persp-card persp-card--link">
-        <div class="persp-card-visual persp-card-visual--img" aria-hidden="true">
-          <img width="700" height="639" src="assets/perspectives/shadow-ia-charte-es.webp" alt="" loading="lazy" decoding="async">
-        </div>
-        <span class="persp-card-meta">Shadow <span class="art-ia"><span class="ia-rose">IA</span></span> · 7 min</span>
-        <h2 class="persp-card-title">Una política de <span class="ink-accent"><span class="ia-rose">IA</span></span> que sus directivos no respetan deja de ser una política.</h2>
-        <p class="persp-card-subtitle">El tema no es la disciplina de los equipos. Es la gobernanza.</p>
-        <p class="persp-card-desc">El 78 % de los empleados usa herramientas de <span class="art-ia"><span class="ia-rose">IA</span></span> no validadas, y los directivos también. Tres reflejos para retomar el control.</p>
-        <span class="persp-card-read">Leer el artículo <span class="portrait-link-arrow">→</span></span>
-      </a>
-      <a href="perspective-robots-humanoides-token-tax-es.html" class="persp-card persp-card--link">
-        <div class="persp-card-visual persp-card-visual--img persp-card-visual--top" aria-hidden="true">
-          <img width="720" height="266" src="assets/perspectives/robots-humanoides-token-tax-es-card-sans-logo.webp" alt="" loading="lazy" decoding="async">
-        </div>
-        <span class="persp-card-meta">Robots humanoides · 8 min</span>
-        <h2 class="persp-card-title">Robots humanoides: ¿qué tareas se irán primero?</h2>
-        <p class="persp-card-subtitle">Un robot asume tareas, rara vez un oficio entero.</p>
-        <p class="persp-card-desc">Escasez de personal, China, «token tax»: las verdaderas preguntas, y un minidiagnóstico de 2 minutos.</p>
-        <span class="persp-card-read">Leer el artículo <span class="portrait-link-arrow">→</span></span>
-      </a>
-      <a href="perspective-affaire-orelien-preuve-travail-es.html" class="persp-card persp-card--link">
-        <div class="persp-card-visual persp-card-visual--img persp-card-visual--top" aria-hidden="true">
-          <img width="700" height="240" src="assets/perspectives/affaire-orelien-preuve-es-card-sans-logo.webp" alt="" loading="lazy" decoding="async">
-        </div>
-        <span class="persp-card-meta"><span class="art-star" aria-label="Artículo más leído">★</span>El caso Orélien · 8 min</span>
-        <h2 class="persp-card-title">El caso Orélien: mañana, sus equipos tendrán que demostrar su trabajo.</h2>
-        <p class="persp-card-subtitle">Una puntuación de <span class="art-ia"><span class="ia-rose">IA</span></span> no prueba nada. Un método, sí.</p>
-        <p class="persp-card-desc">Detectores que se contradicen, una carga de la prueba invertida: tres protecciones para sus entregables.</p>
-        <span class="persp-card-read">Leer el artículo <span class="portrait-link-arrow">→</span></span>
-      </a>
-      <a href="perspective-tri-cv-ia-candidatures-ecartees-es.html" class="persp-card persp-card--link">
-        <div class="persp-card-visual persp-card-visual--img persp-card-visual--top" aria-hidden="true">
-          <img width="700" height="340" src="assets/perspectives/tri-cv-ia-es-card.webp" alt="" loading="lazy" decoding="async">
-        </div>
-        <span class="persp-card-meta">Selección de personal · 8 min</span>
-        <h2 class="persp-card-title">Cribado de CV con <span class="art-ia"><span class="ia-rose">IA</span></span>: ¿quién relee las candidaturas descartadas?</h2>
-        <p class="persp-card-subtitle">La <span class="art-ia"><span class="ia-rose">IA</span></span> criba más rápido. No juzga con más justicia.</p>
-        <p class="persp-card-desc">El caso Workday, las inspecciones de la CNIL, la <span class="art-ia"><span class="ia-rose">IA</span></span> Act: tres comprobaciones antes de confiar sus CV a un programa.</p>
-        <span class="persp-card-read">Leer el artículo <span class="portrait-link-arrow">→</span></span>
-      </a>
-      <a href="perspective-agents-ia-recruter-comme-salarie-es.html" class="persp-card persp-card--link">
-        <div class="persp-card-visual persp-card-visual--img persp-card-visual--top" aria-hidden="true">
-          <img width="700" height="340" src="assets/perspectives/agents-ia-recruter-es-card.webp" alt="" loading="lazy" decoding="async">
-        </div>
-        <span class="persp-card-meta">Agentes de <span class="art-ia"><span class="ia-rose">IA</span></span> · 8 min</span>
-        <h2 class="persp-card-title">Agentes de <span class="art-ia"><span class="ia-rose">IA</span></span>: ¿hay que contratarlos como a un empleado?</h2>
-        <p class="persp-card-subtitle">Descripción del puesto, periodo de prueba, responsable humano.</p>
-        <p class="persp-card-desc">Lo que la metáfora de la contratación acierta, lo que oculta y tres preguntas antes de empezar.</p>
-        <span class="persp-card-read">Leer el artículo <span class="portrait-link-arrow">→</span></span>
-      </a>
-      <a href="perspective-jumeau-numerique-savoir-dirigeant-es.html" class="persp-card persp-card--link">
-        <div class="persp-card-visual persp-card-visual--img persp-card-visual--top" aria-hidden="true">
-          <img width="700" height="237" src="assets/perspectives/jumeau-numerique-dirigeant-card-tetes.webp" alt="" loading="lazy" decoding="async">
-        </div>
-        <span class="persp-card-meta">Transmisión · 8 min</span>
-        <h2 class="persp-card-title">Cuando el directivo se va, ¿cómo conservar su saber?</h2>
-        <p class="persp-card-subtitle">Entrevistas, asistente de <span class="art-ia"><span class="ia-rose">IA</span></span>, validación del directivo.</p>
-        <p class="persp-card-desc">Por qué se pierde el saber cuando una empresa cambia de manos, y cómo conservarlo bajo el control del directivo.</p>
-        <span class="persp-card-read">Leer el artículo <span class="portrait-link-arrow">→</span></span>
-      </a>
-      <a href="perspective-forward-deployed-engineer-pme-es.html" class="persp-card persp-card--link">
-        <div class="persp-card-visual persp-card-visual--img persp-card-visual--top" aria-hidden="true">
-          <img width="700" height="340" src="assets/perspectives/forward-deployed-pme-es-card.webp" alt="" loading="lazy" decoding="async">
-        </div>
-        <span class="persp-card-meta">Despliegue · 10 min</span>
-        <h2 class="persp-card-title">Los gigantes de la <span class="art-ia"><span class="ia-rose">IA</span></span> se instalan en casa de sus clientes. ¿Y su pyme?</h2>
-        <p class="persp-card-subtitle">Un traductor entre la <span class="art-ia"><span class="ia-rose">IA</span></span> y la dirección.</p>
-        <p class="persp-card-desc">Amazon dedica 1.000 millones de dólares a ingenieros que trabajan en casa de sus clientes. Lo que este oficio enseña a una pyme.</p>
-        <span class="persp-card-read">Leer el artículo <span class="portrait-link-arrow">→</span></span>
-      </a>
-      <a href="perspective-enregistreur-ia-reunion-direction-es.html" class="persp-card persp-card--link">
-        <div class="persp-card-visual persp-card-visual--img persp-card-visual--top" aria-hidden="true">
-          <img width="700" height="340" src="assets/perspectives/enregistreur-ia-reunion-es-card.webp" alt="" loading="lazy" decoding="async">
-        </div>
-        <span class="persp-card-meta">Gobernanza · 10 min</span>
-        <h2 class="persp-card-title">Una grabadora de <span class="art-ia"><span class="ia-rose">IA</span></span> en el comité de dirección: ¿quién lo decidió?</h2>
-        <p class="persp-card-subtitle">Informar, consentir, proteger, decidir.</p>
-        <p class="persp-card-desc">Las grabadoras de <span class="art-ia"><span class="ia-rose">IA</span></span> entran en las reuniones de dirección, a menudo sin reglas. Las cuatro reglas que fijar antes de grabar.</p>
-        <span class="persp-card-read">Leer el artículo <span class="portrait-link-arrow">→</span></span>
-      </a>
-
-    </div>
-    </div>
-    <div class="agents-nav">
-      <button aria-label="Ir al agente 1" class="agents-dot active" data-idx="0"></button>
-      <button aria-label="Ir al agente 2" class="agents-dot" data-idx="1"></button>
-      <button aria-label="Ir al agente 3" class="agents-dot" data-idx="2"></button>
-      <button aria-label="Ir al agente 4" class="agents-dot" data-idx="3"></button>
-      <button aria-label="Ir al agente 5" class="agents-dot" data-idx="4"></button>
-      <button aria-label="Ir al agente 6" class="agents-dot" data-idx="5"></button>
-      <button aria-label="Ir al agente 7" class="agents-dot" data-idx="6"></button>
-      <button aria-label="Ir al agente 8" class="agents-dot" data-idx="7"></button>
-      <button aria-label="Ir al agente 9" class="agents-dot" data-idx="8"></button>
-      <button aria-label="Ir al agente 10" class="agents-dot" data-idx="9"></button>
-      <button aria-label="Ir al agente 11" class="agents-dot" data-idx="10"></button>
-      <button aria-label="Ir al agente 12" class="agents-dot" data-idx="11"></button>
-    </div>
-    <div class="agents-arrows">
-      <button class="agents-arrow" id="perspPrev">&#8592;</button>
-      <button class="agents-arrow" id="perspNext">&#8594;</button>
-    </div>
-
-    <a href="perspective-entreprise-utilise-deja-ia-es.html" class="persp-all-link">Todas las Blog <span class="portrait-link-arrow">→</span></a>
-  </div>
-</section>
-
 <!-- ═══ PARCOURS ══════════════════════════════════════════════ -->
 <section id="parcours" class="bg-ivory snap-page">
   <div class="parcours-band" aria-hidden="true"></div>
@@ -2066,6 +2214,152 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
 </section>
 
 <!-- ═══ CONCLUSIÓN — TRANSICIÓN HACIA EL DIAGNÓSTICO ═════════════ -->
+<!-- ═══ PROFIL (déplacé depuis Expertise) ═══ -->
+<section id="expertise" class="bg-white snap-page expertise-page-rule">
+  <div class="wrap">
+    <span class="eyebrow reveal">Perfil</span>
+    <h2 class="section-title expertise-section-title reveal delay-1">Cuatro áreas al servicio de sus prioridades</h2>
+    <div class="pillars pillars--expertise reveal delay-1">
+      <div class="pillar">
+        <div class="pillar-icon pillar-icon--arrow">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/>
+          </svg>
+        </div>
+        <h4><span class="ink-accent"><span class="ia-rose">IA</span></span> generativa certificada</h4>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon pillar-icon--arrow">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/>
+          </svg>
+        </div>
+        <h4>Cercanía directiva</h4>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon pillar-icon--arrow">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/>
+          </svg>
+        </div>
+        <h4>Visión internacional</h4>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon pillar-icon--arrow">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/>
+          </svg>
+        </div>
+        <h4>Resultados concretos</h4>
+      </div>
+    </div>
+    <div class="cards-grid">
+      <div class="xcard reveal delay-1">
+        <div class="xcard-num">01</div>
+        <h3>Acompañamiento de <span class="ink-accent">Direcciones Generales</span></h3>
+        <ul class="s0"><li class="row-baseline"><span class="ink-accent-fixed">✓</span><span>Más de 20 años en contacto directo con CEO, Consejos de Administración y equipos directivos de grupos internacionales.</span></li><li class="row-baseline"><span class="ink-accent-fixed">✓</span><span>Coordinación de asuntos complejos, anticipación de necesidades y gestión de interacciones de alto nivel.</span></li><li class="row-baseline"><span class="ink-accent-fixed">✓</span><span>Inteligencia relacional y vocación de servicio en apoyo del rendimiento colectivo.</span></li></ul>
+        <span class="xcard-tag xcard-tag--refs"><span class="tag-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/></svg></span> <strong class="fw-600">20+</strong> años · McKinsey &amp; Company · J.P. Morgan · Warner Bros. Discovery</span>
+      </div>
+      <div class="xcard xcard--ia reveal delay-2">
+        <div class="xcard-num xcard-num-ia">02</div>
+        <h3><span class="ink-accent"><span class="ia-rose">IA</span></span> Generativa <span class="s13">&amp;</span> No-Code</h3>
+        <p class="s14">Diseñar, pilotar y gobernar la <span class="ink-accent"><span class="ia-rose">IA</span></span> que crea valor.</p>
+        <ul class="s15">
+          <li class="row-baseline"><span class="ink-accent-fixed">✓</span><span>Creación de contenidos redaccionales y visuales mediante un uso responsable de la <span class="ink-accent"><span class="ia-rose">IA</span></span> generativa.</span></li>
+          <li class="row-baseline"><span class="ink-accent-fixed">✓</span><span>Identificación y pilotaje de proyectos de <span class="ink-accent"><span class="ia-rose">IA</span></span> de alto valor, desde la estrategia hasta el despliegue.</span></li>
+          <li class="row-baseline"><span class="ink-accent-fixed">✓</span><span>Gobernanza ética y responsable de la <span class="ink-accent"><span class="ia-rose">IA</span></span>, pilotaje de la gestión del cambio.</span></li>
+        </ul>
+        <div class="xcard-tag-stack">
+          <a class="xcard-tag no-underline" href="https://www.francecompetences.fr/recherche/rs/6776/" target="_blank" rel="noopener"><span class="tag-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg></span> <span class="ink-ivory-600">RS 6776</span> • Studeria <span class="ink-ivory-ml2">→</span></a>
+          <a class="xcard-tag no-underline" href="https://www.francecompetences.fr/recherche/rncp/41186/" target="_blank" rel="noopener"><span class="tag-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg></span> <span class="ink-ivory-600">RNCP41186BC04</span> • ESSEC <span class="ink-ivory-ml2">→</span></a>
+        </div>
+      </div>
+      <div class="xcard reveal delay-3">
+        <div class="xcard-num">03</div>
+        <h3><span class="ink-accent">Multilingüismo</span></h3>
+        <ul class="s0"><li class="row-baseline"><span class="ink-accent-fixed">✓</span><span>Más de 8 años de inmersión internacional (Argentina, Reino Unido, España, Rusia).</span></li><li class="row-baseline"><span class="ink-accent-fixed">✓</span><span>Comunicación fluida en entornos multiculturales exigentes y adaptación a las realidades locales.</span></li><li class="row-baseline"><span class="ink-accent-fixed">✓</span><span>Comprensión fina de los códigos, los usos y las formas de colaboración en contextos internacionales.</span></li></ul>
+        <span class="xcard-tag"><span class="tag-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></span> Français • English fluent • Español fluido • Deutsch B1</span>
+      </div>
+      <div class="xcard reveal delay-4">
+        <div class="xcard-num">04</div>
+        <h3>Eventos Corporativos <span class="ink-accent">Internacionales</span></h3>
+        <ul class="s0"><li class="row-baseline"><span class="ink-accent-fixed">✓</span><span>Diseño y coordinación de eventos estratégicos en entornos internacionales exigentes.</span></li><li class="row-baseline"><span class="ink-accent-fixed">✓</span><span>Gestión de múltiples partes interesadas, dirección operativa y atención constante a la experiencia del participante.</span></li><li class="row-baseline"><span class="ink-accent-fixed">✓</span><span>Capacidad para orquestar proyectos complejos con rigor y capacidad de respuesta.</span></li></ul>
+        <span class="xcard-tag"><span class="tag-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0"/><path d="M12 17v5"/><path d="M8 22h8"/></svg></span> Conferencias • Seminarios • Eventos ejecutivos • Programas internacionales</span>
+      </div>
+    </div>
+
+    
+  </div>
+</section>
+<!-- ═══ MÉTHODOLOGIE ═══ -->
+<span id="methodologie"></span>
+<section class="mon-approche-section mon-approche-section--manifeste">
+  <div class="wrap mon-approche-inner">
+    <div class="mon-approche-photo">
+      <div class="photo-ring mon-approche-photo-ring">
+        <div class="photo-inner photo-inner--icon">
+          <img src="assets/boussole.svg" alt="Rosa de los vientos" width="160" height="160">
+        </div>
+      </div>
+    </div>
+    <div class="mon-approche-content">
+      <span class="maf-eyebrow">El enfoque</span>
+      <div class="maf-mid">
+        <p class="maf-lead">Las empresas no necesitan más <span class="ia-rose">IA</span>.</p>
+        <p class="maf-body">Necesitan <span class="ink-accent">mejores decisiones.</span></p>
+      </div>
+      <a class="portrait-link" href="#diagnostic">Descubrir el enfoque <strong>EXEC&#8217;<span class="ia-rose">IA</span></strong> <span class="portrait-link-arrow">→</span></a>
+    </div>
+  </div>
+  <div class="maf-band maf-band--hairline" aria-hidden="true"></div>
+</section>
+<section id="diagnostic" class="bg-white snap-page expertise-page-rule">
+  <div class="wrap">
+    <span class="eyebrow reveal">El marco</span>
+    <h2 class="section-title reveal delay-1">El Diagnóstico EXEC&#8217;<span class="ia-rose">IA</span></h2>
+    <p class="ce-que-intro reveal s12">Antes de pensar en herramientas, hay una pregunta que lo cambia todo: <em>¿dónde genera la <span class="ink-accent"><span class="ia-rose">IA</span></span> un valor real para su organización?</em><br><span class="ink-accent">marco en 4 etapas</span> estructura cada misión, desde el primer intercambio hasta la hoja de ruta.<br>Empieza por el valor, no por la tecnología.</p>
+    <div class="cards-grid">
+      <div class="xcard reveal delay-1">
+        <div class="xcard-num">01</div>
+        <h3>Cartografía</h3>
+        <p>Puntos de fricción, costes ocultos, decisiones que se eternizan: un diagnóstico sin sesgo tecnológico, desde la perspectiva de la Dirección General.</p>
+      </div>
+      <div class="xcard reveal delay-2">
+        <div class="xcard-num">02</div>
+        <h3>Diagnóstico</h3>
+        <p>El impacto potencial frente a la madurez real de la organización: humana y organizativa, no solo técnica.</p>
+      </div>
+      <div class="xcard reveal delay-3">
+        <div class="xcard-num">03</div>
+        <h3>Priorización</h3>
+        <p>Qué usos crean más valor, más rápido: los que dejan a sus clientes o a sus equipos realmente más satisfechos, no solo los que impresionan puertas adentro.<br>Cuáles pueden esperar sin riesgo.</p>
+      </div>
+      <div class="xcard reveal delay-4">
+        <div class="xcard-num">04</div>
+        <h3>Decisión</h3>
+        <p>Una hoja de ruta clara: lanzar, posponer o descartar.<br>Una decisión de Dirección General, nunca delegada a la herramienta.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ═══ ENGAGEMENTS ═══ -->
+<section id="engagements" class="bg-white snap-page expertise-page-rule">
+  <div class="wrap">
+    <h2 class="section-title reveal">Compromisos</h2>
+    <details class="cerveau-fold" open><summary><h3 class="cerveau-h3"><span class="ink-terra-lg">Soberanía de los datos</span></h3></summary><div class="cerveau-fold-body"><p class="cerveau-text"><strong>Tus datos siguen siendo tuyos.</strong></p><ul class="priorites"><li>Aplicamos el principio de minimización: solo se usan los datos necesarios para la misión.</li><li>Un dato solo se confía a una herramienta de IA cuando ese uso está autorizado, es necesario y está amparado por contrato.</li><li>Cuando se tratan datos personales por tu cuenta, se firma un acuerdo de tratamiento conforme al RGPD antes de empezar.</li></ul></div></details>
+    <div class="funding-note reveal">
+      <p class="funding-note-title">Gobernanza y cumplimiento</p>
+      <p>Un agente de <span class="ia-rose">IA</span> que trata sus datos debe integrar el <strong class="fw-600"><span class="rgpd-b">RGPD</span> y la Ley de <span class="ia-rose">IA</span></strong> europea desde el diseño, no como un trámite posterior. Es un rigor practicado en <span class="art-chip">Bureau Veritas</span>, grupo internacional de referencia en inspección, ensayos y certificación, antes de aplicarlo al diseño de los agentes de <span class="ia-rose">IA</span> de EXEC'<span class="ink-accent"><span class="ia-rose">IA</span></span>.</p>
+      <p><a href="mentions-legales-es.html#datos">El tratamiento de datos personales</a> detalla las bases legales, plazos de conservación y transferencias aplicadas.</p>
+      <a class="guide-link-card" href="conformite-ia-pme-es.html">
+        <span class="guide-link-title"><span class="ia-rose">AI</span> Act &amp; <span class="rgpd-b">RGPD</span> para una PYME</span>
+        <svg class="guide-link-arrow" viewBox="0 0 14 24" width="14" height="24" aria-hidden="true" focusable="false"><path d="M7 23V4M2 9l5-5 5 5" fill="none" stroke="#C75F62" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="guide-link-desc">El calendario real, qué es obligatorio hoy y qué se&nbsp;ha&nbsp;aplazado.</span>
+      </a>
+    </div>
+  </div>
+</section>
+
 <section id="about-cta" class="bg-ivory snap-page">
   <span class="about-cta-sep" aria-hidden="true"></span>
   <div class="wrap about-cta-inner reveal">
@@ -2080,6 +2374,7 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
     <p class="about-cta-sub">Identifiquemos las decisiones de <span class="ink-accent"><span class="ia-rose">IA</span></span> que realmente merecen su atención.</p>
     <a href="https://calendly.com/exec-ia" target="_blank" rel="noopener" class="btn btn-rose">Su diagnóstico <span class="ia-rose">IA</span></a>
       <p class="offres-crosslink"><a href="offres-es.html" class="portrait-link">Ver las ofertas de EXEC&#8217;<span class="ia-rose">IA</span> <span class="portrait-link-arrow">→</span></a></p>
+      <p class="offres-crosslink"><a href="perspectives-es.html" class="portrait-link">Explorar las Perspectivas <span class="portrait-link-arrow">→</span></a></p>
     <p class="zone-line"><span class="zone-pin" aria-hidden="true">📍</span>Intervengo en París y en toda la región de Île-de-France, de forma presencial o a distancia.</p>
   </div>
 </section>
@@ -2097,12 +2392,13 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
     <div class="footer-col footer-col--site">
       <span class="footer-col-title">El sitio</span>
       <a href="index-es.html">Inicio</a>
-      <a href="expertise-es.html">Experiencia</a>
-      <a href="offres-es.html">Servicios</a>
+      <a href="offres-es.html">Acompañamiento IA</a>
+      <a href="solutions-es.html">Soluciones digitales e IA</a>
+      <a href="realisations-es.html">Realizaciones</a>
       <a href="a-propos-es.html">Perfil</a>
       <a href="temoignages-es.html">Testimonios</a>
       <a href="contact-es.html">Contacto</a>
-      <a href="perspectives-es.html">Blog</a>
+      <a href="perspectives-es.html">Perspectivas</a><a href="ressources-es.html">Recursos</a>
     <div class="footer-persp-grid">
     <a href="perspective-entreprise-utilise-deja-ia-es.html" class="footer-persp-link">→ <span class="art-star" aria-label="Artículo más leído">★</span>Adoptar la <span class="ink-accent"><span class="ia-rose">IA</span></span> no es crear valor</a>
     <a href="perspective-toutes-decisions-ne-se-deleguent-pas-es.html" class="footer-persp-link">→ <span class="art-star" aria-label="Artículo más leído">★</span>No todas las decisiones se delegan</a>
@@ -2145,7 +2441,7 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
   </div>
 </footer>
 
-<script src="assets/script.js?v=39"></script>
+<script src="assets/script.js?v=40"></script>
 
 <!-- ═══ COOKIE BANNER ══════════════════════════════════════════ -->
 <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Consentimiento de cookies">

@@ -1418,6 +1418,27 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
   .site-footer .footer-persp-grid{ display: grid !important; grid-template-columns: 1fr 1fr !important; grid-template-rows: none !important; grid-auto-flow: row !important; column-gap: 18px !important; row-gap: 5px !important; width: auto !important; max-width: none !important; position: static !important; transform: none !important; left: auto !important; right: auto !important; margin: 14px 0 0 !important; }
   .site-footer .footer-tag-lead, .site-footer .footer-tag-rest{ display: inline !important; position: static !important; }
 }
+/* Menu principal (arborescence) : 6 rubriques, menus déroulants, bouton « Prendre rendez-vous » */
+.nav-item{ position: relative; display: inline-flex; align-items: center; }
+.nav-dd{ position: absolute; top: 100%; left: 50%; transform: translateX(-50%); min-width: 250px; background: var(--ivory); border: 1px solid var(--pale-rose); border-radius: 12px; box-shadow: 0 14px 34px rgba(99,59,74,.12); padding: 8px 0; opacity: 0; visibility: hidden; transition: opacity .2s, visibility .2s; z-index: 60; }
+.nav-item:hover .nav-dd, .nav-item:focus-within .nav-dd{ opacity: 1; visibility: visible; }
+.nav-dd a{ display: block; padding: 9px 18px; font-size: .9rem; font-weight: 500; letter-spacing: 0; text-transform: none; white-space: nowrap; color: var(--plum); }
+.nav-dd a::after{ display: none; }
+.nav-dd a:hover{ color: #C75F62; }
+.nav-links a{ white-space: nowrap; }
+.nav-links a.nav-cta{ background: #C75F62; color: #FAF6F2 !important; padding: 9px 18px; border-radius: 24px; font-size: .78rem; line-height: 1.2; letter-spacing: .06em; }
+.nav-links a.nav-cta::after{ display: none; }
+.nav-links a.nav-cta:hover{ background: #C75F62; color: #FAF6F2 !important; }
+@media (max-width: 1100px){
+  .nav-dd{ position: static; transform: none; opacity: 1; visibility: visible; min-width: 0; background: transparent; border: 0; box-shadow: none; padding: 0 0 6px 14px; }
+  .nav-dd a{ padding: 6px 0; font-size: .95rem; }
+  .nav-item--dd{ flex-direction: column; align-items: flex-start; }
+}
+/* Menu : resserrement (dès 1025 px, quelle que soit la largeur) pour que les rubriques, le bouton et les langues tiennent sur une ligne */
+@media (min-width: 1025px){ .nav-links{ gap: 10px !important; } .nav-links > a, .nav-links .nav-item > a{ font-size: .68rem !important; letter-spacing: .03em !important; } .nav-links a.nav-cta{ font-size: .66rem !important; padding: 8px 12px !important; } .nav-langs{ margin-left: 12px !important; } }
+@media (min-width: 1181px) and (max-width: 1280px){ .nav-brand{ margin-right: 14px !important; } .nav-links{ gap: 7px !important; } .nav-links > a, .nav-links .nav-item > a{ font-size: .64rem !important; letter-spacing: .02em !important; } .nav-links a.nav-cta{ font-size: .62rem !important; padding: 8px 10px !important; } .nav-langs{ margin-left: 8px !important; } }
+/* Menu mobile : le panneau défile quand il dépasse la hauteur de l'écran (sinon les dernières rubriques et le bouton restent inaccessibles) */
+@media (max-width: 1180px){ .nav-links.open{ max-height: calc(100vh - var(--nav-h, 64px)); max-height: calc(100dvh - var(--nav-h, 64px)); overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; } }
 </style>
 <style id="footer-contact-gauche">
 @media (min-width: 1251px){
@@ -1435,15 +1456,7 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
       <img src="assets/logo-prune-final.webp" alt="EXEC'IA logo" class="nav-logo-rond" width="1254" height="1254" decoding="async">
       <img src="assets/logo-execia-bords-prune-240.webp" alt="EXEC'IA Consulting" class="nav-logo-full" width="240" height="113" fetchpriority="high" decoding="async">
     </a>
-    <div class="nav-links">
-      <a href="index-en.html">Home</a>
-      <a href="expertise-en.html">Expertise</a>
-      <a href="offres-en.html">Offers</a>
-      <a href="a-propos-en.html">About</a>
-      <a href="temoignages-en.html" class="active">Testimonials</a>
-      <a href="contact-en.html">Contact</a>
-      <a href="perspectives-en.html">Blog</a>
-    </div>
+    <div class="nav-links"><a href="index-en.html">Home</a><div class="nav-item nav-item--dd"><a href="offres-en.html">AI support</a><div class="nav-dd"><a href="offres-en.html#diagnostic">AI strategic diagnostic</a><a href="offres-en.html#conseil">Strategic advisory</a><a href="offres-en.html#transformation">AI transformation</a><a href="offres-en.html#formation">AI training</a></div></div><div class="nav-item nav-item--dd"><a href="solutions-en.html">Digital &amp; AI solutions</a><div class="nav-dd"><a href="agents-ia-en.html">Business AI agents</a><a href="solutions-en.html#automatisation">Process automation</a><a href="solutions-en.html#operationnelles">Operational solutions</a><a href="solutions-en.html#sites">Website creation</a></div></div><div class="nav-item nav-item--dd"><a href="realisations-en.html" class="active">Achievements</a><div class="nav-dd"><a href="realisations-en.html#clients">Client projects</a><a href="realisations-en.html#demos">Demonstrations and tools</a><a href="realisations-en.html#usages">Illustrative use cases</a><a href="temoignages-en.html">Testimonials</a></div></div><a href="perspectives-en.html">Insights</a><a href="a-propos-en.html">About</a><a href="contact-en.html" class="nav-cta">Book an appointment</a></div>
     <div class="nav-langs">
       <a href="temoignages.html" class="nav-lang">FR</a>
       <span class="nav-lang nav-lang-active">EN</span>
@@ -1525,7 +1538,7 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
 
     </div>
     <p class="testi-note">* Testimonials collected with the consent of the individuals concerned.</p>
-    <a href="expertise-en.html#webcreation" class="testi-more-cta">And that is not all, clients are already sharing feedback on the websites created <span class="portrait-link-arrow">→</span></a>
+    <a href="realisations-en.html#clients" class="testi-more-cta">And that is not all, clients are already sharing feedback on the websites created <span class="portrait-link-arrow">→</span></a>
       <p class="offres-crosslink"><a href="offres-en.html" class="portrait-link">See the EXEC&#8217;<span class="ia-rose">IA</span> offers <span class="portrait-link-arrow">→</span></a></p>
   </div>
 </section>
@@ -1543,12 +1556,13 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
     <div class="footer-col footer-col--site">
       <span class="footer-col-title">Site</span>
       <a href="index-en.html">Home</a>
-      <a href="expertise-en.html">Expertise</a>
-      <a href="offres-en.html">Offers</a>
+      <a href="offres-en.html">AI support</a>
+      <a href="solutions-en.html">Digital &amp; AI solutions</a>
+      <a href="realisations-en.html">Achievements</a>
       <a href="a-propos-en.html">About</a>
       <a href="temoignages-en.html">Testimonials</a>
       <a href="contact-en.html">Contact</a>
-      <a href="perspectives-en.html">Blog</a>
+      <a href="perspectives-en.html">Insights</a><a href="ressources-en.html">Resources</a>
     <div class="footer-persp-grid">
     <a href="perspective-entreprise-utilise-deja-ia-en.html" class="footer-persp-link">→ <span class="art-star" aria-label="Most-read article">★</span>Adopting <span class="ink-accent"><span class="ia-rose">AI</span></span> vs. creating value</a>
     <a href="perspective-toutes-decisions-ne-se-deleguent-pas-en.html" class="footer-persp-link">→ <span class="art-star" aria-label="Most-read article">★</span>Not every decision can be delegated</a>
@@ -1591,7 +1605,7 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
   </div>
 </footer>
 
-<script src="assets/script.js?v=39"></script>
+<script src="assets/script.js?v=40"></script>
 <script src="assets/inline/temoignages-1.js?v=2" defer></script>
 
 <!-- ═══ COOKIE BANNER ══════════════════════════════════════════ -->
