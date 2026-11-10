@@ -8241,5 +8241,3 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after { content: " · 
   .site-footer .footer-persp-grid{ display: grid !important; grid-template-columns: 1fr 1fr !important; grid-template-rows: none !important; grid-auto-flow: row !important; column-gap: 18px !important; row-gap: 5px !important; width: auto !important; max-width: none !important; position: static !important; transform: none !important; left: auto !important; right: auto !important; margin: 14px 0 0 !important; }
   .site-footer .footer-tag-lead, .site-footer .footer-tag-rest{ display: inline !important; position: static !important; }
 }
-/* Menu : resserrement entre 1025 et 1400 px pour que les sept rubriques et les langues tiennent sur une ligne */
-@media (min-width: 1025px) and (max-width: 1400px){ .nav-links{ gap: 10px !important; } .nav-links > a, .nav-links .nav-item > a{ font-size: .68rem !important; letter-spacing: .03em !important; } .nav-links a.nav-cta{ font-size: .66rem !important; padding: 8px 12px !important; } .nav-langs{ margin-left: 12px !important; } }

@@ -1205,11 +1205,7 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
   .nav-dd a{ padding: 6px 0; font-size: .95rem; }
   .nav-item--dd{ flex-direction: column; align-items: flex-start; }
 }
-/* Menu : resserrement (dès 1025 px, quelle que soit la largeur) pour que les rubriques, le bouton et les langues tiennent sur une ligne */
-@media (min-width: 1025px){ .nav-links{ gap: 10px !important; } .nav-links > a, .nav-links .nav-item > a{ font-size: .68rem !important; letter-spacing: .03em !important; } .nav-links a.nav-cta{ font-size: .66rem !important; padding: 8px 12px !important; } .nav-langs{ margin-left: 12px !important; } }
-@media (min-width: 1181px) and (max-width: 1280px){ .nav-brand{ margin-right: 14px !important; } .nav-links{ gap: 7px !important; } .nav-links > a, .nav-links .nav-item > a{ font-size: .64rem !important; letter-spacing: .02em !important; } .nav-links a.nav-cta{ font-size: .62rem !important; padding: 8px 10px !important; } .nav-langs{ margin-left: 8px !important; } }
-/* Menu mobile : le panneau défile quand il dépasse la hauteur de l'écran (sinon les dernières rubriques et le bouton restent inaccessibles) */
-@media (max-width: 1180px){ .nav-links.open{ max-height: calc(100vh - var(--nav-h, 64px)); max-height: calc(100dvh - var(--nav-h, 64px)); overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; } }
+
 .pv-related{ max-width: 760px; margin: 48px auto 0; padding: 26px 26px 24px; background: var(--ivory); border: 1px solid var(--pale-rose); border-top: 3px solid var(--plum); border-radius: 14px; }
 .pv-related-title{ font-family: var(--serif); font-weight: 500; font-size: 1.3rem; color: var(--plum); margin: 0 0 12px; }
 .pv-related ul{ list-style: none; margin: 0 0 16px; padding: 0; display: flex; flex-direction: column; gap: 10px; }
@@ -1226,6 +1222,52 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
 .bc-nav a{ color: var(--plum); opacity: .7; text-decoration: none; }
 .bc-nav a:hover{ opacity: 1; color: #C75F62; }
 .bc-nav .bc-sep{ opacity: .45; }
+
+/* Menu principal v2 */
+#nav{ overflow: visible !important; }
+.nav-in{ max-width: none; }
+.nav-actions{ display: flex; align-items: center; gap: 14px; margin-left: auto; flex-shrink: 0; }
+.nav-actions .nav-langs{ margin-left: 0 !important; }
+.nav-actions a.nav-cta{ background: #C75F62; color: #FAF6F2 !important; padding: 9px 18px; border-radius: 24px; font-size: .78rem; font-weight: 600; line-height: 1.2; letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; transition: transform .2s, box-shadow .2s; }
+.nav-actions a.nav-cta:hover{ background: #C75F62; color: #FAF6F2 !important; transform: translateY(-1px); }
+.nav-actions a.nav-cta:focus-visible{ outline: 2px solid #633B4A; outline-offset: 3px; }
+.nav-actions .nav-cta--bar{ display: none; }
+@media (min-width: 1181px) and (max-width: 1567px){
+.nav-links{ display: none; }
+.nav-burger{ display: flex; }
+.nav-actions .nav-cta--bar{ display: none; }
+.nav-links.open{ display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; position: fixed; top: var(--nav-h); left: 0; right: 0; bottom: auto; width: 100vw; height: auto; background: #4F2F3B; padding: 24px 28px 32px; gap: 22px; z-index: 998; box-shadow: 0 12px 32px rgba(99,59,74,.25); max-height: calc(100vh - var(--nav-h, 64px)); max-height: calc(100dvh - var(--nav-h, 64px)); overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
+.nav-links.open a:not(.nav-cta){ color: #FAF6F2 !important; font-size: 1rem; max-width: none !important; }
+.nav-links.open a::after{ background: #C75F62; }
+.nav-dd{ position: static; transform: none; opacity: 1; visibility: visible; min-width: 0; background: transparent; border: 0; box-shadow: none; padding: 0 0 6px 14px; }
+.nav-dd a{ padding: 6px 0; font-size: .95rem; }
+.nav-item--dd{ flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 1567px){
+.nav-dd a{ position: relative; padding: 6px 0 6px 24px; }
+.nav-dd a::before{ content: '→'; position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: .9rem; color: #D9C9C3; opacity: .85; }
+}
+@media (min-width: 1568px){
+  :root{ --nav-pad: clamp(10px, calc(4vw - 52px), 26px); --nav-col: clamp(16px, 1.2vw, 32px); }
+  .nav-in{ padding: 0 24px; gap: var(--nav-col); }
+  .nav-brand{ margin-right: 0; }
+  .nav-burger{ display: none; }
+  .nav-links{ flex: 1; justify-content: center; gap: 0 !important; }
+  .nav-links > a:not(.nav-cta), .nav-links > .nav-item{ margin: 0 var(--nav-pad); }
+  .nav-links > :first-child{ margin-left: 0; }
+  .nav-links > :nth-last-child(2){ margin-right: 0; }
+  .nav-links > :nth-child(n+2):not(.nav-cta)::before{ content: ''; position: absolute; left: calc(-1 * var(--nav-pad)); top: 50%; width: 1px; height: 18px; transform: translateY(-50%); background: rgba(99,59,74,.24); pointer-events: none; }
+  .nav-links .nav-cta--panel{ display: none; }
+  .nav-actions .nav-cta--bar{ display: inline-flex; align-items: center; }
+  .nav-lang:last-child{ margin-right: 0; }
+  .nav-links > .nav-item--dd > a{ padding-right: 11px; }
+  .nav-links > .nav-item--dd > a::before{ content: ''; position: absolute; right: 0; top: 50%; width: 5px; height: 5px; border-right: 1.3px solid currentColor; border-bottom: 1.3px solid currentColor; transform: translateY(-75%) rotate(45deg); opacity: .65; transition: transform .2s, opacity .2s; }
+  .nav-links > .nav-item--dd:hover > a::before, .nav-links > .nav-item--dd:focus-within > a::before{ transform: translateY(-25%) rotate(225deg); opacity: 1; }
+  .nav-dd a{ position: relative; padding-left: 36px; }
+  .nav-dd a::before{ content: '→'; position: absolute; left: 16px; top: 50%; transform: translateY(-50%); font-size: .85rem; color: #633B4A; opacity: .5; transition: transform .2s, opacity .2s, color .2s; }
+  .nav-dd a:hover::before, .nav-dd a:focus-visible::before{ color: #C75F62; opacity: 1; transform: translateY(-50%) translateX(3px); }
+}
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Qu'est-ce qu'un agent IA ?", "acceptedAnswer": {"@type": "Answer", "text": "Un logiciel qui ne se contente pas de répondre : il agit. Il reçoit un objectif, consulte des outils, enchaîne plusieurs étapes et produit un résultat, par exemple relancer une facture ou trier des demandes. C'est cette autonomie qui le distingue d'un chatbot, qui se contente de répondre, et d'une automatisation, qui suit toujours le même scénario. Un agent choisit ses étapes : il peut donc se tromper en agissant, ce qui impose de lui fixer un cadre clair, un périmètre limité et un responsable humain."}}, {"@type": "Question", "name": "Qu'est-ce qu'Agentalent.ai ?", "acceptedAnswer": {"@type": "Answer", "text": "Une plateforme lancée par monday.com le 23 mars 2026 pour « recruter » des agents IA : description du poste, présentation d'un agent, installation en une semaine environ, deux semaines d'essai avec remboursement intégral. Le modèle reprend celui d'un cabinet de recrutement, appliqué aux agents. Un détail compte plus que le prix : une personne réelle de l'équipe de la plateforme est responsable de chaque agent proposé, avec un nom et une adresse e-mail. Même chez un vendeur d'agents, aucun agent ne travaille sans responsable humain."}}, {"@type": "Question", "name": "Combien coûte un agent IA sur Agentalent.ai ?", "acceptedAnswer": {"@type": "Answer", "text": "Un mois de « salaire » payé une fois, ou ce « salaire » chaque mois avec 15 % de frais de plateforme. Constellation Research estimait les premiers agents autour de 2 000 dollars par mois au lancement. Le prix affiché n'est qu'une partie du coût réel. Il faut y ajouter le temps de l'équipe pour préparer les données, rédiger la fiche de poste de l'agent, relire son travail pendant l'essai, puis le superviser. Un agent qui fait gagner dix heures par semaine mais en demande cinq de vérification ne tient que la moitié de sa promesse."}}, {"@type": "Question", "name": "Qui est responsable d'un agent IA dans l'entreprise ?", "acceptedAnswer": {"@type": "Answer", "text": "L'entreprise qui l'utilise. Un agent n'engage pas sa propre responsabilité : il faut nommer une personne chargée de le superviser, avec le temps et l'autorité de l'arrêter. Dans une PME, ce responsable est souvent la personne qui dirige l'activité concernée : la comptabilité pour un agent de relance, le service client pour un agent de réponse. Il n'a pas besoin d'être technicien. Il doit connaître le métier, relire régulièrement le travail de l'agent et ajuster ses consignes."}}, {"@type": "Question", "name": "Que dit l'IA Act sur les agents IA ?", "acceptedAnswer": {"@type": "Answer", "text": "Depuis le 2 août 2026, une personne doit savoir qu'elle échange avec une IA (article 50). Les usages liés au recrutement ou à la gestion des salariés relèvent des systèmes à haut risque, avec des obligations au 2 décembre 2027. Le RGPD, dans son article 22, protège déjà chacun contre une décision fondée exclusivement sur un traitement automatisé lorsqu'elle l'affecte de manière significative. Un agent qui écrit à vos clients doit donc se présenter comme une IA, et un agent qui refuse seul un remboursement ou une candidature expose l'entreprise."}}, {"@type": "Question", "name": "Quelles décisions ne pas confier à un agent IA ?", "acceptedAnswer": {"@type": "Answer", "text": "Embaucher, refuser ou licencier une personne, accorder un geste commercial hors cadre, répondre à un client en litige. L'agent peut préparer ces décisions ; un humain les prend. Ces décisions touchent une personne et engagent l'entreprise : quelqu'un doit pouvoir les expliquer. Les meilleures tâches pour un agent sont précises, répétitives et faciles à vérifier, comme relancer une facture impayée avec un message validé à l'avance ou préparer un dossier avant un rendez-vous."}}], "inLanguage": "fr-FR"}
@@ -1246,12 +1288,12 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
       <img src="assets/logo-prune-final.webp" alt="EXEC'IA logo" class="nav-logo-rond" width="1254" height="1254" decoding="async">
       <img src="assets/logo-execia-bords-prune-240.webp" alt="EXEC'IA Consulting" class="nav-logo-full" width="240" height="113" fetchpriority="high" decoding="async">
     </a>
-    <div class="nav-links"><a href="/">Accueil</a><div class="nav-item nav-item--dd"><a href="offres.html">Accompagnement IA</a><div class="nav-dd"><a href="offres.html#diagnostic">Diagnostic stratégique IA</a><a href="offres.html#conseil">Conseil stratégique / Advisory</a><a href="offres.html#transformation">Transformation IA</a><a href="offres.html#formation">Formation IA</a></div></div><div class="nav-item nav-item--dd"><a href="solutions.html">Solutions digitales &amp; IA</a><div class="nav-dd"><a href="agents-ia.html">Agents IA métiers</a><a href="solutions.html#automatisation">Automatisation des processus</a><a href="solutions.html#operationnelles">Solutions opérationnelles</a><a href="solutions.html#sites">Création de sites web</a></div></div><div class="nav-item nav-item--dd"><a href="realisations.html">Réalisations</a><div class="nav-dd"><a href="realisations.html#clients">Projets clients</a><a href="realisations.html#demos">Démonstrations et outils</a><a href="realisations.html#usages">Cas d’usage illustratifs</a><a href="temoignages.html">Témoignages clients</a></div></div><a href="perspectives.html" class="active">Perspectives</a><a href="a-propos.html">À propos</a><a href="contact.html" class="nav-cta">Prendre rendez-vous</a></div>
-    <div class="nav-langs">
+    <div class="nav-links"><a href="/">Accueil</a><div class="nav-item nav-item--dd"><a aria-haspopup="true" href="offres.html">Accompagnement IA</a><div class="nav-dd"><a href="offres.html#diagnostic">Diagnostic stratégique IA</a><a href="offres.html#conseil">Conseil stratégique / Advisory</a><a href="offres.html#transformation">Transformation IA</a><a href="offres.html#formation">Formation IA</a></div></div><div class="nav-item nav-item--dd"><a aria-haspopup="true" href="solutions.html">Solutions digitales &amp; IA</a><div class="nav-dd"><a href="agents-ia.html">Agents IA métiers</a><a href="solutions.html#automatisation">Automatisation des processus</a><a href="solutions.html#operationnelles">Solutions opérationnelles</a><a href="solutions.html#sites">Création de sites web</a></div></div><div class="nav-item nav-item--dd"><a aria-haspopup="true" href="realisations.html">Réalisations</a><div class="nav-dd"><a href="realisations.html#clients">Projets clients</a><a href="realisations.html#demos">Démonstrations et outils</a><a href="realisations.html#usages">Cas d’usage illustratifs</a><a href="temoignages.html">Témoignages clients</a></div></div><a href="perspectives.html" class="active">Perspectives</a><a href="a-propos.html">À propos</a><a href="contact.html" class="nav-cta nav-cta--panel">Prendre rendez-vous</a></div>
+    <div class="nav-actions"><a href="contact.html" class="nav-cta nav-cta--bar">Prendre rendez-vous</a><div class="nav-langs">
       <span class="nav-lang nav-lang-active">FR</span>
       <a href="perspective-agents-ia-recruter-comme-salarie-en.html" class="nav-lang">EN</a>
       <a href="perspective-agents-ia-recruter-comme-salarie-es.html" class="nav-lang">ES</a>
-    </div>
+    </div></div>
     <button class="nav-burger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>

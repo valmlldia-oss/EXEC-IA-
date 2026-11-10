@@ -1943,11 +1943,7 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
 .sol-other{ max-width: 1080px; margin: 0 auto; padding: 28px 20px 56px; border-top: 1px solid var(--pale-rose); }
 .sol-other p{ font-family: var(--sans); font-size: .95rem; color: var(--plum); margin: 0; }
 .sol-other a{ color: var(--plum); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
-/* Menu : resserrement (dès 1025 px, quelle que soit la largeur) pour que les rubriques, le bouton et les langues tiennent sur une ligne */
-@media (min-width: 1025px){ .nav-links{ gap: 10px !important; } .nav-links > a, .nav-links .nav-item > a{ font-size: .68rem !important; letter-spacing: .03em !important; } .nav-links a.nav-cta{ font-size: .66rem !important; padding: 8px 12px !important; } .nav-langs{ margin-left: 12px !important; } }
-@media (min-width: 1181px) and (max-width: 1280px){ .nav-brand{ margin-right: 14px !important; } .nav-links{ gap: 7px !important; } .nav-links > a, .nav-links .nav-item > a{ font-size: .64rem !important; letter-spacing: .02em !important; } .nav-links a.nav-cta{ font-size: .62rem !important; padding: 8px 10px !important; } .nav-langs{ margin-left: 8px !important; } }
-/* Menu mobile : le panneau défile quand il dépasse la hauteur de l'écran (sinon les dernières rubriques et le bouton restent inaccessibles) */
-@media (max-width: 1180px){ .nav-links.open{ max-height: calc(100vh - var(--nav-h, 64px)); max-height: calc(100dvh - var(--nav-h, 64px)); overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; } }
+
 .ag-nav{ max-width: 1080px; margin: 0 auto; padding: 0 20px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
 .ag-nav a{ font-family: var(--sans); font-size: .85rem; font-weight: 600; color: var(--plum); background: var(--ivory); border: 1px solid var(--pale-rose); border-radius: 999px; padding: 8px 16px; }
 .ag-nav a:hover{ color: #C75F62; border-color: #C75F62; }
@@ -2005,6 +2001,52 @@ line-height: 1.1 !important;
 .bc-nav a:hover{ opacity: 1; color: #C75F62; }
 .bc-nav .bc-sep{ opacity: .45; }
 .bc-nav + .sol-hero{ padding-top: 28px; }
+
+/* Menu principal v2 */
+#nav{ overflow: visible !important; }
+.nav-in{ max-width: none; }
+.nav-actions{ display: flex; align-items: center; gap: 14px; margin-left: auto; flex-shrink: 0; }
+.nav-actions .nav-langs{ margin-left: 0 !important; }
+.nav-actions a.nav-cta{ background: #C75F62; color: #FAF6F2 !important; padding: 9px 18px; border-radius: 24px; font-size: .78rem; font-weight: 600; line-height: 1.2; letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; transition: transform .2s, box-shadow .2s; }
+.nav-actions a.nav-cta:hover{ background: #C75F62; color: #FAF6F2 !important; transform: translateY(-1px); }
+.nav-actions a.nav-cta:focus-visible{ outline: 2px solid #633B4A; outline-offset: 3px; }
+.nav-actions .nav-cta--bar{ display: none; }
+@media (min-width: 1181px) and (max-width: 1567px){
+.nav-links{ display: none; }
+.nav-burger{ display: flex; }
+.nav-actions .nav-cta--bar{ display: none; }
+.nav-links.open{ display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; position: fixed; top: var(--nav-h); left: 0; right: 0; bottom: auto; width: 100vw; height: auto; background: #4F2F3B; padding: 24px 28px 32px; gap: 22px; z-index: 998; box-shadow: 0 12px 32px rgba(99,59,74,.25); max-height: calc(100vh - var(--nav-h, 64px)); max-height: calc(100dvh - var(--nav-h, 64px)); overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
+.nav-links.open a:not(.nav-cta){ color: #FAF6F2 !important; font-size: 1rem; max-width: none !important; }
+.nav-links.open a::after{ background: #C75F62; }
+.nav-dd{ position: static; transform: none; opacity: 1; visibility: visible; min-width: 0; background: transparent; border: 0; box-shadow: none; padding: 0 0 6px 14px; }
+.nav-dd a{ padding: 6px 0; font-size: .95rem; }
+.nav-item--dd{ flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 1567px){
+.nav-dd a{ position: relative; padding: 6px 0 6px 24px; }
+.nav-dd a::before{ content: '→'; position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: .9rem; color: #D9C9C3; opacity: .85; }
+}
+@media (min-width: 1568px){
+  :root{ --nav-pad: clamp(10px, calc(4vw - 52px), 26px); --nav-col: clamp(16px, 1.2vw, 32px); }
+  .nav-in{ padding: 0 24px; gap: var(--nav-col); }
+  .nav-brand{ margin-right: 0; }
+  .nav-burger{ display: none; }
+  .nav-links{ flex: 1; justify-content: center; gap: 0 !important; }
+  .nav-links > a:not(.nav-cta), .nav-links > .nav-item{ margin: 0 var(--nav-pad); }
+  .nav-links > :first-child{ margin-left: 0; }
+  .nav-links > :nth-last-child(2){ margin-right: 0; }
+  .nav-links > :nth-child(n+2):not(.nav-cta)::before{ content: ''; position: absolute; left: calc(-1 * var(--nav-pad)); top: 50%; width: 1px; height: 18px; transform: translateY(-50%); background: rgba(99,59,74,.24); pointer-events: none; }
+  .nav-links .nav-cta--panel{ display: none; }
+  .nav-actions .nav-cta--bar{ display: inline-flex; align-items: center; }
+  .nav-lang:last-child{ margin-right: 0; }
+  .nav-links > .nav-item--dd > a{ padding-right: 11px; }
+  .nav-links > .nav-item--dd > a::before{ content: ''; position: absolute; right: 0; top: 50%; width: 5px; height: 5px; border-right: 1.3px solid currentColor; border-bottom: 1.3px solid currentColor; transform: translateY(-75%) rotate(45deg); opacity: .65; transition: transform .2s, opacity .2s; }
+  .nav-links > .nav-item--dd:hover > a::before, .nav-links > .nav-item--dd:focus-within > a::before{ transform: translateY(-25%) rotate(225deg); opacity: 1; }
+  .nav-dd a{ position: relative; padding-left: 36px; }
+  .nav-dd a::before{ content: '→'; position: absolute; left: 16px; top: 50%; transform: translateY(-50%); font-size: .85rem; color: #633B4A; opacity: .5; transition: transform .2s, opacity .2s, color .2s; }
+  .nav-dd a:hover::before, .nav-dd a:focus-visible::before{ color: #C75F62; opacity: 1; transform: translateY(-50%) translateX(3px); }
+}
 </style>
 <style id="footer-contact-gauche">
 @media (min-width: 1251px){
@@ -2025,12 +2067,12 @@ line-height: 1.1 !important;
       <img src="assets/logo-prune-final.webp" alt="EXEC'IA logo" class="nav-logo-rond" width="1254" height="1254" decoding="async">
       <img src="assets/logo-execia-bords-prune-240.webp" alt="EXEC'IA Consulting" class="nav-logo-full" width="240" height="113" fetchpriority="high" decoding="async">
     </a>
-    <div class="nav-links"><a href="index-es.html">Inicio</a><div class="nav-item nav-item--dd"><a href="offres-es.html">Acompañamiento IA</a><div class="nav-dd"><a href="offres-es.html#diagnostic">Diagnóstico estratégico IA</a><a href="offres-es.html#conseil">Consultoría estratégica / Advisory</a><a href="offres-es.html#transformation">Transformación IA</a><a href="offres-es.html#formation">Formación IA</a></div></div><div class="nav-item nav-item--dd"><a href="solutions-es.html" class="active">Soluciones digitales e IA</a><div class="nav-dd"><a href="agents-ia-es.html">Agentes IA por función</a><a href="solutions-es.html#automatisation">Automatización de procesos</a><a href="solutions-es.html#operationnelles">Soluciones operativas</a><a href="solutions-es.html#sites">Creación de sitios web</a></div></div><div class="nav-item nav-item--dd"><a href="realisations-es.html">Realizaciones</a><div class="nav-dd"><a href="realisations-es.html#clientes">Proyectos de clientes</a><a href="realisations-es.html#demostraciones">Demostraciones y herramientas</a><a href="realisations-es.html#usos">Casos de uso ilustrativos</a><a href="temoignages-es.html">Testimonios</a></div></div><a href="perspectives-es.html">Perspectivas</a><a href="a-propos-es.html">Perfil</a><a href="contact-es.html" class="nav-cta">Pedir una cita</a></div>
-    <div class="nav-langs">
+    <div class="nav-links"><a href="index-es.html">Inicio</a><div class="nav-item nav-item--dd"><a aria-haspopup="true" href="offres-es.html">Acompañamiento IA</a><div class="nav-dd"><a href="offres-es.html#diagnostic">Diagnóstico estratégico IA</a><a href="offres-es.html#conseil">Consultoría estratégica / Advisory</a><a href="offres-es.html#transformation">Transformación IA</a><a href="offres-es.html#formation">Formación IA</a></div></div><div class="nav-item nav-item--dd"><a aria-haspopup="true" href="solutions-es.html" class="active">Soluciones digitales e IA</a><div class="nav-dd"><a href="agents-ia-es.html">Agentes IA por función</a><a href="solutions-es.html#automatisation">Automatización de procesos</a><a href="solutions-es.html#operationnelles">Soluciones operativas</a><a href="solutions-es.html#sites">Creación de sitios web</a></div></div><div class="nav-item nav-item--dd"><a aria-haspopup="true" href="realisations-es.html">Realizaciones</a><div class="nav-dd"><a href="realisations-es.html#clientes">Proyectos de clientes</a><a href="realisations-es.html#demostraciones">Demostraciones y herramientas</a><a href="realisations-es.html#usos">Casos de uso ilustrativos</a><a href="temoignages-es.html">Testimonios</a></div></div><a href="perspectives-es.html">Perspectivas</a><a href="a-propos-es.html">Perfil</a><a href="contact-es.html" class="nav-cta nav-cta--panel">Pedir una cita</a></div>
+    <div class="nav-actions"><a href="contact-es.html" class="nav-cta nav-cta--bar">Pedir una cita</a><div class="nav-langs">
       <a href="offres.html" class="nav-lang">FR</a>
       <a href="offres-en.html" class="nav-lang">EN</a>
       <span class="nav-lang nav-lang-active">ES</span>
-    </div>
+    </div></div>
     <button class="nav-burger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>

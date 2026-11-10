@@ -1200,11 +1200,7 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
   .nav-dd a{ padding: 6px 0; font-size: .95rem; }
   .nav-item--dd{ flex-direction: column; align-items: flex-start; }
 }
-/* Menu : resserrement (dès 1025 px, quelle que soit la largeur) pour que les rubriques, le bouton et les langues tiennent sur une ligne */
-@media (min-width: 1025px){ .nav-links{ gap: 10px !important; } .nav-links > a, .nav-links .nav-item > a{ font-size: .68rem !important; letter-spacing: .03em !important; } .nav-links a.nav-cta{ font-size: .66rem !important; padding: 8px 12px !important; } .nav-langs{ margin-left: 12px !important; } }
-@media (min-width: 1181px) and (max-width: 1280px){ .nav-brand{ margin-right: 14px !important; } .nav-links{ gap: 7px !important; } .nav-links > a, .nav-links .nav-item > a{ font-size: .64rem !important; letter-spacing: .02em !important; } .nav-links a.nav-cta{ font-size: .62rem !important; padding: 8px 10px !important; } .nav-langs{ margin-left: 8px !important; } }
-/* Menu mobile : le panneau défile quand il dépasse la hauteur de l'écran (sinon les dernières rubriques et le bouton restent inaccessibles) */
-@media (max-width: 1180px){ .nav-links.open{ max-height: calc(100vh - var(--nav-h, 64px)); max-height: calc(100dvh - var(--nav-h, 64px)); overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; } }
+
 .pv-related{ max-width: 760px; margin: 48px auto 0; padding: 26px 26px 24px; background: var(--ivory); border: 1px solid var(--pale-rose); border-top: 3px solid var(--plum); border-radius: 14px; }
 .pv-related-title{ font-family: var(--serif); font-weight: 500; font-size: 1.3rem; color: var(--plum); margin: 0 0 12px; }
 .pv-related ul{ list-style: none; margin: 0 0 16px; padding: 0; display: flex; flex-direction: column; gap: 10px; }
@@ -1221,6 +1217,52 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
 .bc-nav a{ color: var(--plum); opacity: .7; text-decoration: none; }
 .bc-nav a:hover{ opacity: 1; color: #C75F62; }
 .bc-nav .bc-sep{ opacity: .45; }
+
+/* Menu principal v2 */
+#nav{ overflow: visible !important; }
+.nav-in{ max-width: none; }
+.nav-actions{ display: flex; align-items: center; gap: 14px; margin-left: auto; flex-shrink: 0; }
+.nav-actions .nav-langs{ margin-left: 0 !important; }
+.nav-actions a.nav-cta{ background: #C75F62; color: #FAF6F2 !important; padding: 9px 18px; border-radius: 24px; font-size: .78rem; font-weight: 600; line-height: 1.2; letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; transition: transform .2s, box-shadow .2s; }
+.nav-actions a.nav-cta:hover{ background: #C75F62; color: #FAF6F2 !important; transform: translateY(-1px); }
+.nav-actions a.nav-cta:focus-visible{ outline: 2px solid #633B4A; outline-offset: 3px; }
+.nav-actions .nav-cta--bar{ display: none; }
+@media (min-width: 1181px) and (max-width: 1567px){
+.nav-links{ display: none; }
+.nav-burger{ display: flex; }
+.nav-actions .nav-cta--bar{ display: none; }
+.nav-links.open{ display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; position: fixed; top: var(--nav-h); left: 0; right: 0; bottom: auto; width: 100vw; height: auto; background: #4F2F3B; padding: 24px 28px 32px; gap: 22px; z-index: 998; box-shadow: 0 12px 32px rgba(99,59,74,.25); max-height: calc(100vh - var(--nav-h, 64px)); max-height: calc(100dvh - var(--nav-h, 64px)); overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
+.nav-links.open a:not(.nav-cta){ color: #FAF6F2 !important; font-size: 1rem; max-width: none !important; }
+.nav-links.open a::after{ background: #C75F62; }
+.nav-dd{ position: static; transform: none; opacity: 1; visibility: visible; min-width: 0; background: transparent; border: 0; box-shadow: none; padding: 0 0 6px 14px; }
+.nav-dd a{ padding: 6px 0; font-size: .95rem; }
+.nav-item--dd{ flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 1567px){
+.nav-dd a{ position: relative; padding: 6px 0 6px 24px; }
+.nav-dd a::before{ content: '→'; position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: .9rem; color: #D9C9C3; opacity: .85; }
+}
+@media (min-width: 1568px){
+  :root{ --nav-pad: clamp(10px, calc(4vw - 52px), 26px); --nav-col: clamp(16px, 1.2vw, 32px); }
+  .nav-in{ padding: 0 24px; gap: var(--nav-col); }
+  .nav-brand{ margin-right: 0; }
+  .nav-burger{ display: none; }
+  .nav-links{ flex: 1; justify-content: center; gap: 0 !important; }
+  .nav-links > a:not(.nav-cta), .nav-links > .nav-item{ margin: 0 var(--nav-pad); }
+  .nav-links > :first-child{ margin-left: 0; }
+  .nav-links > :nth-last-child(2){ margin-right: 0; }
+  .nav-links > :nth-child(n+2):not(.nav-cta)::before{ content: ''; position: absolute; left: calc(-1 * var(--nav-pad)); top: 50%; width: 1px; height: 18px; transform: translateY(-50%); background: rgba(99,59,74,.24); pointer-events: none; }
+  .nav-links .nav-cta--panel{ display: none; }
+  .nav-actions .nav-cta--bar{ display: inline-flex; align-items: center; }
+  .nav-lang:last-child{ margin-right: 0; }
+  .nav-links > .nav-item--dd > a{ padding-right: 11px; }
+  .nav-links > .nav-item--dd > a::before{ content: ''; position: absolute; right: 0; top: 50%; width: 5px; height: 5px; border-right: 1.3px solid currentColor; border-bottom: 1.3px solid currentColor; transform: translateY(-75%) rotate(45deg); opacity: .65; transition: transform .2s, opacity .2s; }
+  .nav-links > .nav-item--dd:hover > a::before, .nav-links > .nav-item--dd:focus-within > a::before{ transform: translateY(-25%) rotate(225deg); opacity: 1; }
+  .nav-dd a{ position: relative; padding-left: 36px; }
+  .nav-dd a::before{ content: '→'; position: absolute; left: 16px; top: 50%; transform: translateY(-50%); font-size: .85rem; color: #633B4A; opacity: .5; transition: transform .2s, opacity .2s, color .2s; }
+  .nav-dd a:hover::before, .nav-dd a:focus-visible::before{ color: #C75F62; opacity: 1; transform: translateY(-50%) translateX(3px); }
+}
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Que s’est-il passé dans l’affaire Orélien ?", "acceptedAnswer": {"@type": "Answer", "text": "Thélyson Orélien a publié à la rentrée 2026 son premier roman, « C’était ça ou mourir » (Grasset). Le 21 septembre, un compte anonyme a affirmé, sur la foi d’un détecteur, que le texte avait été écrit par une IA ; le 23 septembre, un autre détecteur testé par l’AFP a conclu l’inverse. Le 25 septembre, l’Académie Goncourt a retiré le roman de sa sélection, en invoquant aussi des accusations de plagiat. L’auteur conteste ; aucune preuve formelle n’a été rendue publique."}}, {"@type": "Question", "name": "Un détecteur d’IA peut-il prouver qu’un texte a été écrit par une machine ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Un détecteur donne une probabilité, jamais une preuve. OpenAI a retiré son propre détecteur en juillet 2023 : il ne repérait que 26 % des textes écrits par une IA et accusait à tort 9 % des textes humains. Une étude de Stanford (Patterns, 2023) a montré que sept détecteurs classaient en moyenne 61 % de rédactions d’élèves non anglophones comme écrites par une IA. Pour une entreprise, la conséquence est simple : un score de détecteur ne doit jamais suffire à accuser un salarié, un candidat ou un fournisseur. Il peut alerter ; seule une vérification humaine, appuyée sur des traces de travail, permet de conclure."}}, {"@type": "Question", "name": "Pourquoi l’affaire Orélien concerne-t-elle les entreprises ?", "acceptedAnswer": {"@type": "Answer", "text": "Parce que la charge de la preuve s’est inversée : c’est à l’auteur de prouver qu’il est l’auteur. Demain, un client pourra demander à une entreprise qui a réellement produit un rapport ou une étude. Or 78 % des salariés utilisent des outils d’IA que leur entreprise n’a pas validés (WalkMe, juillet 2025). La question ne vise pas l’usage de l’IA en soi, souvent légitime. Elle porte sur la capacité à montrer comment un livrable a été produit, par qui et avec quels outils. Une entreprise sans règle écrite ni traces conservées restera sans réponse face à ce client."}}, {"@type": "Question", "name": "Qu’est-ce qu’une preuve de travail ?", "acceptedAnswer": {"@type": "Answer", "text": "Un ensemble de traces qui montrent comment un document est né : historique des versions, brouillons et notes, sources consultées, échanges avec un relecteur ou le client, mention des outils d’IA utilisés. La plupart existent déjà dans les outils bureautiques ; il suffit de décider de les conserver. Ces traces ne servent pas à surveiller les équipes. Elles protègent l’auteur réel d’un document en cas de contestation et rassurent le client sur la méthode. Une politique de conservation simple, connue de tous, suffit : quoi garder, où, et combien de temps."}}, {"@type": "Question", "name": "Que contient une règle d’usage de l’IA d’une page ?", "acceptedAnswer": {"@type": "Answer", "text": "Trois catégories, avec des exemples : les usages libres (corriger, reformuler, résumer un document public), les usages à déclarer (premier jet, analyse ou visuel destiné à un client) et les usages interdits (données clients dans un outil non validé, travail généré présenté comme personnel sans le dire). Une page suffit, à condition d'être lue et comprise. Elle se présente en comité de direction, puis aux équipes, avec des exemples tirés de leur quotidien. Elle se revoit chaque trimestre, car les outils et les usages évoluent vite."}}, {"@type": "Question", "name": "Que peut faire un dirigeant dès maintenant ?", "acceptedAnswer": {"@type": "Answer", "text": "Trois protections, sans budget : une règle écrite d’une page, des traces de travail conservées (versions, brouillons, sources) et un droit de s’expliquer avant toute décision sur un salarié ou un fournisseur. Ensuite : une ligne de déclaration sur les livrables clients et une clause IA dans les contrats fournisseurs. Le droit de s’expliquer compte particulièrement : avant de sanctionner sur un simple soupçon d’usage de l’IA, la personne concernée doit pouvoir présenter ses traces de travail. C’est une question d’équité, et une protection juridique pour l’entreprise."}}], "inLanguage": "fr-FR"}
@@ -1241,12 +1283,12 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
       <img src="assets/logo-prune-final.webp" alt="EXEC'IA logo" class="nav-logo-rond" width="1254" height="1254" decoding="async">
       <img src="assets/logo-execia-bords-prune-240.webp" alt="EXEC'IA Consulting" class="nav-logo-full" width="240" height="113" fetchpriority="high" decoding="async">
     </a>
-    <div class="nav-links"><a href="/">Accueil</a><div class="nav-item nav-item--dd"><a href="offres.html">Accompagnement IA</a><div class="nav-dd"><a href="offres.html#diagnostic">Diagnostic stratégique IA</a><a href="offres.html#conseil">Conseil stratégique / Advisory</a><a href="offres.html#transformation">Transformation IA</a><a href="offres.html#formation">Formation IA</a></div></div><div class="nav-item nav-item--dd"><a href="solutions.html">Solutions digitales &amp; IA</a><div class="nav-dd"><a href="agents-ia.html">Agents IA métiers</a><a href="solutions.html#automatisation">Automatisation des processus</a><a href="solutions.html#operationnelles">Solutions opérationnelles</a><a href="solutions.html#sites">Création de sites web</a></div></div><div class="nav-item nav-item--dd"><a href="realisations.html">Réalisations</a><div class="nav-dd"><a href="realisations.html#clients">Projets clients</a><a href="realisations.html#demos">Démonstrations et outils</a><a href="realisations.html#usages">Cas d’usage illustratifs</a><a href="temoignages.html">Témoignages clients</a></div></div><a href="perspectives.html" class="active">Perspectives</a><a href="a-propos.html">À propos</a><a href="contact.html" class="nav-cta">Prendre rendez-vous</a></div>
-    <div class="nav-langs">
+    <div class="nav-links"><a href="/">Accueil</a><div class="nav-item nav-item--dd"><a aria-haspopup="true" href="offres.html">Accompagnement IA</a><div class="nav-dd"><a href="offres.html#diagnostic">Diagnostic stratégique IA</a><a href="offres.html#conseil">Conseil stratégique / Advisory</a><a href="offres.html#transformation">Transformation IA</a><a href="offres.html#formation">Formation IA</a></div></div><div class="nav-item nav-item--dd"><a aria-haspopup="true" href="solutions.html">Solutions digitales &amp; IA</a><div class="nav-dd"><a href="agents-ia.html">Agents IA métiers</a><a href="solutions.html#automatisation">Automatisation des processus</a><a href="solutions.html#operationnelles">Solutions opérationnelles</a><a href="solutions.html#sites">Création de sites web</a></div></div><div class="nav-item nav-item--dd"><a aria-haspopup="true" href="realisations.html">Réalisations</a><div class="nav-dd"><a href="realisations.html#clients">Projets clients</a><a href="realisations.html#demos">Démonstrations et outils</a><a href="realisations.html#usages">Cas d’usage illustratifs</a><a href="temoignages.html">Témoignages clients</a></div></div><a href="perspectives.html" class="active">Perspectives</a><a href="a-propos.html">À propos</a><a href="contact.html" class="nav-cta nav-cta--panel">Prendre rendez-vous</a></div>
+    <div class="nav-actions"><a href="contact.html" class="nav-cta nav-cta--bar">Prendre rendez-vous</a><div class="nav-langs">
       <span class="nav-lang nav-lang-active">FR</span>
       <a href="perspective-affaire-orelien-preuve-travail-en.html" class="nav-lang">EN</a>
       <a href="perspective-affaire-orelien-preuve-travail-es.html" class="nav-lang">ES</a>
-    </div>
+    </div></div>
     <button class="nav-burger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>

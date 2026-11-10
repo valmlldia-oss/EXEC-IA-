@@ -1204,11 +1204,7 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
   .nav-dd a{ padding: 6px 0; font-size: .95rem; }
   .nav-item--dd{ flex-direction: column; align-items: flex-start; }
 }
-/* Menu : resserrement (dès 1025 px, quelle que soit la largeur) pour que les rubriques, le bouton et les langues tiennent sur une ligne */
-@media (min-width: 1025px){ .nav-links{ gap: 10px !important; } .nav-links > a, .nav-links .nav-item > a{ font-size: .68rem !important; letter-spacing: .03em !important; } .nav-links a.nav-cta{ font-size: .66rem !important; padding: 8px 12px !important; } .nav-langs{ margin-left: 12px !important; } }
-@media (min-width: 1181px) and (max-width: 1280px){ .nav-brand{ margin-right: 14px !important; } .nav-links{ gap: 7px !important; } .nav-links > a, .nav-links .nav-item > a{ font-size: .64rem !important; letter-spacing: .02em !important; } .nav-links a.nav-cta{ font-size: .62rem !important; padding: 8px 10px !important; } .nav-langs{ margin-left: 8px !important; } }
-/* Menu mobile : le panneau défile quand il dépasse la hauteur de l'écran (sinon les dernières rubriques et le bouton restent inaccessibles) */
-@media (max-width: 1180px){ .nav-links.open{ max-height: calc(100vh - var(--nav-h, 64px)); max-height: calc(100dvh - var(--nav-h, 64px)); overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; } }
+
 .pv-related{ max-width: 760px; margin: 48px auto 0; padding: 26px 26px 24px; background: var(--ivory); border: 1px solid var(--pale-rose); border-top: 3px solid var(--plum); border-radius: 14px; }
 .pv-related-title{ font-family: var(--serif); font-weight: 500; font-size: 1.3rem; color: var(--plum); margin: 0 0 12px; }
 .pv-related ul{ list-style: none; margin: 0 0 16px; padding: 0; display: flex; flex-direction: column; gap: 10px; }
@@ -1225,6 +1221,52 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
 .bc-nav a{ color: var(--plum); opacity: .7; text-decoration: none; }
 .bc-nav a:hover{ opacity: 1; color: #C75F62; }
 .bc-nav .bc-sep{ opacity: .45; }
+
+/* Menu principal v2 */
+#nav{ overflow: visible !important; }
+.nav-in{ max-width: none; }
+.nav-actions{ display: flex; align-items: center; gap: 14px; margin-left: auto; flex-shrink: 0; }
+.nav-actions .nav-langs{ margin-left: 0 !important; }
+.nav-actions a.nav-cta{ background: #C75F62; color: #FAF6F2 !important; padding: 9px 18px; border-radius: 24px; font-size: .78rem; font-weight: 600; line-height: 1.2; letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; transition: transform .2s, box-shadow .2s; }
+.nav-actions a.nav-cta:hover{ background: #C75F62; color: #FAF6F2 !important; transform: translateY(-1px); }
+.nav-actions a.nav-cta:focus-visible{ outline: 2px solid #633B4A; outline-offset: 3px; }
+.nav-actions .nav-cta--bar{ display: none; }
+@media (min-width: 1181px) and (max-width: 1567px){
+.nav-links{ display: none; }
+.nav-burger{ display: flex; }
+.nav-actions .nav-cta--bar{ display: none; }
+.nav-links.open{ display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; position: fixed; top: var(--nav-h); left: 0; right: 0; bottom: auto; width: 100vw; height: auto; background: #4F2F3B; padding: 24px 28px 32px; gap: 22px; z-index: 998; box-shadow: 0 12px 32px rgba(99,59,74,.25); max-height: calc(100vh - var(--nav-h, 64px)); max-height: calc(100dvh - var(--nav-h, 64px)); overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
+.nav-links.open a:not(.nav-cta){ color: #FAF6F2 !important; font-size: 1rem; max-width: none !important; }
+.nav-links.open a::after{ background: #C75F62; }
+.nav-dd{ position: static; transform: none; opacity: 1; visibility: visible; min-width: 0; background: transparent; border: 0; box-shadow: none; padding: 0 0 6px 14px; }
+.nav-dd a{ padding: 6px 0; font-size: .95rem; }
+.nav-item--dd{ flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 1567px){
+.nav-dd a{ position: relative; padding: 6px 0 6px 24px; }
+.nav-dd a::before{ content: '→'; position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: .9rem; color: #D9C9C3; opacity: .85; }
+}
+@media (min-width: 1568px){
+  :root{ --nav-pad: clamp(10px, calc(4vw - 52px), 26px); --nav-col: clamp(16px, 1.2vw, 32px); }
+  .nav-in{ padding: 0 24px; gap: var(--nav-col); }
+  .nav-brand{ margin-right: 0; }
+  .nav-burger{ display: none; }
+  .nav-links{ flex: 1; justify-content: center; gap: 0 !important; }
+  .nav-links > a:not(.nav-cta), .nav-links > .nav-item{ margin: 0 var(--nav-pad); }
+  .nav-links > :first-child{ margin-left: 0; }
+  .nav-links > :nth-last-child(2){ margin-right: 0; }
+  .nav-links > :nth-child(n+2):not(.nav-cta)::before{ content: ''; position: absolute; left: calc(-1 * var(--nav-pad)); top: 50%; width: 1px; height: 18px; transform: translateY(-50%); background: rgba(99,59,74,.24); pointer-events: none; }
+  .nav-links .nav-cta--panel{ display: none; }
+  .nav-actions .nav-cta--bar{ display: inline-flex; align-items: center; }
+  .nav-lang:last-child{ margin-right: 0; }
+  .nav-links > .nav-item--dd > a{ padding-right: 11px; }
+  .nav-links > .nav-item--dd > a::before{ content: ''; position: absolute; right: 0; top: 50%; width: 5px; height: 5px; border-right: 1.3px solid currentColor; border-bottom: 1.3px solid currentColor; transform: translateY(-75%) rotate(45deg); opacity: .65; transition: transform .2s, opacity .2s; }
+  .nav-links > .nav-item--dd:hover > a::before, .nav-links > .nav-item--dd:focus-within > a::before{ transform: translateY(-25%) rotate(225deg); opacity: 1; }
+  .nav-dd a{ position: relative; padding-left: 36px; }
+  .nav-dd a::before{ content: '→'; position: absolute; left: 16px; top: 50%; transform: translateY(-50%); font-size: .85rem; color: #633B4A; opacity: .5; transition: transform .2s, opacity .2s, color .2s; }
+  .nav-dd a:hover::before, .nav-dd a:focus-visible::before{ color: #C75F62; opacity: 1; transform: translateY(-50%) translateX(3px); }
+}
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Qué es el gemelo digital de un directivo?", "acceptedAnswer": {"@type": "Answer", "text": "El gemelo digital es un asistente de IA que responde a partir de lo que el directivo ha dicho, escrito y decidido, citando siempre su fuente. Se construye con entrevistas grabadas, transcritas y validadas después por el directivo. Conserva su razonamiento para el sucesor y el comité de dirección: por qué se queda un cliente, por qué se eligió un proveedor, qué ha fracasado ya. Nunca decide en lugar de nadie y dice que no sabe cuando la pregunta va más allá de lo que se le ha confiado."}}, {"@type": "Question", "name": "¿Qué es Fred24?", "acceptedAnswer": {"@type": "Answer", "text": "Fred24 es el asistente de IA lanzado en julio de 2026 por Frédéric Mazzella, fundador de BlaBlaCar. Está alimentado con veinte años de sus conferencias, entrevistas y escritos, y responde a los emprendedores a partir de lo que él ya ha dicho. Es un ejemplo público del gemelo digital de un directivo. La misma idea sirve dentro de una pyme para un círculo reducido: el sucesor, el comité de dirección y los mandos clave, con acceso protegido y contenidos validados."}}, {"@type": "Question", "name": "¿Cuántos empresarios se jubilarán en Francia?", "acceptedAnswer": {"@type": "Answer", "text": "Según el Ministerio de Economía francés, unos 550.000 empresarios se jubilarán en los próximos diez años, con 3 millones de empleos en juego. El plan «Objectif Reprises», presentado el 23 de abril de 2026, busca facilitar estas transmisiones, y el «pacto Papin» incluido en el proyecto de presupuestos de 2027 aún debe votarse. Estas medidas tratan del precio, la fiscalidad y la financiación. Ninguna cubre el saber del directivo: la empresa debe organizarlo, varios años antes de la marcha."}}, {"@type": "Question", "name": "¿Cómo se construye el gemelo digital de un directivo?", "acceptedAnswer": {"@type": "Answer", "text": "En cuatro pasos, mientras el directivo sigue ahí. Grabar entrevistas de una hora sobre sus grandes decisiones, sus clientes históricos, sus proveedores y las reglas no escritas de la casa. Transcribirlas y clasificarlas por tema. Dar al sucesor un asistente de IA que responda solo a partir de esas notas, citando sus fuentes. Hacer que el directivo lo revise, lo corrija y lo valide todo. Las entrevistas en profundidad y unas semanas de puesta en marcha bastan para una primera versión."}}, {"@type": "Question", "name": "¿Se aplica el RGPD a las entrevistas grabadas?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. La voz y las opiniones del directivo son datos personales, igual que los nombres de clientes o empleados mencionados en las entrevistas. Hay que informar al directivo, obtener su consentimiento, limitar la conservación y proteger el acceso con cuentas nominativas. La regla más sencilla es anonimizar a los clientes y empleados mencionados antes de alimentar el asistente. Según el Reglamento europeo de IA, un asistente interno de este tipo no es de alto riesgo mientras no sirva para evaluar o gestionar a empleados."}}, {"@type": "Question", "name": "¿Cuándo empezar a transmitir el saber de un directivo?", "acceptedAnswer": {"@type": "Answer", "text": "Varios años antes de su marcha. En ese momento el directivo aún tiene tiempo y perspectiva para contar, corregir y completar sus entrevistas. A pocos meses de la venta, la urgencia lo ocupa todo: negociación, auditorías, anuncio a los equipos, y el saber pasa a segundo plano. Empezar tres meses antes de la venta es el error más frecuente. Basta una hora a la semana reservada en la agenda del directivo, siempre que se mantenga hasta la marcha."}}, {"@type": "Question", "name": "¿Sustituye el gemelo digital al traspaso?", "acceptedAnswer": {"@type": "Answer", "text": "No. No sustituye el traspaso entre dos personas, ni las reuniones con los clientes clave, ni el tiempo que necesita un sucesor para ganarse la confianza de los equipos. Tampoco capta la intuición: un directivo puede explicar por qué rechazó a un socio, pero no transmite la sensación que le alertó. El gemelo digital complementa el traspaso. Conserva las explicaciones y sus fuentes, para que el sucesor las encuentre cuando las necesite, mucho después de la marcha."}}, {"@type": "Question", "name": "¿Dónde conservar la memoria de un directivo?", "acceptedAnswer": {"@type": "Answer", "text": "En una herramienta profesional que excluya por contrato el uso de sus datos para entrenar sus modelos, alojada preferiblemente en Europa, con accesos nominativos y una lista clara de personas autorizadas. Nunca en una herramienta de consumo. Decida también quién mantiene la memoria al día después de la marcha y cuánto tiempo se conserva. Si se vende la empresa, precise en el contrato de compraventa si el gemelo digital forma parte de lo vendido, en lugar de descubrirlo después de la firma."}}], "inLanguage": "es-ES"}
@@ -1245,12 +1287,12 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
       <img src="assets/logo-prune-final.webp" alt="EXEC'IA logo" class="nav-logo-rond" width="1254" height="1254" decoding="async">
       <img src="assets/logo-execia-bords-prune-240.webp" alt="EXEC'IA Consulting" class="nav-logo-full" width="240" height="113" fetchpriority="high" decoding="async">
     </a>
-    <div class="nav-links"><a href="index-es.html">Inicio</a><div class="nav-item nav-item--dd"><a href="offres-es.html">Acompañamiento IA</a><div class="nav-dd"><a href="offres-es.html#diagnostic">Diagnóstico estratégico IA</a><a href="offres-es.html#conseil">Consultoría estratégica / Advisory</a><a href="offres-es.html#transformation">Transformación IA</a><a href="offres-es.html#formation">Formación IA</a></div></div><div class="nav-item nav-item--dd"><a href="solutions-es.html">Soluciones digitales e IA</a><div class="nav-dd"><a href="agents-ia-es.html">Agentes IA por función</a><a href="solutions-es.html#automatisation">Automatización de procesos</a><a href="solutions-es.html#operationnelles">Soluciones operativas</a><a href="solutions-es.html#sites">Creación de sitios web</a></div></div><div class="nav-item nav-item--dd"><a href="realisations-es.html">Realizaciones</a><div class="nav-dd"><a href="realisations-es.html#clientes">Proyectos de clientes</a><a href="realisations-es.html#demostraciones">Demostraciones y herramientas</a><a href="realisations-es.html#usos">Casos de uso ilustrativos</a><a href="temoignages-es.html">Testimonios</a></div></div><a href="perspectives-es.html" class="active">Perspectivas</a><a href="a-propos-es.html">Perfil</a><a href="contact-es.html" class="nav-cta">Pedir una cita</a></div>
-    <div class="nav-langs">
+    <div class="nav-links"><a href="index-es.html">Inicio</a><div class="nav-item nav-item--dd"><a aria-haspopup="true" href="offres-es.html">Acompañamiento IA</a><div class="nav-dd"><a href="offres-es.html#diagnostic">Diagnóstico estratégico IA</a><a href="offres-es.html#conseil">Consultoría estratégica / Advisory</a><a href="offres-es.html#transformation">Transformación IA</a><a href="offres-es.html#formation">Formación IA</a></div></div><div class="nav-item nav-item--dd"><a aria-haspopup="true" href="solutions-es.html">Soluciones digitales e IA</a><div class="nav-dd"><a href="agents-ia-es.html">Agentes IA por función</a><a href="solutions-es.html#automatisation">Automatización de procesos</a><a href="solutions-es.html#operationnelles">Soluciones operativas</a><a href="solutions-es.html#sites">Creación de sitios web</a></div></div><div class="nav-item nav-item--dd"><a aria-haspopup="true" href="realisations-es.html">Realizaciones</a><div class="nav-dd"><a href="realisations-es.html#clientes">Proyectos de clientes</a><a href="realisations-es.html#demostraciones">Demostraciones y herramientas</a><a href="realisations-es.html#usos">Casos de uso ilustrativos</a><a href="temoignages-es.html">Testimonios</a></div></div><a href="perspectives-es.html" class="active">Perspectivas</a><a href="a-propos-es.html">Perfil</a><a href="contact-es.html" class="nav-cta nav-cta--panel">Pedir una cita</a></div>
+    <div class="nav-actions"><a href="contact-es.html" class="nav-cta nav-cta--bar">Pedir una cita</a><div class="nav-langs">
       <a href="perspective-jumeau-numerique-savoir-dirigeant.html" class="nav-lang">FR</a>
       <a href="perspective-jumeau-numerique-savoir-dirigeant-en.html" class="nav-lang">EN</a>
       <span class="nav-lang nav-lang-active">ES</span>
-    </div>
+    </div></div>
     <button class="nav-burger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
