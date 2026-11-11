@@ -8335,3 +8335,7 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after { content: " · 
 .site-footer .footer-brand .footer-signature{ margin-top: 38px !important; font-family: var(--serif) !important; font-style: italic; font-weight: 500 !important; font-size: 1.32rem !important; letter-spacing: .01em !important; text-transform: none !important; line-height: 1.25; color: #633B4A !important; }
 .site-footer .footer-brand .footer-signature::before{ content: ""; display: block; width: 36px; height: 2px; background: #C75F62; margin-bottom: 14px; }
 .site-footer .footer-col a.footer-instagram-btn{ margin-top: 2px !important; }
+
+/* Footer v6 : signature mise en valeur, guillemets terracotta */
+.site-footer .footer-brand .footer-signature{ font-size: 1.5rem !important; letter-spacing: .015em !important; }
+.site-footer .footer-brand .footer-signature .fs-q{ color: #C75F62; font-style: normal; font-size: 1.35em; line-height: 0; vertical-align: -.08em; }

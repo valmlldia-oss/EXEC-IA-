@@ -9,8 +9,9 @@
     if (!f || !b) return;
     b.style.position = 'relative'; b.style.left = '0px';
     if (l) { l.style.position = 'relative'; l.style.left = '0px'; }
-    /* Pages sans barre de navigation (mentions légales, confidentialité) : pas de décalage */
-    var d = n ? n.getBoundingClientRect().left - f.getBoundingClientRect().left : 0;
+    /* Pages sans barre de navigation (mentions légales, confidentialité) : même ligne de référence que le logo de la navbar */
+    var ref = n ? n.getBoundingClientRect().left : (window.innerWidth <= 600 ? 10 : (window.innerWidth < 1024 ? 20 : 24));
+    var d = ref - f.getBoundingClientRect().left;
     b.style.left = d + 'px';
     if (l) l.style.left = d + 'px';
     fitTag();
