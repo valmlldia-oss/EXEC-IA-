@@ -1927,7 +1927,7 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
 .offre-formation-niveau{ font-family: var(--sans); font-size: .75rem; letter-spacing: .14em; text-transform: uppercase; color: var(--plum); margin: 0 0 8px; }
 .offre-formation-title{ font-family: var(--serif); font-weight: 500; font-size: 1.6rem; line-height: 1.2; color: var(--plum); margin: 0 0 12px; }
 .offre-formation-desc{ font-family: var(--sans); font-size: .98rem; line-height: 1.65; color: var(--plum); margin: 0 0 20px; }
-.sol-hero{ max-width: 900px; margin: 0 auto; padding: 72px 20px 24px; text-align: center; }
+.sol-hero{ max-width: 900px; margin: 0 auto; padding: calc(var(--nav-h, 80px) + 32px) 20px 24px; text-align: center; }
 .sol-eyebrow{ font-family: var(--sans); font-size: .75rem; letter-spacing: .16em; text-transform: uppercase; color: var(--plum); margin: 0 0 12px; }
 .sol-title{ font-family: var(--serif); font-weight: 500; font-size: clamp(2rem, 4vw, 2.8rem); line-height: 1.15; color: var(--plum); margin: 0 0 16px; }
 .sol-intro{ font-family: var(--sans); font-size: 1rem; line-height: 1.7; color: var(--plum); max-width: 680px; margin: 0 auto; }
@@ -2233,6 +2233,11 @@ rect.cerveau-art-accent{ fill: var(--rose); stroke: none; }
 .site-footer .footer-bottom .footer-legal{ white-space: normal !important; }
 }
 @media (max-width: 600px){ .site-footer .footer-bottom .footer-plan{ order: -1; } }
+
+/* Solutions : les quatre prestations sur une ligne, séparées par un gros point terracotta */
+.sol-intro-list{ list-style: none; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 6px 0; margin: 12px 0 0; padding: 0; width: min(1040px, calc(100vw - 40px)); position: relative; left: 50%; transform: translateX(-50%); font-family: var(--sans); font-size: 1rem; font-weight: 500; line-height: 1.7; color: var(--plum); }
+.sol-intro-list li + li::before{ content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #C75F62; margin: 0 12px; vertical-align: middle; }
+@media (max-width: 700px){ .sol-intro-list{ flex-direction: column; gap: 4px; } .sol-intro-list li + li::before{ display: none; } }
 </style>
 
 <style id="footer-contact-gauche">
@@ -2269,7 +2274,8 @@ rect.cerveau-art-accent{ fill: var(--rose); stroke: none; }
 <section class="sol-hero">
   <p class="sol-eyebrow">Agents, automatisation, solutions opérationnelles, sites web</p>
   <h1 class="sol-title">Solutions digitales &amp; IA</h1>
-  <p class="sol-intro">Le point d’entrée vers les quatre prestations d’EXEC’IA&nbsp;: des agents IA métiers, l’automatisation de vos processus, des solutions opérationnelles et la création de sites web. Chacune renvoie vers son détail et ses formules.</p>
+  <p class="sol-intro">Le point d’entrée vers les quatre prestations d’EXEC’IA&nbsp;:</p>
+  <ul class="sol-intro-list"><li>Agents IA métiers</li><li>Automatisation de vos processus</li><li>Solutions opérationnelles</li><li>Création de sites web</li></ul>
 </section>
 <section class="sol-cat" id="agents">
   <div class="sol-cat-head"><span class="sol-num">01</span><h2 class="sol-cat-title">Agents <span class="ia-rose">IA</span> métiers</h2></div>
@@ -2282,7 +2288,7 @@ rect.cerveau-art-accent{ fill: var(--rose); stroke: none; }
   <p class="sol-cat-desc">Des workflows qui prennent en charge les étapes répétitives de vos équipes,<br><span class="ia-rose">avec validation humaine</span><br>aux points sensibles.</p>
   <div class="cerveau-section">
 <div class="cerveau-block">
-    <h3 class="cerveau-h3"><span class="ia-rose">Automatisation ou agent</span> IA : quelle différence ?</h3>
+    <h3 class="cerveau-h3"><span class="ia-rose">Automatisation ou agent IA</span> : quelle différence ?</h3>
     <div class="cerveau-table-wrap">
   <table class="cerveau-table cerveau-compare">
     <caption class="cerveau-sr">Comparaison entre automatisation et agent IA</caption>
