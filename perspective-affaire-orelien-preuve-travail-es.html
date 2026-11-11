@@ -1276,6 +1276,38 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
 /* Logo du footer : identique au logo de la barre de navigation (mêmes images, mêmes tailles), aligné sur la même ligne verticale */
 .footer-brand .footer-brand-mark{ display: inline-flex; width: max-content; margin-right: 0; margin-top: 0; margin-bottom: 18px; transform: none; }
 .footer-brand .footer-brand-mark:hover{ transform: none; }
+
+/* Footer : titres d'articles sur 2 lignes maximum */
+@media (min-width: 1280px){
+.site-footer .footer-grid{ grid-template-columns: 240px minmax(0,2.3fr) minmax(290px,1fr) 120px !important; column-gap: 24px !important; }
+.site-footer .footer-col--site a.footer-persp-link{ margin-right: 0 !important; font-size: .77rem !important; letter-spacing: 0 !important; padding-left: 0 !important; }
+}
+@media (min-width: 601px) and (max-width: 1279px){
+.site-footer .footer-grid{ grid-template-columns: minmax(0,1fr) minmax(0,1fr) 120px !important; row-gap: 28px !important; }
+.site-footer .footer-brand{ grid-column: 1 !important; grid-row: 1 !important; }
+.site-footer .footer-col--contact{ grid-column: 2 !important; grid-row: 1 !important; }
+.site-footer .footer-col--langs{ grid-column: 3 !important; grid-row: 1 !important; }
+.site-footer .footer-col--site{ grid-column: 1 / -1 !important; grid-row: 2 !important; max-width: none !important; width: 100% !important; margin-right: 0 !important; }
+.site-footer .footer-col--site .footer-persp-grid{ display: grid !important; grid-template-columns: repeat(3, minmax(0,1fr)) !important; gap: 8px 28px !important; width: 100% !important; position: static !important; }
+.site-footer .footer-col--site a.footer-persp-link{ margin: 0 !important; padding: 0 !important; }
+}
+@media (min-width: 601px) and (max-width: 900px){
+.site-footer .footer-col--site .footer-persp-grid{ grid-template-columns: repeat(2, minmax(0,1fr)) !important; }
+}
+
+/* Footer, bandeau bas : liens légaux sur une seule ligne ; le © démarre sur le bord gauche du bouton Instagram */
+.site-footer .footer-bottom .footer-legal{ white-space: nowrap; }
+.site-footer .footer-bottom .footer-legal .cookie-prefs-wrap{ white-space: nowrap; }
+@media (min-width: 1280px){
+.site-footer .footer-bottom{ display: grid !important; grid-template-columns: 240px minmax(0,2.3fr) minmax(290px,1fr) 120px !important; column-gap: 24px !important; align-items: center !important; }
+.site-footer .footer-bottom .footer-legal{ grid-column: 1 / 3 !important; grid-row: 1 !important; }
+.site-footer .footer-bottom .footer-copy{ grid-column: 3 !important; grid-row: 1 !important; margin-left: 0 !important; justify-self: start !important; white-space: nowrap !important; }
+}
+@media (min-width: 601px) and (max-width: 1279px){
+.site-footer .footer-bottom{ display: grid !important; grid-template-columns: minmax(0,1fr) minmax(0,1fr) 120px !important; row-gap: 10px !important; align-items: center !important; }
+.site-footer .footer-bottom .footer-legal{ grid-column: 1 / -1 !important; grid-row: 1 !important; }
+.site-footer .footer-bottom .footer-copy{ grid-column: 2 !important; grid-row: 2 !important; margin-left: 0 !important; justify-self: start !important; white-space: nowrap !important; }
+}
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Qué pasó en el caso Orélien?", "acceptedAnswer": {"@type": "Answer", "text": "Thélyson Orélien publicó en otoño de 2026 su primera novela, «C’était ça ou mourir» (Grasset). El 21 de septiembre, una cuenta anónima afirmó, basándose en un detector, que el texto lo había escrito una IA; el 23 de septiembre, otro detector probado por la AFP concluyó lo contrario. El 25 de septiembre, la Academia Goncourt retiró la novela de su selección, invocando también acusaciones de plagio. El autor lo niega; no se ha hecho pública ninguna prueba formal. El caso muestra la rapidez con la que una sospecha puede costar un premio a un autor, antes de cualquier prueba."}}, {"@type": "Question", "name": "¿Puede un detector de IA demostrar que un texto lo escribió una máquina?", "acceptedAnswer": {"@type": "Answer", "text": "No. Un detector da una probabilidad, nunca una prueba. OpenAI retiró su propio detector en julio de 2023: solo identificaba el 26 % de los textos escritos por una IA y señalaba por error el 9 % de los textos humanos. Un estudio de Stanford (Patterns, 2023) mostró que siete detectores clasificaban de media el 61 % de las redacciones de estudiantes no anglófonos como escritas por una IA. Para una empresa, la consecuencia es sencilla: una puntuación de detector nunca debe bastar para acusar a un empleado, a un candidato o a un proveedor. Puede alertar; solo una verificación humana, apoyada en huellas de trabajo, permite concluir."}}, {"@type": "Question", "name": "¿Por qué el caso Orélien concierne a las empresas?", "acceptedAnswer": {"@type": "Answer", "text": "Porque la carga de la prueba se ha invertido: es el autor quien debe demostrar que es el autor. Mañana, un cliente podrá preguntar a una empresa quién elaboró realmente un informe o un estudio. Además, el 78 % de los empleados utiliza herramientas de IA que su empresa no ha validado (WalkMe, julio de 2025). La cuestión no es el uso de la IA en sí, a menudo legítimo. Es la capacidad de mostrar cómo se produjo un entregable, quién lo hizo y con qué herramientas. Una empresa sin norma escrita ni huellas conservadas se quedará sin respuesta ante ese cliente."}}, {"@type": "Question", "name": "¿Qué es una prueba de trabajo?", "acceptedAnswer": {"@type": "Answer", "text": "Un conjunto de rastros que muestran cómo nació un documento: historial de versiones, borradores y notas, fuentes consultadas, intercambios con un revisor o el cliente, mención de las herramientas de IA utilizadas. La mayoría ya existen en las herramientas ofimáticas; basta con decidir conservarlos. Estas huellas no sirven para vigilar a los equipos. Protegen al autor real de un documento si se impugna y tranquilizan al cliente sobre el método. Basta con una política de conservación sencilla y conocida por todos: qué guardar, dónde y durante cuánto tiempo."}}, {"@type": "Question", "name": "¿Qué contiene una norma de uso de la IA de una página?", "acceptedAnswer": {"@type": "Answer", "text": "Tres categorías, con ejemplos: usos libres (corregir, reformular, resumir un documento público), usos a declarar (primer borrador, análisis o visual destinado a un cliente) y usos prohibidos (datos de clientes en una herramienta no validada, trabajo generado presentado como propio sin decirlo). Una página basta, siempre que se lea y se entienda. Se presenta al comité de dirección y después a los equipos, con ejemplos de su día a día. Se revisa cada trimestre, porque las herramientas y los usos cambian rápido."}}, {"@type": "Question", "name": "¿Qué puede hacer un directivo desde ya?", "acceptedAnswer": {"@type": "Answer", "text": "Tres protecciones, sin presupuesto: una norma escrita de una página, rastros del trabajo conservados (versiones, borradores, fuentes) y el derecho a explicarse antes de cualquier decisión sobre un empleado o un proveedor. Después: una línea de declaración en los entregables a clientes y una cláusula de IA en los contratos con proveedores. El derecho a explicarse es clave: antes de sancionar por una simple sospecha de uso de la IA, la persona afectada debe poder presentar sus huellas de trabajo. Es una cuestión de equidad y una protección jurídica para la empresa."}}], "inLanguage": "es-ES"}
