@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+<link rel="preload" href="assets/fonts/inter-normal-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/cormorantgaramond-normal-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="assets/favicon.png">
@@ -9,8 +12,8 @@
   <meta name="description" content="Posibilidades de automatización y acompañamiento por función: dirección, comercial, apoyo, documental y cumplimiento, diseñadas a medida por EXEC’IA.">
   <meta name="keywords" content="servicios IA directivos, advisory IA, transformación IA, asesoría IA, EXEC'IA, Valérie Mailland">
   <meta name="author" content="Valérie Mailland — EXEC'IA">
-  <meta property="og:title" content="EXEC'IA · Servicios de acompañamiento estratégico en IA">
-  <meta property="og:description" content="De la sesión de encuadre a la misión de transformación — encuentre el acompañamiento adecuado a su situación.">
+  <meta property="og:title" content="EXEC'IA · Agentes IA por función: posibilidades de automatización">
+  <meta property="og:description" content="Posibilidades de automatización y acompañamiento por función: dirección, comercial, apoyo, documental y cumplimiento, diseñadas a medida por EXEC’IA.">
   <meta property="og:url" content="https://exec-ia.ai/agents-ia-es.html">
   <meta property="og:type" content="website">
   <meta name="robots" content="index, follow">
@@ -27,8 +30,8 @@
   <meta property="og:locale" content="es_ES" />
   <meta property="og:site_name" content="EXEC'IA" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="EXEC'IA · Servicios de acompañamiento estratégico en IA" />
-  <meta name="twitter:description" content="De la sesión de encuadre a la misión de transformación — encuentre el acompañamiento adecuado a su situación." />
+  <meta name="twitter:title" content="EXEC'IA · Agentes IA por función: posibilidades de automatización" />
+  <meta name="twitter:description" content="Posibilidades de automatización y acompañamiento por función: dirección, comercial, apoyo, documental y cumplimiento, diseñadas a medida por EXEC’IA." />
   <meta name="twitter:image" content="https://exec-ia.ai/assets/photo-valerie.jpg" />
   <style id="css-page">
 @font-face{font-family:"Cormorant Garamond";font-style:italic;font-weight:400;font-display:swap;src:url(assets/fonts/cormorantgaramond-italic-400-cyrillic-ext.woff2) format("woff2");unicode-range:U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F}
@@ -45,12 +48,12 @@
 @font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/cormorantgaramond-normal-500-cyrillic.woff2) format("woff2");unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116}
 @font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/cormorantgaramond-normal-500-vietnamese.woff2) format("woff2");unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB}
 @font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/cormorantgaramond-normal-500-latin-ext.woff2) format("woff2");unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF}
-@font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/cormorantgaramond-normal-500-latin.woff2) format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/cormorantgaramond-normal-400-latin.woff2) format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
 @font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:600;font-display:swap;src:url(assets/fonts/cormorantgaramond-normal-600-cyrillic-ext.woff2) format("woff2");unicode-range:U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F}
 @font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:600;font-display:swap;src:url(assets/fonts/cormorantgaramond-normal-600-cyrillic.woff2) format("woff2");unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116}
 @font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:600;font-display:swap;src:url(assets/fonts/cormorantgaramond-normal-600-vietnamese.woff2) format("woff2");unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB}
 @font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:600;font-display:swap;src:url(assets/fonts/cormorantgaramond-normal-600-latin-ext.woff2) format("woff2");unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF}
-@font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:600;font-display:swap;src:url(assets/fonts/cormorantgaramond-normal-600-latin.woff2) format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:600;font-display:swap;src:url(assets/fonts/cormorantgaramond-normal-400-latin.woff2) format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
 @font-face{font-family:"Inter";font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/inter-normal-400-cyrillic-ext.woff2) format("woff2");unicode-range:U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F}
 @font-face{font-family:"Inter";font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/inter-normal-400-cyrillic.woff2) format("woff2");unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116}
 @font-face{font-family:"Inter";font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/inter-normal-400-greek-ext.woff2) format("woff2");unicode-range:U+1F00-1FFF}
@@ -64,14 +67,14 @@
 @font-face{font-family:"Inter";font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/inter-normal-500-greek.woff2) format("woff2");unicode-range:U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF}
 @font-face{font-family:"Inter";font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/inter-normal-500-vietnamese.woff2) format("woff2");unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB}
 @font-face{font-family:"Inter";font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/inter-normal-500-latin-ext.woff2) format("woff2");unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF}
-@font-face{font-family:"Inter";font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/inter-normal-500-latin.woff2) format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:"Inter";font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/inter-normal-400-latin.woff2) format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
 @font-face{font-family:"Inter";font-style:normal;font-weight:600;font-display:swap;src:url(assets/fonts/inter-normal-600-cyrillic-ext.woff2) format("woff2");unicode-range:U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F}
 @font-face{font-family:"Inter";font-style:normal;font-weight:600;font-display:swap;src:url(assets/fonts/inter-normal-600-cyrillic.woff2) format("woff2");unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116}
 @font-face{font-family:"Inter";font-style:normal;font-weight:600;font-display:swap;src:url(assets/fonts/inter-normal-600-greek-ext.woff2) format("woff2");unicode-range:U+1F00-1FFF}
 @font-face{font-family:"Inter";font-style:normal;font-weight:600;font-display:swap;src:url(assets/fonts/inter-normal-600-greek.woff2) format("woff2");unicode-range:U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF}
 @font-face{font-family:"Inter";font-style:normal;font-weight:600;font-display:swap;src:url(assets/fonts/inter-normal-600-vietnamese.woff2) format("woff2");unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB}
 @font-face{font-family:"Inter";font-style:normal;font-weight:600;font-display:swap;src:url(assets/fonts/inter-normal-600-latin-ext.woff2) format("woff2");unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF}
-@font-face{font-family:"Inter";font-style:normal;font-weight:600;font-display:swap;src:url(assets/fonts/inter-normal-600-latin.woff2) format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:"Inter";font-style:normal;font-weight:600;font-display:swap;src:url(assets/fonts/inter-normal-400-latin.woff2) format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
 :root{
 --plum:      #633B4A;
 --deep:      #4F2F3B;
@@ -2185,6 +2188,22 @@ line-height: 1.1 !important;
 .site-footer .footer-bottom .footer-legal a{ margin-right: 0 !important; }
 .site-footer .footer-bottom .footer-legal .cookie-prefs-wrap{ display: contents; white-space: normal !important; }
 }
+
+/* Styles auparavant en ligne */
+html body .us-7336aa.us-7336aa{ padding:48px 20px 24px;max-width:1080px;margin:0 auto;text-align:center; }
+html body .us-3c39e6.us-3c39e6{ font-size:1.6rem;margin-bottom:18px; }
+html body .us-e362c5.us-e362c5{ margin:0 auto;max-width:900px; }
+html body .us-8e13c2.us-8e13c2{ width:100%;height:auto; }
+html body .us-be57be.us-be57be{ padding:40px 20px 18px;max-width:760px;margin:0 auto; }
+html body .us-d14d9c.us-d14d9c{ font-size:1.6rem;margin-bottom:14px; }
+html body .us-b202c6.us-b202c6{ cursor:pointer; }
+html body .us-4a548d.us-4a548d{ font-size:1.6rem; }
+html body .us-6bc997.us-6bc997{ font-size:1.05rem;line-height:1.6; }
+html body .us-06dee0.us-06dee0{ padding:0 20px 40px;max-width:760px;margin:0 auto; }
+html body .us-8c2eb4.us-8c2eb4{ font-size:1.05rem;line-height:1.6;padding-left:1.4em; }
+html body .us-d51702.us-d51702{ margin-bottom:8px; }
+html body .us-e634e6.us-e634e6{ font-weight:600; }
+html body .us-be6ae8.us-be6ae8{ font-size:1.6rem;margin:32px 0 14px; }
 </style>
 <style id="footer-contact-gauche">
 @media (min-width: 1251px){
@@ -2231,33 +2250,33 @@ line-height: 1.1 !important;
 <section class="ag-family" id="documentaire"><h2 class="ag-family-title">Gestión documental y conocimiento</h2><div class="ag-grid"><article class="ag-card" id="hilo"><header class="ag-card-head"><img class="ag-avatar" src="assets/agents/avatars/trame.webp" alt="" width="320" height="320" loading="lazy" decoding="async"><div><p class="ag-name">HILO</p><p class="ag-fn">Memoria de reuniones</p></div></header><div class="ag-block"><h3 class="ag-label">La necesidad</h3><p>Decisiones y compromisos que se pierden entre dos reuniones.</p></div><div class="ag-block"><h3 class="ag-label">Qué hace HILO</h3><ul><li>Redacta las actas y encuentra una decisión pasada.</li><li>Sigue los compromisos hasta su cierre.</li></ul></div><div class="ag-block"><h3 class="ag-label">Usted mantiene el control</h3><p>Usted conserva la memoria de cada decisión.</p></div></article><article class="ag-card" id="ancla"><header class="ag-card-head"><img class="ag-avatar" src="assets/agents/avatars/ancre.webp" alt="" width="320" height="320" loading="lazy" decoding="async"><div><p class="ag-name">ANCLA</p><p class="ag-fn">Memoria documental</p></div></header><div class="ag-block"><h3 class="ag-label">La necesidad</h3><p>Información perdida en los expedientes.</p></div><div class="ag-block"><h3 class="ag-label">Qué hace ANCLA</h3><ul><li>Indexa cada documento archivado.</li><li>Encuentra lo que se decidió y señala lo que debe actualizarse.</li></ul></div><div class="ag-block"><h3 class="ag-label">Usted mantiene el control</h3><p>Usted decide qué se archiva o se modifica.</p></div></article></div></section>
 <section class="ag-family" id="gouvernance"><h2 class="ag-family-title">Gobernanza y cumplimiento</h2><div class="ag-grid"><article class="ag-card" id="baliza"><header class="ag-card-head"><img class="ag-avatar" src="assets/agents/avatars/balise.webp" alt="" width="320" height="320" loading="lazy" decoding="async"><div><p class="ag-name">BALIZA</p><p class="ag-fn">Jurídico y cumplimiento</p></div></header><div class="ag-block"><h3 class="ag-label">La necesidad</h3><p>Riesgos de cumplimiento y plazos normativos descubiertos tarde.</p></div><div class="ag-block"><h3 class="ag-label">Qué hace BALIZA</h3><ul><li>Señala las cláusulas de riesgo.</li><li>Sigue los plazos normativos y avisa antes de las fechas críticas.</li></ul></div><div class="ag-block"><h3 class="ag-label">Usted mantiene el control</h3><p>Usted conserva la decisión final sobre cada cuestión.</p></div></article></div></section>
 <div id="fonctionnement" class="ag-fonctionnement">
-<section class="agent-cycle-section" style="padding:48px 20px 24px;max-width:1080px;margin:0 auto;text-align:center">
-  <h2 class="section-title" style="font-size:1.6rem;margin-bottom:18px">Cómo trabaja un agente de IA</h2>
-  <figure class="agent-cycle" style="margin:0 auto;max-width:900px"><img src="assets/schema-cycle-agent-ia-es.svg?v=3" alt="Ciclo de un agente de IA en seis pasos: percibir, razonar, planificar, coordinar con la persona, actuar, aprender, y volver a percibir." width="1120" height="900" loading="lazy" style="width:100%;height:auto"></figure>
+<section class="agent-cycle-section us-7336aa">
+  <h2 class="section-title us-3c39e6">Cómo trabaja un agente de IA</h2>
+  <figure class="agent-cycle us-e362c5"><img src="assets/schema-cycle-agent-ia-es.svg?v=3" alt="Ciclo de un agente de IA en seis pasos: percibir, razonar, planificar, coordinar con la persona, actuar, aprender, y volver a percibir." width="1120" height="900" loading="lazy" class="us-8e13c2"></figure>
 </section>
-<section class="agent-type-section" style="padding:40px 20px 18px;max-width:760px;margin:0 auto">
-  <details style="font-size:1.6rem;margin-bottom:14px">
-  <summary style="cursor:pointer"><span class="section-title" style="font-size:1.6rem">Un agente de empresa, no un agente personal</span></summary>
-  <p style="font-size:1.05rem;line-height:1.6">Un agente personal sirve a una persona, con sus propios datos.<br>Un agente de empresa trabaja con datos compartidos, sirve a objetivos colectivos y respeta las reglas de la organización.<br>Es este tipo de agente el que EXEC’<span class="ia-rose">IA</span> diseña.</p>
+<section class="agent-type-section us-be57be">
+  <details class="us-d14d9c">
+  <summary class="us-b202c6"><span class="section-title us-4a548d">Un agente de empresa, no un agente personal</span></summary>
+  <p class="us-6bc997">Un agente personal sirve a una persona, con sus propios datos.<br>Un agente de empresa trabaja con datos compartidos, sirve a objetivos colectivos y respeta las reglas de la organización.<br>Es este tipo de agente el que EXEC’<span class="ia-rose">IA</span> diseña.</p>
 </details>
 </section>
-<section class="agent-control-section" style="padding:0 20px 40px;max-width:760px;margin:0 auto">
-  <details style="font-size:1.6rem;margin-bottom:14px">
-  <summary style="cursor:pointer"><span class="section-title" style="font-size:1.6rem">Cinco principios de arquitectura, en forma de preguntas</span></summary>
-  <ol style="font-size:1.05rem;line-height:1.6;padding-left:1.4em">
-    <li style="margin-bottom:8px"><strong style="font-weight:600">Escalabilidad:</strong> ¿la plataforma absorbe el crecimiento del número de agentes, modelos y usuarios?</li>
-    <li style="margin-bottom:8px"><strong style="font-weight:600">Flexibilidad:</strong> ¿se integra con sus otros sistemas y puede evolucionar con los modelos disponibles?</li>
-    <li style="margin-bottom:8px"><strong style="font-weight:600">Acceso a los datos:</strong> ¿sus datos son accesibles, fiables y están actualizados, en tiempo real o casi?</li>
-    <li style="margin-bottom:8px"><strong style="font-weight:600">Confianza:</strong> ¿sabe cuándo puede fiarse del agente?</li>
-    <li style="margin-bottom:8px"><strong style="font-weight:600">Seguridad y cumplimiento:</strong> ¿los accesos están controlados finamente, registrados y cumplen la normativa?</li>
+<section class="agent-control-section us-06dee0">
+  <details class="us-d14d9c">
+  <summary class="us-b202c6"><span class="section-title us-4a548d">Cinco principios de arquitectura, en forma de preguntas</span></summary>
+  <ol class="us-8c2eb4">
+    <li class="us-d51702"><strong class="us-e634e6">Escalabilidad:</strong> ¿la plataforma absorbe el crecimiento del número de agentes, modelos y usuarios?</li>
+    <li class="us-d51702"><strong class="us-e634e6">Flexibilidad:</strong> ¿se integra con sus otros sistemas y puede evolucionar con los modelos disponibles?</li>
+    <li class="us-d51702"><strong class="us-e634e6">Acceso a los datos:</strong> ¿sus datos son accesibles, fiables y están actualizados, en tiempo real o casi?</li>
+    <li class="us-d51702"><strong class="us-e634e6">Confianza:</strong> ¿sabe cuándo puede fiarse del agente?</li>
+    <li class="us-d51702"><strong class="us-e634e6">Seguridad y cumplimiento:</strong> ¿los accesos están controlados finamente, registrados y cumplen la normativa?</li>
   </ol>
 </details>
-  <details style="font-size:1.6rem;margin:32px 0 14px">
-  <summary style="cursor:pointer"><span class="section-title" style="font-size:1.6rem">Tres exigencias de control</span></summary>
-  <ol style="font-size:1.05rem;line-height:1.6;padding-left:1.4em">
-    <li style="margin-bottom:8px"><strong style="font-weight:600">Salvaguardas:</strong> reglas de negocio filtran los contenidos, bloquean ciertos temas y enmarcan las respuestas.</li>
-    <li style="margin-bottom:8px"><strong style="font-weight:600">Observabilidad:</strong> una supervisión continua detecta los cambios de comportamiento del agente y de sus fuentes.</li>
-    <li style="margin-bottom:8px"><strong style="font-weight:600">Transparencia:</strong> el agente debe poder explicar su decisión, con los datos y los pasos utilizados.</li>
+  <details class="us-be6ae8">
+  <summary class="us-b202c6"><span class="section-title us-4a548d">Tres exigencias de control</span></summary>
+  <ol class="us-8c2eb4">
+    <li class="us-d51702"><strong class="us-e634e6">Salvaguardas:</strong> reglas de negocio filtran los contenidos, bloquean ciertos temas y enmarcan las respuestas.</li>
+    <li class="us-d51702"><strong class="us-e634e6">Observabilidad:</strong> una supervisión continua detecta los cambios de comportamiento del agente y de sus fuentes.</li>
+    <li class="us-d51702"><strong class="us-e634e6">Transparencia:</strong> el agente debe poder explicar su decisión, con los datos y los pasos utilizados.</li>
   </ol>
 </details>
 </section>
@@ -2308,8 +2327,8 @@ line-height: 1.1 !important;
       <span class="footer-col-title">Contacto</span>
       <a href="mailto:contact@exec-ia.ai">✉️ contact@exec-ia.ai</a>
       <span class="footer-loc">📍 Paris, Île-de-France</span>
-      <a href="https://www.linkedin.com/in/val%C3%A9rie-mailland" target="_blank" rel="noopener" class="footer-linkedin-btn"><img width="72" height="72" src="assets/linkedin-logo.png" alt="LinkedIn" class="footer-linkedin-logo">Seguir a Valérie Mailland en LinkedIn</a>
-      <a href="https://www.instagram.com/execia.consulting/" target="_blank" rel="noopener" class="footer-linkedin-btn footer-instagram-btn"><img src="assets/instagram-logo.png" alt="Instagram" class="footer-linkedin-logo" width="18" height="18"><span>Seguir a EXEC'<span class="ink-accent"><span class="ia-rose">IA</span></span> en Instagram</span></a>
+      <a href="https://www.linkedin.com/in/val%C3%A9rie-mailland" target="_blank" rel="noopener" class="footer-linkedin-btn"><img width="72" height="72" src="assets/linkedin-logo.png" alt="LinkedIn" class="footer-linkedin-logo" loading="lazy" decoding="async">Seguir a Valérie Mailland en LinkedIn</a>
+      <a href="https://www.instagram.com/execia.consulting/" target="_blank" rel="noopener" class="footer-linkedin-btn footer-instagram-btn"><img src="assets/instagram-logo.png" alt="Instagram" class="footer-linkedin-logo" width="18" height="18" loading="lazy" decoding="async"><span>Seguir a EXEC'<span class="ink-accent"><span class="ia-rose">IA</span></span> en Instagram</span></a>
     </div>
     <div class="footer-col footer-col--langs">
       <span class="footer-col-title">Idiomas</span>
