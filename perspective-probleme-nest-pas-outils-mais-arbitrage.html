@@ -1319,6 +1319,33 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
 .site-footer .footer-bottom .footer-legal{ grid-column: 1 / -1 !important; grid-row: 1 !important; }
 .site-footer .footer-bottom .footer-copy{ grid-column: 2 !important; grid-row: 2 !important; margin-left: 0 !important; justify-self: start !important; white-space: nowrap !important; }
 }
+
+/* Footer v3 : slogan sur une ligne, menu resserré sur 2 lignes, bandeau bas réorganisé */
+.site-footer .footer-brand .footer-signature{ margin-top: 26px !important; }
+@media (min-width: 601px){
+.site-footer .footer-brand .footer-tag{ white-space: nowrap !important; }
+.site-footer .footer-brand .footer-tag br{ display: none; }
+.site-footer .footer-brand .footer-tag-lead::after{ content: " "; }
+.site-footer .footer-brand .footer-tag-lead, .site-footer .footer-brand .footer-tag-rest{ white-space: nowrap !important; font-size: 14.5px !important; }
+}
+.site-footer .footer-col--site > a{ margin: 0 0 4px 0 !important; font-size: .85rem !important; }
+.site-footer .footer-col--site > a::after{ margin: 0 .42em !important; }
+.site-footer .footer-brand .footer-signature{ white-space: nowrap; }
+.site-footer .footer-col--site > a:nth-of-type(3)::after{ content: none !important; }
+.site-footer .footer-nav-br{ display: none; }
+@media (min-width: 601px){ .site-footer .footer-nav-br{ display: inline; } }
+.site-footer .footer-persp-grid{ column-gap: 18px !important; }
+.site-footer .footer-bottom .footer-plan{ display: inline-block; color: rgba(99,59,74,.85); text-decoration: none; font-size: .98rem; border: 1px solid rgba(99,59,74,.3); border-radius: 2rem; padding: 6px 16px; white-space: nowrap; transition: color .2s, border-color .2s; }
+.site-footer .footer-bottom .footer-plan:hover{ color: var(--rose); border-color: var(--rose); }
+@media (min-width: 1280px){
+.site-footer .footer-bottom .footer-legal{ grid-column: 1 !important; grid-row: 1 !important; }
+.site-footer .footer-bottom .footer-plan{ grid-column: 2 !important; grid-row: 1 !important; justify-self: start; margin-left: calc((100% + 18px) / 2); }
+}
+@media (min-width: 601px) and (max-width: 1279px){
+.site-footer .footer-bottom .footer-legal{ grid-column: 1 / 3 !important; grid-row: 1 !important; }
+.site-footer .footer-bottom .footer-plan{ grid-column: 3 !important; grid-row: 1 !important; justify-self: end; }
+}
+@media (max-width: 600px){ .site-footer .footer-bottom .footer-plan{ align-self: flex-start; } }
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Pourquoi ces trois critères en particulier ?", "acceptedAnswer": {"@type": "Answer", "text": "Parce que chacun élimine un piège. Le premier écarte les envies du moment : tester un outil parce qu’un concurrent l’utilise, ce n’est pas un enjeu, c’est de la comparaison. Le deuxième oblige à décider : sans budget ni responsable nommé, un outil reste un essai, jamais un choix. Le troisième protège de l’argent déjà dépensé : un outil qu’on n’ose plus arrêter, parce qu’on a passé du temps à l’installer, finit par coûter plus cher que celui qu’on n’a jamais lancé."}}, {"@type": "Question", "name": "Que se passe-t-il si personne ne tranche ?", "acceptedAnswer": {"@type": "Answer", "text": "Dans les faits, un obstacle revient souvent : personne n’a clairement la mission de trier. Chacun garde l’outil qu’il a testé, parce qu’il y a passé du temps et n’a pas envie de le voir écarté. Sans quelqu’un dont c’est le rôle, et qui n’est attaché à aucun outil, la liste ne fait que s’allonger. Personne ne décide de ne pas trancher. La liste grossit, pendant que chacun attend que quelqu’un d’autre s’en charge. Trancher, c’est aussi admettre qu’un outil abandonné n’est pas un échec. C’est la preuve que le tri a fonctionné. Une équipe qui n’abandonne jamais rien n’a sans doute jamais trié."}}, {"@type": "Question", "name": "Comment appliquer ce tri au quotidien ?", "acceptedAnswer": {"@type": "Answer", "text": "Le tri marche mieux en rituel qu’en grande décision : une revue courte, chaque trimestre, où chaque outil actif doit justifier sa place face aux trois critères. Ce qui ne passe plus est arrêté, sans long débat. Ce rythme évite le piège le plus courant : attendre la grande remise à plat annuelle, quand la liste a déjà doublé. Un rituel court et régulier demande moins d’énergie. Surtout, il empêche la liste de devenir assez longue pour qu’un grand ménage soit nécessaire."}}, {"@type": "Question", "name": "Comment introduire ce rituel sans en faire une nouvelle lourdeur ?", "acceptedAnswer": {"@type": "Answer", "text": "En le gardant court. Quinze minutes suffisent si chaque outil passe devant les trois mêmes critères, toujours dans le même ordre. Ce qui l’alourdit, ce n’est pas sa fréquence. C’est la tentation d’ajouter de nouveaux critères à chaque fois. Trois critères stables, appliqués sans exception, valent mieux que dix critères ajustés au cas par cas. Le signe que ça marche ? Ce n’est pas le nombre d’outils supprimés. C’est que la liste des outils actifs arrête de grandir toute seule entre deux revues."}}, {"@type": "Question", "name": "Comment éviter l’empilement d’outils ?", "acceptedAnswer": {"@type": "Answer", "text": "Avec une règle simple : aucun nouvel outil sans usage nommé, sans responsable et sans date de revue. Un outil sans propriétaire finit par ne servir à personne, tout en continuant à coûter. Quand un nouvel outil arrive, posez la bonne question : quel outil remplace-t-il, ou quel usage rend-il inutile ? Faites une fois par an l’inventaire des outils payés, face aux usages réels. Vous découvrirez souvent deux équipes qui paient pour le même besoin. Le bon réflexe : chaque nouvel abonnement passe par la même personne, qui vérifie qu’il ne fait pas doublon."}}, {"@type": "Question", "name": "Comment arrêter proprement un outil qui ne sert plus ?", "acceptedAnswer": {"@type": "Answer", "text": "Fixez une date, prévenez ceux qui l’utilisent, et récupérez ce qui doit l’être : les données, les modèles de travail, les bonnes habitudes. Un arrêt se prépare comme un lancement, en plus court. Une équipe qui sait arrêter ose davantage tester, parce qu’elle sait qu’un essai ne l’engage pas pour toujours. Notez pourquoi vous l’arrêtez. Ça évitera de le voir revenir dans un an, sous un autre nom ou par une autre équipe. Pensez aussi au fournisseur : beaucoup d’abonnements se renouvellent tout seuls, souvent pour un an. Notez la date de résiliation dans l’agenda."}}, {"@type": "Question", "name": "Combien coûte l’arbitrage lui-même ?", "acceptedAnswer": {"@type": "Answer", "text": "Très peu d’argent, un peu de temps. Une revue mensuelle de quelques usages suffit souvent, avec quelqu’un qui a le pouvoir de dire oui ou non. Ce qui coûte cher, c’est de ne pas le faire : des projets éparpillés qui n’aboutissent jamais. Trier, c’est un investissement d’attention, pas un budget en plus. Pour une PME, une heure par mois autour d’un tableau partagé des usages en cours suffit en général pour démarrer. Le vrai coût, c’est le courage de dire non à un outil que quelqu’un aime bien. C’est pour ça qu’il faut une personne qui a clairement ce pouvoir."}}, {"@type": "Question", "name": "Comment aider une équipe à dire non à un bon outil ?", "acceptedAnswer": {"@type": "Answer", "text": "En rappelant que la question n’est pas la qualité de l’outil. C’est son utilité pour un enjeu précis, maintenant. Un excellent outil qui ne sert aucun besoin prioritaire attend son tour, et l’équipe a le droit de l’apprécier. Dire non à ce moment-là, c’est pouvoir dire oui plus fort à ce qui compte. Proposez aussi de noter l’outil dans une liste d’attente, avec la condition qui le rendrait prioritaire. Le non devient un « pas maintenant », beaucoup plus facile à accepter."}}], "inLanguage": "fr-FR"}
@@ -1578,7 +1605,7 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
       <span class="footer-col-title">Le site</span>
       <a href="/">Accueil</a>
       <a href="offres.html">Accompagnement IA</a>
-      <a href="solutions.html">Solutions digitales &amp; IA</a>
+      <a href="solutions.html">Solutions digitales &amp; IA</a><br class="footer-nav-br">
       <a href="realisations.html">Réalisations</a>
       <a href="temoignages.html">Témoignages</a>
       <a href="perspectives.html">Perspectives</a>
@@ -1621,7 +1648,8 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
   <hr class="footer-rule">
 
   <div class="wrap footer-bottom">
-    <p class="footer-legal"><a href="mentions-legales.html">Mentions légales</a> &middot; <a href="politique-confidentialite.html">Politique de confidentialité</a> &middot; <a href="plan-du-site.html">Plan du site</a><span class="cookie-prefs-wrap" hidden> &middot; <a href="#" data-cookie-prefs>Gérer les cookies</a></span></p>
+    <p class="footer-legal"><a href="mentions-legales.html">Mentions légales</a> &middot; <a href="politique-confidentialite.html">Politique de confidentialité</a><span class="cookie-prefs-wrap" hidden> &middot; <a href="#" data-cookie-prefs>Gérer les cookies</a></span></p>
+    <a class="footer-plan" href="plan-du-site.html">Plan du site</a>
     <p class="footer-rights">Tous droits réservés</p>
     <p class="footer-copy">© 2026 Valérie Mailland.</p>
   </div>
@@ -1629,6 +1657,6 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
 
 <script src="assets/script.js?v=40"></script>
 <script src="assets/hubspot-loader.js?v=1" defer></script>
-<script src="assets/footer-align.js?v=2" defer></script>
+<script src="assets/footer-align.js?v=3" defer></script>
 </body>
 </html>

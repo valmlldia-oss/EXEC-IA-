@@ -1310,6 +1310,33 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
 .site-footer .footer-bottom .footer-legal{ grid-column: 1 / -1 !important; grid-row: 1 !important; }
 .site-footer .footer-bottom .footer-copy{ grid-column: 2 !important; grid-row: 2 !important; margin-left: 0 !important; justify-self: start !important; white-space: nowrap !important; }
 }
+
+/* Footer v3 : slogan sur une ligne, menu resserré sur 2 lignes, bandeau bas réorganisé */
+.site-footer .footer-brand .footer-signature{ margin-top: 26px !important; }
+@media (min-width: 601px){
+.site-footer .footer-brand .footer-tag{ white-space: nowrap !important; }
+.site-footer .footer-brand .footer-tag br{ display: none; }
+.site-footer .footer-brand .footer-tag-lead::after{ content: " "; }
+.site-footer .footer-brand .footer-tag-lead, .site-footer .footer-brand .footer-tag-rest{ white-space: nowrap !important; font-size: 14.5px !important; }
+}
+.site-footer .footer-col--site > a{ margin: 0 0 4px 0 !important; font-size: .85rem !important; }
+.site-footer .footer-col--site > a::after{ margin: 0 .42em !important; }
+.site-footer .footer-brand .footer-signature{ white-space: nowrap; }
+.site-footer .footer-col--site > a:nth-of-type(3)::after{ content: none !important; }
+.site-footer .footer-nav-br{ display: none; }
+@media (min-width: 601px){ .site-footer .footer-nav-br{ display: inline; } }
+.site-footer .footer-persp-grid{ column-gap: 18px !important; }
+.site-footer .footer-bottom .footer-plan{ display: inline-block; color: rgba(99,59,74,.85); text-decoration: none; font-size: .98rem; border: 1px solid rgba(99,59,74,.3); border-radius: 2rem; padding: 6px 16px; white-space: nowrap; transition: color .2s, border-color .2s; }
+.site-footer .footer-bottom .footer-plan:hover{ color: var(--rose); border-color: var(--rose); }
+@media (min-width: 1280px){
+.site-footer .footer-bottom .footer-legal{ grid-column: 1 !important; grid-row: 1 !important; }
+.site-footer .footer-bottom .footer-plan{ grid-column: 2 !important; grid-row: 1 !important; justify-self: start; margin-left: calc((100% + 18px) / 2); }
+}
+@media (min-width: 601px) and (max-width: 1279px){
+.site-footer .footer-bottom .footer-legal{ grid-column: 1 / 3 !important; grid-row: 1 !important; }
+.site-footer .footer-bottom .footer-plan{ grid-column: 3 !important; grid-row: 1 !important; justify-self: end; }
+}
+@media (max-width: 600px){ .site-footer .footer-bottom .footer-plan{ align-self: flex-start; } }
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Qu'est-ce qu'un jumeau numérique du dirigeant ?", "acceptedAnswer": {"@type": "Answer", "text": "C'est un assistant IA qui répond aux questions à partir de ce que le dirigeant a dit, écrit et décidé, en citant à chaque fois sa source. Il se construit avec des entretiens enregistrés, transcrits puis validés par le dirigeant. Il garde la trace de son raisonnement pour le successeur et l'équipe de direction : pourquoi tel client reste, pourquoi tel fournisseur, ce qui a déjà échoué. Il ne décide jamais à la place de quiconque et dit qu'il ne sait pas quand la question sort de ce qu'on lui a confié."}}, {"@type": "Question", "name": "Qu'est-ce que Fred24 ?", "acceptedAnswer": {"@type": "Answer", "text": "Fred24 est l'assistant IA lancé en juillet 2026 par Frédéric Mazzella, fondateur de BlaBlaCar. Il est nourri de vingt ans de ses conférences, interviews et écrits, et répond aux questions des entrepreneurs à partir de ce que Frédéric Mazzella a déjà dit. C'est un exemple public de jumeau numérique d'un dirigeant. La même idée peut servir à l'intérieur d'une PME, pour un cercle restreint : le successeur, le comité de direction et les cadres clés, avec un accès protégé et des contenus validés."}}, {"@type": "Question", "name": "Combien de dirigeants partiront à la retraite en France ?", "acceptedAnswer": {"@type": "Answer", "text": "Selon le ministère de l'Économie, environ 550 000 chefs d'entreprise partiront à la retraite dans les dix ans, avec 3 millions d'emplois en jeu. Le plan « Objectif Reprises », présenté le 23 avril 2026, vise à faciliter ces transmissions, et le « pacte Papin » inscrit au projet de loi de finances 2027 doit encore être voté. Ces dispositifs portent sur le prix, la fiscalité et le financement. Aucun ne traite le savoir du dirigeant : c'est à l'entreprise de l'organiser, plusieurs années avant le départ."}}, {"@type": "Question", "name": "Comment constituer le jumeau numérique d'un dirigeant ?", "acceptedAnswer": {"@type": "Answer", "text": "En quatre temps, tant que le dirigeant est là. Enregistrer des entretiens d'une heure sur ses grandes décisions, ses clients historiques, ses fournisseurs et les règles non écrites de la maison. Les faire transcrire et classer par thème. Donner au successeur un assistant IA qui répond uniquement à partir de ces notes, en citant ses sources. Faire relire, corriger et valider le tout par le dirigeant. Des entretiens approfondis et quelques semaines de mise en place suffisent pour une première version."}}, {"@type": "Question", "name": "Le RGPD s'applique-t-il aux entretiens enregistrés ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. La voix du dirigeant et ses opinions sont des données personnelles, comme les noms de clients ou de salariés cités pendant les entretiens. Il faut informer le dirigeant, recueillir son accord, limiter la durée de conservation et protéger l'accès avec des comptes nominatifs. La règle la plus simple consiste à anonymiser les clients et salariés cités avant d'alimenter l'assistant. Côté IA Act, un assistant interne de ce type n'est pas à haut risque tant qu'il ne sert pas à évaluer ou gérer des salariés."}}, {"@type": "Question", "name": "Quand commencer à transmettre le savoir d'un dirigeant ?", "acceptedAnswer": {"@type": "Answer", "text": "Plusieurs années avant le départ. À ce moment, le dirigeant a encore la disponibilité et le recul pour raconter, corriger et compléter ses entretiens. À quelques mois de la cession, l'urgence prend toute la place : négociation, audits, annonce aux équipes, et le savoir passe au second plan. Commencer trois mois avant la vente est l'erreur la plus fréquente. Une heure par semaine bloquée dans l'agenda du dirigeant suffit, à condition de la tenir jusqu'au départ."}}, {"@type": "Question", "name": "Le jumeau numérique remplace-t-il la passation ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Il ne remplace ni la passation entre deux personnes, ni les rencontres avec les clients clés, ni le temps qu'il faut à un successeur pour gagner la confiance des équipes. Il ne capte pas non plus l'intuition : un dirigeant peut expliquer pourquoi il a dit non à un partenaire, il ne transmet pas la sensation qui l'a alerté. Le jumeau numérique complète la passation. Il garde les explications et les sources, pour que le successeur les retrouve quand il en a besoin, bien après le départ."}}, {"@type": "Question", "name": "Où conserver la mémoire d'un dirigeant ?", "acceptedAnswer": {"@type": "Answer", "text": "Dans un outil professionnel qui exclut par contrat l'usage de vos données pour entraîner ses modèles, hébergé de préférence en Europe, avec des accès nominatifs et une liste claire des personnes autorisées. Jamais dans un outil grand public. Prévoyez aussi qui tient la mémoire à jour après le départ et combien de temps elle est conservée. En cas de cession, précisez dans le protocole si le jumeau numérique fait partie de ce qui est vendu, plutôt que de le découvrir après la signature."}}], "inLanguage": "fr-FR"}
@@ -1521,7 +1548,7 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
       <span class="footer-col-title">Le site</span>
       <a href="/">Accueil</a>
       <a href="offres.html">Accompagnement IA</a>
-      <a href="solutions.html">Solutions digitales &amp; IA</a>
+      <a href="solutions.html">Solutions digitales &amp; IA</a><br class="footer-nav-br">
       <a href="realisations.html">Réalisations</a>
       <a href="temoignages.html">Témoignages</a>
       <a href="perspectives.html">Perspectives</a>
@@ -1564,7 +1591,8 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
   <hr class="footer-rule">
 
   <div class="wrap footer-bottom">
-    <p class="footer-legal"><a href="mentions-legales.html">Mentions légales</a> &middot; <a href="politique-confidentialite.html">Politique de confidentialité</a> &middot; <a href="plan-du-site.html">Plan du site</a><span class="cookie-prefs-wrap" hidden> &middot; <a href="#" data-cookie-prefs>Gérer les cookies</a></span></p>
+    <p class="footer-legal"><a href="mentions-legales.html">Mentions légales</a> &middot; <a href="politique-confidentialite.html">Politique de confidentialité</a><span class="cookie-prefs-wrap" hidden> &middot; <a href="#" data-cookie-prefs>Gérer les cookies</a></span></p>
+    <a class="footer-plan" href="plan-du-site.html">Plan du site</a>
     <p class="footer-rights">Tous droits réservés</p>
     <p class="footer-copy">© 2026 Valérie Mailland.</p>
   </div>
@@ -1572,6 +1600,6 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
 
 <script src="assets/script.js?v=40"></script>
 <script src="assets/hubspot-loader.js?v=1" defer></script>
-<script src="assets/footer-align.js?v=2" defer></script>
+<script src="assets/footer-align.js?v=3" defer></script>
 </body>
 </html>

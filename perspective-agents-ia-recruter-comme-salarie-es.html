@@ -1313,6 +1313,33 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
 .site-footer .footer-bottom .footer-legal{ grid-column: 1 / -1 !important; grid-row: 1 !important; }
 .site-footer .footer-bottom .footer-copy{ grid-column: 2 !important; grid-row: 2 !important; margin-left: 0 !important; justify-self: start !important; white-space: nowrap !important; }
 }
+
+/* Footer v3 : slogan sur une ligne, menu resserré sur 2 lignes, bandeau bas réorganisé */
+.site-footer .footer-brand .footer-signature{ margin-top: 26px !important; }
+@media (min-width: 601px){
+.site-footer .footer-brand .footer-tag{ white-space: nowrap !important; }
+.site-footer .footer-brand .footer-tag br{ display: none; }
+.site-footer .footer-brand .footer-tag-lead::after{ content: " "; }
+.site-footer .footer-brand .footer-tag-lead, .site-footer .footer-brand .footer-tag-rest{ white-space: nowrap !important; font-size: 14.5px !important; }
+}
+.site-footer .footer-col--site > a{ margin: 0 0 4px 0 !important; font-size: .85rem !important; }
+.site-footer .footer-col--site > a::after{ margin: 0 .42em !important; }
+.site-footer .footer-brand .footer-signature{ white-space: nowrap; }
+.site-footer .footer-col--site > a:nth-of-type(3)::after{ content: none !important; }
+.site-footer .footer-nav-br{ display: none; }
+@media (min-width: 601px){ .site-footer .footer-nav-br{ display: inline; } }
+.site-footer .footer-persp-grid{ column-gap: 18px !important; }
+.site-footer .footer-bottom .footer-plan{ display: inline-block; color: rgba(99,59,74,.85); text-decoration: none; font-size: .98rem; border: 1px solid rgba(99,59,74,.3); border-radius: 2rem; padding: 6px 16px; white-space: nowrap; transition: color .2s, border-color .2s; }
+.site-footer .footer-bottom .footer-plan:hover{ color: var(--rose); border-color: var(--rose); }
+@media (min-width: 1280px){
+.site-footer .footer-bottom .footer-legal{ grid-column: 1 !important; grid-row: 1 !important; }
+.site-footer .footer-bottom .footer-plan{ grid-column: 2 !important; grid-row: 1 !important; justify-self: start; margin-left: calc((100% + 18px) / 2); }
+}
+@media (min-width: 601px) and (max-width: 1279px){
+.site-footer .footer-bottom .footer-legal{ grid-column: 1 / 3 !important; grid-row: 1 !important; }
+.site-footer .footer-bottom .footer-plan{ grid-column: 3 !important; grid-row: 1 !important; justify-self: end; }
+}
+@media (max-width: 600px){ .site-footer .footer-bottom .footer-plan{ align-self: flex-start; } }
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Qué es un agente de IA?", "acceptedAnswer": {"@type": "Answer", "text": "Un programa que no se limita a responder: actúa. Recibe un objetivo, utiliza herramientas, encadena varios pasos y produce un resultado, como reclamar una factura o clasificar solicitudes. Esa autonomía lo distingue de un chatbot, que solo responde, y de una automatización, que sigue siempre el mismo guion. Un agente elige sus propios pasos y puede, por tanto, equivocarse actuando. Por eso necesita un marco claro, un ámbito limitado y un responsable humano."}}, {"@type": "Question", "name": "¿Qué es Agentalent.ai?", "acceptedAnswer": {"@type": "Answer", "text": "Una plataforma lanzada por monday.com el 23 de marzo de 2026 para «contratar» agentes de IA: descripción del puesto, presentación de un agente, instalación en una semana aproximadamente, dos semanas de prueba con reembolso íntegro. El modelo toma el de una agencia de selección y lo aplica a los agentes. Un detalle importa más que el precio: una persona real del equipo de la plataforma es responsable de cada agente que propone, con nombre y dirección de correo. Incluso en una empresa que vende agentes, ningún agente trabaja sin responsable humano."}}, {"@type": "Question", "name": "¿Cuánto cuesta un agente de IA en Agentalent.ai?", "acceptedAnswer": {"@type": "Answer", "text": "Un mes de «salario» pagado una vez, o ese «salario» cada mes con un 15 % de comisión. Constellation Research estimaba los primeros agentes en torno a 2.000 dólares al mes en el lanzamiento. El precio anunciado es solo una parte del coste real. Hay que sumar el tiempo del equipo para preparar los datos, redactar la descripción del puesto del agente, revisar su trabajo durante la prueba y supervisarlo después. Un agente que ahorra diez horas a la semana pero exige cinco de verificación solo cumple la mitad de su promesa."}}, {"@type": "Question", "name": "¿Quién es responsable de un agente de IA en la empresa?", "acceptedAnswer": {"@type": "Answer", "text": "La empresa que lo utiliza. Un agente no asume responsabilidad propia: hay que nombrar a una persona que lo supervise, con tiempo y autoridad para detenerlo. En una pyme, ese responsable suele ser quien dirige la actividad en cuestión: contabilidad para un agente de reclamación de pagos, atención al cliente para un agente de respuesta. No necesita ser técnico. Necesita conocer el oficio, revisar con regularidad el trabajo del agente y ajustar sus instrucciones."}}, {"@type": "Question", "name": "¿Qué dice el AI Act sobre los agentes de IA?", "acceptedAnswer": {"@type": "Answer", "text": "Desde el 2 de agosto de 2026, una persona debe saber que trata con una IA (artículo 50). Los usos ligados a la selección o la gestión de empleados son de alto riesgo, con obligaciones a partir del 2 de diciembre de 2027. El RGPD, en su artículo 22, ya protege a cada persona frente a una decisión basada únicamente en un tratamiento automatizado cuando le afecta de forma significativa. Un agente que escribe a sus clientes debe presentarse como una IA, y un agente que rechaza por sí solo un reembolso o una candidatura expone a la empresa."}}, {"@type": "Question", "name": "¿Qué decisiones no hay que confiar a un agente de IA?", "acceptedAnswer": {"@type": "Answer", "text": "Contratar, rechazar o despedir a una persona, conceder gestos comerciales fuera de norma, responder a un cliente en litigio. El agente puede prepararlas; las toma una persona. Estas decisiones afectan a una persona y comprometen a la empresa: alguien debe poder explicarlas. Las mejores tareas para un agente son concretas, repetitivas y fáciles de verificar, como reclamar una factura impagada con un mensaje validado de antemano o preparar un dosier antes de una reunión."}}], "inLanguage": "es-ES"}
@@ -1502,7 +1529,7 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
       <span class="footer-col-title">El sitio</span>
       <a href="index-es.html">Inicio</a>
       <a href="offres-es.html">Acompañamiento IA</a>
-      <a href="solutions-es.html">Soluciones digitales e IA</a>
+      <a href="solutions-es.html">Soluciones digitales e IA</a><br class="footer-nav-br">
       <a href="realisations-es.html">Realizaciones</a>
       <a href="temoignages-es.html">Testimonios</a>
       <a href="perspectives-es.html">Perspectivas</a>
@@ -1545,7 +1572,8 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
   <hr class="footer-rule">
 
   <div class="wrap footer-bottom">
-    <p class="footer-legal"><a href="mentions-legales-es.html">Aviso legal</a> &middot; <a href="plan-du-site-es.html">Mapa del sitio</a><span class="cookie-prefs-wrap" hidden> &middot; <a href="#" data-cookie-prefs>Gestionar cookies</a></span></p>
+    <p class="footer-legal"><a href="mentions-legales-es.html">Aviso legal</a><span class="cookie-prefs-wrap" hidden> &middot; <a href="#" data-cookie-prefs>Gestionar cookies</a></span></p>
+    <a class="footer-plan" href="plan-du-site-es.html">Mapa del sitio</a>
     <p class="footer-rights">Todos los derechos reservados</p>
     <p class="footer-copy">© 2026 Valérie Mailland.</p>
   </div>
@@ -1553,6 +1581,6 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
 
 <script src="assets/script.js?v=40"></script>
 <script src="assets/hubspot-loader.js?v=1" defer></script>
-<script src="assets/footer-align.js?v=2" defer></script>
+<script src="assets/footer-align.js?v=3" defer></script>
 </body>
 </html>

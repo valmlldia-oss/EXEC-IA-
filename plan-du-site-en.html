@@ -1094,6 +1094,33 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
 .site-footer .footer-bottom .footer-legal{ grid-column: 1 / -1 !important; grid-row: 1 !important; }
 .site-footer .footer-bottom .footer-copy{ grid-column: 2 !important; grid-row: 2 !important; margin-left: 0 !important; justify-self: start !important; white-space: nowrap !important; }
 }
+
+/* Footer v3 : slogan sur une ligne, menu resserré sur 2 lignes, bandeau bas réorganisé */
+.site-footer .footer-brand .footer-signature{ margin-top: 26px !important; }
+@media (min-width: 601px){
+.site-footer .footer-brand .footer-tag{ white-space: nowrap !important; }
+.site-footer .footer-brand .footer-tag br{ display: none; }
+.site-footer .footer-brand .footer-tag-lead::after{ content: " "; }
+.site-footer .footer-brand .footer-tag-lead, .site-footer .footer-brand .footer-tag-rest{ white-space: nowrap !important; font-size: 14.5px !important; }
+}
+.site-footer .footer-col--site > a{ margin: 0 0 4px 0 !important; font-size: .85rem !important; }
+.site-footer .footer-col--site > a::after{ margin: 0 .42em !important; }
+.site-footer .footer-brand .footer-signature{ white-space: nowrap; }
+.site-footer .footer-col--site > a:nth-of-type(3)::after{ content: none !important; }
+.site-footer .footer-nav-br{ display: none; }
+@media (min-width: 601px){ .site-footer .footer-nav-br{ display: inline; } }
+.site-footer .footer-persp-grid{ column-gap: 18px !important; }
+.site-footer .footer-bottom .footer-plan{ display: inline-block; color: rgba(99,59,74,.85); text-decoration: none; font-size: .98rem; border: 1px solid rgba(99,59,74,.3); border-radius: 2rem; padding: 6px 16px; white-space: nowrap; transition: color .2s, border-color .2s; }
+.site-footer .footer-bottom .footer-plan:hover{ color: var(--rose); border-color: var(--rose); }
+@media (min-width: 1280px){
+.site-footer .footer-bottom .footer-legal{ grid-column: 1 !important; grid-row: 1 !important; }
+.site-footer .footer-bottom .footer-plan{ grid-column: 2 !important; grid-row: 1 !important; justify-self: start; margin-left: calc((100% + 18px) / 2); }
+}
+@media (min-width: 601px) and (max-width: 1279px){
+.site-footer .footer-bottom .footer-legal{ grid-column: 1 / 3 !important; grid-row: 1 !important; }
+.site-footer .footer-bottom .footer-plan{ grid-column: 3 !important; grid-row: 1 !important; justify-self: end; }
+}
+@media (max-width: 600px){ .site-footer .footer-bottom .footer-plan{ align-self: flex-start; } }
 </style>
   <style>
     .ml-page { max-width: 760px; margin: 0 auto; padding: 80px 24px clamp(60px, 8vw, 100px); }
@@ -1243,7 +1270,7 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
         <span class="footer-col-title">Site</span>
       <a href="index-en.html">Home</a>
       <a href="offres-en.html">AI support</a>
-      <a href="solutions-en.html">Digital &amp; AI solutions</a>
+      <a href="solutions-en.html">Digital &amp; AI solutions</a><br class="footer-nav-br">
       <a href="realisations-en.html">Achievements</a>
       <a href="temoignages-en.html">Testimonials</a>
       <a href="perspectives-en.html">Insights</a>
@@ -1285,7 +1312,8 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
     <hr class="footer-rule">
 
     <div class="wrap footer-bottom">
-      <p class="footer-legal"><a href="mentions-legales-en.html">Legal notice</a> &middot; <a href="plan-du-site-en.html">Site map</a><span class="cookie-prefs-wrap" hidden> &middot; <a href="#" data-cookie-prefs>Manage cookies</a></span></p>
+      <p class="footer-legal"><a href="mentions-legales-en.html">Legal notice</a><span class="cookie-prefs-wrap" hidden> &middot; <a href="#" data-cookie-prefs>Manage cookies</a></span></p>
+    <a class="footer-plan" href="plan-du-site-en.html">Site map</a>
       <p class="footer-rights">All rights reserved</p>
       <p class="footer-copy">© 2026 Valérie Mailland.</p>
     </div>
@@ -1294,6 +1322,6 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
 <script src="assets/chat-widget.js?v=9" defer></script>
 <script src="assets/phare-chat-widget.js?v=11" defer></script>
 <script src="assets/hubspot-loader.js?v=1" defer></script>
-<script src="assets/footer-align.js?v=2" defer></script>
+<script src="assets/footer-align.js?v=3" defer></script>
 </body>
 </html>
