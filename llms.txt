@@ -4,6 +4,15 @@
 
 Contenu intégral des 15 articles du Blog et du guide AI Act/RGPD pour PME (FR/EN/ES, sans HTML) : [llms-full.txt](https://exec-ia.ai/llms-full.txt)
 
+## Pages principales (FR)
+- [Accueil](https://exec-ia.ai/): présentation d'EXEC'IA, cabinet de conseil stratégique en IA pour dirigeants de PME, et questions fréquentes.
+- [Offres et tarifs](https://exec-ia.ai/offres.html): Cap IA (diagnostic stratégique, 910 € HT en solo, 1 490 € HT en comité de direction), Sparring Dirigeant (3 910 € HT), Transformation IA (dès 6 910 € HT), agents IA (dès 1 490 € HT). Version lisible par machine : [pricing.md](https://exec-ia.ai/pricing.md).
+- [Solutions digitales et IA](https://exec-ia.ai/solutions.html): agents IA métiers, automatisation, cerveau IA (jumeau numérique), création de sites web.
+- [Agents IA métiers](https://exec-ia.ai/agents-ia.html): douze agents par fonction (direction, commercial, support, documentaire, gouvernance), toujours sous validation humaine.
+- [À propos](https://exec-ia.ai/a-propos.html): Valérie Mailland, fondatrice et présidente, parcours, certifications et méthode.
+- [IA Act et RGPD : obligations d'une PME](https://exec-ia.ai/conformite-ia-pme.html): guide des obligations réelles d'une PME qui utilise l'IA.
+- [Contact](https://exec-ia.ai/contact.html): entretien stratégique de 30 minutes offert, et questions fréquentes.
+
 ## Articles Blog (FR)
 - [Affaire Orélien : vos équipes devront prouver leur travail](https://exec-ia.ai/perspective-affaire-orelien-preuve-travail.html): Écarté du Goncourt pour des soupçons d'IA, Thélyson Orélien doit prouver qu'il a écrit son roman. Demain, vos équipes : la méthode.
 - [Agents IA : faut-il les recruter comme des salariés ?](https://exec-ia.ai/perspective-agents-ia-recruter-comme-salarie.html): Depuis mars 2026, on peut « recruter » un agent IA comme un salarié : fiche de poste, essai, salaire. Ce que la métaphore cache.
