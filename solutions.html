@@ -2088,6 +2088,9 @@ rect.cerveau-art-accent{ fill: var(--rose); stroke: none; }
 .cerveau-step-art{ height: 92px !important; margin: 0 0 10px !important; }
 .prio-fn{ display: block; font-family: var(--sans); font-weight: 600; font-size: .95rem; color: #C75F62; margin-bottom: 2px; }
 .prio-desc{ display: block; }
+.prio-has-avatar{ padding-left: 74px; min-height: 56px; }
+.prio-has-avatar::before{ display: none; }
+.prio-avatar{ position: absolute; left: 0; top: 0; width: 56px; height: 56px; border-radius: 50%; border: 2px solid #C75F62; object-fit: cover; background: #FAF6F2; }
 .cerveau-block:has(> .cerveau-fold){ margin-top: 0 !important; padding-top: 0 !important; padding-bottom: 0 !important; }
 
 /* Menu principal v2 */
@@ -2128,7 +2131,7 @@ rect.cerveau-art-accent{ fill: var(--rose); stroke: none; }
   .nav-links > :nth-last-child(2){ margin-right: 0; }
   .nav-links > :nth-child(n+2):not(.nav-cta)::before{ content: ''; position: absolute; left: calc(-1 * var(--nav-pad)); top: 50%; width: 1px; height: 18px; transform: translateY(-50%); background: rgba(99,59,74,.24); pointer-events: none; }
   .nav-links .nav-cta--panel{ display: none; }
-  .nav-actions{ flex-direction: column; align-items: flex-end; gap: 7px; }
+  .nav-actions{ flex-direction: column; align-items: center; gap: 7px; }
   .nav-actions .nav-cta--bar{ display: inline-flex; align-items: center; padding: 7px 18px; }
   .nav-lang:last-child{ margin-right: 0; }
   .nav-links > .nav-item--dd > a::before{ content: ''; position: absolute; left: 50%; bottom: -13px; width: 6px; height: 6px; border-right: 1.4px solid currentColor; border-bottom: 1.4px solid currentColor; transform: translateX(-50%) rotate(45deg); opacity: .75; transition: transform .2s, opacity .2s; }
@@ -2234,7 +2237,7 @@ rect.cerveau-art-accent{ fill: var(--rose); stroke: none; }
     <p class="cerveau-text">Ce n’est pas un agent séparé pour chaque tâche ou chaque client, mais un choix de méthode.</p><p class="cerveau-text">Chaque demande ne consulte que le contexte du projet concerné&nbsp;: les dossiers ne se mélangent pas, et le système ne mobilise que ce dont il a besoin. Ce qui a été décidé en janvier reste disponible en mars, sans recopie.</p><p class="cerveau-text">Chaque nouvelle compétence s’ajoute à la même base, sans accumuler de dette technique. Enfin, l’outil reste interchangeable&nbsp;: le modèle d’IA peut changer sans que le cerveau, ses skills et votre méthode soient à refaire.</p>
     <h4 class="cerveau-h4">Quatre priorités, un seul cerveau</h4>
     <p class="cerveau-text">Ils partagent le même contexte et les mêmes règles de fond&nbsp;; seule la priorité change.</p>
-    <ul class="priorites"><li><span class="prio-fn">Mémoire documentaire</span><span class="prio-desc"><a class="prio-name" href="agents-ia.html#ancre">ANCRE</a> indexe votre mémoire documentaire pour retrouver une information en une recherche.</span></li><li><span class="prio-fn">Mémoire des réunions</span><span class="prio-desc"><a class="prio-name" href="agents-ia.html#trame">TRAME</a> transforme chaque réunion en mémoire consultable et exploitable.</span></li><li><span class="prio-fn">Trésorerie</span><span class="prio-desc"><a class="prio-name" href="agents-ia.html#flux">FLUX</a> éclaire les arbitrages avant qu’ils ne deviennent des urgences.</span></li><li><span class="prio-fn">Recrutement</span><span class="prio-desc"><a class="prio-name" href="agents-ia.html#repere">REPÈRE</a> identifie les bons profils pour éclairer vos décisions. Il prépare le travail, la décision reste humaine.</span></li></ul>
+    <ul class="priorites"><li class="prio-has-avatar"><img class="prio-avatar" src="assets/agents/avatars/ancre.webp" alt="" width="56" height="56" loading="lazy" decoding="async"><span class="prio-fn">Mémoire documentaire · <a class="prio-name" href="agents-ia.html#ancre">ANCRE</a></span><span class="prio-desc">Indexe votre mémoire pour retrouver une information en une recherche.</span></li><li><span class="prio-fn">Mémoire des réunions</span><span class="prio-desc"><a class="prio-name" href="agents-ia.html#trame">TRAME</a> transforme chaque réunion en mémoire consultable et exploitable.</span></li><li><span class="prio-fn">Trésorerie</span><span class="prio-desc"><a class="prio-name" href="agents-ia.html#flux">FLUX</a> éclaire les arbitrages avant qu’ils ne deviennent des urgences.</span></li><li><span class="prio-fn">Recrutement</span><span class="prio-desc"><a class="prio-name" href="agents-ia.html#repere">REPÈRE</a> identifie les bons profils pour éclairer vos décisions. Il prépare le travail, la décision reste humaine.</span></li></ul>
   </div>
 <div class="cerveau-block cerveau-focus">
     <h3 class="cerveau-h3">Renverser le <span class="ink-terra-lg">80-20</span>, et la place de l’humain</h3>
