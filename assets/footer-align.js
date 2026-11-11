@@ -6,10 +6,11 @@
     var f = document.querySelector('.footer-brand-mark');
     var b = document.querySelector('.footer-brand');
     var l = document.querySelector('.footer-bottom .footer-legal');
-    if (!n || !f || !b) return;
+    if (!f || !b) return;
     b.style.position = 'relative'; b.style.left = '0px';
     if (l) { l.style.position = 'relative'; l.style.left = '0px'; }
-    var d = n.getBoundingClientRect().left - f.getBoundingClientRect().left;
+    /* Pages sans barre de navigation (mentions légales, confidentialité) : pas de décalage */
+    var d = n ? n.getBoundingClientRect().left - f.getBoundingClientRect().left : 0;
     b.style.left = d + 'px';
     if (l) l.style.left = d + 'px';
     fitTag();
