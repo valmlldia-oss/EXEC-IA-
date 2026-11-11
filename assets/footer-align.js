@@ -1,11 +1,11 @@
 /* Footer : (1) aligne le bord gauche du logo et des mentions légales sur celui du logo de la navbar (même ligne verticale) ;
-   (2) ajuste la taille du slogan pour qu'il tienne sur une seule ligne. */
+   (le lien Plan du site se cale sur le slogan) ; (2) ajuste la taille du slogan pour qu'il tienne sur une seule ligne. */
 (function () {
   function align() {
     var n = document.querySelector('#nav .nav-brand, nav .nav-brand');
     var f = document.querySelector('.footer-brand-mark');
     var b = document.querySelector('.footer-brand');
-    var l = document.querySelector('.footer-bottom .footer-legal');
+    var l = document.querySelector('.footer-bottom .footer-plan');
     if (!f || !b) return;
     b.style.position = 'relative'; b.style.left = '0px';
     if (l) { l.style.position = 'relative'; l.style.left = '0px'; }

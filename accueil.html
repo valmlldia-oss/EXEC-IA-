@@ -2130,6 +2130,26 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
 .site-footer .footer-bottom .footer-plan{ grid-column: 3 !important; grid-row: 1 !important; justify-self: end; }
 }
 @media (max-width: 600px){ .site-footer .footer-bottom .footer-plan{ align-self: flex-start; } }
+
+/* Footer v4 : bandeau bas allégé. Plan du site sous le slogan, mentions + confidentialité + cookies groupés sous les articles */
+@media (min-width: 601px){
+.site-footer .footer-bottom .footer-legal a, .site-footer .footer-bottom .footer-plan{ font-size: .8rem !important; padding: 5px 10px !important; }
+.site-footer .footer-bottom .footer-legal{ font-size: 0 !important; }
+.site-footer .footer-bottom .footer-legal a{ margin-right: 10px; }
+.site-footer .footer-bottom .footer-legal .cookie-prefs-wrap{ font-size: 0 !important; }
+}
+@media (min-width: 1280px){
+.site-footer .footer-bottom .footer-plan{ grid-column: 1 !important; grid-row: 1 !important; justify-self: start !important; margin-left: 0 !important; }
+.site-footer .footer-bottom .footer-legal{ grid-column: 2 !important; grid-row: 1 !important; justify-self: start !important; white-space: nowrap !important; }
+}
+@media (min-width: 601px) and (max-width: 1279px){
+.site-footer .footer-bottom .footer-plan{ grid-column: 1 !important; grid-row: 1 !important; justify-self: start !important; margin-left: 0 !important; }
+.site-footer .footer-bottom .footer-legal{ grid-column: 2 / -1 !important; grid-row: 1 !important; justify-self: start !important; }
+}
+@media (min-width: 601px) and (max-width: 1023px){
+.site-footer .footer-bottom .footer-legal{ white-space: normal !important; }
+}
+@media (max-width: 600px){ .site-footer .footer-bottom .footer-plan{ order: -1; } }
 </style>
 <style id="footer-contact-gauche">
 @media (min-width: 1251px){
@@ -2483,6 +2503,6 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
 <script src="assets/chat-widget.js?v=9" defer></script>
 <script src="assets/phare-chat-widget.js?v=11" defer></script>
 <script src="assets/hubspot-loader.js?v=1" defer></script>
-<script src="assets/footer-align.js?v=4" defer></script>
+<script src="assets/footer-align.js?v=5" defer></script>
 </body>
 </html>
