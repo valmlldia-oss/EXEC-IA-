@@ -1591,6 +1591,13 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
 .site-footer .footer-brand .footer-tag::after{ content: ""; display: block; height: 2px; background: #C75F62; width: var(--rule-w, 120px); margin: 12px 0 0 var(--rule-ml, 0); }
 .site-footer .footer-brand .footer-signature::before{ content: none !important; }
 .site-footer .footer-brand .footer-signature{ margin-top: 42px !important; white-space: nowrap; }
+
+/* Footer v8 : sur mobile, les boutons légaux passent à la ligne au lieu d'être coupés à droite */
+@media (max-width: 600px){
+.site-footer .footer-bottom .footer-legal{ display: flex !important; flex-wrap: wrap; gap: 8px; white-space: normal !important; }
+.site-footer .footer-bottom .footer-legal a{ margin-right: 0 !important; }
+.site-footer .footer-bottom .footer-legal .cookie-prefs-wrap{ display: contents; white-space: normal !important; }
+}
 </style>
 <style id="footer-contact-gauche">
 @media (min-width: 1251px){
