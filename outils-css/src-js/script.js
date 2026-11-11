@@ -5,7 +5,7 @@ if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
 const nav = document.getElementById('nav');
 const onScroll = () => nav.classList.toggle('scrolled', scrollY > 56);
 window.addEventListener('scroll', onScroll, { passive: true });
-onScroll();
+requestAnimationFrame(onScroll);
 
 /* ── Helper : scroll vers un élément sans saut ── */
 function smoothScrollTo(id) {
