@@ -2013,6 +2013,8 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
   .nav-dd a::before{ content: '→'; position: absolute; left: 16px; top: 50%; transform: translateY(-50%); font-size: .85rem; color: #633B4A; opacity: .5; transition: transform .2s, opacity .2s, color .2s; }
   .nav-dd a:hover::before, .nav-dd a:focus-visible::before{ color: #C75F62; opacity: 1; transform: translateY(-50%) translateX(3px); }
 }
+
+@media (min-width: 761px){ #usages .re-grid{ grid-template-columns: repeat(3, minmax(0,1fr)); } #usages .re-section-intro{ max-width: none; white-space: nowrap; } }
 </style>
 <style id="footer-contact-gauche">
 @media (min-width: 1251px){
