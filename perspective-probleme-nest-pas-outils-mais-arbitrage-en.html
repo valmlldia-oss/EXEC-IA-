@@ -1280,6 +1280,18 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
 }
 
 @media (min-width: 1200px){ .nav-brand .nav-logo-rond{ height: 60px !important; width: 60px !important; } .nav-brand .nav-logo-full{ height: 64px !important; } }
+
+/* Boutons : un primaire plein + un secondaire contour, jamais deux identiques */
+.btn-outline{ background: transparent !important; color: #C75F62 !important; border: 1.5px solid #C75F62 !important; box-shadow: none; }
+.btn-outline:hover{ background: #C75F62 !important; color: #FAF6F2 !important; transform: translateY(-2px); }
+.footer-col a.footer-linkedin-btn:not(.footer-instagram-btn){ background: #C75F62; border-color: #C75F62; color: #FAF6F2; }
+.footer-col a.footer-linkedin-btn:not(.footer-instagram-btn):hover{ background: #C75F62; border-color: #C75F62; color: #FAF6F2; }
+.footer-col a.footer-instagram-btn{ background: transparent; border-color: rgba(99,59,74,.45); color: #633B4A; }
+.footer-col a.footer-instagram-btn:hover{ border-color: #C75F62; color: #C75F62; }
+
+/* Logo du footer : identique au logo de la barre de navigation (mêmes images, mêmes tailles), aligné sur la même ligne verticale */
+.footer-brand .footer-brand-mark{ display: inline-flex; width: max-content; margin-right: 0; margin-top: 0; margin-bottom: 18px; transform: none; }
+.footer-brand .footer-brand-mark:hover{ transform: none; }
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why these three criteria specifically?", "acceptedAnswer": {"@type": "Answer", "text": "Because each one removes a trap. The first rules out passing fads: testing a tool because a competitor uses it is not a challenge, it is a comparison. The second forces a decision: without a budget or a named owner, a tool stays a trial, never a choice. The third protects you from money already spent: a tool you no longer dare to stop, because of the time it took to set up, ends up costing more than the one you never launched."}}, {"@type": "Question", "name": "What happens when no one decides?", "acceptedAnswer": {"@type": "Answer", "text": "In practice, one obstacle keeps coming up: nobody is clearly tasked with sorting. Everyone keeps the tool they tested, because they put time into it and do not want to see it dropped. Without someone whose role it is, and who is attached to no tool in particular, the list only grows. Nobody decides not to decide. The list simply grows while everyone waits for someone else to deal with it. Deciding also means accepting that a dropped tool is not a failure. It is proof the sorting worked. A team that never drops anything has probably never sorted."}}, {"@type": "Question", "name": "How do you apply this sorting day to day?", "acceptedAnswer": {"@type": "Answer", "text": "Sorting works better as a ritual than as a big decision: a short review every quarter, where each active tool has to justify its place against the three criteria. Whatever no longer passes is stopped, without a long debate. That rhythm avoids the most common trap: waiting for the big annual clean-up, by which time the list has already doubled. A short, regular ritual takes less energy. Above all, it stops the list from ever getting long enough to need a big clean-up."}}, {"@type": "Question", "name": "How do you introduce this ritual without adding a new burden?", "acceptedAnswer": {"@type": "Answer", "text": "By keeping it short. Fifteen minutes are enough if each tool goes through the same three criteria, always in the same order. What makes it heavy is not how often it happens. It is the temptation to add new criteria each time. Three stable criteria, applied without exception, beat ten criteria adjusted case by case. The sign it works? Not the number of tools removed. It is that the list of active tools stops growing on its own between two reviews."}}, {"@type": "Question", "name": "How do you avoid piling up tools?", "acceptedAnswer": {"@type": "Answer", "text": "With a simple rule: no new tool without a named use, an owner and a review date. A tool with no owner ends up serving nobody, while it keeps costing money. When a new tool arrives, ask the right question: which tool does it replace, or which use does it make unnecessary? Once a year, list the tools you pay for against how they are actually used. You will often find two teams paying for the same need. The right reflex: every new subscription goes through the same person, who checks it does not duplicate an existing one."}}, {"@type": "Question", "name": "How do you properly retire a tool that is no longer used?", "acceptedAnswer": {"@type": "Answer", "text": "Set a date, warn the people who use it, and recover what needs recovering: data, templates, good habits. Stopping a tool is prepared like a launch, only shorter. A team that knows how to stop dares to test more, because it knows a trial does not commit it forever. Write down why you stopped it. It will stop the same tool coming back in a year, under another name or through another team. Think about the vendor too: many subscriptions renew automatically, often for a full year. Put the cancellation date in the diary."}}, {"@type": "Question", "name": "What does the choosing itself cost?", "acceptedAnswer": {"@type": "Answer", "text": "Very little money, a little time. A monthly review of a few uses is often enough, with someone who has the power to say yes or no. What is expensive is not doing it: scattered projects that never land. Sorting is an investment of attention, not an extra budget. For an SME, one hour a month around a shared table of current uses is usually enough to get started. The real cost is the courage to say no to a tool someone likes. That is why you need a person who clearly has that power."}}, {"@type": "Question", "name": "How do you help a team say no to a good tool?", "acceptedAnswer": {"@type": "Answer", "text": "By reminding them the question is not how good the tool is. It is how useful it is for a specific challenge, right now. An excellent tool that serves no priority need waits its turn, and the team is allowed to like it. Saying no at that moment is what lets you say a stronger yes to what matters. Also suggest adding the tool to a waiting list, with the condition that would make it a priority. The no becomes a “not now”, which is far easier to accept."}}], "inLanguage": "en-US"}
@@ -1530,7 +1542,7 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
 <footer class="snap-page site-footer">
   <div class="wrap footer-grid">
     <div class="footer-brand">
-      <img src="assets/logo-execia-bords-prune.webp" alt="EXEC'IA Consulting" class="footer-logo-main" width="450" height="212" decoding="async">
+      <a href="index-en.html" class="nav-brand footer-brand-mark" aria-label="EXEC'IA Consulting"><img src="assets/logo-prune-final.webp" alt="" class="nav-logo-rond" width="1254" height="1254" loading="lazy" decoding="async"><img src="assets/logo-execia-bords-prune-240.webp" alt="EXEC'IA Consulting" class="nav-logo-full" width="240" height="113" loading="lazy" decoding="async"></a>
       <p class="footer-tag"><span class="footer-tag-lead">Executive-level experience</span><br><span class="footer-tag-rest">at the service of your <span class="ink-accent"><span class="ia-rose">AI</span></span> transformation</span></p>
       <p class="footer-signature">« Decide before you invest. »</p>
     </div>
@@ -1541,28 +1553,12 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
       <a href="offres-en.html">AI support</a>
       <a href="solutions-en.html">Digital &amp; AI solutions</a>
       <a href="realisations-en.html">Achievements</a>
-      <a href="a-propos-en.html">About</a>
       <a href="temoignages-en.html">Testimonials</a>
+      <a href="perspectives-en.html">Insights</a>
+      <a href="a-propos-en.html">About</a>
       <a href="contact-en.html">Contact</a>
-      <a href="perspectives-en.html">Insights</a><a href="ressources-en.html">Resources</a>
-    <div class="footer-persp-grid">
-    <a href="perspective-entreprise-utilise-deja-ia-en.html" class="footer-persp-link">→ <span class="art-star" aria-label="Most-read article">★</span>Adopting <span class="ink-accent"><span class="ia-rose">AI</span></span> vs. creating value</a>
-    <a href="perspective-toutes-decisions-ne-se-deleguent-pas-en.html" class="footer-persp-link">→ <span class="art-star" aria-label="Most-read article">★</span>Not every decision can be delegated</a>
-    <a href="perspective-transformation-echoue-rarement-technologie-en.html" class="footer-persp-link">→ <span class="ink-accent"><span class="ia-rose">AI</span></span> transformation rarely fails</a>
-    <a href="perspective-probleme-nest-pas-outils-mais-arbitrage-en.html" class="footer-persp-link">→ More <span class="ink-accent"><span class="ia-rose">AI</span></span> tools, not more impact</a>
-    <a href="perspective-projet-ia-peut-il-etre-finance-en.html" class="footer-persp-link">→ Can your <span class="ink-accent"><span class="ia-rose">AI</span></span> project be funded?</a>
-    <a href="perspective-chatbot-savoir-passer-la-main-en.html" class="footer-persp-link">→ When should a chatbot hand over?</a>
-    <a href="perspective-budget-ia-adhesion-equipes-en.html" class="footer-persp-link">→ Why does buy-in matter more than budget?</a>
-    <a href="perspective-shadow-ia-charte-comite-direction-en.html" class="footer-persp-link">→ Which <span class="ink-accent"><span class="ia-rose">AI</span></span> tools do your teams really use?</a>
-    <a href="perspective-robots-humanoides-token-tax-en.html" class="footer-persp-link footer-persp-link--c2">→ Which tasks would you hand to a humanoid robot?</a>
-    <a href="perspective-affaire-orelien-preuve-travail-en.html" class="footer-persp-link footer-persp-link--c2">→ <span class="art-star" aria-label="Most-read article">★</span>Will your teams have to prove their work?</a>
-    <a href="perspective-tri-cv-ia-candidatures-ecartees-en.html" class="footer-persp-link footer-persp-link--c2">→ Who rereads the CVs that <span class="ink-accent"><span class="ia-rose">AI</span></span> rejects?</a>
-    <a href="perspective-agents-ia-recruter-comme-salarie-en.html" class="footer-persp-link footer-persp-link--c2">→ Should you hire an <span class="ink-accent"><span class="ia-rose">AI</span></span> agent like an employee?</a>
-    <a href="perspective-jumeau-numerique-savoir-dirigeant-en.html" class="footer-persp-link footer-persp-link--c2">→ Digital twin: does a leader’s knowledge leave too?</a>
-    <a href="perspective-forward-deployed-engineer-pme-en.html" class="footer-persp-link footer-persp-link--c2">→ Between <span class="ink-accent"><span class="ia-rose">AI</span></span> and leadership, you need a translator</a>
-    <a href="perspective-enregistreur-ia-reunion-direction-en.html" class="footer-persp-link footer-persp-link--c2">→ An <span class="ink-accent"><span class="ia-rose">AI</span></span> recorder in the management meeting: who decided that?</a>
     </div>
-    </div>
+
 
     <div class="footer-col footer-col--contact">
       <span class="footer-col-title">Contact</span>
@@ -1589,5 +1585,6 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
 
 <script src="assets/script.js?v=40"></script>
 <script src="assets/hubspot-loader.js?v=1" defer></script>
+<script src="assets/footer-align.js?v=2" defer></script>
 </body>
 </html>

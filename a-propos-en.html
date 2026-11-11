@@ -2106,6 +2106,18 @@ p :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl, .ink-accent-fixed, .art-chip, .
 }
 
 @media (min-width: 1200px){ .nav-brand .nav-logo-rond{ height: 60px !important; width: 60px !important; } .nav-brand .nav-logo-full{ height: 64px !important; } }
+
+/* Boutons : un primaire plein + un secondaire contour, jamais deux identiques */
+.btn-outline{ background: transparent !important; color: #C75F62 !important; border: 1.5px solid #C75F62 !important; box-shadow: none; }
+.btn-outline:hover{ background: #C75F62 !important; color: #FAF6F2 !important; transform: translateY(-2px); }
+.footer-col a.footer-linkedin-btn:not(.footer-instagram-btn){ background: #C75F62; border-color: #C75F62; color: #FAF6F2; }
+.footer-col a.footer-linkedin-btn:not(.footer-instagram-btn):hover{ background: #C75F62; border-color: #C75F62; color: #FAF6F2; }
+.footer-col a.footer-instagram-btn{ background: transparent; border-color: rgba(99,59,74,.45); color: #633B4A; }
+.footer-col a.footer-instagram-btn:hover{ border-color: #C75F62; color: #C75F62; }
+
+/* Logo du footer : identique au logo de la barre de navigation (mêmes images, mêmes tailles), aligné sur la même ligne verticale */
+.footer-brand .footer-brand-mark{ display: inline-flex; width: max-content; margin-right: 0; margin-top: 0; margin-bottom: 18px; transform: none; }
+.footer-brand .footer-brand-mark:hover{ transform: none; }
 </style>
 <style id="footer-contact-gauche">
 @media (min-width: 1251px){
@@ -2430,7 +2442,7 @@ p :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl, .ink-accent-fixed, .art-chip, .
 <footer class="snap-page site-footer">
   <div class="wrap footer-grid">
     <div class="footer-brand">
-      <img src="assets/logo-execia-bords-prune.webp" alt="EXEC'IA Consulting" class="footer-logo-main" width="450" height="212" decoding="async">
+      <a href="index-en.html" class="nav-brand footer-brand-mark" aria-label="EXEC'IA Consulting"><img src="assets/logo-prune-final.webp" alt="" class="nav-logo-rond" width="1254" height="1254" loading="lazy" decoding="async"><img src="assets/logo-execia-bords-prune-240.webp" alt="EXEC'IA Consulting" class="nav-logo-full" width="240" height="113" loading="lazy" decoding="async"></a>
       <p class="footer-tag"><span class="footer-tag-lead">Executive-level experience</span><br><span class="footer-tag-rest">at the service of your <span class="ink-accent"><span class="ia-rose">AI</span></span> transformation</span></p>
       <p class="footer-signature">« Decide before you invest. »</p>
     </div>
@@ -2441,28 +2453,12 @@ p :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl, .ink-accent-fixed, .art-chip, .
       <a href="offres-en.html">AI support</a>
       <a href="solutions-en.html">Digital &amp; AI solutions</a>
       <a href="realisations-en.html">Achievements</a>
-      <a href="a-propos-en.html">About</a>
       <a href="temoignages-en.html">Testimonials</a>
+      <a href="perspectives-en.html">Insights</a>
+      <a href="a-propos-en.html">About</a>
       <a href="contact-en.html">Contact</a>
-      <a href="perspectives-en.html">Insights</a><a href="ressources-en.html">Resources</a>
-    <div class="footer-persp-grid">
-    <a href="perspective-entreprise-utilise-deja-ia-en.html" class="footer-persp-link">→ <span class="art-star" aria-label="Most-read article">★</span>Adopting <span class="ink-accent"><span class="ia-rose">AI</span></span> vs. creating value</a>
-    <a href="perspective-toutes-decisions-ne-se-deleguent-pas-en.html" class="footer-persp-link">→ <span class="art-star" aria-label="Most-read article">★</span>Not every decision can be delegated</a>
-    <a href="perspective-transformation-echoue-rarement-technologie-en.html" class="footer-persp-link">→ <span class="ink-accent"><span class="ia-rose">AI</span></span> transformation rarely fails</a>
-    <a href="perspective-probleme-nest-pas-outils-mais-arbitrage-en.html" class="footer-persp-link">→ More <span class="ink-accent"><span class="ia-rose">AI</span></span> tools, not more impact</a>
-    <a href="perspective-projet-ia-peut-il-etre-finance-en.html" class="footer-persp-link">→ Can your <span class="ink-accent"><span class="ia-rose">AI</span></span> project be funded?</a>
-    <a href="perspective-chatbot-savoir-passer-la-main-en.html" class="footer-persp-link">→ When should a chatbot hand over?</a>
-    <a href="perspective-budget-ia-adhesion-equipes-en.html" class="footer-persp-link">→ Why does buy-in matter more than budget?</a>
-    <a href="perspective-shadow-ia-charte-comite-direction-en.html" class="footer-persp-link">→ Which <span class="ink-accent"><span class="ia-rose">AI</span></span> tools do your teams really use?</a>
-    <a href="perspective-robots-humanoides-token-tax-en.html" class="footer-persp-link footer-persp-link--c2">→ Which tasks would you hand to a humanoid robot?</a>
-    <a href="perspective-affaire-orelien-preuve-travail-en.html" class="footer-persp-link footer-persp-link--c2">→ <span class="art-star" aria-label="Most-read article">★</span>Will your teams have to prove their work?</a>
-    <a href="perspective-tri-cv-ia-candidatures-ecartees-en.html" class="footer-persp-link footer-persp-link--c2">→ Who rereads the CVs that <span class="ink-accent"><span class="ia-rose">AI</span></span> rejects?</a>
-    <a href="perspective-agents-ia-recruter-comme-salarie-en.html" class="footer-persp-link footer-persp-link--c2">→ Should you hire an <span class="ink-accent"><span class="ia-rose">AI</span></span> agent like an employee?</a>
-    <a href="perspective-jumeau-numerique-savoir-dirigeant-en.html" class="footer-persp-link footer-persp-link--c2">→ Digital twin: does a leader’s knowledge leave too?</a>
-    <a href="perspective-forward-deployed-engineer-pme-en.html" class="footer-persp-link footer-persp-link--c2">→ Between <span class="ink-accent"><span class="ia-rose">AI</span></span> and leadership, you need a translator</a>
-    <a href="perspective-enregistreur-ia-reunion-direction-en.html" class="footer-persp-link footer-persp-link--c2">→ An <span class="ink-accent"><span class="ia-rose">AI</span></span> recorder in the management meeting: who decided that?</a>
     </div>
-    </div>
+
 
     <div class="footer-col footer-col--contact">
       <span class="footer-col-title">Contact</span>
@@ -2494,5 +2490,6 @@ p :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl, .ink-accent-fixed, .art-chip, .
 <script src="assets/chat-widget.js?v=9" defer></script>
 <script src="assets/phare-chat-widget.js?v=11" defer></script>
 <script src="assets/hubspot-loader.js?v=1" defer></script>
+<script src="assets/footer-align.js?v=2" defer></script>
 </body>
 </html>

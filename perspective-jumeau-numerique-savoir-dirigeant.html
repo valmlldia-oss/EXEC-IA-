@@ -1270,6 +1270,18 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
 }
 
 @media (min-width: 1200px){ .nav-brand .nav-logo-rond{ height: 60px !important; width: 60px !important; } .nav-brand .nav-logo-full{ height: 64px !important; } }
+
+/* Boutons : un primaire plein + un secondaire contour, jamais deux identiques */
+.btn-outline{ background: transparent !important; color: #C75F62 !important; border: 1.5px solid #C75F62 !important; box-shadow: none; }
+.btn-outline:hover{ background: #C75F62 !important; color: #FAF6F2 !important; transform: translateY(-2px); }
+.footer-col a.footer-linkedin-btn:not(.footer-instagram-btn){ background: #C75F62; border-color: #C75F62; color: #FAF6F2; }
+.footer-col a.footer-linkedin-btn:not(.footer-instagram-btn):hover{ background: #C75F62; border-color: #C75F62; color: #FAF6F2; }
+.footer-col a.footer-instagram-btn{ background: transparent; border-color: rgba(99,59,74,.45); color: #633B4A; }
+.footer-col a.footer-instagram-btn:hover{ border-color: #C75F62; color: #C75F62; }
+
+/* Logo du footer : identique au logo de la barre de navigation (mêmes images, mêmes tailles), aligné sur la même ligne verticale */
+.footer-brand .footer-brand-mark{ display: inline-flex; width: max-content; margin-right: 0; margin-top: 0; margin-bottom: 18px; transform: none; }
+.footer-brand .footer-brand-mark:hover{ transform: none; }
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Qu'est-ce qu'un jumeau numérique du dirigeant ?", "acceptedAnswer": {"@type": "Answer", "text": "C'est un assistant IA qui répond aux questions à partir de ce que le dirigeant a dit, écrit et décidé, en citant à chaque fois sa source. Il se construit avec des entretiens enregistrés, transcrits puis validés par le dirigeant. Il garde la trace de son raisonnement pour le successeur et l'équipe de direction : pourquoi tel client reste, pourquoi tel fournisseur, ce qui a déjà échoué. Il ne décide jamais à la place de quiconque et dit qu'il ne sait pas quand la question sort de ce qu'on lui a confié."}}, {"@type": "Question", "name": "Qu'est-ce que Fred24 ?", "acceptedAnswer": {"@type": "Answer", "text": "Fred24 est l'assistant IA lancé en juillet 2026 par Frédéric Mazzella, fondateur de BlaBlaCar. Il est nourri de vingt ans de ses conférences, interviews et écrits, et répond aux questions des entrepreneurs à partir de ce que Frédéric Mazzella a déjà dit. C'est un exemple public de jumeau numérique d'un dirigeant. La même idée peut servir à l'intérieur d'une PME, pour un cercle restreint : le successeur, le comité de direction et les cadres clés, avec un accès protégé et des contenus validés."}}, {"@type": "Question", "name": "Combien de dirigeants partiront à la retraite en France ?", "acceptedAnswer": {"@type": "Answer", "text": "Selon le ministère de l'Économie, environ 550 000 chefs d'entreprise partiront à la retraite dans les dix ans, avec 3 millions d'emplois en jeu. Le plan « Objectif Reprises », présenté le 23 avril 2026, vise à faciliter ces transmissions, et le « pacte Papin » inscrit au projet de loi de finances 2027 doit encore être voté. Ces dispositifs portent sur le prix, la fiscalité et le financement. Aucun ne traite le savoir du dirigeant : c'est à l'entreprise de l'organiser, plusieurs années avant le départ."}}, {"@type": "Question", "name": "Comment constituer le jumeau numérique d'un dirigeant ?", "acceptedAnswer": {"@type": "Answer", "text": "En quatre temps, tant que le dirigeant est là. Enregistrer des entretiens d'une heure sur ses grandes décisions, ses clients historiques, ses fournisseurs et les règles non écrites de la maison. Les faire transcrire et classer par thème. Donner au successeur un assistant IA qui répond uniquement à partir de ces notes, en citant ses sources. Faire relire, corriger et valider le tout par le dirigeant. Des entretiens approfondis et quelques semaines de mise en place suffisent pour une première version."}}, {"@type": "Question", "name": "Le RGPD s'applique-t-il aux entretiens enregistrés ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. La voix du dirigeant et ses opinions sont des données personnelles, comme les noms de clients ou de salariés cités pendant les entretiens. Il faut informer le dirigeant, recueillir son accord, limiter la durée de conservation et protéger l'accès avec des comptes nominatifs. La règle la plus simple consiste à anonymiser les clients et salariés cités avant d'alimenter l'assistant. Côté IA Act, un assistant interne de ce type n'est pas à haut risque tant qu'il ne sert pas à évaluer ou gérer des salariés."}}, {"@type": "Question", "name": "Quand commencer à transmettre le savoir d'un dirigeant ?", "acceptedAnswer": {"@type": "Answer", "text": "Plusieurs années avant le départ. À ce moment, le dirigeant a encore la disponibilité et le recul pour raconter, corriger et compléter ses entretiens. À quelques mois de la cession, l'urgence prend toute la place : négociation, audits, annonce aux équipes, et le savoir passe au second plan. Commencer trois mois avant la vente est l'erreur la plus fréquente. Une heure par semaine bloquée dans l'agenda du dirigeant suffit, à condition de la tenir jusqu'au départ."}}, {"@type": "Question", "name": "Le jumeau numérique remplace-t-il la passation ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Il ne remplace ni la passation entre deux personnes, ni les rencontres avec les clients clés, ni le temps qu'il faut à un successeur pour gagner la confiance des équipes. Il ne capte pas non plus l'intuition : un dirigeant peut expliquer pourquoi il a dit non à un partenaire, il ne transmet pas la sensation qui l'a alerté. Le jumeau numérique complète la passation. Il garde les explications et les sources, pour que le successeur les retrouve quand il en a besoin, bien après le départ."}}, {"@type": "Question", "name": "Où conserver la mémoire d'un dirigeant ?", "acceptedAnswer": {"@type": "Answer", "text": "Dans un outil professionnel qui exclut par contrat l'usage de vos données pour entraîner ses modèles, hébergé de préférence en Europe, avec des accès nominatifs et une liste claire des personnes autorisées. Jamais dans un outil grand public. Prévoyez aussi qui tient la mémoire à jour après le départ et combien de temps elle est conservée. En cas de cession, précisez dans le protocole si le jumeau numérique fait partie de ce qui est vendu, plutôt que de le découvrir après la signature."}}], "inLanguage": "fr-FR"}
@@ -1472,7 +1484,7 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
 <footer class="snap-page site-footer">
   <div class="wrap footer-grid">
     <div class="footer-brand">
-      <img src="assets/logo-execia-bords-prune.webp" alt="EXEC'IA Consulting" class="footer-logo-main" width="450" height="212" decoding="async">
+      <a href="/" class="nav-brand footer-brand-mark" aria-label="EXEC'IA Consulting"><img src="assets/logo-prune-final.webp" alt="" class="nav-logo-rond" width="1254" height="1254" loading="lazy" decoding="async"><img src="assets/logo-execia-bords-prune-240.webp" alt="EXEC'IA Consulting" class="nav-logo-full" width="240" height="113" loading="lazy" decoding="async"></a>
       <p class="footer-tag"><span class="footer-tag-lead">Une expérience dirigeante</span><br><span class="footer-tag-rest">au service de votre transformation <span class="ink-accent"><span class="ia-rose">IA</span></span></span></p>
       <p class="footer-signature">« Décidez avant d&#8217;investir. »</p>
     </div>
@@ -1483,28 +1495,12 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
       <a href="offres.html">Accompagnement IA</a>
       <a href="solutions.html">Solutions digitales &amp; IA</a>
       <a href="realisations.html">Réalisations</a>
-      <a href="a-propos.html">À propos</a>
       <a href="temoignages.html">Témoignages</a>
+      <a href="perspectives.html">Perspectives</a>
+      <a href="a-propos.html">À propos</a>
       <a href="contact.html">Contact</a>
-      <a href="perspectives.html">Perspectives</a><a href="ressources.html">Ressources</a>
-    <div class="footer-persp-grid">
-    <a href="perspective-entreprise-utilise-deja-ia.html" class="footer-persp-link">→ <span class="art-star" aria-label="Article le plus lu">★</span>Votre entreprise utilise déjà l’<span class="ink-accent"><span class="ia-rose">IA</span></span></a>
-    <a href="perspective-toutes-decisions-ne-se-deleguent-pas.html" class="footer-persp-link">→ <span class="art-star" aria-label="Article le plus lu">★</span>Toutes les décisions ne se délèguent pas</a>
-    <a href="perspective-transformation-echoue-rarement-technologie.html" class="footer-persp-link">→ La transformation <span class="ink-accent"><span class="ia-rose">IA</span></span> échoue rarement</a>
-    <a href="perspective-probleme-nest-pas-outils-mais-arbitrage.html" class="footer-persp-link">→ Plus d’outils <span class="ink-accent"><span class="ia-rose">IA</span></span>, pas plus d’impact</a>
-    <a href="perspective-projet-ia-peut-il-etre-finance.html" class="footer-persp-link">→ Votre projet <span class="ink-accent"><span class="ia-rose">IA</span></span> peut-il être financé&nbsp;?</a>
-    <a href="perspective-chatbot-savoir-passer-la-main.html" class="footer-persp-link">→ Où tracer la limite entre chatbot et humain&nbsp;?</a>
-    <a href="perspective-budget-ia-adhesion-equipes.html" class="footer-persp-link">→ L’adhésion compte-t-elle plus que le budget&nbsp;?</a>
-    <a href="perspective-shadow-ia-charte-comite-direction.html" class="footer-persp-link">→ Quels outils <span class="ink-accent"><span class="ia-rose">IA</span></span> vos équipes utilisent-elles&nbsp;?</a>
-    <a href="perspective-robots-humanoides-token-tax.html" class="footer-persp-link footer-persp-link--c2">→ Quelles tâches confier à un robot humanoïde&nbsp;?</a>
-    <a href="perspective-affaire-orelien-preuve-travail.html" class="footer-persp-link footer-persp-link--c2">→ <span class="art-star" aria-label="Article le plus lu">★</span>Demain, vos équipes devront-elles prouver leur travail&nbsp;?</a>
-    <a href="perspective-tri-cv-ia-candidatures-ecartees.html" class="footer-persp-link footer-persp-link--c2">→ Qui relit les CV que l’<span class="ink-accent"><span class="ia-rose">IA</span></span> écarte&nbsp;?</a>
-    <a href="perspective-agents-ia-recruter-comme-salarie.html" class="footer-persp-link footer-persp-link--c2">→ Un agent <span class="ink-accent"><span class="ia-rose">IA</span></span> se recrute-t-il comme un salarié&nbsp;?</a>
-    <a href="perspective-jumeau-numerique-savoir-dirigeant.html" class="footer-persp-link footer-persp-link--c2">→ Jumeau numérique : le savoir du dirigeant part-il&nbsp;?</a>
-    <a href="perspective-forward-deployed-engineer-pme.html" class="footer-persp-link footer-persp-link--c2">→ Entre l’<span class="ink-accent"><span class="ia-rose">IA</span></span> et la Direction, il faut un traducteur</a>
-    <a href="perspective-enregistreur-ia-reunion-direction.html" class="footer-persp-link footer-persp-link--c2">→ Un enregistreur <span class="ink-accent"><span class="ia-rose">IA</span></span> en comité de direction&nbsp;: qui l’a décidé&nbsp;?</a>
     </div>
-    </div>
+
 
     <div class="footer-col footer-col--contact">
       <span class="footer-col-title">Coordonnées</span>
@@ -1531,5 +1527,6 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
 
 <script src="assets/script.js?v=40"></script>
 <script src="assets/hubspot-loader.js?v=1" defer></script>
+<script src="assets/footer-align.js?v=2" defer></script>
 </body>
 </html>

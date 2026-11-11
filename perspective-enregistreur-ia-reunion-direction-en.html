@@ -1266,6 +1266,18 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
 }
 
 @media (min-width: 1200px){ .nav-brand .nav-logo-rond{ height: 60px !important; width: 60px !important; } .nav-brand .nav-logo-full{ height: 64px !important; } }
+
+/* Boutons : un primaire plein + un secondaire contour, jamais deux identiques */
+.btn-outline{ background: transparent !important; color: #C75F62 !important; border: 1.5px solid #C75F62 !important; box-shadow: none; }
+.btn-outline:hover{ background: #C75F62 !important; color: #FAF6F2 !important; transform: translateY(-2px); }
+.footer-col a.footer-linkedin-btn:not(.footer-instagram-btn){ background: #C75F62; border-color: #C75F62; color: #FAF6F2; }
+.footer-col a.footer-linkedin-btn:not(.footer-instagram-btn):hover{ background: #C75F62; border-color: #C75F62; color: #FAF6F2; }
+.footer-col a.footer-instagram-btn{ background: transparent; border-color: rgba(99,59,74,.45); color: #633B4A; }
+.footer-col a.footer-instagram-btn:hover{ border-color: #C75F62; color: #C75F62; }
+
+/* Logo du footer : identique au logo de la barre de navigation (mêmes images, mêmes tailles), aligné sur la même ligne verticale */
+.footer-brand .footer-brand-mark{ display: inline-flex; width: max-content; margin-right: 0; margin-top: 0; margin-bottom: 18px; transform: none; }
+.footer-brand .footer-brand-mark:hover{ transform: none; }
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does an AI recorder do in a meeting?", "acceptedAnswer": {"@type": "Answer", "text": "The recorder records the meeting, transcribes it, then draws out a summary, the decisions taken and the list of actions. It comes as a small device on the table or as an assistant that joins video calls automatically. The gain is real: nobody takes notes, everyone listens and takes part, and the minutes can go out the same day. The risk lies in where the conversations go."}}, {"@type": "Question", "name": "Why is Otter.ai the subject of a lawsuit?", "acceptedAnswer": {"@type": "Answer", "text": "In August 2025, a class action was filed in California against Otter.ai, one of the most widely used meeting assistants. The complaint says its assistant recorded participants without their consent, with only the meeting host giving theirs, and that the recordings were used to train the vendor’s models. In August 2026, a California court let several claims go forward without ruling on the merits: nobody has been found liable at this stage. It shows why a tool’s contract should be read before it is adopted."}}, {"@type": "Question", "name": "Can you record a management meeting without telling people?", "acceptedAnswer": {"@type": "Answer", "text": "No. A recorded meeting contains personal data: voices, words and opinions. The GDPR requires a precise purpose, clear information, a limited retention period and rights of access and erasure. Article L1222-4 of the French Labour Code also forbids collecting personal information about an employee through a device they were not told about in advance. Every participant must therefore be told, at every meeting."}}, {"@type": "Question", "name": "What rules should you set before recording a management meeting?", "acceptedAnswer": {"@type": "Answer", "text": "Four rules are enough. Inform every participant at the start of every meeting. Obtain their consent and offer traditional note-taking to anyone who declines. Protect the data with a business-grade tool that does not train its models on your conversations. Decide who keeps the recording and the summary, and for how long. These rules fit on one page, attached to the company’s AI policy."}}, {"@type": "Question", "name": "Which meetings should never be recorded?", "acceptedAnswer": {"@type": "Answer", "text": "Some meetings have no place in a recorder, whatever the tool: one-to-one interviews with an employee, discussions about acquisitions, disposals or fundraising, exchanges with a lawyer protected by professional privilege, health or personal-situation topics, and pay decisions. For these meetings, traditional note-taking, reviewed by the participants, remains the right method."}}, {"@type": "Question", "name": "What does the AI Act say about meeting recorders?", "acceptedAnswer": {"@type": "Answer", "text": "Two rules matter. In the workplace, emotion recognition by AI has been banned since 2 February 2025, except for medical or safety reasons: functions that claim to analyse participants’ tone or mood should be turned off. And the transparency rule in force since 2 August 2026 requires everyone to know when a piece of content, such as a meeting summary, is produced by an AI."}}, {"@type": "Question", "name": "How do you choose an AI recorder for a company?", "acceptedAnswer": {"@type": "Answer", "text": "Five criteria help sort the offers: a contract that excludes training models on your recordings, hosting in Europe or equivalent guarantees, deletion of the audio once the text is obtained, named access reserved for committee members, and a simple export so as not to depend on the vendor. The right tool is the one whose workings you can explain to an anxious participant."}}, {"@type": "Question", "name": "Who should review the summary produced by the AI?", "acceptedAnswer": {"@type": "Answer", "text": "A designated person, often the executive assistant, who knows the files and the committee’s sensitivities. The tool does not know what was really decided, or what must not circulate. That person reviews the summary, corrects errors, removes anything confidential, then has it validated by the chair. The official minutes thus remain a human document."}}, {"@type": "Question", "name": "How long should a meeting recording be kept?", "acceptedAnswer": {"@type": "Answer", "text": "As briefly as possible. Once the minutes are validated, they become the only reference record and the audio no longer has a reason to be kept: deleting it limits the risk in case of a leak or an access request. The retention period for the text and the summary is set in the recording policy, according to use, and checked each quarter against the list of recordings that still exist."}}], "inLanguage": "en-GB"}
@@ -1482,7 +1494,7 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
 <footer class="snap-page site-footer">
   <div class="wrap footer-grid">
     <div class="footer-brand">
-      <img src="assets/logo-execia-bords-prune.webp" alt="EXEC'IA Consulting" class="footer-logo-main" width="450" height="212" decoding="async">
+      <a href="index-en.html" class="nav-brand footer-brand-mark" aria-label="EXEC'IA Consulting"><img src="assets/logo-prune-final.webp" alt="" class="nav-logo-rond" width="1254" height="1254" loading="lazy" decoding="async"><img src="assets/logo-execia-bords-prune-240.webp" alt="EXEC'IA Consulting" class="nav-logo-full" width="240" height="113" loading="lazy" decoding="async"></a>
       <p class="footer-tag"><span class="footer-tag-lead">Executive-level experience</span><br><span class="footer-tag-rest">at the service of your <span class="ink-accent"><span class="ia-rose">AI</span></span> transformation</span></p>
       <p class="footer-signature">« Decide before you invest. »</p>
     </div>
@@ -1493,28 +1505,12 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
       <a href="offres-en.html">AI support</a>
       <a href="solutions-en.html">Digital &amp; AI solutions</a>
       <a href="realisations-en.html">Achievements</a>
-      <a href="a-propos-en.html">About</a>
       <a href="temoignages-en.html">Testimonials</a>
+      <a href="perspectives-en.html">Insights</a>
+      <a href="a-propos-en.html">About</a>
       <a href="contact-en.html">Contact</a>
-      <a href="perspectives-en.html">Insights</a><a href="ressources-en.html">Resources</a>
-    <div class="footer-persp-grid">
-    <a href="perspective-entreprise-utilise-deja-ia-en.html" class="footer-persp-link">→ <span class="art-star" aria-label="Most-read article">★</span>Adopting <span class="ink-accent"><span class="ia-rose">AI</span></span> vs. creating value</a>
-    <a href="perspective-toutes-decisions-ne-se-deleguent-pas-en.html" class="footer-persp-link">→ <span class="art-star" aria-label="Most-read article">★</span>Not every decision can be delegated</a>
-    <a href="perspective-transformation-echoue-rarement-technologie-en.html" class="footer-persp-link">→ <span class="ink-accent"><span class="ia-rose">AI</span></span> transformation rarely fails</a>
-    <a href="perspective-probleme-nest-pas-outils-mais-arbitrage-en.html" class="footer-persp-link">→ More <span class="ink-accent"><span class="ia-rose">AI</span></span> tools, not more impact</a>
-    <a href="perspective-projet-ia-peut-il-etre-finance-en.html" class="footer-persp-link">→ Can your <span class="ink-accent"><span class="ia-rose">AI</span></span> project be funded?</a>
-    <a href="perspective-chatbot-savoir-passer-la-main-en.html" class="footer-persp-link">→ When should a chatbot hand over?</a>
-    <a href="perspective-budget-ia-adhesion-equipes-en.html" class="footer-persp-link">→ Why does buy-in matter more than budget?</a>
-    <a href="perspective-shadow-ia-charte-comite-direction-en.html" class="footer-persp-link">→ Which <span class="ink-accent"><span class="ia-rose">AI</span></span> tools do your teams really use?</a>
-    <a href="perspective-robots-humanoides-token-tax-en.html" class="footer-persp-link footer-persp-link--c2">→ Which tasks would you hand to a humanoid robot?</a>
-    <a href="perspective-affaire-orelien-preuve-travail-en.html" class="footer-persp-link footer-persp-link--c2">→ <span class="art-star" aria-label="Most-read article">★</span>Will your teams have to prove their work?</a>
-    <a href="perspective-tri-cv-ia-candidatures-ecartees-en.html" class="footer-persp-link footer-persp-link--c2">→ Who rereads the CVs that <span class="ink-accent"><span class="ia-rose">AI</span></span> rejects?</a>
-    <a href="perspective-agents-ia-recruter-comme-salarie-en.html" class="footer-persp-link footer-persp-link--c2">→ Should you hire an <span class="ink-accent"><span class="ia-rose">AI</span></span> agent like an employee?</a>
-    <a href="perspective-jumeau-numerique-savoir-dirigeant-en.html" class="footer-persp-link footer-persp-link--c2">→ Digital twin: does a leader’s knowledge leave too?</a>
-    <a href="perspective-forward-deployed-engineer-pme-en.html" class="footer-persp-link footer-persp-link--c2">→ Between <span class="ink-accent"><span class="ia-rose">AI</span></span> and leadership, you need a translator</a>
-    <a href="perspective-enregistreur-ia-reunion-direction-en.html" class="footer-persp-link footer-persp-link--c2">→ An <span class="ink-accent"><span class="ia-rose">AI</span></span> recorder in the management meeting: who decided that?</a>
     </div>
-    </div>
+
 
     <div class="footer-col footer-col--contact">
       <span class="footer-col-title">Contact</span>
@@ -1541,5 +1537,6 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
 
 <script src="assets/script.js?v=40"></script>
 <script src="assets/hubspot-loader.js?v=1" defer></script>
+<script src="assets/footer-align.js?v=2" defer></script>
 </body>
 </html>

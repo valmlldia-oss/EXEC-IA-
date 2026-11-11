@@ -1268,6 +1268,18 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
 }
 
 @media (min-width: 1200px){ .nav-brand .nav-logo-rond{ height: 60px !important; width: 60px !important; } .nav-brand .nav-logo-full{ height: 64px !important; } }
+
+/* Boutons : un primaire plein + un secondaire contour, jamais deux identiques */
+.btn-outline{ background: transparent !important; color: #C75F62 !important; border: 1.5px solid #C75F62 !important; box-shadow: none; }
+.btn-outline:hover{ background: #C75F62 !important; color: #FAF6F2 !important; transform: translateY(-2px); }
+.footer-col a.footer-linkedin-btn:not(.footer-instagram-btn){ background: #C75F62; border-color: #C75F62; color: #FAF6F2; }
+.footer-col a.footer-linkedin-btn:not(.footer-instagram-btn):hover{ background: #C75F62; border-color: #C75F62; color: #FAF6F2; }
+.footer-col a.footer-instagram-btn{ background: transparent; border-color: rgba(99,59,74,.45); color: #633B4A; }
+.footer-col a.footer-instagram-btn:hover{ border-color: #C75F62; color: #C75F62; }
+
+/* Logo du footer : identique au logo de la barre de navigation (mêmes images, mêmes tailles), aligné sur la même ligne verticale */
+.footer-brand .footer-brand-mark{ display: inline-flex; width: max-content; margin-right: 0; margin-top: 0; margin-bottom: 18px; transform: none; }
+.footer-brand .footer-brand-mark:hover{ transform: none; }
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What happened in the Orélien affair?", "acceptedAnswer": {"@type": "Answer", "text": "Thélyson Orélien published his first novel, “C’était ça ou mourir” (Grasset), in autumn 2026. On 21 September, an anonymous account claimed, based on a detector, that the text had been written by AI; on 23 September, another detector tested by the AFP reached the opposite conclusion. On 25 September, the Goncourt Academy withdrew the novel from its shortlist, also citing plagiarism allegations. The author denies the claims; no formal proof has been made public. The case shows how quickly a suspicion can cost an author a prize, before any proof exists."}}, {"@type": "Question", "name": "Can an AI detector prove that a text was written by a machine?", "acceptedAnswer": {"@type": "Answer", "text": "No. A detector gives a probability, never proof. OpenAI withdrew its own detector in July 2023: it caught only 26% of AI-written texts and wrongly flagged 9% of human ones. A Stanford study (Patterns, 2023) found that seven detectors labelled, on average, 61% of essays by non-native English speakers as AI-generated. For a company, the lesson is simple: a detector score should never be enough to accuse an employee, a candidate or a supplier. It can raise a flag; only a human review, backed by work records, can reach a conclusion."}}, {"@type": "Question", "name": "Why does the Orélien affair matter to businesses?", "acceptedAnswer": {"@type": "Answer", "text": "Because the burden of proof has flipped: the author has to prove he is the author. Tomorrow, a client may ask a company who really produced a report or a study. Meanwhile, 78% of employees use AI tools their company has not approved (WalkMe, July 2025). The issue is not the use of AI as such, which is often legitimate. It is the ability to show how a deliverable was produced, by whom and with which tools. A company with no written rule and no records kept will have no answer for that client."}}, {"@type": "Question", "name": "What counts as proof of work?", "acceptedAnswer": {"@type": "Answer", "text": "A set of records showing how a document came to be: version history, drafts and notes, sources consulted, exchanges with a reviewer or the client, and a note of the AI tools used. Most already exist in office software; you only need to decide to keep them. These records are not there to monitor teams. They protect the real author of a document if it is challenged, and they reassure the client about the method. A simple retention policy that everyone knows is enough: what to keep, where, and for how long."}}, {"@type": "Question", "name": "What goes into a one-page AI rule?", "acceptedAnswer": {"@type": "Answer", "text": "Three categories, with examples: free uses (correcting, rephrasing, summarising a public document), uses to declare (a first draft, an analysis or a visual for a client) and banned uses (client data in an unapproved tool, generated work presented as your own without saying so). One page is enough, as long as it is read and understood. Present it to the leadership team, then to the teams, with examples from their daily work. Review it every quarter, because tools and uses change fast."}}, {"@type": "Question", "name": "What can a business leader do right now?", "acceptedAnswer": {"@type": "Answer", "text": "Three safeguards, with no budget: a one-page written rule, a record of the work (versions, drafts, sources) and a right to explain before any decision about an employee or a supplier. Then: a disclosure line on client deliverables and an AI clause in supplier contracts. The right to explain matters most: before any sanction based on a mere suspicion of AI use, the person concerned must be able to show their work records. It is a matter of fairness, and legal protection for the company."}}], "inLanguage": "en-GB"}
@@ -1494,7 +1506,7 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
 <footer class="snap-page site-footer">
   <div class="wrap footer-grid">
     <div class="footer-brand">
-      <img src="assets/logo-execia-bords-prune.webp" alt="EXEC'IA Consulting" class="footer-logo-main" width="450" height="212" decoding="async">
+      <a href="index-en.html" class="nav-brand footer-brand-mark" aria-label="EXEC'IA Consulting"><img src="assets/logo-prune-final.webp" alt="" class="nav-logo-rond" width="1254" height="1254" loading="lazy" decoding="async"><img src="assets/logo-execia-bords-prune-240.webp" alt="EXEC'IA Consulting" class="nav-logo-full" width="240" height="113" loading="lazy" decoding="async"></a>
       <p class="footer-tag"><span class="footer-tag-lead">Executive-level experience</span><br><span class="footer-tag-rest">at the service of your <span class="ink-accent"><span class="ia-rose">AI</span></span> transformation</span></p>
       <p class="footer-signature">« Decide before you invest. »</p>
     </div>
@@ -1505,28 +1517,12 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
       <a href="offres-en.html">AI support</a>
       <a href="solutions-en.html">Digital &amp; AI solutions</a>
       <a href="realisations-en.html">Achievements</a>
-      <a href="a-propos-en.html">About</a>
       <a href="temoignages-en.html">Testimonials</a>
+      <a href="perspectives-en.html">Insights</a>
+      <a href="a-propos-en.html">About</a>
       <a href="contact-en.html">Contact</a>
-      <a href="perspectives-en.html">Insights</a><a href="ressources-en.html">Resources</a>
-    <div class="footer-persp-grid">
-    <a href="perspective-entreprise-utilise-deja-ia-en.html" class="footer-persp-link">→ <span class="art-star" aria-label="Most-read article">★</span>Adopting <span class="ink-accent"><span class="ia-rose">AI</span></span> vs. creating value</a>
-    <a href="perspective-toutes-decisions-ne-se-deleguent-pas-en.html" class="footer-persp-link">→ <span class="art-star" aria-label="Most-read article">★</span>Not every decision can be delegated</a>
-    <a href="perspective-transformation-echoue-rarement-technologie-en.html" class="footer-persp-link">→ <span class="ink-accent"><span class="ia-rose">AI</span></span> transformation rarely fails</a>
-    <a href="perspective-probleme-nest-pas-outils-mais-arbitrage-en.html" class="footer-persp-link">→ More <span class="ink-accent"><span class="ia-rose">AI</span></span> tools, not more impact</a>
-    <a href="perspective-projet-ia-peut-il-etre-finance-en.html" class="footer-persp-link">→ Can your <span class="ink-accent"><span class="ia-rose">AI</span></span> project be funded?</a>
-    <a href="perspective-chatbot-savoir-passer-la-main-en.html" class="footer-persp-link">→ When should a chatbot hand over?</a>
-    <a href="perspective-budget-ia-adhesion-equipes-en.html" class="footer-persp-link">→ Why does buy-in matter more than budget?</a>
-    <a href="perspective-shadow-ia-charte-comite-direction-en.html" class="footer-persp-link">→ Which <span class="ink-accent"><span class="ia-rose">AI</span></span> tools do your teams really use?</a>
-    <a href="perspective-robots-humanoides-token-tax-en.html" class="footer-persp-link footer-persp-link--c2">→ Which tasks would you hand to a humanoid robot?</a>
-    <a href="perspective-affaire-orelien-preuve-travail-en.html" class="footer-persp-link footer-persp-link--c2">→ <span class="art-star" aria-label="Most-read article">★</span>Will your teams have to prove their work?</a>
-    <a href="perspective-tri-cv-ia-candidatures-ecartees-en.html" class="footer-persp-link footer-persp-link--c2">→ Who rereads the CVs that <span class="ink-accent"><span class="ia-rose">AI</span></span> rejects?</a>
-    <a href="perspective-agents-ia-recruter-comme-salarie-en.html" class="footer-persp-link footer-persp-link--c2">→ Should you hire an <span class="ink-accent"><span class="ia-rose">AI</span></span> agent like an employee?</a>
-    <a href="perspective-jumeau-numerique-savoir-dirigeant-en.html" class="footer-persp-link footer-persp-link--c2">→ Digital twin: does a leader’s knowledge leave too?</a>
-    <a href="perspective-forward-deployed-engineer-pme-en.html" class="footer-persp-link footer-persp-link--c2">→ Between <span class="ink-accent"><span class="ia-rose">AI</span></span> and leadership, you need a translator</a>
-    <a href="perspective-enregistreur-ia-reunion-direction-en.html" class="footer-persp-link footer-persp-link--c2">→ An <span class="ink-accent"><span class="ia-rose">AI</span></span> recorder in the management meeting: who decided that?</a>
     </div>
-    </div>
+
 
     <div class="footer-col footer-col--contact">
       <span class="footer-col-title">Contact</span>
@@ -1553,5 +1549,6 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
 
 <script src="assets/script.js?v=40"></script>
 <script src="assets/hubspot-loader.js?v=1" defer></script>
+<script src="assets/footer-align.js?v=2" defer></script>
 </body>
 </html>

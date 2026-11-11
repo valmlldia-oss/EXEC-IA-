@@ -1267,6 +1267,18 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
 }
 
 @media (min-width: 1200px){ .nav-brand .nav-logo-rond{ height: 60px !important; width: 60px !important; } .nav-brand .nav-logo-full{ height: 64px !important; } }
+
+/* Boutons : un primaire plein + un secondaire contour, jamais deux identiques */
+.btn-outline{ background: transparent !important; color: #C75F62 !important; border: 1.5px solid #C75F62 !important; box-shadow: none; }
+.btn-outline:hover{ background: #C75F62 !important; color: #FAF6F2 !important; transform: translateY(-2px); }
+.footer-col a.footer-linkedin-btn:not(.footer-instagram-btn){ background: #C75F62; border-color: #C75F62; color: #FAF6F2; }
+.footer-col a.footer-linkedin-btn:not(.footer-instagram-btn):hover{ background: #C75F62; border-color: #C75F62; color: #FAF6F2; }
+.footer-col a.footer-instagram-btn{ background: transparent; border-color: rgba(99,59,74,.45); color: #633B4A; }
+.footer-col a.footer-instagram-btn:hover{ border-color: #C75F62; color: #C75F62; }
+
+/* Logo du footer : identique au logo de la barre de navigation (mêmes images, mêmes tailles), aligné sur la même ligne verticale */
+.footer-brand .footer-brand-mark{ display: inline-flex; width: max-content; margin-right: 0; margin-top: 0; margin-bottom: 18px; transform: none; }
+.footer-brand .footer-brand-mark:hover{ transform: none; }
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Que s’est-il passé dans l’affaire Orélien ?", "acceptedAnswer": {"@type": "Answer", "text": "Thélyson Orélien a publié à la rentrée 2026 son premier roman, « C’était ça ou mourir » (Grasset). Le 21 septembre, un compte anonyme a affirmé, sur la foi d’un détecteur, que le texte avait été écrit par une IA ; le 23 septembre, un autre détecteur testé par l’AFP a conclu l’inverse. Le 25 septembre, l’Académie Goncourt a retiré le roman de sa sélection, en invoquant aussi des accusations de plagiat. L’auteur conteste ; aucune preuve formelle n’a été rendue publique."}}, {"@type": "Question", "name": "Un détecteur d’IA peut-il prouver qu’un texte a été écrit par une machine ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Un détecteur donne une probabilité, jamais une preuve. OpenAI a retiré son propre détecteur en juillet 2023 : il ne repérait que 26 % des textes écrits par une IA et accusait à tort 9 % des textes humains. Une étude de Stanford (Patterns, 2023) a montré que sept détecteurs classaient en moyenne 61 % de rédactions d’élèves non anglophones comme écrites par une IA. Pour une entreprise, la conséquence est simple : un score de détecteur ne doit jamais suffire à accuser un salarié, un candidat ou un fournisseur. Il peut alerter ; seule une vérification humaine, appuyée sur des traces de travail, permet de conclure."}}, {"@type": "Question", "name": "Pourquoi l’affaire Orélien concerne-t-elle les entreprises ?", "acceptedAnswer": {"@type": "Answer", "text": "Parce que la charge de la preuve s’est inversée : c’est à l’auteur de prouver qu’il est l’auteur. Demain, un client pourra demander à une entreprise qui a réellement produit un rapport ou une étude. Or 78 % des salariés utilisent des outils d’IA que leur entreprise n’a pas validés (WalkMe, juillet 2025). La question ne vise pas l’usage de l’IA en soi, souvent légitime. Elle porte sur la capacité à montrer comment un livrable a été produit, par qui et avec quels outils. Une entreprise sans règle écrite ni traces conservées restera sans réponse face à ce client."}}, {"@type": "Question", "name": "Qu’est-ce qu’une preuve de travail ?", "acceptedAnswer": {"@type": "Answer", "text": "Un ensemble de traces qui montrent comment un document est né : historique des versions, brouillons et notes, sources consultées, échanges avec un relecteur ou le client, mention des outils d’IA utilisés. La plupart existent déjà dans les outils bureautiques ; il suffit de décider de les conserver. Ces traces ne servent pas à surveiller les équipes. Elles protègent l’auteur réel d’un document en cas de contestation et rassurent le client sur la méthode. Une politique de conservation simple, connue de tous, suffit : quoi garder, où, et combien de temps."}}, {"@type": "Question", "name": "Que contient une règle d’usage de l’IA d’une page ?", "acceptedAnswer": {"@type": "Answer", "text": "Trois catégories, avec des exemples : les usages libres (corriger, reformuler, résumer un document public), les usages à déclarer (premier jet, analyse ou visuel destiné à un client) et les usages interdits (données clients dans un outil non validé, travail généré présenté comme personnel sans le dire). Une page suffit, à condition d'être lue et comprise. Elle se présente en comité de direction, puis aux équipes, avec des exemples tirés de leur quotidien. Elle se revoit chaque trimestre, car les outils et les usages évoluent vite."}}, {"@type": "Question", "name": "Que peut faire un dirigeant dès maintenant ?", "acceptedAnswer": {"@type": "Answer", "text": "Trois protections, sans budget : une règle écrite d’une page, des traces de travail conservées (versions, brouillons, sources) et un droit de s’expliquer avant toute décision sur un salarié ou un fournisseur. Ensuite : une ligne de déclaration sur les livrables clients et une clause IA dans les contrats fournisseurs. Le droit de s’expliquer compte particulièrement : avant de sanctionner sur un simple soupçon d’usage de l’IA, la personne concernée doit pouvoir présenter ses traces de travail. C’est une question d’équité, et une protection juridique pour l’entreprise."}}], "inLanguage": "fr-FR"}
@@ -1493,7 +1505,7 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
 <footer class="snap-page site-footer">
   <div class="wrap footer-grid">
     <div class="footer-brand">
-      <img src="assets/logo-execia-bords-prune.webp" alt="EXEC'IA Consulting" class="footer-logo-main" width="450" height="212" decoding="async">
+      <a href="/" class="nav-brand footer-brand-mark" aria-label="EXEC'IA Consulting"><img src="assets/logo-prune-final.webp" alt="" class="nav-logo-rond" width="1254" height="1254" loading="lazy" decoding="async"><img src="assets/logo-execia-bords-prune-240.webp" alt="EXEC'IA Consulting" class="nav-logo-full" width="240" height="113" loading="lazy" decoding="async"></a>
       <p class="footer-tag"><span class="footer-tag-lead">Une expérience dirigeante</span><br><span class="footer-tag-rest">au service de votre transformation <span class="ink-accent"><span class="ia-rose">IA</span></span></span></p>
       <p class="footer-signature">« Décidez avant d&#8217;investir. »</p>
     </div>
@@ -1504,28 +1516,12 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
       <a href="offres.html">Accompagnement IA</a>
       <a href="solutions.html">Solutions digitales &amp; IA</a>
       <a href="realisations.html">Réalisations</a>
-      <a href="a-propos.html">À propos</a>
       <a href="temoignages.html">Témoignages</a>
+      <a href="perspectives.html">Perspectives</a>
+      <a href="a-propos.html">À propos</a>
       <a href="contact.html">Contact</a>
-      <a href="perspectives.html">Perspectives</a><a href="ressources.html">Ressources</a>
-    <div class="footer-persp-grid">
-    <a href="perspective-entreprise-utilise-deja-ia.html" class="footer-persp-link">→ <span class="art-star" aria-label="Article le plus lu">★</span>Votre entreprise utilise déjà l’<span class="ink-accent"><span class="ia-rose">IA</span></span></a>
-    <a href="perspective-toutes-decisions-ne-se-deleguent-pas.html" class="footer-persp-link">→ <span class="art-star" aria-label="Article le plus lu">★</span>Toutes les décisions ne se délèguent pas</a>
-    <a href="perspective-transformation-echoue-rarement-technologie.html" class="footer-persp-link">→ La transformation <span class="ink-accent"><span class="ia-rose">IA</span></span> échoue rarement</a>
-    <a href="perspective-probleme-nest-pas-outils-mais-arbitrage.html" class="footer-persp-link">→ Plus d’outils <span class="ink-accent"><span class="ia-rose">IA</span></span>, pas plus d’impact</a>
-    <a href="perspective-projet-ia-peut-il-etre-finance.html" class="footer-persp-link">→ Votre projet <span class="ink-accent"><span class="ia-rose">IA</span></span> peut-il être financé&nbsp;?</a>
-    <a href="perspective-chatbot-savoir-passer-la-main.html" class="footer-persp-link">→ Où tracer la limite entre chatbot et humain&nbsp;?</a>
-    <a href="perspective-budget-ia-adhesion-equipes.html" class="footer-persp-link">→ L’adhésion compte-t-elle plus que le budget&nbsp;?</a>
-    <a href="perspective-shadow-ia-charte-comite-direction.html" class="footer-persp-link">→ Quels outils <span class="ink-accent"><span class="ia-rose">IA</span></span> vos équipes utilisent-elles&nbsp;?</a>
-    <a href="perspective-robots-humanoides-token-tax.html" class="footer-persp-link footer-persp-link--c2">→ Quelles tâches confier à un robot humanoïde&nbsp;?</a>
-    <a href="perspective-affaire-orelien-preuve-travail.html" class="footer-persp-link footer-persp-link--c2">→ <span class="art-star" aria-label="Article le plus lu">★</span>Demain, vos équipes devront-elles prouver leur travail&nbsp;?</a>
-    <a href="perspective-tri-cv-ia-candidatures-ecartees.html" class="footer-persp-link footer-persp-link--c2">→ Qui relit les CV que l’<span class="ink-accent"><span class="ia-rose">IA</span></span> écarte&nbsp;?</a>
-    <a href="perspective-agents-ia-recruter-comme-salarie.html" class="footer-persp-link footer-persp-link--c2">→ Un agent <span class="ink-accent"><span class="ia-rose">IA</span></span> se recrute-t-il comme un salarié&nbsp;?</a>
-    <a href="perspective-jumeau-numerique-savoir-dirigeant.html" class="footer-persp-link footer-persp-link--c2">→ Jumeau numérique : le savoir du dirigeant part-il&nbsp;?</a>
-    <a href="perspective-forward-deployed-engineer-pme.html" class="footer-persp-link footer-persp-link--c2">→ Entre l’<span class="ink-accent"><span class="ia-rose">IA</span></span> et la Direction, il faut un traducteur</a>
-    <a href="perspective-enregistreur-ia-reunion-direction.html" class="footer-persp-link footer-persp-link--c2">→ Un enregistreur <span class="ink-accent"><span class="ia-rose">IA</span></span> en comité de direction&nbsp;: qui l’a décidé&nbsp;?</a>
     </div>
-    </div>
+
 
     <div class="footer-col footer-col--contact">
       <span class="footer-col-title">Coordonnées</span>
@@ -1552,5 +1548,6 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
 
 <script src="assets/script.js?v=40"></script>
 <script src="assets/hubspot-loader.js?v=1" defer></script>
+<script src="assets/footer-align.js?v=2" defer></script>
 </body>
 </html>

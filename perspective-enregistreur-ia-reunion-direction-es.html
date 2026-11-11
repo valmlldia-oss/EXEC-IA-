@@ -1266,6 +1266,18 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
 }
 
 @media (min-width: 1200px){ .nav-brand .nav-logo-rond{ height: 60px !important; width: 60px !important; } .nav-brand .nav-logo-full{ height: 64px !important; } }
+
+/* Boutons : un primaire plein + un secondaire contour, jamais deux identiques */
+.btn-outline{ background: transparent !important; color: #C75F62 !important; border: 1.5px solid #C75F62 !important; box-shadow: none; }
+.btn-outline:hover{ background: #C75F62 !important; color: #FAF6F2 !important; transform: translateY(-2px); }
+.footer-col a.footer-linkedin-btn:not(.footer-instagram-btn){ background: #C75F62; border-color: #C75F62; color: #FAF6F2; }
+.footer-col a.footer-linkedin-btn:not(.footer-instagram-btn):hover{ background: #C75F62; border-color: #C75F62; color: #FAF6F2; }
+.footer-col a.footer-instagram-btn{ background: transparent; border-color: rgba(99,59,74,.45); color: #633B4A; }
+.footer-col a.footer-instagram-btn:hover{ border-color: #C75F62; color: #C75F62; }
+
+/* Logo du footer : identique au logo de la barre de navigation (mêmes images, mêmes tailles), aligné sur la même ligne verticale */
+.footer-brand .footer-brand-mark{ display: inline-flex; width: max-content; margin-right: 0; margin-top: 0; margin-bottom: 18px; transform: none; }
+.footer-brand .footer-brand-mark:hover{ transform: none; }
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Qué hace una grabadora de IA en una reunión?", "acceptedAnswer": {"@type": "Answer", "text": "Graba la reunión, la transcribe y extrae un resumen, las decisiones tomadas y la lista de acciones. Adopta la forma de un pequeño dispositivo sobre la mesa o de un asistente que se une automáticamente a las videollamadas. La ganancia es real: nadie toma notas, todos escuchan y participan, y el acta puede enviarse el mismo día. El riesgo está en el destino de las conversaciones."}}, {"@type": "Question", "name": "¿Por qué se ha presentado una demanda contra Otter.ai?", "acceptedAnswer": {"@type": "Answer", "text": "En agosto de 2025 se presentó en California una demanda colectiva contra Otter.ai, uno de los asistentes de reunión más utilizados. La demanda afirma que su asistente grababa a participantes sin su consentimiento, siendo solo el organizador quien lo daba, y que esas grabaciones servían para entrenar los modelos del proveedor. En agosto de 2026, un tribunal californiano dejó seguir adelante varias reclamaciones, sin juzgar el fondo: a día de hoy nadie está condenado. Muestra por qué conviene leer el contrato de una herramienta antes de adoptarla."}}, {"@type": "Question", "name": "¿Se puede grabar un comité de dirección sin avisar?", "acceptedAnswer": {"@type": "Answer", "text": "No. Una reunión grabada contiene datos personales: la voz, las palabras y las opiniones de los participantes. El RGPD exige una finalidad precisa, información clara, un plazo de conservación limitado y derechos de acceso y supresión. El artículo L1222-4 del Código del Trabajo francés prohíbe además recoger información personal de un trabajador mediante un dispositivo que no conoce de antemano. Hay que avisar, pues, a cada participante, en cada reunión."}}, {"@type": "Question", "name": "¿Qué reglas fijar antes de grabar una reunión de dirección?", "acceptedAnswer": {"@type": "Answer", "text": "Bastan cuatro reglas. Informar a cada participante al comienzo de cada reunión. Obtener su consentimiento y ofrecer una toma de notas tradicional a quien se niegue. Proteger los datos con una herramienta profesional que no entrene sus modelos con sus conversaciones. Decidir quién conserva la grabación y el resumen, y durante cuánto tiempo. Estas reglas caben en una página, unida a la carta de uso de la IA de la empresa."}}, {"@type": "Question", "name": "¿Qué reuniones no hay que grabar nunca?", "acceptedAnswer": {"@type": "Answer", "text": "Algunas reuniones no tienen cabida en una grabadora, sea cual sea la herramienta: las entrevistas individuales con un trabajador, las conversaciones sobre compras, ventas o captación de fondos, los intercambios con un abogado protegidos por el secreto profesional, los temas de salud o de situación personal y las decisiones sobre remuneraciones. Para estas reuniones, la toma de notas tradicional, revisada por los participantes, sigue siendo el método adecuado."}}, {"@type": "Question", "name": "¿Qué dice el Reglamento de IA sobre las grabadoras de reuniones?", "acceptedAnswer": {"@type": "Answer", "text": "Cuentan dos reglas. En el lugar de trabajo, el reconocimiento de emociones por IA está prohibido desde el 2 de febrero de 2025, salvo por razones médicas o de seguridad: hay que desactivar las funciones que pretenden analizar el tono o el estado de ánimo de los participantes. Y la regla de transparencia vigente desde el 2 de agosto de 2026 exige que cada persona sepa cuándo un contenido, como el resumen de una reunión, lo produce una IA."}}, {"@type": "Question", "name": "¿Cómo elegir una grabadora de IA para una empresa?", "acceptedAnswer": {"@type": "Answer", "text": "Cinco criterios permiten ordenar las ofertas: un contrato que excluya el entrenamiento de modelos con sus grabaciones, un alojamiento en Europa o garantías equivalentes, la supresión del audio una vez obtenido el texto, accesos nominativos reservados a los miembros del comité y una exportación sencilla para no depender del proveedor. La buena herramienta es aquella cuyo funcionamiento puede explicar a un participante inquieto."}}, {"@type": "Question", "name": "¿Quién debe revisar el resumen producido por la IA?", "acceptedAnswer": {"@type": "Answer", "text": "Una persona designada, a menudo la asistente o el asistente de dirección, que conoce los expedientes y las sensibilidades del comité. La herramienta no sabe lo que realmente se decidió, ni lo que no debe circular. Esa persona revisa el resumen, corrige los errores, retira lo confidencial y lo hace validar por el presidente de la sesión. El acta oficial sigue siendo así un documento humano."}}, {"@type": "Question", "name": "¿Cuánto tiempo conservar la grabación de una reunión?", "acceptedAnswer": {"@type": "Answer", "text": "El menor tiempo posible. Una vez validada el acta, pasa a ser el único registro de referencia y el audio ya no tiene razón de conservarse: eliminarlo limita el riesgo en caso de fuga o de solicitud de acceso. El plazo de conservación del texto y del resumen se fija en la carta de grabación, según el uso, y se comprueba cada trimestre con la lista de las grabaciones que aún existen."}}], "inLanguage": "es-ES"}
@@ -1482,7 +1494,7 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
 <footer class="snap-page site-footer">
   <div class="wrap footer-grid">
     <div class="footer-brand">
-      <img src="assets/logo-execia-bords-prune.webp" alt="EXEC'IA Consulting" class="footer-logo-main" width="450" height="212" decoding="async">
+      <a href="index-es.html" class="nav-brand footer-brand-mark" aria-label="EXEC'IA Consulting"><img src="assets/logo-prune-final.webp" alt="" class="nav-logo-rond" width="1254" height="1254" loading="lazy" decoding="async"><img src="assets/logo-execia-bords-prune-240.webp" alt="EXEC'IA Consulting" class="nav-logo-full" width="240" height="113" loading="lazy" decoding="async"></a>
       <p class="footer-tag"><span class="footer-tag-lead">Una experiencia directiva</span><br><span class="footer-tag-rest">al servicio de su transformación <span class="ink-accent"><span class="ia-rose">IA</span></span></span></p>
       <p class="footer-signature">« Decida antes de invertir. »</p>
     </div>
@@ -1493,28 +1505,12 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
       <a href="offres-es.html">Acompañamiento IA</a>
       <a href="solutions-es.html">Soluciones digitales e IA</a>
       <a href="realisations-es.html">Realizaciones</a>
-      <a href="a-propos-es.html">Perfil</a>
       <a href="temoignages-es.html">Testimonios</a>
+      <a href="perspectives-es.html">Perspectivas</a>
+      <a href="a-propos-es.html">Perfil</a>
       <a href="contact-es.html">Contacto</a>
-      <a href="perspectives-es.html">Perspectivas</a><a href="ressources-es.html">Recursos</a>
-    <div class="footer-persp-grid">
-    <a href="perspective-entreprise-utilise-deja-ia-es.html" class="footer-persp-link">→ <span class="art-star" aria-label="Artículo más leído">★</span>Adoptar la <span class="ink-accent"><span class="ia-rose">IA</span></span> no es crear valor</a>
-    <a href="perspective-toutes-decisions-ne-se-deleguent-pas-es.html" class="footer-persp-link">→ <span class="art-star" aria-label="Artículo más leído">★</span>No todas las decisiones se delegan</a>
-    <a href="perspective-transformation-echoue-rarement-technologie-es.html" class="footer-persp-link">→ La transformación con <span class="ink-accent"><span class="ia-rose">IA</span></span> rara vez fracasa</a>
-    <a href="perspective-probleme-nest-pas-outils-mais-arbitrage-es.html" class="footer-persp-link">→ Más herramientas de <span class="ink-accent"><span class="ia-rose">IA</span></span>, no más impacto</a>
-    <a href="perspective-projet-ia-peut-il-etre-finance-es.html" class="footer-persp-link">→ ¿Se puede financiar su proyecto de <span class="ink-accent"><span class="ia-rose">IA</span></span>?</a>
-    <a href="perspective-chatbot-savoir-passer-la-main-es.html" class="footer-persp-link">→ ¿Cuándo debe un chatbot pasar el relevo?</a>
-    <a href="perspective-budget-ia-adhesion-equipes-es.html" class="footer-persp-link">→ ¿Por qué pesa más la adhesión que el presupuesto?</a>
-    <a href="perspective-shadow-ia-charte-comite-direction-es.html" class="footer-persp-link">→ ¿Qué herramientas de <span class="ink-accent"><span class="ia-rose">IA</span></span> usan sus equipos?</a>
-    <a href="perspective-robots-humanoides-token-tax-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Qué tareas confiaría a un robot humanoide?</a>
-    <a href="perspective-affaire-orelien-preuve-travail-es.html" class="footer-persp-link footer-persp-link--c2">→ <span class="art-star" aria-label="Artículo más leído">★</span>¿Tendrán sus equipos que demostrar su trabajo?</a>
-    <a href="perspective-tri-cv-ia-candidatures-ecartees-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Quién relee los CV que la <span class="ink-accent"><span class="ia-rose">IA</span></span> descarta?</a>
-    <a href="perspective-agents-ia-recruter-comme-salarie-es.html" class="footer-persp-link footer-persp-link--c2">→ ¿Se contrata un agente de <span class="ink-accent"><span class="ia-rose">IA</span></span> como a un empleado?</a>
-    <a href="perspective-jumeau-numerique-savoir-dirigeant-es.html" class="footer-persp-link footer-persp-link--c2">→ Gemelo digital: ¿se va el saber del directivo?</a>
-    <a href="perspective-forward-deployed-engineer-pme-es.html" class="footer-persp-link footer-persp-link--c2">→ Entre la <span class="ink-accent"><span class="ia-rose">IA</span></span> y la dirección, hace falta un traductor</a>
-    <a href="perspective-enregistreur-ia-reunion-direction-es.html" class="footer-persp-link footer-persp-link--c2">→ Una grabadora de <span class="ink-accent"><span class="ia-rose">IA</span></span> en el comité de dirección: ¿quién lo decidió?</a>
     </div>
-    </div>
+
 
     <div class="footer-col footer-col--contact">
       <span class="footer-col-title">Contacto</span>
@@ -1541,5 +1537,6 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after{ content: " · T
 
 <script src="assets/script.js?v=40"></script>
 <script src="assets/hubspot-loader.js?v=1" defer></script>
+<script src="assets/footer-align.js?v=2" defer></script>
 </body>
 </html>

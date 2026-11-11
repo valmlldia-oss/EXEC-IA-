@@ -1271,6 +1271,18 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
 }
 
 @media (min-width: 1200px){ .nav-brand .nav-logo-rond{ height: 60px !important; width: 60px !important; } .nav-brand .nav-logo-full{ height: 64px !important; } }
+
+/* Boutons : un primaire plein + un secondaire contour, jamais deux identiques */
+.btn-outline{ background: transparent !important; color: #C75F62 !important; border: 1.5px solid #C75F62 !important; box-shadow: none; }
+.btn-outline:hover{ background: #C75F62 !important; color: #FAF6F2 !important; transform: translateY(-2px); }
+.footer-col a.footer-linkedin-btn:not(.footer-instagram-btn){ background: #C75F62; border-color: #C75F62; color: #FAF6F2; }
+.footer-col a.footer-linkedin-btn:not(.footer-instagram-btn):hover{ background: #C75F62; border-color: #C75F62; color: #FAF6F2; }
+.footer-col a.footer-instagram-btn{ background: transparent; border-color: rgba(99,59,74,.45); color: #633B4A; }
+.footer-col a.footer-instagram-btn:hover{ border-color: #C75F62; color: #C75F62; }
+
+/* Logo du footer : identique au logo de la barre de navigation (mêmes images, mêmes tailles), aligné sur la même ligne verticale */
+.footer-brand .footer-brand-mark{ display: inline-flex; width: max-content; margin-right: 0; margin-top: 0; margin-bottom: 18px; transform: none; }
+.footer-brand .footer-brand-mark:hover{ transform: none; }
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a leader's digital twin?", "acceptedAnswer": {"@type": "Answer", "text": "A digital twin is an AI assistant that answers questions from what the leader has said, written and decided, citing its source every time. It is built from recorded interviews, transcribed and then approved by the leader. It keeps a record of their reasoning for the successor and leadership team: why a client stays, why a supplier was chosen, what has already failed. It never decides for anyone, and it says it does not know when a question goes beyond what it was given."}}, {"@type": "Question", "name": "What is Fred24?", "acceptedAnswer": {"@type": "Answer", "text": "Fred24 is the AI assistant launched in July 2026 by Frédéric Mazzella, founder of BlaBlaCar. It is built on twenty years of his talks, interviews and writing, and answers entrepreneurs' questions from what he has already said. It is a public example of a leader's digital twin. The same idea can work inside an SME for a small circle: the successor, the leadership team and key managers, with protected access and approved content."}}, {"@type": "Question", "name": "How many business owners will retire in France?", "acceptedAnswer": {"@type": "Answer", "text": "According to the French Ministry of the Economy, around 550,000 business owners will retire within ten years, with 3 million jobs at stake. The “Objectif Reprises” plan, presented on 23 April 2026, aims to ease these handovers, and the proposed “Papin pact” in the 2027 draft budget has yet to be voted. These measures deal with price, tax and financing. None of them covers the leader's knowledge: the company has to organise that itself, several years before the departure."}}, {"@type": "Question", "name": "How do you build a leader's digital twin?", "acceptedAnswer": {"@type": "Answer", "text": "In four steps, while the leader is still there. Record one-hour interviews about their key decisions, long-standing clients, suppliers and the company's unwritten rules. Have them transcribed and sorted by theme. Give the successor an AI assistant that answers only from these notes and cites its sources. Have the leader review, correct and approve everything. In-depth interviews and a few weeks of set-up are enough for a first version, provided the leader keeps one hour a week free for it."}}, {"@type": "Question", "name": "Does the GDPR apply to recorded interviews?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The leader's voice and opinions are personal data, as are the names of clients or employees mentioned in the interviews. You need to inform the leader, obtain their consent, limit retention and protect access with named accounts. The simplest rule is to anonymise the clients and employees mentioned before feeding the assistant. Under the EU AI Act, an internal assistant of this kind is not high-risk as long as it is not used to assess or manage employees."}}, {"@type": "Question", "name": "When should a leader start passing on their knowledge?", "acceptedAnswer": {"@type": "Answer", "text": "Several years before leaving. At that point the leader still has the time and the distance to tell, correct and complete their interviews. A few months before a sale, urgency takes over: negotiation, audits, announcing it to the team, and knowledge slips down the list. Starting three months before the sale is the most common mistake. One hour a week blocked in the leader's diary is enough, as long as it is kept until departure."}}, {"@type": "Question", "name": "Does a digital twin replace the handover?", "acceptedAnswer": {"@type": "Answer", "text": "No. It replaces neither the handover between two people, nor meetings with key clients, nor the time a successor needs to earn the team's trust. Nor does it capture intuition: a leader can explain why they turned a partner down, but they cannot pass on the feeling that warned them. The digital twin complements the handover. It keeps the explanations and their sources, so the successor can find them when needed, long after the leader has gone."}}, {"@type": "Question", "name": "Where should a leader's memory be kept?", "acceptedAnswer": {"@type": "Answer", "text": "In a business tool that excludes, by contract, the use of your data to train its models, ideally hosted in Europe, with named user access and a clear list of authorised people. Never in a consumer tool. Also decide who keeps the memory up to date after the leader leaves and how long it is kept. If the company is sold, state in the sale agreement whether the digital twin is part of the sale, rather than finding out after signing."}}], "inLanguage": "en-GB"}
@@ -1473,7 +1485,7 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
 <footer class="snap-page site-footer">
   <div class="wrap footer-grid">
     <div class="footer-brand">
-      <img src="assets/logo-execia-bords-prune.webp" alt="EXEC'IA Consulting" class="footer-logo-main" width="450" height="212" decoding="async">
+      <a href="index-en.html" class="nav-brand footer-brand-mark" aria-label="EXEC'IA Consulting"><img src="assets/logo-prune-final.webp" alt="" class="nav-logo-rond" width="1254" height="1254" loading="lazy" decoding="async"><img src="assets/logo-execia-bords-prune-240.webp" alt="EXEC'IA Consulting" class="nav-logo-full" width="240" height="113" loading="lazy" decoding="async"></a>
       <p class="footer-tag"><span class="footer-tag-lead">Executive-level experience</span><br><span class="footer-tag-rest">at the service of your <span class="ink-accent"><span class="ia-rose">AI</span></span> transformation</span></p>
       <p class="footer-signature">« Decide before you invest. »</p>
     </div>
@@ -1484,28 +1496,12 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
       <a href="offres-en.html">AI support</a>
       <a href="solutions-en.html">Digital &amp; AI solutions</a>
       <a href="realisations-en.html">Achievements</a>
-      <a href="a-propos-en.html">About</a>
       <a href="temoignages-en.html">Testimonials</a>
+      <a href="perspectives-en.html">Insights</a>
+      <a href="a-propos-en.html">About</a>
       <a href="contact-en.html">Contact</a>
-      <a href="perspectives-en.html">Insights</a><a href="ressources-en.html">Resources</a>
-    <div class="footer-persp-grid">
-    <a href="perspective-entreprise-utilise-deja-ia-en.html" class="footer-persp-link">→ <span class="art-star" aria-label="Most-read article">★</span>Adopting <span class="ink-accent"><span class="ia-rose">AI</span></span> vs. creating value</a>
-    <a href="perspective-toutes-decisions-ne-se-deleguent-pas-en.html" class="footer-persp-link">→ <span class="art-star" aria-label="Most-read article">★</span>Not every decision can be delegated</a>
-    <a href="perspective-transformation-echoue-rarement-technologie-en.html" class="footer-persp-link">→ <span class="ink-accent"><span class="ia-rose">AI</span></span> transformation rarely fails</a>
-    <a href="perspective-probleme-nest-pas-outils-mais-arbitrage-en.html" class="footer-persp-link">→ More <span class="ink-accent"><span class="ia-rose">AI</span></span> tools, not more impact</a>
-    <a href="perspective-projet-ia-peut-il-etre-finance-en.html" class="footer-persp-link">→ Can your <span class="ink-accent"><span class="ia-rose">AI</span></span> project be funded?</a>
-    <a href="perspective-chatbot-savoir-passer-la-main-en.html" class="footer-persp-link">→ When should a chatbot hand over?</a>
-    <a href="perspective-budget-ia-adhesion-equipes-en.html" class="footer-persp-link">→ Why does buy-in matter more than budget?</a>
-    <a href="perspective-shadow-ia-charte-comite-direction-en.html" class="footer-persp-link">→ Which <span class="ink-accent"><span class="ia-rose">AI</span></span> tools do your teams really use?</a>
-    <a href="perspective-robots-humanoides-token-tax-en.html" class="footer-persp-link footer-persp-link--c2">→ Which tasks would you hand to a humanoid robot?</a>
-    <a href="perspective-affaire-orelien-preuve-travail-en.html" class="footer-persp-link footer-persp-link--c2">→ <span class="art-star" aria-label="Most-read article">★</span>Will your teams have to prove their work?</a>
-    <a href="perspective-tri-cv-ia-candidatures-ecartees-en.html" class="footer-persp-link footer-persp-link--c2">→ Who rereads the CVs that <span class="ink-accent"><span class="ia-rose">AI</span></span> rejects?</a>
-    <a href="perspective-agents-ia-recruter-comme-salarie-en.html" class="footer-persp-link footer-persp-link--c2">→ Should you hire an <span class="ink-accent"><span class="ia-rose">AI</span></span> agent like an employee?</a>
-    <a href="perspective-jumeau-numerique-savoir-dirigeant-en.html" class="footer-persp-link footer-persp-link--c2">→ Digital twin: does a leader’s knowledge leave too?</a>
-    <a href="perspective-forward-deployed-engineer-pme-en.html" class="footer-persp-link footer-persp-link--c2">→ Between <span class="ink-accent"><span class="ia-rose">AI</span></span> and leadership, you need a translator</a>
-    <a href="perspective-enregistreur-ia-reunion-direction-en.html" class="footer-persp-link footer-persp-link--c2">→ An <span class="ink-accent"><span class="ia-rose">AI</span></span> recorder in the management meeting: who decided that?</a>
     </div>
-    </div>
+
 
     <div class="footer-col footer-col--contact">
       <span class="footer-col-title">Contact</span>
@@ -1532,5 +1528,6 @@ html[lang="en"] .site-footer .footer-bottom .footer-copy::after{ content: " · A
 
 <script src="assets/script.js?v=40"></script>
 <script src="assets/hubspot-loader.js?v=1" defer></script>
+<script src="assets/footer-align.js?v=2" defer></script>
 </body>
 </html>

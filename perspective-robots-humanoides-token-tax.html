@@ -1339,6 +1339,18 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
 }
 
 @media (min-width: 1200px){ .nav-brand .nav-logo-rond{ height: 60px !important; width: 60px !important; } .nav-brand .nav-logo-full{ height: 64px !important; } }
+
+/* Boutons : un primaire plein + un secondaire contour, jamais deux identiques */
+.btn-outline{ background: transparent !important; color: #C75F62 !important; border: 1.5px solid #C75F62 !important; box-shadow: none; }
+.btn-outline:hover{ background: #C75F62 !important; color: #FAF6F2 !important; transform: translateY(-2px); }
+.footer-col a.footer-linkedin-btn:not(.footer-instagram-btn){ background: #C75F62; border-color: #C75F62; color: #FAF6F2; }
+.footer-col a.footer-linkedin-btn:not(.footer-instagram-btn):hover{ background: #C75F62; border-color: #C75F62; color: #FAF6F2; }
+.footer-col a.footer-instagram-btn{ background: transparent; border-color: rgba(99,59,74,.45); color: #633B4A; }
+.footer-col a.footer-instagram-btn:hover{ border-color: #C75F62; color: #C75F62; }
+
+/* Logo du footer : identique au logo de la barre de navigation (mêmes images, mêmes tailles), aligné sur la même ligne verticale */
+.footer-brand .footer-brand-mark{ display: inline-flex; width: max-content; margin-right: 0; margin-top: 0; margin-bottom: 18px; transform: none; }
+.footer-brand .footer-brand-mark:hover{ transform: none; }
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Pourquoi raisonner en tâches plutôt qu’en métiers ?", "acceptedAnswer": {"@type": "Answer", "text": "Parce qu’un métier est un assemblage de tâches. Un robot humanoïde peut reprendre les tâches physiques et répétitives, comme déplacer des bacs. Le jugement, la relation et la responsabilité restent humains. Raisonner en tâches évite deux erreurs opposées : croire que rien ne changera, ou croire que tout disparaîtra. Concrètement, il suffit de lister les tâches d’un poste, d’estimer leur durée chaque semaine et de repérer celles qu’une machine pourrait assurer. Le métier se transforme alors tâche par tâche, et l’entreprise peut anticiper la formation des personnes concernées."}}, {"@type": "Question", "name": "Quels métiers les robots humanoïdes viseront-ils d’abord ?", "acceptedAnswer": {"@type": "Answer", "text": "Les métiers où les tâches sont physiques, répétitives ou pénibles, dans des lieux pensés pour des humains : logistique, industrie, commerce, BTP, agriculture, santé pour le transport de matériel. Ce sont souvent des métiers en tension : la Dares compte 457 500 emplois vacants dans le secteur privé au 2e trimestre 2026 (chiffre révisé du 15 septembre 2026). Pour une PME, ces postes vacants sont un point d'entrée logique : un robot qui prend en charge une tâche pénible peut rendre un poste plus attractif, sans remplacer la personne qui l'occupe."}}, {"@type": "Question", "name": "Les robots humanoïdes arrivent-ils tout de suite dans les entreprises ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Ils restent chers, lents sur des gestes simples pour un humain et fragiles face à l’imprévu. Selon l’analyste Ming-Chi Kuo, Apple ne produirait pas ses robots en série avant 2028. Ce délai sert à préparer : cartographier les tâches, décider ce qui doit rester humain. Une PME n’a donc aucun intérêt à se précipiter. Elle gagne à utiliser ces années pour comprendre ses propres tâches, suivre les premiers pilotes de son secteur et préparer ses équipes, plutôt que d’acheter une technologie encore immature."}}, {"@type": "Question", "name": "Qui fabrique les robots humanoïdes ?", "acceptedAnswer": {"@type": "Answer", "text": "Au premier semestre 2026, 97 % des robots humanoïdes livrés dans le monde venaient de Chine, avec AgiBot et Unitree en tête. Pour la France et l’Europe, la question est de concevoir et d’exploiter ses robots, ou de les acheter clés en main, avec les données qu’ils recueillent. Cette domination pèse sur la souveraineté : un robot connecté recueille des données sur les sites, les gestes et les rythmes de travail. Savoir où partent ces données et qui peut y accéder fait partie du choix d’un fournisseur, au même titre que le prix."}}, {"@type": "Question", "name": "Qu’est-ce que la « token tax » ?", "acceptedAnswer": {"@type": "Answer", "text": "Une taxe sur l’usage de l’IA, prélevée sur les tokens, l’unité que les modèles d’IA traitent et facturent. Bill Gates défend l’idée de taxer les tokens et les robots. Aux États-Unis, un projet de loi déposé au Congrès en août 2026, l’AI Tax and Work Protection Act, propose un taux de 2 % sur la valeur des tokens quand le chômage est à 5 % ou moins, en hausse avec le chômage. Les recettes financeraient emplois et reconversion ; certains y voient la base d’un revenu universel."}}, {"@type": "Question", "name": "Que peut faire une PME dès maintenant ?", "acceptedAnswer": {"@type": "Answer", "text": "Trois gestes, sans investir : lister les tâches de chaque poste et leur durée ; repérer les postes difficiles à pourvoir et ce qui les rend pénibles ; décider ce qui doit rester humain. Ensuite seulement, chiffrer une heure de tâche robotisée et, si le calcul tient, lancer un pilote de 90 jours sur une seule tâche. Ce pilote doit avoir un responsable nommé, des indicateurs fixés avant le démarrage et une décision prévue à la fin : continuer, ajuster ou arrêter."}}], "inLanguage": "fr-FR"}
@@ -1628,7 +1640,7 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
 <footer class="snap-page site-footer">
   <div class="wrap footer-grid">
     <div class="footer-brand">
-      <img src="assets/logo-execia-bords-prune.webp" alt="EXEC'IA Consulting" class="footer-logo-main" width="450" height="212" decoding="async">
+      <a href="/" class="nav-brand footer-brand-mark" aria-label="EXEC'IA Consulting"><img src="assets/logo-prune-final.webp" alt="" class="nav-logo-rond" width="1254" height="1254" loading="lazy" decoding="async"><img src="assets/logo-execia-bords-prune-240.webp" alt="EXEC'IA Consulting" class="nav-logo-full" width="240" height="113" loading="lazy" decoding="async"></a>
       <p class="footer-tag"><span class="footer-tag-lead">Une expérience dirigeante</span><br><span class="footer-tag-rest">au service de votre transformation <span class="ink-accent"><span class="ia-rose">IA</span></span></span></p>
       <p class="footer-signature">« Décidez avant d&#8217;investir. »</p>
     </div>
@@ -1639,28 +1651,12 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
       <a href="offres.html">Accompagnement IA</a>
       <a href="solutions.html">Solutions digitales &amp; IA</a>
       <a href="realisations.html">Réalisations</a>
-      <a href="a-propos.html">À propos</a>
       <a href="temoignages.html">Témoignages</a>
+      <a href="perspectives.html">Perspectives</a>
+      <a href="a-propos.html">À propos</a>
       <a href="contact.html">Contact</a>
-      <a href="perspectives.html">Perspectives</a><a href="ressources.html">Ressources</a>
-    <div class="footer-persp-grid">
-    <a href="perspective-entreprise-utilise-deja-ia.html" class="footer-persp-link">→ <span class="art-star" aria-label="Article le plus lu">★</span>Votre entreprise utilise déjà l’<span class="ink-accent"><span class="ia-rose">IA</span></span></a>
-    <a href="perspective-toutes-decisions-ne-se-deleguent-pas.html" class="footer-persp-link">→ <span class="art-star" aria-label="Article le plus lu">★</span>Toutes les décisions ne se délèguent pas</a>
-    <a href="perspective-transformation-echoue-rarement-technologie.html" class="footer-persp-link">→ La transformation <span class="ink-accent"><span class="ia-rose">IA</span></span> échoue rarement</a>
-    <a href="perspective-probleme-nest-pas-outils-mais-arbitrage.html" class="footer-persp-link">→ Plus d’outils <span class="ink-accent"><span class="ia-rose">IA</span></span>, pas plus d’impact</a>
-    <a href="perspective-projet-ia-peut-il-etre-finance.html" class="footer-persp-link">→ Votre projet <span class="ink-accent"><span class="ia-rose">IA</span></span> peut-il être financé&nbsp;?</a>
-    <a href="perspective-chatbot-savoir-passer-la-main.html" class="footer-persp-link">→ Où tracer la limite entre chatbot et humain&nbsp;?</a>
-    <a href="perspective-budget-ia-adhesion-equipes.html" class="footer-persp-link">→ L’adhésion compte-t-elle plus que le budget&nbsp;?</a>
-    <a href="perspective-shadow-ia-charte-comite-direction.html" class="footer-persp-link">→ Quels outils <span class="ink-accent"><span class="ia-rose">IA</span></span> vos équipes utilisent-elles&nbsp;?</a>
-    <a href="perspective-robots-humanoides-token-tax.html" class="footer-persp-link footer-persp-link--c2">→ Quelles tâches confier à un robot humanoïde&nbsp;?</a>
-    <a href="perspective-affaire-orelien-preuve-travail.html" class="footer-persp-link footer-persp-link--c2">→ <span class="art-star" aria-label="Article le plus lu">★</span>Demain, vos équipes devront-elles prouver leur travail&nbsp;?</a>
-    <a href="perspective-tri-cv-ia-candidatures-ecartees.html" class="footer-persp-link footer-persp-link--c2">→ Qui relit les CV que l’<span class="ink-accent"><span class="ia-rose">IA</span></span> écarte&nbsp;?</a>
-    <a href="perspective-agents-ia-recruter-comme-salarie.html" class="footer-persp-link footer-persp-link--c2">→ Un agent <span class="ink-accent"><span class="ia-rose">IA</span></span> se recrute-t-il comme un salarié&nbsp;?</a>
-    <a href="perspective-jumeau-numerique-savoir-dirigeant.html" class="footer-persp-link footer-persp-link--c2">→ Jumeau numérique : le savoir du dirigeant part-il&nbsp;?</a>
-    <a href="perspective-forward-deployed-engineer-pme.html" class="footer-persp-link footer-persp-link--c2">→ Entre l’<span class="ink-accent"><span class="ia-rose">IA</span></span> et la Direction, il faut un traducteur</a>
-    <a href="perspective-enregistreur-ia-reunion-direction.html" class="footer-persp-link footer-persp-link--c2">→ Un enregistreur <span class="ink-accent"><span class="ia-rose">IA</span></span> en comité de direction&nbsp;: qui l’a décidé&nbsp;?</a>
     </div>
-    </div>
+
 
     <div class="footer-col footer-col--contact">
       <span class="footer-col-title">Coordonnées</span>
@@ -1688,5 +1684,6 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
 <script src="assets/robot-diagnostic.js?v=3"></script>
 <script src="assets/script.js?v=40"></script>
 <script src="assets/hubspot-loader.js?v=1" defer></script>
+<script src="assets/footer-align.js?v=2" defer></script>
 </body>
 </html>

@@ -1265,6 +1265,18 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
 }
 
 @media (min-width: 1200px){ .nav-brand .nav-logo-rond{ height: 60px !important; width: 60px !important; } .nav-brand .nav-logo-full{ height: 64px !important; } }
+
+/* Boutons : un primaire plein + un secondaire contour, jamais deux identiques */
+.btn-outline{ background: transparent !important; color: #C75F62 !important; border: 1.5px solid #C75F62 !important; box-shadow: none; }
+.btn-outline:hover{ background: #C75F62 !important; color: #FAF6F2 !important; transform: translateY(-2px); }
+.footer-col a.footer-linkedin-btn:not(.footer-instagram-btn){ background: #C75F62; border-color: #C75F62; color: #FAF6F2; }
+.footer-col a.footer-linkedin-btn:not(.footer-instagram-btn):hover{ background: #C75F62; border-color: #C75F62; color: #FAF6F2; }
+.footer-col a.footer-instagram-btn{ background: transparent; border-color: rgba(99,59,74,.45); color: #633B4A; }
+.footer-col a.footer-instagram-btn:hover{ border-color: #C75F62; color: #C75F62; }
+
+/* Logo du footer : identique au logo de la barre de navigation (mêmes images, mêmes tailles), aligné sur la même ligne verticale */
+.footer-brand .footer-brand-mark{ display: inline-flex; width: max-content; margin-right: 0; margin-top: 0; margin-bottom: 18px; transform: none; }
+.footer-brand .footer-brand-mark:hover{ transform: none; }
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Qu'est-ce qu'un « forward deployed engineer » ?", "acceptedAnswer": {"@type": "Answer", "text": "C'est un ingénieur envoyé chez le client, parfois pendant des mois, pour faire fonctionner l'IA dans son quotidien réel. Il observe le travail des équipes, branche l'outil sur les données de l'entreprise, construit un premier prototype sur une tâche précise, le met en service, forme les utilisateurs et reste jusqu'à ce qu'ils s'en servent vraiment. En français, on parle d'ingénieur déployé chez le client. Le métier est né chez Palantir au début des années 2010."}}, {"@type": "Question", "name": "Qu'a annoncé AWS le 30 juin 2026 ?", "acceptedAnswer": {"@type": "Answer", "text": "AWS, la branche cloud d'Amazon, a annoncé 1 milliard de dollars pour créer une organisation entière d'ingénieurs déployés, installés chez ses clients par petites équipes. Ces ingénieurs construisent et mettent en production des systèmes d'IA avec les données, les règles et les processus de chaque client. L'objectif affiché est de repartir en laissant des systèmes qui tournent et des compétences en interne, plutôt qu'un rapport ou une simple licence."}}, {"@type": "Question", "name": "Pourquoi ce métier se développe-t-il si vite ?", "acceptedAnswer": {"@type": "Answer", "text": "Parce que la plupart des projets d'IA restent bloqués au stade du test. Selon le MIT, seuls 5 % des pilotes d'IA intégrés dégagent des millions de valeur, tandis que la grande majorité reste sans impact mesurable sur le compte de résultat. Les modèles fonctionnent, mais personne ne les branche sur le travail réel. Selon Indeed, les offres d'emploi pour ce métier ont augmenté de plus de 729 % en un an, d'avril 2025 à avril 2026."}}, {"@type": "Question", "name": "Une PME a-t-elle besoin d'un ingénieur déployé ?", "acceptedAnswer": {"@type": "Answer", "text": "Pas d'un poste à plein temps. Une PME a besoin de la compétence que ce métier représente : comprendre une décision de direction, la traduire en usage concret sur une tâche précise, puis suivre cet usage jusqu'à ce qu'il tienne. Cette compétence est rarement technique. Elle repose sur la connaissance du métier, la confiance des équipes et l'accès à la direction, et elle existe souvent déjà dans l'entreprise."}}, {"@type": "Question", "name": "Qui peut jouer le rôle de traducteur entre l'IA et la direction dans une PME ?", "acceptedAnswer": {"@type": "Answer", "text": "Quatre profils reviennent souvent : le directeur général ou un associé quand le sujet est stratégique, l'assistante ou l'assistant de direction qui connaît les dossiers et les circuits de décision, un responsable opérationnel respecté par son équipe, ou un accompagnement extérieur ponctuel pour cadrer puis passer la main. Le bon profil n'est pas celui qui maîtrise le mieux l'outil, mais celui que les équipes écoutent et que la direction consulte."}}, {"@type": "Question", "name": "Comment choisir le premier usage de l'IA dans une PME ?", "acceptedAnswer": {"@type": "Answer", "text": "Le premier usage doit réussir vite pour convaincre. Il réunit quatre critères : une tâche qui revient chaque semaine, des données déjà disponibles sans grand chantier, un résultat mesurable comme du temps gagné ou des erreurs évitées, et une équipe volontaire pour essayer. Un devis préparé plus vite, une relance client mieux ciblée ou un compte rendu envoyé le jour même sont de bons exemples : modestes, visibles, faciles à mesurer."}}, {"@type": "Question", "name": "Combien de temps faut-il suivre un nouvel usage de l'IA ?", "acceptedAnswer": {"@type": "Answer", "text": "Environ trois mois. Un usage nouveau se fragilise dans les semaines qui suivent le lancement : première panne, premier résultat décevant, retour aux vieilles habitudes. Dans une PME, un suivi en trois temps suffit : à 30 jours, recueillir ce qui gêne et corriger ; à 60 jours, mesurer l'usage réel et le résultat obtenu ; à 90 jours, décider d'étendre l'usage, de l'ajuster ou de l'arrêter."}}, {"@type": "Question", "name": "Quelles erreurs éviter quand on déploie l'IA dans une PME ?", "acceptedAnswer": {"@type": "Answer", "text": "Cinq erreurs reviennent souvent : acheter l'outil avant d'avoir choisi la tâche, confier le projet au seul technicien, déployer partout en même temps, partir le jour du lancement, et juger le succès au nombre de licences ouvertes plutôt qu'à l'usage réel. Toutes ont la même origine : traiter l'IA comme un achat, alors qu'elle change une façon de travailler et demande quelqu'un pour accompagner ce changement."}}, {"@type": "Question", "name": "Combien coûte le rôle de traducteur dans une PME ?", "acceptedAnswer": {"@type": "Answer", "text": "Bien moins qu'un ingénieur à plein temps. Quelques jours répartis sur trois mois suffisent souvent : au cadrage, au lancement et aux points de suivi à 30, 60 et 90 jours. Le coût le plus lourd est ailleurs : dans les licences payées pour un outil que personne n'utilise, et dans la défiance qu'un projet raté laisse aux équipes pour le suivant. Prévoir le traducteur dès le départ protège l'investissement."}}], "inLanguage": "fr-FR"}
@@ -1488,7 +1500,7 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
 <footer class="snap-page site-footer">
   <div class="wrap footer-grid">
     <div class="footer-brand">
-      <img src="assets/logo-execia-bords-prune.webp" alt="EXEC'IA Consulting" class="footer-logo-main" width="450" height="212" decoding="async">
+      <a href="/" class="nav-brand footer-brand-mark" aria-label="EXEC'IA Consulting"><img src="assets/logo-prune-final.webp" alt="" class="nav-logo-rond" width="1254" height="1254" loading="lazy" decoding="async"><img src="assets/logo-execia-bords-prune-240.webp" alt="EXEC'IA Consulting" class="nav-logo-full" width="240" height="113" loading="lazy" decoding="async"></a>
       <p class="footer-tag"><span class="footer-tag-lead">Une expérience dirigeante</span><br><span class="footer-tag-rest">au service de votre transformation <span class="ink-accent"><span class="ia-rose">IA</span></span></span></p>
       <p class="footer-signature">« Décidez avant d&#8217;investir. »</p>
     </div>
@@ -1499,28 +1511,12 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
       <a href="offres.html">Accompagnement IA</a>
       <a href="solutions.html">Solutions digitales &amp; IA</a>
       <a href="realisations.html">Réalisations</a>
-      <a href="a-propos.html">À propos</a>
       <a href="temoignages.html">Témoignages</a>
+      <a href="perspectives.html">Perspectives</a>
+      <a href="a-propos.html">À propos</a>
       <a href="contact.html">Contact</a>
-      <a href="perspectives.html">Perspectives</a><a href="ressources.html">Ressources</a>
-    <div class="footer-persp-grid">
-    <a href="perspective-entreprise-utilise-deja-ia.html" class="footer-persp-link">→ <span class="art-star" aria-label="Article le plus lu">★</span>Votre entreprise utilise déjà l’<span class="ink-accent"><span class="ia-rose">IA</span></span></a>
-    <a href="perspective-toutes-decisions-ne-se-deleguent-pas.html" class="footer-persp-link">→ <span class="art-star" aria-label="Article le plus lu">★</span>Toutes les décisions ne se délèguent pas</a>
-    <a href="perspective-transformation-echoue-rarement-technologie.html" class="footer-persp-link">→ La transformation <span class="ink-accent"><span class="ia-rose">IA</span></span> échoue rarement</a>
-    <a href="perspective-probleme-nest-pas-outils-mais-arbitrage.html" class="footer-persp-link">→ Plus d’outils <span class="ink-accent"><span class="ia-rose">IA</span></span>, pas plus d’impact</a>
-    <a href="perspective-projet-ia-peut-il-etre-finance.html" class="footer-persp-link">→ Votre projet <span class="ink-accent"><span class="ia-rose">IA</span></span> peut-il être financé&nbsp;?</a>
-    <a href="perspective-chatbot-savoir-passer-la-main.html" class="footer-persp-link">→ Où tracer la limite entre chatbot et humain&nbsp;?</a>
-    <a href="perspective-budget-ia-adhesion-equipes.html" class="footer-persp-link">→ L’adhésion compte-t-elle plus que le budget&nbsp;?</a>
-    <a href="perspective-shadow-ia-charte-comite-direction.html" class="footer-persp-link">→ Quels outils <span class="ink-accent"><span class="ia-rose">IA</span></span> vos équipes utilisent-elles&nbsp;?</a>
-    <a href="perspective-robots-humanoides-token-tax.html" class="footer-persp-link footer-persp-link--c2">→ Quelles tâches confier à un robot humanoïde&nbsp;?</a>
-    <a href="perspective-affaire-orelien-preuve-travail.html" class="footer-persp-link footer-persp-link--c2">→ <span class="art-star" aria-label="Article le plus lu">★</span>Demain, vos équipes devront-elles prouver leur travail&nbsp;?</a>
-    <a href="perspective-tri-cv-ia-candidatures-ecartees.html" class="footer-persp-link footer-persp-link--c2">→ Qui relit les CV que l’<span class="ink-accent"><span class="ia-rose">IA</span></span> écarte&nbsp;?</a>
-    <a href="perspective-agents-ia-recruter-comme-salarie.html" class="footer-persp-link footer-persp-link--c2">→ Un agent <span class="ink-accent"><span class="ia-rose">IA</span></span> se recrute-t-il comme un salarié&nbsp;?</a>
-    <a href="perspective-jumeau-numerique-savoir-dirigeant.html" class="footer-persp-link footer-persp-link--c2">→ Jumeau numérique : le savoir du dirigeant part-il&nbsp;?</a>
-    <a href="perspective-forward-deployed-engineer-pme.html" class="footer-persp-link footer-persp-link--c2">→ Entre l’<span class="ink-accent"><span class="ia-rose">IA</span></span> et la Direction, il faut un traducteur</a>
-    <a href="perspective-enregistreur-ia-reunion-direction.html" class="footer-persp-link footer-persp-link--c2">→ Un enregistreur <span class="ink-accent"><span class="ia-rose">IA</span></span> en comité de direction&nbsp;: qui l’a décidé&nbsp;?</a>
     </div>
-    </div>
+
 
     <div class="footer-col footer-col--contact">
       <span class="footer-col-title">Coordonnées</span>
@@ -1547,5 +1543,6 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
 
 <script src="assets/script.js?v=40"></script>
 <script src="assets/hubspot-loader.js?v=1" defer></script>
+<script src="assets/footer-align.js?v=2" defer></script>
 </body>
 </html>

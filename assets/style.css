@@ -8241,3 +8241,12 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after { content: " · 
   .site-footer .footer-persp-grid{ display: grid !important; grid-template-columns: 1fr 1fr !important; grid-template-rows: none !important; grid-auto-flow: row !important; column-gap: 18px !important; row-gap: 5px !important; width: auto !important; max-width: none !important; position: static !important; transform: none !important; left: auto !important; right: auto !important; margin: 14px 0 0 !important; }
   .site-footer .footer-tag-lead, .site-footer .footer-tag-rest{ display: inline !important; position: static !important; }
 }
+
+/* Boutons côte à côte : un primaire (terracotta plein) et un secondaire (contour). Jamais deux boutons identiques. */
+.btn-outline { background: transparent !important; color: #C75F62 !important; border: 1.5px solid #C75F62 !important; box-shadow: none; }
+.btn-outline:hover { background: #C75F62 !important; color: #FAF6F2 !important; transform: translateY(-2px); }
+.btn-outline .ia-rose { color: inherit !important; }
+.footer-col a.footer-linkedin-btn:not(.footer-instagram-btn) { background: #C75F62; border-color: #C75F62; color: #FAF6F2; }
+.footer-col a.footer-linkedin-btn:not(.footer-instagram-btn):hover { background: #C75F62; border-color: #C75F62; color: #FAF6F2; filter: none; }
+.footer-col a.footer-instagram-btn { background: transparent; border-color: rgba(99,59,74,.45); color: #633B4A; }
+.footer-col a.footer-instagram-btn:hover { border-color: #C75F62; color: #C75F62; }

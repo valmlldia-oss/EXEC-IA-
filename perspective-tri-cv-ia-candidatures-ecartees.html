@@ -1265,6 +1265,18 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
 }
 
 @media (min-width: 1200px){ .nav-brand .nav-logo-rond{ height: 60px !important; width: 60px !important; } .nav-brand .nav-logo-full{ height: 64px !important; } }
+
+/* Boutons : un primaire plein + un secondaire contour, jamais deux identiques */
+.btn-outline{ background: transparent !important; color: #C75F62 !important; border: 1.5px solid #C75F62 !important; box-shadow: none; }
+.btn-outline:hover{ background: #C75F62 !important; color: #FAF6F2 !important; transform: translateY(-2px); }
+.footer-col a.footer-linkedin-btn:not(.footer-instagram-btn){ background: #C75F62; border-color: #C75F62; color: #FAF6F2; }
+.footer-col a.footer-linkedin-btn:not(.footer-instagram-btn):hover{ background: #C75F62; border-color: #C75F62; color: #FAF6F2; }
+.footer-col a.footer-instagram-btn{ background: transparent; border-color: rgba(99,59,74,.45); color: #633B4A; }
+.footer-col a.footer-instagram-btn:hover{ border-color: #C75F62; color: #C75F62; }
+
+/* Logo du footer : identique au logo de la barre de navigation (mêmes images, mêmes tailles), aligné sur la même ligne verticale */
+.footer-brand .footer-brand-mark{ display: inline-flex; width: max-content; margin-right: 0; margin-top: 0; margin-bottom: 18px; transform: none; }
+.footer-brand .footer-brand-mark:hover{ transform: none; }
 </style>
           <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Que fait un logiciel de tri de CV ?", "acceptedAnswer": {"@type": "Answer", "text": "Un logiciel de tri extrait les informations des CV, les compare à l’offre (mots-clés ou proximité de sens), attribue un score et classe ou écarte les candidatures, parfois avec des questions éliminatoires. Beaucoup d’outils de suivi des candidatures (ATS) intègrent désormais de l’IA. Un candidat écarté par la machine n’est souvent relu par personne. C’est là que se loge le risque : un outil entraîné sur d’anciens recrutements reproduit les choix passés, y compris leurs angles morts. Sans relecture humaine des candidatures écartées, l’entreprise ignore quels profils elle perd et ne peut pas expliquer ses refus."}}, {"@type": "Question", "name": "Qu’est-ce que l’affaire Workday ?", "acceptedAnswer": {"@type": "Answer", "text": "Derek Mobley, candidat afro-américain de plus de 40 ans, accuse l’outil de tri de Workday de l’avoir écarté de nombreuses offres. En mai 2025, la juge a autorisé à titre préliminaire une action collective pour les candidats de plus de 40 ans ; le 22 juin 2026, elle a rejeté pour l’essentiel la demande d’abandon des poursuites. En septembre 2026, les plaignants ont demandé une action de groupe au nom de quatre populations ; l’audience est fixée au 9 mars 2027. Selon un témoin de Workday, plus de 356 millions de candidatures sont passées par l’outil en 2024."}}, {"@type": "Question", "name": "Le tri de CV par IA est-il encadré en France ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Le Code du travail impose d’informer les candidats des méthodes d’aide au recrutement utilisées et interdit toute collecte par un dispositif non porté à leur connaissance. Le RGPD (article 22) protège contre les décisions fondées exclusivement sur un traitement automatisé. La CNIL a fait du recrutement une priorité de contrôle en 2026. Concrètement, l’entreprise doit pouvoir dire au candidat qu’un outil a été utilisé, ce qu’il a pris en compte, et lui permettre de demander qu’une personne réexamine sa candidature."}}, {"@type": "Question", "name": "Que change l’IA Act pour le recrutement ?", "acceptedAnswer": {"@type": "Answer", "text": "Le texte classe les systèmes d’IA de recrutement, de filtrage de candidatures et d’évaluation des candidats parmi les systèmes à haut risque. À partir du 2 décembre 2027, l’employeur qui les utilise devra notamment assurer un contrôle humain par des personnes compétentes, conserver les journaux au moins six mois, informer les représentants du personnel et les personnes concernées. Ces obligations s’ajoutent à celles du fournisseur de l’outil. L’employeur reste responsable de l’usage qu’il en fait : mieux vaut documenter dès maintenant le fonctionnement de l’outil, les contrôles réalisés et les personnes chargées de la supervision."}}, {"@type": "Question", "name": "Comment contrôler un outil de tri sans perdre le gain de temps ?", "acceptedAnswer": {"@type": "Answer", "text": "En relisant chaque mois un échantillon de candidatures écartées, par exemple une sur dix, avec une question simple : aurais-je voulu rencontrer ce candidat ? Si la réponse est souvent oui, le réglage doit changer. Il est aussi utile de remplacer l’élimination automatique par un simple classement. Ce contrôle demande peu de temps. Il permet de repérer tôt un critère mal réglé, par exemple un diplôme exigé à tort ou une interruption de carrière pénalisée, avant qu’il n’écarte des centaines de profils."}}, {"@type": "Question", "name": "Quelles questions poser à un éditeur de logiciel de recrutement ?", "acceptedAnswer": {"@type": "Answer", "text": "Sur quelles données le modèle a été entraîné ; quels critères pèsent dans le score ; s’il a fait l’objet d’un audit de biais ; si l’élimination automatique peut être désactivée ; où sont stockées les données des candidats et combien de temps ; comment il se prépare aux obligations de l’IA Act. Les réponses doivent être écrites et conservées. Un éditeur incapable d’expliquer son score ou de désactiver l’élimination automatique fait porter un risque juridique à l’entreprise cliente, qui reste responsable de ses décisions d’embauche."}}], "inLanguage": "fr-FR"}
@@ -1490,7 +1502,7 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
 <footer class="snap-page site-footer">
   <div class="wrap footer-grid">
     <div class="footer-brand">
-      <img src="assets/logo-execia-bords-prune.webp" alt="EXEC'IA Consulting" class="footer-logo-main" width="450" height="212" decoding="async">
+      <a href="/" class="nav-brand footer-brand-mark" aria-label="EXEC'IA Consulting"><img src="assets/logo-prune-final.webp" alt="" class="nav-logo-rond" width="1254" height="1254" loading="lazy" decoding="async"><img src="assets/logo-execia-bords-prune-240.webp" alt="EXEC'IA Consulting" class="nav-logo-full" width="240" height="113" loading="lazy" decoding="async"></a>
       <p class="footer-tag"><span class="footer-tag-lead">Une expérience dirigeante</span><br><span class="footer-tag-rest">au service de votre transformation <span class="ink-accent"><span class="ia-rose">IA</span></span></span></p>
       <p class="footer-signature">« Décidez avant d&#8217;investir. »</p>
     </div>
@@ -1501,28 +1513,12 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
       <a href="offres.html">Accompagnement IA</a>
       <a href="solutions.html">Solutions digitales &amp; IA</a>
       <a href="realisations.html">Réalisations</a>
-      <a href="a-propos.html">À propos</a>
       <a href="temoignages.html">Témoignages</a>
+      <a href="perspectives.html">Perspectives</a>
+      <a href="a-propos.html">À propos</a>
       <a href="contact.html">Contact</a>
-      <a href="perspectives.html">Perspectives</a><a href="ressources.html">Ressources</a>
-    <div class="footer-persp-grid">
-    <a href="perspective-entreprise-utilise-deja-ia.html" class="footer-persp-link">→ <span class="art-star" aria-label="Article le plus lu">★</span>Votre entreprise utilise déjà l’<span class="ink-accent"><span class="ia-rose">IA</span></span></a>
-    <a href="perspective-toutes-decisions-ne-se-deleguent-pas.html" class="footer-persp-link">→ <span class="art-star" aria-label="Article le plus lu">★</span>Toutes les décisions ne se délèguent pas</a>
-    <a href="perspective-transformation-echoue-rarement-technologie.html" class="footer-persp-link">→ La transformation <span class="ink-accent"><span class="ia-rose">IA</span></span> échoue rarement</a>
-    <a href="perspective-probleme-nest-pas-outils-mais-arbitrage.html" class="footer-persp-link">→ Plus d’outils <span class="ink-accent"><span class="ia-rose">IA</span></span>, pas plus d’impact</a>
-    <a href="perspective-projet-ia-peut-il-etre-finance.html" class="footer-persp-link">→ Votre projet <span class="ink-accent"><span class="ia-rose">IA</span></span> peut-il être financé&nbsp;?</a>
-    <a href="perspective-chatbot-savoir-passer-la-main.html" class="footer-persp-link">→ Où tracer la limite entre chatbot et humain&nbsp;?</a>
-    <a href="perspective-budget-ia-adhesion-equipes.html" class="footer-persp-link">→ L’adhésion compte-t-elle plus que le budget&nbsp;?</a>
-    <a href="perspective-shadow-ia-charte-comite-direction.html" class="footer-persp-link">→ Quels outils <span class="ink-accent"><span class="ia-rose">IA</span></span> vos équipes utilisent-elles&nbsp;?</a>
-    <a href="perspective-robots-humanoides-token-tax.html" class="footer-persp-link footer-persp-link--c2">→ Quelles tâches confier à un robot humanoïde&nbsp;?</a>
-    <a href="perspective-affaire-orelien-preuve-travail.html" class="footer-persp-link footer-persp-link--c2">→ <span class="art-star" aria-label="Article le plus lu">★</span>Demain, vos équipes devront-elles prouver leur travail&nbsp;?</a>
-    <a href="perspective-tri-cv-ia-candidatures-ecartees.html" class="footer-persp-link footer-persp-link--c2">→ Qui relit les CV que l’<span class="ink-accent"><span class="ia-rose">IA</span></span> écarte&nbsp;?</a>
-    <a href="perspective-agents-ia-recruter-comme-salarie.html" class="footer-persp-link footer-persp-link--c2">→ Un agent <span class="ink-accent"><span class="ia-rose">IA</span></span> se recrute-t-il comme un salarié&nbsp;?</a>
-    <a href="perspective-jumeau-numerique-savoir-dirigeant.html" class="footer-persp-link footer-persp-link--c2">→ Jumeau numérique : le savoir du dirigeant part-il&nbsp;?</a>
-    <a href="perspective-forward-deployed-engineer-pme.html" class="footer-persp-link footer-persp-link--c2">→ Entre l’<span class="ink-accent"><span class="ia-rose">IA</span></span> et la Direction, il faut un traducteur</a>
-    <a href="perspective-enregistreur-ia-reunion-direction.html" class="footer-persp-link footer-persp-link--c2">→ Un enregistreur <span class="ink-accent"><span class="ia-rose">IA</span></span> en comité de direction&nbsp;: qui l’a décidé&nbsp;?</a>
     </div>
-    </div>
+
 
     <div class="footer-col footer-col--contact">
       <span class="footer-col-title">Coordonnées</span>
@@ -1549,5 +1545,6 @@ p, li, figcaption, blockquote{ text-wrap: pretty; }
 
 <script src="assets/script.js?v=40"></script>
 <script src="assets/hubspot-loader.js?v=1" defer></script>
+<script src="assets/footer-align.js?v=2" defer></script>
 </body>
 </html>
