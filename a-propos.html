@@ -2213,6 +2213,11 @@ p :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl, .ink-accent-fixed, .art-chip, .
 /* Footer v6 : signature mise en valeur, guillemets terracotta */
 .site-footer .footer-brand .footer-signature{ font-size: 1.5rem !important; letter-spacing: .015em !important; }
 .site-footer .footer-brand .footer-signature .fs-q{ color: #C75F62; font-style: normal; font-size: 1.35em; line-height: 0; vertical-align: -.08em; }
+
+/* Footer v7 : trait semi-long sous « transformation IA », signature beaucoup plus grande, sa fin alignée sur la fin du slogan */
+.site-footer .footer-brand .footer-tag::after{ content: ""; display: block; height: 2px; background: #C75F62; width: var(--rule-w, 120px); margin: 12px 0 0 var(--rule-ml, 0); }
+.site-footer .footer-brand .footer-signature::before{ content: none !important; }
+.site-footer .footer-brand .footer-signature{ margin-top: 42px !important; white-space: nowrap; }
 </style>
 <style id="footer-contact-gauche">
 @media (min-width: 1251px){
@@ -2605,6 +2610,6 @@ p :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl, .ink-accent-fixed, .art-chip, .
 <script src="assets/chat-widget.js?v=9" defer></script>
 <script src="assets/phare-chat-widget.js?v=11" defer></script>
 <script src="assets/hubspot-loader.js?v=1" defer></script>
-<script src="assets/footer-align.js?v=7" defer></script>
+<script src="assets/footer-align.js?v=8" defer></script>
 </body>
 </html>

@@ -20,7 +20,12 @@
     var tag = document.querySelector('.footer-brand .footer-tag');
     if (!tag) return;
     var parts = tag.querySelectorAll('.footer-tag-lead, .footer-tag-rest');
-    if (window.innerWidth <= 600) { parts.forEach(function (p) { p.style.removeProperty('font-size'); }); return; }
+    if (window.innerWidth <= 600) {
+      parts.forEach(function (p) { p.style.removeProperty('font-size'); });
+      var br0 = b2(), sg = br0.querySelector('.footer-signature');
+      br0.style.removeProperty('--rule-w'); br0.style.removeProperty('--rule-ml'); if (sg) sg.style.removeProperty('font-size');
+      return;
+    }
     var site = document.querySelector('.footer-col--site'), contact = document.querySelector('.footer-col--contact');
     var tl = tag.getBoundingClientRect().left, br = b2().getBoundingClientRect();
     var next = site && site.getBoundingClientRect().top < br.bottom ? site : contact;
@@ -34,6 +39,17 @@
     }
     set(size);
     while (size > 11 && width() > avail) { size -= 0.25; set(size); }
+    var w = width(), brand = b2(), sig = brand.querySelector('.footer-signature');
+    var rule = Math.round(w * 0.45);
+    brand.style.setProperty('--rule-w', rule + 'px');
+    brand.style.setProperty('--rule-ml', Math.round(w - rule) + 'px');
+    /* signature : sa fin tombe exactement sous la fin de « … transformation IA » */
+    if (sig) {
+      sig.style.setProperty('font-size', '20px', 'important');
+      var rg = document.createRange(); rg.selectNodeContents(sig);
+      var sw = rg.getBoundingClientRect().width;
+      if (sw > 0) sig.style.setProperty('font-size', Math.min(48, 20 * w / sw).toFixed(2) + 'px', 'important');
+    }
   }
   function b2() { return document.querySelector('.footer-brand'); }
   var t;
