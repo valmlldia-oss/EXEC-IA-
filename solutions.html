@@ -2302,6 +2302,15 @@ ul.roles-trio li::before{ content: ""; position: absolute; left: 0; top: .52em; 
 /* Footer v6 : signature mise en valeur, guillemets terracotta */
 .site-footer .footer-brand .footer-signature{ font-size: 1.5rem !important; letter-spacing: .015em !important; }
 .site-footer .footer-brand .footer-signature .fs-q{ color: #C75F62; font-style: normal; font-size: 1.35em; line-height: 0; vertical-align: -.08em; }
+
+/* Trois étapes : titres, textes et filets alignés d'une carte à l'autre ; rôles : titres plus grands */
+@media (min-width: 861px){
+.cerveau-path{ grid-auto-rows: auto; }
+.cerveau-path .cerveau-step{ display: grid; grid-row: span 6; grid-template-rows: subgrid; row-gap: 0; align-content: start; }
+.cerveau-path .cerveau-step > *{ min-width: 0; }
+.cerveau-path .cerveau-step .cerveau-step-benefit{ align-self: start; margin-top: 18px; }
+}
+.role-card h3{ font-size: 1.7rem; }
 </style>
 
 <style id="footer-contact-gauche">
