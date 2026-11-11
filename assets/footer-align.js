@@ -1,5 +1,5 @@
 /* Footer : (1) aligne le bord gauche du logo et des mentions légales sur celui du logo de la navbar (même ligne verticale) ;
-   (le lien Plan du site se cale sur le slogan) ; (2) ajuste la taille du slogan pour qu'il tienne sur une seule ligne. */
+   (le lien Plan du site se cale sur le slogan) ; (2) ajuste la taille du slogan (deux lignes de même taille) à la largeur disponible. */
 (function () {
   function align() {
     var n = document.querySelector('#nav .nav-brand, nav .nav-brand');
@@ -24,9 +24,13 @@
     var tl = tag.getBoundingClientRect().left, br = b2().getBoundingClientRect();
     var next = site && site.getBoundingClientRect().top < br.bottom ? site : contact;
     var avail = next.getBoundingClientRect().left - tl - 22;
-    var size = 18;
+    var size = 30;
     function set(px) { parts.forEach(function (p) { p.style.setProperty('font-size', px + 'px', 'important'); }); }
-    function width() { var r = document.createRange(); r.selectNodeContents(tag); return r.getBoundingClientRect().width; }
+    function width() {
+      var w = 0;
+      parts.forEach(function (p) { var r = document.createRange(); r.selectNodeContents(p); w = Math.max(w, r.getBoundingClientRect().width); });
+      return w;
+    }
     set(size);
     while (size > 11 && width() > avail) { size -= 0.25; set(size); }
   }

@@ -8325,3 +8325,13 @@ html[lang="es"] .site-footer .footer-bottom .footer-copy::after { content: " · 
 .site-footer .footer-bottom .footer-legal{ white-space: normal !important; }
 }
 @media (max-width: 600px){ .site-footer .footer-bottom .footer-plan{ order: -1; } }
+
+/* Footer v5 : slogan sur deux lignes à la même taille, signature en citation, boutons réseaux moins collés */
+@media (min-width: 601px){
+.site-footer .footer-brand .footer-tag{ line-height: 1.12 !important; margin-top: 10px !important; }
+.site-footer .footer-brand .footer-tag-lead, .site-footer .footer-brand .footer-tag-rest{ display: block !important; white-space: nowrap !important; font-size: 21px !important; }
+.site-footer .footer-brand .footer-tag-lead::after{ content: none !important; }
+}
+.site-footer .footer-brand .footer-signature{ margin-top: 38px !important; font-family: var(--serif) !important; font-style: italic; font-weight: 500 !important; font-size: 1.32rem !important; letter-spacing: .01em !important; text-transform: none !important; line-height: 1.25; color: #633B4A !important; }
+.site-footer .footer-brand .footer-signature::before{ content: ""; display: block; width: 36px; height: 2px; background: #C75F62; margin-bottom: 14px; }
+.site-footer .footer-col a.footer-instagram-btn{ margin-top: 2px !important; }
