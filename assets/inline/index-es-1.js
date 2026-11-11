@@ -1,15 +1,1 @@
-
-    (function(){
-      var cards = document.querySelectorAll('.constat-flip');
-      cards.forEach(function(c){
-        function toggle(){
-          var f = c.classList.toggle('is-flipped');
-          c.setAttribute('aria-pressed', f ? 'true' : 'false');
-        }
-        c.addEventListener('click', toggle);
-        c.addEventListener('keydown', function(e){
-          if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); toggle(); }
-        });
-      });
-    })();
-    
+(function(){var i=document.querySelectorAll(".constat-flip");i.forEach(function(t){function n(){var e=t.classList.toggle("is-flipped");t.setAttribute("aria-pressed",e?"true":"false")}t.addEventListener("click",n),t.addEventListener("keydown",function(e){(e.key==="Enter"||e.key===" ")&&(e.preventDefault(),n())})})})();

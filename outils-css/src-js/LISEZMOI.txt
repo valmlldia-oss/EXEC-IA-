@@ -1,0 +1,2 @@
+Sources lisibles des JS du site. Les fichiers de assets/ et assets/inline/ sont minifiés avec esbuild.
+Toute modification se fait ici, puis on reminifie vers assets/ (esbuild --minify) et on change le ?v= dans les pages.

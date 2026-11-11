@@ -1,0 +1,1 @@
+(function(){var el=document.querySelector(".aiact-countdown");if(!el)return;var target=new Date(el.getAttribute("data-target"));var n=el.querySelector("strong");function upd(){var d=Math.ceil((target-new Date())/86400000);if(d>0){n.textContent="D-"+d;}else{el.textContent="In force since 2 December 2026.";}}upd();setInterval(upd,3600000);})();
