@@ -2233,6 +2233,9 @@ rect.cerveau-art-accent{ fill: var(--rose); stroke: none; }
 .sol-intro-list{ list-style: none; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 6px 0; margin: 12px 0 0; padding: 0; width: min(1040px, calc(100vw - 40px)); position: relative; left: 50%; transform: translateX(-50%); font-family: var(--sans); font-size: 1rem; font-weight: 500; line-height: 1.7; color: var(--plum); }
 .sol-intro-list li + li::before{ content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #C75F62; margin: 0 12px; vertical-align: middle; }
 @media (max-width: 700px){ .sol-intro-list{ flex-direction: column; gap: 4px; } .sol-intro-list li + li::before{ display: none; } }
+
+/* Phrase de conclusion alignée à gauche, sur le même bord que les boutons */
+.cerveau-quote{ text-align: left !important; margin-left: -24px !important; margin-right: 0 !important; }
 </style>
 <style id="footer-contact-gauche">
 @media (min-width: 1251px){
