@@ -2246,6 +2246,18 @@ rect.cerveau-art-accent{ fill: var(--rose); stroke: none; }
 }
 @media (min-width: 701px){ .cerveau-headgrp .cerveau-lede--trio{ justify-content: flex-start; gap: 22px; } }
 @media (max-width: 700px){ .cerveau-headgrp .cerveau-h2{ margin-bottom: 0; } .cerveau-headgrp .cerveau-lede--trio{ margin: 14px 0 32px; } }
+
+/* Pilier « Direction » et colonnes voisines : 4 lignes maximum, quelle que soit la largeur */
+.cerveau-sig p{ text-wrap: pretty; }
+@media (min-width: 861px) and (max-width: 1180px){
+.cerveau-sig{ gap: 12px; }
+.cerveau-sig p{ font-size: .84rem; line-height: 1.5; }
+.cerveau-sig-label{ letter-spacing: .12em; }
+}
+@media (min-width: 861px) and (max-width: 960px){
+.cerveau-sig{ gap: 8px; }
+.cerveau-sig p{ font-size: .82rem; }
+}
 </style>
 <style id="footer-contact-gauche">
 @media (min-width: 1251px){
@@ -2288,7 +2300,7 @@ rect.cerveau-art-accent{ fill: var(--rose); stroke: none; }
   <div class="sol-cat-head"><span class="sol-num">01</span><h2 class="sol-cat-title">Agentes <span class="ia-rose">IA</span> por función</h2></div>
   <p class="sol-cat-desc">Posibilidades de automatización por función, encuadradas y configuradas a medida por EXEC’<span class="ink-accent"><span class="ia-rose">IA</span></span>, bajo supervisión humana.</p>
   <div class="sol-tags"><span>VIGÍA</span><span>ECO</span><span>RELEVO</span><span>PISTA</span><span>REFERENTE</span><span>HILO</span><span>FLUJO</span><span>HORIZONTE</span><span>FARO</span><span>BALIZA</span><span>MIRA</span><span>ANCLA</span></div>
-  <div class="sol-actions"><a href="agents-ia-es.html" class="sol-link">Descubrir los agentes <span aria-hidden="true">→</span></a><a href="offres-es.html#a-la-carte" class="sol-link">Ver fórmulas y tarifas <span aria-hidden="true">→</span></a><a href="contact-es.html" class="btn btn-rose">Pedir una cita <span class="btn-arrow">→</span></a></div>
+  <div class="sol-actions"><a href="agents-ia-es.html" class="sol-link">Descubrir los agentes <span aria-hidden="true">→</span></a><a href="offres-es.html#a-la-carte" class="btn btn-outline">Ver fórmulas y tarifas <span class="btn-arrow">→</span></a><a href="contact-es.html" class="btn btn-rose">Pedir una cita <span class="btn-arrow">→</span></a></div>
 </section>
 <section class="sol-cat" id="automatisation">
   <div class="sol-cat-head"><span class="sol-num">02</span><h2 class="sol-cat-title">Automatización de procesos</h2></div>
@@ -2315,7 +2327,7 @@ rect.cerveau-art-accent{ fill: var(--rose); stroke: none; }
   </div>
   </div>
   
-  <div class="sol-actions"><a href="offres-es.html#a-la-carte" class="sol-link">Ver fórmulas y tarifas <span aria-hidden="true">→</span></a><a href="contact-es.html" class="btn btn-rose">Pedir una cita <span class="btn-arrow">→</span></a></div>
+  <div class="sol-actions"><a href="offres-es.html#a-la-carte" class="btn btn-outline">Ver fórmulas y tarifas <span class="btn-arrow">→</span></a><a href="contact-es.html" class="btn btn-rose">Pedir una cita <span class="btn-arrow">→</span></a></div>
 </section>
 <section class="sol-cat" id="operationnelles">
   <div class="sol-cat-head"><span class="sol-num">03</span><h2 class="sol-cat-title">Soluciones operativas</h2></div>
@@ -2375,7 +2387,7 @@ rect.cerveau-art-accent{ fill: var(--rose); stroke: none; }
   <div class="sol-cat-head"><span class="sol-num">04</span><h2 class="sol-cat-title">Creación de sitios web</h2></div>
   <p class="sol-cat-desc">Un servicio distinto de la inteligencia artificial: sitios a medida y multilingües.</p>
   
-  <div class="sol-actions"><a href="realisations-es.html#clientes" class="sol-link">Ver las realizaciones <span aria-hidden="true">→</span></a><a href="offres-es.html#a-la-carte" class="sol-link">Ver fórmulas y tarifas <span aria-hidden="true">→</span></a><a href="contact-es.html" class="btn btn-rose">Pedir una cita <span class="btn-arrow">→</span></a></div>
+  <div class="sol-actions"><a href="realisations-es.html#clientes" class="sol-link">Ver las realizaciones <span aria-hidden="true">→</span></a><a href="offres-es.html#a-la-carte" class="btn btn-outline">Ver fórmulas y tarifas <span class="btn-arrow">→</span></a><a href="contact-es.html" class="btn btn-rose">Pedir una cita <span class="btn-arrow">→</span></a></div>
 </section>
 <section class="sol-other">
   <p>Para la dirección general y el gemelo digital: <a href="offres-es.html">Acompañamiento <span class="ink-accent"><span class="ia-rose">IA</span></span></a> y <a href="offres-es.html#expertise-strategique">el gemelo digital del directivo</a>.</p>

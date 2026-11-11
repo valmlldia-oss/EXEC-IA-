@@ -2250,6 +2250,18 @@ rect.cerveau-art-accent{ fill: var(--rose); stroke: none; }
 .cerveau-headgrp .cerveau-lede--trio .cerveau-dot{ margin: 0; flex: none; }
 }
 @media (max-width: 700px){ .cerveau-headgrp .cerveau-h2{ margin-bottom: 0; } .cerveau-headgrp .cerveau-lede--trio{ margin: 14px 0 32px; } }
+
+/* Pilier « Direction » et colonnes voisines : 4 lignes maximum, quelle que soit la largeur */
+.cerveau-sig p{ text-wrap: pretty; }
+@media (min-width: 861px) and (max-width: 1180px){
+.cerveau-sig{ gap: 12px; }
+.cerveau-sig p{ font-size: .84rem; line-height: 1.5; }
+.cerveau-sig-label{ letter-spacing: .12em; }
+}
+@media (min-width: 861px) and (max-width: 960px){
+.cerveau-sig{ gap: 8px; }
+.cerveau-sig p{ font-size: .82rem; }
+}
 </style>
 
 <style id="footer-contact-gauche">
