@@ -2232,6 +2232,10 @@ p :is(.ink-accent, .art-ia, .aiact-ia, .risk-hl, .ink-accent-fixed, .art-chip, .
 
 .offre-format{ white-space: nowrap; font-size: clamp(0.82rem, 1.25vw, 1rem); }
 .offre-format-sub{ white-space: normal; }
+
+.offre-card:has(.offre-points), div:has(> .offre-points){ display: flex; flex-direction: column; }
+.offre-points{ flex: 1 1 auto; }
+.offre-format{ margin-top: auto; }
 </style>
 <style id="footer-contact-gauche">
 @media (min-width: 1251px){
