@@ -2281,6 +2281,13 @@ ul.roles-trio li::before{ content: ""; position: absolute; left: 0; top: .52em; 
 /* « Le cerveau IA et le jumeau numérique » : sous-titre bien lisible au-dessus des trois composantes */
 .cerveau-eyebrow--lg{ font-family: var(--serif) !important; font-size: clamp(1.7rem, 3vw, 2.2rem) !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--plum) !important; line-height: 1.2; margin: 0 0 12px !important; }
 .cerveau-eyebrow--lg .cerveau-emoji{ font-size: .8em; margin-right: .35em; }
+
+/* Section « Un socle unique » : colonne élargie, avatars alignés, listes sur une ligne */
+.cerveau-focus .cerveau-text{ max-width: none; }
+.priorites li.prio-has-avatar{ padding-left: 74px; min-height: 56px; margin-bottom: 16px; }
+.cerveau-list{ max-width: none; }
+.cerveau-decide strong{ font-size: 1.2rem; }
+.sol-tags span{ font-size: .86rem !important; border-color: rgba(99,59,74,.68) !important; }
 </style>
 
 <style id="footer-contact-gauche">
@@ -2373,16 +2380,16 @@ ul.roles-trio li::before{ content: ""; position: absolute; left: 0; top: .52em; 
     <p class="roles-close">EXEC’<span class="ia-rose">IA</span> Consulting vous accompagne dans cette évolution.</p><ul class="roles-trio"><li>Formaliser vos méthodes</li><li>Superviser les systèmes</li><li>Concentrer votre expertise sur les décisions qui comptent</li></ul>
   </div>
 <div class="cerveau-block cerveau-focus">
-    <h3 class="cerveau-h3"><span class="ink-terra-lg">Un seul cerveau</span>, pas un agent par besoin</h3>
+    <h3 class="cerveau-h3"><span class="ink-terra-lg">Un socle unique</span>, pas un agent par besoin</h3>
     <p class="cerveau-text"><strong>EXEC’<span class="ia-rose">IA</span> Consulting construit un seul cerveau central, nourri de Skills.</strong></p>
-    <p class="cerveau-text">Ce n’est pas un agent séparé pour chaque tâche ou chaque client, mais un choix de méthode.</p><p class="cerveau-text">Chaque demande ne consulte que le contexte du projet concerné&nbsp;: les dossiers ne se mélangent pas, et le système ne mobilise que ce dont il a besoin. Ce qui a été décidé en janvier reste disponible en mars, sans recopie.</p><p class="cerveau-text">Chaque nouvelle compétence s’ajoute à la même base, sans accumuler de dette technique. Enfin, l’outil reste interchangeable&nbsp;: le modèle d’<span class="ink-accent"><span class="ia-rose">IA</span></span> peut changer sans que le cerveau, ses Skills et votre méthode soient à refaire.</p>
+    <p class="cerveau-text">Ce n’est pas un agent séparé pour chaque tâche ou chaque client, mais un choix de <span class="ia-rose">méthode</span>.</p><p class="cerveau-text">Chaque demande ne consulte que le contexte du projet concerné&nbsp;: les dossiers ne se mélangent pas.<br>Le système ne mobilise que ce dont il a besoin.<br>Une décision prise en janvier est encore là en mars, sans avoir à la répéter.</p><p class="cerveau-text">Chaque nouvelle compétence s’ajoute à la même base, sans accumuler de <strong class="ia-rose">dette technique</strong>.<br>L’outil reste interchangeable&nbsp;: le modèle d’<span class="ink-accent"><span class="ia-rose">IA</span></span> peut changer sans que le cerveau, ses Skills et votre méthode soient à refaire.</p>
     <h4 class="cerveau-h4">Quatre priorités, un seul cerveau</h4>
     <p class="cerveau-text">Ils partagent le même contexte et les mêmes règles de fond&nbsp;; seule la priorité change.</p>
-    <ul class="priorites"><li class="prio-has-avatar"><img class="prio-avatar" src="assets/agents/avatars/ancre.webp" alt="" width="56" height="56" loading="lazy" decoding="async"><span class="prio-fn">Mémoire documentaire · <a class="prio-name" href="agents-ia.html#ancre">ANCRE</a></span><span class="prio-desc">Indexe votre mémoire pour retrouver une information en une recherche.</span></li><li><span class="prio-fn">Mémoire des réunions</span><span class="prio-desc"><a class="prio-name" href="agents-ia.html#trame">TRAME</a> transforme chaque réunion en mémoire consultable et exploitable.</span></li><li><span class="prio-fn">Trésorerie</span><span class="prio-desc"><a class="prio-name" href="agents-ia.html#flux">FLUX</a> éclaire les arbitrages avant qu’ils ne deviennent des urgences.</span></li><li><span class="prio-fn">Recrutement</span><span class="prio-desc"><a class="prio-name" href="agents-ia.html#repere">REPÈRE</a> identifie les bons profils pour éclairer vos décisions. Il prépare le travail, la décision reste humaine.</span></li></ul>
+    <ul class="priorites"><li class="prio-has-avatar"><img class="prio-avatar" src="assets/agents/avatars/ancre.webp" alt="" width="56" height="56" loading="lazy" decoding="async"><span class="prio-fn">Mémoire documentaire · <a class="prio-name" href="agents-ia.html#ancre">ANCRE</a></span><span class="prio-desc">Indexe votre mémoire pour retrouver une information en une recherche.</span></li><li class="prio-has-avatar"><img class="prio-avatar" src="assets/agents/avatars/trame.webp" alt="" width="56" height="56" loading="lazy" decoding="async"><span class="prio-fn">Mémoire des réunions</span><span class="prio-desc"><a class="prio-name" href="agents-ia.html#trame">TRAME</a> transforme chaque réunion en mémoire consultable et exploitable.</span></li><li class="prio-has-avatar"><img class="prio-avatar" src="assets/agents/avatars/flux.webp" alt="" width="56" height="56" loading="lazy" decoding="async"><span class="prio-fn">Trésorerie</span><span class="prio-desc"><a class="prio-name" href="agents-ia.html#flux">FLUX</a> éclaire les arbitrages avant qu’ils ne deviennent des urgences.</span></li><li class="prio-has-avatar"><img class="prio-avatar" src="assets/agents/avatars/repere.webp" alt="" width="56" height="56" loading="lazy" decoding="async"><span class="prio-fn">Recrutement</span><span class="prio-desc"><a class="prio-name" href="agents-ia.html#repere">REPÈRE</a> identifie les bons profils pour éclairer vos décisions. Il prépare le travail, la décision reste humaine.</span></li></ul>
   </div>
 <div class="cerveau-block cerveau-focus">
     <h3 class="cerveau-h3">Renverser le <span class="ink-terra-lg">80-20</span>, et la place de l’humain</h3>
-    <p class="cerveau-text cerveau-lead">Aujourd’hui, une grande part de votre temps part dans l’exécution&nbsp;: relancer, classer, recopier, reprendre ce qui a déjà été dit. <strong>Le cerveau prend cette part en charge.</strong></p><p class="cerveau-text">Le temps libéré sert à ce qui a une valeur humaine&nbsp;:</p><ul class="priorites"><li>superviser les processus <span class="ink-accent"><span class="ia-rose">IA</span></span>&nbsp;;</li><li>affiner les méthodes&nbsp;;</li><li>prendre soin de la relation avec vos clients et vos équipes.</li></ul><p class="cerveau-text">Ce temps ouvre aussi la porte aux projets mis de côté faute de disponibilité, et permet de viser plus haut. Une ambition qui a du sens dépasse le chiffre d’affaires&nbsp;: une équipe mieux organisée, un client mieux servi, une décision prise avec plus de recul.</p><p class="cerveau-text"><strong>Le cerveau propose, vous tranchez.</strong></p>
+    <p class="cerveau-text cerveau-lead">Aujourd’hui, une grande part de votre temps part dans l’exécution&nbsp;:<br>relancer, classer, recopier, reprendre ce qui a déjà été dit. <strong>Le cerveau prend cette part en charge.</strong></p><p class="cerveau-text">Le temps libéré sert à ce qui a une valeur humaine&nbsp;:</p><ul class="priorites"><li>superviser les processus <span class="ink-accent"><span class="ia-rose">IA</span></span>&nbsp;;</li><li>affiner les méthodes&nbsp;;</li><li>prendre soin de la relation avec vos clients et vos équipes.</li></ul><p class="cerveau-text">Ce temps ouvre aussi la porte aux projets mis de côté faute de disponibilité, et permet de viser plus haut.<br>Une ambition qui a du sens dépasse le chiffre d’affaires&nbsp;:<br>une équipe mieux organisée, un client mieux servi, une décision prise avec plus de recul.</p><p class="cerveau-text cerveau-decide"><strong>Le cerveau propose, vous tranchez.</strong></p>
   </div>
 <div class="cerveau-block">
     <h3 class="cerveau-h3"><span class="ink-terra-lg">Ce que le cerveau change au quotidien</span></h3>
@@ -2391,8 +2398,8 @@ ul.roles-trio li::before{ content: ""; position: absolute; left: 0; top: .52em; 
 <div class="cerveau-block">
     <div class="cerveau-faq">
       <details id="faq-cerveau-1">
-        <summary>Si je donne mon cerveau à mes employés, est-ce que je leur vole leur savoir-faire&nbsp;?</summary>
-        <p>Non. Les Skills les plus utiles sont ceux que chaque collaborateur écrit ou adapte lui-même&nbsp;: un skill imposé d’en haut colle rarement à la façon réelle de travailler. Vous ne récupérez donc pas le savoir-faire de vos équipes. Vous leur donnez un cadre pour le structurer, selon leur manière de travailler.</p>
+        <summary>Si je donne <span class="ia-rose">mon cerveau</span> à mes employés, est-ce que je leur vole leur savoir-faire&nbsp;?</summary>
+        <p>Non. Les Skills les plus utiles sont ceux que chaque collaborateur écrit ou adapte lui-même&nbsp;: un Skill imposé d’en haut colle rarement à la façon réelle de travailler. Vous ne récupérez donc pas le savoir-faire de vos équipes. Vous leur donnez un cadre pour le structurer, selon leur manière de travailler.</p>
       </details>
       <details id="faq-cerveau-2">
         <summary>Pourquoi ne pas attendre que Claude ou ChatGPT apprennent seuls à vous connaître&nbsp;?</summary>
@@ -2401,8 +2408,8 @@ ul.roles-trio li::before{ content: ""; position: absolute; left: 0; top: .52em; 
     </div>
   </div>
 <div class="cerveau-block">
-    <h3 class="cerveau-h3">Le skill, <span class="ink-terra-lg">quintessence de votre valeur</span></h3>
-    <p class="cerveau-text"><strong>Chaque skill EXEC’<span class="ia-rose">IA</span> est construit avec la rigueur d’un savoir-faire artisanal.</strong></p><p class="cerveau-text">Il est affiné pour refléter votre méthode et vos règles de décision.</p><p class="cerveau-text">Il part de votre méthode, se vérifie avec vous et se corrige jusqu’à vous ressembler.</p>
+    <h3 class="cerveau-h3">Le Skill, <span class="ink-terra-lg">quintessence de votre valeur</span></h3>
+    <p class="cerveau-text"><strong>Chaque Skill EXEC’<span class="ia-rose">IA</span> est conçu avec exigence, pour répondre à un usage précis.</strong></p><p class="cerveau-text">Il est affiné pour refléter <span class="ia-rose">votre méthode</span> et <span class="ia-rose">vos règles de décision</span>.</p><p class="cerveau-text">Il part de votre pratique, se vérifie avec vous et se corrige jusqu’à vous ressembler.</p>
   </div>
 </section>
   <div class="sol-actions"><a href="contact.html" class="btn btn-rose">Prendre rendez-vous <span class="btn-arrow">→</span></a></div>
@@ -2412,9 +2419,6 @@ ul.roles-trio li::before{ content: ""; position: absolute; left: 0; top: .52em; 
   <p class="sol-cat-desc">Une prestation distincte de l’intelligence artificielle&nbsp;: des sites sur mesure et multilingues.</p>
   
   <div class="sol-actions"><a href="realisations.html#clients" class="sol-link">Voir les réalisations <span aria-hidden="true">→</span></a><a href="offres.html#a-la-carte" class="btn btn-outline">Voir les formules et tarifs <span class="btn-arrow">→</span></a><a href="contact.html" class="btn btn-rose">Prendre rendez-vous <span class="btn-arrow">→</span></a></div>
-</section>
-<section class="sol-other">
-  <p>Pour la direction générale et le jumeau numérique&nbsp;: <a href="offres.html">Accompagnement <span class="ink-accent"><span class="ia-rose">IA</span></span></a> et <a href="offres.html#expertise-strategique">le jumeau numérique du dirigeant</a>.</p>
 </section>
 </main>
 <footer class="snap-page site-footer">
