@@ -1,7 +1,7 @@
 /* HubSpot (compte EU1 149740125) : le suivi n'est chargé que si la bannière de consentement
    HubSpot est publiée pour le domaine visité. Sans bannière, aucun cookie de suivi n'est déposé.
-   Le chargement démarre après l'affichage complet de la page (load + 1,5 s) : la page reste rapide,
-   le bandeau cookies apparaît quelques secondes après l'arrivée du visiteur. */
+   Le chargement démarre au premier geste du visiteur (défilement, clic, clavier, toucher), ou 6,5 s après
+   l'affichage complet de la page : la page reste rapide et le bandeau n'est jamais l'élément principal mesuré. */
 (function () {
   var ID = '149740125';
   var HOST = location.hostname;
@@ -22,6 +22,11 @@
       .then(function (t) { if (t.indexOf('"' + HOST + '":[{') > -1) load(); })
       .catch(function () {});
   }
-  function later() { setTimeout(go, 1500); }
+  var started = false;
+  function once() { if (started) return; started = true; go(); }
+  function later() {
+    ['scroll', 'pointerdown', 'keydown', 'touchstart'].forEach(function (ev) { window.addEventListener(ev, once, { once: true, passive: true }); });
+    setTimeout(once, 6500);
+  }
   if (document.readyState === 'complete') later(); else window.addEventListener('load', later);
 })();
