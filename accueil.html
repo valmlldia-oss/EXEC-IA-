@@ -39,8 +39,8 @@ html body .faq-geo{background:var(--ivory,#F4EDE7);border-top:1px solid var(--pa
 .mon-approche-photo .hero-photo-name{ font-size: clamp(1.4rem, 2.1vw, 1.75rem) !important; font-weight: 600 !important; font-style: italic !important; letter-spacing: .02em !important; display: inline-block !important; background: linear-gradient(90deg, #4F2F3B 0%, #C75F62 100%) !important; -webkit-background-clip: text !important; background-clip: text !important; -webkit-text-fill-color: transparent !important; }
 /* Cadre terracotta décalé autour du portrait de la fondatrice */
 .mon-approche-photo .photo-inner{ border: none !important; border-radius: 0 !important; }
-.mon-approche-photo .photo-ring::after{ content: ""; position: absolute; top: -12px; left: -12px; right: 12px; bottom: 12px; border: 1.5px solid #C75F62; pointer-events: none; z-index: 3; }
-@media (max-width: 640px){ .mon-approche-photo .photo-ring::after{ top: -8px; left: -8px; right: 8px; bottom: 8px; } }
+.mon-approche-photo .photo-ring::after{ content: ""; position: absolute; top: -12px; left: 12px; right: -12px; bottom: 12px; border: 1.5px solid #C75F62; pointer-events: none; z-index: 3; }
+@media (max-width: 640px){ .mon-approche-photo .photo-ring::after{ top: -8px; left: 8px; right: -8px; bottom: 8px; } }
 /* Accueil · La différence : titre prune, seul « technologie » en terracotta, sans dégradé */
 .maf-lead--home{ color: #633B4A !important; }
 .maf-lead--home .ink-accent{ color: #C75F62 !important; }
