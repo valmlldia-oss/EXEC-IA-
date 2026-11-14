@@ -625,4 +625,28 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://exec-ia.ai/perspective-agent-ia-carte-bancaire.html</loc>
+    <lastmod>2026-11-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://exec-ia.ai/perspective-agent-ia-carte-bancaire.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://exec-ia.ai/perspective-agent-ia-carte-bancaire-en.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://exec-ia.ai/perspective-agent-ia-carte-bancaire-es.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://exec-ia.ai/perspective-agent-ia-carte-bancaire.html"/>
+  </url>
+  <url>
+    <loc>https://exec-ia.ai/perspective-agent-ia-carte-bancaire-en.html</loc>
+    <lastmod>2026-11-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://exec-ia.ai/perspective-agent-ia-carte-bancaire.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://exec-ia.ai/perspective-agent-ia-carte-bancaire-en.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://exec-ia.ai/perspective-agent-ia-carte-bancaire-es.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://exec-ia.ai/perspective-agent-ia-carte-bancaire.html"/>
+  </url>
+  <url>
+    <loc>https://exec-ia.ai/perspective-agent-ia-carte-bancaire-es.html</loc>
+    <lastmod>2026-11-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://exec-ia.ai/perspective-agent-ia-carte-bancaire.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://exec-ia.ai/perspective-agent-ia-carte-bancaire-en.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://exec-ia.ai/perspective-agent-ia-carte-bancaire-es.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://exec-ia.ai/perspective-agent-ia-carte-bancaire.html"/>
+  </url>
 </urlset>
