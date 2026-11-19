@@ -6,7 +6,7 @@ Contenu intégral des 15 articles du Blog et du guide AI Act/RGPD pour PME (FR/E
 
 ## Pages principales (FR)
 - [Accueil](https://exec-ia.ai/): présentation d'EXEC'IA, cabinet de conseil stratégique en IA pour dirigeants de PME, et questions fréquentes.
-- [Offres et tarifs](https://exec-ia.ai/offres.html): Cap IA (diagnostic stratégique, 910 € HT en solo, 1 490 € HT en comité de direction), Sparring Dirigeant (3 910 € HT), Transformation IA (dès 6 910 € HT), agents IA (dès 1 490 € HT). Version lisible par machine : [pricing.md](https://exec-ia.ai/pricing.md).
+- [Offres et tarifs](https://exec-ia.ai/accompagnement-ia.html): Cap IA (diagnostic stratégique, 910 € HT en solo, 1 490 € HT en comité de direction), Sparring Dirigeant (3 910 € HT), Transformation IA (dès 6 910 € HT), agents IA (dès 1 490 € HT). Version lisible par machine : [pricing.md](https://exec-ia.ai/pricing.md).
 - [Solutions digitales et IA](https://exec-ia.ai/solutions.html): agents IA métiers, automatisation, cerveau IA (jumeau numérique), création de sites web.
 - [Agents IA métiers](https://exec-ia.ai/agents-ia.html): douze agents par fonction (direction, commercial, support, documentaire, gouvernance), toujours sous validation humaine.
 - [À propos](https://exec-ia.ai/a-propos.html): Valérie Mailland, fondatrice et présidente, parcours, certifications et méthode.

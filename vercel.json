@@ -34,22 +34,22 @@
     },
     {
       "source": "/expertise.html",
-      "destination": "/offres.html#expertise-strategique",
+      "destination": "/accompagnement-ia.html#expertise-strategique",
       "permanent": true
     },
     {
       "source": "/expertise-en.html",
-      "destination": "/offres-en.html#expertise-strategique",
+      "destination": "/accompagnement-ia-en.html#expertise-strategique",
       "permanent": true
     },
     {
       "source": "/expertise-es.html",
-      "destination": "/offres-es.html#expertise-strategique",
+      "destination": "/accompagnement-ia-es.html#expertise-strategique",
       "permanent": true
     },
     {
       "source": "/expertise",
-      "destination": "/offres.html#expertise-strategique",
+      "destination": "/accompagnement-ia.html#expertise-strategique",
       "permanent": true
     },
     {
@@ -80,6 +80,21 @@
     {
       "source": "/articles",
       "destination": "/perspectives.html",
+      "permanent": true
+    },
+    {
+      "source": "/offres.html",
+      "destination": "/accompagnement-ia.html",
+      "permanent": true
+    },
+    {
+      "source": "/offres-en.html",
+      "destination": "/accompagnement-ia-en.html",
+      "permanent": true
+    },
+    {
+      "source": "/offres-es.html",
+      "destination": "/accompagnement-ia-es.html",
       "permanent": true
     }
   ],
